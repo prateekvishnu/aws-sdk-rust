@@ -82,13 +82,13 @@ jobs:
             }}
           sarif-output: sarif
 
-      - name: Start analysis for mutated_headers
-        uses: ForAllSecure/mcode-action@v1
-        with:
-          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.mutated_headers_MAYHEMFILE
-            }}
-          sarif-output: sarif  
+#       - name: Start analysis for mutated_headers
+#         uses: ForAllSecure/mcode-action@v1
+#         with:
+#           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+#           args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.mutated_headers_MAYHEMFILE
+#             }}
+#           sarif-output: sarif  
 
       - name: Start analysis for parse_date_time
         uses: ForAllSecure/mcode-action@v1
@@ -114,13 +114,13 @@ jobs:
             }}
           sarif-output: sarif
 
-      - name: Start analysis for prelude
-        uses: ForAllSecure/mcode-action@v1
-        with:
-          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.prelude_MAYHEMFILE
-            }}
-          sarif-output: sarif  
+#       - name: Start analysis for prelude
+#         uses: ForAllSecure/mcode-action@v1
+#         with:
+#           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+#           args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.prelude_MAYHEMFILE
+#             }}
+#           sarif-output: sarif  
 
       - name: Start analysis for read_date_time
         uses: ForAllSecure/mcode-action@v1
@@ -130,13 +130,13 @@ jobs:
             }}
           sarif-output: sarif
 
-      - name: Start analysis for raw_bytes
-        uses: ForAllSecure/mcode-action@v1
-        with:
-          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.raw_bytes_MAYHEMFILE
-            }}
-          sarif-output: sarif  
+#       - name: Start analysis for raw_bytes
+#         uses: ForAllSecure/mcode-action@v1
+#         with:
+#           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+#           args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.raw_bytes_MAYHEMFILE
+#             }}
+#           sarif-output: sarif  
 
       - name: Start analysis for read_http_date
         uses: ForAllSecure/mcode-action@v1
