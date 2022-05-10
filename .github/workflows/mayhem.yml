@@ -66,21 +66,21 @@ jobs:
             }}
           sarif-output: sarif
 
-      - name: Start analysis for json_deserialize
-        uses: ForAllSecure/mcode-action@v1
-        with:
-          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.json_deserialize_MAYHEMFILE
-            }}
-          sarif-output: sarif        
+      # - name: Start analysis for json_deserialize
+      #   uses: ForAllSecure/mcode-action@v1
+      #   with:
+      #     mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+      #     args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.json_deserialize_MAYHEMFILE
+      #       }}
+      #     sarif-output: sarif        
 
-      - name: Start analysis for json_deserialize_corpus_cov
-        uses: ForAllSecure/mcode-action@v1
-        with:
-          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.json_deserialize_corpus_cov_crc_MAYHEMFILE
-            }}
-          sarif-output: sarif
+      # - name: Start analysis for json_deserialize_corpus_cov
+      #   uses: ForAllSecure/mcode-action@v1
+      #   with:
+      #     mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+      #     args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.json_deserialize_corpus_cov_crc_MAYHEMFILE
+      #       }}
+      #     sarif-output: sarif
 
 #       - name: Start analysis for mutated_headers
 #         uses: ForAllSecure/mcode-action@v1
