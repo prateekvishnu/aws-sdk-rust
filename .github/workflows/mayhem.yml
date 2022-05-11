@@ -62,104 +62,92 @@ jobs:
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.corrected_prelude_crc_MAYHEMFILE
-            }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.corrected_prelude_crc_MAYHEMFILE}} --duration 300
           sarif-output: sarif
 
-      # - name: Start analysis for json_deserialize
-      #   uses: ForAllSecure/mcode-action@v1
-      #   with:
-      #     mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-      #     args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.json_deserialize_MAYHEMFILE
-      #       }}
-      #     sarif-output: sarif        
+      - name: Start analysis for json_deserialize
+        uses: ForAllSecure/mcode-action@v1
+        with:
+          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.json_deserialize_MAYHEMFILE}} --duration 300
+          sarif-output: sarif        
 
-      # - name: Start analysis for json_deserialize_corpus_cov
-      #   uses: ForAllSecure/mcode-action@v1
-      #   with:
-      #     mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-      #     args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.json_deserialize_corpus_cov_crc_MAYHEMFILE
-      #       }}
-      #     sarif-output: sarif
+      - name: Start analysis for json_deserialize_corpus_cov
+        uses: ForAllSecure/mcode-action@v1
+        with:
+          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.json_deserialize_corpus_cov_crc_MAYHEMFILE}} --duration 300
+          sarif-output: sarif
 
-#       - name: Start analysis for mutated_headers
-#         uses: ForAllSecure/mcode-action@v1
-#         with:
-#           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-#           args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.mutated_headers_MAYHEMFILE
-#             }}
-#           sarif-output: sarif  
+      - name: Start analysis for mutated_headers
+        uses: ForAllSecure/mcode-action@v1
+        with:
+          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.mutated_headers_MAYHEMFILE
+            }} --duration 300
+          sarif-output: sarif  
 
       - name: Start analysis for parse_date_time
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.parse_date_time_MAYHEMFILE
-            }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.parse_date_time_MAYHEMFILE}} --duration 300
           sarif-output: sarif
 
       - name: Start analysis for parse_epoch_seconds
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.parse_epoch_seconds_MAYHEMFILE
-            }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.parse_epoch_seconds_MAYHEMFILE}} --duration 300
           sarif-output: sarif  
 
       - name: Start analysis for parse_http_date
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.parse_http_date_MAYHEMFILE
-            }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.parse_http_date_MAYHEMFILE}} --duration 300
           sarif-output: sarif
 
-#       - name: Start analysis for prelude
-#         uses: ForAllSecure/mcode-action@v1
-#         with:
-#           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-#           args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.prelude_MAYHEMFILE
-#             }}
-#           sarif-output: sarif  
+      - name: Start analysis for prelude
+        uses: ForAllSecure/mcode-action@v1
+        with:
+          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.prelude_MAYHEMFILE}} --duration 300
+          sarif-output: sarif  
 
       - name: Start analysis for read_date_time
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.read_date_time_MAYHEMFILE
-            }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.read_date_time_MAYHEMFILE}} --duration 300
           sarif-output: sarif
 
-#       - name: Start analysis for raw_bytes
-#         uses: ForAllSecure/mcode-action@v1
-#         with:
-#           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-#           args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.raw_bytes_MAYHEMFILE
-#             }}
-#           sarif-output: sarif  
+      - name: Start analysis for raw_bytes
+        uses: ForAllSecure/mcode-action@v1
+        with:
+          mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.raw_bytes_MAYHEMFILE}} --duration 300
+          sarif-output: sarif  
 
       - name: Start analysis for read_http_date
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.read_http_date_MAYHEMFILE
-            }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.read_http_date_MAYHEMFILE}} --duration 300
           sarif-output: sarif
 
       - name: Start analysis for read_many_from_str
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.read_many_from_str_MAYHEMFILE
-            }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.read_many_from_str_MAYHEMFILE}} --duration 300
           sarif-output: sarif  
 
       - name: Start analysis for round_trip
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.round_trip_MAYHEMFILE
-            }}
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.round_trip_MAYHEMFILE}} --duration 300
           sarif-output: sarif  
 
       - name: Upload SARIF file(s)
