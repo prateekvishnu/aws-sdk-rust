@@ -27,7 +27,7 @@ pub enum Error {
     GlueEncryptionException(crate::error::GlueEncryptionException),
     /// <p>The same unique identifier was associated with two different records.</p>
     IdempotentParameterMismatchException(crate::error::IdempotentParameterMismatchException),
-    #[allow(missing_docs)] // documentation missing in model
+    /// <p>The blueprint is in an invalid state to perform a requested operation.</p>
     IllegalBlueprintStateException(crate::error::IllegalBlueprintStateException),
     /// <p>The session is in an invalid state to perform a requested operation.</p>
     IllegalSessionStateException(crate::error::IllegalSessionStateException),
@@ -3531,6 +3531,28 @@ where
                     Error::OperationTimeoutException(inner)
                 }
                 crate::error::ListCrawlersErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::ListCrawlsError, R>> for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(err: aws_smithy_http::result::SdkError<crate::error::ListCrawlsError, R>) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, .. } => match err.kind {
+                crate::error::ListCrawlsErrorKind::EntityNotFoundException(inner) => {
+                    Error::EntityNotFoundException(inner)
+                }
+                crate::error::ListCrawlsErrorKind::InvalidInputException(inner) => {
+                    Error::InvalidInputException(inner)
+                }
+                crate::error::ListCrawlsErrorKind::OperationTimeoutException(inner) => {
+                    Error::OperationTimeoutException(inner)
+                }
+                crate::error::ListCrawlsErrorKind::Unhandled(inner) => Error::Unhandled(inner),
             },
             _ => Error::Unhandled(err.into()),
         }

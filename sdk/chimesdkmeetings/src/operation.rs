@@ -10,7 +10,7 @@ pub struct BatchCreateAttendee {
     _private: (),
 }
 impl BatchCreateAttendee {
-    /// Creates a new builder-style object to manufacture [`BatchCreateAttendeeInput`](crate::input::BatchCreateAttendeeInput)
+    /// Creates a new builder-style object to manufacture [`BatchCreateAttendeeInput`](crate::input::BatchCreateAttendeeInput).
     pub fn builder() -> crate::input::batch_create_attendee_input::Builder {
         crate::input::batch_create_attendee_input::Builder::default()
     }
@@ -33,6 +33,42 @@ impl aws_smithy_http::response::ParseStrictResponse for BatchCreateAttendee {
     }
 }
 
+/// Operation shape for `BatchUpdateAttendeeCapabilitiesExcept`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`batch_update_attendee_capabilities_except`](crate::client::Client::batch_update_attendee_capabilities_except).
+///
+/// See [`crate::client::fluent_builders::BatchUpdateAttendeeCapabilitiesExcept`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct BatchUpdateAttendeeCapabilitiesExcept {
+    _private: (),
+}
+impl BatchUpdateAttendeeCapabilitiesExcept {
+    /// Creates a new builder-style object to manufacture [`BatchUpdateAttendeeCapabilitiesExceptInput`](crate::input::BatchUpdateAttendeeCapabilitiesExceptInput).
+    pub fn builder() -> crate::input::batch_update_attendee_capabilities_except_input::Builder {
+        crate::input::batch_update_attendee_capabilities_except_input::Builder::default()
+    }
+    /// Creates a new `BatchUpdateAttendeeCapabilitiesExcept` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for BatchUpdateAttendeeCapabilitiesExcept {
+    type Output = std::result::Result<
+        crate::output::BatchUpdateAttendeeCapabilitiesExceptOutput,
+        crate::error::BatchUpdateAttendeeCapabilitiesExceptError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_batch_update_attendee_capabilities_except_error(response)
+        } else {
+            crate::operation_deser::parse_batch_update_attendee_capabilities_except_response(
+                response,
+            )
+        }
+    }
+}
+
 /// Operation shape for `CreateAttendee`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -44,7 +80,7 @@ pub struct CreateAttendee {
     _private: (),
 }
 impl CreateAttendee {
-    /// Creates a new builder-style object to manufacture [`CreateAttendeeInput`](crate::input::CreateAttendeeInput)
+    /// Creates a new builder-style object to manufacture [`CreateAttendeeInput`](crate::input::CreateAttendeeInput).
     pub fn builder() -> crate::input::create_attendee_input::Builder {
         crate::input::create_attendee_input::Builder::default()
     }
@@ -76,7 +112,7 @@ pub struct CreateMeeting {
     _private: (),
 }
 impl CreateMeeting {
-    /// Creates a new builder-style object to manufacture [`CreateMeetingInput`](crate::input::CreateMeetingInput)
+    /// Creates a new builder-style object to manufacture [`CreateMeetingInput`](crate::input::CreateMeetingInput).
     pub fn builder() -> crate::input::create_meeting_input::Builder {
         crate::input::create_meeting_input::Builder::default()
     }
@@ -108,7 +144,7 @@ pub struct CreateMeetingWithAttendees {
     _private: (),
 }
 impl CreateMeetingWithAttendees {
-    /// Creates a new builder-style object to manufacture [`CreateMeetingWithAttendeesInput`](crate::input::CreateMeetingWithAttendeesInput)
+    /// Creates a new builder-style object to manufacture [`CreateMeetingWithAttendeesInput`](crate::input::CreateMeetingWithAttendeesInput).
     pub fn builder() -> crate::input::create_meeting_with_attendees_input::Builder {
         crate::input::create_meeting_with_attendees_input::Builder::default()
     }
@@ -142,7 +178,7 @@ pub struct DeleteAttendee {
     _private: (),
 }
 impl DeleteAttendee {
-    /// Creates a new builder-style object to manufacture [`DeleteAttendeeInput`](crate::input::DeleteAttendeeInput)
+    /// Creates a new builder-style object to manufacture [`DeleteAttendeeInput`](crate::input::DeleteAttendeeInput).
     pub fn builder() -> crate::input::delete_attendee_input::Builder {
         crate::input::delete_attendee_input::Builder::default()
     }
@@ -174,7 +210,7 @@ pub struct DeleteMeeting {
     _private: (),
 }
 impl DeleteMeeting {
-    /// Creates a new builder-style object to manufacture [`DeleteMeetingInput`](crate::input::DeleteMeetingInput)
+    /// Creates a new builder-style object to manufacture [`DeleteMeetingInput`](crate::input::DeleteMeetingInput).
     pub fn builder() -> crate::input::delete_meeting_input::Builder {
         crate::input::delete_meeting_input::Builder::default()
     }
@@ -206,7 +242,7 @@ pub struct GetAttendee {
     _private: (),
 }
 impl GetAttendee {
-    /// Creates a new builder-style object to manufacture [`GetAttendeeInput`](crate::input::GetAttendeeInput)
+    /// Creates a new builder-style object to manufacture [`GetAttendeeInput`](crate::input::GetAttendeeInput).
     pub fn builder() -> crate::input::get_attendee_input::Builder {
         crate::input::get_attendee_input::Builder::default()
     }
@@ -238,7 +274,7 @@ pub struct GetMeeting {
     _private: (),
 }
 impl GetMeeting {
-    /// Creates a new builder-style object to manufacture [`GetMeetingInput`](crate::input::GetMeetingInput)
+    /// Creates a new builder-style object to manufacture [`GetMeetingInput`](crate::input::GetMeetingInput).
     pub fn builder() -> crate::input::get_meeting_input::Builder {
         crate::input::get_meeting_input::Builder::default()
     }
@@ -270,7 +306,7 @@ pub struct ListAttendees {
     _private: (),
 }
 impl ListAttendees {
-    /// Creates a new builder-style object to manufacture [`ListAttendeesInput`](crate::input::ListAttendeesInput)
+    /// Creates a new builder-style object to manufacture [`ListAttendeesInput`](crate::input::ListAttendeesInput).
     pub fn builder() -> crate::input::list_attendees_input::Builder {
         crate::input::list_attendees_input::Builder::default()
     }
@@ -302,7 +338,7 @@ pub struct StartMeetingTranscription {
     _private: (),
 }
 impl StartMeetingTranscription {
-    /// Creates a new builder-style object to manufacture [`StartMeetingTranscriptionInput`](crate::input::StartMeetingTranscriptionInput)
+    /// Creates a new builder-style object to manufacture [`StartMeetingTranscriptionInput`](crate::input::StartMeetingTranscriptionInput).
     pub fn builder() -> crate::input::start_meeting_transcription_input::Builder {
         crate::input::start_meeting_transcription_input::Builder::default()
     }
@@ -336,7 +372,7 @@ pub struct StopMeetingTranscription {
     _private: (),
 }
 impl StopMeetingTranscription {
-    /// Creates a new builder-style object to manufacture [`StopMeetingTranscriptionInput`](crate::input::StopMeetingTranscriptionInput)
+    /// Creates a new builder-style object to manufacture [`StopMeetingTranscriptionInput`](crate::input::StopMeetingTranscriptionInput).
     pub fn builder() -> crate::input::stop_meeting_transcription_input::Builder {
         crate::input::stop_meeting_transcription_input::Builder::default()
     }
@@ -355,6 +391,40 @@ impl aws_smithy_http::response::ParseStrictResponse for StopMeetingTranscription
             crate::operation_deser::parse_stop_meeting_transcription_error(response)
         } else {
             crate::operation_deser::parse_stop_meeting_transcription_response(response)
+        }
+    }
+}
+
+/// Operation shape for `UpdateAttendeeCapabilities`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`update_attendee_capabilities`](crate::client::Client::update_attendee_capabilities).
+///
+/// See [`crate::client::fluent_builders::UpdateAttendeeCapabilities`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct UpdateAttendeeCapabilities {
+    _private: (),
+}
+impl UpdateAttendeeCapabilities {
+    /// Creates a new builder-style object to manufacture [`UpdateAttendeeCapabilitiesInput`](crate::input::UpdateAttendeeCapabilitiesInput).
+    pub fn builder() -> crate::input::update_attendee_capabilities_input::Builder {
+        crate::input::update_attendee_capabilities_input::Builder::default()
+    }
+    /// Creates a new `UpdateAttendeeCapabilities` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for UpdateAttendeeCapabilities {
+    type Output = std::result::Result<
+        crate::output::UpdateAttendeeCapabilitiesOutput,
+        crate::error::UpdateAttendeeCapabilitiesError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_update_attendee_capabilities_error(response)
+        } else {
+            crate::operation_deser::parse_update_attendee_capabilities_response(response)
         }
     }
 }

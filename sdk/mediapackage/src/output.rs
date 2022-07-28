@@ -128,10 +128,10 @@ impl std::fmt::Debug for UpdateOriginEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateOriginEndpointOutput`](crate::output::UpdateOriginEndpointOutput)
+/// See [`UpdateOriginEndpointOutput`](crate::output::UpdateOriginEndpointOutput).
 pub mod update_origin_endpoint_output {
-    /// A builder for [`UpdateOriginEndpointOutput`](crate::output::UpdateOriginEndpointOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateOriginEndpointOutput`](crate::output::UpdateOriginEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -359,7 +359,7 @@ pub mod update_origin_endpoint_output {
             self.whitelist = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateOriginEndpointOutput`](crate::output::UpdateOriginEndpointOutput)
+        /// Consumes the builder and constructs a [`UpdateOriginEndpointOutput`](crate::output::UpdateOriginEndpointOutput).
         pub fn build(self) -> crate::output::UpdateOriginEndpointOutput {
             crate::output::UpdateOriginEndpointOutput {
                 arn: self.arn,
@@ -383,7 +383,7 @@ pub mod update_origin_endpoint_output {
     }
 }
 impl UpdateOriginEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateOriginEndpointOutput`](crate::output::UpdateOriginEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateOriginEndpointOutput`](crate::output::UpdateOriginEndpointOutput).
     pub fn builder() -> crate::output::update_origin_endpoint_output::Builder {
         crate::output::update_origin_endpoint_output::Builder::default()
     }
@@ -455,10 +455,10 @@ impl std::fmt::Debug for UpdateChannelOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateChannelOutput`](crate::output::UpdateChannelOutput)
+/// See [`UpdateChannelOutput`](crate::output::UpdateChannelOutput).
 pub mod update_channel_output {
-    /// A builder for [`UpdateChannelOutput`](crate::output::UpdateChannelOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateChannelOutput`](crate::output::UpdateChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -566,7 +566,7 @@ pub mod update_channel_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateChannelOutput`](crate::output::UpdateChannelOutput)
+        /// Consumes the builder and constructs a [`UpdateChannelOutput`](crate::output::UpdateChannelOutput).
         pub fn build(self) -> crate::output::UpdateChannelOutput {
             crate::output::UpdateChannelOutput {
                 arn: self.arn,
@@ -581,7 +581,7 @@ pub mod update_channel_output {
     }
 }
 impl UpdateChannelOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateChannelOutput`](crate::output::UpdateChannelOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateChannelOutput`](crate::output::UpdateChannelOutput).
     pub fn builder() -> crate::output::update_channel_output::Builder {
         crate::output::update_channel_output::Builder::default()
     }
@@ -597,21 +597,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -627,21 +627,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -713,10 +713,10 @@ impl std::fmt::Debug for RotateIngestEndpointCredentialsOutput {
         formatter.finish()
     }
 }
-/// See [`RotateIngestEndpointCredentialsOutput`](crate::output::RotateIngestEndpointCredentialsOutput)
+/// See [`RotateIngestEndpointCredentialsOutput`](crate::output::RotateIngestEndpointCredentialsOutput).
 pub mod rotate_ingest_endpoint_credentials_output {
-    /// A builder for [`RotateIngestEndpointCredentialsOutput`](crate::output::RotateIngestEndpointCredentialsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`RotateIngestEndpointCredentialsOutput`](crate::output::RotateIngestEndpointCredentialsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -824,7 +824,7 @@ pub mod rotate_ingest_endpoint_credentials_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`RotateIngestEndpointCredentialsOutput`](crate::output::RotateIngestEndpointCredentialsOutput)
+        /// Consumes the builder and constructs a [`RotateIngestEndpointCredentialsOutput`](crate::output::RotateIngestEndpointCredentialsOutput).
         pub fn build(self) -> crate::output::RotateIngestEndpointCredentialsOutput {
             crate::output::RotateIngestEndpointCredentialsOutput {
                 arn: self.arn,
@@ -839,7 +839,7 @@ pub mod rotate_ingest_endpoint_credentials_output {
     }
 }
 impl RotateIngestEndpointCredentialsOutput {
-    /// Creates a new builder-style object to manufacture [`RotateIngestEndpointCredentialsOutput`](crate::output::RotateIngestEndpointCredentialsOutput)
+    /// Creates a new builder-style object to manufacture [`RotateIngestEndpointCredentialsOutput`](crate::output::RotateIngestEndpointCredentialsOutput).
     pub fn builder() -> crate::output::rotate_ingest_endpoint_credentials_output::Builder {
         crate::output::rotate_ingest_endpoint_credentials_output::Builder::default()
     }
@@ -911,10 +911,10 @@ impl std::fmt::Debug for RotateChannelCredentialsOutput {
         formatter.finish()
     }
 }
-/// See [`RotateChannelCredentialsOutput`](crate::output::RotateChannelCredentialsOutput)
+/// See [`RotateChannelCredentialsOutput`](crate::output::RotateChannelCredentialsOutput).
 pub mod rotate_channel_credentials_output {
-    /// A builder for [`RotateChannelCredentialsOutput`](crate::output::RotateChannelCredentialsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`RotateChannelCredentialsOutput`](crate::output::RotateChannelCredentialsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1022,7 +1022,7 @@ pub mod rotate_channel_credentials_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`RotateChannelCredentialsOutput`](crate::output::RotateChannelCredentialsOutput)
+        /// Consumes the builder and constructs a [`RotateChannelCredentialsOutput`](crate::output::RotateChannelCredentialsOutput).
         pub fn build(self) -> crate::output::RotateChannelCredentialsOutput {
             crate::output::RotateChannelCredentialsOutput {
                 arn: self.arn,
@@ -1037,7 +1037,7 @@ pub mod rotate_channel_credentials_output {
     }
 }
 impl RotateChannelCredentialsOutput {
-    /// Creates a new builder-style object to manufacture [`RotateChannelCredentialsOutput`](crate::output::RotateChannelCredentialsOutput)
+    /// Creates a new builder-style object to manufacture [`RotateChannelCredentialsOutput`](crate::output::RotateChannelCredentialsOutput).
     pub fn builder() -> crate::output::rotate_channel_credentials_output::Builder {
         crate::output::rotate_channel_credentials_output::Builder::default()
     }
@@ -1067,10 +1067,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -1102,14 +1102,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -1142,10 +1142,10 @@ impl std::fmt::Debug for ListOriginEndpointsOutput {
         formatter.finish()
     }
 }
-/// See [`ListOriginEndpointsOutput`](crate::output::ListOriginEndpointsOutput)
+/// See [`ListOriginEndpointsOutput`](crate::output::ListOriginEndpointsOutput).
 pub mod list_origin_endpoints_output {
-    /// A builder for [`ListOriginEndpointsOutput`](crate::output::ListOriginEndpointsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListOriginEndpointsOutput`](crate::output::ListOriginEndpointsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1182,7 +1182,7 @@ pub mod list_origin_endpoints_output {
             self.origin_endpoints = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListOriginEndpointsOutput`](crate::output::ListOriginEndpointsOutput)
+        /// Consumes the builder and constructs a [`ListOriginEndpointsOutput`](crate::output::ListOriginEndpointsOutput).
         pub fn build(self) -> crate::output::ListOriginEndpointsOutput {
             crate::output::ListOriginEndpointsOutput {
                 next_token: self.next_token,
@@ -1192,7 +1192,7 @@ pub mod list_origin_endpoints_output {
     }
 }
 impl ListOriginEndpointsOutput {
-    /// Creates a new builder-style object to manufacture [`ListOriginEndpointsOutput`](crate::output::ListOriginEndpointsOutput)
+    /// Creates a new builder-style object to manufacture [`ListOriginEndpointsOutput`](crate::output::ListOriginEndpointsOutput).
     pub fn builder() -> crate::output::list_origin_endpoints_output::Builder {
         crate::output::list_origin_endpoints_output::Builder::default()
     }
@@ -1225,10 +1225,10 @@ impl std::fmt::Debug for ListHarvestJobsOutput {
         formatter.finish()
     }
 }
-/// See [`ListHarvestJobsOutput`](crate::output::ListHarvestJobsOutput)
+/// See [`ListHarvestJobsOutput`](crate::output::ListHarvestJobsOutput).
 pub mod list_harvest_jobs_output {
-    /// A builder for [`ListHarvestJobsOutput`](crate::output::ListHarvestJobsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListHarvestJobsOutput`](crate::output::ListHarvestJobsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) harvest_jobs: std::option::Option<std::vec::Vec<crate::model::HarvestJob>>,
@@ -1264,7 +1264,7 @@ pub mod list_harvest_jobs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListHarvestJobsOutput`](crate::output::ListHarvestJobsOutput)
+        /// Consumes the builder and constructs a [`ListHarvestJobsOutput`](crate::output::ListHarvestJobsOutput).
         pub fn build(self) -> crate::output::ListHarvestJobsOutput {
             crate::output::ListHarvestJobsOutput {
                 harvest_jobs: self.harvest_jobs,
@@ -1274,7 +1274,7 @@ pub mod list_harvest_jobs_output {
     }
 }
 impl ListHarvestJobsOutput {
-    /// Creates a new builder-style object to manufacture [`ListHarvestJobsOutput`](crate::output::ListHarvestJobsOutput)
+    /// Creates a new builder-style object to manufacture [`ListHarvestJobsOutput`](crate::output::ListHarvestJobsOutput).
     pub fn builder() -> crate::output::list_harvest_jobs_output::Builder {
         crate::output::list_harvest_jobs_output::Builder::default()
     }
@@ -1307,10 +1307,10 @@ impl std::fmt::Debug for ListChannelsOutput {
         formatter.finish()
     }
 }
-/// See [`ListChannelsOutput`](crate::output::ListChannelsOutput)
+/// See [`ListChannelsOutput`](crate::output::ListChannelsOutput).
 pub mod list_channels_output {
-    /// A builder for [`ListChannelsOutput`](crate::output::ListChannelsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListChannelsOutput`](crate::output::ListChannelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) channels: std::option::Option<std::vec::Vec<crate::model::Channel>>,
@@ -1346,7 +1346,7 @@ pub mod list_channels_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChannelsOutput`](crate::output::ListChannelsOutput)
+        /// Consumes the builder and constructs a [`ListChannelsOutput`](crate::output::ListChannelsOutput).
         pub fn build(self) -> crate::output::ListChannelsOutput {
             crate::output::ListChannelsOutput {
                 channels: self.channels,
@@ -1356,7 +1356,7 @@ pub mod list_channels_output {
     }
 }
 impl ListChannelsOutput {
-    /// Creates a new builder-style object to manufacture [`ListChannelsOutput`](crate::output::ListChannelsOutput)
+    /// Creates a new builder-style object to manufacture [`ListChannelsOutput`](crate::output::ListChannelsOutput).
     pub fn builder() -> crate::output::list_channels_output::Builder {
         crate::output::list_channels_output::Builder::default()
     }
@@ -1491,10 +1491,10 @@ impl std::fmt::Debug for DescribeOriginEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeOriginEndpointOutput`](crate::output::DescribeOriginEndpointOutput)
+/// See [`DescribeOriginEndpointOutput`](crate::output::DescribeOriginEndpointOutput).
 pub mod describe_origin_endpoint_output {
-    /// A builder for [`DescribeOriginEndpointOutput`](crate::output::DescribeOriginEndpointOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeOriginEndpointOutput`](crate::output::DescribeOriginEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1722,7 +1722,7 @@ pub mod describe_origin_endpoint_output {
             self.whitelist = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeOriginEndpointOutput`](crate::output::DescribeOriginEndpointOutput)
+        /// Consumes the builder and constructs a [`DescribeOriginEndpointOutput`](crate::output::DescribeOriginEndpointOutput).
         pub fn build(self) -> crate::output::DescribeOriginEndpointOutput {
             crate::output::DescribeOriginEndpointOutput {
                 arn: self.arn,
@@ -1746,7 +1746,7 @@ pub mod describe_origin_endpoint_output {
     }
 }
 impl DescribeOriginEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeOriginEndpointOutput`](crate::output::DescribeOriginEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeOriginEndpointOutput`](crate::output::DescribeOriginEndpointOutput).
     pub fn builder() -> crate::output::describe_origin_endpoint_output::Builder {
         crate::output::describe_origin_endpoint_output::Builder::default()
     }
@@ -1828,10 +1828,10 @@ impl std::fmt::Debug for DescribeHarvestJobOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeHarvestJobOutput`](crate::output::DescribeHarvestJobOutput)
+/// See [`DescribeHarvestJobOutput`](crate::output::DescribeHarvestJobOutput).
 pub mod describe_harvest_job_output {
-    /// A builder for [`DescribeHarvestJobOutput`](crate::output::DescribeHarvestJobOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeHarvestJobOutput`](crate::output::DescribeHarvestJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1941,7 +1941,7 @@ pub mod describe_harvest_job_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeHarvestJobOutput`](crate::output::DescribeHarvestJobOutput)
+        /// Consumes the builder and constructs a [`DescribeHarvestJobOutput`](crate::output::DescribeHarvestJobOutput).
         pub fn build(self) -> crate::output::DescribeHarvestJobOutput {
             crate::output::DescribeHarvestJobOutput {
                 arn: self.arn,
@@ -1958,7 +1958,7 @@ pub mod describe_harvest_job_output {
     }
 }
 impl DescribeHarvestJobOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeHarvestJobOutput`](crate::output::DescribeHarvestJobOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeHarvestJobOutput`](crate::output::DescribeHarvestJobOutput).
     pub fn builder() -> crate::output::describe_harvest_job_output::Builder {
         crate::output::describe_harvest_job_output::Builder::default()
     }
@@ -2030,10 +2030,10 @@ impl std::fmt::Debug for DescribeChannelOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeChannelOutput`](crate::output::DescribeChannelOutput)
+/// See [`DescribeChannelOutput`](crate::output::DescribeChannelOutput).
 pub mod describe_channel_output {
-    /// A builder for [`DescribeChannelOutput`](crate::output::DescribeChannelOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeChannelOutput`](crate::output::DescribeChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2141,7 +2141,7 @@ pub mod describe_channel_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeChannelOutput`](crate::output::DescribeChannelOutput)
+        /// Consumes the builder and constructs a [`DescribeChannelOutput`](crate::output::DescribeChannelOutput).
         pub fn build(self) -> crate::output::DescribeChannelOutput {
             crate::output::DescribeChannelOutput {
                 arn: self.arn,
@@ -2156,7 +2156,7 @@ pub mod describe_channel_output {
     }
 }
 impl DescribeChannelOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeChannelOutput`](crate::output::DescribeChannelOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeChannelOutput`](crate::output::DescribeChannelOutput).
     pub fn builder() -> crate::output::describe_channel_output::Builder {
         crate::output::describe_channel_output::Builder::default()
     }
@@ -2172,21 +2172,21 @@ impl std::fmt::Debug for DeleteOriginEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteOriginEndpointOutput`](crate::output::DeleteOriginEndpointOutput)
+/// See [`DeleteOriginEndpointOutput`](crate::output::DeleteOriginEndpointOutput).
 pub mod delete_origin_endpoint_output {
-    /// A builder for [`DeleteOriginEndpointOutput`](crate::output::DeleteOriginEndpointOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteOriginEndpointOutput`](crate::output::DeleteOriginEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteOriginEndpointOutput`](crate::output::DeleteOriginEndpointOutput)
+        /// Consumes the builder and constructs a [`DeleteOriginEndpointOutput`](crate::output::DeleteOriginEndpointOutput).
         pub fn build(self) -> crate::output::DeleteOriginEndpointOutput {
             crate::output::DeleteOriginEndpointOutput {}
         }
     }
 }
 impl DeleteOriginEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteOriginEndpointOutput`](crate::output::DeleteOriginEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteOriginEndpointOutput`](crate::output::DeleteOriginEndpointOutput).
     pub fn builder() -> crate::output::delete_origin_endpoint_output::Builder {
         crate::output::delete_origin_endpoint_output::Builder::default()
     }
@@ -2202,21 +2202,21 @@ impl std::fmt::Debug for DeleteChannelOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteChannelOutput`](crate::output::DeleteChannelOutput)
+/// See [`DeleteChannelOutput`](crate::output::DeleteChannelOutput).
 pub mod delete_channel_output {
-    /// A builder for [`DeleteChannelOutput`](crate::output::DeleteChannelOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteChannelOutput`](crate::output::DeleteChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteChannelOutput`](crate::output::DeleteChannelOutput)
+        /// Consumes the builder and constructs a [`DeleteChannelOutput`](crate::output::DeleteChannelOutput).
         pub fn build(self) -> crate::output::DeleteChannelOutput {
             crate::output::DeleteChannelOutput {}
         }
     }
 }
 impl DeleteChannelOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteChannelOutput`](crate::output::DeleteChannelOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteChannelOutput`](crate::output::DeleteChannelOutput).
     pub fn builder() -> crate::output::delete_channel_output::Builder {
         crate::output::delete_channel_output::Builder::default()
     }
@@ -2351,10 +2351,10 @@ impl std::fmt::Debug for CreateOriginEndpointOutput {
         formatter.finish()
     }
 }
-/// See [`CreateOriginEndpointOutput`](crate::output::CreateOriginEndpointOutput)
+/// See [`CreateOriginEndpointOutput`](crate::output::CreateOriginEndpointOutput).
 pub mod create_origin_endpoint_output {
-    /// A builder for [`CreateOriginEndpointOutput`](crate::output::CreateOriginEndpointOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateOriginEndpointOutput`](crate::output::CreateOriginEndpointOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2582,7 +2582,7 @@ pub mod create_origin_endpoint_output {
             self.whitelist = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateOriginEndpointOutput`](crate::output::CreateOriginEndpointOutput)
+        /// Consumes the builder and constructs a [`CreateOriginEndpointOutput`](crate::output::CreateOriginEndpointOutput).
         pub fn build(self) -> crate::output::CreateOriginEndpointOutput {
             crate::output::CreateOriginEndpointOutput {
                 arn: self.arn,
@@ -2606,7 +2606,7 @@ pub mod create_origin_endpoint_output {
     }
 }
 impl CreateOriginEndpointOutput {
-    /// Creates a new builder-style object to manufacture [`CreateOriginEndpointOutput`](crate::output::CreateOriginEndpointOutput)
+    /// Creates a new builder-style object to manufacture [`CreateOriginEndpointOutput`](crate::output::CreateOriginEndpointOutput).
     pub fn builder() -> crate::output::create_origin_endpoint_output::Builder {
         crate::output::create_origin_endpoint_output::Builder::default()
     }
@@ -2688,10 +2688,10 @@ impl std::fmt::Debug for CreateHarvestJobOutput {
         formatter.finish()
     }
 }
-/// See [`CreateHarvestJobOutput`](crate::output::CreateHarvestJobOutput)
+/// See [`CreateHarvestJobOutput`](crate::output::CreateHarvestJobOutput).
 pub mod create_harvest_job_output {
-    /// A builder for [`CreateHarvestJobOutput`](crate::output::CreateHarvestJobOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateHarvestJobOutput`](crate::output::CreateHarvestJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -2801,7 +2801,7 @@ pub mod create_harvest_job_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateHarvestJobOutput`](crate::output::CreateHarvestJobOutput)
+        /// Consumes the builder and constructs a [`CreateHarvestJobOutput`](crate::output::CreateHarvestJobOutput).
         pub fn build(self) -> crate::output::CreateHarvestJobOutput {
             crate::output::CreateHarvestJobOutput {
                 arn: self.arn,
@@ -2818,7 +2818,7 @@ pub mod create_harvest_job_output {
     }
 }
 impl CreateHarvestJobOutput {
-    /// Creates a new builder-style object to manufacture [`CreateHarvestJobOutput`](crate::output::CreateHarvestJobOutput)
+    /// Creates a new builder-style object to manufacture [`CreateHarvestJobOutput`](crate::output::CreateHarvestJobOutput).
     pub fn builder() -> crate::output::create_harvest_job_output::Builder {
         crate::output::create_harvest_job_output::Builder::default()
     }
@@ -2890,10 +2890,10 @@ impl std::fmt::Debug for CreateChannelOutput {
         formatter.finish()
     }
 }
-/// See [`CreateChannelOutput`](crate::output::CreateChannelOutput)
+/// See [`CreateChannelOutput`](crate::output::CreateChannelOutput).
 pub mod create_channel_output {
-    /// A builder for [`CreateChannelOutput`](crate::output::CreateChannelOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateChannelOutput`](crate::output::CreateChannelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3001,7 +3001,7 @@ pub mod create_channel_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateChannelOutput`](crate::output::CreateChannelOutput)
+        /// Consumes the builder and constructs a [`CreateChannelOutput`](crate::output::CreateChannelOutput).
         pub fn build(self) -> crate::output::CreateChannelOutput {
             crate::output::CreateChannelOutput {
                 arn: self.arn,
@@ -3016,7 +3016,7 @@ pub mod create_channel_output {
     }
 }
 impl CreateChannelOutput {
-    /// Creates a new builder-style object to manufacture [`CreateChannelOutput`](crate::output::CreateChannelOutput)
+    /// Creates a new builder-style object to manufacture [`CreateChannelOutput`](crate::output::CreateChannelOutput).
     pub fn builder() -> crate::output::create_channel_output::Builder {
         crate::output::create_channel_output::Builder::default()
     }
@@ -3088,10 +3088,10 @@ impl std::fmt::Debug for ConfigureLogsOutput {
         formatter.finish()
     }
 }
-/// See [`ConfigureLogsOutput`](crate::output::ConfigureLogsOutput)
+/// See [`ConfigureLogsOutput`](crate::output::ConfigureLogsOutput).
 pub mod configure_logs_output {
-    /// A builder for [`ConfigureLogsOutput`](crate::output::ConfigureLogsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ConfigureLogsOutput`](crate::output::ConfigureLogsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -3199,7 +3199,7 @@ pub mod configure_logs_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConfigureLogsOutput`](crate::output::ConfigureLogsOutput)
+        /// Consumes the builder and constructs a [`ConfigureLogsOutput`](crate::output::ConfigureLogsOutput).
         pub fn build(self) -> crate::output::ConfigureLogsOutput {
             crate::output::ConfigureLogsOutput {
                 arn: self.arn,
@@ -3214,7 +3214,7 @@ pub mod configure_logs_output {
     }
 }
 impl ConfigureLogsOutput {
-    /// Creates a new builder-style object to manufacture [`ConfigureLogsOutput`](crate::output::ConfigureLogsOutput)
+    /// Creates a new builder-style object to manufacture [`ConfigureLogsOutput`](crate::output::ConfigureLogsOutput).
     pub fn builder() -> crate::output::configure_logs_output::Builder {
         crate::output::configure_logs_output::Builder::default()
     }

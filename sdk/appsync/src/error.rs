@@ -6250,10 +6250,10 @@ impl std::fmt::Display for UnauthorizedException {
     }
 }
 impl std::error::Error for UnauthorizedException {}
-/// See [`UnauthorizedException`](crate::error::UnauthorizedException)
+/// See [`UnauthorizedException`](crate::error::UnauthorizedException).
 pub mod unauthorized_exception {
-    /// A builder for [`UnauthorizedException`](crate::error::UnauthorizedException)
-    #[non_exhaustive]
+
+    /// A builder for [`UnauthorizedException`](crate::error::UnauthorizedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6269,7 +6269,7 @@ pub mod unauthorized_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UnauthorizedException`](crate::error::UnauthorizedException)
+        /// Consumes the builder and constructs a [`UnauthorizedException`](crate::error::UnauthorizedException).
         pub fn build(self) -> crate::error::UnauthorizedException {
             crate::error::UnauthorizedException {
                 message: self.message,
@@ -6278,7 +6278,7 @@ pub mod unauthorized_exception {
     }
 }
 impl UnauthorizedException {
-    /// Creates a new builder-style object to manufacture [`UnauthorizedException`](crate::error::UnauthorizedException)
+    /// Creates a new builder-style object to manufacture [`UnauthorizedException`](crate::error::UnauthorizedException).
     pub fn builder() -> crate::error::unauthorized_exception::Builder {
         crate::error::unauthorized_exception::Builder::default()
     }
@@ -6314,10 +6314,10 @@ impl std::fmt::Display for NotFoundException {
     }
 }
 impl std::error::Error for NotFoundException {}
-/// See [`NotFoundException`](crate::error::NotFoundException)
+/// See [`NotFoundException`](crate::error::NotFoundException).
 pub mod not_found_exception {
-    /// A builder for [`NotFoundException`](crate::error::NotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`NotFoundException`](crate::error::NotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6333,7 +6333,7 @@ pub mod not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotFoundException`](crate::error::NotFoundException)
+        /// Consumes the builder and constructs a [`NotFoundException`](crate::error::NotFoundException).
         pub fn build(self) -> crate::error::NotFoundException {
             crate::error::NotFoundException {
                 message: self.message,
@@ -6342,7 +6342,7 @@ pub mod not_found_exception {
     }
 }
 impl NotFoundException {
-    /// Creates a new builder-style object to manufacture [`NotFoundException`](crate::error::NotFoundException)
+    /// Creates a new builder-style object to manufacture [`NotFoundException`](crate::error::NotFoundException).
     pub fn builder() -> crate::error::not_found_exception::Builder {
         crate::error::not_found_exception::Builder::default()
     }
@@ -6378,10 +6378,10 @@ impl std::fmt::Display for InternalFailureException {
     }
 }
 impl std::error::Error for InternalFailureException {}
-/// See [`InternalFailureException`](crate::error::InternalFailureException)
+/// See [`InternalFailureException`](crate::error::InternalFailureException).
 pub mod internal_failure_exception {
-    /// A builder for [`InternalFailureException`](crate::error::InternalFailureException)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalFailureException`](crate::error::InternalFailureException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6397,7 +6397,7 @@ pub mod internal_failure_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalFailureException`](crate::error::InternalFailureException)
+        /// Consumes the builder and constructs a [`InternalFailureException`](crate::error::InternalFailureException).
         pub fn build(self) -> crate::error::InternalFailureException {
             crate::error::InternalFailureException {
                 message: self.message,
@@ -6406,7 +6406,7 @@ pub mod internal_failure_exception {
     }
 }
 impl InternalFailureException {
-    /// Creates a new builder-style object to manufacture [`InternalFailureException`](crate::error::InternalFailureException)
+    /// Creates a new builder-style object to manufacture [`InternalFailureException`](crate::error::InternalFailureException).
     pub fn builder() -> crate::error::internal_failure_exception::Builder {
         crate::error::internal_failure_exception::Builder::default()
     }
@@ -6442,10 +6442,10 @@ impl std::fmt::Display for ConcurrentModificationException {
     }
 }
 impl std::error::Error for ConcurrentModificationException {}
-/// See [`ConcurrentModificationException`](crate::error::ConcurrentModificationException)
+/// See [`ConcurrentModificationException`](crate::error::ConcurrentModificationException).
 pub mod concurrent_modification_exception {
-    /// A builder for [`ConcurrentModificationException`](crate::error::ConcurrentModificationException)
-    #[non_exhaustive]
+
+    /// A builder for [`ConcurrentModificationException`](crate::error::ConcurrentModificationException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6461,7 +6461,7 @@ pub mod concurrent_modification_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConcurrentModificationException`](crate::error::ConcurrentModificationException)
+        /// Consumes the builder and constructs a [`ConcurrentModificationException`](crate::error::ConcurrentModificationException).
         pub fn build(self) -> crate::error::ConcurrentModificationException {
             crate::error::ConcurrentModificationException {
                 message: self.message,
@@ -6470,7 +6470,7 @@ pub mod concurrent_modification_exception {
     }
 }
 impl ConcurrentModificationException {
-    /// Creates a new builder-style object to manufacture [`ConcurrentModificationException`](crate::error::ConcurrentModificationException)
+    /// Creates a new builder-style object to manufacture [`ConcurrentModificationException`](crate::error::ConcurrentModificationException).
     pub fn builder() -> crate::error::concurrent_modification_exception::Builder {
         crate::error::concurrent_modification_exception::Builder::default()
     }
@@ -6506,10 +6506,10 @@ impl std::fmt::Display for BadRequestException {
     }
 }
 impl std::error::Error for BadRequestException {}
-/// See [`BadRequestException`](crate::error::BadRequestException)
+/// See [`BadRequestException`](crate::error::BadRequestException).
 pub mod bad_request_exception {
-    /// A builder for [`BadRequestException`](crate::error::BadRequestException)
-    #[non_exhaustive]
+
+    /// A builder for [`BadRequestException`](crate::error::BadRequestException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6525,7 +6525,7 @@ pub mod bad_request_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BadRequestException`](crate::error::BadRequestException)
+        /// Consumes the builder and constructs a [`BadRequestException`](crate::error::BadRequestException).
         pub fn build(self) -> crate::error::BadRequestException {
             crate::error::BadRequestException {
                 message: self.message,
@@ -6534,7 +6534,7 @@ pub mod bad_request_exception {
     }
 }
 impl BadRequestException {
-    /// Creates a new builder-style object to manufacture [`BadRequestException`](crate::error::BadRequestException)
+    /// Creates a new builder-style object to manufacture [`BadRequestException`](crate::error::BadRequestException).
     pub fn builder() -> crate::error::bad_request_exception::Builder {
         crate::error::bad_request_exception::Builder::default()
     }
@@ -6570,10 +6570,10 @@ impl std::fmt::Display for AccessDeniedException {
     }
 }
 impl std::error::Error for AccessDeniedException {}
-/// See [`AccessDeniedException`](crate::error::AccessDeniedException)
+/// See [`AccessDeniedException`](crate::error::AccessDeniedException).
 pub mod access_denied_exception {
-    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
-    #[non_exhaustive]
+
+    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6589,7 +6589,7 @@ pub mod access_denied_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException)
+        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException).
         pub fn build(self) -> crate::error::AccessDeniedException {
             crate::error::AccessDeniedException {
                 message: self.message,
@@ -6598,7 +6598,7 @@ pub mod access_denied_exception {
     }
 }
 impl AccessDeniedException {
-    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException)
+    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException).
     pub fn builder() -> crate::error::access_denied_exception::Builder {
         crate::error::access_denied_exception::Builder::default()
     }
@@ -6634,10 +6634,10 @@ impl std::fmt::Display for LimitExceededException {
     }
 }
 impl std::error::Error for LimitExceededException {}
-/// See [`LimitExceededException`](crate::error::LimitExceededException)
+/// See [`LimitExceededException`](crate::error::LimitExceededException).
 pub mod limit_exceeded_exception {
-    /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`LimitExceededException`](crate::error::LimitExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6653,7 +6653,7 @@ pub mod limit_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`LimitExceededException`](crate::error::LimitExceededException)
+        /// Consumes the builder and constructs a [`LimitExceededException`](crate::error::LimitExceededException).
         pub fn build(self) -> crate::error::LimitExceededException {
             crate::error::LimitExceededException {
                 message: self.message,
@@ -6662,7 +6662,7 @@ pub mod limit_exceeded_exception {
     }
 }
 impl LimitExceededException {
-    /// Creates a new builder-style object to manufacture [`LimitExceededException`](crate::error::LimitExceededException)
+    /// Creates a new builder-style object to manufacture [`LimitExceededException`](crate::error::LimitExceededException).
     pub fn builder() -> crate::error::limit_exceeded_exception::Builder {
         crate::error::limit_exceeded_exception::Builder::default()
     }
@@ -6698,10 +6698,10 @@ impl std::fmt::Display for ApiKeyValidityOutOfBoundsException {
     }
 }
 impl std::error::Error for ApiKeyValidityOutOfBoundsException {}
-/// See [`ApiKeyValidityOutOfBoundsException`](crate::error::ApiKeyValidityOutOfBoundsException)
+/// See [`ApiKeyValidityOutOfBoundsException`](crate::error::ApiKeyValidityOutOfBoundsException).
 pub mod api_key_validity_out_of_bounds_exception {
-    /// A builder for [`ApiKeyValidityOutOfBoundsException`](crate::error::ApiKeyValidityOutOfBoundsException)
-    #[non_exhaustive]
+
+    /// A builder for [`ApiKeyValidityOutOfBoundsException`](crate::error::ApiKeyValidityOutOfBoundsException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6717,7 +6717,7 @@ pub mod api_key_validity_out_of_bounds_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApiKeyValidityOutOfBoundsException`](crate::error::ApiKeyValidityOutOfBoundsException)
+        /// Consumes the builder and constructs a [`ApiKeyValidityOutOfBoundsException`](crate::error::ApiKeyValidityOutOfBoundsException).
         pub fn build(self) -> crate::error::ApiKeyValidityOutOfBoundsException {
             crate::error::ApiKeyValidityOutOfBoundsException {
                 message: self.message,
@@ -6726,7 +6726,7 @@ pub mod api_key_validity_out_of_bounds_exception {
     }
 }
 impl ApiKeyValidityOutOfBoundsException {
-    /// Creates a new builder-style object to manufacture [`ApiKeyValidityOutOfBoundsException`](crate::error::ApiKeyValidityOutOfBoundsException)
+    /// Creates a new builder-style object to manufacture [`ApiKeyValidityOutOfBoundsException`](crate::error::ApiKeyValidityOutOfBoundsException).
     pub fn builder() -> crate::error::api_key_validity_out_of_bounds_exception::Builder {
         crate::error::api_key_validity_out_of_bounds_exception::Builder::default()
     }
@@ -6762,10 +6762,10 @@ impl std::fmt::Display for GraphQlSchemaException {
     }
 }
 impl std::error::Error for GraphQlSchemaException {}
-/// See [`GraphQlSchemaException`](crate::error::GraphQlSchemaException)
+/// See [`GraphQlSchemaException`](crate::error::GraphQlSchemaException).
 pub mod graph_ql_schema_exception {
-    /// A builder for [`GraphQlSchemaException`](crate::error::GraphQlSchemaException)
-    #[non_exhaustive]
+
+    /// A builder for [`GraphQlSchemaException`](crate::error::GraphQlSchemaException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6781,7 +6781,7 @@ pub mod graph_ql_schema_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`GraphQlSchemaException`](crate::error::GraphQlSchemaException)
+        /// Consumes the builder and constructs a [`GraphQlSchemaException`](crate::error::GraphQlSchemaException).
         pub fn build(self) -> crate::error::GraphQlSchemaException {
             crate::error::GraphQlSchemaException {
                 message: self.message,
@@ -6790,7 +6790,7 @@ pub mod graph_ql_schema_exception {
     }
 }
 impl GraphQlSchemaException {
-    /// Creates a new builder-style object to manufacture [`GraphQlSchemaException`](crate::error::GraphQlSchemaException)
+    /// Creates a new builder-style object to manufacture [`GraphQlSchemaException`](crate::error::GraphQlSchemaException).
     pub fn builder() -> crate::error::graph_ql_schema_exception::Builder {
         crate::error::graph_ql_schema_exception::Builder::default()
     }
@@ -6826,10 +6826,10 @@ impl std::fmt::Display for ApiLimitExceededException {
     }
 }
 impl std::error::Error for ApiLimitExceededException {}
-/// See [`ApiLimitExceededException`](crate::error::ApiLimitExceededException)
+/// See [`ApiLimitExceededException`](crate::error::ApiLimitExceededException).
 pub mod api_limit_exceeded_exception {
-    /// A builder for [`ApiLimitExceededException`](crate::error::ApiLimitExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`ApiLimitExceededException`](crate::error::ApiLimitExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6845,7 +6845,7 @@ pub mod api_limit_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApiLimitExceededException`](crate::error::ApiLimitExceededException)
+        /// Consumes the builder and constructs a [`ApiLimitExceededException`](crate::error::ApiLimitExceededException).
         pub fn build(self) -> crate::error::ApiLimitExceededException {
             crate::error::ApiLimitExceededException {
                 message: self.message,
@@ -6854,7 +6854,7 @@ pub mod api_limit_exceeded_exception {
     }
 }
 impl ApiLimitExceededException {
-    /// Creates a new builder-style object to manufacture [`ApiLimitExceededException`](crate::error::ApiLimitExceededException)
+    /// Creates a new builder-style object to manufacture [`ApiLimitExceededException`](crate::error::ApiLimitExceededException).
     pub fn builder() -> crate::error::api_limit_exceeded_exception::Builder {
         crate::error::api_limit_exceeded_exception::Builder::default()
     }
@@ -6890,10 +6890,10 @@ impl std::fmt::Display for ApiKeyLimitExceededException {
     }
 }
 impl std::error::Error for ApiKeyLimitExceededException {}
-/// See [`ApiKeyLimitExceededException`](crate::error::ApiKeyLimitExceededException)
+/// See [`ApiKeyLimitExceededException`](crate::error::ApiKeyLimitExceededException).
 pub mod api_key_limit_exceeded_exception {
-    /// A builder for [`ApiKeyLimitExceededException`](crate::error::ApiKeyLimitExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`ApiKeyLimitExceededException`](crate::error::ApiKeyLimitExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6909,7 +6909,7 @@ pub mod api_key_limit_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ApiKeyLimitExceededException`](crate::error::ApiKeyLimitExceededException)
+        /// Consumes the builder and constructs a [`ApiKeyLimitExceededException`](crate::error::ApiKeyLimitExceededException).
         pub fn build(self) -> crate::error::ApiKeyLimitExceededException {
             crate::error::ApiKeyLimitExceededException {
                 message: self.message,
@@ -6918,7 +6918,7 @@ pub mod api_key_limit_exceeded_exception {
     }
 }
 impl ApiKeyLimitExceededException {
-    /// Creates a new builder-style object to manufacture [`ApiKeyLimitExceededException`](crate::error::ApiKeyLimitExceededException)
+    /// Creates a new builder-style object to manufacture [`ApiKeyLimitExceededException`](crate::error::ApiKeyLimitExceededException).
     pub fn builder() -> crate::error::api_key_limit_exceeded_exception::Builder {
         crate::error::api_key_limit_exceeded_exception::Builder::default()
     }

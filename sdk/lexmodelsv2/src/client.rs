@@ -209,7 +209,7 @@ impl Client {
     ///   - [`export_id(Option<String>)`](crate::output::CreateExportOutput::export_id): <p>An identifier for a specific request to create an export.</p>
     ///   - [`resource_specification(Option<ExportResourceSpecification>)`](crate::output::CreateExportOutput::resource_specification): <p>A description of the type of resource that was exported, either a bot or a bot locale.</p>
     ///   - [`file_format(Option<ImportExportFileFormat>)`](crate::output::CreateExportOutput::file_format): <p>The file format used for the bot or bot locale definition files.</p>
-    ///   - [`export_status(Option<ExportStatus>)`](crate::output::CreateExportOutput::export_status): <p>The status of the export. When the status is <code>Completed</code>, you can use the <a href="https://docs.aws.amazon.com/latest/dg/API_DescribeExport.html">DescribeExport</a> operation to get the pre-signed S3 URL link to your exported bot or bot locale.</p>
+    ///   - [`export_status(Option<ExportStatus>)`](crate::output::CreateExportOutput::export_status): <p>The status of the export. When the status is <code>Completed</code>, you can use the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">DescribeExport</a> operation to get the pre-signed S3 URL link to your exported bot or bot locale.</p>
     ///   - [`creation_date_time(Option<DateTime>)`](crate::output::CreateExportOutput::creation_date_time): <p>The date and time that the request to export a bot was created.</p>
     /// - On failure, responds with [`SdkError<CreateExportError>`](crate::error::CreateExportError)
     pub fn create_export(&self) -> fluent_builders::CreateExport {
@@ -1379,13 +1379,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `BuildBotLocale`.
     ///
     /// <p>Builds a bot, its intents, and its slot types into a specific locale. A bot can be built into multiple locales. At runtime the locale is used to choose a specific build of the bot.</p>

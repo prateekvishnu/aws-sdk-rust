@@ -6833,6 +6833,268 @@ impl std::error::Error for GetPartnerAccountError {
     }
 }
 
+/// Error type for the `GetPosition` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct GetPositionError {
+    /// Kind of error that occurred.
+    pub kind: GetPositionErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `GetPosition` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum GetPositionErrorKind {
+    /// <p>User does not have permission to perform this action.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>An unexpected error occurred while processing a request.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>Resource does not exist.</p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>The request was denied because it exceeded the allowed API request rate.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p>The input did not meet the specified constraints.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for GetPositionError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            GetPositionErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            GetPositionErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            GetPositionErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            GetPositionErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            GetPositionErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            GetPositionErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for GetPositionError {
+    fn code(&self) -> Option<&str> {
+        GetPositionError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl GetPositionError {
+    /// Creates a new `GetPositionError`.
+    pub fn new(kind: GetPositionErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `GetPositionError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: GetPositionErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `GetPositionError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: GetPositionErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `GetPositionErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(&self.kind, GetPositionErrorKind::AccessDeniedException(_))
+    }
+    /// Returns `true` if the error kind is `GetPositionErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(&self.kind, GetPositionErrorKind::InternalServerException(_))
+    }
+    /// Returns `true` if the error kind is `GetPositionErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GetPositionErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `GetPositionErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(&self.kind, GetPositionErrorKind::ThrottlingException(_))
+    }
+    /// Returns `true` if the error kind is `GetPositionErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(&self.kind, GetPositionErrorKind::ValidationException(_))
+    }
+}
+impl std::error::Error for GetPositionError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            GetPositionErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            GetPositionErrorKind::InternalServerException(_inner) => Some(_inner),
+            GetPositionErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            GetPositionErrorKind::ThrottlingException(_inner) => Some(_inner),
+            GetPositionErrorKind::ValidationException(_inner) => Some(_inner),
+            GetPositionErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `GetPositionConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct GetPositionConfigurationError {
+    /// Kind of error that occurred.
+    pub kind: GetPositionConfigurationErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `GetPositionConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum GetPositionConfigurationErrorKind {
+    /// <p>User does not have permission to perform this action.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>An unexpected error occurred while processing a request.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>Resource does not exist.</p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>The request was denied because it exceeded the allowed API request rate.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p>The input did not meet the specified constraints.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for GetPositionConfigurationError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            GetPositionConfigurationErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            GetPositionConfigurationErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            GetPositionConfigurationErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            GetPositionConfigurationErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            GetPositionConfigurationErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            GetPositionConfigurationErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for GetPositionConfigurationError {
+    fn code(&self) -> Option<&str> {
+        GetPositionConfigurationError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl GetPositionConfigurationError {
+    /// Creates a new `GetPositionConfigurationError`.
+    pub fn new(kind: GetPositionConfigurationErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `GetPositionConfigurationError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: GetPositionConfigurationErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `GetPositionConfigurationError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: GetPositionConfigurationErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `GetPositionConfigurationErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GetPositionConfigurationErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `GetPositionConfigurationErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GetPositionConfigurationErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `GetPositionConfigurationErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GetPositionConfigurationErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `GetPositionConfigurationErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GetPositionConfigurationErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `GetPositionConfigurationErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            GetPositionConfigurationErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for GetPositionConfigurationError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            GetPositionConfigurationErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            GetPositionConfigurationErrorKind::InternalServerException(_inner) => Some(_inner),
+            GetPositionConfigurationErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            GetPositionConfigurationErrorKind::ThrottlingException(_inner) => Some(_inner),
+            GetPositionConfigurationErrorKind::ValidationException(_inner) => Some(_inner),
+            GetPositionConfigurationErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `GetResourceEventConfiguration` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -9569,6 +9831,132 @@ impl std::error::Error for ListPartnerAccountsError {
     }
 }
 
+/// Error type for the `ListPositionConfigurations` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct ListPositionConfigurationsError {
+    /// Kind of error that occurred.
+    pub kind: ListPositionConfigurationsErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `ListPositionConfigurations` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum ListPositionConfigurationsErrorKind {
+    /// <p>User does not have permission to perform this action.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>An unexpected error occurred while processing a request.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>The request was denied because it exceeded the allowed API request rate.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p>The input did not meet the specified constraints.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for ListPositionConfigurationsError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            ListPositionConfigurationsErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            ListPositionConfigurationsErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            ListPositionConfigurationsErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            ListPositionConfigurationsErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            ListPositionConfigurationsErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for ListPositionConfigurationsError {
+    fn code(&self) -> Option<&str> {
+        ListPositionConfigurationsError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl ListPositionConfigurationsError {
+    /// Creates a new `ListPositionConfigurationsError`.
+    pub fn new(kind: ListPositionConfigurationsErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `ListPositionConfigurationsError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: ListPositionConfigurationsErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `ListPositionConfigurationsError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: ListPositionConfigurationsErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `ListPositionConfigurationsErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListPositionConfigurationsErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ListPositionConfigurationsErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListPositionConfigurationsErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ListPositionConfigurationsErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListPositionConfigurationsErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ListPositionConfigurationsErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListPositionConfigurationsErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for ListPositionConfigurationsError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            ListPositionConfigurationsErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            ListPositionConfigurationsErrorKind::InternalServerException(_inner) => Some(_inner),
+            ListPositionConfigurationsErrorKind::ThrottlingException(_inner) => Some(_inner),
+            ListPositionConfigurationsErrorKind::ValidationException(_inner) => Some(_inner),
+            ListPositionConfigurationsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `ListQueuedMessages` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -10362,6 +10750,143 @@ impl std::error::Error for ListWirelessGatewayTaskDefinitionsError {
                 Some(_inner)
             }
             ListWirelessGatewayTaskDefinitionsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `PutPositionConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct PutPositionConfigurationError {
+    /// Kind of error that occurred.
+    pub kind: PutPositionConfigurationErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `PutPositionConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum PutPositionConfigurationErrorKind {
+    /// <p>User does not have permission to perform this action.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>An unexpected error occurred while processing a request.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>Resource does not exist.</p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>The request was denied because it exceeded the allowed API request rate.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p>The input did not meet the specified constraints.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for PutPositionConfigurationError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            PutPositionConfigurationErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            PutPositionConfigurationErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            PutPositionConfigurationErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            PutPositionConfigurationErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            PutPositionConfigurationErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            PutPositionConfigurationErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for PutPositionConfigurationError {
+    fn code(&self) -> Option<&str> {
+        PutPositionConfigurationError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl PutPositionConfigurationError {
+    /// Creates a new `PutPositionConfigurationError`.
+    pub fn new(kind: PutPositionConfigurationErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `PutPositionConfigurationError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: PutPositionConfigurationErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `PutPositionConfigurationError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: PutPositionConfigurationErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `PutPositionConfigurationErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            PutPositionConfigurationErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `PutPositionConfigurationErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            PutPositionConfigurationErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `PutPositionConfigurationErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            PutPositionConfigurationErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `PutPositionConfigurationErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            PutPositionConfigurationErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `PutPositionConfigurationErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            PutPositionConfigurationErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for PutPositionConfigurationError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            PutPositionConfigurationErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            PutPositionConfigurationErrorKind::InternalServerException(_inner) => Some(_inner),
+            PutPositionConfigurationErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            PutPositionConfigurationErrorKind::ThrottlingException(_inner) => Some(_inner),
+            PutPositionConfigurationErrorKind::ValidationException(_inner) => Some(_inner),
+            PutPositionConfigurationErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -13084,6 +13609,137 @@ impl std::error::Error for UpdatePartnerAccountError {
     }
 }
 
+/// Error type for the `UpdatePosition` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct UpdatePositionError {
+    /// Kind of error that occurred.
+    pub kind: UpdatePositionErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `UpdatePosition` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum UpdatePositionErrorKind {
+    /// <p>User does not have permission to perform this action.</p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>An unexpected error occurred while processing a request.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>Resource does not exist.</p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>The request was denied because it exceeded the allowed API request rate.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p>The input did not meet the specified constraints.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for UpdatePositionError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            UpdatePositionErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            UpdatePositionErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            UpdatePositionErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            UpdatePositionErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            UpdatePositionErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            UpdatePositionErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for UpdatePositionError {
+    fn code(&self) -> Option<&str> {
+        UpdatePositionError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl UpdatePositionError {
+    /// Creates a new `UpdatePositionError`.
+    pub fn new(kind: UpdatePositionErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `UpdatePositionError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: UpdatePositionErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `UpdatePositionError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: UpdatePositionErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `UpdatePositionErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdatePositionErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdatePositionErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdatePositionErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdatePositionErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdatePositionErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdatePositionErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(&self.kind, UpdatePositionErrorKind::ThrottlingException(_))
+    }
+    /// Returns `true` if the error kind is `UpdatePositionErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(&self.kind, UpdatePositionErrorKind::ValidationException(_))
+    }
+}
+impl std::error::Error for UpdatePositionError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            UpdatePositionErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            UpdatePositionErrorKind::InternalServerException(_inner) => Some(_inner),
+            UpdatePositionErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            UpdatePositionErrorKind::ThrottlingException(_inner) => Some(_inner),
+            UpdatePositionErrorKind::ValidationException(_inner) => Some(_inner),
+            UpdatePositionErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `UpdateResourceEventConfiguration` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -13551,10 +14207,10 @@ impl std::fmt::Display for ValidationException {
     }
 }
 impl std::error::Error for ValidationException {}
-/// See [`ValidationException`](crate::error::ValidationException)
+/// See [`ValidationException`](crate::error::ValidationException).
 pub mod validation_exception {
-    /// A builder for [`ValidationException`](crate::error::ValidationException)
-    #[non_exhaustive]
+
+    /// A builder for [`ValidationException`](crate::error::ValidationException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -13570,7 +14226,7 @@ pub mod validation_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException)
+        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException).
         pub fn build(self) -> crate::error::ValidationException {
             crate::error::ValidationException {
                 message: self.message,
@@ -13579,7 +14235,7 @@ pub mod validation_exception {
     }
 }
 impl ValidationException {
-    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException)
+    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException).
     pub fn builder() -> crate::error::validation_exception::Builder {
         crate::error::validation_exception::Builder::default()
     }
@@ -13615,10 +14271,10 @@ impl std::fmt::Display for ThrottlingException {
     }
 }
 impl std::error::Error for ThrottlingException {}
-/// See [`ThrottlingException`](crate::error::ThrottlingException)
+/// See [`ThrottlingException`](crate::error::ThrottlingException).
 pub mod throttling_exception {
-    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
-    #[non_exhaustive]
+
+    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -13634,7 +14290,7 @@ pub mod throttling_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException)
+        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException).
         pub fn build(self) -> crate::error::ThrottlingException {
             crate::error::ThrottlingException {
                 message: self.message,
@@ -13643,7 +14299,7 @@ pub mod throttling_exception {
     }
 }
 impl ThrottlingException {
-    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException)
+    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException).
     pub fn builder() -> crate::error::throttling_exception::Builder {
         crate::error::throttling_exception::Builder::default()
     }
@@ -13695,10 +14351,10 @@ impl std::fmt::Display for ResourceNotFoundException {
     }
 }
 impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
 pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -13739,7 +14395,7 @@ pub mod resource_not_found_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
         pub fn build(self) -> crate::error::ResourceNotFoundException {
             crate::error::ResourceNotFoundException {
                 message: self.message,
@@ -13750,7 +14406,7 @@ pub mod resource_not_found_exception {
     }
 }
 impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     pub fn builder() -> crate::error::resource_not_found_exception::Builder {
         crate::error::resource_not_found_exception::Builder::default()
     }
@@ -13786,10 +14442,10 @@ impl std::fmt::Display for InternalServerException {
     }
 }
 impl std::error::Error for InternalServerException {}
-/// See [`InternalServerException`](crate::error::InternalServerException)
+/// See [`InternalServerException`](crate::error::InternalServerException).
 pub mod internal_server_exception {
-    /// A builder for [`InternalServerException`](crate::error::InternalServerException)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalServerException`](crate::error::InternalServerException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -13805,7 +14461,7 @@ pub mod internal_server_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException)
+        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException).
         pub fn build(self) -> crate::error::InternalServerException {
             crate::error::InternalServerException {
                 message: self.message,
@@ -13814,7 +14470,7 @@ pub mod internal_server_exception {
     }
 }
 impl InternalServerException {
-    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException)
+    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException).
     pub fn builder() -> crate::error::internal_server_exception::Builder {
         crate::error::internal_server_exception::Builder::default()
     }
@@ -13850,10 +14506,10 @@ impl std::fmt::Display for AccessDeniedException {
     }
 }
 impl std::error::Error for AccessDeniedException {}
-/// See [`AccessDeniedException`](crate::error::AccessDeniedException)
+/// See [`AccessDeniedException`](crate::error::AccessDeniedException).
 pub mod access_denied_exception {
-    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
-    #[non_exhaustive]
+
+    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -13869,7 +14525,7 @@ pub mod access_denied_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException)
+        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException).
         pub fn build(self) -> crate::error::AccessDeniedException {
             crate::error::AccessDeniedException {
                 message: self.message,
@@ -13878,7 +14534,7 @@ pub mod access_denied_exception {
     }
 }
 impl AccessDeniedException {
-    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException)
+    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException).
     pub fn builder() -> crate::error::access_denied_exception::Builder {
         crate::error::access_denied_exception::Builder::default()
     }
@@ -13930,10 +14586,10 @@ impl std::fmt::Display for ConflictException {
     }
 }
 impl std::error::Error for ConflictException {}
-/// See [`ConflictException`](crate::error::ConflictException)
+/// See [`ConflictException`](crate::error::ConflictException).
 pub mod conflict_exception {
-    /// A builder for [`ConflictException`](crate::error::ConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`ConflictException`](crate::error::ConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -13974,7 +14630,7 @@ pub mod conflict_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException)
+        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException).
         pub fn build(self) -> crate::error::ConflictException {
             crate::error::ConflictException {
                 message: self.message,
@@ -13985,7 +14641,7 @@ pub mod conflict_exception {
     }
 }
 impl ConflictException {
-    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException)
+    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException).
     pub fn builder() -> crate::error::conflict_exception::Builder {
         crate::error::conflict_exception::Builder::default()
     }
@@ -14030,10 +14686,10 @@ impl std::fmt::Display for TooManyTagsException {
     }
 }
 impl std::error::Error for TooManyTagsException {}
-/// See [`TooManyTagsException`](crate::error::TooManyTagsException)
+/// See [`TooManyTagsException`](crate::error::TooManyTagsException).
 pub mod too_many_tags_exception {
-    /// A builder for [`TooManyTagsException`](crate::error::TooManyTagsException)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyTagsException`](crate::error::TooManyTagsException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -14063,7 +14719,7 @@ pub mod too_many_tags_exception {
             self.resource_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyTagsException`](crate::error::TooManyTagsException)
+        /// Consumes the builder and constructs a [`TooManyTagsException`](crate::error::TooManyTagsException).
         pub fn build(self) -> crate::error::TooManyTagsException {
             crate::error::TooManyTagsException {
                 message: self.message,
@@ -14073,7 +14729,7 @@ pub mod too_many_tags_exception {
     }
 }
 impl TooManyTagsException {
-    /// Creates a new builder-style object to manufacture [`TooManyTagsException`](crate::error::TooManyTagsException)
+    /// Creates a new builder-style object to manufacture [`TooManyTagsException`](crate::error::TooManyTagsException).
     pub fn builder() -> crate::error::too_many_tags_exception::Builder {
         crate::error::too_many_tags_exception::Builder::default()
     }

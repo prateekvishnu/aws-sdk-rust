@@ -13,7 +13,7 @@ pub struct UpdateRoomOutput {
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Time of the room’s last update. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.</p>
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p>Maximum number of messages per second that a client can send to the room, from the request.</p>
+    /// <p>Maximum number of messages per second that can be sent to the room (by all clients), from the request.</p>
     pub maximum_message_rate_per_second: i32,
     /// <p>Maximum number of characters in a single message, from the request.</p>
     pub maximum_message_length: i32,
@@ -44,7 +44,7 @@ impl UpdateRoomOutput {
     pub fn update_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.update_time.as_ref()
     }
-    /// <p>Maximum number of messages per second that a client can send to the room, from the request.</p>
+    /// <p>Maximum number of messages per second that can be sent to the room (by all clients), from the request.</p>
     pub fn maximum_message_rate_per_second(&self) -> i32 {
         self.maximum_message_rate_per_second
     }
@@ -84,10 +84,10 @@ impl std::fmt::Debug for UpdateRoomOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateRoomOutput`](crate::output::UpdateRoomOutput)
+/// See [`UpdateRoomOutput`](crate::output::UpdateRoomOutput).
 pub mod update_room_output {
-    /// A builder for [`UpdateRoomOutput`](crate::output::UpdateRoomOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateRoomOutput`](crate::output::UpdateRoomOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -159,12 +159,12 @@ pub mod update_room_output {
             self.update_time = input;
             self
         }
-        /// <p>Maximum number of messages per second that a client can send to the room, from the request.</p>
+        /// <p>Maximum number of messages per second that can be sent to the room (by all clients), from the request.</p>
         pub fn maximum_message_rate_per_second(mut self, input: i32) -> Self {
             self.maximum_message_rate_per_second = Some(input);
             self
         }
-        /// <p>Maximum number of messages per second that a client can send to the room, from the request.</p>
+        /// <p>Maximum number of messages per second that can be sent to the room (by all clients), from the request.</p>
         pub fn set_maximum_message_rate_per_second(
             mut self,
             input: std::option::Option<i32>,
@@ -220,7 +220,7 @@ pub mod update_room_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateRoomOutput`](crate::output::UpdateRoomOutput)
+        /// Consumes the builder and constructs a [`UpdateRoomOutput`](crate::output::UpdateRoomOutput).
         pub fn build(self) -> crate::output::UpdateRoomOutput {
             crate::output::UpdateRoomOutput {
                 arn: self.arn,
@@ -239,7 +239,7 @@ pub mod update_room_output {
     }
 }
 impl UpdateRoomOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateRoomOutput`](crate::output::UpdateRoomOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateRoomOutput`](crate::output::UpdateRoomOutput).
     pub fn builder() -> crate::output::update_room_output::Builder {
         crate::output::update_room_output::Builder::default()
     }
@@ -255,21 +255,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -285,21 +285,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -325,10 +325,10 @@ impl std::fmt::Debug for SendEventOutput {
         formatter.finish()
     }
 }
-/// See [`SendEventOutput`](crate::output::SendEventOutput)
+/// See [`SendEventOutput`](crate::output::SendEventOutput).
 pub mod send_event_output {
-    /// A builder for [`SendEventOutput`](crate::output::SendEventOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`SendEventOutput`](crate::output::SendEventOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -344,14 +344,14 @@ pub mod send_event_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`SendEventOutput`](crate::output::SendEventOutput)
+        /// Consumes the builder and constructs a [`SendEventOutput`](crate::output::SendEventOutput).
         pub fn build(self) -> crate::output::SendEventOutput {
             crate::output::SendEventOutput { id: self.id }
         }
     }
 }
 impl SendEventOutput {
-    /// Creates a new builder-style object to manufacture [`SendEventOutput`](crate::output::SendEventOutput)
+    /// Creates a new builder-style object to manufacture [`SendEventOutput`](crate::output::SendEventOutput).
     pub fn builder() -> crate::output::send_event_output::Builder {
         crate::output::send_event_output::Builder::default()
     }
@@ -381,10 +381,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -417,14 +417,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -457,10 +457,10 @@ impl std::fmt::Debug for ListRoomsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRoomsOutput`](crate::output::ListRoomsOutput)
+/// See [`ListRoomsOutput`](crate::output::ListRoomsOutput).
 pub mod list_rooms_output {
-    /// A builder for [`ListRoomsOutput`](crate::output::ListRoomsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListRoomsOutput`](crate::output::ListRoomsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rooms: std::option::Option<std::vec::Vec<crate::model::RoomSummary>>,
@@ -496,7 +496,7 @@ pub mod list_rooms_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRoomsOutput`](crate::output::ListRoomsOutput)
+        /// Consumes the builder and constructs a [`ListRoomsOutput`](crate::output::ListRoomsOutput).
         pub fn build(self) -> crate::output::ListRoomsOutput {
             crate::output::ListRoomsOutput {
                 rooms: self.rooms,
@@ -506,7 +506,7 @@ pub mod list_rooms_output {
     }
 }
 impl ListRoomsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRoomsOutput`](crate::output::ListRoomsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRoomsOutput`](crate::output::ListRoomsOutput).
     pub fn builder() -> crate::output::list_rooms_output::Builder {
         crate::output::list_rooms_output::Builder::default()
     }
@@ -526,7 +526,7 @@ pub struct GetRoomOutput {
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Time of the room’s last update. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.</p>
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p>Maximum number of messages per second that a client can send to the room. Default: 10.</p>
+    /// <p>Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.</p>
     pub maximum_message_rate_per_second: i32,
     /// <p>Maximum number of characters in a single message. Messages are expected to be UTF-8 encoded and this limit applies specifically to rune/code-point count, not number of bytes. Default: 500.</p>
     pub maximum_message_length: i32,
@@ -557,7 +557,7 @@ impl GetRoomOutput {
     pub fn update_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.update_time.as_ref()
     }
-    /// <p>Maximum number of messages per second that a client can send to the room. Default: 10.</p>
+    /// <p>Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.</p>
     pub fn maximum_message_rate_per_second(&self) -> i32 {
         self.maximum_message_rate_per_second
     }
@@ -597,10 +597,10 @@ impl std::fmt::Debug for GetRoomOutput {
         formatter.finish()
     }
 }
-/// See [`GetRoomOutput`](crate::output::GetRoomOutput)
+/// See [`GetRoomOutput`](crate::output::GetRoomOutput).
 pub mod get_room_output {
-    /// A builder for [`GetRoomOutput`](crate::output::GetRoomOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetRoomOutput`](crate::output::GetRoomOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -672,12 +672,12 @@ pub mod get_room_output {
             self.update_time = input;
             self
         }
-        /// <p>Maximum number of messages per second that a client can send to the room. Default: 10.</p>
+        /// <p>Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.</p>
         pub fn maximum_message_rate_per_second(mut self, input: i32) -> Self {
             self.maximum_message_rate_per_second = Some(input);
             self
         }
-        /// <p>Maximum number of messages per second that a client can send to the room. Default: 10.</p>
+        /// <p>Maximum number of messages per second that can be sent to the room (by all clients). Default: 10.</p>
         pub fn set_maximum_message_rate_per_second(
             mut self,
             input: std::option::Option<i32>,
@@ -733,7 +733,7 @@ pub mod get_room_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRoomOutput`](crate::output::GetRoomOutput)
+        /// Consumes the builder and constructs a [`GetRoomOutput`](crate::output::GetRoomOutput).
         pub fn build(self) -> crate::output::GetRoomOutput {
             crate::output::GetRoomOutput {
                 arn: self.arn,
@@ -752,7 +752,7 @@ pub mod get_room_output {
     }
 }
 impl GetRoomOutput {
-    /// Creates a new builder-style object to manufacture [`GetRoomOutput`](crate::output::GetRoomOutput)
+    /// Creates a new builder-style object to manufacture [`GetRoomOutput`](crate::output::GetRoomOutput).
     pub fn builder() -> crate::output::get_room_output::Builder {
         crate::output::get_room_output::Builder::default()
     }
@@ -768,21 +768,21 @@ impl std::fmt::Debug for DisconnectUserOutput {
         formatter.finish()
     }
 }
-/// See [`DisconnectUserOutput`](crate::output::DisconnectUserOutput)
+/// See [`DisconnectUserOutput`](crate::output::DisconnectUserOutput).
 pub mod disconnect_user_output {
-    /// A builder for [`DisconnectUserOutput`](crate::output::DisconnectUserOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DisconnectUserOutput`](crate::output::DisconnectUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DisconnectUserOutput`](crate::output::DisconnectUserOutput)
+        /// Consumes the builder and constructs a [`DisconnectUserOutput`](crate::output::DisconnectUserOutput).
         pub fn build(self) -> crate::output::DisconnectUserOutput {
             crate::output::DisconnectUserOutput {}
         }
     }
 }
 impl DisconnectUserOutput {
-    /// Creates a new builder-style object to manufacture [`DisconnectUserOutput`](crate::output::DisconnectUserOutput)
+    /// Creates a new builder-style object to manufacture [`DisconnectUserOutput`](crate::output::DisconnectUserOutput).
     pub fn builder() -> crate::output::disconnect_user_output::Builder {
         crate::output::disconnect_user_output::Builder::default()
     }
@@ -798,21 +798,21 @@ impl std::fmt::Debug for DeleteRoomOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRoomOutput`](crate::output::DeleteRoomOutput)
+/// See [`DeleteRoomOutput`](crate::output::DeleteRoomOutput).
 pub mod delete_room_output {
-    /// A builder for [`DeleteRoomOutput`](crate::output::DeleteRoomOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteRoomOutput`](crate::output::DeleteRoomOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteRoomOutput`](crate::output::DeleteRoomOutput)
+        /// Consumes the builder and constructs a [`DeleteRoomOutput`](crate::output::DeleteRoomOutput).
         pub fn build(self) -> crate::output::DeleteRoomOutput {
             crate::output::DeleteRoomOutput {}
         }
     }
 }
 impl DeleteRoomOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRoomOutput`](crate::output::DeleteRoomOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRoomOutput`](crate::output::DeleteRoomOutput).
     pub fn builder() -> crate::output::delete_room_output::Builder {
         crate::output::delete_room_output::Builder::default()
     }
@@ -838,10 +838,10 @@ impl std::fmt::Debug for DeleteMessageOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteMessageOutput`](crate::output::DeleteMessageOutput)
+/// See [`DeleteMessageOutput`](crate::output::DeleteMessageOutput).
 pub mod delete_message_output {
-    /// A builder for [`DeleteMessageOutput`](crate::output::DeleteMessageOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteMessageOutput`](crate::output::DeleteMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -857,14 +857,14 @@ pub mod delete_message_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteMessageOutput`](crate::output::DeleteMessageOutput)
+        /// Consumes the builder and constructs a [`DeleteMessageOutput`](crate::output::DeleteMessageOutput).
         pub fn build(self) -> crate::output::DeleteMessageOutput {
             crate::output::DeleteMessageOutput { id: self.id }
         }
     }
 }
 impl DeleteMessageOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteMessageOutput`](crate::output::DeleteMessageOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteMessageOutput`](crate::output::DeleteMessageOutput).
     pub fn builder() -> crate::output::delete_message_output::Builder {
         crate::output::delete_message_output::Builder::default()
     }
@@ -884,7 +884,7 @@ pub struct CreateRoomOutput {
     pub create_time: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Time of the room’s last update. This is an ISO 8601 timestamp; <i>note that this is returned as a string</i>.</p>
     pub update_time: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p>Maximum number of messages per second that a client can send to the room, from the request.</p>
+    /// <p>Maximum number of messages per second that can be sent to the room (by all clients), from the request.</p>
     pub maximum_message_rate_per_second: i32,
     /// <p>Maximum number of characters in a single message, from the request.</p>
     pub maximum_message_length: i32,
@@ -915,7 +915,7 @@ impl CreateRoomOutput {
     pub fn update_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.update_time.as_ref()
     }
-    /// <p>Maximum number of messages per second that a client can send to the room, from the request.</p>
+    /// <p>Maximum number of messages per second that can be sent to the room (by all clients), from the request.</p>
     pub fn maximum_message_rate_per_second(&self) -> i32 {
         self.maximum_message_rate_per_second
     }
@@ -955,10 +955,10 @@ impl std::fmt::Debug for CreateRoomOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRoomOutput`](crate::output::CreateRoomOutput)
+/// See [`CreateRoomOutput`](crate::output::CreateRoomOutput).
 pub mod create_room_output {
-    /// A builder for [`CreateRoomOutput`](crate::output::CreateRoomOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateRoomOutput`](crate::output::CreateRoomOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1030,12 +1030,12 @@ pub mod create_room_output {
             self.update_time = input;
             self
         }
-        /// <p>Maximum number of messages per second that a client can send to the room, from the request.</p>
+        /// <p>Maximum number of messages per second that can be sent to the room (by all clients), from the request.</p>
         pub fn maximum_message_rate_per_second(mut self, input: i32) -> Self {
             self.maximum_message_rate_per_second = Some(input);
             self
         }
-        /// <p>Maximum number of messages per second that a client can send to the room, from the request.</p>
+        /// <p>Maximum number of messages per second that can be sent to the room (by all clients), from the request.</p>
         pub fn set_maximum_message_rate_per_second(
             mut self,
             input: std::option::Option<i32>,
@@ -1091,7 +1091,7 @@ pub mod create_room_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRoomOutput`](crate::output::CreateRoomOutput)
+        /// Consumes the builder and constructs a [`CreateRoomOutput`](crate::output::CreateRoomOutput).
         pub fn build(self) -> crate::output::CreateRoomOutput {
             crate::output::CreateRoomOutput {
                 arn: self.arn,
@@ -1110,7 +1110,7 @@ pub mod create_room_output {
     }
 }
 impl CreateRoomOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRoomOutput`](crate::output::CreateRoomOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRoomOutput`](crate::output::CreateRoomOutput).
     pub fn builder() -> crate::output::create_room_output::Builder {
         crate::output::create_room_output::Builder::default()
     }
@@ -1150,10 +1150,10 @@ impl std::fmt::Debug for CreateChatTokenOutput {
         formatter.finish()
     }
 }
-/// See [`CreateChatTokenOutput`](crate::output::CreateChatTokenOutput)
+/// See [`CreateChatTokenOutput`](crate::output::CreateChatTokenOutput).
 pub mod create_chat_token_output {
-    /// A builder for [`CreateChatTokenOutput`](crate::output::CreateChatTokenOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateChatTokenOutput`](crate::output::CreateChatTokenOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) token: std::option::Option<std::string::String>,
@@ -1197,7 +1197,7 @@ pub mod create_chat_token_output {
             self.session_expiration_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateChatTokenOutput`](crate::output::CreateChatTokenOutput)
+        /// Consumes the builder and constructs a [`CreateChatTokenOutput`](crate::output::CreateChatTokenOutput).
         pub fn build(self) -> crate::output::CreateChatTokenOutput {
             crate::output::CreateChatTokenOutput {
                 token: self.token,
@@ -1208,7 +1208,7 @@ pub mod create_chat_token_output {
     }
 }
 impl CreateChatTokenOutput {
-    /// Creates a new builder-style object to manufacture [`CreateChatTokenOutput`](crate::output::CreateChatTokenOutput)
+    /// Creates a new builder-style object to manufacture [`CreateChatTokenOutput`](crate::output::CreateChatTokenOutput).
     pub fn builder() -> crate::output::create_chat_token_output::Builder {
         crate::output::create_chat_token_output::Builder::default()
     }

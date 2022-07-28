@@ -19,10 +19,10 @@ impl std::fmt::Debug for UpdateAttributeGroupOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAttributeGroupOutput`](crate::output::UpdateAttributeGroupOutput)
+/// See [`UpdateAttributeGroupOutput`](crate::output::UpdateAttributeGroupOutput).
 pub mod update_attribute_group_output {
-    /// A builder for [`UpdateAttributeGroupOutput`](crate::output::UpdateAttributeGroupOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateAttributeGroupOutput`](crate::output::UpdateAttributeGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_group: std::option::Option<crate::model::AttributeGroup>,
@@ -41,7 +41,7 @@ pub mod update_attribute_group_output {
             self.attribute_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateAttributeGroupOutput`](crate::output::UpdateAttributeGroupOutput)
+        /// Consumes the builder and constructs a [`UpdateAttributeGroupOutput`](crate::output::UpdateAttributeGroupOutput).
         pub fn build(self) -> crate::output::UpdateAttributeGroupOutput {
             crate::output::UpdateAttributeGroupOutput {
                 attribute_group: self.attribute_group,
@@ -50,7 +50,7 @@ pub mod update_attribute_group_output {
     }
 }
 impl UpdateAttributeGroupOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAttributeGroupOutput`](crate::output::UpdateAttributeGroupOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAttributeGroupOutput`](crate::output::UpdateAttributeGroupOutput).
     pub fn builder() -> crate::output::update_attribute_group_output::Builder {
         crate::output::update_attribute_group_output::Builder::default()
     }
@@ -76,10 +76,10 @@ impl std::fmt::Debug for UpdateApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput)
+/// See [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput).
 pub mod update_application_output {
-    /// A builder for [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application: std::option::Option<crate::model::Application>,
@@ -98,7 +98,7 @@ pub mod update_application_output {
             self.application = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput)
+        /// Consumes the builder and constructs a [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput).
         pub fn build(self) -> crate::output::UpdateApplicationOutput {
             crate::output::UpdateApplicationOutput {
                 application: self.application,
@@ -107,7 +107,7 @@ pub mod update_application_output {
     }
 }
 impl UpdateApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateApplicationOutput`](crate::output::UpdateApplicationOutput).
     pub fn builder() -> crate::output::update_application_output::Builder {
         crate::output::update_application_output::Builder::default()
     }
@@ -123,21 +123,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -153,21 +153,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -207,10 +207,10 @@ impl std::fmt::Debug for SyncResourceOutput {
         formatter.finish()
     }
 }
-/// See [`SyncResourceOutput`](crate::output::SyncResourceOutput)
+/// See [`SyncResourceOutput`](crate::output::SyncResourceOutput).
 pub mod sync_resource_output {
-    /// A builder for [`SyncResourceOutput`](crate::output::SyncResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`SyncResourceOutput`](crate::output::SyncResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_arn: std::option::Option<std::string::String>,
@@ -254,7 +254,7 @@ pub mod sync_resource_output {
             self.action_taken = input;
             self
         }
-        /// Consumes the builder and constructs a [`SyncResourceOutput`](crate::output::SyncResourceOutput)
+        /// Consumes the builder and constructs a [`SyncResourceOutput`](crate::output::SyncResourceOutput).
         pub fn build(self) -> crate::output::SyncResourceOutput {
             crate::output::SyncResourceOutput {
                 application_arn: self.application_arn,
@@ -265,7 +265,7 @@ pub mod sync_resource_output {
     }
 }
 impl SyncResourceOutput {
-    /// Creates a new builder-style object to manufacture [`SyncResourceOutput`](crate::output::SyncResourceOutput)
+    /// Creates a new builder-style object to manufacture [`SyncResourceOutput`](crate::output::SyncResourceOutput).
     pub fn builder() -> crate::output::sync_resource_output::Builder {
         crate::output::sync_resource_output::Builder::default()
     }
@@ -295,10 +295,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -331,16 +331,105 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListAttributeGroupsForApplicationOutput {
+    /// <p> The details related to a specific AttributeGroup. </p>
+    pub attribute_groups_details:
+        std::option::Option<std::vec::Vec<crate::model::AttributeGroupDetails>>,
+    /// <p>The token to use to get the next page of results after a previous API call.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListAttributeGroupsForApplicationOutput {
+    /// <p> The details related to a specific AttributeGroup. </p>
+    pub fn attribute_groups_details(
+        &self,
+    ) -> std::option::Option<&[crate::model::AttributeGroupDetails]> {
+        self.attribute_groups_details.as_deref()
+    }
+    /// <p>The token to use to get the next page of results after a previous API call.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListAttributeGroupsForApplicationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListAttributeGroupsForApplicationOutput");
+        formatter.field("attribute_groups_details", &self.attribute_groups_details);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListAttributeGroupsForApplicationOutput`](crate::output::ListAttributeGroupsForApplicationOutput).
+pub mod list_attribute_groups_for_application_output {
+
+    /// A builder for [`ListAttributeGroupsForApplicationOutput`](crate::output::ListAttributeGroupsForApplicationOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) attribute_groups_details:
+            std::option::Option<std::vec::Vec<crate::model::AttributeGroupDetails>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `attribute_groups_details`.
+        ///
+        /// To override the contents of this collection use [`set_attribute_groups_details`](Self::set_attribute_groups_details).
+        ///
+        /// <p> The details related to a specific AttributeGroup. </p>
+        pub fn attribute_groups_details(
+            mut self,
+            input: crate::model::AttributeGroupDetails,
+        ) -> Self {
+            let mut v = self.attribute_groups_details.unwrap_or_default();
+            v.push(input);
+            self.attribute_groups_details = Some(v);
+            self
+        }
+        /// <p> The details related to a specific AttributeGroup. </p>
+        pub fn set_attribute_groups_details(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::AttributeGroupDetails>>,
+        ) -> Self {
+            self.attribute_groups_details = input;
+            self
+        }
+        /// <p>The token to use to get the next page of results after a previous API call.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>The token to use to get the next page of results after a previous API call.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListAttributeGroupsForApplicationOutput`](crate::output::ListAttributeGroupsForApplicationOutput).
+        pub fn build(self) -> crate::output::ListAttributeGroupsForApplicationOutput {
+            crate::output::ListAttributeGroupsForApplicationOutput {
+                attribute_groups_details: self.attribute_groups_details,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListAttributeGroupsForApplicationOutput {
+    /// Creates a new builder-style object to manufacture [`ListAttributeGroupsForApplicationOutput`](crate::output::ListAttributeGroupsForApplicationOutput).
+    pub fn builder() -> crate::output::list_attribute_groups_for_application_output::Builder {
+        crate::output::list_attribute_groups_for_application_output::Builder::default()
     }
 }
 
@@ -371,10 +460,10 @@ impl std::fmt::Debug for ListAttributeGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAttributeGroupsOutput`](crate::output::ListAttributeGroupsOutput)
+/// See [`ListAttributeGroupsOutput`](crate::output::ListAttributeGroupsOutput).
 pub mod list_attribute_groups_output {
-    /// A builder for [`ListAttributeGroupsOutput`](crate::output::ListAttributeGroupsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListAttributeGroupsOutput`](crate::output::ListAttributeGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_groups:
@@ -411,7 +500,7 @@ pub mod list_attribute_groups_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAttributeGroupsOutput`](crate::output::ListAttributeGroupsOutput)
+        /// Consumes the builder and constructs a [`ListAttributeGroupsOutput`](crate::output::ListAttributeGroupsOutput).
         pub fn build(self) -> crate::output::ListAttributeGroupsOutput {
             crate::output::ListAttributeGroupsOutput {
                 attribute_groups: self.attribute_groups,
@@ -421,7 +510,7 @@ pub mod list_attribute_groups_output {
     }
 }
 impl ListAttributeGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAttributeGroupsOutput`](crate::output::ListAttributeGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAttributeGroupsOutput`](crate::output::ListAttributeGroupsOutput).
     pub fn builder() -> crate::output::list_attribute_groups_output::Builder {
         crate::output::list_attribute_groups_output::Builder::default()
     }
@@ -454,10 +543,10 @@ impl std::fmt::Debug for ListAssociatedResourcesOutput {
         formatter.finish()
     }
 }
-/// See [`ListAssociatedResourcesOutput`](crate::output::ListAssociatedResourcesOutput)
+/// See [`ListAssociatedResourcesOutput`](crate::output::ListAssociatedResourcesOutput).
 pub mod list_associated_resources_output {
-    /// A builder for [`ListAssociatedResourcesOutput`](crate::output::ListAssociatedResourcesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListAssociatedResourcesOutput`](crate::output::ListAssociatedResourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resources: std::option::Option<std::vec::Vec<crate::model::ResourceInfo>>,
@@ -493,7 +582,7 @@ pub mod list_associated_resources_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAssociatedResourcesOutput`](crate::output::ListAssociatedResourcesOutput)
+        /// Consumes the builder and constructs a [`ListAssociatedResourcesOutput`](crate::output::ListAssociatedResourcesOutput).
         pub fn build(self) -> crate::output::ListAssociatedResourcesOutput {
             crate::output::ListAssociatedResourcesOutput {
                 resources: self.resources,
@@ -503,7 +592,7 @@ pub mod list_associated_resources_output {
     }
 }
 impl ListAssociatedResourcesOutput {
-    /// Creates a new builder-style object to manufacture [`ListAssociatedResourcesOutput`](crate::output::ListAssociatedResourcesOutput)
+    /// Creates a new builder-style object to manufacture [`ListAssociatedResourcesOutput`](crate::output::ListAssociatedResourcesOutput).
     pub fn builder() -> crate::output::list_associated_resources_output::Builder {
         crate::output::list_associated_resources_output::Builder::default()
     }
@@ -536,10 +625,10 @@ impl std::fmt::Debug for ListAssociatedAttributeGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAssociatedAttributeGroupsOutput`](crate::output::ListAssociatedAttributeGroupsOutput)
+/// See [`ListAssociatedAttributeGroupsOutput`](crate::output::ListAssociatedAttributeGroupsOutput).
 pub mod list_associated_attribute_groups_output {
-    /// A builder for [`ListAssociatedAttributeGroupsOutput`](crate::output::ListAssociatedAttributeGroupsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListAssociatedAttributeGroupsOutput`](crate::output::ListAssociatedAttributeGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_groups: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -575,7 +664,7 @@ pub mod list_associated_attribute_groups_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAssociatedAttributeGroupsOutput`](crate::output::ListAssociatedAttributeGroupsOutput)
+        /// Consumes the builder and constructs a [`ListAssociatedAttributeGroupsOutput`](crate::output::ListAssociatedAttributeGroupsOutput).
         pub fn build(self) -> crate::output::ListAssociatedAttributeGroupsOutput {
             crate::output::ListAssociatedAttributeGroupsOutput {
                 attribute_groups: self.attribute_groups,
@@ -585,7 +674,7 @@ pub mod list_associated_attribute_groups_output {
     }
 }
 impl ListAssociatedAttributeGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAssociatedAttributeGroupsOutput`](crate::output::ListAssociatedAttributeGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAssociatedAttributeGroupsOutput`](crate::output::ListAssociatedAttributeGroupsOutput).
     pub fn builder() -> crate::output::list_associated_attribute_groups_output::Builder {
         crate::output::list_associated_attribute_groups_output::Builder::default()
     }
@@ -618,10 +707,10 @@ impl std::fmt::Debug for ListApplicationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
+/// See [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
 pub mod list_applications_output {
-    /// A builder for [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) applications:
@@ -658,7 +747,7 @@ pub mod list_applications_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
+        /// Consumes the builder and constructs a [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
         pub fn build(self) -> crate::output::ListApplicationsOutput {
             crate::output::ListApplicationsOutput {
                 applications: self.applications,
@@ -668,7 +757,7 @@ pub mod list_applications_output {
     }
 }
 impl ListApplicationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
     pub fn builder() -> crate::output::list_applications_output::Builder {
         crate::output::list_applications_output::Builder::default()
     }
@@ -747,10 +836,10 @@ impl std::fmt::Debug for GetAttributeGroupOutput {
         formatter.finish()
     }
 }
-/// See [`GetAttributeGroupOutput`](crate::output::GetAttributeGroupOutput)
+/// See [`GetAttributeGroupOutput`](crate::output::GetAttributeGroupOutput).
 pub mod get_attribute_group_output {
-    /// A builder for [`GetAttributeGroupOutput`](crate::output::GetAttributeGroupOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetAttributeGroupOutput`](crate::output::GetAttributeGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -866,7 +955,7 @@ pub mod get_attribute_group_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAttributeGroupOutput`](crate::output::GetAttributeGroupOutput)
+        /// Consumes the builder and constructs a [`GetAttributeGroupOutput`](crate::output::GetAttributeGroupOutput).
         pub fn build(self) -> crate::output::GetAttributeGroupOutput {
             crate::output::GetAttributeGroupOutput {
                 id: self.id,
@@ -882,7 +971,7 @@ pub mod get_attribute_group_output {
     }
 }
 impl GetAttributeGroupOutput {
-    /// Creates a new builder-style object to manufacture [`GetAttributeGroupOutput`](crate::output::GetAttributeGroupOutput)
+    /// Creates a new builder-style object to manufacture [`GetAttributeGroupOutput`](crate::output::GetAttributeGroupOutput).
     pub fn builder() -> crate::output::get_attribute_group_output::Builder {
         crate::output::get_attribute_group_output::Builder::default()
     }
@@ -908,10 +997,10 @@ impl std::fmt::Debug for GetAssociatedResourceOutput {
         formatter.finish()
     }
 }
-/// See [`GetAssociatedResourceOutput`](crate::output::GetAssociatedResourceOutput)
+/// See [`GetAssociatedResourceOutput`](crate::output::GetAssociatedResourceOutput).
 pub mod get_associated_resource_output {
-    /// A builder for [`GetAssociatedResourceOutput`](crate::output::GetAssociatedResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetAssociatedResourceOutput`](crate::output::GetAssociatedResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource: std::option::Option<crate::model::Resource>,
@@ -927,7 +1016,7 @@ pub mod get_associated_resource_output {
             self.resource = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetAssociatedResourceOutput`](crate::output::GetAssociatedResourceOutput)
+        /// Consumes the builder and constructs a [`GetAssociatedResourceOutput`](crate::output::GetAssociatedResourceOutput).
         pub fn build(self) -> crate::output::GetAssociatedResourceOutput {
             crate::output::GetAssociatedResourceOutput {
                 resource: self.resource,
@@ -936,7 +1025,7 @@ pub mod get_associated_resource_output {
     }
 }
 impl GetAssociatedResourceOutput {
-    /// Creates a new builder-style object to manufacture [`GetAssociatedResourceOutput`](crate::output::GetAssociatedResourceOutput)
+    /// Creates a new builder-style object to manufacture [`GetAssociatedResourceOutput`](crate::output::GetAssociatedResourceOutput).
     pub fn builder() -> crate::output::get_associated_resource_output::Builder {
         crate::output::get_associated_resource_output::Builder::default()
     }
@@ -1022,10 +1111,10 @@ impl std::fmt::Debug for GetApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`GetApplicationOutput`](crate::output::GetApplicationOutput)
+/// See [`GetApplicationOutput`](crate::output::GetApplicationOutput).
 pub mod get_application_output {
-    /// A builder for [`GetApplicationOutput`](crate::output::GetApplicationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetApplicationOutput`](crate::output::GetApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1155,7 +1244,7 @@ pub mod get_application_output {
             self.integrations = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetApplicationOutput`](crate::output::GetApplicationOutput)
+        /// Consumes the builder and constructs a [`GetApplicationOutput`](crate::output::GetApplicationOutput).
         pub fn build(self) -> crate::output::GetApplicationOutput {
             crate::output::GetApplicationOutput {
                 id: self.id,
@@ -1172,7 +1261,7 @@ pub mod get_application_output {
     }
 }
 impl GetApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`GetApplicationOutput`](crate::output::GetApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`GetApplicationOutput`](crate::output::GetApplicationOutput).
     pub fn builder() -> crate::output::get_application_output::Builder {
         crate::output::get_application_output::Builder::default()
     }
@@ -1205,10 +1294,10 @@ impl std::fmt::Debug for DisassociateResourceOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateResourceOutput`](crate::output::DisassociateResourceOutput)
+/// See [`DisassociateResourceOutput`](crate::output::DisassociateResourceOutput).
 pub mod disassociate_resource_output {
-    /// A builder for [`DisassociateResourceOutput`](crate::output::DisassociateResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DisassociateResourceOutput`](crate::output::DisassociateResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_arn: std::option::Option<std::string::String>,
@@ -1238,7 +1327,7 @@ pub mod disassociate_resource_output {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateResourceOutput`](crate::output::DisassociateResourceOutput)
+        /// Consumes the builder and constructs a [`DisassociateResourceOutput`](crate::output::DisassociateResourceOutput).
         pub fn build(self) -> crate::output::DisassociateResourceOutput {
             crate::output::DisassociateResourceOutput {
                 application_arn: self.application_arn,
@@ -1248,7 +1337,7 @@ pub mod disassociate_resource_output {
     }
 }
 impl DisassociateResourceOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateResourceOutput`](crate::output::DisassociateResourceOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateResourceOutput`](crate::output::DisassociateResourceOutput).
     pub fn builder() -> crate::output::disassociate_resource_output::Builder {
         crate::output::disassociate_resource_output::Builder::default()
     }
@@ -1281,10 +1370,10 @@ impl std::fmt::Debug for DisassociateAttributeGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateAttributeGroupOutput`](crate::output::DisassociateAttributeGroupOutput)
+/// See [`DisassociateAttributeGroupOutput`](crate::output::DisassociateAttributeGroupOutput).
 pub mod disassociate_attribute_group_output {
-    /// A builder for [`DisassociateAttributeGroupOutput`](crate::output::DisassociateAttributeGroupOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DisassociateAttributeGroupOutput`](crate::output::DisassociateAttributeGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_arn: std::option::Option<std::string::String>,
@@ -1317,7 +1406,7 @@ pub mod disassociate_attribute_group_output {
             self.attribute_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateAttributeGroupOutput`](crate::output::DisassociateAttributeGroupOutput)
+        /// Consumes the builder and constructs a [`DisassociateAttributeGroupOutput`](crate::output::DisassociateAttributeGroupOutput).
         pub fn build(self) -> crate::output::DisassociateAttributeGroupOutput {
             crate::output::DisassociateAttributeGroupOutput {
                 application_arn: self.application_arn,
@@ -1327,7 +1416,7 @@ pub mod disassociate_attribute_group_output {
     }
 }
 impl DisassociateAttributeGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateAttributeGroupOutput`](crate::output::DisassociateAttributeGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateAttributeGroupOutput`](crate::output::DisassociateAttributeGroupOutput).
     pub fn builder() -> crate::output::disassociate_attribute_group_output::Builder {
         crate::output::disassociate_attribute_group_output::Builder::default()
     }
@@ -1353,10 +1442,10 @@ impl std::fmt::Debug for DeleteAttributeGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAttributeGroupOutput`](crate::output::DeleteAttributeGroupOutput)
+/// See [`DeleteAttributeGroupOutput`](crate::output::DeleteAttributeGroupOutput).
 pub mod delete_attribute_group_output {
-    /// A builder for [`DeleteAttributeGroupOutput`](crate::output::DeleteAttributeGroupOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteAttributeGroupOutput`](crate::output::DeleteAttributeGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_group: std::option::Option<crate::model::AttributeGroupSummary>,
@@ -1375,7 +1464,7 @@ pub mod delete_attribute_group_output {
             self.attribute_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteAttributeGroupOutput`](crate::output::DeleteAttributeGroupOutput)
+        /// Consumes the builder and constructs a [`DeleteAttributeGroupOutput`](crate::output::DeleteAttributeGroupOutput).
         pub fn build(self) -> crate::output::DeleteAttributeGroupOutput {
             crate::output::DeleteAttributeGroupOutput {
                 attribute_group: self.attribute_group,
@@ -1384,7 +1473,7 @@ pub mod delete_attribute_group_output {
     }
 }
 impl DeleteAttributeGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAttributeGroupOutput`](crate::output::DeleteAttributeGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAttributeGroupOutput`](crate::output::DeleteAttributeGroupOutput).
     pub fn builder() -> crate::output::delete_attribute_group_output::Builder {
         crate::output::delete_attribute_group_output::Builder::default()
     }
@@ -1410,10 +1499,10 @@ impl std::fmt::Debug for DeleteApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
+/// See [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
 pub mod delete_application_output {
-    /// A builder for [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application: std::option::Option<crate::model::ApplicationSummary>,
@@ -1432,7 +1521,7 @@ pub mod delete_application_output {
             self.application = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
+        /// Consumes the builder and constructs a [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
         pub fn build(self) -> crate::output::DeleteApplicationOutput {
             crate::output::DeleteApplicationOutput {
                 application: self.application,
@@ -1441,7 +1530,7 @@ pub mod delete_application_output {
     }
 }
 impl DeleteApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
     pub fn builder() -> crate::output::delete_application_output::Builder {
         crate::output::delete_application_output::Builder::default()
     }
@@ -1467,10 +1556,10 @@ impl std::fmt::Debug for CreateAttributeGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAttributeGroupOutput`](crate::output::CreateAttributeGroupOutput)
+/// See [`CreateAttributeGroupOutput`](crate::output::CreateAttributeGroupOutput).
 pub mod create_attribute_group_output {
-    /// A builder for [`CreateAttributeGroupOutput`](crate::output::CreateAttributeGroupOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateAttributeGroupOutput`](crate::output::CreateAttributeGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute_group: std::option::Option<crate::model::AttributeGroup>,
@@ -1489,7 +1578,7 @@ pub mod create_attribute_group_output {
             self.attribute_group = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAttributeGroupOutput`](crate::output::CreateAttributeGroupOutput)
+        /// Consumes the builder and constructs a [`CreateAttributeGroupOutput`](crate::output::CreateAttributeGroupOutput).
         pub fn build(self) -> crate::output::CreateAttributeGroupOutput {
             crate::output::CreateAttributeGroupOutput {
                 attribute_group: self.attribute_group,
@@ -1498,7 +1587,7 @@ pub mod create_attribute_group_output {
     }
 }
 impl CreateAttributeGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAttributeGroupOutput`](crate::output::CreateAttributeGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAttributeGroupOutput`](crate::output::CreateAttributeGroupOutput).
     pub fn builder() -> crate::output::create_attribute_group_output::Builder {
         crate::output::create_attribute_group_output::Builder::default()
     }
@@ -1524,10 +1613,10 @@ impl std::fmt::Debug for CreateApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
+/// See [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
 pub mod create_application_output {
-    /// A builder for [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application: std::option::Option<crate::model::Application>,
@@ -1546,7 +1635,7 @@ pub mod create_application_output {
             self.application = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
+        /// Consumes the builder and constructs a [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
         pub fn build(self) -> crate::output::CreateApplicationOutput {
             crate::output::CreateApplicationOutput {
                 application: self.application,
@@ -1555,7 +1644,7 @@ pub mod create_application_output {
     }
 }
 impl CreateApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
     pub fn builder() -> crate::output::create_application_output::Builder {
         crate::output::create_application_output::Builder::default()
     }
@@ -1588,10 +1677,10 @@ impl std::fmt::Debug for AssociateResourceOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateResourceOutput`](crate::output::AssociateResourceOutput)
+/// See [`AssociateResourceOutput`](crate::output::AssociateResourceOutput).
 pub mod associate_resource_output {
-    /// A builder for [`AssociateResourceOutput`](crate::output::AssociateResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`AssociateResourceOutput`](crate::output::AssociateResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_arn: std::option::Option<std::string::String>,
@@ -1621,7 +1710,7 @@ pub mod associate_resource_output {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateResourceOutput`](crate::output::AssociateResourceOutput)
+        /// Consumes the builder and constructs a [`AssociateResourceOutput`](crate::output::AssociateResourceOutput).
         pub fn build(self) -> crate::output::AssociateResourceOutput {
             crate::output::AssociateResourceOutput {
                 application_arn: self.application_arn,
@@ -1631,7 +1720,7 @@ pub mod associate_resource_output {
     }
 }
 impl AssociateResourceOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateResourceOutput`](crate::output::AssociateResourceOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateResourceOutput`](crate::output::AssociateResourceOutput).
     pub fn builder() -> crate::output::associate_resource_output::Builder {
         crate::output::associate_resource_output::Builder::default()
     }
@@ -1664,10 +1753,10 @@ impl std::fmt::Debug for AssociateAttributeGroupOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateAttributeGroupOutput`](crate::output::AssociateAttributeGroupOutput)
+/// See [`AssociateAttributeGroupOutput`](crate::output::AssociateAttributeGroupOutput).
 pub mod associate_attribute_group_output {
-    /// A builder for [`AssociateAttributeGroupOutput`](crate::output::AssociateAttributeGroupOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`AssociateAttributeGroupOutput`](crate::output::AssociateAttributeGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_arn: std::option::Option<std::string::String>,
@@ -1700,7 +1789,7 @@ pub mod associate_attribute_group_output {
             self.attribute_group_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateAttributeGroupOutput`](crate::output::AssociateAttributeGroupOutput)
+        /// Consumes the builder and constructs a [`AssociateAttributeGroupOutput`](crate::output::AssociateAttributeGroupOutput).
         pub fn build(self) -> crate::output::AssociateAttributeGroupOutput {
             crate::output::AssociateAttributeGroupOutput {
                 application_arn: self.application_arn,
@@ -1710,7 +1799,7 @@ pub mod associate_attribute_group_output {
     }
 }
 impl AssociateAttributeGroupOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateAttributeGroupOutput`](crate::output::AssociateAttributeGroupOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateAttributeGroupOutput`](crate::output::AssociateAttributeGroupOutput).
     pub fn builder() -> crate::output::associate_attribute_group_output::Builder {
         crate::output::associate_attribute_group_output::Builder::default()
     }

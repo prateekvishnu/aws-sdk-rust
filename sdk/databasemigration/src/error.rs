@@ -659,6 +659,149 @@ impl std::error::Error for CreateEventSubscriptionError {
     }
 }
 
+/// Error type for the `CreateFleetAdvisorCollector` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct CreateFleetAdvisorCollectorError {
+    /// Kind of error that occurred.
+    pub kind: CreateFleetAdvisorCollectorErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `CreateFleetAdvisorCollector` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum CreateFleetAdvisorCollectorErrorKind {
+    /// <p>DMS was denied access to the endpoint. Check that the role is correctly configured.</p>
+    AccessDeniedFault(crate::error::AccessDeniedFault),
+    /// <p>The resource is in a state that prevents it from being used for database migration.</p>
+    InvalidResourceStateFault(crate::error::InvalidResourceStateFault),
+    /// <p>The quota for this resource quota has been exceeded.</p>
+    ResourceQuotaExceededFault(crate::error::ResourceQuotaExceededFault),
+    /// <p>Insufficient privileges are preventing access to an Amazon S3 object.</p>
+    S3AccessDeniedFault(crate::error::S3AccessDeniedFault),
+    /// <p>A specified Amazon S3 bucket, bucket folder, or other object can't be found.</p>
+    S3ResourceNotFoundFault(crate::error::S3ResourceNotFoundFault),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for CreateFleetAdvisorCollectorError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            CreateFleetAdvisorCollectorErrorKind::AccessDeniedFault(_inner) => _inner.fmt(f),
+            CreateFleetAdvisorCollectorErrorKind::InvalidResourceStateFault(_inner) => {
+                _inner.fmt(f)
+            }
+            CreateFleetAdvisorCollectorErrorKind::ResourceQuotaExceededFault(_inner) => {
+                _inner.fmt(f)
+            }
+            CreateFleetAdvisorCollectorErrorKind::S3AccessDeniedFault(_inner) => _inner.fmt(f),
+            CreateFleetAdvisorCollectorErrorKind::S3ResourceNotFoundFault(_inner) => _inner.fmt(f),
+            CreateFleetAdvisorCollectorErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for CreateFleetAdvisorCollectorError {
+    fn code(&self) -> Option<&str> {
+        CreateFleetAdvisorCollectorError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl CreateFleetAdvisorCollectorError {
+    /// Creates a new `CreateFleetAdvisorCollectorError`.
+    pub fn new(kind: CreateFleetAdvisorCollectorErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `CreateFleetAdvisorCollectorError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: CreateFleetAdvisorCollectorErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `CreateFleetAdvisorCollectorError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: CreateFleetAdvisorCollectorErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `CreateFleetAdvisorCollectorErrorKind::AccessDeniedFault`.
+    pub fn is_access_denied_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateFleetAdvisorCollectorErrorKind::AccessDeniedFault(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateFleetAdvisorCollectorErrorKind::InvalidResourceStateFault`.
+    pub fn is_invalid_resource_state_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateFleetAdvisorCollectorErrorKind::InvalidResourceStateFault(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateFleetAdvisorCollectorErrorKind::ResourceQuotaExceededFault`.
+    pub fn is_resource_quota_exceeded_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateFleetAdvisorCollectorErrorKind::ResourceQuotaExceededFault(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateFleetAdvisorCollectorErrorKind::S3AccessDeniedFault`.
+    pub fn is_s3_access_denied_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateFleetAdvisorCollectorErrorKind::S3AccessDeniedFault(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateFleetAdvisorCollectorErrorKind::S3ResourceNotFoundFault`.
+    pub fn is_s3_resource_not_found_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateFleetAdvisorCollectorErrorKind::S3ResourceNotFoundFault(_)
+        )
+    }
+}
+impl std::error::Error for CreateFleetAdvisorCollectorError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            CreateFleetAdvisorCollectorErrorKind::AccessDeniedFault(_inner) => Some(_inner),
+            CreateFleetAdvisorCollectorErrorKind::InvalidResourceStateFault(_inner) => Some(_inner),
+            CreateFleetAdvisorCollectorErrorKind::ResourceQuotaExceededFault(_inner) => {
+                Some(_inner)
+            }
+            CreateFleetAdvisorCollectorErrorKind::S3AccessDeniedFault(_inner) => Some(_inner),
+            CreateFleetAdvisorCollectorErrorKind::S3ResourceNotFoundFault(_inner) => Some(_inner),
+            CreateFleetAdvisorCollectorErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `CreateReplicationInstance` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -1591,6 +1734,216 @@ impl std::error::Error for DeleteEventSubscriptionError {
             DeleteEventSubscriptionErrorKind::InvalidResourceStateFault(_inner) => Some(_inner),
             DeleteEventSubscriptionErrorKind::ResourceNotFoundFault(_inner) => Some(_inner),
             DeleteEventSubscriptionErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DeleteFleetAdvisorCollector` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DeleteFleetAdvisorCollectorError {
+    /// Kind of error that occurred.
+    pub kind: DeleteFleetAdvisorCollectorErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DeleteFleetAdvisorCollector` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DeleteFleetAdvisorCollectorErrorKind {
+    /// <p>The specified collector doesn't exist.</p>
+    CollectorNotFoundFault(crate::error::CollectorNotFoundFault),
+    /// <p>The resource is in a state that prevents it from being used for database migration.</p>
+    InvalidResourceStateFault(crate::error::InvalidResourceStateFault),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DeleteFleetAdvisorCollectorError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DeleteFleetAdvisorCollectorErrorKind::CollectorNotFoundFault(_inner) => _inner.fmt(f),
+            DeleteFleetAdvisorCollectorErrorKind::InvalidResourceStateFault(_inner) => {
+                _inner.fmt(f)
+            }
+            DeleteFleetAdvisorCollectorErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DeleteFleetAdvisorCollectorError {
+    fn code(&self) -> Option<&str> {
+        DeleteFleetAdvisorCollectorError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DeleteFleetAdvisorCollectorError {
+    /// Creates a new `DeleteFleetAdvisorCollectorError`.
+    pub fn new(kind: DeleteFleetAdvisorCollectorErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DeleteFleetAdvisorCollectorError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DeleteFleetAdvisorCollectorErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DeleteFleetAdvisorCollectorError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DeleteFleetAdvisorCollectorErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DeleteFleetAdvisorCollectorErrorKind::CollectorNotFoundFault`.
+    pub fn is_collector_not_found_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteFleetAdvisorCollectorErrorKind::CollectorNotFoundFault(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteFleetAdvisorCollectorErrorKind::InvalidResourceStateFault`.
+    pub fn is_invalid_resource_state_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteFleetAdvisorCollectorErrorKind::InvalidResourceStateFault(_)
+        )
+    }
+}
+impl std::error::Error for DeleteFleetAdvisorCollectorError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DeleteFleetAdvisorCollectorErrorKind::CollectorNotFoundFault(_inner) => Some(_inner),
+            DeleteFleetAdvisorCollectorErrorKind::InvalidResourceStateFault(_inner) => Some(_inner),
+            DeleteFleetAdvisorCollectorErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DeleteFleetAdvisorDatabases` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DeleteFleetAdvisorDatabasesError {
+    /// Kind of error that occurred.
+    pub kind: DeleteFleetAdvisorDatabasesErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DeleteFleetAdvisorDatabases` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DeleteFleetAdvisorDatabasesErrorKind {
+    /// <p>The action or operation requested isn't valid.</p>
+    InvalidOperationFault(crate::error::InvalidOperationFault),
+    /// <p>The resource could not be found.</p>
+    ResourceNotFoundFault(crate::error::ResourceNotFoundFault),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DeleteFleetAdvisorDatabasesError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DeleteFleetAdvisorDatabasesErrorKind::InvalidOperationFault(_inner) => _inner.fmt(f),
+            DeleteFleetAdvisorDatabasesErrorKind::ResourceNotFoundFault(_inner) => _inner.fmt(f),
+            DeleteFleetAdvisorDatabasesErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DeleteFleetAdvisorDatabasesError {
+    fn code(&self) -> Option<&str> {
+        DeleteFleetAdvisorDatabasesError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DeleteFleetAdvisorDatabasesError {
+    /// Creates a new `DeleteFleetAdvisorDatabasesError`.
+    pub fn new(kind: DeleteFleetAdvisorDatabasesErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DeleteFleetAdvisorDatabasesError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DeleteFleetAdvisorDatabasesErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DeleteFleetAdvisorDatabasesError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DeleteFleetAdvisorDatabasesErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DeleteFleetAdvisorDatabasesErrorKind::InvalidOperationFault`.
+    pub fn is_invalid_operation_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteFleetAdvisorDatabasesErrorKind::InvalidOperationFault(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteFleetAdvisorDatabasesErrorKind::ResourceNotFoundFault`.
+    pub fn is_resource_not_found_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteFleetAdvisorDatabasesErrorKind::ResourceNotFoundFault(_)
+        )
+    }
+}
+impl std::error::Error for DeleteFleetAdvisorDatabasesError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DeleteFleetAdvisorDatabasesErrorKind::InvalidOperationFault(_inner) => Some(_inner),
+            DeleteFleetAdvisorDatabasesErrorKind::ResourceNotFoundFault(_inner) => Some(_inner),
+            DeleteFleetAdvisorDatabasesErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -2947,6 +3300,503 @@ impl std::error::Error for DescribeEventSubscriptionsError {
         match &self.kind {
             DescribeEventSubscriptionsErrorKind::ResourceNotFoundFault(_inner) => Some(_inner),
             DescribeEventSubscriptionsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DescribeFleetAdvisorCollectors` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DescribeFleetAdvisorCollectorsError {
+    /// Kind of error that occurred.
+    pub kind: DescribeFleetAdvisorCollectorsErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DescribeFleetAdvisorCollectors` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DescribeFleetAdvisorCollectorsErrorKind {
+    /// <p>The resource is in a state that prevents it from being used for database migration.</p>
+    InvalidResourceStateFault(crate::error::InvalidResourceStateFault),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DescribeFleetAdvisorCollectorsError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DescribeFleetAdvisorCollectorsErrorKind::InvalidResourceStateFault(_inner) => {
+                _inner.fmt(f)
+            }
+            DescribeFleetAdvisorCollectorsErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DescribeFleetAdvisorCollectorsError {
+    fn code(&self) -> Option<&str> {
+        DescribeFleetAdvisorCollectorsError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DescribeFleetAdvisorCollectorsError {
+    /// Creates a new `DescribeFleetAdvisorCollectorsError`.
+    pub fn new(
+        kind: DescribeFleetAdvisorCollectorsErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DescribeFleetAdvisorCollectorsError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DescribeFleetAdvisorCollectorsErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DescribeFleetAdvisorCollectorsError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DescribeFleetAdvisorCollectorsErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DescribeFleetAdvisorCollectorsErrorKind::InvalidResourceStateFault`.
+    pub fn is_invalid_resource_state_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeFleetAdvisorCollectorsErrorKind::InvalidResourceStateFault(_)
+        )
+    }
+}
+impl std::error::Error for DescribeFleetAdvisorCollectorsError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DescribeFleetAdvisorCollectorsErrorKind::InvalidResourceStateFault(_inner) => {
+                Some(_inner)
+            }
+            DescribeFleetAdvisorCollectorsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DescribeFleetAdvisorDatabases` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DescribeFleetAdvisorDatabasesError {
+    /// Kind of error that occurred.
+    pub kind: DescribeFleetAdvisorDatabasesErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DescribeFleetAdvisorDatabases` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DescribeFleetAdvisorDatabasesErrorKind {
+    /// <p>The resource is in a state that prevents it from being used for database migration.</p>
+    InvalidResourceStateFault(crate::error::InvalidResourceStateFault),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DescribeFleetAdvisorDatabasesError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DescribeFleetAdvisorDatabasesErrorKind::InvalidResourceStateFault(_inner) => {
+                _inner.fmt(f)
+            }
+            DescribeFleetAdvisorDatabasesErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DescribeFleetAdvisorDatabasesError {
+    fn code(&self) -> Option<&str> {
+        DescribeFleetAdvisorDatabasesError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DescribeFleetAdvisorDatabasesError {
+    /// Creates a new `DescribeFleetAdvisorDatabasesError`.
+    pub fn new(
+        kind: DescribeFleetAdvisorDatabasesErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DescribeFleetAdvisorDatabasesError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DescribeFleetAdvisorDatabasesErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DescribeFleetAdvisorDatabasesError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DescribeFleetAdvisorDatabasesErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DescribeFleetAdvisorDatabasesErrorKind::InvalidResourceStateFault`.
+    pub fn is_invalid_resource_state_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeFleetAdvisorDatabasesErrorKind::InvalidResourceStateFault(_)
+        )
+    }
+}
+impl std::error::Error for DescribeFleetAdvisorDatabasesError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DescribeFleetAdvisorDatabasesErrorKind::InvalidResourceStateFault(_inner) => {
+                Some(_inner)
+            }
+            DescribeFleetAdvisorDatabasesErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DescribeFleetAdvisorLsaAnalysis` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DescribeFleetAdvisorLsaAnalysisError {
+    /// Kind of error that occurred.
+    pub kind: DescribeFleetAdvisorLsaAnalysisErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DescribeFleetAdvisorLsaAnalysis` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DescribeFleetAdvisorLsaAnalysisErrorKind {
+    /// <p>The resource is in a state that prevents it from being used for database migration.</p>
+    InvalidResourceStateFault(crate::error::InvalidResourceStateFault),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DescribeFleetAdvisorLsaAnalysisError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DescribeFleetAdvisorLsaAnalysisErrorKind::InvalidResourceStateFault(_inner) => {
+                _inner.fmt(f)
+            }
+            DescribeFleetAdvisorLsaAnalysisErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DescribeFleetAdvisorLsaAnalysisError {
+    fn code(&self) -> Option<&str> {
+        DescribeFleetAdvisorLsaAnalysisError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DescribeFleetAdvisorLsaAnalysisError {
+    /// Creates a new `DescribeFleetAdvisorLsaAnalysisError`.
+    pub fn new(
+        kind: DescribeFleetAdvisorLsaAnalysisErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DescribeFleetAdvisorLsaAnalysisError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DescribeFleetAdvisorLsaAnalysisErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DescribeFleetAdvisorLsaAnalysisError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DescribeFleetAdvisorLsaAnalysisErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DescribeFleetAdvisorLsaAnalysisErrorKind::InvalidResourceStateFault`.
+    pub fn is_invalid_resource_state_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeFleetAdvisorLsaAnalysisErrorKind::InvalidResourceStateFault(_)
+        )
+    }
+}
+impl std::error::Error for DescribeFleetAdvisorLsaAnalysisError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DescribeFleetAdvisorLsaAnalysisErrorKind::InvalidResourceStateFault(_inner) => {
+                Some(_inner)
+            }
+            DescribeFleetAdvisorLsaAnalysisErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DescribeFleetAdvisorSchemaObjectSummary` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DescribeFleetAdvisorSchemaObjectSummaryError {
+    /// Kind of error that occurred.
+    pub kind: DescribeFleetAdvisorSchemaObjectSummaryErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DescribeFleetAdvisorSchemaObjectSummary` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DescribeFleetAdvisorSchemaObjectSummaryErrorKind {
+    /// <p>The resource is in a state that prevents it from being used for database migration.</p>
+    InvalidResourceStateFault(crate::error::InvalidResourceStateFault),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DescribeFleetAdvisorSchemaObjectSummaryError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DescribeFleetAdvisorSchemaObjectSummaryErrorKind::InvalidResourceStateFault(_inner) => {
+                _inner.fmt(f)
+            }
+            DescribeFleetAdvisorSchemaObjectSummaryErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DescribeFleetAdvisorSchemaObjectSummaryError {
+    fn code(&self) -> Option<&str> {
+        DescribeFleetAdvisorSchemaObjectSummaryError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DescribeFleetAdvisorSchemaObjectSummaryError {
+    /// Creates a new `DescribeFleetAdvisorSchemaObjectSummaryError`.
+    pub fn new(
+        kind: DescribeFleetAdvisorSchemaObjectSummaryErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DescribeFleetAdvisorSchemaObjectSummaryError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DescribeFleetAdvisorSchemaObjectSummaryErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DescribeFleetAdvisorSchemaObjectSummaryError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DescribeFleetAdvisorSchemaObjectSummaryErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DescribeFleetAdvisorSchemaObjectSummaryErrorKind::InvalidResourceStateFault`.
+    pub fn is_invalid_resource_state_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeFleetAdvisorSchemaObjectSummaryErrorKind::InvalidResourceStateFault(_)
+        )
+    }
+}
+impl std::error::Error for DescribeFleetAdvisorSchemaObjectSummaryError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DescribeFleetAdvisorSchemaObjectSummaryErrorKind::InvalidResourceStateFault(_inner) => {
+                Some(_inner)
+            }
+            DescribeFleetAdvisorSchemaObjectSummaryErrorKind::Unhandled(_inner) => {
+                Some(_inner.as_ref())
+            }
+        }
+    }
+}
+
+/// Error type for the `DescribeFleetAdvisorSchemas` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DescribeFleetAdvisorSchemasError {
+    /// Kind of error that occurred.
+    pub kind: DescribeFleetAdvisorSchemasErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DescribeFleetAdvisorSchemas` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DescribeFleetAdvisorSchemasErrorKind {
+    /// <p>The resource is in a state that prevents it from being used for database migration.</p>
+    InvalidResourceStateFault(crate::error::InvalidResourceStateFault),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DescribeFleetAdvisorSchemasError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DescribeFleetAdvisorSchemasErrorKind::InvalidResourceStateFault(_inner) => {
+                _inner.fmt(f)
+            }
+            DescribeFleetAdvisorSchemasErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DescribeFleetAdvisorSchemasError {
+    fn code(&self) -> Option<&str> {
+        DescribeFleetAdvisorSchemasError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DescribeFleetAdvisorSchemasError {
+    /// Creates a new `DescribeFleetAdvisorSchemasError`.
+    pub fn new(kind: DescribeFleetAdvisorSchemasErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DescribeFleetAdvisorSchemasError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DescribeFleetAdvisorSchemasErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DescribeFleetAdvisorSchemasError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DescribeFleetAdvisorSchemasErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DescribeFleetAdvisorSchemasErrorKind::InvalidResourceStateFault`.
+    pub fn is_invalid_resource_state_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeFleetAdvisorSchemasErrorKind::InvalidResourceStateFault(_)
+        )
+    }
+}
+impl std::error::Error for DescribeFleetAdvisorSchemasError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DescribeFleetAdvisorSchemasErrorKind::InvalidResourceStateFault(_inner) => Some(_inner),
+            DescribeFleetAdvisorSchemasErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -5700,6 +6550,110 @@ impl std::error::Error for RemoveTagsFromResourceError {
     }
 }
 
+/// Error type for the `RunFleetAdvisorLsaAnalysis` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct RunFleetAdvisorLsaAnalysisError {
+    /// Kind of error that occurred.
+    pub kind: RunFleetAdvisorLsaAnalysisErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `RunFleetAdvisorLsaAnalysis` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum RunFleetAdvisorLsaAnalysisErrorKind {
+    /// <p>The resource is in a state that prevents it from being used for database migration.</p>
+    InvalidResourceStateFault(crate::error::InvalidResourceStateFault),
+    /// <p>The resource could not be found.</p>
+    ResourceNotFoundFault(crate::error::ResourceNotFoundFault),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for RunFleetAdvisorLsaAnalysisError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            RunFleetAdvisorLsaAnalysisErrorKind::InvalidResourceStateFault(_inner) => _inner.fmt(f),
+            RunFleetAdvisorLsaAnalysisErrorKind::ResourceNotFoundFault(_inner) => _inner.fmt(f),
+            RunFleetAdvisorLsaAnalysisErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for RunFleetAdvisorLsaAnalysisError {
+    fn code(&self) -> Option<&str> {
+        RunFleetAdvisorLsaAnalysisError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl RunFleetAdvisorLsaAnalysisError {
+    /// Creates a new `RunFleetAdvisorLsaAnalysisError`.
+    pub fn new(kind: RunFleetAdvisorLsaAnalysisErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `RunFleetAdvisorLsaAnalysisError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: RunFleetAdvisorLsaAnalysisErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `RunFleetAdvisorLsaAnalysisError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: RunFleetAdvisorLsaAnalysisErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `RunFleetAdvisorLsaAnalysisErrorKind::InvalidResourceStateFault`.
+    pub fn is_invalid_resource_state_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            RunFleetAdvisorLsaAnalysisErrorKind::InvalidResourceStateFault(_)
+        )
+    }
+    /// Returns `true` if the error kind is `RunFleetAdvisorLsaAnalysisErrorKind::ResourceNotFoundFault`.
+    pub fn is_resource_not_found_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            RunFleetAdvisorLsaAnalysisErrorKind::ResourceNotFoundFault(_)
+        )
+    }
+}
+impl std::error::Error for RunFleetAdvisorLsaAnalysisError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            RunFleetAdvisorLsaAnalysisErrorKind::InvalidResourceStateFault(_inner) => Some(_inner),
+            RunFleetAdvisorLsaAnalysisErrorKind::ResourceNotFoundFault(_inner) => Some(_inner),
+            RunFleetAdvisorLsaAnalysisErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `StartReplicationTask` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -6411,195 +7365,114 @@ impl std::error::Error for TestConnectionError {
     }
 }
 
-/// <p>The quota for this resource quota has been exceeded.</p>
+/// Error type for the `UpdateSubscriptionsToEventBridge` operation.
 #[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct ResourceQuotaExceededFault {
-    /// <p></p>
-    pub message: std::option::Option<std::string::String>,
+#[derive(std::fmt::Debug)]
+pub struct UpdateSubscriptionsToEventBridgeError {
+    /// Kind of error that occurred.
+    pub kind: UpdateSubscriptionsToEventBridgeErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
 }
-impl std::fmt::Debug for ResourceQuotaExceededFault {
+/// Types of errors that can occur for the `UpdateSubscriptionsToEventBridge` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum UpdateSubscriptionsToEventBridgeErrorKind {
+    /// <p>DMS was denied access to the endpoint. Check that the role is correctly configured.</p>
+    AccessDeniedFault(crate::error::AccessDeniedFault),
+    /// <p>The resource is in a state that prevents it from being used for database migration.</p>
+    InvalidResourceStateFault(crate::error::InvalidResourceStateFault),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for UpdateSubscriptionsToEventBridgeError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("ResourceQuotaExceededFault");
-        formatter.field("message", &self.message);
-        formatter.finish()
-    }
-}
-impl ResourceQuotaExceededFault {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for ResourceQuotaExceededFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "ResourceQuotaExceededFault")?;
-        if let Some(inner_1) = &self.message {
-            write!(f, ": {}", inner_1)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for ResourceQuotaExceededFault {}
-/// See [`ResourceQuotaExceededFault`](crate::error::ResourceQuotaExceededFault)
-pub mod resource_quota_exceeded_fault {
-    /// A builder for [`ResourceQuotaExceededFault`](crate::error::ResourceQuotaExceededFault)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        /// <p></p>
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        /// <p></p>
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`ResourceQuotaExceededFault`](crate::error::ResourceQuotaExceededFault)
-        pub fn build(self) -> crate::error::ResourceQuotaExceededFault {
-            crate::error::ResourceQuotaExceededFault {
-                message: self.message,
+        match &self.kind {
+            UpdateSubscriptionsToEventBridgeErrorKind::AccessDeniedFault(_inner) => _inner.fmt(f),
+            UpdateSubscriptionsToEventBridgeErrorKind::InvalidResourceStateFault(_inner) => {
+                _inner.fmt(f)
             }
+            UpdateSubscriptionsToEventBridgeErrorKind::Unhandled(_inner) => _inner.fmt(f),
         }
     }
 }
-impl ResourceQuotaExceededFault {
-    /// Creates a new builder-style object to manufacture [`ResourceQuotaExceededFault`](crate::error::ResourceQuotaExceededFault)
-    pub fn builder() -> crate::error::resource_quota_exceeded_fault::Builder {
-        crate::error::resource_quota_exceeded_fault::Builder::default()
+impl aws_smithy_types::retry::ProvideErrorKind for UpdateSubscriptionsToEventBridgeError {
+    fn code(&self) -> Option<&str> {
+        UpdateSubscriptionsToEventBridgeError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
     }
 }
+impl UpdateSubscriptionsToEventBridgeError {
+    /// Creates a new `UpdateSubscriptionsToEventBridgeError`.
+    pub fn new(
+        kind: UpdateSubscriptionsToEventBridgeErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
 
-/// <p>The resource could not be found.</p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct ResourceNotFoundFault {
-    /// <p></p>
-    pub message: std::option::Option<std::string::String>,
-}
-impl std::fmt::Debug for ResourceNotFoundFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("ResourceNotFoundFault");
-        formatter.field("message", &self.message);
-        formatter.finish()
-    }
-}
-impl ResourceNotFoundFault {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for ResourceNotFoundFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "ResourceNotFoundFault")?;
-        if let Some(inner_2) = &self.message {
-            write!(f, ": {}", inner_2)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for ResourceNotFoundFault {}
-/// See [`ResourceNotFoundFault`](crate::error::ResourceNotFoundFault)
-pub mod resource_not_found_fault {
-    /// A builder for [`ResourceNotFoundFault`](crate::error::ResourceNotFoundFault)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        /// <p></p>
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        /// <p></p>
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`ResourceNotFoundFault`](crate::error::ResourceNotFoundFault)
-        pub fn build(self) -> crate::error::ResourceNotFoundFault {
-            crate::error::ResourceNotFoundFault {
-                message: self.message,
-            }
+    /// Creates the `UpdateSubscriptionsToEventBridgeError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: UpdateSubscriptionsToEventBridgeErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
         }
     }
-}
-impl ResourceNotFoundFault {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundFault`](crate::error::ResourceNotFoundFault)
-    pub fn builder() -> crate::error::resource_not_found_fault::Builder {
-        crate::error::resource_not_found_fault::Builder::default()
-    }
-}
 
-/// <p>DMS cannot access the KMS key.</p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct KmsKeyNotAccessibleFault {
-    /// <p></p>
-    pub message: std::option::Option<std::string::String>,
-}
-impl std::fmt::Debug for KmsKeyNotAccessibleFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("KmsKeyNotAccessibleFault");
-        formatter.field("message", &self.message);
-        formatter.finish()
+    /// Creates the `UpdateSubscriptionsToEventBridgeError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: UpdateSubscriptionsToEventBridgeErrorKind::Unhandled(err.into()),
+        }
     }
-}
-impl KmsKeyNotAccessibleFault {
-    /// Returns the error message.
+
+    /// Returns the error message if one is available.
     pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `UpdateSubscriptionsToEventBridgeErrorKind::AccessDeniedFault`.
+    pub fn is_access_denied_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateSubscriptionsToEventBridgeErrorKind::AccessDeniedFault(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateSubscriptionsToEventBridgeErrorKind::InvalidResourceStateFault`.
+    pub fn is_invalid_resource_state_fault(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateSubscriptionsToEventBridgeErrorKind::InvalidResourceStateFault(_)
+        )
     }
 }
-impl std::fmt::Display for KmsKeyNotAccessibleFault {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "KmsKeyNotAccessibleFault [KMSKeyNotAccessibleFault]")?;
-        if let Some(inner_3) = &self.message {
-            write!(f, ": {}", inner_3)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for KmsKeyNotAccessibleFault {}
-/// See [`KmsKeyNotAccessibleFault`](crate::error::KmsKeyNotAccessibleFault)
-pub mod kms_key_not_accessible_fault {
-    /// A builder for [`KmsKeyNotAccessibleFault`](crate::error::KmsKeyNotAccessibleFault)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        /// <p></p>
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        /// <p></p>
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`KmsKeyNotAccessibleFault`](crate::error::KmsKeyNotAccessibleFault)
-        pub fn build(self) -> crate::error::KmsKeyNotAccessibleFault {
-            crate::error::KmsKeyNotAccessibleFault {
-                message: self.message,
+impl std::error::Error for UpdateSubscriptionsToEventBridgeError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            UpdateSubscriptionsToEventBridgeErrorKind::AccessDeniedFault(_inner) => Some(_inner),
+            UpdateSubscriptionsToEventBridgeErrorKind::InvalidResourceStateFault(_inner) => {
+                Some(_inner)
             }
+            UpdateSubscriptionsToEventBridgeErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
-    }
-}
-impl KmsKeyNotAccessibleFault {
-    /// Creates a new builder-style object to manufacture [`KmsKeyNotAccessibleFault`](crate::error::KmsKeyNotAccessibleFault)
-    pub fn builder() -> crate::error::kms_key_not_accessible_fault::Builder {
-        crate::error::kms_key_not_accessible_fault::Builder::default()
     }
 }
 
@@ -6626,17 +7499,17 @@ impl InvalidResourceStateFault {
 impl std::fmt::Display for InvalidResourceStateFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidResourceStateFault")?;
-        if let Some(inner_4) = &self.message {
-            write!(f, ": {}", inner_4)?;
+        if let Some(inner_1) = &self.message {
+            write!(f, ": {}", inner_1)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for InvalidResourceStateFault {}
-/// See [`InvalidResourceStateFault`](crate::error::InvalidResourceStateFault)
+/// See [`InvalidResourceStateFault`](crate::error::InvalidResourceStateFault).
 pub mod invalid_resource_state_fault {
-    /// A builder for [`InvalidResourceStateFault`](crate::error::InvalidResourceStateFault)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidResourceStateFault`](crate::error::InvalidResourceStateFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6652,7 +7525,7 @@ pub mod invalid_resource_state_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidResourceStateFault`](crate::error::InvalidResourceStateFault)
+        /// Consumes the builder and constructs a [`InvalidResourceStateFault`](crate::error::InvalidResourceStateFault).
         pub fn build(self) -> crate::error::InvalidResourceStateFault {
             crate::error::InvalidResourceStateFault {
                 message: self.message,
@@ -6661,7 +7534,7 @@ pub mod invalid_resource_state_fault {
     }
 }
 impl InvalidResourceStateFault {
-    /// Creates a new builder-style object to manufacture [`InvalidResourceStateFault`](crate::error::InvalidResourceStateFault)
+    /// Creates a new builder-style object to manufacture [`InvalidResourceStateFault`](crate::error::InvalidResourceStateFault).
     pub fn builder() -> crate::error::invalid_resource_state_fault::Builder {
         crate::error::invalid_resource_state_fault::Builder::default()
     }
@@ -6690,17 +7563,17 @@ impl AccessDeniedFault {
 impl std::fmt::Display for AccessDeniedFault {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "AccessDeniedFault")?;
-        if let Some(inner_5) = &self.message {
-            write!(f, ": {}", inner_5)?;
+        if let Some(inner_2) = &self.message {
+            write!(f, ": {}", inner_2)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for AccessDeniedFault {}
-/// See [`AccessDeniedFault`](crate::error::AccessDeniedFault)
+/// See [`AccessDeniedFault`](crate::error::AccessDeniedFault).
 pub mod access_denied_fault {
-    /// A builder for [`AccessDeniedFault`](crate::error::AccessDeniedFault)
-    #[non_exhaustive]
+
+    /// A builder for [`AccessDeniedFault`](crate::error::AccessDeniedFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6716,7 +7589,7 @@ pub mod access_denied_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDeniedFault`](crate::error::AccessDeniedFault)
+        /// Consumes the builder and constructs a [`AccessDeniedFault`](crate::error::AccessDeniedFault).
         pub fn build(self) -> crate::error::AccessDeniedFault {
             crate::error::AccessDeniedFault {
                 message: self.message,
@@ -6725,9 +7598,201 @@ pub mod access_denied_fault {
     }
 }
 impl AccessDeniedFault {
-    /// Creates a new builder-style object to manufacture [`AccessDeniedFault`](crate::error::AccessDeniedFault)
+    /// Creates a new builder-style object to manufacture [`AccessDeniedFault`](crate::error::AccessDeniedFault).
     pub fn builder() -> crate::error::access_denied_fault::Builder {
         crate::error::access_denied_fault::Builder::default()
+    }
+}
+
+/// <p>The quota for this resource quota has been exceeded.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ResourceQuotaExceededFault {
+    /// <p></p>
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for ResourceQuotaExceededFault {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ResourceQuotaExceededFault");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl ResourceQuotaExceededFault {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for ResourceQuotaExceededFault {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "ResourceQuotaExceededFault")?;
+        if let Some(inner_3) = &self.message {
+            write!(f, ": {}", inner_3)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for ResourceQuotaExceededFault {}
+/// See [`ResourceQuotaExceededFault`](crate::error::ResourceQuotaExceededFault).
+pub mod resource_quota_exceeded_fault {
+
+    /// A builder for [`ResourceQuotaExceededFault`](crate::error::ResourceQuotaExceededFault).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p></p>
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        /// <p></p>
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ResourceQuotaExceededFault`](crate::error::ResourceQuotaExceededFault).
+        pub fn build(self) -> crate::error::ResourceQuotaExceededFault {
+            crate::error::ResourceQuotaExceededFault {
+                message: self.message,
+            }
+        }
+    }
+}
+impl ResourceQuotaExceededFault {
+    /// Creates a new builder-style object to manufacture [`ResourceQuotaExceededFault`](crate::error::ResourceQuotaExceededFault).
+    pub fn builder() -> crate::error::resource_quota_exceeded_fault::Builder {
+        crate::error::resource_quota_exceeded_fault::Builder::default()
+    }
+}
+
+/// <p>The resource could not be found.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ResourceNotFoundFault {
+    /// <p></p>
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for ResourceNotFoundFault {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ResourceNotFoundFault");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl ResourceNotFoundFault {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for ResourceNotFoundFault {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "ResourceNotFoundFault")?;
+        if let Some(inner_4) = &self.message {
+            write!(f, ": {}", inner_4)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for ResourceNotFoundFault {}
+/// See [`ResourceNotFoundFault`](crate::error::ResourceNotFoundFault).
+pub mod resource_not_found_fault {
+
+    /// A builder for [`ResourceNotFoundFault`](crate::error::ResourceNotFoundFault).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p></p>
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        /// <p></p>
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ResourceNotFoundFault`](crate::error::ResourceNotFoundFault).
+        pub fn build(self) -> crate::error::ResourceNotFoundFault {
+            crate::error::ResourceNotFoundFault {
+                message: self.message,
+            }
+        }
+    }
+}
+impl ResourceNotFoundFault {
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundFault`](crate::error::ResourceNotFoundFault).
+    pub fn builder() -> crate::error::resource_not_found_fault::Builder {
+        crate::error::resource_not_found_fault::Builder::default()
+    }
+}
+
+/// <p>DMS cannot access the KMS key.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct KmsKeyNotAccessibleFault {
+    /// <p></p>
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for KmsKeyNotAccessibleFault {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("KmsKeyNotAccessibleFault");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl KmsKeyNotAccessibleFault {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for KmsKeyNotAccessibleFault {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "KmsKeyNotAccessibleFault [KMSKeyNotAccessibleFault]")?;
+        if let Some(inner_5) = &self.message {
+            write!(f, ": {}", inner_5)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for KmsKeyNotAccessibleFault {}
+/// See [`KmsKeyNotAccessibleFault`](crate::error::KmsKeyNotAccessibleFault).
+pub mod kms_key_not_accessible_fault {
+
+    /// A builder for [`KmsKeyNotAccessibleFault`](crate::error::KmsKeyNotAccessibleFault).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p></p>
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        /// <p></p>
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`KmsKeyNotAccessibleFault`](crate::error::KmsKeyNotAccessibleFault).
+        pub fn build(self) -> crate::error::KmsKeyNotAccessibleFault {
+            crate::error::KmsKeyNotAccessibleFault {
+                message: self.message,
+            }
+        }
+    }
+}
+impl KmsKeyNotAccessibleFault {
+    /// Creates a new builder-style object to manufacture [`KmsKeyNotAccessibleFault`](crate::error::KmsKeyNotAccessibleFault).
+    pub fn builder() -> crate::error::kms_key_not_accessible_fault::Builder {
+        crate::error::kms_key_not_accessible_fault::Builder::default()
     }
 }
 
@@ -6761,10 +7826,10 @@ impl std::fmt::Display for S3ResourceNotFoundFault {
     }
 }
 impl std::error::Error for S3ResourceNotFoundFault {}
-/// See [`S3ResourceNotFoundFault`](crate::error::S3ResourceNotFoundFault)
+/// See [`S3ResourceNotFoundFault`](crate::error::S3ResourceNotFoundFault).
 pub mod s3_resource_not_found_fault {
-    /// A builder for [`S3ResourceNotFoundFault`](crate::error::S3ResourceNotFoundFault)
-    #[non_exhaustive]
+
+    /// A builder for [`S3ResourceNotFoundFault`](crate::error::S3ResourceNotFoundFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6780,7 +7845,7 @@ pub mod s3_resource_not_found_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3ResourceNotFoundFault`](crate::error::S3ResourceNotFoundFault)
+        /// Consumes the builder and constructs a [`S3ResourceNotFoundFault`](crate::error::S3ResourceNotFoundFault).
         pub fn build(self) -> crate::error::S3ResourceNotFoundFault {
             crate::error::S3ResourceNotFoundFault {
                 message: self.message,
@@ -6789,7 +7854,7 @@ pub mod s3_resource_not_found_fault {
     }
 }
 impl S3ResourceNotFoundFault {
-    /// Creates a new builder-style object to manufacture [`S3ResourceNotFoundFault`](crate::error::S3ResourceNotFoundFault)
+    /// Creates a new builder-style object to manufacture [`S3ResourceNotFoundFault`](crate::error::S3ResourceNotFoundFault).
     pub fn builder() -> crate::error::s3_resource_not_found_fault::Builder {
         crate::error::s3_resource_not_found_fault::Builder::default()
     }
@@ -6825,10 +7890,10 @@ impl std::fmt::Display for S3AccessDeniedFault {
     }
 }
 impl std::error::Error for S3AccessDeniedFault {}
-/// See [`S3AccessDeniedFault`](crate::error::S3AccessDeniedFault)
+/// See [`S3AccessDeniedFault`](crate::error::S3AccessDeniedFault).
 pub mod s3_access_denied_fault {
-    /// A builder for [`S3AccessDeniedFault`](crate::error::S3AccessDeniedFault)
-    #[non_exhaustive]
+
+    /// A builder for [`S3AccessDeniedFault`](crate::error::S3AccessDeniedFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6844,7 +7909,7 @@ pub mod s3_access_denied_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`S3AccessDeniedFault`](crate::error::S3AccessDeniedFault)
+        /// Consumes the builder and constructs a [`S3AccessDeniedFault`](crate::error::S3AccessDeniedFault).
         pub fn build(self) -> crate::error::S3AccessDeniedFault {
             crate::error::S3AccessDeniedFault {
                 message: self.message,
@@ -6853,7 +7918,7 @@ pub mod s3_access_denied_fault {
     }
 }
 impl S3AccessDeniedFault {
-    /// Creates a new builder-style object to manufacture [`S3AccessDeniedFault`](crate::error::S3AccessDeniedFault)
+    /// Creates a new builder-style object to manufacture [`S3AccessDeniedFault`](crate::error::S3AccessDeniedFault).
     pub fn builder() -> crate::error::s3_access_denied_fault::Builder {
         crate::error::s3_access_denied_fault::Builder::default()
     }
@@ -6898,10 +7963,10 @@ impl std::fmt::Display for ResourceAlreadyExistsFault {
     }
 }
 impl std::error::Error for ResourceAlreadyExistsFault {}
-/// See [`ResourceAlreadyExistsFault`](crate::error::ResourceAlreadyExistsFault)
+/// See [`ResourceAlreadyExistsFault`](crate::error::ResourceAlreadyExistsFault).
 pub mod resource_already_exists_fault {
-    /// A builder for [`ResourceAlreadyExistsFault`](crate::error::ResourceAlreadyExistsFault)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceAlreadyExistsFault`](crate::error::ResourceAlreadyExistsFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6928,7 +7993,7 @@ pub mod resource_already_exists_fault {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceAlreadyExistsFault`](crate::error::ResourceAlreadyExistsFault)
+        /// Consumes the builder and constructs a [`ResourceAlreadyExistsFault`](crate::error::ResourceAlreadyExistsFault).
         pub fn build(self) -> crate::error::ResourceAlreadyExistsFault {
             crate::error::ResourceAlreadyExistsFault {
                 message: self.message,
@@ -6938,7 +8003,7 @@ pub mod resource_already_exists_fault {
     }
 }
 impl ResourceAlreadyExistsFault {
-    /// Creates a new builder-style object to manufacture [`ResourceAlreadyExistsFault`](crate::error::ResourceAlreadyExistsFault)
+    /// Creates a new builder-style object to manufacture [`ResourceAlreadyExistsFault`](crate::error::ResourceAlreadyExistsFault).
     pub fn builder() -> crate::error::resource_already_exists_fault::Builder {
         crate::error::resource_already_exists_fault::Builder::default()
     }
@@ -6974,10 +8039,10 @@ impl std::fmt::Display for KmsNotFoundFault {
     }
 }
 impl std::error::Error for KmsNotFoundFault {}
-/// See [`KmsNotFoundFault`](crate::error::KmsNotFoundFault)
+/// See [`KmsNotFoundFault`](crate::error::KmsNotFoundFault).
 pub mod kms_not_found_fault {
-    /// A builder for [`KmsNotFoundFault`](crate::error::KmsNotFoundFault)
-    #[non_exhaustive]
+
+    /// A builder for [`KmsNotFoundFault`](crate::error::KmsNotFoundFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6993,7 +8058,7 @@ pub mod kms_not_found_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsNotFoundFault`](crate::error::KmsNotFoundFault)
+        /// Consumes the builder and constructs a [`KmsNotFoundFault`](crate::error::KmsNotFoundFault).
         pub fn build(self) -> crate::error::KmsNotFoundFault {
             crate::error::KmsNotFoundFault {
                 message: self.message,
@@ -7002,7 +8067,7 @@ pub mod kms_not_found_fault {
     }
 }
 impl KmsNotFoundFault {
-    /// Creates a new builder-style object to manufacture [`KmsNotFoundFault`](crate::error::KmsNotFoundFault)
+    /// Creates a new builder-style object to manufacture [`KmsNotFoundFault`](crate::error::KmsNotFoundFault).
     pub fn builder() -> crate::error::kms_not_found_fault::Builder {
         crate::error::kms_not_found_fault::Builder::default()
     }
@@ -7038,10 +8103,10 @@ impl std::fmt::Display for KmsInvalidStateFault {
     }
 }
 impl std::error::Error for KmsInvalidStateFault {}
-/// See [`KmsInvalidStateFault`](crate::error::KmsInvalidStateFault)
+/// See [`KmsInvalidStateFault`](crate::error::KmsInvalidStateFault).
 pub mod kms_invalid_state_fault {
-    /// A builder for [`KmsInvalidStateFault`](crate::error::KmsInvalidStateFault)
-    #[non_exhaustive]
+
+    /// A builder for [`KmsInvalidStateFault`](crate::error::KmsInvalidStateFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7057,7 +8122,7 @@ pub mod kms_invalid_state_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsInvalidStateFault`](crate::error::KmsInvalidStateFault)
+        /// Consumes the builder and constructs a [`KmsInvalidStateFault`](crate::error::KmsInvalidStateFault).
         pub fn build(self) -> crate::error::KmsInvalidStateFault {
             crate::error::KmsInvalidStateFault {
                 message: self.message,
@@ -7066,7 +8131,7 @@ pub mod kms_invalid_state_fault {
     }
 }
 impl KmsInvalidStateFault {
-    /// Creates a new builder-style object to manufacture [`KmsInvalidStateFault`](crate::error::KmsInvalidStateFault)
+    /// Creates a new builder-style object to manufacture [`KmsInvalidStateFault`](crate::error::KmsInvalidStateFault).
     pub fn builder() -> crate::error::kms_invalid_state_fault::Builder {
         crate::error::kms_invalid_state_fault::Builder::default()
     }
@@ -7102,10 +8167,10 @@ impl std::fmt::Display for KmsFault {
     }
 }
 impl std::error::Error for KmsFault {}
-/// See [`KmsFault`](crate::error::KmsFault)
+/// See [`KmsFault`](crate::error::KmsFault).
 pub mod kms_fault {
-    /// A builder for [`KmsFault`](crate::error::KmsFault)
-    #[non_exhaustive]
+
+    /// A builder for [`KmsFault`](crate::error::KmsFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7121,7 +8186,7 @@ pub mod kms_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsFault`](crate::error::KmsFault)
+        /// Consumes the builder and constructs a [`KmsFault`](crate::error::KmsFault).
         pub fn build(self) -> crate::error::KmsFault {
             crate::error::KmsFault {
                 message: self.message,
@@ -7130,7 +8195,7 @@ pub mod kms_fault {
     }
 }
 impl KmsFault {
-    /// Creates a new builder-style object to manufacture [`KmsFault`](crate::error::KmsFault)
+    /// Creates a new builder-style object to manufacture [`KmsFault`](crate::error::KmsFault).
     pub fn builder() -> crate::error::kms_fault::Builder {
         crate::error::kms_fault::Builder::default()
     }
@@ -7166,10 +8231,10 @@ impl std::fmt::Display for KmsDisabledFault {
     }
 }
 impl std::error::Error for KmsDisabledFault {}
-/// See [`KmsDisabledFault`](crate::error::KmsDisabledFault)
+/// See [`KmsDisabledFault`](crate::error::KmsDisabledFault).
 pub mod kms_disabled_fault {
-    /// A builder for [`KmsDisabledFault`](crate::error::KmsDisabledFault)
-    #[non_exhaustive]
+
+    /// A builder for [`KmsDisabledFault`](crate::error::KmsDisabledFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7185,7 +8250,7 @@ pub mod kms_disabled_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsDisabledFault`](crate::error::KmsDisabledFault)
+        /// Consumes the builder and constructs a [`KmsDisabledFault`](crate::error::KmsDisabledFault).
         pub fn build(self) -> crate::error::KmsDisabledFault {
             crate::error::KmsDisabledFault {
                 message: self.message,
@@ -7194,7 +8259,7 @@ pub mod kms_disabled_fault {
     }
 }
 impl KmsDisabledFault {
-    /// Creates a new builder-style object to manufacture [`KmsDisabledFault`](crate::error::KmsDisabledFault)
+    /// Creates a new builder-style object to manufacture [`KmsDisabledFault`](crate::error::KmsDisabledFault).
     pub fn builder() -> crate::error::kms_disabled_fault::Builder {
         crate::error::kms_disabled_fault::Builder::default()
     }
@@ -7230,10 +8295,10 @@ impl std::fmt::Display for KmsAccessDeniedFault {
     }
 }
 impl std::error::Error for KmsAccessDeniedFault {}
-/// See [`KmsAccessDeniedFault`](crate::error::KmsAccessDeniedFault)
+/// See [`KmsAccessDeniedFault`](crate::error::KmsAccessDeniedFault).
 pub mod kms_access_denied_fault {
-    /// A builder for [`KmsAccessDeniedFault`](crate::error::KmsAccessDeniedFault)
-    #[non_exhaustive]
+
+    /// A builder for [`KmsAccessDeniedFault`](crate::error::KmsAccessDeniedFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7249,7 +8314,7 @@ pub mod kms_access_denied_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsAccessDeniedFault`](crate::error::KmsAccessDeniedFault)
+        /// Consumes the builder and constructs a [`KmsAccessDeniedFault`](crate::error::KmsAccessDeniedFault).
         pub fn build(self) -> crate::error::KmsAccessDeniedFault {
             crate::error::KmsAccessDeniedFault {
                 message: self.message,
@@ -7258,7 +8323,7 @@ pub mod kms_access_denied_fault {
     }
 }
 impl KmsAccessDeniedFault {
-    /// Creates a new builder-style object to manufacture [`KmsAccessDeniedFault`](crate::error::KmsAccessDeniedFault)
+    /// Creates a new builder-style object to manufacture [`KmsAccessDeniedFault`](crate::error::KmsAccessDeniedFault).
     pub fn builder() -> crate::error::kms_access_denied_fault::Builder {
         crate::error::kms_access_denied_fault::Builder::default()
     }
@@ -7294,10 +8359,10 @@ impl std::fmt::Display for SubnetAlreadyInUse {
     }
 }
 impl std::error::Error for SubnetAlreadyInUse {}
-/// See [`SubnetAlreadyInUse`](crate::error::SubnetAlreadyInUse)
+/// See [`SubnetAlreadyInUse`](crate::error::SubnetAlreadyInUse).
 pub mod subnet_already_in_use {
-    /// A builder for [`SubnetAlreadyInUse`](crate::error::SubnetAlreadyInUse)
-    #[non_exhaustive]
+
+    /// A builder for [`SubnetAlreadyInUse`](crate::error::SubnetAlreadyInUse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7313,7 +8378,7 @@ pub mod subnet_already_in_use {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`SubnetAlreadyInUse`](crate::error::SubnetAlreadyInUse)
+        /// Consumes the builder and constructs a [`SubnetAlreadyInUse`](crate::error::SubnetAlreadyInUse).
         pub fn build(self) -> crate::error::SubnetAlreadyInUse {
             crate::error::SubnetAlreadyInUse {
                 message: self.message,
@@ -7322,7 +8387,7 @@ pub mod subnet_already_in_use {
     }
 }
 impl SubnetAlreadyInUse {
-    /// Creates a new builder-style object to manufacture [`SubnetAlreadyInUse`](crate::error::SubnetAlreadyInUse)
+    /// Creates a new builder-style object to manufacture [`SubnetAlreadyInUse`](crate::error::SubnetAlreadyInUse).
     pub fn builder() -> crate::error::subnet_already_in_use::Builder {
         crate::error::subnet_already_in_use::Builder::default()
     }
@@ -7358,10 +8423,10 @@ impl std::fmt::Display for ReplicationSubnetGroupDoesNotCoverEnoughAZs {
     }
 }
 impl std::error::Error for ReplicationSubnetGroupDoesNotCoverEnoughAZs {}
-/// See [`ReplicationSubnetGroupDoesNotCoverEnoughAZs`](crate::error::ReplicationSubnetGroupDoesNotCoverEnoughAZs)
+/// See [`ReplicationSubnetGroupDoesNotCoverEnoughAZs`](crate::error::ReplicationSubnetGroupDoesNotCoverEnoughAZs).
 pub mod replication_subnet_group_does_not_cover_enough_a_zs {
-    /// A builder for [`ReplicationSubnetGroupDoesNotCoverEnoughAZs`](crate::error::ReplicationSubnetGroupDoesNotCoverEnoughAZs)
-    #[non_exhaustive]
+
+    /// A builder for [`ReplicationSubnetGroupDoesNotCoverEnoughAZs`](crate::error::ReplicationSubnetGroupDoesNotCoverEnoughAZs).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7377,7 +8442,7 @@ pub mod replication_subnet_group_does_not_cover_enough_a_zs {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicationSubnetGroupDoesNotCoverEnoughAZs`](crate::error::ReplicationSubnetGroupDoesNotCoverEnoughAZs)
+        /// Consumes the builder and constructs a [`ReplicationSubnetGroupDoesNotCoverEnoughAZs`](crate::error::ReplicationSubnetGroupDoesNotCoverEnoughAZs).
         pub fn build(self) -> crate::error::ReplicationSubnetGroupDoesNotCoverEnoughAZs {
             crate::error::ReplicationSubnetGroupDoesNotCoverEnoughAZs {
                 message: self.message,
@@ -7386,7 +8451,7 @@ pub mod replication_subnet_group_does_not_cover_enough_a_zs {
     }
 }
 impl ReplicationSubnetGroupDoesNotCoverEnoughAZs {
-    /// Creates a new builder-style object to manufacture [`ReplicationSubnetGroupDoesNotCoverEnoughAZs`](crate::error::ReplicationSubnetGroupDoesNotCoverEnoughAZs)
+    /// Creates a new builder-style object to manufacture [`ReplicationSubnetGroupDoesNotCoverEnoughAZs`](crate::error::ReplicationSubnetGroupDoesNotCoverEnoughAZs).
     pub fn builder() -> crate::error::replication_subnet_group_does_not_cover_enough_a_zs::Builder {
         crate::error::replication_subnet_group_does_not_cover_enough_a_zs::Builder::default()
     }
@@ -7422,10 +8487,10 @@ impl std::fmt::Display for InvalidSubnet {
     }
 }
 impl std::error::Error for InvalidSubnet {}
-/// See [`InvalidSubnet`](crate::error::InvalidSubnet)
+/// See [`InvalidSubnet`](crate::error::InvalidSubnet).
 pub mod invalid_subnet {
-    /// A builder for [`InvalidSubnet`](crate::error::InvalidSubnet)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidSubnet`](crate::error::InvalidSubnet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7441,7 +8506,7 @@ pub mod invalid_subnet {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidSubnet`](crate::error::InvalidSubnet)
+        /// Consumes the builder and constructs a [`InvalidSubnet`](crate::error::InvalidSubnet).
         pub fn build(self) -> crate::error::InvalidSubnet {
             crate::error::InvalidSubnet {
                 message: self.message,
@@ -7450,7 +8515,7 @@ pub mod invalid_subnet {
     }
 }
 impl InvalidSubnet {
-    /// Creates a new builder-style object to manufacture [`InvalidSubnet`](crate::error::InvalidSubnet)
+    /// Creates a new builder-style object to manufacture [`InvalidSubnet`](crate::error::InvalidSubnet).
     pub fn builder() -> crate::error::invalid_subnet::Builder {
         crate::error::invalid_subnet::Builder::default()
     }
@@ -7486,10 +8551,10 @@ impl std::fmt::Display for UpgradeDependencyFailureFault {
     }
 }
 impl std::error::Error for UpgradeDependencyFailureFault {}
-/// See [`UpgradeDependencyFailureFault`](crate::error::UpgradeDependencyFailureFault)
+/// See [`UpgradeDependencyFailureFault`](crate::error::UpgradeDependencyFailureFault).
 pub mod upgrade_dependency_failure_fault {
-    /// A builder for [`UpgradeDependencyFailureFault`](crate::error::UpgradeDependencyFailureFault)
-    #[non_exhaustive]
+
+    /// A builder for [`UpgradeDependencyFailureFault`](crate::error::UpgradeDependencyFailureFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7505,7 +8570,7 @@ pub mod upgrade_dependency_failure_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpgradeDependencyFailureFault`](crate::error::UpgradeDependencyFailureFault)
+        /// Consumes the builder and constructs a [`UpgradeDependencyFailureFault`](crate::error::UpgradeDependencyFailureFault).
         pub fn build(self) -> crate::error::UpgradeDependencyFailureFault {
             crate::error::UpgradeDependencyFailureFault {
                 message: self.message,
@@ -7514,7 +8579,7 @@ pub mod upgrade_dependency_failure_fault {
     }
 }
 impl UpgradeDependencyFailureFault {
-    /// Creates a new builder-style object to manufacture [`UpgradeDependencyFailureFault`](crate::error::UpgradeDependencyFailureFault)
+    /// Creates a new builder-style object to manufacture [`UpgradeDependencyFailureFault`](crate::error::UpgradeDependencyFailureFault).
     pub fn builder() -> crate::error::upgrade_dependency_failure_fault::Builder {
         crate::error::upgrade_dependency_failure_fault::Builder::default()
     }
@@ -7550,10 +8615,10 @@ impl std::fmt::Display for StorageQuotaExceededFault {
     }
 }
 impl std::error::Error for StorageQuotaExceededFault {}
-/// See [`StorageQuotaExceededFault`](crate::error::StorageQuotaExceededFault)
+/// See [`StorageQuotaExceededFault`](crate::error::StorageQuotaExceededFault).
 pub mod storage_quota_exceeded_fault {
-    /// A builder for [`StorageQuotaExceededFault`](crate::error::StorageQuotaExceededFault)
-    #[non_exhaustive]
+
+    /// A builder for [`StorageQuotaExceededFault`](crate::error::StorageQuotaExceededFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7569,7 +8634,7 @@ pub mod storage_quota_exceeded_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`StorageQuotaExceededFault`](crate::error::StorageQuotaExceededFault)
+        /// Consumes the builder and constructs a [`StorageQuotaExceededFault`](crate::error::StorageQuotaExceededFault).
         pub fn build(self) -> crate::error::StorageQuotaExceededFault {
             crate::error::StorageQuotaExceededFault {
                 message: self.message,
@@ -7578,7 +8643,7 @@ pub mod storage_quota_exceeded_fault {
     }
 }
 impl StorageQuotaExceededFault {
-    /// Creates a new builder-style object to manufacture [`StorageQuotaExceededFault`](crate::error::StorageQuotaExceededFault)
+    /// Creates a new builder-style object to manufacture [`StorageQuotaExceededFault`](crate::error::StorageQuotaExceededFault).
     pub fn builder() -> crate::error::storage_quota_exceeded_fault::Builder {
         crate::error::storage_quota_exceeded_fault::Builder::default()
     }
@@ -7614,10 +8679,10 @@ impl std::fmt::Display for InsufficientResourceCapacityFault {
     }
 }
 impl std::error::Error for InsufficientResourceCapacityFault {}
-/// See [`InsufficientResourceCapacityFault`](crate::error::InsufficientResourceCapacityFault)
+/// See [`InsufficientResourceCapacityFault`](crate::error::InsufficientResourceCapacityFault).
 pub mod insufficient_resource_capacity_fault {
-    /// A builder for [`InsufficientResourceCapacityFault`](crate::error::InsufficientResourceCapacityFault)
-    #[non_exhaustive]
+
+    /// A builder for [`InsufficientResourceCapacityFault`](crate::error::InsufficientResourceCapacityFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7633,7 +8698,7 @@ pub mod insufficient_resource_capacity_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InsufficientResourceCapacityFault`](crate::error::InsufficientResourceCapacityFault)
+        /// Consumes the builder and constructs a [`InsufficientResourceCapacityFault`](crate::error::InsufficientResourceCapacityFault).
         pub fn build(self) -> crate::error::InsufficientResourceCapacityFault {
             crate::error::InsufficientResourceCapacityFault {
                 message: self.message,
@@ -7642,7 +8707,7 @@ pub mod insufficient_resource_capacity_fault {
     }
 }
 impl InsufficientResourceCapacityFault {
-    /// Creates a new builder-style object to manufacture [`InsufficientResourceCapacityFault`](crate::error::InsufficientResourceCapacityFault)
+    /// Creates a new builder-style object to manufacture [`InsufficientResourceCapacityFault`](crate::error::InsufficientResourceCapacityFault).
     pub fn builder() -> crate::error::insufficient_resource_capacity_fault::Builder {
         crate::error::insufficient_resource_capacity_fault::Builder::default()
     }
@@ -7678,10 +8743,10 @@ impl std::fmt::Display for SnsNoAuthorizationFault {
     }
 }
 impl std::error::Error for SnsNoAuthorizationFault {}
-/// See [`SnsNoAuthorizationFault`](crate::error::SnsNoAuthorizationFault)
+/// See [`SnsNoAuthorizationFault`](crate::error::SnsNoAuthorizationFault).
 pub mod sns_no_authorization_fault {
-    /// A builder for [`SnsNoAuthorizationFault`](crate::error::SnsNoAuthorizationFault)
-    #[non_exhaustive]
+
+    /// A builder for [`SnsNoAuthorizationFault`](crate::error::SnsNoAuthorizationFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7697,7 +8762,7 @@ pub mod sns_no_authorization_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnsNoAuthorizationFault`](crate::error::SnsNoAuthorizationFault)
+        /// Consumes the builder and constructs a [`SnsNoAuthorizationFault`](crate::error::SnsNoAuthorizationFault).
         pub fn build(self) -> crate::error::SnsNoAuthorizationFault {
             crate::error::SnsNoAuthorizationFault {
                 message: self.message,
@@ -7706,7 +8771,7 @@ pub mod sns_no_authorization_fault {
     }
 }
 impl SnsNoAuthorizationFault {
-    /// Creates a new builder-style object to manufacture [`SnsNoAuthorizationFault`](crate::error::SnsNoAuthorizationFault)
+    /// Creates a new builder-style object to manufacture [`SnsNoAuthorizationFault`](crate::error::SnsNoAuthorizationFault).
     pub fn builder() -> crate::error::sns_no_authorization_fault::Builder {
         crate::error::sns_no_authorization_fault::Builder::default()
     }
@@ -7742,10 +8807,10 @@ impl std::fmt::Display for SnsInvalidTopicFault {
     }
 }
 impl std::error::Error for SnsInvalidTopicFault {}
-/// See [`SnsInvalidTopicFault`](crate::error::SnsInvalidTopicFault)
+/// See [`SnsInvalidTopicFault`](crate::error::SnsInvalidTopicFault).
 pub mod sns_invalid_topic_fault {
-    /// A builder for [`SnsInvalidTopicFault`](crate::error::SnsInvalidTopicFault)
-    #[non_exhaustive]
+
+    /// A builder for [`SnsInvalidTopicFault`](crate::error::SnsInvalidTopicFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7761,7 +8826,7 @@ pub mod sns_invalid_topic_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`SnsInvalidTopicFault`](crate::error::SnsInvalidTopicFault)
+        /// Consumes the builder and constructs a [`SnsInvalidTopicFault`](crate::error::SnsInvalidTopicFault).
         pub fn build(self) -> crate::error::SnsInvalidTopicFault {
             crate::error::SnsInvalidTopicFault {
                 message: self.message,
@@ -7770,7 +8835,7 @@ pub mod sns_invalid_topic_fault {
     }
 }
 impl SnsInvalidTopicFault {
-    /// Creates a new builder-style object to manufacture [`SnsInvalidTopicFault`](crate::error::SnsInvalidTopicFault)
+    /// Creates a new builder-style object to manufacture [`SnsInvalidTopicFault`](crate::error::SnsInvalidTopicFault).
     pub fn builder() -> crate::error::sns_invalid_topic_fault::Builder {
         crate::error::sns_invalid_topic_fault::Builder::default()
     }
@@ -7806,10 +8871,10 @@ impl std::fmt::Display for KmsThrottlingFault {
     }
 }
 impl std::error::Error for KmsThrottlingFault {}
-/// See [`KmsThrottlingFault`](crate::error::KmsThrottlingFault)
+/// See [`KmsThrottlingFault`](crate::error::KmsThrottlingFault).
 pub mod kms_throttling_fault {
-    /// A builder for [`KmsThrottlingFault`](crate::error::KmsThrottlingFault)
-    #[non_exhaustive]
+
+    /// A builder for [`KmsThrottlingFault`](crate::error::KmsThrottlingFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7825,7 +8890,7 @@ pub mod kms_throttling_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KmsThrottlingFault`](crate::error::KmsThrottlingFault)
+        /// Consumes the builder and constructs a [`KmsThrottlingFault`](crate::error::KmsThrottlingFault).
         pub fn build(self) -> crate::error::KmsThrottlingFault {
             crate::error::KmsThrottlingFault {
                 message: self.message,
@@ -7834,7 +8899,7 @@ pub mod kms_throttling_fault {
     }
 }
 impl KmsThrottlingFault {
-    /// Creates a new builder-style object to manufacture [`KmsThrottlingFault`](crate::error::KmsThrottlingFault)
+    /// Creates a new builder-style object to manufacture [`KmsThrottlingFault`](crate::error::KmsThrottlingFault).
     pub fn builder() -> crate::error::kms_throttling_fault::Builder {
         crate::error::kms_throttling_fault::Builder::default()
     }
@@ -7870,10 +8935,10 @@ impl std::fmt::Display for InvalidCertificateFault {
     }
 }
 impl std::error::Error for InvalidCertificateFault {}
-/// See [`InvalidCertificateFault`](crate::error::InvalidCertificateFault)
+/// See [`InvalidCertificateFault`](crate::error::InvalidCertificateFault).
 pub mod invalid_certificate_fault {
-    /// A builder for [`InvalidCertificateFault`](crate::error::InvalidCertificateFault)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidCertificateFault`](crate::error::InvalidCertificateFault).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7889,7 +8954,7 @@ pub mod invalid_certificate_fault {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidCertificateFault`](crate::error::InvalidCertificateFault)
+        /// Consumes the builder and constructs a [`InvalidCertificateFault`](crate::error::InvalidCertificateFault).
         pub fn build(self) -> crate::error::InvalidCertificateFault {
             crate::error::InvalidCertificateFault {
                 message: self.message,
@@ -7898,8 +8963,136 @@ pub mod invalid_certificate_fault {
     }
 }
 impl InvalidCertificateFault {
-    /// Creates a new builder-style object to manufacture [`InvalidCertificateFault`](crate::error::InvalidCertificateFault)
+    /// Creates a new builder-style object to manufacture [`InvalidCertificateFault`](crate::error::InvalidCertificateFault).
     pub fn builder() -> crate::error::invalid_certificate_fault::Builder {
         crate::error::invalid_certificate_fault::Builder::default()
+    }
+}
+
+/// <p>The action or operation requested isn't valid.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct InvalidOperationFault {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for InvalidOperationFault {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("InvalidOperationFault");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl InvalidOperationFault {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for InvalidOperationFault {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "InvalidOperationFault")?;
+        if let Some(inner_24) = &self.message {
+            write!(f, ": {}", inner_24)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for InvalidOperationFault {}
+/// See [`InvalidOperationFault`](crate::error::InvalidOperationFault).
+pub mod invalid_operation_fault {
+
+    /// A builder for [`InvalidOperationFault`](crate::error::InvalidOperationFault).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`InvalidOperationFault`](crate::error::InvalidOperationFault).
+        pub fn build(self) -> crate::error::InvalidOperationFault {
+            crate::error::InvalidOperationFault {
+                message: self.message,
+            }
+        }
+    }
+}
+impl InvalidOperationFault {
+    /// Creates a new builder-style object to manufacture [`InvalidOperationFault`](crate::error::InvalidOperationFault).
+    pub fn builder() -> crate::error::invalid_operation_fault::Builder {
+        crate::error::invalid_operation_fault::Builder::default()
+    }
+}
+
+/// <p>The specified collector doesn't exist.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CollectorNotFoundFault {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for CollectorNotFoundFault {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CollectorNotFoundFault");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl CollectorNotFoundFault {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for CollectorNotFoundFault {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "CollectorNotFoundFault")?;
+        if let Some(inner_25) = &self.message {
+            write!(f, ": {}", inner_25)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for CollectorNotFoundFault {}
+/// See [`CollectorNotFoundFault`](crate::error::CollectorNotFoundFault).
+pub mod collector_not_found_fault {
+
+    /// A builder for [`CollectorNotFoundFault`](crate::error::CollectorNotFoundFault).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CollectorNotFoundFault`](crate::error::CollectorNotFoundFault).
+        pub fn build(self) -> crate::error::CollectorNotFoundFault {
+            crate::error::CollectorNotFoundFault {
+                message: self.message,
+            }
+        }
+    }
+}
+impl CollectorNotFoundFault {
+    /// Creates a new builder-style object to manufacture [`CollectorNotFoundFault`](crate::error::CollectorNotFoundFault).
+    pub fn builder() -> crate::error::collector_not_found_fault::Builder {
+        crate::error::collector_not_found_fault::Builder::default()
     }
 }

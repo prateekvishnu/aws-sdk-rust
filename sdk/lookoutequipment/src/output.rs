@@ -9,21 +9,21 @@ impl std::fmt::Debug for UpdateInferenceSchedulerOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateInferenceSchedulerOutput`](crate::output::UpdateInferenceSchedulerOutput)
+/// See [`UpdateInferenceSchedulerOutput`](crate::output::UpdateInferenceSchedulerOutput).
 pub mod update_inference_scheduler_output {
-    /// A builder for [`UpdateInferenceSchedulerOutput`](crate::output::UpdateInferenceSchedulerOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateInferenceSchedulerOutput`](crate::output::UpdateInferenceSchedulerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateInferenceSchedulerOutput`](crate::output::UpdateInferenceSchedulerOutput)
+        /// Consumes the builder and constructs a [`UpdateInferenceSchedulerOutput`](crate::output::UpdateInferenceSchedulerOutput).
         pub fn build(self) -> crate::output::UpdateInferenceSchedulerOutput {
             crate::output::UpdateInferenceSchedulerOutput {}
         }
     }
 }
 impl UpdateInferenceSchedulerOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateInferenceSchedulerOutput`](crate::output::UpdateInferenceSchedulerOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateInferenceSchedulerOutput`](crate::output::UpdateInferenceSchedulerOutput).
     pub fn builder() -> crate::output::update_inference_scheduler_output::Builder {
         crate::output::update_inference_scheduler_output::Builder::default()
     }
@@ -39,21 +39,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -69,21 +69,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -137,10 +137,10 @@ impl std::fmt::Debug for StopInferenceSchedulerOutput {
         formatter.finish()
     }
 }
-/// See [`StopInferenceSchedulerOutput`](crate::output::StopInferenceSchedulerOutput)
+/// See [`StopInferenceSchedulerOutput`](crate::output::StopInferenceSchedulerOutput).
 pub mod stop_inference_scheduler_output {
-    /// A builder for [`StopInferenceSchedulerOutput`](crate::output::StopInferenceSchedulerOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`StopInferenceSchedulerOutput`](crate::output::StopInferenceSchedulerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_arn: std::option::Option<std::string::String>,
@@ -209,7 +209,7 @@ pub mod stop_inference_scheduler_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StopInferenceSchedulerOutput`](crate::output::StopInferenceSchedulerOutput)
+        /// Consumes the builder and constructs a [`StopInferenceSchedulerOutput`](crate::output::StopInferenceSchedulerOutput).
         pub fn build(self) -> crate::output::StopInferenceSchedulerOutput {
             crate::output::StopInferenceSchedulerOutput {
                 model_arn: self.model_arn,
@@ -222,7 +222,7 @@ pub mod stop_inference_scheduler_output {
     }
 }
 impl StopInferenceSchedulerOutput {
-    /// Creates a new builder-style object to manufacture [`StopInferenceSchedulerOutput`](crate::output::StopInferenceSchedulerOutput)
+    /// Creates a new builder-style object to manufacture [`StopInferenceSchedulerOutput`](crate::output::StopInferenceSchedulerOutput).
     pub fn builder() -> crate::output::stop_inference_scheduler_output::Builder {
         crate::output::stop_inference_scheduler_output::Builder::default()
     }
@@ -276,10 +276,10 @@ impl std::fmt::Debug for StartInferenceSchedulerOutput {
         formatter.finish()
     }
 }
-/// See [`StartInferenceSchedulerOutput`](crate::output::StartInferenceSchedulerOutput)
+/// See [`StartInferenceSchedulerOutput`](crate::output::StartInferenceSchedulerOutput).
 pub mod start_inference_scheduler_output {
-    /// A builder for [`StartInferenceSchedulerOutput`](crate::output::StartInferenceSchedulerOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`StartInferenceSchedulerOutput`](crate::output::StartInferenceSchedulerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_arn: std::option::Option<std::string::String>,
@@ -348,7 +348,7 @@ pub mod start_inference_scheduler_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartInferenceSchedulerOutput`](crate::output::StartInferenceSchedulerOutput)
+        /// Consumes the builder and constructs a [`StartInferenceSchedulerOutput`](crate::output::StartInferenceSchedulerOutput).
         pub fn build(self) -> crate::output::StartInferenceSchedulerOutput {
             crate::output::StartInferenceSchedulerOutput {
                 model_arn: self.model_arn,
@@ -361,7 +361,7 @@ pub mod start_inference_scheduler_output {
     }
 }
 impl StartInferenceSchedulerOutput {
-    /// Creates a new builder-style object to manufacture [`StartInferenceSchedulerOutput`](crate::output::StartInferenceSchedulerOutput)
+    /// Creates a new builder-style object to manufacture [`StartInferenceSchedulerOutput`](crate::output::StartInferenceSchedulerOutput).
     pub fn builder() -> crate::output::start_inference_scheduler_output::Builder {
         crate::output::start_inference_scheduler_output::Builder::default()
     }
@@ -394,10 +394,10 @@ impl std::fmt::Debug for StartDataIngestionJobOutput {
         formatter.finish()
     }
 }
-/// See [`StartDataIngestionJobOutput`](crate::output::StartDataIngestionJobOutput)
+/// See [`StartDataIngestionJobOutput`](crate::output::StartDataIngestionJobOutput).
 pub mod start_data_ingestion_job_output {
-    /// A builder for [`StartDataIngestionJobOutput`](crate::output::StartDataIngestionJobOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`StartDataIngestionJobOutput`](crate::output::StartDataIngestionJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -427,7 +427,7 @@ pub mod start_data_ingestion_job_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartDataIngestionJobOutput`](crate::output::StartDataIngestionJobOutput)
+        /// Consumes the builder and constructs a [`StartDataIngestionJobOutput`](crate::output::StartDataIngestionJobOutput).
         pub fn build(self) -> crate::output::StartDataIngestionJobOutput {
             crate::output::StartDataIngestionJobOutput {
                 job_id: self.job_id,
@@ -437,7 +437,7 @@ pub mod start_data_ingestion_job_output {
     }
 }
 impl StartDataIngestionJobOutput {
-    /// Creates a new builder-style object to manufacture [`StartDataIngestionJobOutput`](crate::output::StartDataIngestionJobOutput)
+    /// Creates a new builder-style object to manufacture [`StartDataIngestionJobOutput`](crate::output::StartDataIngestionJobOutput).
     pub fn builder() -> crate::output::start_data_ingestion_job_output::Builder {
         crate::output::start_data_ingestion_job_output::Builder::default()
     }
@@ -463,10 +463,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -491,14 +491,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -537,10 +537,10 @@ impl std::fmt::Debug for ListSensorStatisticsOutput {
         formatter.finish()
     }
 }
-/// See [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput)
+/// See [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput).
 pub mod list_sensor_statistics_output {
-    /// A builder for [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) sensor_statistics_summaries:
@@ -580,7 +580,7 @@ pub mod list_sensor_statistics_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput)
+        /// Consumes the builder and constructs a [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput).
         pub fn build(self) -> crate::output::ListSensorStatisticsOutput {
             crate::output::ListSensorStatisticsOutput {
                 sensor_statistics_summaries: self.sensor_statistics_summaries,
@@ -590,7 +590,7 @@ pub mod list_sensor_statistics_output {
     }
 }
 impl ListSensorStatisticsOutput {
-    /// Creates a new builder-style object to manufacture [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput)
+    /// Creates a new builder-style object to manufacture [`ListSensorStatisticsOutput`](crate::output::ListSensorStatisticsOutput).
     pub fn builder() -> crate::output::list_sensor_statistics_output::Builder {
         crate::output::list_sensor_statistics_output::Builder::default()
     }
@@ -623,10 +623,10 @@ impl std::fmt::Debug for ListModelsOutput {
         formatter.finish()
     }
 }
-/// See [`ListModelsOutput`](crate::output::ListModelsOutput)
+/// See [`ListModelsOutput`](crate::output::ListModelsOutput).
 pub mod list_models_output {
-    /// A builder for [`ListModelsOutput`](crate::output::ListModelsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListModelsOutput`](crate::output::ListModelsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -662,7 +662,7 @@ pub mod list_models_output {
             self.model_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListModelsOutput`](crate::output::ListModelsOutput)
+        /// Consumes the builder and constructs a [`ListModelsOutput`](crate::output::ListModelsOutput).
         pub fn build(self) -> crate::output::ListModelsOutput {
             crate::output::ListModelsOutput {
                 next_token: self.next_token,
@@ -672,7 +672,7 @@ pub mod list_models_output {
     }
 }
 impl ListModelsOutput {
-    /// Creates a new builder-style object to manufacture [`ListModelsOutput`](crate::output::ListModelsOutput)
+    /// Creates a new builder-style object to manufacture [`ListModelsOutput`](crate::output::ListModelsOutput).
     pub fn builder() -> crate::output::list_models_output::Builder {
         crate::output::list_models_output::Builder::default()
     }
@@ -711,10 +711,10 @@ impl std::fmt::Debug for ListInferenceSchedulersOutput {
         formatter.finish()
     }
 }
-/// See [`ListInferenceSchedulersOutput`](crate::output::ListInferenceSchedulersOutput)
+/// See [`ListInferenceSchedulersOutput`](crate::output::ListInferenceSchedulersOutput).
 pub mod list_inference_schedulers_output {
-    /// A builder for [`ListInferenceSchedulersOutput`](crate::output::ListInferenceSchedulersOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListInferenceSchedulersOutput`](crate::output::ListInferenceSchedulersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -754,7 +754,7 @@ pub mod list_inference_schedulers_output {
             self.inference_scheduler_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListInferenceSchedulersOutput`](crate::output::ListInferenceSchedulersOutput)
+        /// Consumes the builder and constructs a [`ListInferenceSchedulersOutput`](crate::output::ListInferenceSchedulersOutput).
         pub fn build(self) -> crate::output::ListInferenceSchedulersOutput {
             crate::output::ListInferenceSchedulersOutput {
                 next_token: self.next_token,
@@ -764,7 +764,7 @@ pub mod list_inference_schedulers_output {
     }
 }
 impl ListInferenceSchedulersOutput {
-    /// Creates a new builder-style object to manufacture [`ListInferenceSchedulersOutput`](crate::output::ListInferenceSchedulersOutput)
+    /// Creates a new builder-style object to manufacture [`ListInferenceSchedulersOutput`](crate::output::ListInferenceSchedulersOutput).
     pub fn builder() -> crate::output::list_inference_schedulers_output::Builder {
         crate::output::list_inference_schedulers_output::Builder::default()
     }
@@ -803,10 +803,10 @@ impl std::fmt::Debug for ListInferenceExecutionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListInferenceExecutionsOutput`](crate::output::ListInferenceExecutionsOutput)
+/// See [`ListInferenceExecutionsOutput`](crate::output::ListInferenceExecutionsOutput).
 pub mod list_inference_executions_output {
-    /// A builder for [`ListInferenceExecutionsOutput`](crate::output::ListInferenceExecutionsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListInferenceExecutionsOutput`](crate::output::ListInferenceExecutionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -846,7 +846,7 @@ pub mod list_inference_executions_output {
             self.inference_execution_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListInferenceExecutionsOutput`](crate::output::ListInferenceExecutionsOutput)
+        /// Consumes the builder and constructs a [`ListInferenceExecutionsOutput`](crate::output::ListInferenceExecutionsOutput).
         pub fn build(self) -> crate::output::ListInferenceExecutionsOutput {
             crate::output::ListInferenceExecutionsOutput {
                 next_token: self.next_token,
@@ -856,9 +856,98 @@ pub mod list_inference_executions_output {
     }
 }
 impl ListInferenceExecutionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListInferenceExecutionsOutput`](crate::output::ListInferenceExecutionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListInferenceExecutionsOutput`](crate::output::ListInferenceExecutionsOutput).
     pub fn builder() -> crate::output::list_inference_executions_output::Builder {
         crate::output::list_inference_executions_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListInferenceEventsOutput {
+    /// <p>An opaque pagination token indicating where to continue the listing of inference executions. </p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>Provides an array of information about the individual inference events returned from the <code>ListInferenceEvents</code> operation, including scheduler used, event start time, event end time, diagnostics, and so on. </p>
+    pub inference_event_summaries:
+        std::option::Option<std::vec::Vec<crate::model::InferenceEventSummary>>,
+}
+impl ListInferenceEventsOutput {
+    /// <p>An opaque pagination token indicating where to continue the listing of inference executions. </p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>Provides an array of information about the individual inference events returned from the <code>ListInferenceEvents</code> operation, including scheduler used, event start time, event end time, diagnostics, and so on. </p>
+    pub fn inference_event_summaries(
+        &self,
+    ) -> std::option::Option<&[crate::model::InferenceEventSummary]> {
+        self.inference_event_summaries.as_deref()
+    }
+}
+impl std::fmt::Debug for ListInferenceEventsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListInferenceEventsOutput");
+        formatter.field("next_token", &self.next_token);
+        formatter.field("inference_event_summaries", &self.inference_event_summaries);
+        formatter.finish()
+    }
+}
+/// See [`ListInferenceEventsOutput`](crate::output::ListInferenceEventsOutput).
+pub mod list_inference_events_output {
+
+    /// A builder for [`ListInferenceEventsOutput`](crate::output::ListInferenceEventsOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) inference_event_summaries:
+            std::option::Option<std::vec::Vec<crate::model::InferenceEventSummary>>,
+    }
+    impl Builder {
+        /// <p>An opaque pagination token indicating where to continue the listing of inference executions. </p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>An opaque pagination token indicating where to continue the listing of inference executions. </p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `inference_event_summaries`.
+        ///
+        /// To override the contents of this collection use [`set_inference_event_summaries`](Self::set_inference_event_summaries).
+        ///
+        /// <p>Provides an array of information about the individual inference events returned from the <code>ListInferenceEvents</code> operation, including scheduler used, event start time, event end time, diagnostics, and so on. </p>
+        pub fn inference_event_summaries(
+            mut self,
+            input: crate::model::InferenceEventSummary,
+        ) -> Self {
+            let mut v = self.inference_event_summaries.unwrap_or_default();
+            v.push(input);
+            self.inference_event_summaries = Some(v);
+            self
+        }
+        /// <p>Provides an array of information about the individual inference events returned from the <code>ListInferenceEvents</code> operation, including scheduler used, event start time, event end time, diagnostics, and so on. </p>
+        pub fn set_inference_event_summaries(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::InferenceEventSummary>>,
+        ) -> Self {
+            self.inference_event_summaries = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListInferenceEventsOutput`](crate::output::ListInferenceEventsOutput).
+        pub fn build(self) -> crate::output::ListInferenceEventsOutput {
+            crate::output::ListInferenceEventsOutput {
+                next_token: self.next_token,
+                inference_event_summaries: self.inference_event_summaries,
+            }
+        }
+    }
+}
+impl ListInferenceEventsOutput {
+    /// Creates a new builder-style object to manufacture [`ListInferenceEventsOutput`](crate::output::ListInferenceEventsOutput).
+    pub fn builder() -> crate::output::list_inference_events_output::Builder {
+        crate::output::list_inference_events_output::Builder::default()
     }
 }
 
@@ -889,10 +978,10 @@ impl std::fmt::Debug for ListDatasetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
+/// See [`ListDatasetsOutput`](crate::output::ListDatasetsOutput).
 pub mod list_datasets_output {
-    /// A builder for [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListDatasetsOutput`](crate::output::ListDatasetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -929,7 +1018,7 @@ pub mod list_datasets_output {
             self.dataset_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
+        /// Consumes the builder and constructs a [`ListDatasetsOutput`](crate::output::ListDatasetsOutput).
         pub fn build(self) -> crate::output::ListDatasetsOutput {
             crate::output::ListDatasetsOutput {
                 next_token: self.next_token,
@@ -939,7 +1028,7 @@ pub mod list_datasets_output {
     }
 }
 impl ListDatasetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDatasetsOutput`](crate::output::ListDatasetsOutput).
     pub fn builder() -> crate::output::list_datasets_output::Builder {
         crate::output::list_datasets_output::Builder::default()
     }
@@ -978,10 +1067,10 @@ impl std::fmt::Debug for ListDataIngestionJobsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDataIngestionJobsOutput`](crate::output::ListDataIngestionJobsOutput)
+/// See [`ListDataIngestionJobsOutput`](crate::output::ListDataIngestionJobsOutput).
 pub mod list_data_ingestion_jobs_output {
-    /// A builder for [`ListDataIngestionJobsOutput`](crate::output::ListDataIngestionJobsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListDataIngestionJobsOutput`](crate::output::ListDataIngestionJobsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1021,7 +1110,7 @@ pub mod list_data_ingestion_jobs_output {
             self.data_ingestion_job_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDataIngestionJobsOutput`](crate::output::ListDataIngestionJobsOutput)
+        /// Consumes the builder and constructs a [`ListDataIngestionJobsOutput`](crate::output::ListDataIngestionJobsOutput).
         pub fn build(self) -> crate::output::ListDataIngestionJobsOutput {
             crate::output::ListDataIngestionJobsOutput {
                 next_token: self.next_token,
@@ -1031,7 +1120,7 @@ pub mod list_data_ingestion_jobs_output {
     }
 }
 impl ListDataIngestionJobsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDataIngestionJobsOutput`](crate::output::ListDataIngestionJobsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDataIngestionJobsOutput`](crate::output::ListDataIngestionJobsOutput).
     pub fn builder() -> crate::output::list_data_ingestion_jobs_output::Builder {
         crate::output::list_data_ingestion_jobs_output::Builder::default()
     }
@@ -1221,10 +1310,10 @@ impl std::fmt::Debug for DescribeModelOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeModelOutput`](crate::output::DescribeModelOutput)
+/// See [`DescribeModelOutput`](crate::output::DescribeModelOutput).
 pub mod describe_model_output {
-    /// A builder for [`DescribeModelOutput`](crate::output::DescribeModelOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeModelOutput`](crate::output::DescribeModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_name: std::option::Option<std::string::String>,
@@ -1512,7 +1601,7 @@ pub mod describe_model_output {
             self.off_condition = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeModelOutput`](crate::output::DescribeModelOutput)
+        /// Consumes the builder and constructs a [`DescribeModelOutput`](crate::output::DescribeModelOutput).
         pub fn build(self) -> crate::output::DescribeModelOutput {
             crate::output::DescribeModelOutput {
                 model_name: self.model_name,
@@ -1541,7 +1630,7 @@ pub mod describe_model_output {
     }
 }
 impl DescribeModelOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeModelOutput`](crate::output::DescribeModelOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeModelOutput`](crate::output::DescribeModelOutput).
     pub fn builder() -> crate::output::describe_model_output::Builder {
         crate::output::describe_model_output::Builder::default()
     }
@@ -1658,10 +1747,10 @@ impl std::fmt::Debug for DescribeInferenceSchedulerOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeInferenceSchedulerOutput`](crate::output::DescribeInferenceSchedulerOutput)
+/// See [`DescribeInferenceSchedulerOutput`](crate::output::DescribeInferenceSchedulerOutput).
 pub mod describe_inference_scheduler_output {
-    /// A builder for [`DescribeInferenceSchedulerOutput`](crate::output::DescribeInferenceSchedulerOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeInferenceSchedulerOutput`](crate::output::DescribeInferenceSchedulerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_arn: std::option::Option<std::string::String>,
@@ -1844,7 +1933,7 @@ pub mod describe_inference_scheduler_output {
             self.server_side_kms_key_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeInferenceSchedulerOutput`](crate::output::DescribeInferenceSchedulerOutput)
+        /// Consumes the builder and constructs a [`DescribeInferenceSchedulerOutput`](crate::output::DescribeInferenceSchedulerOutput).
         pub fn build(self) -> crate::output::DescribeInferenceSchedulerOutput {
             crate::output::DescribeInferenceSchedulerOutput {
                 model_arn: self.model_arn,
@@ -1865,7 +1954,7 @@ pub mod describe_inference_scheduler_output {
     }
 }
 impl DescribeInferenceSchedulerOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeInferenceSchedulerOutput`](crate::output::DescribeInferenceSchedulerOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeInferenceSchedulerOutput`](crate::output::DescribeInferenceSchedulerOutput).
     pub fn builder() -> crate::output::describe_inference_scheduler_output::Builder {
         crate::output::describe_inference_scheduler_output::Builder::default()
     }
@@ -1879,7 +1968,7 @@ pub struct DescribeDatasetOutput {
     pub dataset_name: std::option::Option<std::string::String>,
     /// <p>The Amazon Resource Name (ARN) of the dataset being described. </p>
     pub dataset_arn: std::option::Option<std::string::String>,
-    /// <p>Specifies the time the dataset was created in Amazon Lookout for Equipment. </p>
+    /// <p>Specifies the time the dataset was created in Lookout for Equipment. </p>
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Specifies the time the dataset was last updated, if it was. </p>
     pub last_updated_at: std::option::Option<aws_smithy_types::DateTime>,
@@ -1912,7 +2001,7 @@ impl DescribeDatasetOutput {
     pub fn dataset_arn(&self) -> std::option::Option<&str> {
         self.dataset_arn.as_deref()
     }
-    /// <p>Specifies the time the dataset was created in Amazon Lookout for Equipment. </p>
+    /// <p>Specifies the time the dataset was created in Lookout for Equipment. </p>
     pub fn created_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.created_at.as_ref()
     }
@@ -1983,10 +2072,10 @@ impl std::fmt::Debug for DescribeDatasetOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
+/// See [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput).
 pub mod describe_dataset_output {
-    /// A builder for [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_name: std::option::Option<std::string::String>,
@@ -2025,12 +2114,12 @@ pub mod describe_dataset_output {
             self.dataset_arn = input;
             self
         }
-        /// <p>Specifies the time the dataset was created in Amazon Lookout for Equipment. </p>
+        /// <p>Specifies the time the dataset was created in Lookout for Equipment. </p>
         pub fn created_at(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.created_at = Some(input);
             self
         }
-        /// <p>Specifies the time the dataset was created in Amazon Lookout for Equipment. </p>
+        /// <p>Specifies the time the dataset was created in Lookout for Equipment. </p>
         pub fn set_created_at(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -2165,7 +2254,7 @@ pub mod describe_dataset_output {
             self.data_end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
+        /// Consumes the builder and constructs a [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput).
         pub fn build(self) -> crate::output::DescribeDatasetOutput {
             crate::output::DescribeDatasetOutput {
                 dataset_name: self.dataset_name,
@@ -2186,7 +2275,7 @@ pub mod describe_dataset_output {
     }
 }
 impl DescribeDatasetOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDatasetOutput`](crate::output::DescribeDatasetOutput).
     pub fn builder() -> crate::output::describe_dataset_output::Builder {
         crate::output::describe_dataset_output::Builder::default()
     }
@@ -2304,10 +2393,10 @@ impl std::fmt::Debug for DescribeDataIngestionJobOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput)
+/// See [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput).
 pub mod describe_data_ingestion_job_output {
-    /// A builder for [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) job_id: std::option::Option<std::string::String>,
@@ -2486,7 +2575,7 @@ pub mod describe_data_ingestion_job_output {
             self.data_end_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput)
+        /// Consumes the builder and constructs a [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput).
         pub fn build(self) -> crate::output::DescribeDataIngestionJobOutput {
             crate::output::DescribeDataIngestionJobOutput {
                 job_id: self.job_id,
@@ -2507,7 +2596,7 @@ pub mod describe_data_ingestion_job_output {
     }
 }
 impl DescribeDataIngestionJobOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDataIngestionJobOutput`](crate::output::DescribeDataIngestionJobOutput).
     pub fn builder() -> crate::output::describe_data_ingestion_job_output::Builder {
         crate::output::describe_data_ingestion_job_output::Builder::default()
     }
@@ -2523,21 +2612,21 @@ impl std::fmt::Debug for DeleteModelOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteModelOutput`](crate::output::DeleteModelOutput)
+/// See [`DeleteModelOutput`](crate::output::DeleteModelOutput).
 pub mod delete_model_output {
-    /// A builder for [`DeleteModelOutput`](crate::output::DeleteModelOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteModelOutput`](crate::output::DeleteModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteModelOutput`](crate::output::DeleteModelOutput)
+        /// Consumes the builder and constructs a [`DeleteModelOutput`](crate::output::DeleteModelOutput).
         pub fn build(self) -> crate::output::DeleteModelOutput {
             crate::output::DeleteModelOutput {}
         }
     }
 }
 impl DeleteModelOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteModelOutput`](crate::output::DeleteModelOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteModelOutput`](crate::output::DeleteModelOutput).
     pub fn builder() -> crate::output::delete_model_output::Builder {
         crate::output::delete_model_output::Builder::default()
     }
@@ -2553,21 +2642,21 @@ impl std::fmt::Debug for DeleteInferenceSchedulerOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteInferenceSchedulerOutput`](crate::output::DeleteInferenceSchedulerOutput)
+/// See [`DeleteInferenceSchedulerOutput`](crate::output::DeleteInferenceSchedulerOutput).
 pub mod delete_inference_scheduler_output {
-    /// A builder for [`DeleteInferenceSchedulerOutput`](crate::output::DeleteInferenceSchedulerOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteInferenceSchedulerOutput`](crate::output::DeleteInferenceSchedulerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteInferenceSchedulerOutput`](crate::output::DeleteInferenceSchedulerOutput)
+        /// Consumes the builder and constructs a [`DeleteInferenceSchedulerOutput`](crate::output::DeleteInferenceSchedulerOutput).
         pub fn build(self) -> crate::output::DeleteInferenceSchedulerOutput {
             crate::output::DeleteInferenceSchedulerOutput {}
         }
     }
 }
 impl DeleteInferenceSchedulerOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteInferenceSchedulerOutput`](crate::output::DeleteInferenceSchedulerOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteInferenceSchedulerOutput`](crate::output::DeleteInferenceSchedulerOutput).
     pub fn builder() -> crate::output::delete_inference_scheduler_output::Builder {
         crate::output::delete_inference_scheduler_output::Builder::default()
     }
@@ -2583,21 +2672,21 @@ impl std::fmt::Debug for DeleteDatasetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
+/// See [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
 pub mod delete_dataset_output {
-    /// A builder for [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
+        /// Consumes the builder and constructs a [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
         pub fn build(self) -> crate::output::DeleteDatasetOutput {
             crate::output::DeleteDatasetOutput {}
         }
     }
 }
 impl DeleteDatasetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
     pub fn builder() -> crate::output::delete_dataset_output::Builder {
         crate::output::delete_dataset_output::Builder::default()
     }
@@ -2630,10 +2719,10 @@ impl std::fmt::Debug for CreateModelOutput {
         formatter.finish()
     }
 }
-/// See [`CreateModelOutput`](crate::output::CreateModelOutput)
+/// See [`CreateModelOutput`](crate::output::CreateModelOutput).
 pub mod create_model_output {
-    /// A builder for [`CreateModelOutput`](crate::output::CreateModelOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateModelOutput`](crate::output::CreateModelOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) model_arn: std::option::Option<std::string::String>,
@@ -2660,7 +2749,7 @@ pub mod create_model_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateModelOutput`](crate::output::CreateModelOutput)
+        /// Consumes the builder and constructs a [`CreateModelOutput`](crate::output::CreateModelOutput).
         pub fn build(self) -> crate::output::CreateModelOutput {
             crate::output::CreateModelOutput {
                 model_arn: self.model_arn,
@@ -2670,7 +2759,7 @@ pub mod create_model_output {
     }
 }
 impl CreateModelOutput {
-    /// Creates a new builder-style object to manufacture [`CreateModelOutput`](crate::output::CreateModelOutput)
+    /// Creates a new builder-style object to manufacture [`CreateModelOutput`](crate::output::CreateModelOutput).
     pub fn builder() -> crate::output::create_model_output::Builder {
         crate::output::create_model_output::Builder::default()
     }
@@ -2710,10 +2799,10 @@ impl std::fmt::Debug for CreateInferenceSchedulerOutput {
         formatter.finish()
     }
 }
-/// See [`CreateInferenceSchedulerOutput`](crate::output::CreateInferenceSchedulerOutput)
+/// See [`CreateInferenceSchedulerOutput`](crate::output::CreateInferenceSchedulerOutput).
 pub mod create_inference_scheduler_output {
-    /// A builder for [`CreateInferenceSchedulerOutput`](crate::output::CreateInferenceSchedulerOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateInferenceSchedulerOutput`](crate::output::CreateInferenceSchedulerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) inference_scheduler_arn: std::option::Option<std::string::String>,
@@ -2760,7 +2849,7 @@ pub mod create_inference_scheduler_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateInferenceSchedulerOutput`](crate::output::CreateInferenceSchedulerOutput)
+        /// Consumes the builder and constructs a [`CreateInferenceSchedulerOutput`](crate::output::CreateInferenceSchedulerOutput).
         pub fn build(self) -> crate::output::CreateInferenceSchedulerOutput {
             crate::output::CreateInferenceSchedulerOutput {
                 inference_scheduler_arn: self.inference_scheduler_arn,
@@ -2771,7 +2860,7 @@ pub mod create_inference_scheduler_output {
     }
 }
 impl CreateInferenceSchedulerOutput {
-    /// Creates a new builder-style object to manufacture [`CreateInferenceSchedulerOutput`](crate::output::CreateInferenceSchedulerOutput)
+    /// Creates a new builder-style object to manufacture [`CreateInferenceSchedulerOutput`](crate::output::CreateInferenceSchedulerOutput).
     pub fn builder() -> crate::output::create_inference_scheduler_output::Builder {
         crate::output::create_inference_scheduler_output::Builder::default()
     }
@@ -2811,10 +2900,10 @@ impl std::fmt::Debug for CreateDatasetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
+/// See [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
 pub mod create_dataset_output {
-    /// A builder for [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_name: std::option::Option<std::string::String>,
@@ -2855,7 +2944,7 @@ pub mod create_dataset_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
+        /// Consumes the builder and constructs a [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
         pub fn build(self) -> crate::output::CreateDatasetOutput {
             crate::output::CreateDatasetOutput {
                 dataset_name: self.dataset_name,
@@ -2866,7 +2955,7 @@ pub mod create_dataset_output {
     }
 }
 impl CreateDatasetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
     pub fn builder() -> crate::output::create_dataset_output::Builder {
         crate::output::create_dataset_output::Builder::default()
     }

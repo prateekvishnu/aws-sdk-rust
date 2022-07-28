@@ -297,6 +297,8 @@ pub struct DeleteFraudsterError {
 pub enum DeleteFraudsterErrorKind {
     /// <p>You do not have sufficient permissions to perform this action. Check the error message and try again.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>The request failed due to a conflict. Check the <code>ConflictType</code> and error message for more details.</p>
+    ConflictException(crate::error::ConflictException),
     /// <p>The request failed due to an unknown error on the server side.</p>
     InternalServerException(crate::error::InternalServerException),
     /// <p>The specified resource cannot be found. Check the <code>ResourceType</code> and error message for more details.</p>
@@ -312,6 +314,7 @@ impl std::fmt::Display for DeleteFraudsterError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match &self.kind {
             DeleteFraudsterErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            DeleteFraudsterErrorKind::ConflictException(_inner) => _inner.fmt(f),
             DeleteFraudsterErrorKind::InternalServerException(_inner) => _inner.fmt(f),
             DeleteFraudsterErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
             DeleteFraudsterErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
@@ -377,6 +380,10 @@ impl DeleteFraudsterError {
             DeleteFraudsterErrorKind::AccessDeniedException(_)
         )
     }
+    /// Returns `true` if the error kind is `DeleteFraudsterErrorKind::ConflictException`.
+    pub fn is_conflict_exception(&self) -> bool {
+        matches!(&self.kind, DeleteFraudsterErrorKind::ConflictException(_))
+    }
     /// Returns `true` if the error kind is `DeleteFraudsterErrorKind::InternalServerException`.
     pub fn is_internal_server_exception(&self) -> bool {
         matches!(
@@ -404,6 +411,7 @@ impl std::error::Error for DeleteFraudsterError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match &self.kind {
             DeleteFraudsterErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            DeleteFraudsterErrorKind::ConflictException(_inner) => Some(_inner),
             DeleteFraudsterErrorKind::InternalServerException(_inner) => Some(_inner),
             DeleteFraudsterErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
             DeleteFraudsterErrorKind::ThrottlingException(_inner) => Some(_inner),
@@ -1256,6 +1264,8 @@ pub struct EvaluateSessionError {
 pub enum EvaluateSessionErrorKind {
     /// <p>You do not have sufficient permissions to perform this action. Check the error message and try again.</p>
     AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>The request failed due to a conflict. Check the <code>ConflictType</code> and error message for more details.</p>
+    ConflictException(crate::error::ConflictException),
     /// <p>The request failed due to an unknown error on the server side.</p>
     InternalServerException(crate::error::InternalServerException),
     /// <p>The specified resource cannot be found. Check the <code>ResourceType</code> and error message for more details.</p>
@@ -1271,6 +1281,7 @@ impl std::fmt::Display for EvaluateSessionError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match &self.kind {
             EvaluateSessionErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            EvaluateSessionErrorKind::ConflictException(_inner) => _inner.fmt(f),
             EvaluateSessionErrorKind::InternalServerException(_inner) => _inner.fmt(f),
             EvaluateSessionErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
             EvaluateSessionErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
@@ -1336,6 +1347,10 @@ impl EvaluateSessionError {
             EvaluateSessionErrorKind::AccessDeniedException(_)
         )
     }
+    /// Returns `true` if the error kind is `EvaluateSessionErrorKind::ConflictException`.
+    pub fn is_conflict_exception(&self) -> bool {
+        matches!(&self.kind, EvaluateSessionErrorKind::ConflictException(_))
+    }
     /// Returns `true` if the error kind is `EvaluateSessionErrorKind::InternalServerException`.
     pub fn is_internal_server_exception(&self) -> bool {
         matches!(
@@ -1363,6 +1378,7 @@ impl std::error::Error for EvaluateSessionError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match &self.kind {
             EvaluateSessionErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            EvaluateSessionErrorKind::ConflictException(_inner) => Some(_inner),
             EvaluateSessionErrorKind::InternalServerException(_inner) => Some(_inner),
             EvaluateSessionErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
             EvaluateSessionErrorKind::ThrottlingException(_inner) => Some(_inner),
@@ -2940,10 +2956,10 @@ impl std::fmt::Display for ValidationException {
     }
 }
 impl std::error::Error for ValidationException {}
-/// See [`ValidationException`](crate::error::ValidationException)
+/// See [`ValidationException`](crate::error::ValidationException).
 pub mod validation_exception {
-    /// A builder for [`ValidationException`](crate::error::ValidationException)
-    #[non_exhaustive]
+
+    /// A builder for [`ValidationException`](crate::error::ValidationException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -2959,7 +2975,7 @@ pub mod validation_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException)
+        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException).
         pub fn build(self) -> crate::error::ValidationException {
             crate::error::ValidationException {
                 message: self.message,
@@ -2968,7 +2984,7 @@ pub mod validation_exception {
     }
 }
 impl ValidationException {
-    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException)
+    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException).
     pub fn builder() -> crate::error::validation_exception::Builder {
         crate::error::validation_exception::Builder::default()
     }
@@ -3004,10 +3020,10 @@ impl std::fmt::Display for ThrottlingException {
     }
 }
 impl std::error::Error for ThrottlingException {}
-/// See [`ThrottlingException`](crate::error::ThrottlingException)
+/// See [`ThrottlingException`](crate::error::ThrottlingException).
 pub mod throttling_exception {
-    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
-    #[non_exhaustive]
+
+    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3023,7 +3039,7 @@ pub mod throttling_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException)
+        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException).
         pub fn build(self) -> crate::error::ThrottlingException {
             crate::error::ThrottlingException {
                 message: self.message,
@@ -3032,7 +3048,7 @@ pub mod throttling_exception {
     }
 }
 impl ThrottlingException {
-    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException)
+    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException).
     pub fn builder() -> crate::error::throttling_exception::Builder {
         crate::error::throttling_exception::Builder::default()
     }
@@ -3077,10 +3093,10 @@ impl std::fmt::Display for ResourceNotFoundException {
     }
 }
 impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
 pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3110,7 +3126,7 @@ pub mod resource_not_found_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
         pub fn build(self) -> crate::error::ResourceNotFoundException {
             crate::error::ResourceNotFoundException {
                 message: self.message,
@@ -3120,7 +3136,7 @@ pub mod resource_not_found_exception {
     }
 }
 impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     pub fn builder() -> crate::error::resource_not_found_exception::Builder {
         crate::error::resource_not_found_exception::Builder::default()
     }
@@ -3156,10 +3172,10 @@ impl std::fmt::Display for InternalServerException {
     }
 }
 impl std::error::Error for InternalServerException {}
-/// See [`InternalServerException`](crate::error::InternalServerException)
+/// See [`InternalServerException`](crate::error::InternalServerException).
 pub mod internal_server_exception {
-    /// A builder for [`InternalServerException`](crate::error::InternalServerException)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalServerException`](crate::error::InternalServerException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3175,7 +3191,7 @@ pub mod internal_server_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException)
+        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException).
         pub fn build(self) -> crate::error::InternalServerException {
             crate::error::InternalServerException {
                 message: self.message,
@@ -3184,7 +3200,7 @@ pub mod internal_server_exception {
     }
 }
 impl InternalServerException {
-    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException)
+    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException).
     pub fn builder() -> crate::error::internal_server_exception::Builder {
         crate::error::internal_server_exception::Builder::default()
     }
@@ -3245,10 +3261,10 @@ impl std::fmt::Display for ConflictException {
     }
 }
 impl std::error::Error for ConflictException {}
-/// See [`ConflictException`](crate::error::ConflictException)
+/// See [`ConflictException`](crate::error::ConflictException).
 pub mod conflict_exception {
-    /// A builder for [`ConflictException`](crate::error::ConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`ConflictException`](crate::error::ConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3294,7 +3310,7 @@ pub mod conflict_exception {
             self.conflict_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException)
+        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException).
         pub fn build(self) -> crate::error::ConflictException {
             crate::error::ConflictException {
                 message: self.message,
@@ -3304,7 +3320,7 @@ pub mod conflict_exception {
     }
 }
 impl ConflictException {
-    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException)
+    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException).
     pub fn builder() -> crate::error::conflict_exception::Builder {
         crate::error::conflict_exception::Builder::default()
     }
@@ -3340,10 +3356,10 @@ impl std::fmt::Display for AccessDeniedException {
     }
 }
 impl std::error::Error for AccessDeniedException {}
-/// See [`AccessDeniedException`](crate::error::AccessDeniedException)
+/// See [`AccessDeniedException`](crate::error::AccessDeniedException).
 pub mod access_denied_exception {
-    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
-    #[non_exhaustive]
+
+    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3359,7 +3375,7 @@ pub mod access_denied_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException)
+        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException).
         pub fn build(self) -> crate::error::AccessDeniedException {
             crate::error::AccessDeniedException {
                 message: self.message,
@@ -3368,7 +3384,7 @@ pub mod access_denied_exception {
     }
 }
 impl AccessDeniedException {
-    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException)
+    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException).
     pub fn builder() -> crate::error::access_denied_exception::Builder {
         crate::error::access_denied_exception::Builder::default()
     }
@@ -3404,10 +3420,10 @@ impl std::fmt::Display for ServiceQuotaExceededException {
     }
 }
 impl std::error::Error for ServiceQuotaExceededException {}
-/// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+/// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
 pub mod service_quota_exceeded_exception {
-    /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3423,7 +3439,7 @@ pub mod service_quota_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+        /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
         pub fn build(self) -> crate::error::ServiceQuotaExceededException {
             crate::error::ServiceQuotaExceededException {
                 message: self.message,
@@ -3432,7 +3448,7 @@ pub mod service_quota_exceeded_exception {
     }
 }
 impl ServiceQuotaExceededException {
-    /// Creates a new builder-style object to manufacture [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+    /// Creates a new builder-style object to manufacture [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
     pub fn builder() -> crate::error::service_quota_exceeded_exception::Builder {
         crate::error::service_quota_exceeded_exception::Builder::default()
     }

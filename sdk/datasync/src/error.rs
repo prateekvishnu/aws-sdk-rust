@@ -406,6 +406,110 @@ impl std::error::Error for CreateLocationFsxLustreError {
     }
 }
 
+/// Error type for the `CreateLocationFsxOntap` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct CreateLocationFsxOntapError {
+    /// Kind of error that occurred.
+    pub kind: CreateLocationFsxOntapErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `CreateLocationFsxOntap` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum CreateLocationFsxOntapErrorKind {
+    /// <p>This exception is thrown when an error occurs in the DataSync service.</p>
+    InternalException(crate::error::InternalException),
+    /// <p>This exception is thrown when the client submits a malformed request.</p>
+    InvalidRequestException(crate::error::InvalidRequestException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for CreateLocationFsxOntapError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            CreateLocationFsxOntapErrorKind::InternalException(_inner) => _inner.fmt(f),
+            CreateLocationFsxOntapErrorKind::InvalidRequestException(_inner) => _inner.fmt(f),
+            CreateLocationFsxOntapErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for CreateLocationFsxOntapError {
+    fn code(&self) -> Option<&str> {
+        CreateLocationFsxOntapError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl CreateLocationFsxOntapError {
+    /// Creates a new `CreateLocationFsxOntapError`.
+    pub fn new(kind: CreateLocationFsxOntapErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `CreateLocationFsxOntapError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: CreateLocationFsxOntapErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `CreateLocationFsxOntapError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: CreateLocationFsxOntapErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `CreateLocationFsxOntapErrorKind::InternalException`.
+    pub fn is_internal_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateLocationFsxOntapErrorKind::InternalException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateLocationFsxOntapErrorKind::InvalidRequestException`.
+    pub fn is_invalid_request_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateLocationFsxOntapErrorKind::InvalidRequestException(_)
+        )
+    }
+}
+impl std::error::Error for CreateLocationFsxOntapError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            CreateLocationFsxOntapErrorKind::InternalException(_inner) => Some(_inner),
+            CreateLocationFsxOntapErrorKind::InvalidRequestException(_inner) => Some(_inner),
+            CreateLocationFsxOntapErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `CreateLocationFsxOpenZfs` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -1825,6 +1929,110 @@ impl std::error::Error for DescribeLocationFsxLustreError {
             DescribeLocationFsxLustreErrorKind::InternalException(_inner) => Some(_inner),
             DescribeLocationFsxLustreErrorKind::InvalidRequestException(_inner) => Some(_inner),
             DescribeLocationFsxLustreErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DescribeLocationFsxOntap` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DescribeLocationFsxOntapError {
+    /// Kind of error that occurred.
+    pub kind: DescribeLocationFsxOntapErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DescribeLocationFsxOntap` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DescribeLocationFsxOntapErrorKind {
+    /// <p>This exception is thrown when an error occurs in the DataSync service.</p>
+    InternalException(crate::error::InternalException),
+    /// <p>This exception is thrown when the client submits a malformed request.</p>
+    InvalidRequestException(crate::error::InvalidRequestException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DescribeLocationFsxOntapError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DescribeLocationFsxOntapErrorKind::InternalException(_inner) => _inner.fmt(f),
+            DescribeLocationFsxOntapErrorKind::InvalidRequestException(_inner) => _inner.fmt(f),
+            DescribeLocationFsxOntapErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DescribeLocationFsxOntapError {
+    fn code(&self) -> Option<&str> {
+        DescribeLocationFsxOntapError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DescribeLocationFsxOntapError {
+    /// Creates a new `DescribeLocationFsxOntapError`.
+    pub fn new(kind: DescribeLocationFsxOntapErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DescribeLocationFsxOntapError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DescribeLocationFsxOntapErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DescribeLocationFsxOntapError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DescribeLocationFsxOntapErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DescribeLocationFsxOntapErrorKind::InternalException`.
+    pub fn is_internal_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeLocationFsxOntapErrorKind::InternalException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DescribeLocationFsxOntapErrorKind::InvalidRequestException`.
+    pub fn is_invalid_request_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeLocationFsxOntapErrorKind::InvalidRequestException(_)
+        )
+    }
+}
+impl std::error::Error for DescribeLocationFsxOntapError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DescribeLocationFsxOntapErrorKind::InternalException(_inner) => Some(_inner),
+            DescribeLocationFsxOntapErrorKind::InvalidRequestException(_inner) => Some(_inner),
+            DescribeLocationFsxOntapErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -4331,10 +4539,10 @@ impl std::fmt::Display for InvalidRequestException {
     }
 }
 impl std::error::Error for InvalidRequestException {}
-/// See [`InvalidRequestException`](crate::error::InvalidRequestException)
+/// See [`InvalidRequestException`](crate::error::InvalidRequestException).
 pub mod invalid_request_exception {
-    /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4375,7 +4583,7 @@ pub mod invalid_request_exception {
             self.datasync_error_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException)
+        /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException).
         pub fn build(self) -> crate::error::InvalidRequestException {
             crate::error::InvalidRequestException {
                 message: self.message,
@@ -4386,7 +4594,7 @@ pub mod invalid_request_exception {
     }
 }
 impl InvalidRequestException {
-    /// Creates a new builder-style object to manufacture [`InvalidRequestException`](crate::error::InvalidRequestException)
+    /// Creates a new builder-style object to manufacture [`InvalidRequestException`](crate::error::InvalidRequestException).
     pub fn builder() -> crate::error::invalid_request_exception::Builder {
         crate::error::invalid_request_exception::Builder::default()
     }
@@ -4431,10 +4639,10 @@ impl std::fmt::Display for InternalException {
     }
 }
 impl std::error::Error for InternalException {}
-/// See [`InternalException`](crate::error::InternalException)
+/// See [`InternalException`](crate::error::InternalException).
 pub mod internal_exception {
-    /// A builder for [`InternalException`](crate::error::InternalException)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalException`](crate::error::InternalException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4461,7 +4669,7 @@ pub mod internal_exception {
             self.error_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalException`](crate::error::InternalException)
+        /// Consumes the builder and constructs a [`InternalException`](crate::error::InternalException).
         pub fn build(self) -> crate::error::InternalException {
             crate::error::InternalException {
                 message: self.message,
@@ -4471,7 +4679,7 @@ pub mod internal_exception {
     }
 }
 impl InternalException {
-    /// Creates a new builder-style object to manufacture [`InternalException`](crate::error::InternalException)
+    /// Creates a new builder-style object to manufacture [`InternalException`](crate::error::InternalException).
     pub fn builder() -> crate::error::internal_exception::Builder {
         crate::error::internal_exception::Builder::default()
     }

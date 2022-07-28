@@ -20,6 +20,8 @@ pub enum VoiceId {
     #[allow(missing_docs)] // documentation missing in model
     Arlet,
     #[allow(missing_docs)] // documentation missing in model
+    Arthur,
+    #[allow(missing_docs)] // documentation missing in model
     Astrid,
     #[allow(missing_docs)] // documentation missing in model
     Ayanda,
@@ -41,6 +43,8 @@ pub enum VoiceId {
     Conchita,
     #[allow(missing_docs)] // documentation missing in model
     Cristiano,
+    #[allow(missing_docs)] // documentation missing in model
+    Daniel,
     #[allow(missing_docs)] // documentation missing in model
     Dora,
     #[allow(missing_docs)] // documentation missing in model
@@ -88,6 +92,8 @@ pub enum VoiceId {
     #[allow(missing_docs)] // documentation missing in model
     Lea,
     #[allow(missing_docs)] // documentation missing in model
+    Liam,
+    #[allow(missing_docs)] // documentation missing in model
     Liv,
     #[allow(missing_docs)] // documentation missing in model
     Lotte,
@@ -119,6 +125,8 @@ pub enum VoiceId {
     Nicole,
     #[allow(missing_docs)] // documentation missing in model
     Olivia,
+    #[allow(missing_docs)] // documentation missing in model
+    Pedro,
     #[allow(missing_docs)] // documentation missing in model
     Penelope,
     #[allow(missing_docs)] // documentation missing in model
@@ -155,6 +163,7 @@ impl std::convert::From<&str> for VoiceId {
             "Amy" => VoiceId::Amy,
             "Aria" => VoiceId::Aria,
             "Arlet" => VoiceId::Arlet,
+            "Arthur" => VoiceId::Arthur,
             "Astrid" => VoiceId::Astrid,
             "Ayanda" => VoiceId::Ayanda,
             "Bianca" => VoiceId::Bianca,
@@ -166,6 +175,7 @@ impl std::convert::From<&str> for VoiceId {
             "Chantal" => VoiceId::Chantal,
             "Conchita" => VoiceId::Conchita,
             "Cristiano" => VoiceId::Cristiano,
+            "Daniel" => VoiceId::Daniel,
             "Dora" => VoiceId::Dora,
             "Emma" => VoiceId::Emma,
             "Enrique" => VoiceId::Enrique,
@@ -189,6 +199,7 @@ impl std::convert::From<&str> for VoiceId {
             "Kevin" => VoiceId::Kevin,
             "Kimberly" => VoiceId::Kimberly,
             "Lea" => VoiceId::Lea,
+            "Liam" => VoiceId::Liam,
             "Liv" => VoiceId::Liv,
             "Lotte" => VoiceId::Lotte,
             "Lucia" => VoiceId::Lucia,
@@ -205,6 +216,7 @@ impl std::convert::From<&str> for VoiceId {
             "Naja" => VoiceId::Naja,
             "Nicole" => VoiceId::Nicole,
             "Olivia" => VoiceId::Olivia,
+            "Pedro" => VoiceId::Pedro,
             "Penelope" => VoiceId::Penelope,
             "Raveena" => VoiceId::Raveena,
             "Ricardo" => VoiceId::Ricardo,
@@ -237,6 +249,7 @@ impl VoiceId {
             VoiceId::Amy => "Amy",
             VoiceId::Aria => "Aria",
             VoiceId::Arlet => "Arlet",
+            VoiceId::Arthur => "Arthur",
             VoiceId::Astrid => "Astrid",
             VoiceId::Ayanda => "Ayanda",
             VoiceId::Bianca => "Bianca",
@@ -248,6 +261,7 @@ impl VoiceId {
             VoiceId::Chantal => "Chantal",
             VoiceId::Conchita => "Conchita",
             VoiceId::Cristiano => "Cristiano",
+            VoiceId::Daniel => "Daniel",
             VoiceId::Dora => "Dora",
             VoiceId::Emma => "Emma",
             VoiceId::Enrique => "Enrique",
@@ -271,6 +285,7 @@ impl VoiceId {
             VoiceId::Kevin => "Kevin",
             VoiceId::Kimberly => "Kimberly",
             VoiceId::Lea => "Lea",
+            VoiceId::Liam => "Liam",
             VoiceId::Liv => "Liv",
             VoiceId::Lotte => "Lotte",
             VoiceId::Lucia => "Lucia",
@@ -287,6 +302,7 @@ impl VoiceId {
             VoiceId::Naja => "Naja",
             VoiceId::Nicole => "Nicole",
             VoiceId::Olivia => "Olivia",
+            VoiceId::Pedro => "Pedro",
             VoiceId::Penelope => "Penelope",
             VoiceId::Raveena => "Raveena",
             VoiceId::Ricardo => "Ricardo",
@@ -310,6 +326,7 @@ impl VoiceId {
             "Amy",
             "Aria",
             "Arlet",
+            "Arthur",
             "Astrid",
             "Ayanda",
             "Bianca",
@@ -321,6 +338,7 @@ impl VoiceId {
             "Chantal",
             "Conchita",
             "Cristiano",
+            "Daniel",
             "Dora",
             "Emma",
             "Enrique",
@@ -344,6 +362,7 @@ impl VoiceId {
             "Kevin",
             "Kimberly",
             "Lea",
+            "Liam",
             "Liv",
             "Lotte",
             "Lucia",
@@ -360,6 +379,7 @@ impl VoiceId {
             "Naja",
             "Nicole",
             "Olivia",
+            "Pedro",
             "Penelope",
             "Raveena",
             "Ricardo",
@@ -955,10 +975,10 @@ impl std::fmt::Debug for SynthesisTask {
         formatter.finish()
     }
 }
-/// See [`SynthesisTask`](crate::model::SynthesisTask)
+/// See [`SynthesisTask`](crate::model::SynthesisTask).
 pub mod synthesis_task {
-    /// A builder for [`SynthesisTask`](crate::model::SynthesisTask)
-    #[non_exhaustive]
+
+    /// A builder for [`SynthesisTask`](crate::model::SynthesisTask).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) engine: std::option::Option<crate::model::Engine>,
@@ -1171,7 +1191,7 @@ pub mod synthesis_task {
             self.language_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`SynthesisTask`](crate::model::SynthesisTask)
+        /// Consumes the builder and constructs a [`SynthesisTask`](crate::model::SynthesisTask).
         pub fn build(self) -> crate::model::SynthesisTask {
             crate::model::SynthesisTask {
                 engine: self.engine,
@@ -1194,7 +1214,7 @@ pub mod synthesis_task {
     }
 }
 impl SynthesisTask {
-    /// Creates a new builder-style object to manufacture [`SynthesisTask`](crate::model::SynthesisTask)
+    /// Creates a new builder-style object to manufacture [`SynthesisTask`](crate::model::SynthesisTask).
     pub fn builder() -> crate::model::synthesis_task::Builder {
         crate::model::synthesis_task::Builder::default()
     }
@@ -1290,10 +1310,10 @@ impl std::fmt::Debug for LexiconDescription {
         formatter.finish()
     }
 }
-/// See [`LexiconDescription`](crate::model::LexiconDescription)
+/// See [`LexiconDescription`](crate::model::LexiconDescription).
 pub mod lexicon_description {
-    /// A builder for [`LexiconDescription`](crate::model::LexiconDescription)
-    #[non_exhaustive]
+
+    /// A builder for [`LexiconDescription`](crate::model::LexiconDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1323,7 +1343,7 @@ pub mod lexicon_description {
             self.attributes = input;
             self
         }
-        /// Consumes the builder and constructs a [`LexiconDescription`](crate::model::LexiconDescription)
+        /// Consumes the builder and constructs a [`LexiconDescription`](crate::model::LexiconDescription).
         pub fn build(self) -> crate::model::LexiconDescription {
             crate::model::LexiconDescription {
                 name: self.name,
@@ -1333,7 +1353,7 @@ pub mod lexicon_description {
     }
 }
 impl LexiconDescription {
-    /// Creates a new builder-style object to manufacture [`LexiconDescription`](crate::model::LexiconDescription)
+    /// Creates a new builder-style object to manufacture [`LexiconDescription`](crate::model::LexiconDescription).
     pub fn builder() -> crate::model::lexicon_description::Builder {
         crate::model::lexicon_description::Builder::default()
     }
@@ -1394,10 +1414,10 @@ impl std::fmt::Debug for LexiconAttributes {
         formatter.finish()
     }
 }
-/// See [`LexiconAttributes`](crate::model::LexiconAttributes)
+/// See [`LexiconAttributes`](crate::model::LexiconAttributes).
 pub mod lexicon_attributes {
-    /// A builder for [`LexiconAttributes`](crate::model::LexiconAttributes)
-    #[non_exhaustive]
+
+    /// A builder for [`LexiconAttributes`](crate::model::LexiconAttributes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alphabet: std::option::Option<std::string::String>,
@@ -1474,7 +1494,7 @@ pub mod lexicon_attributes {
             self.size = input;
             self
         }
-        /// Consumes the builder and constructs a [`LexiconAttributes`](crate::model::LexiconAttributes)
+        /// Consumes the builder and constructs a [`LexiconAttributes`](crate::model::LexiconAttributes).
         pub fn build(self) -> crate::model::LexiconAttributes {
             crate::model::LexiconAttributes {
                 alphabet: self.alphabet,
@@ -1488,7 +1508,7 @@ pub mod lexicon_attributes {
     }
 }
 impl LexiconAttributes {
-    /// Creates a new builder-style object to manufacture [`LexiconAttributes`](crate::model::LexiconAttributes)
+    /// Creates a new builder-style object to manufacture [`LexiconAttributes`](crate::model::LexiconAttributes).
     pub fn builder() -> crate::model::lexicon_attributes::Builder {
         crate::model::lexicon_attributes::Builder::default()
     }
@@ -1521,10 +1541,10 @@ impl std::fmt::Debug for Lexicon {
         formatter.finish()
     }
 }
-/// See [`Lexicon`](crate::model::Lexicon)
+/// See [`Lexicon`](crate::model::Lexicon).
 pub mod lexicon {
-    /// A builder for [`Lexicon`](crate::model::Lexicon)
-    #[non_exhaustive]
+
+    /// A builder for [`Lexicon`](crate::model::Lexicon).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) content: std::option::Option<std::string::String>,
@@ -1551,7 +1571,7 @@ pub mod lexicon {
             self.name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Lexicon`](crate::model::Lexicon)
+        /// Consumes the builder and constructs a [`Lexicon`](crate::model::Lexicon).
         pub fn build(self) -> crate::model::Lexicon {
             crate::model::Lexicon {
                 content: self.content,
@@ -1561,7 +1581,7 @@ pub mod lexicon {
     }
 }
 impl Lexicon {
-    /// Creates a new builder-style object to manufacture [`Lexicon`](crate::model::Lexicon)
+    /// Creates a new builder-style object to manufacture [`Lexicon`](crate::model::Lexicon).
     pub fn builder() -> crate::model::lexicon::Builder {
         crate::model::lexicon::Builder::default()
     }
@@ -1631,10 +1651,10 @@ impl std::fmt::Debug for Voice {
         formatter.finish()
     }
 }
-/// See [`Voice`](crate::model::Voice)
+/// See [`Voice`](crate::model::Voice).
 pub mod voice {
-    /// A builder for [`Voice`](crate::model::Voice)
-    #[non_exhaustive]
+
+    /// A builder for [`Voice`](crate::model::Voice).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gender: std::option::Option<crate::model::Gender>,
@@ -1743,7 +1763,7 @@ pub mod voice {
             self.supported_engines = input;
             self
         }
-        /// Consumes the builder and constructs a [`Voice`](crate::model::Voice)
+        /// Consumes the builder and constructs a [`Voice`](crate::model::Voice).
         pub fn build(self) -> crate::model::Voice {
             crate::model::Voice {
                 gender: self.gender,
@@ -1758,7 +1778,7 @@ pub mod voice {
     }
 }
 impl Voice {
-    /// Creates a new builder-style object to manufacture [`Voice`](crate::model::Voice)
+    /// Creates a new builder-style object to manufacture [`Voice`](crate::model::Voice).
     pub fn builder() -> crate::model::voice::Builder {
         crate::model::voice::Builder::default()
     }

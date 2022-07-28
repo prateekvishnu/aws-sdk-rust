@@ -213,7 +213,7 @@ impl Client {
     /// - The fluent builder is configurable:
     ///   - [`project_name(impl Into<String>)`](crate::client::fluent_builders::DetectAnomalies::project_name) / [`set_project_name(Option<String>)`](crate::client::fluent_builders::DetectAnomalies::set_project_name): <p>The name of the project that contains the model version that you want to use.</p>
     ///   - [`model_version(impl Into<String>)`](crate::client::fluent_builders::DetectAnomalies::model_version) / [`set_model_version(Option<String>)`](crate::client::fluent_builders::DetectAnomalies::set_model_version): <p>The version of the model that you want to use.</p>
-    ///   - [`body(byte_stream::ByteStream)`](crate::client::fluent_builders::DetectAnomalies::body) / [`set_body(byte_stream::ByteStream)`](crate::client::fluent_builders::DetectAnomalies::set_body): <p>The unencrypted image bytes that you want to analyze. </p>
+    ///   - [`body(ByteStream)`](crate::client::fluent_builders::DetectAnomalies::body) / [`set_body(ByteStream)`](crate::client::fluent_builders::DetectAnomalies::set_body): <p>The unencrypted image bytes that you want to analyze. </p>
     ///   - [`content_type(impl Into<String>)`](crate::client::fluent_builders::DetectAnomalies::content_type) / [`set_content_type(Option<String>)`](crate::client::fluent_builders::DetectAnomalies::set_content_type): <p>The type of the image passed in <code>Body</code>. Valid values are <code>image/png</code> (PNG format images) and <code>image/jpeg</code> (JPG format images). </p>
     /// - On success, responds with [`DetectAnomaliesOutput`](crate::output::DetectAnomaliesOutput) with field(s):
     ///   - [`detect_anomaly_result(Option<DetectAnomalyResult>)`](crate::output::DetectAnomaliesOutput::detect_anomaly_result): <p>The results of the <code>DetectAnomalies</code> operation.</p>
@@ -369,13 +369,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `CreateDataset`.
     ///
     /// <p>Creates a new dataset in an Amazon Lookout for Vision project. <code>CreateDataset</code> can create a training or a test dataset from a valid dataset source (<code>DatasetSource</code>).</p>

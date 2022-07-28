@@ -16,7 +16,7 @@ pub enum AssociateExternalConnectionErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -181,7 +181,7 @@ pub enum CopyPackageVersionsErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -340,7 +340,7 @@ pub enum CreateDomainErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -487,7 +487,7 @@ pub enum CreateRepositoryErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -643,7 +643,7 @@ pub enum DeleteDomainErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because too many requests are sent to the service. </p>
     ThrottlingException(crate::error::ThrottlingException),
@@ -768,7 +768,7 @@ pub enum DeleteDomainPermissionsPolicyErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -925,7 +925,7 @@ pub enum DeletePackageVersionsErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -1073,7 +1073,7 @@ pub enum DeleteRepositoryErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -1218,7 +1218,7 @@ pub enum DeleteRepositoryPermissionsPolicyErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -1383,7 +1383,7 @@ pub struct DescribeDomainError {
 pub enum DescribeDomainErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -1499,6 +1499,137 @@ impl std::error::Error for DescribeDomainError {
     }
 }
 
+/// Error type for the `DescribePackage` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DescribePackageError {
+    /// Kind of error that occurred.
+    pub kind: DescribePackageErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DescribePackage` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DescribePackageErrorKind {
+    /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p> The operation did not succeed because too many requests are sent to the service. </p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p> The operation did not succeed because a parameter in the request was sent with an invalid value. </p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DescribePackageError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DescribePackageErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            DescribePackageErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            DescribePackageErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            DescribePackageErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            DescribePackageErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            DescribePackageErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DescribePackageError {
+    fn code(&self) -> Option<&str> {
+        DescribePackageError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DescribePackageError {
+    /// Creates a new `DescribePackageError`.
+    pub fn new(kind: DescribePackageErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DescribePackageError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DescribePackageErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DescribePackageError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DescribePackageErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DescribePackageErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribePackageErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DescribePackageErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribePackageErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DescribePackageErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribePackageErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DescribePackageErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(&self.kind, DescribePackageErrorKind::ThrottlingException(_))
+    }
+    /// Returns `true` if the error kind is `DescribePackageErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(&self.kind, DescribePackageErrorKind::ValidationException(_))
+    }
+}
+impl std::error::Error for DescribePackageError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DescribePackageErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            DescribePackageErrorKind::InternalServerException(_inner) => Some(_inner),
+            DescribePackageErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            DescribePackageErrorKind::ThrottlingException(_inner) => Some(_inner),
+            DescribePackageErrorKind::ValidationException(_inner) => Some(_inner),
+            DescribePackageErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `DescribePackageVersion` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -1516,7 +1647,7 @@ pub enum DescribePackageVersionErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -1662,7 +1793,7 @@ pub struct DescribeRepositoryError {
 pub enum DescribeRepositoryErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -1801,7 +1932,7 @@ pub enum DisassociateExternalConnectionErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -1975,7 +2106,7 @@ pub enum DisposePackageVersionsErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -2121,7 +2252,7 @@ pub struct GetAuthorizationTokenError {
 pub enum GetAuthorizationTokenErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -2258,7 +2389,7 @@ pub struct GetDomainPermissionsPolicyError {
 pub enum GetDomainPermissionsPolicyErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -2397,7 +2528,7 @@ pub enum GetPackageVersionAssetErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -2543,7 +2674,7 @@ pub struct GetPackageVersionReadmeError {
 pub enum GetPackageVersionReadmeErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -2680,7 +2811,7 @@ pub struct GetRepositoryEndpointError {
 pub enum GetRepositoryEndpointErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -2817,7 +2948,7 @@ pub struct GetRepositoryPermissionsPolicyError {
 pub enum GetRepositoryPermissionsPolicyErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -2965,7 +3096,7 @@ pub struct ListDomainsError {
 pub enum ListDomainsErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because too many requests are sent to the service. </p>
     ThrottlingException(crate::error::ThrottlingException),
@@ -3079,7 +3210,7 @@ pub struct ListPackagesError {
 pub enum ListPackagesErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -3207,7 +3338,7 @@ pub struct ListPackageVersionAssetsError {
 pub enum ListPackageVersionAssetsErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -3344,7 +3475,7 @@ pub struct ListPackageVersionDependenciesError {
 pub enum ListPackageVersionDependenciesErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -3492,7 +3623,7 @@ pub struct ListPackageVersionsError {
 pub enum ListPackageVersionsErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -3629,7 +3760,7 @@ pub struct ListRepositoriesError {
 pub enum ListRepositoriesErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because too many requests are sent to the service. </p>
     ThrottlingException(crate::error::ThrottlingException),
@@ -3755,7 +3886,7 @@ pub struct ListRepositoriesInDomainError {
 pub enum ListRepositoriesInDomainErrorKind {
     /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
     AccessDeniedException(crate::error::AccessDeniedException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -4020,7 +4151,7 @@ pub enum PutDomainPermissionsPolicyErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -4166,6 +4297,152 @@ impl std::error::Error for PutDomainPermissionsPolicyError {
     }
 }
 
+/// Error type for the `PutPackageOriginConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct PutPackageOriginConfigurationError {
+    /// Kind of error that occurred.
+    pub kind: PutPackageOriginConfigurationErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `PutPackageOriginConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum PutPackageOriginConfigurationErrorKind {
+    /// <p> The operation did not succeed because of an unauthorized access attempt. </p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p> The operation did not succeed because too many requests are sent to the service. </p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p> The operation did not succeed because a parameter in the request was sent with an invalid value. </p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for PutPackageOriginConfigurationError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            PutPackageOriginConfigurationErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            PutPackageOriginConfigurationErrorKind::InternalServerException(_inner) => {
+                _inner.fmt(f)
+            }
+            PutPackageOriginConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                _inner.fmt(f)
+            }
+            PutPackageOriginConfigurationErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            PutPackageOriginConfigurationErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            PutPackageOriginConfigurationErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for PutPackageOriginConfigurationError {
+    fn code(&self) -> Option<&str> {
+        PutPackageOriginConfigurationError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl PutPackageOriginConfigurationError {
+    /// Creates a new `PutPackageOriginConfigurationError`.
+    pub fn new(
+        kind: PutPackageOriginConfigurationErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `PutPackageOriginConfigurationError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: PutPackageOriginConfigurationErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `PutPackageOriginConfigurationError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: PutPackageOriginConfigurationErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `PutPackageOriginConfigurationErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            PutPackageOriginConfigurationErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `PutPackageOriginConfigurationErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            PutPackageOriginConfigurationErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `PutPackageOriginConfigurationErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            PutPackageOriginConfigurationErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `PutPackageOriginConfigurationErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            PutPackageOriginConfigurationErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `PutPackageOriginConfigurationErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            PutPackageOriginConfigurationErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for PutPackageOriginConfigurationError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            PutPackageOriginConfigurationErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            PutPackageOriginConfigurationErrorKind::InternalServerException(_inner) => Some(_inner),
+            PutPackageOriginConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                Some(_inner)
+            }
+            PutPackageOriginConfigurationErrorKind::ThrottlingException(_inner) => Some(_inner),
+            PutPackageOriginConfigurationErrorKind::ValidationException(_inner) => Some(_inner),
+            PutPackageOriginConfigurationErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `PutRepositoryPermissionsPolicy` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -4183,7 +4460,7 @@ pub enum PutRepositoryPermissionsPolicyErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -4602,7 +4879,7 @@ pub enum UpdatePackageVersionsStatusErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -4752,7 +5029,7 @@ pub enum UpdateRepositoryErrorKind {
     AccessDeniedException(crate::error::AccessDeniedException),
     /// <p> The operation did not succeed because prerequisites are not met. </p>
     ConflictException(crate::error::ConflictException),
-    /// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+    /// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
     InternalServerException(crate::error::InternalServerException),
     /// <p> The operation did not succeed because the resource requested is not found in the service. </p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
@@ -4930,10 +5207,10 @@ impl std::fmt::Display for ValidationException {
     }
 }
 impl std::error::Error for ValidationException {}
-/// See [`ValidationException`](crate::error::ValidationException)
+/// See [`ValidationException`](crate::error::ValidationException).
 pub mod validation_exception {
-    /// A builder for [`ValidationException`](crate::error::ValidationException)
-    #[non_exhaustive]
+
+    /// A builder for [`ValidationException`](crate::error::ValidationException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4963,7 +5240,7 @@ pub mod validation_exception {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException)
+        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException).
         pub fn build(self) -> crate::error::ValidationException {
             crate::error::ValidationException {
                 message: self.message,
@@ -4973,7 +5250,7 @@ pub mod validation_exception {
     }
 }
 impl ValidationException {
-    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException)
+    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException).
     pub fn builder() -> crate::error::validation_exception::Builder {
         crate::error::validation_exception::Builder::default()
     }
@@ -5018,10 +5295,10 @@ impl std::fmt::Display for ThrottlingException {
     }
 }
 impl std::error::Error for ThrottlingException {}
-/// See [`ThrottlingException`](crate::error::ThrottlingException)
+/// See [`ThrottlingException`](crate::error::ThrottlingException).
 pub mod throttling_exception {
-    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
-    #[non_exhaustive]
+
+    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -5048,7 +5325,7 @@ pub mod throttling_exception {
             self.retry_after_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException)
+        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException).
         pub fn build(self) -> crate::error::ThrottlingException {
             crate::error::ThrottlingException {
                 message: self.message,
@@ -5058,7 +5335,7 @@ pub mod throttling_exception {
     }
 }
 impl ThrottlingException {
-    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException)
+    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException).
     pub fn builder() -> crate::error::throttling_exception::Builder {
         crate::error::throttling_exception::Builder::default()
     }
@@ -5072,7 +5349,7 @@ pub struct ServiceQuotaExceededException {
     pub message: std::option::Option<std::string::String>,
     /// <p> The ID of the resource. </p>
     pub resource_id: std::option::Option<std::string::String>,
-    /// <p> The type of AWS resource. </p>
+    /// <p> The type of Amazon Web Services resource. </p>
     pub resource_type: std::option::Option<crate::model::ResourceType>,
 }
 impl ServiceQuotaExceededException {
@@ -5080,7 +5357,7 @@ impl ServiceQuotaExceededException {
     pub fn resource_id(&self) -> std::option::Option<&str> {
         self.resource_id.as_deref()
     }
-    /// <p> The type of AWS resource. </p>
+    /// <p> The type of Amazon Web Services resource. </p>
     pub fn resource_type(&self) -> std::option::Option<&crate::model::ResourceType> {
         self.resource_type.as_ref()
     }
@@ -5110,10 +5387,10 @@ impl std::fmt::Display for ServiceQuotaExceededException {
     }
 }
 impl std::error::Error for ServiceQuotaExceededException {}
-/// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+/// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
 pub mod service_quota_exceeded_exception {
-    /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -5141,12 +5418,12 @@ pub mod service_quota_exceeded_exception {
             self.resource_id = input;
             self
         }
-        /// <p> The type of AWS resource. </p>
+        /// <p> The type of Amazon Web Services resource. </p>
         pub fn resource_type(mut self, input: crate::model::ResourceType) -> Self {
             self.resource_type = Some(input);
             self
         }
-        /// <p> The type of AWS resource. </p>
+        /// <p> The type of Amazon Web Services resource. </p>
         pub fn set_resource_type(
             mut self,
             input: std::option::Option<crate::model::ResourceType>,
@@ -5154,7 +5431,7 @@ pub mod service_quota_exceeded_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+        /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
         pub fn build(self) -> crate::error::ServiceQuotaExceededException {
             crate::error::ServiceQuotaExceededException {
                 message: self.message,
@@ -5165,7 +5442,7 @@ pub mod service_quota_exceeded_exception {
     }
 }
 impl ServiceQuotaExceededException {
-    /// Creates a new builder-style object to manufacture [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+    /// Creates a new builder-style object to manufacture [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
     pub fn builder() -> crate::error::service_quota_exceeded_exception::Builder {
         crate::error::service_quota_exceeded_exception::Builder::default()
     }
@@ -5179,7 +5456,7 @@ pub struct ResourceNotFoundException {
     pub message: std::option::Option<std::string::String>,
     /// <p> The ID of the resource. </p>
     pub resource_id: std::option::Option<std::string::String>,
-    /// <p> The type of AWS resource. </p>
+    /// <p> The type of Amazon Web Services resource. </p>
     pub resource_type: std::option::Option<crate::model::ResourceType>,
 }
 impl ResourceNotFoundException {
@@ -5187,7 +5464,7 @@ impl ResourceNotFoundException {
     pub fn resource_id(&self) -> std::option::Option<&str> {
         self.resource_id.as_deref()
     }
-    /// <p> The type of AWS resource. </p>
+    /// <p> The type of Amazon Web Services resource. </p>
     pub fn resource_type(&self) -> std::option::Option<&crate::model::ResourceType> {
         self.resource_type.as_ref()
     }
@@ -5217,10 +5494,10 @@ impl std::fmt::Display for ResourceNotFoundException {
     }
 }
 impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
 pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -5248,12 +5525,12 @@ pub mod resource_not_found_exception {
             self.resource_id = input;
             self
         }
-        /// <p> The type of AWS resource. </p>
+        /// <p> The type of Amazon Web Services resource. </p>
         pub fn resource_type(mut self, input: crate::model::ResourceType) -> Self {
             self.resource_type = Some(input);
             self
         }
-        /// <p> The type of AWS resource. </p>
+        /// <p> The type of Amazon Web Services resource. </p>
         pub fn set_resource_type(
             mut self,
             input: std::option::Option<crate::model::ResourceType>,
@@ -5261,7 +5538,7 @@ pub mod resource_not_found_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
         pub fn build(self) -> crate::error::ResourceNotFoundException {
             crate::error::ResourceNotFoundException {
                 message: self.message,
@@ -5272,13 +5549,13 @@ pub mod resource_not_found_exception {
     }
 }
 impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     pub fn builder() -> crate::error::resource_not_found_exception::Builder {
         crate::error::resource_not_found_exception::Builder::default()
     }
 }
 
-/// <p> The operation did not succeed because of an error that occurred inside AWS CodeArtifact. </p>
+/// <p> The operation did not succeed because of an error that occurred inside CodeArtifact. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct InternalServerException {
@@ -5308,10 +5585,10 @@ impl std::fmt::Display for InternalServerException {
     }
 }
 impl std::error::Error for InternalServerException {}
-/// See [`InternalServerException`](crate::error::InternalServerException)
+/// See [`InternalServerException`](crate::error::InternalServerException).
 pub mod internal_server_exception {
-    /// A builder for [`InternalServerException`](crate::error::InternalServerException)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalServerException`](crate::error::InternalServerException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -5327,7 +5604,7 @@ pub mod internal_server_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException)
+        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException).
         pub fn build(self) -> crate::error::InternalServerException {
             crate::error::InternalServerException {
                 message: self.message,
@@ -5336,7 +5613,7 @@ pub mod internal_server_exception {
     }
 }
 impl InternalServerException {
-    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException)
+    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException).
     pub fn builder() -> crate::error::internal_server_exception::Builder {
         crate::error::internal_server_exception::Builder::default()
     }
@@ -5350,7 +5627,7 @@ pub struct ConflictException {
     pub message: std::option::Option<std::string::String>,
     /// <p> The ID of the resource. </p>
     pub resource_id: std::option::Option<std::string::String>,
-    /// <p> The type of AWS resource. </p>
+    /// <p> The type of Amazon Web Services resource. </p>
     pub resource_type: std::option::Option<crate::model::ResourceType>,
 }
 impl ConflictException {
@@ -5358,7 +5635,7 @@ impl ConflictException {
     pub fn resource_id(&self) -> std::option::Option<&str> {
         self.resource_id.as_deref()
     }
-    /// <p> The type of AWS resource. </p>
+    /// <p> The type of Amazon Web Services resource. </p>
     pub fn resource_type(&self) -> std::option::Option<&crate::model::ResourceType> {
         self.resource_type.as_ref()
     }
@@ -5388,10 +5665,10 @@ impl std::fmt::Display for ConflictException {
     }
 }
 impl std::error::Error for ConflictException {}
-/// See [`ConflictException`](crate::error::ConflictException)
+/// See [`ConflictException`](crate::error::ConflictException).
 pub mod conflict_exception {
-    /// A builder for [`ConflictException`](crate::error::ConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`ConflictException`](crate::error::ConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -5419,12 +5696,12 @@ pub mod conflict_exception {
             self.resource_id = input;
             self
         }
-        /// <p> The type of AWS resource. </p>
+        /// <p> The type of Amazon Web Services resource. </p>
         pub fn resource_type(mut self, input: crate::model::ResourceType) -> Self {
             self.resource_type = Some(input);
             self
         }
-        /// <p> The type of AWS resource. </p>
+        /// <p> The type of Amazon Web Services resource. </p>
         pub fn set_resource_type(
             mut self,
             input: std::option::Option<crate::model::ResourceType>,
@@ -5432,7 +5709,7 @@ pub mod conflict_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException)
+        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException).
         pub fn build(self) -> crate::error::ConflictException {
             crate::error::ConflictException {
                 message: self.message,
@@ -5443,7 +5720,7 @@ pub mod conflict_exception {
     }
 }
 impl ConflictException {
-    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException)
+    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException).
     pub fn builder() -> crate::error::conflict_exception::Builder {
         crate::error::conflict_exception::Builder::default()
     }
@@ -5479,10 +5756,10 @@ impl std::fmt::Display for AccessDeniedException {
     }
 }
 impl std::error::Error for AccessDeniedException {}
-/// See [`AccessDeniedException`](crate::error::AccessDeniedException)
+/// See [`AccessDeniedException`](crate::error::AccessDeniedException).
 pub mod access_denied_exception {
-    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
-    #[non_exhaustive]
+
+    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -5498,7 +5775,7 @@ pub mod access_denied_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException)
+        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException).
         pub fn build(self) -> crate::error::AccessDeniedException {
             crate::error::AccessDeniedException {
                 message: self.message,
@@ -5507,7 +5784,7 @@ pub mod access_denied_exception {
     }
 }
 impl AccessDeniedException {
-    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException)
+    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException).
     pub fn builder() -> crate::error::access_denied_exception::Builder {
         crate::error::access_denied_exception::Builder::default()
     }

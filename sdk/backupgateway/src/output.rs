@@ -26,10 +26,10 @@ impl std::fmt::Debug for ListHypervisorsOutput {
         formatter.finish()
     }
 }
-/// See [`ListHypervisorsOutput`](crate::output::ListHypervisorsOutput)
+/// See [`ListHypervisorsOutput`](crate::output::ListHypervisorsOutput).
 pub mod list_hypervisors_output {
-    /// A builder for [`ListHypervisorsOutput`](crate::output::ListHypervisorsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListHypervisorsOutput`](crate::output::ListHypervisorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hypervisors: std::option::Option<std::vec::Vec<crate::model::Hypervisor>>,
@@ -65,7 +65,7 @@ pub mod list_hypervisors_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListHypervisorsOutput`](crate::output::ListHypervisorsOutput)
+        /// Consumes the builder and constructs a [`ListHypervisorsOutput`](crate::output::ListHypervisorsOutput).
         pub fn build(self) -> crate::output::ListHypervisorsOutput {
             crate::output::ListHypervisorsOutput {
                 hypervisors: self.hypervisors,
@@ -75,7 +75,7 @@ pub mod list_hypervisors_output {
     }
 }
 impl ListHypervisorsOutput {
-    /// Creates a new builder-style object to manufacture [`ListHypervisorsOutput`](crate::output::ListHypervisorsOutput)
+    /// Creates a new builder-style object to manufacture [`ListHypervisorsOutput`](crate::output::ListHypervisorsOutput).
     pub fn builder() -> crate::output::list_hypervisors_output::Builder {
         crate::output::list_hypervisors_output::Builder::default()
     }
@@ -101,10 +101,10 @@ impl std::fmt::Debug for ImportHypervisorConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`ImportHypervisorConfigurationOutput`](crate::output::ImportHypervisorConfigurationOutput)
+/// See [`ImportHypervisorConfigurationOutput`](crate::output::ImportHypervisorConfigurationOutput).
 pub mod import_hypervisor_configuration_output {
-    /// A builder for [`ImportHypervisorConfigurationOutput`](crate::output::ImportHypervisorConfigurationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ImportHypervisorConfigurationOutput`](crate::output::ImportHypervisorConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hypervisor_arn: std::option::Option<std::string::String>,
@@ -123,7 +123,7 @@ pub mod import_hypervisor_configuration_output {
             self.hypervisor_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`ImportHypervisorConfigurationOutput`](crate::output::ImportHypervisorConfigurationOutput)
+        /// Consumes the builder and constructs a [`ImportHypervisorConfigurationOutput`](crate::output::ImportHypervisorConfigurationOutput).
         pub fn build(self) -> crate::output::ImportHypervisorConfigurationOutput {
             crate::output::ImportHypervisorConfigurationOutput {
                 hypervisor_arn: self.hypervisor_arn,
@@ -132,7 +132,7 @@ pub mod import_hypervisor_configuration_output {
     }
 }
 impl ImportHypervisorConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`ImportHypervisorConfigurationOutput`](crate::output::ImportHypervisorConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`ImportHypervisorConfigurationOutput`](crate::output::ImportHypervisorConfigurationOutput).
     pub fn builder() -> crate::output::import_hypervisor_configuration_output::Builder {
         crate::output::import_hypervisor_configuration_output::Builder::default()
     }
@@ -158,10 +158,10 @@ impl std::fmt::Debug for DeleteHypervisorOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteHypervisorOutput`](crate::output::DeleteHypervisorOutput)
+/// See [`DeleteHypervisorOutput`](crate::output::DeleteHypervisorOutput).
 pub mod delete_hypervisor_output {
-    /// A builder for [`DeleteHypervisorOutput`](crate::output::DeleteHypervisorOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteHypervisorOutput`](crate::output::DeleteHypervisorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hypervisor_arn: std::option::Option<std::string::String>,
@@ -180,7 +180,7 @@ pub mod delete_hypervisor_output {
             self.hypervisor_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteHypervisorOutput`](crate::output::DeleteHypervisorOutput)
+        /// Consumes the builder and constructs a [`DeleteHypervisorOutput`](crate::output::DeleteHypervisorOutput).
         pub fn build(self) -> crate::output::DeleteHypervisorOutput {
             crate::output::DeleteHypervisorOutput {
                 hypervisor_arn: self.hypervisor_arn,
@@ -189,7 +189,7 @@ pub mod delete_hypervisor_output {
     }
 }
 impl DeleteHypervisorOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteHypervisorOutput`](crate::output::DeleteHypervisorOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteHypervisorOutput`](crate::output::DeleteHypervisorOutput).
     pub fn builder() -> crate::output::delete_hypervisor_output::Builder {
         crate::output::delete_hypervisor_output::Builder::default()
     }
@@ -215,10 +215,10 @@ impl std::fmt::Debug for UpdateHypervisorOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateHypervisorOutput`](crate::output::UpdateHypervisorOutput)
+/// See [`UpdateHypervisorOutput`](crate::output::UpdateHypervisorOutput).
 pub mod update_hypervisor_output {
-    /// A builder for [`UpdateHypervisorOutput`](crate::output::UpdateHypervisorOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateHypervisorOutput`](crate::output::UpdateHypervisorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) hypervisor_arn: std::option::Option<std::string::String>,
@@ -237,7 +237,7 @@ pub mod update_hypervisor_output {
             self.hypervisor_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateHypervisorOutput`](crate::output::UpdateHypervisorOutput)
+        /// Consumes the builder and constructs a [`UpdateHypervisorOutput`](crate::output::UpdateHypervisorOutput).
         pub fn build(self) -> crate::output::UpdateHypervisorOutput {
             crate::output::UpdateHypervisorOutput {
                 hypervisor_arn: self.hypervisor_arn,
@@ -246,9 +246,63 @@ pub mod update_hypervisor_output {
     }
 }
 impl UpdateHypervisorOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateHypervisorOutput`](crate::output::UpdateHypervisorOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateHypervisorOutput`](crate::output::UpdateHypervisorOutput).
     pub fn builder() -> crate::output::update_hypervisor_output::Builder {
         crate::output::update_hypervisor_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateGatewaySoftwareNowOutput {
+    /// <p>The Amazon Resource Name (ARN) of the gateway you updated.</p>
+    pub gateway_arn: std::option::Option<std::string::String>,
+}
+impl UpdateGatewaySoftwareNowOutput {
+    /// <p>The Amazon Resource Name (ARN) of the gateway you updated.</p>
+    pub fn gateway_arn(&self) -> std::option::Option<&str> {
+        self.gateway_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for UpdateGatewaySoftwareNowOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateGatewaySoftwareNowOutput");
+        formatter.field("gateway_arn", &self.gateway_arn);
+        formatter.finish()
+    }
+}
+/// See [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput).
+pub mod update_gateway_software_now_output {
+
+    /// A builder for [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) gateway_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The Amazon Resource Name (ARN) of the gateway you updated.</p>
+        pub fn gateway_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.gateway_arn = Some(input.into());
+            self
+        }
+        /// <p>The Amazon Resource Name (ARN) of the gateway you updated.</p>
+        pub fn set_gateway_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.gateway_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput).
+        pub fn build(self) -> crate::output::UpdateGatewaySoftwareNowOutput {
+            crate::output::UpdateGatewaySoftwareNowOutput {
+                gateway_arn: self.gateway_arn,
+            }
+        }
+    }
+}
+impl UpdateGatewaySoftwareNowOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateGatewaySoftwareNowOutput`](crate::output::UpdateGatewaySoftwareNowOutput).
+    pub fn builder() -> crate::output::update_gateway_software_now_output::Builder {
+        crate::output::update_gateway_software_now_output::Builder::default()
     }
 }
 
@@ -262,21 +316,21 @@ impl std::fmt::Debug for TestHypervisorConfigurationOutput {
         formatter.finish()
     }
 }
-/// See [`TestHypervisorConfigurationOutput`](crate::output::TestHypervisorConfigurationOutput)
+/// See [`TestHypervisorConfigurationOutput`](crate::output::TestHypervisorConfigurationOutput).
 pub mod test_hypervisor_configuration_output {
-    /// A builder for [`TestHypervisorConfigurationOutput`](crate::output::TestHypervisorConfigurationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TestHypervisorConfigurationOutput`](crate::output::TestHypervisorConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TestHypervisorConfigurationOutput`](crate::output::TestHypervisorConfigurationOutput)
+        /// Consumes the builder and constructs a [`TestHypervisorConfigurationOutput`](crate::output::TestHypervisorConfigurationOutput).
         pub fn build(self) -> crate::output::TestHypervisorConfigurationOutput {
             crate::output::TestHypervisorConfigurationOutput {}
         }
     }
 }
 impl TestHypervisorConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`TestHypervisorConfigurationOutput`](crate::output::TestHypervisorConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`TestHypervisorConfigurationOutput`](crate::output::TestHypervisorConfigurationOutput).
     pub fn builder() -> crate::output::test_hypervisor_configuration_output::Builder {
         crate::output::test_hypervisor_configuration_output::Builder::default()
     }
@@ -302,10 +356,10 @@ impl std::fmt::Debug for PutMaintenanceStartTimeOutput {
         formatter.finish()
     }
 }
-/// See [`PutMaintenanceStartTimeOutput`](crate::output::PutMaintenanceStartTimeOutput)
+/// See [`PutMaintenanceStartTimeOutput`](crate::output::PutMaintenanceStartTimeOutput).
 pub mod put_maintenance_start_time_output {
-    /// A builder for [`PutMaintenanceStartTimeOutput`](crate::output::PutMaintenanceStartTimeOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`PutMaintenanceStartTimeOutput`](crate::output::PutMaintenanceStartTimeOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -321,7 +375,7 @@ pub mod put_maintenance_start_time_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`PutMaintenanceStartTimeOutput`](crate::output::PutMaintenanceStartTimeOutput)
+        /// Consumes the builder and constructs a [`PutMaintenanceStartTimeOutput`](crate::output::PutMaintenanceStartTimeOutput).
         pub fn build(self) -> crate::output::PutMaintenanceStartTimeOutput {
             crate::output::PutMaintenanceStartTimeOutput {
                 gateway_arn: self.gateway_arn,
@@ -330,7 +384,7 @@ pub mod put_maintenance_start_time_output {
     }
 }
 impl PutMaintenanceStartTimeOutput {
-    /// Creates a new builder-style object to manufacture [`PutMaintenanceStartTimeOutput`](crate::output::PutMaintenanceStartTimeOutput)
+    /// Creates a new builder-style object to manufacture [`PutMaintenanceStartTimeOutput`](crate::output::PutMaintenanceStartTimeOutput).
     pub fn builder() -> crate::output::put_maintenance_start_time_output::Builder {
         crate::output::put_maintenance_start_time_output::Builder::default()
     }
@@ -356,10 +410,10 @@ impl std::fmt::Debug for DisassociateGatewayFromServerOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateGatewayFromServerOutput`](crate::output::DisassociateGatewayFromServerOutput)
+/// See [`DisassociateGatewayFromServerOutput`](crate::output::DisassociateGatewayFromServerOutput).
 pub mod disassociate_gateway_from_server_output {
-    /// A builder for [`DisassociateGatewayFromServerOutput`](crate::output::DisassociateGatewayFromServerOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DisassociateGatewayFromServerOutput`](crate::output::DisassociateGatewayFromServerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -375,7 +429,7 @@ pub mod disassociate_gateway_from_server_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateGatewayFromServerOutput`](crate::output::DisassociateGatewayFromServerOutput)
+        /// Consumes the builder and constructs a [`DisassociateGatewayFromServerOutput`](crate::output::DisassociateGatewayFromServerOutput).
         pub fn build(self) -> crate::output::DisassociateGatewayFromServerOutput {
             crate::output::DisassociateGatewayFromServerOutput {
                 gateway_arn: self.gateway_arn,
@@ -384,7 +438,7 @@ pub mod disassociate_gateway_from_server_output {
     }
 }
 impl DisassociateGatewayFromServerOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateGatewayFromServerOutput`](crate::output::DisassociateGatewayFromServerOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateGatewayFromServerOutput`](crate::output::DisassociateGatewayFromServerOutput).
     pub fn builder() -> crate::output::disassociate_gateway_from_server_output::Builder {
         crate::output::disassociate_gateway_from_server_output::Builder::default()
     }
@@ -410,10 +464,10 @@ impl std::fmt::Debug for AssociateGatewayToServerOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateGatewayToServerOutput`](crate::output::AssociateGatewayToServerOutput)
+/// See [`AssociateGatewayToServerOutput`](crate::output::AssociateGatewayToServerOutput).
 pub mod associate_gateway_to_server_output {
-    /// A builder for [`AssociateGatewayToServerOutput`](crate::output::AssociateGatewayToServerOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`AssociateGatewayToServerOutput`](crate::output::AssociateGatewayToServerOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -429,7 +483,7 @@ pub mod associate_gateway_to_server_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateGatewayToServerOutput`](crate::output::AssociateGatewayToServerOutput)
+        /// Consumes the builder and constructs a [`AssociateGatewayToServerOutput`](crate::output::AssociateGatewayToServerOutput).
         pub fn build(self) -> crate::output::AssociateGatewayToServerOutput {
             crate::output::AssociateGatewayToServerOutput {
                 gateway_arn: self.gateway_arn,
@@ -438,7 +492,7 @@ pub mod associate_gateway_to_server_output {
     }
 }
 impl AssociateGatewayToServerOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateGatewayToServerOutput`](crate::output::AssociateGatewayToServerOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateGatewayToServerOutput`](crate::output::AssociateGatewayToServerOutput).
     pub fn builder() -> crate::output::associate_gateway_to_server_output::Builder {
         crate::output::associate_gateway_to_server_output::Builder::default()
     }
@@ -471,10 +525,10 @@ impl std::fmt::Debug for ListGatewaysOutput {
         formatter.finish()
     }
 }
-/// See [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
+/// See [`ListGatewaysOutput`](crate::output::ListGatewaysOutput).
 pub mod list_gateways_output {
-    /// A builder for [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListGatewaysOutput`](crate::output::ListGatewaysOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateways: std::option::Option<std::vec::Vec<crate::model::Gateway>>,
@@ -510,7 +564,7 @@ pub mod list_gateways_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
+        /// Consumes the builder and constructs a [`ListGatewaysOutput`](crate::output::ListGatewaysOutput).
         pub fn build(self) -> crate::output::ListGatewaysOutput {
             crate::output::ListGatewaysOutput {
                 gateways: self.gateways,
@@ -520,7 +574,7 @@ pub mod list_gateways_output {
     }
 }
 impl ListGatewaysOutput {
-    /// Creates a new builder-style object to manufacture [`ListGatewaysOutput`](crate::output::ListGatewaysOutput)
+    /// Creates a new builder-style object to manufacture [`ListGatewaysOutput`](crate::output::ListGatewaysOutput).
     pub fn builder() -> crate::output::list_gateways_output::Builder {
         crate::output::list_gateways_output::Builder::default()
     }
@@ -546,10 +600,10 @@ impl std::fmt::Debug for CreateGatewayOutput {
         formatter.finish()
     }
 }
-/// See [`CreateGatewayOutput`](crate::output::CreateGatewayOutput)
+/// See [`CreateGatewayOutput`](crate::output::CreateGatewayOutput).
 pub mod create_gateway_output {
-    /// A builder for [`CreateGatewayOutput`](crate::output::CreateGatewayOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateGatewayOutput`](crate::output::CreateGatewayOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -565,7 +619,7 @@ pub mod create_gateway_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateGatewayOutput`](crate::output::CreateGatewayOutput)
+        /// Consumes the builder and constructs a [`CreateGatewayOutput`](crate::output::CreateGatewayOutput).
         pub fn build(self) -> crate::output::CreateGatewayOutput {
             crate::output::CreateGatewayOutput {
                 gateway_arn: self.gateway_arn,
@@ -574,7 +628,7 @@ pub mod create_gateway_output {
     }
 }
 impl CreateGatewayOutput {
-    /// Creates a new builder-style object to manufacture [`CreateGatewayOutput`](crate::output::CreateGatewayOutput)
+    /// Creates a new builder-style object to manufacture [`CreateGatewayOutput`](crate::output::CreateGatewayOutput).
     pub fn builder() -> crate::output::create_gateway_output::Builder {
         crate::output::create_gateway_output::Builder::default()
     }
@@ -600,10 +654,10 @@ impl std::fmt::Debug for DeleteGatewayOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
+/// See [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput).
 pub mod delete_gateway_output {
-    /// A builder for [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -619,7 +673,7 @@ pub mod delete_gateway_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
+        /// Consumes the builder and constructs a [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput).
         pub fn build(self) -> crate::output::DeleteGatewayOutput {
             crate::output::DeleteGatewayOutput {
                 gateway_arn: self.gateway_arn,
@@ -628,7 +682,7 @@ pub mod delete_gateway_output {
     }
 }
 impl DeleteGatewayOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteGatewayOutput`](crate::output::DeleteGatewayOutput).
     pub fn builder() -> crate::output::delete_gateway_output::Builder {
         crate::output::delete_gateway_output::Builder::default()
     }
@@ -654,10 +708,10 @@ impl std::fmt::Debug for UpdateGatewayInformationOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput)
+/// See [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput).
 pub mod update_gateway_information_output {
-    /// A builder for [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) gateway_arn: std::option::Option<std::string::String>,
@@ -673,7 +727,7 @@ pub mod update_gateway_information_output {
             self.gateway_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput)
+        /// Consumes the builder and constructs a [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput).
         pub fn build(self) -> crate::output::UpdateGatewayInformationOutput {
             crate::output::UpdateGatewayInformationOutput {
                 gateway_arn: self.gateway_arn,
@@ -682,9 +736,66 @@ pub mod update_gateway_information_output {
     }
 }
 impl UpdateGatewayInformationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateGatewayInformationOutput`](crate::output::UpdateGatewayInformationOutput).
     pub fn builder() -> crate::output::update_gateway_information_output::Builder {
         crate::output::update_gateway_information_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetGatewayOutput {
+    /// <p>By providing the ARN (Amazon Resource Name), this API returns the gateway.</p>
+    pub gateway: std::option::Option<crate::model::GatewayDetails>,
+}
+impl GetGatewayOutput {
+    /// <p>By providing the ARN (Amazon Resource Name), this API returns the gateway.</p>
+    pub fn gateway(&self) -> std::option::Option<&crate::model::GatewayDetails> {
+        self.gateway.as_ref()
+    }
+}
+impl std::fmt::Debug for GetGatewayOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetGatewayOutput");
+        formatter.field("gateway", &self.gateway);
+        formatter.finish()
+    }
+}
+/// See [`GetGatewayOutput`](crate::output::GetGatewayOutput).
+pub mod get_gateway_output {
+
+    /// A builder for [`GetGatewayOutput`](crate::output::GetGatewayOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) gateway: std::option::Option<crate::model::GatewayDetails>,
+    }
+    impl Builder {
+        /// <p>By providing the ARN (Amazon Resource Name), this API returns the gateway.</p>
+        pub fn gateway(mut self, input: crate::model::GatewayDetails) -> Self {
+            self.gateway = Some(input);
+            self
+        }
+        /// <p>By providing the ARN (Amazon Resource Name), this API returns the gateway.</p>
+        pub fn set_gateway(
+            mut self,
+            input: std::option::Option<crate::model::GatewayDetails>,
+        ) -> Self {
+            self.gateway = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetGatewayOutput`](crate::output::GetGatewayOutput).
+        pub fn build(self) -> crate::output::GetGatewayOutput {
+            crate::output::GetGatewayOutput {
+                gateway: self.gateway,
+            }
+        }
+    }
+}
+impl GetGatewayOutput {
+    /// Creates a new builder-style object to manufacture [`GetGatewayOutput`](crate::output::GetGatewayOutput).
+    pub fn builder() -> crate::output::get_gateway_output::Builder {
+        crate::output::get_gateway_output::Builder::default()
     }
 }
 
@@ -708,10 +819,10 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -727,7 +838,7 @@ pub mod untag_resource_output {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {
                 resource_arn: self.resource_arn,
@@ -736,7 +847,7 @@ pub mod untag_resource_output {
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -762,10 +873,10 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -781,7 +892,7 @@ pub mod tag_resource_output {
             self.resource_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {
                 resource_arn: self.resource_arn,
@@ -790,7 +901,7 @@ pub mod tag_resource_output {
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -823,10 +934,10 @@ impl std::fmt::Debug for ListVirtualMachinesOutput {
         formatter.finish()
     }
 }
-/// See [`ListVirtualMachinesOutput`](crate::output::ListVirtualMachinesOutput)
+/// See [`ListVirtualMachinesOutput`](crate::output::ListVirtualMachinesOutput).
 pub mod list_virtual_machines_output {
-    /// A builder for [`ListVirtualMachinesOutput`](crate::output::ListVirtualMachinesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListVirtualMachinesOutput`](crate::output::ListVirtualMachinesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) virtual_machines:
@@ -863,7 +974,7 @@ pub mod list_virtual_machines_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListVirtualMachinesOutput`](crate::output::ListVirtualMachinesOutput)
+        /// Consumes the builder and constructs a [`ListVirtualMachinesOutput`](crate::output::ListVirtualMachinesOutput).
         pub fn build(self) -> crate::output::ListVirtualMachinesOutput {
             crate::output::ListVirtualMachinesOutput {
                 virtual_machines: self.virtual_machines,
@@ -873,7 +984,7 @@ pub mod list_virtual_machines_output {
     }
 }
 impl ListVirtualMachinesOutput {
-    /// Creates a new builder-style object to manufacture [`ListVirtualMachinesOutput`](crate::output::ListVirtualMachinesOutput)
+    /// Creates a new builder-style object to manufacture [`ListVirtualMachinesOutput`](crate::output::ListVirtualMachinesOutput).
     pub fn builder() -> crate::output::list_virtual_machines_output::Builder {
         crate::output::list_virtual_machines_output::Builder::default()
     }
@@ -906,10 +1017,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -945,7 +1056,7 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 resource_arn: self.resource_arn,
@@ -955,7 +1066,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }

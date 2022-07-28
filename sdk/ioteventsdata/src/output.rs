@@ -26,10 +26,10 @@ impl std::fmt::Debug for ListDetectorsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDetectorsOutput`](crate::output::ListDetectorsOutput)
+/// See [`ListDetectorsOutput`](crate::output::ListDetectorsOutput).
 pub mod list_detectors_output {
-    /// A builder for [`ListDetectorsOutput`](crate::output::ListDetectorsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListDetectorsOutput`](crate::output::ListDetectorsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) detector_summaries:
@@ -66,7 +66,7 @@ pub mod list_detectors_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDetectorsOutput`](crate::output::ListDetectorsOutput)
+        /// Consumes the builder and constructs a [`ListDetectorsOutput`](crate::output::ListDetectorsOutput).
         pub fn build(self) -> crate::output::ListDetectorsOutput {
             crate::output::ListDetectorsOutput {
                 detector_summaries: self.detector_summaries,
@@ -76,7 +76,7 @@ pub mod list_detectors_output {
     }
 }
 impl ListDetectorsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDetectorsOutput`](crate::output::ListDetectorsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDetectorsOutput`](crate::output::ListDetectorsOutput).
     pub fn builder() -> crate::output::list_detectors_output::Builder {
         crate::output::list_detectors_output::Builder::default()
     }
@@ -109,10 +109,10 @@ impl std::fmt::Debug for ListAlarmsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAlarmsOutput`](crate::output::ListAlarmsOutput)
+/// See [`ListAlarmsOutput`](crate::output::ListAlarmsOutput).
 pub mod list_alarms_output {
-    /// A builder for [`ListAlarmsOutput`](crate::output::ListAlarmsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListAlarmsOutput`](crate::output::ListAlarmsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alarm_summaries: std::option::Option<std::vec::Vec<crate::model::AlarmSummary>>,
@@ -148,7 +148,7 @@ pub mod list_alarms_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAlarmsOutput`](crate::output::ListAlarmsOutput)
+        /// Consumes the builder and constructs a [`ListAlarmsOutput`](crate::output::ListAlarmsOutput).
         pub fn build(self) -> crate::output::ListAlarmsOutput {
             crate::output::ListAlarmsOutput {
                 alarm_summaries: self.alarm_summaries,
@@ -158,7 +158,7 @@ pub mod list_alarms_output {
     }
 }
 impl ListAlarmsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAlarmsOutput`](crate::output::ListAlarmsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAlarmsOutput`](crate::output::ListAlarmsOutput).
     pub fn builder() -> crate::output::list_alarms_output::Builder {
         crate::output::list_alarms_output::Builder::default()
     }
@@ -184,10 +184,10 @@ impl std::fmt::Debug for DescribeDetectorOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDetectorOutput`](crate::output::DescribeDetectorOutput)
+/// See [`DescribeDetectorOutput`](crate::output::DescribeDetectorOutput).
 pub mod describe_detector_output {
-    /// A builder for [`DescribeDetectorOutput`](crate::output::DescribeDetectorOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeDetectorOutput`](crate::output::DescribeDetectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) detector: std::option::Option<crate::model::Detector>,
@@ -203,7 +203,7 @@ pub mod describe_detector_output {
             self.detector = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDetectorOutput`](crate::output::DescribeDetectorOutput)
+        /// Consumes the builder and constructs a [`DescribeDetectorOutput`](crate::output::DescribeDetectorOutput).
         pub fn build(self) -> crate::output::DescribeDetectorOutput {
             crate::output::DescribeDetectorOutput {
                 detector: self.detector,
@@ -212,7 +212,7 @@ pub mod describe_detector_output {
     }
 }
 impl DescribeDetectorOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDetectorOutput`](crate::output::DescribeDetectorOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDetectorOutput`](crate::output::DescribeDetectorOutput).
     pub fn builder() -> crate::output::describe_detector_output::Builder {
         crate::output::describe_detector_output::Builder::default()
     }
@@ -238,10 +238,10 @@ impl std::fmt::Debug for DescribeAlarmOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAlarmOutput`](crate::output::DescribeAlarmOutput)
+/// See [`DescribeAlarmOutput`](crate::output::DescribeAlarmOutput).
 pub mod describe_alarm_output {
-    /// A builder for [`DescribeAlarmOutput`](crate::output::DescribeAlarmOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeAlarmOutput`](crate::output::DescribeAlarmOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) alarm: std::option::Option<crate::model::Alarm>,
@@ -257,14 +257,14 @@ pub mod describe_alarm_output {
             self.alarm = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAlarmOutput`](crate::output::DescribeAlarmOutput)
+        /// Consumes the builder and constructs a [`DescribeAlarmOutput`](crate::output::DescribeAlarmOutput).
         pub fn build(self) -> crate::output::DescribeAlarmOutput {
             crate::output::DescribeAlarmOutput { alarm: self.alarm }
         }
     }
 }
 impl DescribeAlarmOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAlarmOutput`](crate::output::DescribeAlarmOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAlarmOutput`](crate::output::DescribeAlarmOutput).
     pub fn builder() -> crate::output::describe_alarm_output::Builder {
         crate::output::describe_alarm_output::Builder::default()
     }
@@ -296,10 +296,10 @@ impl std::fmt::Debug for BatchUpdateDetectorOutput {
         formatter.finish()
     }
 }
-/// See [`BatchUpdateDetectorOutput`](crate::output::BatchUpdateDetectorOutput)
+/// See [`BatchUpdateDetectorOutput`](crate::output::BatchUpdateDetectorOutput).
 pub mod batch_update_detector_output {
-    /// A builder for [`BatchUpdateDetectorOutput`](crate::output::BatchUpdateDetectorOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchUpdateDetectorOutput`](crate::output::BatchUpdateDetectorOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) batch_update_detector_error_entries:
@@ -328,7 +328,7 @@ pub mod batch_update_detector_output {
             self.batch_update_detector_error_entries = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchUpdateDetectorOutput`](crate::output::BatchUpdateDetectorOutput)
+        /// Consumes the builder and constructs a [`BatchUpdateDetectorOutput`](crate::output::BatchUpdateDetectorOutput).
         pub fn build(self) -> crate::output::BatchUpdateDetectorOutput {
             crate::output::BatchUpdateDetectorOutput {
                 batch_update_detector_error_entries: self.batch_update_detector_error_entries,
@@ -337,7 +337,7 @@ pub mod batch_update_detector_output {
     }
 }
 impl BatchUpdateDetectorOutput {
-    /// Creates a new builder-style object to manufacture [`BatchUpdateDetectorOutput`](crate::output::BatchUpdateDetectorOutput)
+    /// Creates a new builder-style object to manufacture [`BatchUpdateDetectorOutput`](crate::output::BatchUpdateDetectorOutput).
     pub fn builder() -> crate::output::batch_update_detector_output::Builder {
         crate::output::batch_update_detector_output::Builder::default()
     }
@@ -365,10 +365,10 @@ impl std::fmt::Debug for BatchSnoozeAlarmOutput {
         formatter.finish()
     }
 }
-/// See [`BatchSnoozeAlarmOutput`](crate::output::BatchSnoozeAlarmOutput)
+/// See [`BatchSnoozeAlarmOutput`](crate::output::BatchSnoozeAlarmOutput).
 pub mod batch_snooze_alarm_output {
-    /// A builder for [`BatchSnoozeAlarmOutput`](crate::output::BatchSnoozeAlarmOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchSnoozeAlarmOutput`](crate::output::BatchSnoozeAlarmOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_entries:
@@ -394,7 +394,7 @@ pub mod batch_snooze_alarm_output {
             self.error_entries = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchSnoozeAlarmOutput`](crate::output::BatchSnoozeAlarmOutput)
+        /// Consumes the builder and constructs a [`BatchSnoozeAlarmOutput`](crate::output::BatchSnoozeAlarmOutput).
         pub fn build(self) -> crate::output::BatchSnoozeAlarmOutput {
             crate::output::BatchSnoozeAlarmOutput {
                 error_entries: self.error_entries,
@@ -403,7 +403,7 @@ pub mod batch_snooze_alarm_output {
     }
 }
 impl BatchSnoozeAlarmOutput {
-    /// Creates a new builder-style object to manufacture [`BatchSnoozeAlarmOutput`](crate::output::BatchSnoozeAlarmOutput)
+    /// Creates a new builder-style object to manufacture [`BatchSnoozeAlarmOutput`](crate::output::BatchSnoozeAlarmOutput).
     pub fn builder() -> crate::output::batch_snooze_alarm_output::Builder {
         crate::output::batch_snooze_alarm_output::Builder::default()
     }
@@ -431,10 +431,10 @@ impl std::fmt::Debug for BatchResetAlarmOutput {
         formatter.finish()
     }
 }
-/// See [`BatchResetAlarmOutput`](crate::output::BatchResetAlarmOutput)
+/// See [`BatchResetAlarmOutput`](crate::output::BatchResetAlarmOutput).
 pub mod batch_reset_alarm_output {
-    /// A builder for [`BatchResetAlarmOutput`](crate::output::BatchResetAlarmOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchResetAlarmOutput`](crate::output::BatchResetAlarmOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_entries:
@@ -460,7 +460,7 @@ pub mod batch_reset_alarm_output {
             self.error_entries = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchResetAlarmOutput`](crate::output::BatchResetAlarmOutput)
+        /// Consumes the builder and constructs a [`BatchResetAlarmOutput`](crate::output::BatchResetAlarmOutput).
         pub fn build(self) -> crate::output::BatchResetAlarmOutput {
             crate::output::BatchResetAlarmOutput {
                 error_entries: self.error_entries,
@@ -469,7 +469,7 @@ pub mod batch_reset_alarm_output {
     }
 }
 impl BatchResetAlarmOutput {
-    /// Creates a new builder-style object to manufacture [`BatchResetAlarmOutput`](crate::output::BatchResetAlarmOutput)
+    /// Creates a new builder-style object to manufacture [`BatchResetAlarmOutput`](crate::output::BatchResetAlarmOutput).
     pub fn builder() -> crate::output::batch_reset_alarm_output::Builder {
         crate::output::batch_reset_alarm_output::Builder::default()
     }
@@ -501,10 +501,10 @@ impl std::fmt::Debug for BatchPutMessageOutput {
         formatter.finish()
     }
 }
-/// See [`BatchPutMessageOutput`](crate::output::BatchPutMessageOutput)
+/// See [`BatchPutMessageOutput`](crate::output::BatchPutMessageOutput).
 pub mod batch_put_message_output {
-    /// A builder for [`BatchPutMessageOutput`](crate::output::BatchPutMessageOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchPutMessageOutput`](crate::output::BatchPutMessageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) batch_put_message_error_entries:
@@ -533,7 +533,7 @@ pub mod batch_put_message_output {
             self.batch_put_message_error_entries = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchPutMessageOutput`](crate::output::BatchPutMessageOutput)
+        /// Consumes the builder and constructs a [`BatchPutMessageOutput`](crate::output::BatchPutMessageOutput).
         pub fn build(self) -> crate::output::BatchPutMessageOutput {
             crate::output::BatchPutMessageOutput {
                 batch_put_message_error_entries: self.batch_put_message_error_entries,
@@ -542,7 +542,7 @@ pub mod batch_put_message_output {
     }
 }
 impl BatchPutMessageOutput {
-    /// Creates a new builder-style object to manufacture [`BatchPutMessageOutput`](crate::output::BatchPutMessageOutput)
+    /// Creates a new builder-style object to manufacture [`BatchPutMessageOutput`](crate::output::BatchPutMessageOutput).
     pub fn builder() -> crate::output::batch_put_message_output::Builder {
         crate::output::batch_put_message_output::Builder::default()
     }
@@ -570,10 +570,10 @@ impl std::fmt::Debug for BatchEnableAlarmOutput {
         formatter.finish()
     }
 }
-/// See [`BatchEnableAlarmOutput`](crate::output::BatchEnableAlarmOutput)
+/// See [`BatchEnableAlarmOutput`](crate::output::BatchEnableAlarmOutput).
 pub mod batch_enable_alarm_output {
-    /// A builder for [`BatchEnableAlarmOutput`](crate::output::BatchEnableAlarmOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchEnableAlarmOutput`](crate::output::BatchEnableAlarmOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_entries:
@@ -599,7 +599,7 @@ pub mod batch_enable_alarm_output {
             self.error_entries = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchEnableAlarmOutput`](crate::output::BatchEnableAlarmOutput)
+        /// Consumes the builder and constructs a [`BatchEnableAlarmOutput`](crate::output::BatchEnableAlarmOutput).
         pub fn build(self) -> crate::output::BatchEnableAlarmOutput {
             crate::output::BatchEnableAlarmOutput {
                 error_entries: self.error_entries,
@@ -608,7 +608,7 @@ pub mod batch_enable_alarm_output {
     }
 }
 impl BatchEnableAlarmOutput {
-    /// Creates a new builder-style object to manufacture [`BatchEnableAlarmOutput`](crate::output::BatchEnableAlarmOutput)
+    /// Creates a new builder-style object to manufacture [`BatchEnableAlarmOutput`](crate::output::BatchEnableAlarmOutput).
     pub fn builder() -> crate::output::batch_enable_alarm_output::Builder {
         crate::output::batch_enable_alarm_output::Builder::default()
     }
@@ -636,10 +636,10 @@ impl std::fmt::Debug for BatchDisableAlarmOutput {
         formatter.finish()
     }
 }
-/// See [`BatchDisableAlarmOutput`](crate::output::BatchDisableAlarmOutput)
+/// See [`BatchDisableAlarmOutput`](crate::output::BatchDisableAlarmOutput).
 pub mod batch_disable_alarm_output {
-    /// A builder for [`BatchDisableAlarmOutput`](crate::output::BatchDisableAlarmOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchDisableAlarmOutput`](crate::output::BatchDisableAlarmOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_entries:
@@ -665,7 +665,7 @@ pub mod batch_disable_alarm_output {
             self.error_entries = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDisableAlarmOutput`](crate::output::BatchDisableAlarmOutput)
+        /// Consumes the builder and constructs a [`BatchDisableAlarmOutput`](crate::output::BatchDisableAlarmOutput).
         pub fn build(self) -> crate::output::BatchDisableAlarmOutput {
             crate::output::BatchDisableAlarmOutput {
                 error_entries: self.error_entries,
@@ -674,9 +674,82 @@ pub mod batch_disable_alarm_output {
     }
 }
 impl BatchDisableAlarmOutput {
-    /// Creates a new builder-style object to manufacture [`BatchDisableAlarmOutput`](crate::output::BatchDisableAlarmOutput)
+    /// Creates a new builder-style object to manufacture [`BatchDisableAlarmOutput`](crate::output::BatchDisableAlarmOutput).
     pub fn builder() -> crate::output::batch_disable_alarm_output::Builder {
         crate::output::batch_disable_alarm_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct BatchDeleteDetectorOutput {
+    /// <p>A list of errors associated with the request, or an empty array (<code>[]</code>) if there are no errors. Each error entry contains a <code>messageId</code> that helps you identify the entry that failed.</p>
+    pub batch_delete_detector_error_entries:
+        std::option::Option<std::vec::Vec<crate::model::BatchDeleteDetectorErrorEntry>>,
+}
+impl BatchDeleteDetectorOutput {
+    /// <p>A list of errors associated with the request, or an empty array (<code>[]</code>) if there are no errors. Each error entry contains a <code>messageId</code> that helps you identify the entry that failed.</p>
+    pub fn batch_delete_detector_error_entries(
+        &self,
+    ) -> std::option::Option<&[crate::model::BatchDeleteDetectorErrorEntry]> {
+        self.batch_delete_detector_error_entries.as_deref()
+    }
+}
+impl std::fmt::Debug for BatchDeleteDetectorOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("BatchDeleteDetectorOutput");
+        formatter.field(
+            "batch_delete_detector_error_entries",
+            &self.batch_delete_detector_error_entries,
+        );
+        formatter.finish()
+    }
+}
+/// See [`BatchDeleteDetectorOutput`](crate::output::BatchDeleteDetectorOutput).
+pub mod batch_delete_detector_output {
+
+    /// A builder for [`BatchDeleteDetectorOutput`](crate::output::BatchDeleteDetectorOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) batch_delete_detector_error_entries:
+            std::option::Option<std::vec::Vec<crate::model::BatchDeleteDetectorErrorEntry>>,
+    }
+    impl Builder {
+        /// Appends an item to `batch_delete_detector_error_entries`.
+        ///
+        /// To override the contents of this collection use [`set_batch_delete_detector_error_entries`](Self::set_batch_delete_detector_error_entries).
+        ///
+        /// <p>A list of errors associated with the request, or an empty array (<code>[]</code>) if there are no errors. Each error entry contains a <code>messageId</code> that helps you identify the entry that failed.</p>
+        pub fn batch_delete_detector_error_entries(
+            mut self,
+            input: crate::model::BatchDeleteDetectorErrorEntry,
+        ) -> Self {
+            let mut v = self.batch_delete_detector_error_entries.unwrap_or_default();
+            v.push(input);
+            self.batch_delete_detector_error_entries = Some(v);
+            self
+        }
+        /// <p>A list of errors associated with the request, or an empty array (<code>[]</code>) if there are no errors. Each error entry contains a <code>messageId</code> that helps you identify the entry that failed.</p>
+        pub fn set_batch_delete_detector_error_entries(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::BatchDeleteDetectorErrorEntry>>,
+        ) -> Self {
+            self.batch_delete_detector_error_entries = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`BatchDeleteDetectorOutput`](crate::output::BatchDeleteDetectorOutput).
+        pub fn build(self) -> crate::output::BatchDeleteDetectorOutput {
+            crate::output::BatchDeleteDetectorOutput {
+                batch_delete_detector_error_entries: self.batch_delete_detector_error_entries,
+            }
+        }
+    }
+}
+impl BatchDeleteDetectorOutput {
+    /// Creates a new builder-style object to manufacture [`BatchDeleteDetectorOutput`](crate::output::BatchDeleteDetectorOutput).
+    pub fn builder() -> crate::output::batch_delete_detector_output::Builder {
+        crate::output::batch_delete_detector_output::Builder::default()
     }
 }
 
@@ -702,10 +775,10 @@ impl std::fmt::Debug for BatchAcknowledgeAlarmOutput {
         formatter.finish()
     }
 }
-/// See [`BatchAcknowledgeAlarmOutput`](crate::output::BatchAcknowledgeAlarmOutput)
+/// See [`BatchAcknowledgeAlarmOutput`](crate::output::BatchAcknowledgeAlarmOutput).
 pub mod batch_acknowledge_alarm_output {
-    /// A builder for [`BatchAcknowledgeAlarmOutput`](crate::output::BatchAcknowledgeAlarmOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchAcknowledgeAlarmOutput`](crate::output::BatchAcknowledgeAlarmOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_entries:
@@ -731,7 +804,7 @@ pub mod batch_acknowledge_alarm_output {
             self.error_entries = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchAcknowledgeAlarmOutput`](crate::output::BatchAcknowledgeAlarmOutput)
+        /// Consumes the builder and constructs a [`BatchAcknowledgeAlarmOutput`](crate::output::BatchAcknowledgeAlarmOutput).
         pub fn build(self) -> crate::output::BatchAcknowledgeAlarmOutput {
             crate::output::BatchAcknowledgeAlarmOutput {
                 error_entries: self.error_entries,
@@ -740,7 +813,7 @@ pub mod batch_acknowledge_alarm_output {
     }
 }
 impl BatchAcknowledgeAlarmOutput {
-    /// Creates a new builder-style object to manufacture [`BatchAcknowledgeAlarmOutput`](crate::output::BatchAcknowledgeAlarmOutput)
+    /// Creates a new builder-style object to manufacture [`BatchAcknowledgeAlarmOutput`](crate::output::BatchAcknowledgeAlarmOutput).
     pub fn builder() -> crate::output::batch_acknowledge_alarm_output::Builder {
         crate::output::batch_acknowledge_alarm_output::Builder::default()
     }

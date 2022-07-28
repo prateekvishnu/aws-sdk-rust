@@ -126,7 +126,7 @@ impl Client {
     ///   - [`incident_record_arn(impl Into<String>)`](crate::client::fluent_builders::CreateTimelineEvent::incident_record_arn) / [`set_incident_record_arn(Option<String>)`](crate::client::fluent_builders::CreateTimelineEvent::set_incident_record_arn): <p>The Amazon Resource Name (ARN) of the incident record to which the event will be added.</p>
     ///   - [`event_time(DateTime)`](crate::client::fluent_builders::CreateTimelineEvent::event_time) / [`set_event_time(Option<DateTime>)`](crate::client::fluent_builders::CreateTimelineEvent::set_event_time): <p>The time that the event occurred.</p>
     ///   - [`event_type(impl Into<String>)`](crate::client::fluent_builders::CreateTimelineEvent::event_type) / [`set_event_type(Option<String>)`](crate::client::fluent_builders::CreateTimelineEvent::set_event_type): <p>The type of the event. You can create timeline events of type <code>Custom Event</code>.</p>
-    ///   - [`event_data(impl Into<String>)`](crate::client::fluent_builders::CreateTimelineEvent::event_data) / [`set_event_data(Option<String>)`](crate::client::fluent_builders::CreateTimelineEvent::set_event_data): <p>A short description of the event as a valid JSON string. There is no other schema imposed.</p>
+    ///   - [`event_data(impl Into<String>)`](crate::client::fluent_builders::CreateTimelineEvent::event_data) / [`set_event_data(Option<String>)`](crate::client::fluent_builders::CreateTimelineEvent::set_event_data): <p>A short description of the event.</p>
     /// - On success, responds with [`CreateTimelineEventOutput`](crate::output::CreateTimelineEventOutput) with field(s):
     ///   - [`incident_record_arn(Option<String>)`](crate::output::CreateTimelineEventOutput::incident_record_arn): <p>The ARN of the incident record that you added the event to.</p>
     ///   - [`event_id(Option<String>)`](crate::output::CreateTimelineEventOutput::event_id): <p>The ID of the event for easy reference later. </p>
@@ -443,6 +443,7 @@ impl Client {
     ///   - [`chat_channel(ChatChannel)`](crate::client::fluent_builders::UpdateResponsePlan::chat_channel) / [`set_chat_channel(Option<ChatChannel>)`](crate::client::fluent_builders::UpdateResponsePlan::set_chat_channel): <p>The Chatbot chat channel used for collaboration during an incident.</p>  <p>Use the empty structure to remove the chat channel from the response plan.</p>
     ///   - [`engagements(Vec<String>)`](crate::client::fluent_builders::UpdateResponsePlan::engagements) / [`set_engagements(Option<Vec<String>>)`](crate::client::fluent_builders::UpdateResponsePlan::set_engagements): <p>The contacts and escalation plans that Incident Manager engages at the start of the incident.</p>
     ///   - [`actions(Vec<Action>)`](crate::client::fluent_builders::UpdateResponsePlan::actions) / [`set_actions(Option<Vec<Action>>)`](crate::client::fluent_builders::UpdateResponsePlan::set_actions): <p>The actions that this response plan takes at the beginning of an incident.</p>
+    ///   - [`incident_template_tags(HashMap<String, String>)`](crate::client::fluent_builders::UpdateResponsePlan::incident_template_tags) / [`set_incident_template_tags(Option<HashMap<String, String>>)`](crate::client::fluent_builders::UpdateResponsePlan::set_incident_template_tags): <p>Tags to apply to an incident when calling the <code>StartIncident</code> API action. To call this action, you must also have permission to call the <code>TagResource</code> API action for the incident record resource.</p>
     /// - On success, responds with [`UpdateResponsePlanOutput`](crate::output::UpdateResponsePlanOutput)
 
     /// - On failure, responds with [`SdkError<UpdateResponsePlanError>`](crate::error::UpdateResponsePlanError)
@@ -466,13 +467,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `CreateReplicationSet`.
     ///
     /// <p>A replication set replicates and encrypts your data to the provided Regions with the provided KMS key. </p>
@@ -789,12 +789,12 @@ pub mod fluent_builders {
             self.inner = self.inner.set_event_type(input);
             self
         }
-        /// <p>A short description of the event as a valid JSON string. There is no other schema imposed.</p>
+        /// <p>A short description of the event.</p>
         pub fn event_data(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.event_data(input.into());
             self
         }
-        /// <p>A short description of the event as a valid JSON string. There is no other schema imposed.</p>
+        /// <p>A short description of the event.</p>
         pub fn set_event_data(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_event_data(input);
             self
@@ -1922,7 +1922,7 @@ pub mod fluent_builders {
     }
     /// Fluent builder constructing a request to `PutResourcePolicy`.
     ///
-    /// <p>Adds a resource policy to the specified response plan.</p>
+    /// <p>Adds a resource policy to the specified response plan. The resource policy is used to share the response plan using Resource Access Manager (RAM). For more information about cross-account sharing, see <a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/xa.html">Setting up cross-account functionality</a>.</p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct PutResourcePolicy {
         handle: std::sync::Arc<super::Handle>,
@@ -2850,6 +2850,29 @@ pub mod fluent_builders {
             input: std::option::Option<std::vec::Vec<crate::model::Action>>,
         ) -> Self {
             self.inner = self.inner.set_actions(input);
+            self
+        }
+        /// Adds a key-value pair to `incidentTemplateTags`.
+        ///
+        /// To override the contents of this collection use [`set_incident_template_tags`](Self::set_incident_template_tags).
+        ///
+        /// <p>Tags to apply to an incident when calling the <code>StartIncident</code> API action. To call this action, you must also have permission to call the <code>TagResource</code> API action for the incident record resource.</p>
+        pub fn incident_template_tags(
+            mut self,
+            k: impl Into<std::string::String>,
+            v: impl Into<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.incident_template_tags(k.into(), v.into());
+            self
+        }
+        /// <p>Tags to apply to an incident when calling the <code>StartIncident</code> API action. To call this action, you must also have permission to call the <code>TagResource</code> API action for the incident record resource.</p>
+        pub fn set_incident_template_tags(
+            mut self,
+            input: std::option::Option<
+                std::collections::HashMap<std::string::String, std::string::String>,
+            >,
+        ) -> Self {
+            self.inner = self.inner.set_incident_template_tags(input);
             self
         }
     }

@@ -10,7 +10,7 @@ pub struct BatchEvaluateFeature {
     _private: (),
 }
 impl BatchEvaluateFeature {
-    /// Creates a new builder-style object to manufacture [`BatchEvaluateFeatureInput`](crate::input::BatchEvaluateFeatureInput)
+    /// Creates a new builder-style object to manufacture [`BatchEvaluateFeatureInput`](crate::input::BatchEvaluateFeatureInput).
     pub fn builder() -> crate::input::batch_evaluate_feature_input::Builder {
         crate::input::batch_evaluate_feature_input::Builder::default()
     }
@@ -44,7 +44,7 @@ pub struct CreateExperiment {
     _private: (),
 }
 impl CreateExperiment {
-    /// Creates a new builder-style object to manufacture [`CreateExperimentInput`](crate::input::CreateExperimentInput)
+    /// Creates a new builder-style object to manufacture [`CreateExperimentInput`](crate::input::CreateExperimentInput).
     pub fn builder() -> crate::input::create_experiment_input::Builder {
         crate::input::create_experiment_input::Builder::default()
     }
@@ -78,7 +78,7 @@ pub struct CreateFeature {
     _private: (),
 }
 impl CreateFeature {
-    /// Creates a new builder-style object to manufacture [`CreateFeatureInput`](crate::input::CreateFeatureInput)
+    /// Creates a new builder-style object to manufacture [`CreateFeatureInput`](crate::input::CreateFeatureInput).
     pub fn builder() -> crate::input::create_feature_input::Builder {
         crate::input::create_feature_input::Builder::default()
     }
@@ -110,7 +110,7 @@ pub struct CreateLaunch {
     _private: (),
 }
 impl CreateLaunch {
-    /// Creates a new builder-style object to manufacture [`CreateLaunchInput`](crate::input::CreateLaunchInput)
+    /// Creates a new builder-style object to manufacture [`CreateLaunchInput`](crate::input::CreateLaunchInput).
     pub fn builder() -> crate::input::create_launch_input::Builder {
         crate::input::create_launch_input::Builder::default()
     }
@@ -142,7 +142,7 @@ pub struct CreateProject {
     _private: (),
 }
 impl CreateProject {
-    /// Creates a new builder-style object to manufacture [`CreateProjectInput`](crate::input::CreateProjectInput)
+    /// Creates a new builder-style object to manufacture [`CreateProjectInput`](crate::input::CreateProjectInput).
     pub fn builder() -> crate::input::create_project_input::Builder {
         crate::input::create_project_input::Builder::default()
     }
@@ -163,6 +163,38 @@ impl aws_smithy_http::response::ParseStrictResponse for CreateProject {
     }
 }
 
+/// Operation shape for `CreateSegment`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`create_segment`](crate::client::Client::create_segment).
+///
+/// See [`crate::client::fluent_builders::CreateSegment`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct CreateSegment {
+    _private: (),
+}
+impl CreateSegment {
+    /// Creates a new builder-style object to manufacture [`CreateSegmentInput`](crate::input::CreateSegmentInput).
+    pub fn builder() -> crate::input::create_segment_input::Builder {
+        crate::input::create_segment_input::Builder::default()
+    }
+    /// Creates a new `CreateSegment` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for CreateSegment {
+    type Output =
+        std::result::Result<crate::output::CreateSegmentOutput, crate::error::CreateSegmentError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_create_segment_error(response)
+        } else {
+            crate::operation_deser::parse_create_segment_response(response)
+        }
+    }
+}
+
 /// Operation shape for `DeleteExperiment`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -174,7 +206,7 @@ pub struct DeleteExperiment {
     _private: (),
 }
 impl DeleteExperiment {
-    /// Creates a new builder-style object to manufacture [`DeleteExperimentInput`](crate::input::DeleteExperimentInput)
+    /// Creates a new builder-style object to manufacture [`DeleteExperimentInput`](crate::input::DeleteExperimentInput).
     pub fn builder() -> crate::input::delete_experiment_input::Builder {
         crate::input::delete_experiment_input::Builder::default()
     }
@@ -208,7 +240,7 @@ pub struct DeleteFeature {
     _private: (),
 }
 impl DeleteFeature {
-    /// Creates a new builder-style object to manufacture [`DeleteFeatureInput`](crate::input::DeleteFeatureInput)
+    /// Creates a new builder-style object to manufacture [`DeleteFeatureInput`](crate::input::DeleteFeatureInput).
     pub fn builder() -> crate::input::delete_feature_input::Builder {
         crate::input::delete_feature_input::Builder::default()
     }
@@ -240,7 +272,7 @@ pub struct DeleteLaunch {
     _private: (),
 }
 impl DeleteLaunch {
-    /// Creates a new builder-style object to manufacture [`DeleteLaunchInput`](crate::input::DeleteLaunchInput)
+    /// Creates a new builder-style object to manufacture [`DeleteLaunchInput`](crate::input::DeleteLaunchInput).
     pub fn builder() -> crate::input::delete_launch_input::Builder {
         crate::input::delete_launch_input::Builder::default()
     }
@@ -272,7 +304,7 @@ pub struct DeleteProject {
     _private: (),
 }
 impl DeleteProject {
-    /// Creates a new builder-style object to manufacture [`DeleteProjectInput`](crate::input::DeleteProjectInput)
+    /// Creates a new builder-style object to manufacture [`DeleteProjectInput`](crate::input::DeleteProjectInput).
     pub fn builder() -> crate::input::delete_project_input::Builder {
         crate::input::delete_project_input::Builder::default()
     }
@@ -293,6 +325,38 @@ impl aws_smithy_http::response::ParseStrictResponse for DeleteProject {
     }
 }
 
+/// Operation shape for `DeleteSegment`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`delete_segment`](crate::client::Client::delete_segment).
+///
+/// See [`crate::client::fluent_builders::DeleteSegment`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DeleteSegment {
+    _private: (),
+}
+impl DeleteSegment {
+    /// Creates a new builder-style object to manufacture [`DeleteSegmentInput`](crate::input::DeleteSegmentInput).
+    pub fn builder() -> crate::input::delete_segment_input::Builder {
+        crate::input::delete_segment_input::Builder::default()
+    }
+    /// Creates a new `DeleteSegment` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DeleteSegment {
+    type Output =
+        std::result::Result<crate::output::DeleteSegmentOutput, crate::error::DeleteSegmentError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_delete_segment_error(response)
+        } else {
+            crate::operation_deser::parse_delete_segment_response(response)
+        }
+    }
+}
+
 /// Operation shape for `EvaluateFeature`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -304,7 +368,7 @@ pub struct EvaluateFeature {
     _private: (),
 }
 impl EvaluateFeature {
-    /// Creates a new builder-style object to manufacture [`EvaluateFeatureInput`](crate::input::EvaluateFeatureInput)
+    /// Creates a new builder-style object to manufacture [`EvaluateFeatureInput`](crate::input::EvaluateFeatureInput).
     pub fn builder() -> crate::input::evaluate_feature_input::Builder {
         crate::input::evaluate_feature_input::Builder::default()
     }
@@ -338,7 +402,7 @@ pub struct GetExperiment {
     _private: (),
 }
 impl GetExperiment {
-    /// Creates a new builder-style object to manufacture [`GetExperimentInput`](crate::input::GetExperimentInput)
+    /// Creates a new builder-style object to manufacture [`GetExperimentInput`](crate::input::GetExperimentInput).
     pub fn builder() -> crate::input::get_experiment_input::Builder {
         crate::input::get_experiment_input::Builder::default()
     }
@@ -370,7 +434,7 @@ pub struct GetExperimentResults {
     _private: (),
 }
 impl GetExperimentResults {
-    /// Creates a new builder-style object to manufacture [`GetExperimentResultsInput`](crate::input::GetExperimentResultsInput)
+    /// Creates a new builder-style object to manufacture [`GetExperimentResultsInput`](crate::input::GetExperimentResultsInput).
     pub fn builder() -> crate::input::get_experiment_results_input::Builder {
         crate::input::get_experiment_results_input::Builder::default()
     }
@@ -404,7 +468,7 @@ pub struct GetFeature {
     _private: (),
 }
 impl GetFeature {
-    /// Creates a new builder-style object to manufacture [`GetFeatureInput`](crate::input::GetFeatureInput)
+    /// Creates a new builder-style object to manufacture [`GetFeatureInput`](crate::input::GetFeatureInput).
     pub fn builder() -> crate::input::get_feature_input::Builder {
         crate::input::get_feature_input::Builder::default()
     }
@@ -436,7 +500,7 @@ pub struct GetLaunch {
     _private: (),
 }
 impl GetLaunch {
-    /// Creates a new builder-style object to manufacture [`GetLaunchInput`](crate::input::GetLaunchInput)
+    /// Creates a new builder-style object to manufacture [`GetLaunchInput`](crate::input::GetLaunchInput).
     pub fn builder() -> crate::input::get_launch_input::Builder {
         crate::input::get_launch_input::Builder::default()
     }
@@ -467,7 +531,7 @@ pub struct GetProject {
     _private: (),
 }
 impl GetProject {
-    /// Creates a new builder-style object to manufacture [`GetProjectInput`](crate::input::GetProjectInput)
+    /// Creates a new builder-style object to manufacture [`GetProjectInput`](crate::input::GetProjectInput).
     pub fn builder() -> crate::input::get_project_input::Builder {
         crate::input::get_project_input::Builder::default()
     }
@@ -488,6 +552,38 @@ impl aws_smithy_http::response::ParseStrictResponse for GetProject {
     }
 }
 
+/// Operation shape for `GetSegment`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`get_segment`](crate::client::Client::get_segment).
+///
+/// See [`crate::client::fluent_builders::GetSegment`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct GetSegment {
+    _private: (),
+}
+impl GetSegment {
+    /// Creates a new builder-style object to manufacture [`GetSegmentInput`](crate::input::GetSegmentInput).
+    pub fn builder() -> crate::input::get_segment_input::Builder {
+        crate::input::get_segment_input::Builder::default()
+    }
+    /// Creates a new `GetSegment` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for GetSegment {
+    type Output =
+        std::result::Result<crate::output::GetSegmentOutput, crate::error::GetSegmentError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_get_segment_error(response)
+        } else {
+            crate::operation_deser::parse_get_segment_response(response)
+        }
+    }
+}
+
 /// Operation shape for `ListExperiments`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -499,7 +595,7 @@ pub struct ListExperiments {
     _private: (),
 }
 impl ListExperiments {
-    /// Creates a new builder-style object to manufacture [`ListExperimentsInput`](crate::input::ListExperimentsInput)
+    /// Creates a new builder-style object to manufacture [`ListExperimentsInput`](crate::input::ListExperimentsInput).
     pub fn builder() -> crate::input::list_experiments_input::Builder {
         crate::input::list_experiments_input::Builder::default()
     }
@@ -533,7 +629,7 @@ pub struct ListFeatures {
     _private: (),
 }
 impl ListFeatures {
-    /// Creates a new builder-style object to manufacture [`ListFeaturesInput`](crate::input::ListFeaturesInput)
+    /// Creates a new builder-style object to manufacture [`ListFeaturesInput`](crate::input::ListFeaturesInput).
     pub fn builder() -> crate::input::list_features_input::Builder {
         crate::input::list_features_input::Builder::default()
     }
@@ -565,7 +661,7 @@ pub struct ListLaunches {
     _private: (),
 }
 impl ListLaunches {
-    /// Creates a new builder-style object to manufacture [`ListLaunchesInput`](crate::input::ListLaunchesInput)
+    /// Creates a new builder-style object to manufacture [`ListLaunchesInput`](crate::input::ListLaunchesInput).
     pub fn builder() -> crate::input::list_launches_input::Builder {
         crate::input::list_launches_input::Builder::default()
     }
@@ -597,7 +693,7 @@ pub struct ListProjects {
     _private: (),
 }
 impl ListProjects {
-    /// Creates a new builder-style object to manufacture [`ListProjectsInput`](crate::input::ListProjectsInput)
+    /// Creates a new builder-style object to manufacture [`ListProjectsInput`](crate::input::ListProjectsInput).
     pub fn builder() -> crate::input::list_projects_input::Builder {
         crate::input::list_projects_input::Builder::default()
     }
@@ -618,6 +714,72 @@ impl aws_smithy_http::response::ParseStrictResponse for ListProjects {
     }
 }
 
+/// Operation shape for `ListSegmentReferences`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_segment_references`](crate::client::Client::list_segment_references).
+///
+/// See [`crate::client::fluent_builders::ListSegmentReferences`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListSegmentReferences {
+    _private: (),
+}
+impl ListSegmentReferences {
+    /// Creates a new builder-style object to manufacture [`ListSegmentReferencesInput`](crate::input::ListSegmentReferencesInput).
+    pub fn builder() -> crate::input::list_segment_references_input::Builder {
+        crate::input::list_segment_references_input::Builder::default()
+    }
+    /// Creates a new `ListSegmentReferences` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListSegmentReferences {
+    type Output = std::result::Result<
+        crate::output::ListSegmentReferencesOutput,
+        crate::error::ListSegmentReferencesError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_segment_references_error(response)
+        } else {
+            crate::operation_deser::parse_list_segment_references_response(response)
+        }
+    }
+}
+
+/// Operation shape for `ListSegments`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_segments`](crate::client::Client::list_segments).
+///
+/// See [`crate::client::fluent_builders::ListSegments`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListSegments {
+    _private: (),
+}
+impl ListSegments {
+    /// Creates a new builder-style object to manufacture [`ListSegmentsInput`](crate::input::ListSegmentsInput).
+    pub fn builder() -> crate::input::list_segments_input::Builder {
+        crate::input::list_segments_input::Builder::default()
+    }
+    /// Creates a new `ListSegments` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListSegments {
+    type Output =
+        std::result::Result<crate::output::ListSegmentsOutput, crate::error::ListSegmentsError>;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_segments_error(response)
+        } else {
+            crate::operation_deser::parse_list_segments_response(response)
+        }
+    }
+}
+
 /// Operation shape for `ListTagsForResource`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -629,7 +791,7 @@ pub struct ListTagsForResource {
     _private: (),
 }
 impl ListTagsForResource {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
     pub fn builder() -> crate::input::list_tags_for_resource_input::Builder {
         crate::input::list_tags_for_resource_input::Builder::default()
     }
@@ -663,7 +825,7 @@ pub struct PutProjectEvents {
     _private: (),
 }
 impl PutProjectEvents {
-    /// Creates a new builder-style object to manufacture [`PutProjectEventsInput`](crate::input::PutProjectEventsInput)
+    /// Creates a new builder-style object to manufacture [`PutProjectEventsInput`](crate::input::PutProjectEventsInput).
     pub fn builder() -> crate::input::put_project_events_input::Builder {
         crate::input::put_project_events_input::Builder::default()
     }
@@ -697,7 +859,7 @@ pub struct StartExperiment {
     _private: (),
 }
 impl StartExperiment {
-    /// Creates a new builder-style object to manufacture [`StartExperimentInput`](crate::input::StartExperimentInput)
+    /// Creates a new builder-style object to manufacture [`StartExperimentInput`](crate::input::StartExperimentInput).
     pub fn builder() -> crate::input::start_experiment_input::Builder {
         crate::input::start_experiment_input::Builder::default()
     }
@@ -731,7 +893,7 @@ pub struct StartLaunch {
     _private: (),
 }
 impl StartLaunch {
-    /// Creates a new builder-style object to manufacture [`StartLaunchInput`](crate::input::StartLaunchInput)
+    /// Creates a new builder-style object to manufacture [`StartLaunchInput`](crate::input::StartLaunchInput).
     pub fn builder() -> crate::input::start_launch_input::Builder {
         crate::input::start_launch_input::Builder::default()
     }
@@ -763,7 +925,7 @@ pub struct StopExperiment {
     _private: (),
 }
 impl StopExperiment {
-    /// Creates a new builder-style object to manufacture [`StopExperimentInput`](crate::input::StopExperimentInput)
+    /// Creates a new builder-style object to manufacture [`StopExperimentInput`](crate::input::StopExperimentInput).
     pub fn builder() -> crate::input::stop_experiment_input::Builder {
         crate::input::stop_experiment_input::Builder::default()
     }
@@ -795,7 +957,7 @@ pub struct StopLaunch {
     _private: (),
 }
 impl StopLaunch {
-    /// Creates a new builder-style object to manufacture [`StopLaunchInput`](crate::input::StopLaunchInput)
+    /// Creates a new builder-style object to manufacture [`StopLaunchInput`](crate::input::StopLaunchInput).
     pub fn builder() -> crate::input::stop_launch_input::Builder {
         crate::input::stop_launch_input::Builder::default()
     }
@@ -827,7 +989,7 @@ pub struct TagResource {
     _private: (),
 }
 impl TagResource {
-    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput)
+    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
     pub fn builder() -> crate::input::tag_resource_input::Builder {
         crate::input::tag_resource_input::Builder::default()
     }
@@ -848,6 +1010,40 @@ impl aws_smithy_http::response::ParseStrictResponse for TagResource {
     }
 }
 
+/// Operation shape for `TestSegmentPattern`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`test_segment_pattern`](crate::client::Client::test_segment_pattern).
+///
+/// See [`crate::client::fluent_builders::TestSegmentPattern`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct TestSegmentPattern {
+    _private: (),
+}
+impl TestSegmentPattern {
+    /// Creates a new builder-style object to manufacture [`TestSegmentPatternInput`](crate::input::TestSegmentPatternInput).
+    pub fn builder() -> crate::input::test_segment_pattern_input::Builder {
+        crate::input::test_segment_pattern_input::Builder::default()
+    }
+    /// Creates a new `TestSegmentPattern` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for TestSegmentPattern {
+    type Output = std::result::Result<
+        crate::output::TestSegmentPatternOutput,
+        crate::error::TestSegmentPatternError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_test_segment_pattern_error(response)
+        } else {
+            crate::operation_deser::parse_test_segment_pattern_response(response)
+        }
+    }
+}
+
 /// Operation shape for `UntagResource`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -859,7 +1055,7 @@ pub struct UntagResource {
     _private: (),
 }
 impl UntagResource {
-    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
     pub fn builder() -> crate::input::untag_resource_input::Builder {
         crate::input::untag_resource_input::Builder::default()
     }
@@ -891,7 +1087,7 @@ pub struct UpdateExperiment {
     _private: (),
 }
 impl UpdateExperiment {
-    /// Creates a new builder-style object to manufacture [`UpdateExperimentInput`](crate::input::UpdateExperimentInput)
+    /// Creates a new builder-style object to manufacture [`UpdateExperimentInput`](crate::input::UpdateExperimentInput).
     pub fn builder() -> crate::input::update_experiment_input::Builder {
         crate::input::update_experiment_input::Builder::default()
     }
@@ -925,7 +1121,7 @@ pub struct UpdateFeature {
     _private: (),
 }
 impl UpdateFeature {
-    /// Creates a new builder-style object to manufacture [`UpdateFeatureInput`](crate::input::UpdateFeatureInput)
+    /// Creates a new builder-style object to manufacture [`UpdateFeatureInput`](crate::input::UpdateFeatureInput).
     pub fn builder() -> crate::input::update_feature_input::Builder {
         crate::input::update_feature_input::Builder::default()
     }
@@ -957,7 +1153,7 @@ pub struct UpdateLaunch {
     _private: (),
 }
 impl UpdateLaunch {
-    /// Creates a new builder-style object to manufacture [`UpdateLaunchInput`](crate::input::UpdateLaunchInput)
+    /// Creates a new builder-style object to manufacture [`UpdateLaunchInput`](crate::input::UpdateLaunchInput).
     pub fn builder() -> crate::input::update_launch_input::Builder {
         crate::input::update_launch_input::Builder::default()
     }
@@ -989,7 +1185,7 @@ pub struct UpdateProject {
     _private: (),
 }
 impl UpdateProject {
-    /// Creates a new builder-style object to manufacture [`UpdateProjectInput`](crate::input::UpdateProjectInput)
+    /// Creates a new builder-style object to manufacture [`UpdateProjectInput`](crate::input::UpdateProjectInput).
     pub fn builder() -> crate::input::update_project_input::Builder {
         crate::input::update_project_input::Builder::default()
     }
@@ -1021,7 +1217,7 @@ pub struct UpdateProjectDataDelivery {
     _private: (),
 }
 impl UpdateProjectDataDelivery {
-    /// Creates a new builder-style object to manufacture [`UpdateProjectDataDeliveryInput`](crate::input::UpdateProjectDataDeliveryInput)
+    /// Creates a new builder-style object to manufacture [`UpdateProjectDataDeliveryInput`](crate::input::UpdateProjectDataDeliveryInput).
     pub fn builder() -> crate::input::update_project_data_delivery_input::Builder {
         crate::input::update_project_data_delivery_input::Builder::default()
     }

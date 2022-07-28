@@ -103,10 +103,10 @@ impl std::fmt::Debug for TemplateParameter {
         formatter.finish()
     }
 }
-/// See [`TemplateParameter`](crate::model::TemplateParameter)
+/// See [`TemplateParameter`](crate::model::TemplateParameter).
 pub mod template_parameter {
-    /// A builder for [`TemplateParameter`](crate::model::TemplateParameter)
-    #[non_exhaustive]
+
+    /// A builder for [`TemplateParameter`](crate::model::TemplateParameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_key: std::option::Option<std::string::String>,
@@ -161,7 +161,7 @@ pub mod template_parameter {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`TemplateParameter`](crate::model::TemplateParameter)
+        /// Consumes the builder and constructs a [`TemplateParameter`](crate::model::TemplateParameter).
         pub fn build(self) -> crate::model::TemplateParameter {
             crate::model::TemplateParameter {
                 parameter_key: self.parameter_key,
@@ -173,7 +173,7 @@ pub mod template_parameter {
     }
 }
 impl TemplateParameter {
-    /// Creates a new builder-style object to manufacture [`TemplateParameter`](crate::model::TemplateParameter)
+    /// Creates a new builder-style object to manufacture [`TemplateParameter`](crate::model::TemplateParameter).
     pub fn builder() -> crate::model::template_parameter::Builder {
         crate::model::template_parameter::Builder::default()
     }
@@ -207,10 +207,10 @@ impl std::fmt::Debug for ManagedExecution {
         formatter.finish()
     }
 }
-/// See [`ManagedExecution`](crate::model::ManagedExecution)
+/// See [`ManagedExecution`](crate::model::ManagedExecution).
 pub mod managed_execution {
-    /// A builder for [`ManagedExecution`](crate::model::ManagedExecution)
-    #[non_exhaustive]
+
+    /// A builder for [`ManagedExecution`](crate::model::ManagedExecution).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) active: std::option::Option<bool>,
@@ -234,7 +234,7 @@ pub mod managed_execution {
             self.active = input;
             self
         }
-        /// Consumes the builder and constructs a [`ManagedExecution`](crate::model::ManagedExecution)
+        /// Consumes the builder and constructs a [`ManagedExecution`](crate::model::ManagedExecution).
         pub fn build(self) -> crate::model::ManagedExecution {
             crate::model::ManagedExecution {
                 active: self.active,
@@ -243,7 +243,7 @@ pub mod managed_execution {
     }
 }
 impl ManagedExecution {
-    /// Creates a new builder-style object to manufacture [`ManagedExecution`](crate::model::ManagedExecution)
+    /// Creates a new builder-style object to manufacture [`ManagedExecution`](crate::model::ManagedExecution).
     pub fn builder() -> crate::model::managed_execution::Builder {
         crate::model::managed_execution::Builder::default()
     }
@@ -334,10 +334,10 @@ impl std::fmt::Debug for AutoDeployment {
         formatter.finish()
     }
 }
-/// See [`AutoDeployment`](crate::model::AutoDeployment)
+/// See [`AutoDeployment`](crate::model::AutoDeployment).
 pub mod auto_deployment {
-    /// A builder for [`AutoDeployment`](crate::model::AutoDeployment)
-    #[non_exhaustive]
+
+    /// A builder for [`AutoDeployment`](crate::model::AutoDeployment).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -367,7 +367,7 @@ pub mod auto_deployment {
             self.retain_stacks_on_account_removal = input;
             self
         }
-        /// Consumes the builder and constructs a [`AutoDeployment`](crate::model::AutoDeployment)
+        /// Consumes the builder and constructs a [`AutoDeployment`](crate::model::AutoDeployment).
         pub fn build(self) -> crate::model::AutoDeployment {
             crate::model::AutoDeployment {
                 enabled: self.enabled,
@@ -377,7 +377,7 @@ pub mod auto_deployment {
     }
 }
 impl AutoDeployment {
-    /// Creates a new builder-style object to manufacture [`AutoDeployment`](crate::model::AutoDeployment)
+    /// Creates a new builder-style object to manufacture [`AutoDeployment`](crate::model::AutoDeployment).
     pub fn builder() -> crate::model::auto_deployment::Builder {
         crate::model::auto_deployment::Builder::default()
     }
@@ -449,6 +449,15 @@ pub struct DeploymentTargets {
     pub accounts_url: std::option::Option<std::string::String>,
     /// <p>The organization root ID or organizational unit (OU) IDs to which StackSets deploys.</p>
     pub organizational_unit_ids: std::option::Option<std::vec::Vec<std::string::String>>,
+    /// <p>Limit deployment targets to individual accounts or include additional accounts with provided OUs.</p>
+    /// <p>The following is a list of possible values for the <code>AccountFilterType</code> operation.</p>
+    /// <ul>
+    /// <li> <p> <code>INTERSECTION</code>: StackSets deploys to the accounts specified in <code>Accounts</code> parameter. </p> </li>
+    /// <li> <p> <code>DIFFERENCE</code>: StackSets excludes the accounts specified in <code>Accounts</code> parameter. This enables user to avoid certain accounts within an OU such as suspended accounts.</p> </li>
+    /// <li> <p> <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets. </p> <p>This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update an entire OU and individual accounts from a different OU in one request, which used to be two separate requests.</p> </li>
+    /// <li> <p> <code>NONE</code>: Deploys to all the accounts in specified organizational units (OU).</p> </li>
+    /// </ul>
+    pub account_filter_type: std::option::Option<crate::model::AccountFilterType>,
 }
 impl DeploymentTargets {
     /// <p>The names of one or more Amazon Web Services accounts for which you want to deploy stack set updates.</p>
@@ -463,6 +472,17 @@ impl DeploymentTargets {
     pub fn organizational_unit_ids(&self) -> std::option::Option<&[std::string::String]> {
         self.organizational_unit_ids.as_deref()
     }
+    /// <p>Limit deployment targets to individual accounts or include additional accounts with provided OUs.</p>
+    /// <p>The following is a list of possible values for the <code>AccountFilterType</code> operation.</p>
+    /// <ul>
+    /// <li> <p> <code>INTERSECTION</code>: StackSets deploys to the accounts specified in <code>Accounts</code> parameter. </p> </li>
+    /// <li> <p> <code>DIFFERENCE</code>: StackSets excludes the accounts specified in <code>Accounts</code> parameter. This enables user to avoid certain accounts within an OU such as suspended accounts.</p> </li>
+    /// <li> <p> <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets. </p> <p>This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update an entire OU and individual accounts from a different OU in one request, which used to be two separate requests.</p> </li>
+    /// <li> <p> <code>NONE</code>: Deploys to all the accounts in specified organizational units (OU).</p> </li>
+    /// </ul>
+    pub fn account_filter_type(&self) -> std::option::Option<&crate::model::AccountFilterType> {
+        self.account_filter_type.as_ref()
+    }
 }
 impl std::fmt::Debug for DeploymentTargets {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -470,18 +490,20 @@ impl std::fmt::Debug for DeploymentTargets {
         formatter.field("accounts", &self.accounts);
         formatter.field("accounts_url", &self.accounts_url);
         formatter.field("organizational_unit_ids", &self.organizational_unit_ids);
+        formatter.field("account_filter_type", &self.account_filter_type);
         formatter.finish()
     }
 }
-/// See [`DeploymentTargets`](crate::model::DeploymentTargets)
+/// See [`DeploymentTargets`](crate::model::DeploymentTargets).
 pub mod deployment_targets {
-    /// A builder for [`DeploymentTargets`](crate::model::DeploymentTargets)
-    #[non_exhaustive]
+
+    /// A builder for [`DeploymentTargets`](crate::model::DeploymentTargets).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) accounts: std::option::Option<std::vec::Vec<std::string::String>>,
         pub(crate) accounts_url: std::option::Option<std::string::String>,
         pub(crate) organizational_unit_ids: std::option::Option<std::vec::Vec<std::string::String>>,
+        pub(crate) account_filter_type: std::option::Option<crate::model::AccountFilterType>,
     }
     impl Builder {
         /// Appends an item to `accounts`.
@@ -532,25 +554,116 @@ pub mod deployment_targets {
             self.organizational_unit_ids = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeploymentTargets`](crate::model::DeploymentTargets)
+        /// <p>Limit deployment targets to individual accounts or include additional accounts with provided OUs.</p>
+        /// <p>The following is a list of possible values for the <code>AccountFilterType</code> operation.</p>
+        /// <ul>
+        /// <li> <p> <code>INTERSECTION</code>: StackSets deploys to the accounts specified in <code>Accounts</code> parameter. </p> </li>
+        /// <li> <p> <code>DIFFERENCE</code>: StackSets excludes the accounts specified in <code>Accounts</code> parameter. This enables user to avoid certain accounts within an OU such as suspended accounts.</p> </li>
+        /// <li> <p> <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets. </p> <p>This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update an entire OU and individual accounts from a different OU in one request, which used to be two separate requests.</p> </li>
+        /// <li> <p> <code>NONE</code>: Deploys to all the accounts in specified organizational units (OU).</p> </li>
+        /// </ul>
+        pub fn account_filter_type(mut self, input: crate::model::AccountFilterType) -> Self {
+            self.account_filter_type = Some(input);
+            self
+        }
+        /// <p>Limit deployment targets to individual accounts or include additional accounts with provided OUs.</p>
+        /// <p>The following is a list of possible values for the <code>AccountFilterType</code> operation.</p>
+        /// <ul>
+        /// <li> <p> <code>INTERSECTION</code>: StackSets deploys to the accounts specified in <code>Accounts</code> parameter. </p> </li>
+        /// <li> <p> <code>DIFFERENCE</code>: StackSets excludes the accounts specified in <code>Accounts</code> parameter. This enables user to avoid certain accounts within an OU such as suspended accounts.</p> </li>
+        /// <li> <p> <code>UNION</code>: (default value) StackSets includes additional accounts deployment targets. </p> <p>This is the default value if <code>AccountFilterType</code> is not provided. This enables user to update an entire OU and individual accounts from a different OU in one request, which used to be two separate requests.</p> </li>
+        /// <li> <p> <code>NONE</code>: Deploys to all the accounts in specified organizational units (OU).</p> </li>
+        /// </ul>
+        pub fn set_account_filter_type(
+            mut self,
+            input: std::option::Option<crate::model::AccountFilterType>,
+        ) -> Self {
+            self.account_filter_type = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DeploymentTargets`](crate::model::DeploymentTargets).
         pub fn build(self) -> crate::model::DeploymentTargets {
             crate::model::DeploymentTargets {
                 accounts: self.accounts,
                 accounts_url: self.accounts_url,
                 organizational_unit_ids: self.organizational_unit_ids,
+                account_filter_type: self.account_filter_type,
             }
         }
     }
 }
 impl DeploymentTargets {
-    /// Creates a new builder-style object to manufacture [`DeploymentTargets`](crate::model::DeploymentTargets)
+    /// Creates a new builder-style object to manufacture [`DeploymentTargets`](crate::model::DeploymentTargets).
     pub fn builder() -> crate::model::deployment_targets::Builder {
         crate::model::deployment_targets::Builder::default()
     }
 }
 
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(
+    std::clone::Clone,
+    std::cmp::Eq,
+    std::cmp::Ord,
+    std::cmp::PartialEq,
+    std::cmp::PartialOrd,
+    std::fmt::Debug,
+    std::hash::Hash,
+)]
+pub enum AccountFilterType {
+    #[allow(missing_docs)] // documentation missing in model
+    Difference,
+    #[allow(missing_docs)] // documentation missing in model
+    Intersection,
+    #[allow(missing_docs)] // documentation missing in model
+    None,
+    #[allow(missing_docs)] // documentation missing in model
+    Union,
+    /// Unknown contains new variants that have been added since this code was generated.
+    Unknown(String),
+}
+impl std::convert::From<&str> for AccountFilterType {
+    fn from(s: &str) -> Self {
+        match s {
+            "DIFFERENCE" => AccountFilterType::Difference,
+            "INTERSECTION" => AccountFilterType::Intersection,
+            "NONE" => AccountFilterType::None,
+            "UNION" => AccountFilterType::Union,
+            other => AccountFilterType::Unknown(other.to_owned()),
+        }
+    }
+}
+impl std::str::FromStr for AccountFilterType {
+    type Err = std::convert::Infallible;
+
+    fn from_str(s: &str) -> std::result::Result<Self, Self::Err> {
+        Ok(AccountFilterType::from(s))
+    }
+}
+impl AccountFilterType {
+    /// Returns the `&str` value of the enum member.
+    pub fn as_str(&self) -> &str {
+        match self {
+            AccountFilterType::Difference => "DIFFERENCE",
+            AccountFilterType::Intersection => "INTERSECTION",
+            AccountFilterType::None => "NONE",
+            AccountFilterType::Union => "UNION",
+            AccountFilterType::Unknown(s) => s.as_ref(),
+        }
+    }
+    /// Returns all the `&str` values of the enum members.
+    pub fn values() -> &'static [&'static str] {
+        &["DIFFERENCE", "INTERSECTION", "NONE", "UNION"]
+    }
+}
+impl AsRef<str> for AccountFilterType {
+    fn as_ref(&self) -> &str {
+        self.as_str()
+    }
+}
+
 /// <p>The user-specified preferences for how CloudFormation performs a stack set operation.</p>
-/// <p>For more information on maximum concurrent accounts and failure tolerance, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-ops-options">Stack set operation options</a>.</p>
+/// <p>For more information about maximum concurrent accounts and failure tolerance, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-ops-options">Stack set operation options</a>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct StackSetOperationPreferences {
@@ -634,10 +747,10 @@ impl std::fmt::Debug for StackSetOperationPreferences {
         formatter.finish()
     }
 }
-/// See [`StackSetOperationPreferences`](crate::model::StackSetOperationPreferences)
+/// See [`StackSetOperationPreferences`](crate::model::StackSetOperationPreferences).
 pub mod stack_set_operation_preferences {
-    /// A builder for [`StackSetOperationPreferences`](crate::model::StackSetOperationPreferences)
-    #[non_exhaustive]
+
+    /// A builder for [`StackSetOperationPreferences`](crate::model::StackSetOperationPreferences).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) region_concurrency_type:
@@ -748,7 +861,7 @@ pub mod stack_set_operation_preferences {
             self.max_concurrent_percentage = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackSetOperationPreferences`](crate::model::StackSetOperationPreferences)
+        /// Consumes the builder and constructs a [`StackSetOperationPreferences`](crate::model::StackSetOperationPreferences).
         pub fn build(self) -> crate::model::StackSetOperationPreferences {
             crate::model::StackSetOperationPreferences {
                 region_concurrency_type: self.region_concurrency_type,
@@ -762,7 +875,7 @@ pub mod stack_set_operation_preferences {
     }
 }
 impl StackSetOperationPreferences {
-    /// Creates a new builder-style object to manufacture [`StackSetOperationPreferences`](crate::model::StackSetOperationPreferences)
+    /// Creates a new builder-style object to manufacture [`StackSetOperationPreferences`](crate::model::StackSetOperationPreferences).
     pub fn builder() -> crate::model::stack_set_operation_preferences::Builder {
         crate::model::stack_set_operation_preferences::Builder::default()
     }
@@ -850,10 +963,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -880,7 +993,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -890,7 +1003,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -937,10 +1050,10 @@ impl std::fmt::Debug for Parameter {
         formatter.finish()
     }
 }
-/// See [`Parameter`](crate::model::Parameter)
+/// See [`Parameter`](crate::model::Parameter).
 pub mod parameter {
-    /// A builder for [`Parameter`](crate::model::Parameter)
-    #[non_exhaustive]
+
+    /// A builder for [`Parameter`](crate::model::Parameter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_key: std::option::Option<std::string::String>,
@@ -998,7 +1111,7 @@ pub mod parameter {
             self.resolved_value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Parameter`](crate::model::Parameter)
+        /// Consumes the builder and constructs a [`Parameter`](crate::model::Parameter).
         pub fn build(self) -> crate::model::Parameter {
             crate::model::Parameter {
                 parameter_key: self.parameter_key,
@@ -1010,7 +1123,7 @@ pub mod parameter {
     }
 }
 impl Parameter {
-    /// Creates a new builder-style object to manufacture [`Parameter`](crate::model::Parameter)
+    /// Creates a new builder-style object to manufacture [`Parameter`](crate::model::Parameter).
     pub fn builder() -> crate::model::parameter::Builder {
         crate::model::parameter::Builder::default()
     }
@@ -1067,10 +1180,10 @@ impl std::fmt::Debug for RollbackConfiguration {
         formatter.finish()
     }
 }
-/// See [`RollbackConfiguration`](crate::model::RollbackConfiguration)
+/// See [`RollbackConfiguration`](crate::model::RollbackConfiguration).
 pub mod rollback_configuration {
-    /// A builder for [`RollbackConfiguration`](crate::model::RollbackConfiguration)
-    #[non_exhaustive]
+
+    /// A builder for [`RollbackConfiguration`](crate::model::RollbackConfiguration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rollback_triggers:
@@ -1127,7 +1240,7 @@ pub mod rollback_configuration {
             self.monitoring_time_in_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`RollbackConfiguration`](crate::model::RollbackConfiguration)
+        /// Consumes the builder and constructs a [`RollbackConfiguration`](crate::model::RollbackConfiguration).
         pub fn build(self) -> crate::model::RollbackConfiguration {
             crate::model::RollbackConfiguration {
                 rollback_triggers: self.rollback_triggers,
@@ -1137,7 +1250,7 @@ pub mod rollback_configuration {
     }
 }
 impl RollbackConfiguration {
-    /// Creates a new builder-style object to manufacture [`RollbackConfiguration`](crate::model::RollbackConfiguration)
+    /// Creates a new builder-style object to manufacture [`RollbackConfiguration`](crate::model::RollbackConfiguration).
     pub fn builder() -> crate::model::rollback_configuration::Builder {
         crate::model::rollback_configuration::Builder::default()
     }
@@ -1172,10 +1285,10 @@ impl std::fmt::Debug for RollbackTrigger {
         formatter.finish()
     }
 }
-/// See [`RollbackTrigger`](crate::model::RollbackTrigger)
+/// See [`RollbackTrigger`](crate::model::RollbackTrigger).
 pub mod rollback_trigger {
-    /// A builder for [`RollbackTrigger`](crate::model::RollbackTrigger)
-    #[non_exhaustive]
+
+    /// A builder for [`RollbackTrigger`](crate::model::RollbackTrigger).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -1204,7 +1317,7 @@ pub mod rollback_trigger {
             self.r#type = input;
             self
         }
-        /// Consumes the builder and constructs a [`RollbackTrigger`](crate::model::RollbackTrigger)
+        /// Consumes the builder and constructs a [`RollbackTrigger`](crate::model::RollbackTrigger).
         pub fn build(self) -> crate::model::RollbackTrigger {
             crate::model::RollbackTrigger {
                 arn: self.arn,
@@ -1214,7 +1327,7 @@ pub mod rollback_trigger {
     }
 }
 impl RollbackTrigger {
-    /// Creates a new builder-style object to manufacture [`RollbackTrigger`](crate::model::RollbackTrigger)
+    /// Creates a new builder-style object to manufacture [`RollbackTrigger`](crate::model::RollbackTrigger).
     pub fn builder() -> crate::model::rollback_trigger::Builder {
         crate::model::rollback_trigger::Builder::default()
     }
@@ -1420,10 +1533,10 @@ impl std::fmt::Debug for LoggingConfig {
         formatter.finish()
     }
 }
-/// See [`LoggingConfig`](crate::model::LoggingConfig)
+/// See [`LoggingConfig`](crate::model::LoggingConfig).
 pub mod logging_config {
-    /// A builder for [`LoggingConfig`](crate::model::LoggingConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`LoggingConfig`](crate::model::LoggingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) log_role_arn: std::option::Option<std::string::String>,
@@ -1453,7 +1566,7 @@ pub mod logging_config {
             self.log_group_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoggingConfig`](crate::model::LoggingConfig)
+        /// Consumes the builder and constructs a [`LoggingConfig`](crate::model::LoggingConfig).
         pub fn build(self) -> crate::model::LoggingConfig {
             crate::model::LoggingConfig {
                 log_role_arn: self.log_role_arn,
@@ -1463,7 +1576,7 @@ pub mod logging_config {
     }
 }
 impl LoggingConfig {
-    /// Creates a new builder-style object to manufacture [`LoggingConfig`](crate::model::LoggingConfig)
+    /// Creates a new builder-style object to manufacture [`LoggingConfig`](crate::model::LoggingConfig).
     pub fn builder() -> crate::model::logging_config::Builder {
         crate::model::logging_config::Builder::default()
     }
@@ -1743,10 +1856,10 @@ impl std::fmt::Debug for TypeVersionSummary {
         formatter.finish()
     }
 }
-/// See [`TypeVersionSummary`](crate::model::TypeVersionSummary)
+/// See [`TypeVersionSummary`](crate::model::TypeVersionSummary).
 pub mod type_version_summary {
-    /// A builder for [`TypeVersionSummary`](crate::model::TypeVersionSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`TypeVersionSummary`](crate::model::TypeVersionSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::RegistryType>,
@@ -1849,7 +1962,7 @@ pub mod type_version_summary {
             self.public_version_number = input;
             self
         }
-        /// Consumes the builder and constructs a [`TypeVersionSummary`](crate::model::TypeVersionSummary)
+        /// Consumes the builder and constructs a [`TypeVersionSummary`](crate::model::TypeVersionSummary).
         pub fn build(self) -> crate::model::TypeVersionSummary {
             crate::model::TypeVersionSummary {
                 r#type: self.r#type,
@@ -1865,7 +1978,7 @@ pub mod type_version_summary {
     }
 }
 impl TypeVersionSummary {
-    /// Creates a new builder-style object to manufacture [`TypeVersionSummary`](crate::model::TypeVersionSummary)
+    /// Creates a new builder-style object to manufacture [`TypeVersionSummary`](crate::model::TypeVersionSummary).
     pub fn builder() -> crate::model::type_version_summary::Builder {
         crate::model::type_version_summary::Builder::default()
     }
@@ -1966,7 +2079,7 @@ pub struct TypeSummary {
     pub publisher_identity: std::option::Option<crate::model::IdentityProvider>,
     /// <p>The publisher name, as defined in the public profile for that publisher in the service used to verify the publisher identity.</p>
     pub publisher_name: std::option::Option<std::string::String>,
-    /// <p>Whether or not the extension is activated for this account and region.</p>
+    /// <p>Whether the extension is activated for this account and region.</p>
     /// <p>This applies only to third-party public extensions. Extensions published by Amazon are activated by default.</p>
     pub is_activated: std::option::Option<bool>,
 }
@@ -2031,7 +2144,7 @@ impl TypeSummary {
     pub fn publisher_name(&self) -> std::option::Option<&str> {
         self.publisher_name.as_deref()
     }
-    /// <p>Whether or not the extension is activated for this account and region.</p>
+    /// <p>Whether the extension is activated for this account and region.</p>
     /// <p>This applies only to third-party public extensions. Extensions published by Amazon are activated by default.</p>
     pub fn is_activated(&self) -> std::option::Option<bool> {
         self.is_activated
@@ -2056,10 +2169,10 @@ impl std::fmt::Debug for TypeSummary {
         formatter.finish()
     }
 }
-/// See [`TypeSummary`](crate::model::TypeSummary)
+/// See [`TypeSummary`](crate::model::TypeSummary).
 pub mod type_summary {
-    /// A builder for [`TypeSummary`](crate::model::TypeSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`TypeSummary`](crate::model::TypeSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::RegistryType>,
@@ -2242,19 +2355,19 @@ pub mod type_summary {
             self.publisher_name = input;
             self
         }
-        /// <p>Whether or not the extension is activated for this account and region.</p>
+        /// <p>Whether the extension is activated for this account and region.</p>
         /// <p>This applies only to third-party public extensions. Extensions published by Amazon are activated by default.</p>
         pub fn is_activated(mut self, input: bool) -> Self {
             self.is_activated = Some(input);
             self
         }
-        /// <p>Whether or not the extension is activated for this account and region.</p>
+        /// <p>Whether the extension is activated for this account and region.</p>
         /// <p>This applies only to third-party public extensions. Extensions published by Amazon are activated by default.</p>
         pub fn set_is_activated(mut self, input: std::option::Option<bool>) -> Self {
             self.is_activated = input;
             self
         }
-        /// Consumes the builder and constructs a [`TypeSummary`](crate::model::TypeSummary)
+        /// Consumes the builder and constructs a [`TypeSummary`](crate::model::TypeSummary).
         pub fn build(self) -> crate::model::TypeSummary {
             crate::model::TypeSummary {
                 r#type: self.r#type,
@@ -2275,7 +2388,7 @@ pub mod type_summary {
     }
 }
 impl TypeSummary {
-    /// Creates a new builder-style object to manufacture [`TypeSummary`](crate::model::TypeSummary)
+    /// Creates a new builder-style object to manufacture [`TypeSummary`](crate::model::TypeSummary).
     pub fn builder() -> crate::model::type_summary::Builder {
         crate::model::type_summary::Builder::default()
     }
@@ -2396,10 +2509,10 @@ impl std::fmt::Debug for TypeFilters {
         formatter.finish()
     }
 }
-/// See [`TypeFilters`](crate::model::TypeFilters)
+/// See [`TypeFilters`](crate::model::TypeFilters).
 pub mod type_filters {
-    /// A builder for [`TypeFilters`](crate::model::TypeFilters)
-    #[non_exhaustive]
+
+    /// A builder for [`TypeFilters`](crate::model::TypeFilters).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) category: std::option::Option<crate::model::Category>,
@@ -2462,7 +2575,7 @@ pub mod type_filters {
             self.type_name_prefix = input;
             self
         }
-        /// Consumes the builder and constructs a [`TypeFilters`](crate::model::TypeFilters)
+        /// Consumes the builder and constructs a [`TypeFilters`](crate::model::TypeFilters).
         pub fn build(self) -> crate::model::TypeFilters {
             crate::model::TypeFilters {
                 category: self.category,
@@ -2473,7 +2586,7 @@ pub mod type_filters {
     }
 }
 impl TypeFilters {
-    /// Creates a new builder-style object to manufacture [`TypeFilters`](crate::model::TypeFilters)
+    /// Creates a new builder-style object to manufacture [`TypeFilters`](crate::model::TypeFilters).
     pub fn builder() -> crate::model::type_filters::Builder {
         crate::model::type_filters::Builder::default()
     }
@@ -2814,10 +2927,10 @@ impl std::fmt::Debug for StackSetSummary {
         formatter.finish()
     }
 }
-/// See [`StackSetSummary`](crate::model::StackSetSummary)
+/// See [`StackSetSummary`](crate::model::StackSetSummary).
 pub mod stack_set_summary {
-    /// A builder for [`StackSetSummary`](crate::model::StackSetSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`StackSetSummary`](crate::model::StackSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_set_name: std::option::Option<std::string::String>,
@@ -2962,7 +3075,7 @@ pub mod stack_set_summary {
             self.managed_execution = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackSetSummary`](crate::model::StackSetSummary)
+        /// Consumes the builder and constructs a [`StackSetSummary`](crate::model::StackSetSummary).
         pub fn build(self) -> crate::model::StackSetSummary {
             crate::model::StackSetSummary {
                 stack_set_name: self.stack_set_name,
@@ -2979,7 +3092,7 @@ pub mod stack_set_summary {
     }
 }
 impl StackSetSummary {
-    /// Creates a new builder-style object to manufacture [`StackSetSummary`](crate::model::StackSetSummary)
+    /// Creates a new builder-style object to manufacture [`StackSetSummary`](crate::model::StackSetSummary).
     pub fn builder() -> crate::model::stack_set_summary::Builder {
         crate::model::stack_set_summary::Builder::default()
     }
@@ -3125,6 +3238,8 @@ pub struct StackSetOperationSummary {
     pub creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The time at which the stack set operation ended, across all accounts and Regions specified. Note that this doesn't necessarily mean that the stack set operation was successful, or even attempted, in each account or Region.</p>
     pub end_timestamp: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The status of the operation in details.</p>
+    pub status_reason: std::option::Option<std::string::String>,
 }
 impl StackSetOperationSummary {
     /// <p>The unique ID of the stack set operation.</p>
@@ -3155,6 +3270,10 @@ impl StackSetOperationSummary {
     pub fn end_timestamp(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.end_timestamp.as_ref()
     }
+    /// <p>The status of the operation in details.</p>
+    pub fn status_reason(&self) -> std::option::Option<&str> {
+        self.status_reason.as_deref()
+    }
 }
 impl std::fmt::Debug for StackSetOperationSummary {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -3164,13 +3283,14 @@ impl std::fmt::Debug for StackSetOperationSummary {
         formatter.field("status", &self.status);
         formatter.field("creation_timestamp", &self.creation_timestamp);
         formatter.field("end_timestamp", &self.end_timestamp);
+        formatter.field("status_reason", &self.status_reason);
         formatter.finish()
     }
 }
-/// See [`StackSetOperationSummary`](crate::model::StackSetOperationSummary)
+/// See [`StackSetOperationSummary`](crate::model::StackSetOperationSummary).
 pub mod stack_set_operation_summary {
-    /// A builder for [`StackSetOperationSummary`](crate::model::StackSetOperationSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`StackSetOperationSummary`](crate::model::StackSetOperationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -3178,6 +3298,7 @@ pub mod stack_set_operation_summary {
         pub(crate) status: std::option::Option<crate::model::StackSetOperationStatus>,
         pub(crate) creation_timestamp: std::option::Option<aws_smithy_types::DateTime>,
         pub(crate) end_timestamp: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) status_reason: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The unique ID of the stack set operation.</p>
@@ -3258,7 +3379,20 @@ pub mod stack_set_operation_summary {
             self.end_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackSetOperationSummary`](crate::model::StackSetOperationSummary)
+        /// <p>The status of the operation in details.</p>
+        pub fn status_reason(mut self, input: impl Into<std::string::String>) -> Self {
+            self.status_reason = Some(input.into());
+            self
+        }
+        /// <p>The status of the operation in details.</p>
+        pub fn set_status_reason(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.status_reason = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`StackSetOperationSummary`](crate::model::StackSetOperationSummary).
         pub fn build(self) -> crate::model::StackSetOperationSummary {
             crate::model::StackSetOperationSummary {
                 operation_id: self.operation_id,
@@ -3266,12 +3400,13 @@ pub mod stack_set_operation_summary {
                 status: self.status,
                 creation_timestamp: self.creation_timestamp,
                 end_timestamp: self.end_timestamp,
+                status_reason: self.status_reason,
             }
         }
     }
 }
 impl StackSetOperationSummary {
-    /// Creates a new builder-style object to manufacture [`StackSetOperationSummary`](crate::model::StackSetOperationSummary)
+    /// Creates a new builder-style object to manufacture [`StackSetOperationSummary`](crate::model::StackSetOperationSummary).
     pub fn builder() -> crate::model::stack_set_operation_summary::Builder {
         crate::model::stack_set_operation_summary::Builder::default()
     }
@@ -3487,10 +3622,10 @@ impl std::fmt::Debug for StackSetOperationResultSummary {
         formatter.finish()
     }
 }
-/// See [`StackSetOperationResultSummary`](crate::model::StackSetOperationResultSummary)
+/// See [`StackSetOperationResultSummary`](crate::model::StackSetOperationResultSummary).
 pub mod stack_set_operation_result_summary {
-    /// A builder for [`StackSetOperationResultSummary`](crate::model::StackSetOperationResultSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`StackSetOperationResultSummary`](crate::model::StackSetOperationResultSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account: std::option::Option<std::string::String>,
@@ -3587,7 +3722,7 @@ pub mod stack_set_operation_result_summary {
             self.organizational_unit_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackSetOperationResultSummary`](crate::model::StackSetOperationResultSummary)
+        /// Consumes the builder and constructs a [`StackSetOperationResultSummary`](crate::model::StackSetOperationResultSummary).
         pub fn build(self) -> crate::model::StackSetOperationResultSummary {
             crate::model::StackSetOperationResultSummary {
                 account: self.account,
@@ -3601,7 +3736,7 @@ pub mod stack_set_operation_result_summary {
     }
 }
 impl StackSetOperationResultSummary {
-    /// Creates a new builder-style object to manufacture [`StackSetOperationResultSummary`](crate::model::StackSetOperationResultSummary)
+    /// Creates a new builder-style object to manufacture [`StackSetOperationResultSummary`](crate::model::StackSetOperationResultSummary).
     pub fn builder() -> crate::model::stack_set_operation_result_summary::Builder {
         crate::model::stack_set_operation_result_summary::Builder::default()
     }
@@ -3656,10 +3791,10 @@ impl std::fmt::Debug for AccountGateResult {
         formatter.finish()
     }
 }
-/// See [`AccountGateResult`](crate::model::AccountGateResult)
+/// See [`AccountGateResult`](crate::model::AccountGateResult).
 pub mod account_gate_result {
-    /// A builder for [`AccountGateResult`](crate::model::AccountGateResult)
-    #[non_exhaustive]
+
+    /// A builder for [`AccountGateResult`](crate::model::AccountGateResult).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status: std::option::Option<crate::model::AccountGateStatus>,
@@ -3712,7 +3847,7 @@ pub mod account_gate_result {
             self.status_reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountGateResult`](crate::model::AccountGateResult)
+        /// Consumes the builder and constructs a [`AccountGateResult`](crate::model::AccountGateResult).
         pub fn build(self) -> crate::model::AccountGateResult {
             crate::model::AccountGateResult {
                 status: self.status,
@@ -3722,7 +3857,7 @@ pub mod account_gate_result {
     }
 }
 impl AccountGateResult {
-    /// Creates a new builder-style object to manufacture [`AccountGateResult`](crate::model::AccountGateResult)
+    /// Creates a new builder-style object to manufacture [`AccountGateResult`](crate::model::AccountGateResult).
     pub fn builder() -> crate::model::account_gate_result::Builder {
         crate::model::account_gate_result::Builder::default()
     }
@@ -3880,7 +4015,7 @@ pub struct StackSummary {
     /// <p>For nested stacks--stacks created as resources for another stack--the stack ID of the top-level stack to which the nested stack ultimately belongs.</p>
     /// <p>For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.</p>
     pub root_id: std::option::Option<std::string::String>,
-    /// <p>Summarizes information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+    /// <p>Summarizes information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
     pub drift_information: std::option::Option<crate::model::StackDriftInformationSummary>,
 }
 impl StackSummary {
@@ -3926,7 +4061,7 @@ impl StackSummary {
     pub fn root_id(&self) -> std::option::Option<&str> {
         self.root_id.as_deref()
     }
-    /// <p>Summarizes information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+    /// <p>Summarizes information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
     pub fn drift_information(
         &self,
     ) -> std::option::Option<&crate::model::StackDriftInformationSummary> {
@@ -3950,10 +4085,10 @@ impl std::fmt::Debug for StackSummary {
         formatter.finish()
     }
 }
-/// See [`StackSummary`](crate::model::StackSummary)
+/// See [`StackSummary`](crate::model::StackSummary).
 pub mod stack_summary {
-    /// A builder for [`StackSummary`](crate::model::StackSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`StackSummary`](crate::model::StackSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_id: std::option::Option<std::string::String>,
@@ -4092,7 +4227,7 @@ pub mod stack_summary {
             self.root_id = input;
             self
         }
-        /// <p>Summarizes information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+        /// <p>Summarizes information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
         pub fn drift_information(
             mut self,
             input: crate::model::StackDriftInformationSummary,
@@ -4100,7 +4235,7 @@ pub mod stack_summary {
             self.drift_information = Some(input);
             self
         }
-        /// <p>Summarizes information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+        /// <p>Summarizes information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
         pub fn set_drift_information(
             mut self,
             input: std::option::Option<crate::model::StackDriftInformationSummary>,
@@ -4108,7 +4243,7 @@ pub mod stack_summary {
             self.drift_information = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackSummary`](crate::model::StackSummary)
+        /// Consumes the builder and constructs a [`StackSummary`](crate::model::StackSummary).
         pub fn build(self) -> crate::model::StackSummary {
             crate::model::StackSummary {
                 stack_id: self.stack_id,
@@ -4127,7 +4262,7 @@ pub mod stack_summary {
     }
 }
 impl StackSummary {
-    /// Creates a new builder-style object to manufacture [`StackSummary`](crate::model::StackSummary)
+    /// Creates a new builder-style object to manufacture [`StackSummary`](crate::model::StackSummary).
     pub fn builder() -> crate::model::stack_summary::Builder {
         crate::model::stack_summary::Builder::default()
     }
@@ -4172,10 +4307,10 @@ impl std::fmt::Debug for StackDriftInformationSummary {
         formatter.finish()
     }
 }
-/// See [`StackDriftInformationSummary`](crate::model::StackDriftInformationSummary)
+/// See [`StackDriftInformationSummary`](crate::model::StackDriftInformationSummary).
 pub mod stack_drift_information_summary {
-    /// A builder for [`StackDriftInformationSummary`](crate::model::StackDriftInformationSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`StackDriftInformationSummary`](crate::model::StackDriftInformationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_drift_status: std::option::Option<crate::model::StackDriftStatus>,
@@ -4220,7 +4355,7 @@ pub mod stack_drift_information_summary {
             self.last_check_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackDriftInformationSummary`](crate::model::StackDriftInformationSummary)
+        /// Consumes the builder and constructs a [`StackDriftInformationSummary`](crate::model::StackDriftInformationSummary).
         pub fn build(self) -> crate::model::StackDriftInformationSummary {
             crate::model::StackDriftInformationSummary {
                 stack_drift_status: self.stack_drift_status,
@@ -4230,7 +4365,7 @@ pub mod stack_drift_information_summary {
     }
 }
 impl StackDriftInformationSummary {
-    /// Creates a new builder-style object to manufacture [`StackDriftInformationSummary`](crate::model::StackDriftInformationSummary)
+    /// Creates a new builder-style object to manufacture [`StackDriftInformationSummary`](crate::model::StackDriftInformationSummary).
     pub fn builder() -> crate::model::stack_drift_information_summary::Builder {
         crate::model::stack_drift_information_summary::Builder::default()
     }
@@ -4474,10 +4609,10 @@ impl std::fmt::Debug for StackResourceSummary {
         formatter.finish()
     }
 }
-/// See [`StackResourceSummary`](crate::model::StackResourceSummary)
+/// See [`StackResourceSummary`](crate::model::StackResourceSummary).
 pub mod stack_resource_summary {
-    /// A builder for [`StackResourceSummary`](crate::model::StackResourceSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`StackResourceSummary`](crate::model::StackResourceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logical_resource_id: std::option::Option<std::string::String>,
@@ -4598,7 +4733,7 @@ pub mod stack_resource_summary {
             self.module_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackResourceSummary`](crate::model::StackResourceSummary)
+        /// Consumes the builder and constructs a [`StackResourceSummary`](crate::model::StackResourceSummary).
         pub fn build(self) -> crate::model::StackResourceSummary {
             crate::model::StackResourceSummary {
                 logical_resource_id: self.logical_resource_id,
@@ -4614,14 +4749,14 @@ pub mod stack_resource_summary {
     }
 }
 impl StackResourceSummary {
-    /// Creates a new builder-style object to manufacture [`StackResourceSummary`](crate::model::StackResourceSummary)
+    /// Creates a new builder-style object to manufacture [`StackResourceSummary`](crate::model::StackResourceSummary).
     pub fn builder() -> crate::model::stack_resource_summary::Builder {
         crate::model::stack_resource_summary::Builder::default()
     }
 }
 
 /// <p>Contains information about the module from which the resource was created, if the resource was created from a module included in the stack template.</p>
-/// <p>For more information on modules, see <a href="AWSCloudFormation/latest/UserGuide/modules.html">Using modules to encapsulate and reuse resource configurations</a> in the <i>CloudFormation User Guide</i>.</p>
+/// <p>For more information about modules, see <a href="AWSCloudFormation/latest/UserGuide/modules.html">Using modules to encapsulate and reuse resource configurations</a> in the <i>CloudFormation User Guide</i>.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ModuleInfo {
@@ -4658,10 +4793,10 @@ impl std::fmt::Debug for ModuleInfo {
         formatter.finish()
     }
 }
-/// See [`ModuleInfo`](crate::model::ModuleInfo)
+/// See [`ModuleInfo`](crate::model::ModuleInfo).
 pub mod module_info {
-    /// A builder for [`ModuleInfo`](crate::model::ModuleInfo)
-    #[non_exhaustive]
+
+    /// A builder for [`ModuleInfo`](crate::model::ModuleInfo).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) type_hierarchy: std::option::Option<std::string::String>,
@@ -4704,7 +4839,7 @@ pub mod module_info {
             self.logical_id_hierarchy = input;
             self
         }
-        /// Consumes the builder and constructs a [`ModuleInfo`](crate::model::ModuleInfo)
+        /// Consumes the builder and constructs a [`ModuleInfo`](crate::model::ModuleInfo).
         pub fn build(self) -> crate::model::ModuleInfo {
             crate::model::ModuleInfo {
                 type_hierarchy: self.type_hierarchy,
@@ -4714,7 +4849,7 @@ pub mod module_info {
     }
 }
 impl ModuleInfo {
-    /// Creates a new builder-style object to manufacture [`ModuleInfo`](crate::model::ModuleInfo)
+    /// Creates a new builder-style object to manufacture [`ModuleInfo`](crate::model::ModuleInfo).
     pub fn builder() -> crate::model::module_info::Builder {
         crate::model::module_info::Builder::default()
     }
@@ -4728,7 +4863,7 @@ pub struct StackResourceDriftInformationSummary {
     /// <ul>
     /// <li> <p> <code>DELETED</code>: The resource differs from its expected configuration in that it has been deleted.</p> </li>
     /// <li> <p> <code>MODIFIED</code>: The resource differs from its expected configuration.</p> </li>
-    /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information on skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
+    /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information about skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
     /// <li> <p> <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.</p> </li>
     /// </ul>
     pub stack_resource_drift_status: std::option::Option<crate::model::StackResourceDriftStatus>,
@@ -4740,7 +4875,7 @@ impl StackResourceDriftInformationSummary {
     /// <ul>
     /// <li> <p> <code>DELETED</code>: The resource differs from its expected configuration in that it has been deleted.</p> </li>
     /// <li> <p> <code>MODIFIED</code>: The resource differs from its expected configuration.</p> </li>
-    /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information on skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
+    /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information about skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
     /// <li> <p> <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.</p> </li>
     /// </ul>
     pub fn stack_resource_drift_status(
@@ -4764,10 +4899,10 @@ impl std::fmt::Debug for StackResourceDriftInformationSummary {
         formatter.finish()
     }
 }
-/// See [`StackResourceDriftInformationSummary`](crate::model::StackResourceDriftInformationSummary)
+/// See [`StackResourceDriftInformationSummary`](crate::model::StackResourceDriftInformationSummary).
 pub mod stack_resource_drift_information_summary {
-    /// A builder for [`StackResourceDriftInformationSummary`](crate::model::StackResourceDriftInformationSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`StackResourceDriftInformationSummary`](crate::model::StackResourceDriftInformationSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_resource_drift_status:
@@ -4779,7 +4914,7 @@ pub mod stack_resource_drift_information_summary {
         /// <ul>
         /// <li> <p> <code>DELETED</code>: The resource differs from its expected configuration in that it has been deleted.</p> </li>
         /// <li> <p> <code>MODIFIED</code>: The resource differs from its expected configuration.</p> </li>
-        /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information on skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
+        /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information about skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
         /// <li> <p> <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.</p> </li>
         /// </ul>
         pub fn stack_resource_drift_status(
@@ -4793,7 +4928,7 @@ pub mod stack_resource_drift_information_summary {
         /// <ul>
         /// <li> <p> <code>DELETED</code>: The resource differs from its expected configuration in that it has been deleted.</p> </li>
         /// <li> <p> <code>MODIFIED</code>: The resource differs from its expected configuration.</p> </li>
-        /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information on skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
+        /// <li> <p> <code>NOT_CHECKED</code>: CloudFormation hasn't checked if the resource differs from its expected configuration.</p> <p>Any resources that don't currently support drift detection have a status of <code>NOT_CHECKED</code>. For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html">Resources that Support Drift Detection</a>. If you performed an <code>ContinueUpdateRollback</code> operation on a stack, any resources included in <code>ResourcesToSkip</code> will also have a status of <code>NOT_CHECKED</code>. For more information about skipping resources during rollback operations, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html">Continue Rolling Back an Update</a> in the CloudFormation User Guide.</p> </li>
         /// <li> <p> <code>IN_SYNC</code>: The resource's actual configuration matches its expected configuration.</p> </li>
         /// </ul>
         pub fn set_stack_resource_drift_status(
@@ -4816,7 +4951,7 @@ pub mod stack_resource_drift_information_summary {
             self.last_check_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackResourceDriftInformationSummary`](crate::model::StackResourceDriftInformationSummary)
+        /// Consumes the builder and constructs a [`StackResourceDriftInformationSummary`](crate::model::StackResourceDriftInformationSummary).
         pub fn build(self) -> crate::model::StackResourceDriftInformationSummary {
             crate::model::StackResourceDriftInformationSummary {
                 stack_resource_drift_status: self.stack_resource_drift_status,
@@ -4826,7 +4961,7 @@ pub mod stack_resource_drift_information_summary {
     }
 }
 impl StackResourceDriftInformationSummary {
-    /// Creates a new builder-style object to manufacture [`StackResourceDriftInformationSummary`](crate::model::StackResourceDriftInformationSummary)
+    /// Creates a new builder-style object to manufacture [`StackResourceDriftInformationSummary`](crate::model::StackResourceDriftInformationSummary).
     pub fn builder() -> crate::model::stack_resource_drift_information_summary::Builder {
         crate::model::stack_resource_drift_information_summary::Builder::default()
     }
@@ -5171,10 +5306,10 @@ impl std::fmt::Debug for StackInstanceSummary {
         formatter.finish()
     }
 }
-/// See [`StackInstanceSummary`](crate::model::StackInstanceSummary)
+/// See [`StackInstanceSummary`](crate::model::StackInstanceSummary).
 pub mod stack_instance_summary {
-    /// A builder for [`StackInstanceSummary`](crate::model::StackInstanceSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`StackInstanceSummary`](crate::model::StackInstanceSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_set_id: std::option::Option<std::string::String>,
@@ -5341,7 +5476,7 @@ pub mod stack_instance_summary {
             self.last_drift_check_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackInstanceSummary`](crate::model::StackInstanceSummary)
+        /// Consumes the builder and constructs a [`StackInstanceSummary`](crate::model::StackInstanceSummary).
         pub fn build(self) -> crate::model::StackInstanceSummary {
             crate::model::StackInstanceSummary {
                 stack_set_id: self.stack_set_id,
@@ -5359,7 +5494,7 @@ pub mod stack_instance_summary {
     }
 }
 impl StackInstanceSummary {
-    /// Creates a new builder-style object to manufacture [`StackInstanceSummary`](crate::model::StackInstanceSummary)
+    /// Creates a new builder-style object to manufacture [`StackInstanceSummary`](crate::model::StackInstanceSummary).
     pub fn builder() -> crate::model::stack_instance_summary::Builder {
         crate::model::stack_instance_summary::Builder::default()
     }
@@ -5401,10 +5536,10 @@ impl std::fmt::Debug for StackInstanceComprehensiveStatus {
         formatter.finish()
     }
 }
-/// See [`StackInstanceComprehensiveStatus`](crate::model::StackInstanceComprehensiveStatus)
+/// See [`StackInstanceComprehensiveStatus`](crate::model::StackInstanceComprehensiveStatus).
 pub mod stack_instance_comprehensive_status {
-    /// A builder for [`StackInstanceComprehensiveStatus`](crate::model::StackInstanceComprehensiveStatus)
-    #[non_exhaustive]
+
+    /// A builder for [`StackInstanceComprehensiveStatus`](crate::model::StackInstanceComprehensiveStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) detailed_status: std::option::Option<crate::model::StackInstanceDetailedStatus>,
@@ -5437,7 +5572,7 @@ pub mod stack_instance_comprehensive_status {
             self.detailed_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackInstanceComprehensiveStatus`](crate::model::StackInstanceComprehensiveStatus)
+        /// Consumes the builder and constructs a [`StackInstanceComprehensiveStatus`](crate::model::StackInstanceComprehensiveStatus).
         pub fn build(self) -> crate::model::StackInstanceComprehensiveStatus {
             crate::model::StackInstanceComprehensiveStatus {
                 detailed_status: self.detailed_status,
@@ -5446,7 +5581,7 @@ pub mod stack_instance_comprehensive_status {
     }
 }
 impl StackInstanceComprehensiveStatus {
-    /// Creates a new builder-style object to manufacture [`StackInstanceComprehensiveStatus`](crate::model::StackInstanceComprehensiveStatus)
+    /// Creates a new builder-style object to manufacture [`StackInstanceComprehensiveStatus`](crate::model::StackInstanceComprehensiveStatus).
     pub fn builder() -> crate::model::stack_instance_comprehensive_status::Builder {
         crate::model::stack_instance_comprehensive_status::Builder::default()
     }
@@ -5616,10 +5751,10 @@ impl std::fmt::Debug for StackInstanceFilter {
         formatter.finish()
     }
 }
-/// See [`StackInstanceFilter`](crate::model::StackInstanceFilter)
+/// See [`StackInstanceFilter`](crate::model::StackInstanceFilter).
 pub mod stack_instance_filter {
-    /// A builder for [`StackInstanceFilter`](crate::model::StackInstanceFilter)
-    #[non_exhaustive]
+
+    /// A builder for [`StackInstanceFilter`](crate::model::StackInstanceFilter).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<crate::model::StackInstanceFilterName>,
@@ -5649,7 +5784,7 @@ pub mod stack_instance_filter {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackInstanceFilter`](crate::model::StackInstanceFilter)
+        /// Consumes the builder and constructs a [`StackInstanceFilter`](crate::model::StackInstanceFilter).
         pub fn build(self) -> crate::model::StackInstanceFilter {
             crate::model::StackInstanceFilter {
                 name: self.name,
@@ -5659,7 +5794,7 @@ pub mod stack_instance_filter {
     }
 }
 impl StackInstanceFilter {
-    /// Creates a new builder-style object to manufacture [`StackInstanceFilter`](crate::model::StackInstanceFilter)
+    /// Creates a new builder-style object to manufacture [`StackInstanceFilter`](crate::model::StackInstanceFilter).
     pub fn builder() -> crate::model::stack_instance_filter::Builder {
         crate::model::stack_instance_filter::Builder::default()
     }
@@ -5750,10 +5885,10 @@ impl std::fmt::Debug for Export {
         formatter.finish()
     }
 }
-/// See [`Export`](crate::model::Export)
+/// See [`Export`](crate::model::Export).
 pub mod export {
-    /// A builder for [`Export`](crate::model::Export)
-    #[non_exhaustive]
+
+    /// A builder for [`Export`](crate::model::Export).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) exporting_stack_id: std::option::Option<std::string::String>,
@@ -5794,7 +5929,7 @@ pub mod export {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Export`](crate::model::Export)
+        /// Consumes the builder and constructs a [`Export`](crate::model::Export).
         pub fn build(self) -> crate::model::Export {
             crate::model::Export {
                 exporting_stack_id: self.exporting_stack_id,
@@ -5805,7 +5940,7 @@ pub mod export {
     }
 }
 impl Export {
-    /// Creates a new builder-style object to manufacture [`Export`](crate::model::Export)
+    /// Creates a new builder-style object to manufacture [`Export`](crate::model::Export).
     pub fn builder() -> crate::model::export::Builder {
         crate::model::export::Builder::default()
     }
@@ -5908,10 +6043,10 @@ impl std::fmt::Debug for ChangeSetSummary {
         formatter.finish()
     }
 }
-/// See [`ChangeSetSummary`](crate::model::ChangeSetSummary)
+/// See [`ChangeSetSummary`](crate::model::ChangeSetSummary).
 pub mod change_set_summary {
-    /// A builder for [`ChangeSetSummary`](crate::model::ChangeSetSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`ChangeSetSummary`](crate::model::ChangeSetSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_id: std::option::Option<std::string::String>,
@@ -6072,7 +6207,7 @@ pub mod change_set_summary {
             self.root_change_set_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeSetSummary`](crate::model::ChangeSetSummary)
+        /// Consumes the builder and constructs a [`ChangeSetSummary`](crate::model::ChangeSetSummary).
         pub fn build(self) -> crate::model::ChangeSetSummary {
             crate::model::ChangeSetSummary {
                 stack_id: self.stack_id,
@@ -6092,7 +6227,7 @@ pub mod change_set_summary {
     }
 }
 impl ChangeSetSummary {
-    /// Creates a new builder-style object to manufacture [`ChangeSetSummary`](crate::model::ChangeSetSummary)
+    /// Creates a new builder-style object to manufacture [`ChangeSetSummary`](crate::model::ChangeSetSummary).
     pub fn builder() -> crate::model::change_set_summary::Builder {
         crate::model::change_set_summary::Builder::default()
     }
@@ -6298,10 +6433,10 @@ impl std::fmt::Debug for ResourceIdentifierSummary {
         formatter.finish()
     }
 }
-/// See [`ResourceIdentifierSummary`](crate::model::ResourceIdentifierSummary)
+/// See [`ResourceIdentifierSummary`](crate::model::ResourceIdentifierSummary).
 pub mod resource_identifier_summary {
-    /// A builder for [`ResourceIdentifierSummary`](crate::model::ResourceIdentifierSummary)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceIdentifierSummary`](crate::model::ResourceIdentifierSummary).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -6360,7 +6495,7 @@ pub mod resource_identifier_summary {
             self.resource_identifiers = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceIdentifierSummary`](crate::model::ResourceIdentifierSummary)
+        /// Consumes the builder and constructs a [`ResourceIdentifierSummary`](crate::model::ResourceIdentifierSummary).
         pub fn build(self) -> crate::model::ResourceIdentifierSummary {
             crate::model::ResourceIdentifierSummary {
                 resource_type: self.resource_type,
@@ -6371,7 +6506,7 @@ pub mod resource_identifier_summary {
     }
 }
 impl ResourceIdentifierSummary {
-    /// Creates a new builder-style object to manufacture [`ResourceIdentifierSummary`](crate::model::ResourceIdentifierSummary)
+    /// Creates a new builder-style object to manufacture [`ResourceIdentifierSummary`](crate::model::ResourceIdentifierSummary).
     pub fn builder() -> crate::model::resource_identifier_summary::Builder {
         crate::model::resource_identifier_summary::Builder::default()
     }
@@ -6434,10 +6569,10 @@ impl std::fmt::Debug for ParameterDeclaration {
         formatter.finish()
     }
 }
-/// See [`ParameterDeclaration`](crate::model::ParameterDeclaration)
+/// See [`ParameterDeclaration`](crate::model::ParameterDeclaration).
 pub mod parameter_declaration {
-    /// A builder for [`ParameterDeclaration`](crate::model::ParameterDeclaration)
-    #[non_exhaustive]
+
+    /// A builder for [`ParameterDeclaration`](crate::model::ParameterDeclaration).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) parameter_key: std::option::Option<std::string::String>,
@@ -6520,7 +6655,7 @@ pub mod parameter_declaration {
             self.parameter_constraints = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParameterDeclaration`](crate::model::ParameterDeclaration)
+        /// Consumes the builder and constructs a [`ParameterDeclaration`](crate::model::ParameterDeclaration).
         pub fn build(self) -> crate::model::ParameterDeclaration {
             crate::model::ParameterDeclaration {
                 parameter_key: self.parameter_key,
@@ -6534,7 +6669,7 @@ pub mod parameter_declaration {
     }
 }
 impl ParameterDeclaration {
-    /// Creates a new builder-style object to manufacture [`ParameterDeclaration`](crate::model::ParameterDeclaration)
+    /// Creates a new builder-style object to manufacture [`ParameterDeclaration`](crate::model::ParameterDeclaration).
     pub fn builder() -> crate::model::parameter_declaration::Builder {
         crate::model::parameter_declaration::Builder::default()
     }
@@ -6560,10 +6695,10 @@ impl std::fmt::Debug for ParameterConstraints {
         formatter.finish()
     }
 }
-/// See [`ParameterConstraints`](crate::model::ParameterConstraints)
+/// See [`ParameterConstraints`](crate::model::ParameterConstraints).
 pub mod parameter_constraints {
-    /// A builder for [`ParameterConstraints`](crate::model::ParameterConstraints)
-    #[non_exhaustive]
+
+    /// A builder for [`ParameterConstraints`](crate::model::ParameterConstraints).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) allowed_values: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -6588,7 +6723,7 @@ pub mod parameter_constraints {
             self.allowed_values = input;
             self
         }
-        /// Consumes the builder and constructs a [`ParameterConstraints`](crate::model::ParameterConstraints)
+        /// Consumes the builder and constructs a [`ParameterConstraints`](crate::model::ParameterConstraints).
         pub fn build(self) -> crate::model::ParameterConstraints {
             crate::model::ParameterConstraints {
                 allowed_values: self.allowed_values,
@@ -6597,7 +6732,7 @@ pub mod parameter_constraints {
     }
 }
 impl ParameterConstraints {
-    /// Creates a new builder-style object to manufacture [`ParameterConstraints`](crate::model::ParameterConstraints)
+    /// Creates a new builder-style object to manufacture [`ParameterConstraints`](crate::model::ParameterConstraints).
     pub fn builder() -> crate::model::parameter_constraints::Builder {
         crate::model::parameter_constraints::Builder::default()
     }
@@ -6777,10 +6912,10 @@ impl std::fmt::Debug for StackResourceDrift {
         formatter.finish()
     }
 }
-/// See [`StackResourceDrift`](crate::model::StackResourceDrift)
+/// See [`StackResourceDrift`](crate::model::StackResourceDrift).
 pub mod stack_resource_drift {
-    /// A builder for [`StackResourceDrift`](crate::model::StackResourceDrift)
-    #[non_exhaustive]
+
+    /// A builder for [`StackResourceDrift`](crate::model::StackResourceDrift).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_id: std::option::Option<std::string::String>,
@@ -6975,7 +7110,7 @@ pub mod stack_resource_drift {
             self.module_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackResourceDrift`](crate::model::StackResourceDrift)
+        /// Consumes the builder and constructs a [`StackResourceDrift`](crate::model::StackResourceDrift).
         pub fn build(self) -> crate::model::StackResourceDrift {
             crate::model::StackResourceDrift {
                 stack_id: self.stack_id,
@@ -6994,7 +7129,7 @@ pub mod stack_resource_drift {
     }
 }
 impl StackResourceDrift {
-    /// Creates a new builder-style object to manufacture [`StackResourceDrift`](crate::model::StackResourceDrift)
+    /// Creates a new builder-style object to manufacture [`StackResourceDrift`](crate::model::StackResourceDrift).
     pub fn builder() -> crate::model::stack_resource_drift::Builder {
         crate::model::stack_resource_drift::Builder::default()
     }
@@ -7051,10 +7186,10 @@ impl std::fmt::Debug for PropertyDifference {
         formatter.finish()
     }
 }
-/// See [`PropertyDifference`](crate::model::PropertyDifference)
+/// See [`PropertyDifference`](crate::model::PropertyDifference).
 pub mod property_difference {
-    /// A builder for [`PropertyDifference`](crate::model::PropertyDifference)
-    #[non_exhaustive]
+
+    /// A builder for [`PropertyDifference`](crate::model::PropertyDifference).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) property_path: std::option::Option<std::string::String>,
@@ -7122,7 +7257,7 @@ pub mod property_difference {
             self.difference_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`PropertyDifference`](crate::model::PropertyDifference)
+        /// Consumes the builder and constructs a [`PropertyDifference`](crate::model::PropertyDifference).
         pub fn build(self) -> crate::model::PropertyDifference {
             crate::model::PropertyDifference {
                 property_path: self.property_path,
@@ -7134,7 +7269,7 @@ pub mod property_difference {
     }
 }
 impl PropertyDifference {
-    /// Creates a new builder-style object to manufacture [`PropertyDifference`](crate::model::PropertyDifference)
+    /// Creates a new builder-style object to manufacture [`PropertyDifference`](crate::model::PropertyDifference).
     pub fn builder() -> crate::model::property_difference::Builder {
         crate::model::property_difference::Builder::default()
     }
@@ -7226,10 +7361,10 @@ impl std::fmt::Debug for PhysicalResourceIdContextKeyValuePair {
         formatter.finish()
     }
 }
-/// See [`PhysicalResourceIdContextKeyValuePair`](crate::model::PhysicalResourceIdContextKeyValuePair)
+/// See [`PhysicalResourceIdContextKeyValuePair`](crate::model::PhysicalResourceIdContextKeyValuePair).
 pub mod physical_resource_id_context_key_value_pair {
-    /// A builder for [`PhysicalResourceIdContextKeyValuePair`](crate::model::PhysicalResourceIdContextKeyValuePair)
-    #[non_exhaustive]
+
+    /// A builder for [`PhysicalResourceIdContextKeyValuePair`](crate::model::PhysicalResourceIdContextKeyValuePair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -7256,7 +7391,7 @@ pub mod physical_resource_id_context_key_value_pair {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`PhysicalResourceIdContextKeyValuePair`](crate::model::PhysicalResourceIdContextKeyValuePair)
+        /// Consumes the builder and constructs a [`PhysicalResourceIdContextKeyValuePair`](crate::model::PhysicalResourceIdContextKeyValuePair).
         pub fn build(self) -> crate::model::PhysicalResourceIdContextKeyValuePair {
             crate::model::PhysicalResourceIdContextKeyValuePair {
                 key: self.key,
@@ -7266,7 +7401,7 @@ pub mod physical_resource_id_context_key_value_pair {
     }
 }
 impl PhysicalResourceIdContextKeyValuePair {
-    /// Creates a new builder-style object to manufacture [`PhysicalResourceIdContextKeyValuePair`](crate::model::PhysicalResourceIdContextKeyValuePair)
+    /// Creates a new builder-style object to manufacture [`PhysicalResourceIdContextKeyValuePair`](crate::model::PhysicalResourceIdContextKeyValuePair).
     pub fn builder() -> crate::model::physical_resource_id_context_key_value_pair::Builder {
         crate::model::physical_resource_id_context_key_value_pair::Builder::default()
     }
@@ -7316,10 +7451,10 @@ impl std::fmt::Debug for RequiredActivatedType {
         formatter.finish()
     }
 }
-/// See [`RequiredActivatedType`](crate::model::RequiredActivatedType)
+/// See [`RequiredActivatedType`](crate::model::RequiredActivatedType).
 pub mod required_activated_type {
-    /// A builder for [`RequiredActivatedType`](crate::model::RequiredActivatedType)
-    #[non_exhaustive]
+
+    /// A builder for [`RequiredActivatedType`](crate::model::RequiredActivatedType).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) type_name_alias: std::option::Option<std::string::String>,
@@ -7385,7 +7520,7 @@ pub mod required_activated_type {
             self.supported_major_versions = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequiredActivatedType`](crate::model::RequiredActivatedType)
+        /// Consumes the builder and constructs a [`RequiredActivatedType`](crate::model::RequiredActivatedType).
         pub fn build(self) -> crate::model::RequiredActivatedType {
             crate::model::RequiredActivatedType {
                 type_name_alias: self.type_name_alias,
@@ -7397,7 +7532,7 @@ pub mod required_activated_type {
     }
 }
 impl RequiredActivatedType {
-    /// Creates a new builder-style object to manufacture [`RequiredActivatedType`](crate::model::RequiredActivatedType)
+    /// Creates a new builder-style object to manufacture [`RequiredActivatedType`](crate::model::RequiredActivatedType).
     pub fn builder() -> crate::model::required_activated_type::Builder {
         crate::model::required_activated_type::Builder::default()
     }
@@ -7490,7 +7625,7 @@ pub struct StackSetOperation {
     pub operation_preferences: std::option::Option<crate::model::StackSetOperationPreferences>,
     /// <p>For stack set operations of action type <code>DELETE</code>, specifies whether to remove the stack instances from the specified stack set, but doesn't delete the stacks. You can't re-associate a retained stack, or add an existing, saved stack to a new stack set.</p>
     pub retain_stacks: std::option::Option<bool>,
-    /// <p>The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
+    /// <p>The Amazon Resource Name (ARN) of the IAM role used to perform this stack set operation.</p>
     /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.</p>
     pub administration_role_arn: std::option::Option<std::string::String>,
     /// <p>The name of the IAM execution role used to create or update the stack set.</p>
@@ -7507,6 +7642,8 @@ pub struct StackSetOperation {
     /// <p>For more information, see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting Unmanaged Changes in Stack Sets</a> in the CloudFormation User Guide.</p>
     pub stack_set_drift_detection_details:
         std::option::Option<crate::model::StackSetDriftDetectionDetails>,
+    /// <p>The status of the operation in details.</p>
+    pub status_reason: std::option::Option<std::string::String>,
 }
 impl StackSetOperation {
     /// <p>The unique ID of a stack set operation.</p>
@@ -7543,7 +7680,7 @@ impl StackSetOperation {
     pub fn retain_stacks(&self) -> std::option::Option<bool> {
         self.retain_stacks
     }
-    /// <p>The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
+    /// <p>The Amazon Resource Name (ARN) of the IAM role used to perform this stack set operation.</p>
     /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.</p>
     pub fn administration_role_arn(&self) -> std::option::Option<&str> {
         self.administration_role_arn.as_deref()
@@ -7573,6 +7710,10 @@ impl StackSetOperation {
     ) -> std::option::Option<&crate::model::StackSetDriftDetectionDetails> {
         self.stack_set_drift_detection_details.as_ref()
     }
+    /// <p>The status of the operation in details.</p>
+    pub fn status_reason(&self) -> std::option::Option<&str> {
+        self.status_reason.as_deref()
+    }
 }
 impl std::fmt::Debug for StackSetOperation {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -7592,13 +7733,14 @@ impl std::fmt::Debug for StackSetOperation {
             "stack_set_drift_detection_details",
             &self.stack_set_drift_detection_details,
         );
+        formatter.field("status_reason", &self.status_reason);
         formatter.finish()
     }
 }
-/// See [`StackSetOperation`](crate::model::StackSetOperation)
+/// See [`StackSetOperation`](crate::model::StackSetOperation).
 pub mod stack_set_operation {
-    /// A builder for [`StackSetOperation`](crate::model::StackSetOperation)
-    #[non_exhaustive]
+
+    /// A builder for [`StackSetOperation`](crate::model::StackSetOperation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) operation_id: std::option::Option<std::string::String>,
@@ -7615,6 +7757,7 @@ pub mod stack_set_operation {
         pub(crate) deployment_targets: std::option::Option<crate::model::DeploymentTargets>,
         pub(crate) stack_set_drift_detection_details:
             std::option::Option<crate::model::StackSetDriftDetectionDetails>,
+        pub(crate) status_reason: std::option::Option<std::string::String>,
     }
     impl Builder {
         /// <p>The unique ID of a stack set operation.</p>
@@ -7705,13 +7848,13 @@ pub mod stack_set_operation {
             self.retain_stacks = input;
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
+        /// <p>The Amazon Resource Name (ARN) of the IAM role used to perform this stack set operation.</p>
         /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn administration_role_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.administration_role_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation.</p>
+        /// <p>The Amazon Resource Name (ARN) of the IAM role used to perform this stack set operation.</p>
         /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn set_administration_role_arn(
             mut self,
@@ -7794,7 +7937,20 @@ pub mod stack_set_operation {
             self.stack_set_drift_detection_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackSetOperation`](crate::model::StackSetOperation)
+        /// <p>The status of the operation in details.</p>
+        pub fn status_reason(mut self, input: impl Into<std::string::String>) -> Self {
+            self.status_reason = Some(input.into());
+            self
+        }
+        /// <p>The status of the operation in details.</p>
+        pub fn set_status_reason(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.status_reason = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`StackSetOperation`](crate::model::StackSetOperation).
         pub fn build(self) -> crate::model::StackSetOperation {
             crate::model::StackSetOperation {
                 operation_id: self.operation_id,
@@ -7809,12 +7965,13 @@ pub mod stack_set_operation {
                 end_timestamp: self.end_timestamp,
                 deployment_targets: self.deployment_targets,
                 stack_set_drift_detection_details: self.stack_set_drift_detection_details,
+                status_reason: self.status_reason,
             }
         }
     }
 }
 impl StackSetOperation {
-    /// Creates a new builder-style object to manufacture [`StackSetOperation`](crate::model::StackSetOperation)
+    /// Creates a new builder-style object to manufacture [`StackSetOperation`](crate::model::StackSetOperation).
     pub fn builder() -> crate::model::stack_set_operation::Builder {
         crate::model::stack_set_operation::Builder::default()
     }
@@ -7950,10 +8107,10 @@ impl std::fmt::Debug for StackSetDriftDetectionDetails {
         formatter.finish()
     }
 }
-/// See [`StackSetDriftDetectionDetails`](crate::model::StackSetDriftDetectionDetails)
+/// See [`StackSetDriftDetectionDetails`](crate::model::StackSetDriftDetectionDetails).
 pub mod stack_set_drift_detection_details {
-    /// A builder for [`StackSetDriftDetectionDetails`](crate::model::StackSetDriftDetectionDetails)
-    #[non_exhaustive]
+
+    /// A builder for [`StackSetDriftDetectionDetails`](crate::model::StackSetDriftDetectionDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) drift_status: std::option::Option<crate::model::StackSetDriftStatus>,
@@ -8106,7 +8263,7 @@ pub mod stack_set_drift_detection_details {
             self.failed_stack_instances_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackSetDriftDetectionDetails`](crate::model::StackSetDriftDetectionDetails)
+        /// Consumes the builder and constructs a [`StackSetDriftDetectionDetails`](crate::model::StackSetDriftDetectionDetails).
         pub fn build(self) -> crate::model::StackSetDriftDetectionDetails {
             crate::model::StackSetDriftDetectionDetails {
                 drift_status: self.drift_status,
@@ -8128,7 +8285,7 @@ pub mod stack_set_drift_detection_details {
     }
 }
 impl StackSetDriftDetectionDetails {
-    /// Creates a new builder-style object to manufacture [`StackSetDriftDetectionDetails`](crate::model::StackSetDriftDetectionDetails)
+    /// Creates a new builder-style object to manufacture [`StackSetDriftDetectionDetails`](crate::model::StackSetDriftDetectionDetails).
     pub fn builder() -> crate::model::stack_set_drift_detection_details::Builder {
         crate::model::stack_set_drift_detection_details::Builder::default()
     }
@@ -8286,9 +8443,9 @@ pub struct StackSet {
     pub capabilities: std::option::Option<std::vec::Vec<crate::model::Capability>>,
     /// <p>A list of tags that specify information about the stack set. A maximum number of 50 tags can be specified.</p>
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
-    /// <p>The Amazon Resource Number (ARN) of the stack set.</p>
+    /// <p>The Amazon Resource Name (ARN) of the stack set.</p>
     pub stack_set_arn: std::option::Option<std::string::String>,
-    /// <p>The Amazon Resource Number (ARN) of the IAM role used to create or update the stack set.</p>
+    /// <p>The Amazon Resource Name (ARN) of the IAM role used to create or update the stack set.</p>
     /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.</p>
     pub administration_role_arn: std::option::Option<std::string::String>,
     /// <p>The name of the IAM execution role used to create or update the stack set.</p>
@@ -8344,11 +8501,11 @@ impl StackSet {
     pub fn tags(&self) -> std::option::Option<&[crate::model::Tag]> {
         self.tags.as_deref()
     }
-    /// <p>The Amazon Resource Number (ARN) of the stack set.</p>
+    /// <p>The Amazon Resource Name (ARN) of the stack set.</p>
     pub fn stack_set_arn(&self) -> std::option::Option<&str> {
         self.stack_set_arn.as_deref()
     }
-    /// <p>The Amazon Resource Number (ARN) of the IAM role used to create or update the stack set.</p>
+    /// <p>The Amazon Resource Name (ARN) of the IAM role used to create or update the stack set.</p>
     /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.</p>
     pub fn administration_role_arn(&self) -> std::option::Option<&str> {
         self.administration_role_arn.as_deref()
@@ -8411,10 +8568,10 @@ impl std::fmt::Debug for StackSet {
         formatter.finish()
     }
 }
-/// See [`StackSet`](crate::model::StackSet)
+/// See [`StackSet`](crate::model::StackSet).
 pub mod stack_set {
-    /// A builder for [`StackSet`](crate::model::StackSet)
-    #[non_exhaustive]
+
+    /// A builder for [`StackSet`](crate::model::StackSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_set_name: std::option::Option<std::string::String>,
@@ -8552,12 +8709,12 @@ pub mod stack_set {
             self.tags = input;
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the stack set.</p>
+        /// <p>The Amazon Resource Name (ARN) of the stack set.</p>
         pub fn stack_set_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.stack_set_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the stack set.</p>
+        /// <p>The Amazon Resource Name (ARN) of the stack set.</p>
         pub fn set_stack_set_arn(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -8565,13 +8722,13 @@ pub mod stack_set {
             self.stack_set_arn = input;
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the IAM role used to create or update the stack set.</p>
+        /// <p>The Amazon Resource Name (ARN) of the IAM role used to create or update the stack set.</p>
         /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn administration_role_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.administration_role_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Number (ARN) of the IAM role used to create or update the stack set.</p>
+        /// <p>The Amazon Resource Name (ARN) of the IAM role used to create or update the stack set.</p>
         /// <p>Use customized administrator roles to control which users or groups can manage specific stack sets within the same administrator account. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn set_administration_role_arn(
             mut self,
@@ -8679,7 +8836,7 @@ pub mod stack_set {
             self.managed_execution = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackSet`](crate::model::StackSet)
+        /// Consumes the builder and constructs a [`StackSet`](crate::model::StackSet).
         pub fn build(self) -> crate::model::StackSet {
             crate::model::StackSet {
                 stack_set_name: self.stack_set_name,
@@ -8703,7 +8860,7 @@ pub mod stack_set {
     }
 }
 impl StackSet {
-    /// Creates a new builder-style object to manufacture [`StackSet`](crate::model::StackSet)
+    /// Creates a new builder-style object to manufacture [`StackSet`](crate::model::StackSet).
     pub fn builder() -> crate::model::stack_set::Builder {
         crate::model::stack_set::Builder::default()
     }
@@ -8754,7 +8911,7 @@ pub struct Stack {
     /// <p>A list of <code>Tag</code>s that specify information about the stack.</p>
     pub tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
     /// <p>Whether termination protection is enabled for the stack.</p>
-    /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
+    /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
     pub enable_termination_protection: std::option::Option<bool>,
     /// <p>For nested stacks--stacks created as resources for another stack--the stack ID of the direct parent of this stack. For the first level of nested stacks, the root stack is also the parent stack.</p>
     /// <p>For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.</p>
@@ -8762,7 +8919,7 @@ pub struct Stack {
     /// <p>For nested stacks--stacks created as resources for another stack--the stack ID of the top-level stack to which the nested stack ultimately belongs.</p>
     /// <p>For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.</p>
     pub root_id: std::option::Option<std::string::String>,
-    /// <p>Information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+    /// <p>Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
     pub drift_information: std::option::Option<crate::model::StackDriftInformation>,
 }
 impl Stack {
@@ -8845,7 +9002,7 @@ impl Stack {
         self.tags.as_deref()
     }
     /// <p>Whether termination protection is enabled for the stack.</p>
-    /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
+    /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
     pub fn enable_termination_protection(&self) -> std::option::Option<bool> {
         self.enable_termination_protection
     }
@@ -8859,7 +9016,7 @@ impl Stack {
     pub fn root_id(&self) -> std::option::Option<&str> {
         self.root_id.as_deref()
     }
-    /// <p>Information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+    /// <p>Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
     pub fn drift_information(&self) -> std::option::Option<&crate::model::StackDriftInformation> {
         self.drift_information.as_ref()
     }
@@ -8895,10 +9052,10 @@ impl std::fmt::Debug for Stack {
         formatter.finish()
     }
 }
-/// See [`Stack`](crate::model::Stack)
+/// See [`Stack`](crate::model::Stack).
 pub mod stack {
-    /// A builder for [`Stack`](crate::model::Stack)
-    #[non_exhaustive]
+
+    /// A builder for [`Stack`](crate::model::Stack).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_id: std::option::Option<std::string::String>,
@@ -9183,13 +9340,13 @@ pub mod stack {
             self
         }
         /// <p>Whether termination protection is enabled for the stack.</p>
-        /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
+        /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn enable_termination_protection(mut self, input: bool) -> Self {
             self.enable_termination_protection = Some(input);
             self
         }
         /// <p>Whether termination protection is enabled for the stack.</p>
-        /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
+        /// <p>For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested stacks</a>, termination protection is set on the root stack and can't be changed directly on the nested stack. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.</p>
         pub fn set_enable_termination_protection(
             mut self,
             input: std::option::Option<bool>,
@@ -9221,12 +9378,12 @@ pub mod stack {
             self.root_id = input;
             self
         }
-        /// <p>Information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+        /// <p>Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
         pub fn drift_information(mut self, input: crate::model::StackDriftInformation) -> Self {
             self.drift_information = Some(input);
             self
         }
-        /// <p>Information on whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
+        /// <p>Information about whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration, as defined in the stack template and any values specified as template parameters. For more information, see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting Unregulated Configuration Changes to Stacks and Resources</a>.</p>
         pub fn set_drift_information(
             mut self,
             input: std::option::Option<crate::model::StackDriftInformation>,
@@ -9234,7 +9391,7 @@ pub mod stack {
             self.drift_information = input;
             self
         }
-        /// Consumes the builder and constructs a [`Stack`](crate::model::Stack)
+        /// Consumes the builder and constructs a [`Stack`](crate::model::Stack).
         pub fn build(self) -> crate::model::Stack {
             crate::model::Stack {
                 stack_id: self.stack_id,
@@ -9264,7 +9421,7 @@ pub mod stack {
     }
 }
 impl Stack {
-    /// Creates a new builder-style object to manufacture [`Stack`](crate::model::Stack)
+    /// Creates a new builder-style object to manufacture [`Stack`](crate::model::Stack).
     pub fn builder() -> crate::model::stack::Builder {
         crate::model::stack::Builder::default()
     }
@@ -9309,10 +9466,10 @@ impl std::fmt::Debug for StackDriftInformation {
         formatter.finish()
     }
 }
-/// See [`StackDriftInformation`](crate::model::StackDriftInformation)
+/// See [`StackDriftInformation`](crate::model::StackDriftInformation).
 pub mod stack_drift_information {
-    /// A builder for [`StackDriftInformation`](crate::model::StackDriftInformation)
-    #[non_exhaustive]
+
+    /// A builder for [`StackDriftInformation`](crate::model::StackDriftInformation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_drift_status: std::option::Option<crate::model::StackDriftStatus>,
@@ -9357,7 +9514,7 @@ pub mod stack_drift_information {
             self.last_check_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackDriftInformation`](crate::model::StackDriftInformation)
+        /// Consumes the builder and constructs a [`StackDriftInformation`](crate::model::StackDriftInformation).
         pub fn build(self) -> crate::model::StackDriftInformation {
             crate::model::StackDriftInformation {
                 stack_drift_status: self.stack_drift_status,
@@ -9367,7 +9524,7 @@ pub mod stack_drift_information {
     }
 }
 impl StackDriftInformation {
-    /// Creates a new builder-style object to manufacture [`StackDriftInformation`](crate::model::StackDriftInformation)
+    /// Creates a new builder-style object to manufacture [`StackDriftInformation`](crate::model::StackDriftInformation).
     pub fn builder() -> crate::model::stack_drift_information::Builder {
         crate::model::stack_drift_information::Builder::default()
     }
@@ -9414,10 +9571,10 @@ impl std::fmt::Debug for Output {
         formatter.finish()
     }
 }
-/// See [`Output`](crate::model::Output)
+/// See [`Output`](crate::model::Output).
 pub mod output {
-    /// A builder for [`Output`](crate::model::Output)
-    #[non_exhaustive]
+
+    /// A builder for [`Output`](crate::model::Output).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) output_key: std::option::Option<std::string::String>,
@@ -9466,7 +9623,7 @@ pub mod output {
             self.export_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`Output`](crate::model::Output)
+        /// Consumes the builder and constructs a [`Output`](crate::model::Output).
         pub fn build(self) -> crate::model::Output {
             crate::model::Output {
                 output_key: self.output_key,
@@ -9478,7 +9635,7 @@ pub mod output {
     }
 }
 impl Output {
-    /// Creates a new builder-style object to manufacture [`Output`](crate::model::Output)
+    /// Creates a new builder-style object to manufacture [`Output`](crate::model::Output).
     pub fn builder() -> crate::model::output::Builder {
         crate::model::output::Builder::default()
     }
@@ -9576,10 +9733,10 @@ impl std::fmt::Debug for StackResource {
         formatter.finish()
     }
 }
-/// See [`StackResource`](crate::model::StackResource)
+/// See [`StackResource`](crate::model::StackResource).
 pub mod stack_resource {
-    /// A builder for [`StackResource`](crate::model::StackResource)
-    #[non_exhaustive]
+
+    /// A builder for [`StackResource`](crate::model::StackResource).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_name: std::option::Option<std::string::String>,
@@ -9733,7 +9890,7 @@ pub mod stack_resource {
             self.module_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackResource`](crate::model::StackResource)
+        /// Consumes the builder and constructs a [`StackResource`](crate::model::StackResource).
         pub fn build(self) -> crate::model::StackResource {
             crate::model::StackResource {
                 stack_name: self.stack_name,
@@ -9752,7 +9909,7 @@ pub mod stack_resource {
     }
 }
 impl StackResource {
-    /// Creates a new builder-style object to manufacture [`StackResource`](crate::model::StackResource)
+    /// Creates a new builder-style object to manufacture [`StackResource`](crate::model::StackResource).
     pub fn builder() -> crate::model::stack_resource::Builder {
         crate::model::stack_resource::Builder::default()
     }
@@ -9802,10 +9959,10 @@ impl std::fmt::Debug for StackResourceDriftInformation {
         formatter.finish()
     }
 }
-/// See [`StackResourceDriftInformation`](crate::model::StackResourceDriftInformation)
+/// See [`StackResourceDriftInformation`](crate::model::StackResourceDriftInformation).
 pub mod stack_resource_drift_information {
-    /// A builder for [`StackResourceDriftInformation`](crate::model::StackResourceDriftInformation)
-    #[non_exhaustive]
+
+    /// A builder for [`StackResourceDriftInformation`](crate::model::StackResourceDriftInformation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_resource_drift_status:
@@ -9854,7 +10011,7 @@ pub mod stack_resource_drift_information {
             self.last_check_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackResourceDriftInformation`](crate::model::StackResourceDriftInformation)
+        /// Consumes the builder and constructs a [`StackResourceDriftInformation`](crate::model::StackResourceDriftInformation).
         pub fn build(self) -> crate::model::StackResourceDriftInformation {
             crate::model::StackResourceDriftInformation {
                 stack_resource_drift_status: self.stack_resource_drift_status,
@@ -9864,7 +10021,7 @@ pub mod stack_resource_drift_information {
     }
 }
 impl StackResourceDriftInformation {
-    /// Creates a new builder-style object to manufacture [`StackResourceDriftInformation`](crate::model::StackResourceDriftInformation)
+    /// Creates a new builder-style object to manufacture [`StackResourceDriftInformation`](crate::model::StackResourceDriftInformation).
     pub fn builder() -> crate::model::stack_resource_drift_information::Builder {
         crate::model::stack_resource_drift_information::Builder::default()
     }
@@ -9969,10 +10126,10 @@ impl std::fmt::Debug for StackResourceDetail {
         formatter.finish()
     }
 }
-/// See [`StackResourceDetail`](crate::model::StackResourceDetail)
+/// See [`StackResourceDetail`](crate::model::StackResourceDetail).
 pub mod stack_resource_detail {
-    /// A builder for [`StackResourceDetail`](crate::model::StackResourceDetail)
-    #[non_exhaustive]
+
+    /// A builder for [`StackResourceDetail`](crate::model::StackResourceDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_name: std::option::Option<std::string::String>,
@@ -10137,7 +10294,7 @@ pub mod stack_resource_detail {
             self.module_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackResourceDetail`](crate::model::StackResourceDetail)
+        /// Consumes the builder and constructs a [`StackResourceDetail`](crate::model::StackResourceDetail).
         pub fn build(self) -> crate::model::StackResourceDetail {
             crate::model::StackResourceDetail {
                 stack_name: self.stack_name,
@@ -10157,7 +10314,7 @@ pub mod stack_resource_detail {
     }
 }
 impl StackResourceDetail {
-    /// Creates a new builder-style object to manufacture [`StackResourceDetail`](crate::model::StackResourceDetail)
+    /// Creates a new builder-style object to manufacture [`StackResourceDetail`](crate::model::StackResourceDetail).
     pub fn builder() -> crate::model::stack_resource_detail::Builder {
         crate::model::stack_resource_detail::Builder::default()
     }
@@ -10288,10 +10445,10 @@ impl std::fmt::Debug for StackInstance {
         formatter.finish()
     }
 }
-/// See [`StackInstance`](crate::model::StackInstance)
+/// See [`StackInstance`](crate::model::StackInstance).
 pub mod stack_instance {
-    /// A builder for [`StackInstance`](crate::model::StackInstance)
-    #[non_exhaustive]
+
+    /// A builder for [`StackInstance`](crate::model::StackInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_set_id: std::option::Option<std::string::String>,
@@ -10478,7 +10635,7 @@ pub mod stack_instance {
             self.last_drift_check_timestamp = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackInstance`](crate::model::StackInstance)
+        /// Consumes the builder and constructs a [`StackInstance`](crate::model::StackInstance).
         pub fn build(self) -> crate::model::StackInstance {
             crate::model::StackInstance {
                 stack_set_id: self.stack_set_id,
@@ -10497,7 +10654,7 @@ pub mod stack_instance {
     }
 }
 impl StackInstance {
-    /// Creates a new builder-style object to manufacture [`StackInstance`](crate::model::StackInstance)
+    /// Creates a new builder-style object to manufacture [`StackInstance`](crate::model::StackInstance).
     pub fn builder() -> crate::model::stack_instance::Builder {
         crate::model::stack_instance::Builder::default()
     }
@@ -10640,10 +10797,10 @@ impl std::fmt::Debug for StackEvent {
         formatter.finish()
     }
 }
-/// See [`StackEvent`](crate::model::StackEvent)
+/// See [`StackEvent`](crate::model::StackEvent).
 pub mod stack_event {
-    /// A builder for [`StackEvent`](crate::model::StackEvent)
-    #[non_exhaustive]
+
+    /// A builder for [`StackEvent`](crate::model::StackEvent).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) stack_id: std::option::Option<std::string::String>,
@@ -10872,7 +11029,7 @@ pub mod stack_event {
             self.hook_failure_mode = input;
             self
         }
-        /// Consumes the builder and constructs a [`StackEvent`](crate::model::StackEvent)
+        /// Consumes the builder and constructs a [`StackEvent`](crate::model::StackEvent).
         pub fn build(self) -> crate::model::StackEvent {
             crate::model::StackEvent {
                 stack_id: self.stack_id,
@@ -10896,7 +11053,7 @@ pub mod stack_event {
     }
 }
 impl StackEvent {
-    /// Creates a new builder-style object to manufacture [`StackEvent`](crate::model::StackEvent)
+    /// Creates a new builder-style object to manufacture [`StackEvent`](crate::model::StackEvent).
     pub fn builder() -> crate::model::stack_event::Builder {
         crate::model::stack_event::Builder::default()
     }
@@ -11341,10 +11498,10 @@ impl std::fmt::Debug for ChangeSetHook {
         formatter.finish()
     }
 }
-/// See [`ChangeSetHook`](crate::model::ChangeSetHook)
+/// See [`ChangeSetHook`](crate::model::ChangeSetHook).
 pub mod change_set_hook {
-    /// A builder for [`ChangeSetHook`](crate::model::ChangeSetHook)
-    #[non_exhaustive]
+
+    /// A builder for [`ChangeSetHook`](crate::model::ChangeSetHook).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) invocation_point: std::option::Option<crate::model::HookInvocationPoint>,
@@ -11463,7 +11620,7 @@ pub mod change_set_hook {
             self.target_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeSetHook`](crate::model::ChangeSetHook)
+        /// Consumes the builder and constructs a [`ChangeSetHook`](crate::model::ChangeSetHook).
         pub fn build(self) -> crate::model::ChangeSetHook {
             crate::model::ChangeSetHook {
                 invocation_point: self.invocation_point,
@@ -11477,7 +11634,7 @@ pub mod change_set_hook {
     }
 }
 impl ChangeSetHook {
-    /// Creates a new builder-style object to manufacture [`ChangeSetHook`](crate::model::ChangeSetHook)
+    /// Creates a new builder-style object to manufacture [`ChangeSetHook`](crate::model::ChangeSetHook).
     pub fn builder() -> crate::model::change_set_hook::Builder {
         crate::model::change_set_hook::Builder::default()
     }
@@ -11513,10 +11670,10 @@ impl std::fmt::Debug for ChangeSetHookTargetDetails {
         formatter.finish()
     }
 }
-/// See [`ChangeSetHookTargetDetails`](crate::model::ChangeSetHookTargetDetails)
+/// See [`ChangeSetHookTargetDetails`](crate::model::ChangeSetHookTargetDetails).
 pub mod change_set_hook_target_details {
-    /// A builder for [`ChangeSetHookTargetDetails`](crate::model::ChangeSetHookTargetDetails)
-    #[non_exhaustive]
+
+    /// A builder for [`ChangeSetHookTargetDetails`](crate::model::ChangeSetHookTargetDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_type: std::option::Option<crate::model::HookTargetType>,
@@ -11553,7 +11710,7 @@ pub mod change_set_hook_target_details {
             self.resource_target_details = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeSetHookTargetDetails`](crate::model::ChangeSetHookTargetDetails)
+        /// Consumes the builder and constructs a [`ChangeSetHookTargetDetails`](crate::model::ChangeSetHookTargetDetails).
         pub fn build(self) -> crate::model::ChangeSetHookTargetDetails {
             crate::model::ChangeSetHookTargetDetails {
                 target_type: self.target_type,
@@ -11563,7 +11720,7 @@ pub mod change_set_hook_target_details {
     }
 }
 impl ChangeSetHookTargetDetails {
-    /// Creates a new builder-style object to manufacture [`ChangeSetHookTargetDetails`](crate::model::ChangeSetHookTargetDetails)
+    /// Creates a new builder-style object to manufacture [`ChangeSetHookTargetDetails`](crate::model::ChangeSetHookTargetDetails).
     pub fn builder() -> crate::model::change_set_hook_target_details::Builder {
         crate::model::change_set_hook_target_details::Builder::default()
     }
@@ -11603,10 +11760,10 @@ impl std::fmt::Debug for ChangeSetHookResourceTargetDetails {
         formatter.finish()
     }
 }
-/// See [`ChangeSetHookResourceTargetDetails`](crate::model::ChangeSetHookResourceTargetDetails)
+/// See [`ChangeSetHookResourceTargetDetails`](crate::model::ChangeSetHookResourceTargetDetails).
 pub mod change_set_hook_resource_target_details {
-    /// A builder for [`ChangeSetHookResourceTargetDetails`](crate::model::ChangeSetHookResourceTargetDetails)
-    #[non_exhaustive]
+
+    /// A builder for [`ChangeSetHookResourceTargetDetails`](crate::model::ChangeSetHookResourceTargetDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) logical_resource_id: std::option::Option<std::string::String>,
@@ -11653,7 +11810,7 @@ pub mod change_set_hook_resource_target_details {
             self.resource_action = input;
             self
         }
-        /// Consumes the builder and constructs a [`ChangeSetHookResourceTargetDetails`](crate::model::ChangeSetHookResourceTargetDetails)
+        /// Consumes the builder and constructs a [`ChangeSetHookResourceTargetDetails`](crate::model::ChangeSetHookResourceTargetDetails).
         pub fn build(self) -> crate::model::ChangeSetHookResourceTargetDetails {
             crate::model::ChangeSetHookResourceTargetDetails {
                 logical_resource_id: self.logical_resource_id,
@@ -11664,7 +11821,7 @@ pub mod change_set_hook_resource_target_details {
     }
 }
 impl ChangeSetHookResourceTargetDetails {
-    /// Creates a new builder-style object to manufacture [`ChangeSetHookResourceTargetDetails`](crate::model::ChangeSetHookResourceTargetDetails)
+    /// Creates a new builder-style object to manufacture [`ChangeSetHookResourceTargetDetails`](crate::model::ChangeSetHookResourceTargetDetails).
     pub fn builder() -> crate::model::change_set_hook_resource_target_details::Builder {
         crate::model::change_set_hook_resource_target_details::Builder::default()
     }
@@ -11822,10 +11979,10 @@ impl std::fmt::Debug for Change {
         formatter.finish()
     }
 }
-/// See [`Change`](crate::model::Change)
+/// See [`Change`](crate::model::Change).
 pub mod change {
-    /// A builder for [`Change`](crate::model::Change)
-    #[non_exhaustive]
+
+    /// A builder for [`Change`](crate::model::Change).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ChangeType>,
@@ -11866,7 +12023,7 @@ pub mod change {
             self.resource_change = input;
             self
         }
-        /// Consumes the builder and constructs a [`Change`](crate::model::Change)
+        /// Consumes the builder and constructs a [`Change`](crate::model::Change).
         pub fn build(self) -> crate::model::Change {
             crate::model::Change {
                 r#type: self.r#type,
@@ -11877,7 +12034,7 @@ pub mod change {
     }
 }
 impl Change {
-    /// Creates a new builder-style object to manufacture [`Change`](crate::model::Change)
+    /// Creates a new builder-style object to manufacture [`Change`](crate::model::Change).
     pub fn builder() -> crate::model::change::Builder {
         crate::model::change::Builder::default()
     }
@@ -11961,10 +12118,10 @@ impl std::fmt::Debug for ResourceChange {
         formatter.finish()
     }
 }
-/// See [`ResourceChange`](crate::model::ResourceChange)
+/// See [`ResourceChange`](crate::model::ResourceChange).
 pub mod resource_change {
-    /// A builder for [`ResourceChange`](crate::model::ResourceChange)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceChange`](crate::model::ResourceChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) action: std::option::Option<crate::model::ChangeAction>,
@@ -12109,7 +12266,7 @@ pub mod resource_change {
             self.module_info = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceChange`](crate::model::ResourceChange)
+        /// Consumes the builder and constructs a [`ResourceChange`](crate::model::ResourceChange).
         pub fn build(self) -> crate::model::ResourceChange {
             crate::model::ResourceChange {
                 action: self.action,
@@ -12126,7 +12283,7 @@ pub mod resource_change {
     }
 }
 impl ResourceChange {
-    /// Creates a new builder-style object to manufacture [`ResourceChange`](crate::model::ResourceChange)
+    /// Creates a new builder-style object to manufacture [`ResourceChange`](crate::model::ResourceChange).
     pub fn builder() -> crate::model::resource_change::Builder {
         crate::model::resource_change::Builder::default()
     }
@@ -12193,10 +12350,10 @@ impl std::fmt::Debug for ResourceChangeDetail {
         formatter.finish()
     }
 }
-/// See [`ResourceChangeDetail`](crate::model::ResourceChangeDetail)
+/// See [`ResourceChangeDetail`](crate::model::ResourceChangeDetail).
 pub mod resource_change_detail {
-    /// A builder for [`ResourceChangeDetail`](crate::model::ResourceChangeDetail)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceChangeDetail`](crate::model::ResourceChangeDetail).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target: std::option::Option<crate::model::ResourceTargetDefinition>,
@@ -12277,7 +12434,7 @@ pub mod resource_change_detail {
             self.causing_entity = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceChangeDetail`](crate::model::ResourceChangeDetail)
+        /// Consumes the builder and constructs a [`ResourceChangeDetail`](crate::model::ResourceChangeDetail).
         pub fn build(self) -> crate::model::ResourceChangeDetail {
             crate::model::ResourceChangeDetail {
                 target: self.target,
@@ -12289,7 +12446,7 @@ pub mod resource_change_detail {
     }
 }
 impl ResourceChangeDetail {
-    /// Creates a new builder-style object to manufacture [`ResourceChangeDetail`](crate::model::ResourceChangeDetail)
+    /// Creates a new builder-style object to manufacture [`ResourceChangeDetail`](crate::model::ResourceChangeDetail).
     pub fn builder() -> crate::model::resource_change_detail::Builder {
         crate::model::resource_change_detail::Builder::default()
     }
@@ -12457,10 +12614,10 @@ impl std::fmt::Debug for ResourceTargetDefinition {
         formatter.finish()
     }
 }
-/// See [`ResourceTargetDefinition`](crate::model::ResourceTargetDefinition)
+/// See [`ResourceTargetDefinition`](crate::model::ResourceTargetDefinition).
 pub mod resource_target_definition {
-    /// A builder for [`ResourceTargetDefinition`](crate::model::ResourceTargetDefinition)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceTargetDefinition`](crate::model::ResourceTargetDefinition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attribute: std::option::Option<crate::model::ResourceAttribute>,
@@ -12504,7 +12661,7 @@ pub mod resource_target_definition {
             self.requires_recreation = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceTargetDefinition`](crate::model::ResourceTargetDefinition)
+        /// Consumes the builder and constructs a [`ResourceTargetDefinition`](crate::model::ResourceTargetDefinition).
         pub fn build(self) -> crate::model::ResourceTargetDefinition {
             crate::model::ResourceTargetDefinition {
                 attribute: self.attribute,
@@ -12515,7 +12672,7 @@ pub mod resource_target_definition {
     }
 }
 impl ResourceTargetDefinition {
-    /// Creates a new builder-style object to manufacture [`ResourceTargetDefinition`](crate::model::ResourceTargetDefinition)
+    /// Creates a new builder-style object to manufacture [`ResourceTargetDefinition`](crate::model::ResourceTargetDefinition).
     pub fn builder() -> crate::model::resource_target_definition::Builder {
         crate::model::resource_target_definition::Builder::default()
     }
@@ -12804,10 +12961,10 @@ impl std::fmt::Debug for AccountLimit {
         formatter.finish()
     }
 }
-/// See [`AccountLimit`](crate::model::AccountLimit)
+/// See [`AccountLimit`](crate::model::AccountLimit).
 pub mod account_limit {
-    /// A builder for [`AccountLimit`](crate::model::AccountLimit)
-    #[non_exhaustive]
+
+    /// A builder for [`AccountLimit`](crate::model::AccountLimit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -12836,7 +12993,7 @@ pub mod account_limit {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccountLimit`](crate::model::AccountLimit)
+        /// Consumes the builder and constructs a [`AccountLimit`](crate::model::AccountLimit).
         pub fn build(self) -> crate::model::AccountLimit {
             crate::model::AccountLimit {
                 name: self.name,
@@ -12846,7 +13003,7 @@ pub mod account_limit {
     }
 }
 impl AccountLimit {
-    /// Creates a new builder-style object to manufacture [`AccountLimit`](crate::model::AccountLimit)
+    /// Creates a new builder-style object to manufacture [`AccountLimit`](crate::model::AccountLimit).
     pub fn builder() -> crate::model::account_limit::Builder {
         crate::model::account_limit::Builder::default()
     }
@@ -12949,10 +13106,10 @@ impl std::fmt::Debug for ResourceToImport {
         formatter.finish()
     }
 }
-/// See [`ResourceToImport`](crate::model::ResourceToImport)
+/// See [`ResourceToImport`](crate::model::ResourceToImport).
 pub mod resource_to_import {
-    /// A builder for [`ResourceToImport`](crate::model::ResourceToImport)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceToImport`](crate::model::ResourceToImport).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_type: std::option::Option<std::string::String>,
@@ -13013,7 +13170,7 @@ pub mod resource_to_import {
             self.resource_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceToImport`](crate::model::ResourceToImport)
+        /// Consumes the builder and constructs a [`ResourceToImport`](crate::model::ResourceToImport).
         pub fn build(self) -> crate::model::ResourceToImport {
             crate::model::ResourceToImport {
                 resource_type: self.resource_type,
@@ -13024,7 +13181,7 @@ pub mod resource_to_import {
     }
 }
 impl ResourceToImport {
-    /// Creates a new builder-style object to manufacture [`ResourceToImport`](crate::model::ResourceToImport)
+    /// Creates a new builder-style object to manufacture [`ResourceToImport`](crate::model::ResourceToImport).
     pub fn builder() -> crate::model::resource_to_import::Builder {
         crate::model::resource_to_import::Builder::default()
     }
@@ -13109,7 +13266,7 @@ pub struct TypeConfigurationDetails {
     pub type_arn: std::option::Option<std::string::String>,
     /// <p>The name of the extension.</p>
     pub type_name: std::option::Option<std::string::String>,
-    /// <p>Whether or not this configuration data is the default configuration for the extension.</p>
+    /// <p>Whether this configuration data is the default configuration for the extension.</p>
     pub is_default_configuration: std::option::Option<bool>,
 }
 impl TypeConfigurationDetails {
@@ -13140,7 +13297,7 @@ impl TypeConfigurationDetails {
     pub fn type_name(&self) -> std::option::Option<&str> {
         self.type_name.as_deref()
     }
-    /// <p>Whether or not this configuration data is the default configuration for the extension.</p>
+    /// <p>Whether this configuration data is the default configuration for the extension.</p>
     pub fn is_default_configuration(&self) -> std::option::Option<bool> {
         self.is_default_configuration
     }
@@ -13158,10 +13315,10 @@ impl std::fmt::Debug for TypeConfigurationDetails {
         formatter.finish()
     }
 }
-/// See [`TypeConfigurationDetails`](crate::model::TypeConfigurationDetails)
+/// See [`TypeConfigurationDetails`](crate::model::TypeConfigurationDetails).
 pub mod type_configuration_details {
-    /// A builder for [`TypeConfigurationDetails`](crate::model::TypeConfigurationDetails)
-    #[non_exhaustive]
+
+    /// A builder for [`TypeConfigurationDetails`](crate::model::TypeConfigurationDetails).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) arn: std::option::Option<std::string::String>,
@@ -13245,17 +13402,17 @@ pub mod type_configuration_details {
             self.type_name = input;
             self
         }
-        /// <p>Whether or not this configuration data is the default configuration for the extension.</p>
+        /// <p>Whether this configuration data is the default configuration for the extension.</p>
         pub fn is_default_configuration(mut self, input: bool) -> Self {
             self.is_default_configuration = Some(input);
             self
         }
-        /// <p>Whether or not this configuration data is the default configuration for the extension.</p>
+        /// <p>Whether this configuration data is the default configuration for the extension.</p>
         pub fn set_is_default_configuration(mut self, input: std::option::Option<bool>) -> Self {
             self.is_default_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`TypeConfigurationDetails`](crate::model::TypeConfigurationDetails)
+        /// Consumes the builder and constructs a [`TypeConfigurationDetails`](crate::model::TypeConfigurationDetails).
         pub fn build(self) -> crate::model::TypeConfigurationDetails {
             crate::model::TypeConfigurationDetails {
                 arn: self.arn,
@@ -13270,7 +13427,7 @@ pub mod type_configuration_details {
     }
 }
 impl TypeConfigurationDetails {
-    /// Creates a new builder-style object to manufacture [`TypeConfigurationDetails`](crate::model::TypeConfigurationDetails)
+    /// Creates a new builder-style object to manufacture [`TypeConfigurationDetails`](crate::model::TypeConfigurationDetails).
     pub fn builder() -> crate::model::type_configuration_details::Builder {
         crate::model::type_configuration_details::Builder::default()
     }
@@ -13326,10 +13483,10 @@ impl std::fmt::Debug for TypeConfigurationIdentifier {
         formatter.finish()
     }
 }
-/// See [`TypeConfigurationIdentifier`](crate::model::TypeConfigurationIdentifier)
+/// See [`TypeConfigurationIdentifier`](crate::model::TypeConfigurationIdentifier).
 pub mod type_configuration_identifier {
-    /// A builder for [`TypeConfigurationIdentifier`](crate::model::TypeConfigurationIdentifier)
-    #[non_exhaustive]
+
+    /// A builder for [`TypeConfigurationIdentifier`](crate::model::TypeConfigurationIdentifier).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) type_arn: std::option::Option<std::string::String>,
@@ -13400,7 +13557,7 @@ pub mod type_configuration_identifier {
             self.type_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`TypeConfigurationIdentifier`](crate::model::TypeConfigurationIdentifier)
+        /// Consumes the builder and constructs a [`TypeConfigurationIdentifier`](crate::model::TypeConfigurationIdentifier).
         pub fn build(self) -> crate::model::TypeConfigurationIdentifier {
             crate::model::TypeConfigurationIdentifier {
                 type_arn: self.type_arn,
@@ -13413,7 +13570,7 @@ pub mod type_configuration_identifier {
     }
 }
 impl TypeConfigurationIdentifier {
-    /// Creates a new builder-style object to manufacture [`TypeConfigurationIdentifier`](crate::model::TypeConfigurationIdentifier)
+    /// Creates a new builder-style object to manufacture [`TypeConfigurationIdentifier`](crate::model::TypeConfigurationIdentifier).
     pub fn builder() -> crate::model::type_configuration_identifier::Builder {
         crate::model::type_configuration_identifier::Builder::default()
     }
@@ -13459,10 +13616,10 @@ impl std::fmt::Debug for BatchDescribeTypeConfigurationsError {
         formatter.finish()
     }
 }
-/// See [`BatchDescribeTypeConfigurationsError`](crate::model::BatchDescribeTypeConfigurationsError)
+/// See [`BatchDescribeTypeConfigurationsError`](crate::model::BatchDescribeTypeConfigurationsError).
 pub mod batch_describe_type_configurations_error {
-    /// A builder for [`BatchDescribeTypeConfigurationsError`](crate::model::BatchDescribeTypeConfigurationsError)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchDescribeTypeConfigurationsError`](crate::model::BatchDescribeTypeConfigurationsError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) error_code: std::option::Option<std::string::String>,
@@ -13510,7 +13667,7 @@ pub mod batch_describe_type_configurations_error {
             self.type_configuration_identifier = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDescribeTypeConfigurationsError`](crate::model::BatchDescribeTypeConfigurationsError)
+        /// Consumes the builder and constructs a [`BatchDescribeTypeConfigurationsError`](crate::model::BatchDescribeTypeConfigurationsError).
         pub fn build(self) -> crate::model::BatchDescribeTypeConfigurationsError {
             crate::model::BatchDescribeTypeConfigurationsError {
                 error_code: self.error_code,
@@ -13521,7 +13678,7 @@ pub mod batch_describe_type_configurations_error {
     }
 }
 impl BatchDescribeTypeConfigurationsError {
-    /// Creates a new builder-style object to manufacture [`BatchDescribeTypeConfigurationsError`](crate::model::BatchDescribeTypeConfigurationsError)
+    /// Creates a new builder-style object to manufacture [`BatchDescribeTypeConfigurationsError`](crate::model::BatchDescribeTypeConfigurationsError).
     pub fn builder() -> crate::model::batch_describe_type_configurations_error::Builder {
         crate::model::batch_describe_type_configurations_error::Builder::default()
     }

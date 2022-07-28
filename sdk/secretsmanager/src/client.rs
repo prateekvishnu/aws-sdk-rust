@@ -259,7 +259,7 @@ impl Client {
     /// - The fluent builder is configurable:
     ///   - [`secret_id(impl Into<String>)`](crate::client::fluent_builders::PutResourcePolicy::secret_id) / [`set_secret_id(Option<String>)`](crate::client::fluent_builders::PutResourcePolicy::set_secret_id): <p>The ARN or name of the secret to attach the resource-based policy.</p>  <p>For an ARN, we recommend that you specify a complete ARN rather than a partial ARN. See <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/troubleshoot.html#ARN_secretnamehyphen">Finding a secret from a partial ARN</a>.</p>
     ///   - [`resource_policy(impl Into<String>)`](crate::client::fluent_builders::PutResourcePolicy::resource_policy) / [`set_resource_policy(Option<String>)`](crate::client::fluent_builders::PutResourcePolicy::set_resource_policy): <p>A JSON-formatted string for an Amazon Web Services resource-based policy. For example policies, see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions policy examples</a>.</p>
-    ///   - [`block_public_policy(bool)`](crate::client::fluent_builders::PutResourcePolicy::block_public_policy) / [`set_block_public_policy(Option<bool>)`](crate::client::fluent_builders::PutResourcePolicy::set_block_public_policy): <p>Specifies whether to block resource-based policies that allow broad access to the secret. By default, Secrets Manager blocks policies that allow broad access, for example those that use a wildcard for the principal.</p>
+    ///   - [`block_public_policy(bool)`](crate::client::fluent_builders::PutResourcePolicy::block_public_policy) / [`set_block_public_policy(Option<bool>)`](crate::client::fluent_builders::PutResourcePolicy::set_block_public_policy): <p>Specifies whether to block resource-based policies that allow broad access to the secret, for example those that use a wildcard for the principal.</p>
     /// - On success, responds with [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput) with field(s):
     ///   - [`arn(Option<String>)`](crate::output::PutResourcePolicyOutput::arn): <p>The ARN of the secret.</p>
     ///   - [`name(Option<String>)`](crate::output::PutResourcePolicyOutput::name): <p>The name of the secret.</p>
@@ -413,13 +413,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `CancelRotateSecret`.
     ///
     /// <p>Turns off automatic rotation, and if a rotation is currently in progress, cancels the rotation.</p>
@@ -1179,6 +1178,7 @@ pub mod fluent_builders {
     /// Fluent builder constructing a request to `ListSecrets`.
     ///
     /// <p>Lists the secrets that are stored by Secrets Manager in the Amazon Web Services account, not including secrets that are marked for deletion. To see secrets marked for deletion, use the Secrets Manager console.</p>
+    /// <p>ListSecrets is eventually consistent, however it might not reflect changes from the last five minutes. To get the latest information for a specific secret, use <code>DescribeSecret</code>.</p>
     /// <p>To list the versions of a secret, use <code>ListSecretVersionIds</code>.</p>
     /// <p>To get the secret value from <code>SecretString</code> or <code>SecretBinary</code>, call <code>GetSecretValue</code>.</p>
     /// <p>For information about finding secrets in the console, see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_search-secret.html">Find secrets in Secrets Manager</a>.</p>
@@ -1445,12 +1445,12 @@ pub mod fluent_builders {
             self.inner = self.inner.set_resource_policy(input);
             self
         }
-        /// <p>Specifies whether to block resource-based policies that allow broad access to the secret. By default, Secrets Manager blocks policies that allow broad access, for example those that use a wildcard for the principal.</p>
+        /// <p>Specifies whether to block resource-based policies that allow broad access to the secret, for example those that use a wildcard for the principal.</p>
         pub fn block_public_policy(mut self, input: bool) -> Self {
             self.inner = self.inner.block_public_policy(input);
             self
         }
-        /// <p>Specifies whether to block resource-based policies that allow broad access to the secret. By default, Secrets Manager blocks policies that allow broad access, for example those that use a wildcard for the principal.</p>
+        /// <p>Specifies whether to block resource-based policies that allow broad access to the secret, for example those that use a wildcard for the principal.</p>
         pub fn set_block_public_policy(mut self, input: std::option::Option<bool>) -> Self {
             self.inner = self.inner.set_block_public_policy(input);
             self
@@ -1462,7 +1462,7 @@ pub mod fluent_builders {
     /// <p>We recommend you avoid calling <code>PutSecretValue</code> at a sustained rate of more than once every 10 minutes. When you update the secret value, Secrets Manager creates a new version of the secret. Secrets Manager removes outdated versions when there are more than 100, but it does not remove versions created less than 24 hours ago. If you call <code>PutSecretValue</code> more than once every 10 minutes, you create more versions than Secrets Manager removes, and you will reach the quota for secret versions.</p>
     /// <p>You can specify the staging labels to attach to the new version in <code>VersionStages</code>. If you don't include <code>VersionStages</code>, then Secrets Manager automatically moves the staging label <code>AWSCURRENT</code> to this version. If this operation creates the first version for the secret, then Secrets Manager automatically attaches the staging label <code>AWSCURRENT</code> to it .</p>
     /// <p>If this operation moves the staging label <code>AWSCURRENT</code> from another version to this version, then Secrets Manager also automatically moves the staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed from.</p>
-    /// <p>This operation is idempotent. If a version with a <code>VersionId</code> with the same value as the <code>ClientRequestToken</code> parameter already exists, and you specify the same secret data, the operation succeeds but does nothing. However, if the secret data is different, then the operation fails because you can't modify an existing version; you can only create new ones.</p>
+    /// <p>This operation is idempotent. If you call this operation with a <code>ClientRequestToken</code> that matches an existing version's VersionId, and you specify the same secret data, the operation succeeds but does nothing. However, if the secret data is different, then the operation fails because you can't modify an existing version; you can only create new ones.</p>
     /// <p> <b>Required permissions: </b> <code>secretsmanager:PutSecretValue</code>. For more information, see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"> IAM policy actions for Secrets Manager</a> and <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access control in Secrets Manager</a>. </p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct PutSecretValue {
@@ -2160,7 +2160,7 @@ pub mod fluent_builders {
     /// <p>To change the rotation configuration of a secret, use <code>RotateSecret</code> instead.</p>
     /// <p>We recommend you avoid calling <code>UpdateSecret</code> at a sustained rate of more than once every 10 minutes. When you call <code>UpdateSecret</code> to update the secret value, Secrets Manager creates a new version of the secret. Secrets Manager removes outdated versions when there are more than 100, but it does not remove versions created less than 24 hours ago. If you update the secret value more than once every 10 minutes, you create more versions than Secrets Manager removes, and you will reach the quota for secret versions.</p>
     /// <p>If you include <code>SecretString</code> or <code>SecretBinary</code> to create a new secret version, Secrets Manager automatically attaches the staging label <code>AWSCURRENT</code> to the new version. </p>
-    /// <p>If you call this operation with a <code>VersionId</code> that matches an existing version's <code>ClientRequestToken</code>, the operation results in an error. You can't modify an existing version, you can only create a new version. To remove a version, remove all staging labels from it. See <code>UpdateSecretVersionStage</code>.</p>
+    /// <p>If you call this operation with a <code>ClientRequestToken</code> that matches an existing version's <code>VersionId</code>, the operation results in an error. You can't modify an existing version, you can only create a new version. To remove a version, remove all staging labels from it. See <code>UpdateSecretVersionStage</code>.</p>
     /// <p>If you don't specify an KMS encryption key, Secrets Manager uses the Amazon Web Services managed key <code>aws/secretsmanager</code>. If this key doesn't already exist in your account, then Secrets Manager creates it for you automatically. All users and roles in the Amazon Web Services account automatically have access to use <code>aws/secretsmanager</code>. Creating <code>aws/secretsmanager</code> can result in a one-time significant delay in returning the result. </p>
     /// <p>If the secret is in a different Amazon Web Services account from the credentials calling the API, then you can't use <code>aws/secretsmanager</code> to encrypt the secret, and you must create and use a customer managed key. </p>
     /// <p> <b>Required permissions: </b> <code>secretsmanager:UpdateSecret</code>. For more information, see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"> IAM policy actions for Secrets Manager</a> and <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and access control in Secrets Manager</a>. If you use a customer managed key, you must also have <code>kms:GenerateDataKey</code> and <code>kms:Decrypt</code> permissions on the key. For more information, see <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/security-encryption.html"> Secret encryption and decryption</a>.</p>

@@ -125,6 +125,31 @@ where
         }
     }
 }
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::CreateAccountSubscriptionError, R>>
+    for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::CreateAccountSubscriptionError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, ..} => match err.kind {
+                crate::error::CreateAccountSubscriptionErrorKind::AccessDeniedException(inner) => Error::AccessDeniedException(inner),
+                crate::error::CreateAccountSubscriptionErrorKind::ConflictException(inner) => Error::ConflictException(inner),
+                crate::error::CreateAccountSubscriptionErrorKind::InternalFailureException(inner) => Error::InternalFailureException(inner),
+                crate::error::CreateAccountSubscriptionErrorKind::InvalidParameterValueException(inner) => Error::InvalidParameterValueException(inner),
+                crate::error::CreateAccountSubscriptionErrorKind::PreconditionNotMetException(inner) => Error::PreconditionNotMetException(inner),
+                crate::error::CreateAccountSubscriptionErrorKind::ResourceExistsException(inner) => Error::ResourceExistsException(inner),
+                crate::error::CreateAccountSubscriptionErrorKind::ResourceNotFoundException(inner) => Error::ResourceNotFoundException(inner),
+                crate::error::CreateAccountSubscriptionErrorKind::ResourceUnavailableException(inner) => Error::ResourceUnavailableException(inner),
+                crate::error::CreateAccountSubscriptionErrorKind::ThrottlingException(inner) => Error::ThrottlingException(inner),
+                crate::error::CreateAccountSubscriptionErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            }
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
 impl<R> From<aws_smithy_http::result::SdkError<crate::error::CreateAnalysisError, R>> for Error
 where
     R: Send + Sync + std::fmt::Debug + 'static,
@@ -1301,6 +1326,28 @@ where
                     Error::Unhandled(inner)
                 }
             },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::DescribeAccountSubscriptionError, R>>
+    for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::DescribeAccountSubscriptionError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, ..} => match err.kind {
+                crate::error::DescribeAccountSubscriptionErrorKind::AccessDeniedException(inner) => Error::AccessDeniedException(inner),
+                crate::error::DescribeAccountSubscriptionErrorKind::InternalFailureException(inner) => Error::InternalFailureException(inner),
+                crate::error::DescribeAccountSubscriptionErrorKind::InvalidParameterValueException(inner) => Error::InvalidParameterValueException(inner),
+                crate::error::DescribeAccountSubscriptionErrorKind::ResourceNotFoundException(inner) => Error::ResourceNotFoundException(inner),
+                crate::error::DescribeAccountSubscriptionErrorKind::ResourceUnavailableException(inner) => Error::ResourceUnavailableException(inner),
+                crate::error::DescribeAccountSubscriptionErrorKind::ThrottlingException(inner) => Error::ThrottlingException(inner),
+                crate::error::DescribeAccountSubscriptionErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            }
             _ => Error::Unhandled(err.into()),
         }
     }
@@ -3620,6 +3667,28 @@ where
                     Error::Unhandled(inner)
                 }
             },
+            _ => Error::Unhandled(err.into()),
+        }
+    }
+}
+impl<R> From<aws_smithy_http::result::SdkError<crate::error::UpdatePublicSharingSettingsError, R>>
+    for Error
+where
+    R: Send + Sync + std::fmt::Debug + 'static,
+{
+    fn from(
+        err: aws_smithy_http::result::SdkError<crate::error::UpdatePublicSharingSettingsError, R>,
+    ) -> Self {
+        match err {
+            aws_smithy_http::result::SdkError::ServiceError { err, ..} => match err.kind {
+                crate::error::UpdatePublicSharingSettingsErrorKind::AccessDeniedException(inner) => Error::AccessDeniedException(inner),
+                crate::error::UpdatePublicSharingSettingsErrorKind::InternalFailureException(inner) => Error::InternalFailureException(inner),
+                crate::error::UpdatePublicSharingSettingsErrorKind::InvalidParameterValueException(inner) => Error::InvalidParameterValueException(inner),
+                crate::error::UpdatePublicSharingSettingsErrorKind::ResourceNotFoundException(inner) => Error::ResourceNotFoundException(inner),
+                crate::error::UpdatePublicSharingSettingsErrorKind::ThrottlingException(inner) => Error::ThrottlingException(inner),
+                crate::error::UpdatePublicSharingSettingsErrorKind::UnsupportedPricingPlanException(inner) => Error::UnsupportedPricingPlanException(inner),
+                crate::error::UpdatePublicSharingSettingsErrorKind::Unhandled(inner) => Error::Unhandled(inner),
+            }
             _ => Error::Unhandled(err.into()),
         }
     }

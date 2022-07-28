@@ -406,13 +406,13 @@ pub enum CreateBackupErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>A target table with the specified name is either being created or deleted. </p>
     TableInUseException(crate::error::TableInUseException),
-    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account.</p>
+    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account or the subscriber is operating in the wrong Amazon Web Services Region.</p>
     TableNotFoundException(crate::error::TableNotFoundException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -551,11 +551,11 @@ pub enum CreateGlobalTableErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
-    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account.</p>
+    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account or the subscriber is operating in the wrong Amazon Web Services Region.</p>
     TableNotFoundException(crate::error::TableNotFoundException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -689,9 +689,9 @@ pub enum CreateTableErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The operation conflicts with the resource's availability. For example, you attempted to recreate an existing table, or tried to delete a table currently in the <code>CREATING</code> state.</p>
     ResourceInUseException(crate::error::ResourceInUseException),
@@ -813,9 +813,9 @@ pub enum DeleteBackupErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -1103,9 +1103,9 @@ pub enum DeleteTableErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The operation conflicts with the resource's availability. For example, you attempted to recreate an existing table, or tried to delete a table currently in the <code>CREATING</code> state.</p>
     ResourceInUseException(crate::error::ResourceInUseException),
@@ -1345,7 +1345,7 @@ pub enum DescribeContinuousBackupsErrorKind {
     InternalServerError(crate::error::InternalServerError),
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
-    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account.</p>
+    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account or the subscriber is operating in the wrong Amazon Web Services Region.</p>
     TableNotFoundException(crate::error::TableNotFoundException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -1649,9 +1649,9 @@ pub enum DescribeExportErrorKind {
     /// <p>An error occurred on the server side.</p>
     InternalServerError(crate::error::InternalServerError),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -2569,9 +2569,9 @@ pub enum DisableKinesisStreamingDestinationErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The operation conflicts with the resource's availability. For example, you attempted to recreate an existing table, or tried to delete a table currently in the <code>CREATING</code> state.</p>
     ResourceInUseException(crate::error::ResourceInUseException),
@@ -2732,9 +2732,9 @@ pub enum EnableKinesisStreamingDestinationErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The operation conflicts with the resource's availability. For example, you attempted to recreate an existing table, or tried to delete a table currently in the <code>CREATING</code> state.</p>
     ResourceInUseException(crate::error::ResourceInUseException),
@@ -3095,13 +3095,13 @@ pub enum ExecuteTransactionErrorKind {
     /// <li> <p>There is insufficient provisioned capacity for the transaction to be completed.</p> </li>
     /// <li> <p>There is a user error, such as an invalid data format.</p> </li>
     /// </ul> <note>
-    /// <p>If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property. This property is not set for other languages. Transaction cancellation reasons are ordered in the order of requested items, if an item has no error it will have <code>NONE</code> code and <code>Null</code> message.</p>
+    /// <p>If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property. This property is not set for other languages. Transaction cancellation reasons are ordered in the order of requested items, if an item has no error it will have <code>None</code> code and <code>Null</code> message.</p>
     /// </note>
     /// <p>Cancellation reason codes and possible error messages:</p>
     /// <ul>
     /// <li> <p>No Errors:</p>
     /// <ul>
-    /// <li> <p>Code: <code>NONE</code> </p> </li>
+    /// <li> <p>Code: <code>None</code> </p> </li>
     /// <li> <p>Message: <code>null</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Conditional Check Failed:</p>
@@ -3326,13 +3326,13 @@ pub enum ExportTableToPointInTimeErrorKind {
     /// <p>The specified <code>ExportTime</code> is outside of the point in time recovery window.</p>
     InvalidExportTimeException(crate::error::InvalidExportTimeException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>Point in time recovery has not yet been enabled for this source table.</p>
     PointInTimeRecoveryUnavailableException(crate::error::PointInTimeRecoveryUnavailableException),
-    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account.</p>
+    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account or the subscriber is operating in the wrong Amazon Web Services Region.</p>
     TableNotFoundException(crate::error::TableNotFoundException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -3807,9 +3807,9 @@ pub enum ListExportsErrorKind {
     /// <p>An error occurred on the server side.</p>
     InternalServerError(crate::error::InternalServerError),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -4516,9 +4516,9 @@ pub enum RestoreTableFromBackupErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>A target table with the specified name already exists. </p>
     TableAlreadyExistsException(crate::error::TableAlreadyExistsException),
@@ -4676,9 +4676,9 @@ pub enum RestoreTableToPointInTimeErrorKind {
     /// <p>An invalid restore time was specified. RestoreDateTime must be between EarliestRestorableDateTime and LatestRestorableDateTime.</p>
     InvalidRestoreTimeException(crate::error::InvalidRestoreTimeException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>Point in time recovery has not yet been enabled for this source table.</p>
     PointInTimeRecoveryUnavailableException(crate::error::PointInTimeRecoveryUnavailableException),
@@ -4686,7 +4686,7 @@ pub enum RestoreTableToPointInTimeErrorKind {
     TableAlreadyExistsException(crate::error::TableAlreadyExistsException),
     /// <p>A target table with the specified name is either being created or deleted. </p>
     TableInUseException(crate::error::TableInUseException),
-    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account.</p>
+    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account or the subscriber is operating in the wrong Amazon Web Services Region.</p>
     TableNotFoundException(crate::error::TableNotFoundException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -4980,9 +4980,9 @@ pub enum TagResourceErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The operation conflicts with the resource's availability. For example, you attempted to recreate an existing table, or tried to delete a table currently in the <code>CREATING</code> state.</p>
     ResourceInUseException(crate::error::ResourceInUseException),
@@ -5133,13 +5133,13 @@ pub enum TransactGetItemsErrorKind {
     /// <li> <p>There is insufficient provisioned capacity for the transaction to be completed.</p> </li>
     /// <li> <p>There is a user error, such as an invalid data format.</p> </li>
     /// </ul> <note>
-    /// <p>If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property. This property is not set for other languages. Transaction cancellation reasons are ordered in the order of requested items, if an item has no error it will have <code>NONE</code> code and <code>Null</code> message.</p>
+    /// <p>If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property. This property is not set for other languages. Transaction cancellation reasons are ordered in the order of requested items, if an item has no error it will have <code>None</code> code and <code>Null</code> message.</p>
     /// </note>
     /// <p>Cancellation reason codes and possible error messages:</p>
     /// <ul>
     /// <li> <p>No Errors:</p>
     /// <ul>
-    /// <li> <p>Code: <code>NONE</code> </p> </li>
+    /// <li> <p>Code: <code>None</code> </p> </li>
     /// <li> <p>Message: <code>null</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Conditional Check Failed:</p>
@@ -5371,13 +5371,13 @@ pub enum TransactWriteItemsErrorKind {
     /// <li> <p>There is insufficient provisioned capacity for the transaction to be completed.</p> </li>
     /// <li> <p>There is a user error, such as an invalid data format.</p> </li>
     /// </ul> <note>
-    /// <p>If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property. This property is not set for other languages. Transaction cancellation reasons are ordered in the order of requested items, if an item has no error it will have <code>NONE</code> code and <code>Null</code> message.</p>
+    /// <p>If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property. This property is not set for other languages. Transaction cancellation reasons are ordered in the order of requested items, if an item has no error it will have <code>None</code> code and <code>Null</code> message.</p>
     /// </note>
     /// <p>Cancellation reason codes and possible error messages:</p>
     /// <ul>
     /// <li> <p>No Errors:</p>
     /// <ul>
-    /// <li> <p>Code: <code>NONE</code> </p> </li>
+    /// <li> <p>Code: <code>None</code> </p> </li>
     /// <li> <p>Message: <code>null</code> </p> </li>
     /// </ul> </li>
     /// <li> <p>Conditional Check Failed:</p>
@@ -5609,9 +5609,9 @@ pub enum UntagResourceErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The operation conflicts with the resource's availability. For example, you attempted to recreate an existing table, or tried to delete a table currently in the <code>CREATING</code> state.</p>
     ResourceInUseException(crate::error::ResourceInUseException),
@@ -5747,7 +5747,7 @@ pub enum UpdateContinuousBackupsErrorKind {
     InternalServerError(crate::error::InternalServerError),
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
-    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account.</p>
+    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account or the subscriber is operating in the wrong Amazon Web Services Region.</p>
     TableNotFoundException(crate::error::TableNotFoundException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -5985,7 +5985,7 @@ pub enum UpdateGlobalTableErrorKind {
     ReplicaAlreadyExistsException(crate::error::ReplicaAlreadyExistsException),
     /// <p>The specified replica is no longer part of the global table.</p>
     ReplicaNotFoundException(crate::error::ReplicaNotFoundException),
-    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account.</p>
+    /// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account or the subscriber is operating in the wrong Amazon Web Services Region.</p>
     TableNotFoundException(crate::error::TableNotFoundException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -6132,9 +6132,9 @@ pub enum UpdateGlobalTableSettingsErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified replica is no longer part of the global table.</p>
     ReplicaNotFoundException(crate::error::ReplicaNotFoundException),
@@ -6457,9 +6457,9 @@ pub enum UpdateTableErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The operation conflicts with the resource's availability. For example, you attempted to recreate an existing table, or tried to delete a table currently in the <code>CREATING</code> state.</p>
     ResourceInUseException(crate::error::ResourceInUseException),
@@ -6586,9 +6586,9 @@ pub enum UpdateTableReplicaAutoScalingErrorKind {
     /// <p>An error occurred on the server side.</p>
     InternalServerError(crate::error::InternalServerError),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The operation conflicts with the resource's availability. For example, you attempted to recreate an existing table, or tried to delete a table currently in the <code>CREATING</code> state.</p>
     ResourceInUseException(crate::error::ResourceInUseException),
@@ -6724,9 +6724,9 @@ pub enum UpdateTimeToLiveErrorKind {
     #[allow(missing_docs)] // documentation missing in model
     InvalidEndpointException(crate::error::InvalidEndpointException),
     /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-    /// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-    /// <p>There is a soft account quota of 256 tables.</p>
+    /// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+    /// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+    /// <p>There is a soft account quota of 2,500 tables.</p>
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The operation conflicts with the resource's availability. For example, you attempted to recreate an existing table, or tried to delete a table currently in the <code>CREATING</code> state.</p>
     ResourceInUseException(crate::error::ResourceInUseException),
@@ -6876,10 +6876,10 @@ impl std::fmt::Display for ResourceNotFoundException {
     }
 }
 impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
 pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6895,7 +6895,7 @@ pub mod resource_not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
         pub fn build(self) -> crate::error::ResourceNotFoundException {
             crate::error::ResourceNotFoundException {
                 message: self.message,
@@ -6904,7 +6904,7 @@ pub mod resource_not_found_exception {
     }
 }
 impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     pub fn builder() -> crate::error::resource_not_found_exception::Builder {
         crate::error::resource_not_found_exception::Builder::default()
     }
@@ -6940,10 +6940,10 @@ impl std::fmt::Display for ResourceInUseException {
     }
 }
 impl std::error::Error for ResourceInUseException {}
-/// See [`ResourceInUseException`](crate::error::ResourceInUseException)
+/// See [`ResourceInUseException`](crate::error::ResourceInUseException).
 pub mod resource_in_use_exception {
-    /// A builder for [`ResourceInUseException`](crate::error::ResourceInUseException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceInUseException`](crate::error::ResourceInUseException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6959,7 +6959,7 @@ pub mod resource_in_use_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceInUseException`](crate::error::ResourceInUseException)
+        /// Consumes the builder and constructs a [`ResourceInUseException`](crate::error::ResourceInUseException).
         pub fn build(self) -> crate::error::ResourceInUseException {
             crate::error::ResourceInUseException {
                 message: self.message,
@@ -6968,16 +6968,16 @@ pub mod resource_in_use_exception {
     }
 }
 impl ResourceInUseException {
-    /// Creates a new builder-style object to manufacture [`ResourceInUseException`](crate::error::ResourceInUseException)
+    /// Creates a new builder-style object to manufacture [`ResourceInUseException`](crate::error::ResourceInUseException).
     pub fn builder() -> crate::error::resource_in_use_exception::Builder {
         crate::error::resource_in_use_exception::Builder::default()
     }
 }
 
 /// <p>There is no limit to the number of daily on-demand backups that can be taken. </p>
-/// <p>Up to 50 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
-/// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 25 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
-/// <p>There is a soft account quota of 256 tables.</p>
+/// <p>Up to 500 simultaneous table operations are allowed per account. These operations include <code>CreateTable</code>, <code>UpdateTable</code>, <code>DeleteTable</code>,<code>UpdateTimeToLive</code>, <code>RestoreTableFromBackup</code>, and <code>RestoreTableToPointInTime</code>. </p>
+/// <p>The only exception is when you are creating a table with one or more secondary indexes. You can have up to 250 such requests running at a time; however, if the table or index specifications are complex, DynamoDB might temporarily reduce the number of concurrent operations.</p>
+/// <p>There is a soft account quota of 2,500 tables.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LimitExceededException {
@@ -7007,10 +7007,10 @@ impl std::fmt::Display for LimitExceededException {
     }
 }
 impl std::error::Error for LimitExceededException {}
-/// See [`LimitExceededException`](crate::error::LimitExceededException)
+/// See [`LimitExceededException`](crate::error::LimitExceededException).
 pub mod limit_exceeded_exception {
-    /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`LimitExceededException`](crate::error::LimitExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7026,7 +7026,7 @@ pub mod limit_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`LimitExceededException`](crate::error::LimitExceededException)
+        /// Consumes the builder and constructs a [`LimitExceededException`](crate::error::LimitExceededException).
         pub fn build(self) -> crate::error::LimitExceededException {
             crate::error::LimitExceededException {
                 message: self.message,
@@ -7035,7 +7035,7 @@ pub mod limit_exceeded_exception {
     }
 }
 impl LimitExceededException {
-    /// Creates a new builder-style object to manufacture [`LimitExceededException`](crate::error::LimitExceededException)
+    /// Creates a new builder-style object to manufacture [`LimitExceededException`](crate::error::LimitExceededException).
     pub fn builder() -> crate::error::limit_exceeded_exception::Builder {
         crate::error::limit_exceeded_exception::Builder::default()
     }
@@ -7071,10 +7071,10 @@ impl std::fmt::Display for InvalidEndpointException {
     }
 }
 impl std::error::Error for InvalidEndpointException {}
-/// See [`InvalidEndpointException`](crate::error::InvalidEndpointException)
+/// See [`InvalidEndpointException`](crate::error::InvalidEndpointException).
 pub mod invalid_endpoint_exception {
-    /// A builder for [`InvalidEndpointException`](crate::error::InvalidEndpointException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidEndpointException`](crate::error::InvalidEndpointException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7090,7 +7090,7 @@ pub mod invalid_endpoint_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidEndpointException`](crate::error::InvalidEndpointException)
+        /// Consumes the builder and constructs a [`InvalidEndpointException`](crate::error::InvalidEndpointException).
         pub fn build(self) -> crate::error::InvalidEndpointException {
             crate::error::InvalidEndpointException {
                 message: self.message,
@@ -7099,7 +7099,7 @@ pub mod invalid_endpoint_exception {
     }
 }
 impl InvalidEndpointException {
-    /// Creates a new builder-style object to manufacture [`InvalidEndpointException`](crate::error::InvalidEndpointException)
+    /// Creates a new builder-style object to manufacture [`InvalidEndpointException`](crate::error::InvalidEndpointException).
     pub fn builder() -> crate::error::invalid_endpoint_exception::Builder {
         crate::error::invalid_endpoint_exception::Builder::default()
     }
@@ -7135,10 +7135,10 @@ impl std::fmt::Display for InternalServerError {
     }
 }
 impl std::error::Error for InternalServerError {}
-/// See [`InternalServerError`](crate::error::InternalServerError)
+/// See [`InternalServerError`](crate::error::InternalServerError).
 pub mod internal_server_error {
-    /// A builder for [`InternalServerError`](crate::error::InternalServerError)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalServerError`](crate::error::InternalServerError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7154,7 +7154,7 @@ pub mod internal_server_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalServerError`](crate::error::InternalServerError)
+        /// Consumes the builder and constructs a [`InternalServerError`](crate::error::InternalServerError).
         pub fn build(self) -> crate::error::InternalServerError {
             crate::error::InternalServerError {
                 message: self.message,
@@ -7163,7 +7163,7 @@ pub mod internal_server_error {
     }
 }
 impl InternalServerError {
-    /// Creates a new builder-style object to manufacture [`InternalServerError`](crate::error::InternalServerError)
+    /// Creates a new builder-style object to manufacture [`InternalServerError`](crate::error::InternalServerError).
     pub fn builder() -> crate::error::internal_server_error::Builder {
         crate::error::internal_server_error::Builder::default()
     }
@@ -7199,10 +7199,10 @@ impl std::fmt::Display for TransactionConflictException {
     }
 }
 impl std::error::Error for TransactionConflictException {}
-/// See [`TransactionConflictException`](crate::error::TransactionConflictException)
+/// See [`TransactionConflictException`](crate::error::TransactionConflictException).
 pub mod transaction_conflict_exception {
-    /// A builder for [`TransactionConflictException`](crate::error::TransactionConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`TransactionConflictException`](crate::error::TransactionConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7218,7 +7218,7 @@ pub mod transaction_conflict_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TransactionConflictException`](crate::error::TransactionConflictException)
+        /// Consumes the builder and constructs a [`TransactionConflictException`](crate::error::TransactionConflictException).
         pub fn build(self) -> crate::error::TransactionConflictException {
             crate::error::TransactionConflictException {
                 message: self.message,
@@ -7227,7 +7227,7 @@ pub mod transaction_conflict_exception {
     }
 }
 impl TransactionConflictException {
-    /// Creates a new builder-style object to manufacture [`TransactionConflictException`](crate::error::TransactionConflictException)
+    /// Creates a new builder-style object to manufacture [`TransactionConflictException`](crate::error::TransactionConflictException).
     pub fn builder() -> crate::error::transaction_conflict_exception::Builder {
         crate::error::transaction_conflict_exception::Builder::default()
     }
@@ -7263,10 +7263,10 @@ impl std::fmt::Display for RequestLimitExceeded {
     }
 }
 impl std::error::Error for RequestLimitExceeded {}
-/// See [`RequestLimitExceeded`](crate::error::RequestLimitExceeded)
+/// See [`RequestLimitExceeded`](crate::error::RequestLimitExceeded).
 pub mod request_limit_exceeded {
-    /// A builder for [`RequestLimitExceeded`](crate::error::RequestLimitExceeded)
-    #[non_exhaustive]
+
+    /// A builder for [`RequestLimitExceeded`](crate::error::RequestLimitExceeded).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7282,7 +7282,7 @@ pub mod request_limit_exceeded {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`RequestLimitExceeded`](crate::error::RequestLimitExceeded)
+        /// Consumes the builder and constructs a [`RequestLimitExceeded`](crate::error::RequestLimitExceeded).
         pub fn build(self) -> crate::error::RequestLimitExceeded {
             crate::error::RequestLimitExceeded {
                 message: self.message,
@@ -7291,7 +7291,7 @@ pub mod request_limit_exceeded {
     }
 }
 impl RequestLimitExceeded {
-    /// Creates a new builder-style object to manufacture [`RequestLimitExceeded`](crate::error::RequestLimitExceeded)
+    /// Creates a new builder-style object to manufacture [`RequestLimitExceeded`](crate::error::RequestLimitExceeded).
     pub fn builder() -> crate::error::request_limit_exceeded::Builder {
         crate::error::request_limit_exceeded::Builder::default()
     }
@@ -7327,10 +7327,10 @@ impl std::fmt::Display for ProvisionedThroughputExceededException {
     }
 }
 impl std::error::Error for ProvisionedThroughputExceededException {}
-/// See [`ProvisionedThroughputExceededException`](crate::error::ProvisionedThroughputExceededException)
+/// See [`ProvisionedThroughputExceededException`](crate::error::ProvisionedThroughputExceededException).
 pub mod provisioned_throughput_exceeded_exception {
-    /// A builder for [`ProvisionedThroughputExceededException`](crate::error::ProvisionedThroughputExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`ProvisionedThroughputExceededException`](crate::error::ProvisionedThroughputExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7346,7 +7346,7 @@ pub mod provisioned_throughput_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisionedThroughputExceededException`](crate::error::ProvisionedThroughputExceededException)
+        /// Consumes the builder and constructs a [`ProvisionedThroughputExceededException`](crate::error::ProvisionedThroughputExceededException).
         pub fn build(self) -> crate::error::ProvisionedThroughputExceededException {
             crate::error::ProvisionedThroughputExceededException {
                 message: self.message,
@@ -7355,7 +7355,7 @@ pub mod provisioned_throughput_exceeded_exception {
     }
 }
 impl ProvisionedThroughputExceededException {
-    /// Creates a new builder-style object to manufacture [`ProvisionedThroughputExceededException`](crate::error::ProvisionedThroughputExceededException)
+    /// Creates a new builder-style object to manufacture [`ProvisionedThroughputExceededException`](crate::error::ProvisionedThroughputExceededException).
     pub fn builder() -> crate::error::provisioned_throughput_exceeded_exception::Builder {
         crate::error::provisioned_throughput_exceeded_exception::Builder::default()
     }
@@ -7391,10 +7391,10 @@ impl std::fmt::Display for ItemCollectionSizeLimitExceededException {
     }
 }
 impl std::error::Error for ItemCollectionSizeLimitExceededException {}
-/// See [`ItemCollectionSizeLimitExceededException`](crate::error::ItemCollectionSizeLimitExceededException)
+/// See [`ItemCollectionSizeLimitExceededException`](crate::error::ItemCollectionSizeLimitExceededException).
 pub mod item_collection_size_limit_exceeded_exception {
-    /// A builder for [`ItemCollectionSizeLimitExceededException`](crate::error::ItemCollectionSizeLimitExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`ItemCollectionSizeLimitExceededException`](crate::error::ItemCollectionSizeLimitExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7410,7 +7410,7 @@ pub mod item_collection_size_limit_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ItemCollectionSizeLimitExceededException`](crate::error::ItemCollectionSizeLimitExceededException)
+        /// Consumes the builder and constructs a [`ItemCollectionSizeLimitExceededException`](crate::error::ItemCollectionSizeLimitExceededException).
         pub fn build(self) -> crate::error::ItemCollectionSizeLimitExceededException {
             crate::error::ItemCollectionSizeLimitExceededException {
                 message: self.message,
@@ -7419,7 +7419,7 @@ pub mod item_collection_size_limit_exceeded_exception {
     }
 }
 impl ItemCollectionSizeLimitExceededException {
-    /// Creates a new builder-style object to manufacture [`ItemCollectionSizeLimitExceededException`](crate::error::ItemCollectionSizeLimitExceededException)
+    /// Creates a new builder-style object to manufacture [`ItemCollectionSizeLimitExceededException`](crate::error::ItemCollectionSizeLimitExceededException).
     pub fn builder() -> crate::error::item_collection_size_limit_exceeded_exception::Builder {
         crate::error::item_collection_size_limit_exceeded_exception::Builder::default()
     }
@@ -7455,10 +7455,10 @@ impl std::fmt::Display for ConditionalCheckFailedException {
     }
 }
 impl std::error::Error for ConditionalCheckFailedException {}
-/// See [`ConditionalCheckFailedException`](crate::error::ConditionalCheckFailedException)
+/// See [`ConditionalCheckFailedException`](crate::error::ConditionalCheckFailedException).
 pub mod conditional_check_failed_exception {
-    /// A builder for [`ConditionalCheckFailedException`](crate::error::ConditionalCheckFailedException)
-    #[non_exhaustive]
+
+    /// A builder for [`ConditionalCheckFailedException`](crate::error::ConditionalCheckFailedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7474,7 +7474,7 @@ pub mod conditional_check_failed_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConditionalCheckFailedException`](crate::error::ConditionalCheckFailedException)
+        /// Consumes the builder and constructs a [`ConditionalCheckFailedException`](crate::error::ConditionalCheckFailedException).
         pub fn build(self) -> crate::error::ConditionalCheckFailedException {
             crate::error::ConditionalCheckFailedException {
                 message: self.message,
@@ -7483,7 +7483,7 @@ pub mod conditional_check_failed_exception {
     }
 }
 impl ConditionalCheckFailedException {
-    /// Creates a new builder-style object to manufacture [`ConditionalCheckFailedException`](crate::error::ConditionalCheckFailedException)
+    /// Creates a new builder-style object to manufacture [`ConditionalCheckFailedException`](crate::error::ConditionalCheckFailedException).
     pub fn builder() -> crate::error::conditional_check_failed_exception::Builder {
         crate::error::conditional_check_failed_exception::Builder::default()
     }
@@ -7519,10 +7519,10 @@ impl std::fmt::Display for ReplicaNotFoundException {
     }
 }
 impl std::error::Error for ReplicaNotFoundException {}
-/// See [`ReplicaNotFoundException`](crate::error::ReplicaNotFoundException)
+/// See [`ReplicaNotFoundException`](crate::error::ReplicaNotFoundException).
 pub mod replica_not_found_exception {
-    /// A builder for [`ReplicaNotFoundException`](crate::error::ReplicaNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ReplicaNotFoundException`](crate::error::ReplicaNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7538,7 +7538,7 @@ pub mod replica_not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicaNotFoundException`](crate::error::ReplicaNotFoundException)
+        /// Consumes the builder and constructs a [`ReplicaNotFoundException`](crate::error::ReplicaNotFoundException).
         pub fn build(self) -> crate::error::ReplicaNotFoundException {
             crate::error::ReplicaNotFoundException {
                 message: self.message,
@@ -7547,7 +7547,7 @@ pub mod replica_not_found_exception {
     }
 }
 impl ReplicaNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ReplicaNotFoundException`](crate::error::ReplicaNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ReplicaNotFoundException`](crate::error::ReplicaNotFoundException).
     pub fn builder() -> crate::error::replica_not_found_exception::Builder {
         crate::error::replica_not_found_exception::Builder::default()
     }
@@ -7583,10 +7583,10 @@ impl std::fmt::Display for IndexNotFoundException {
     }
 }
 impl std::error::Error for IndexNotFoundException {}
-/// See [`IndexNotFoundException`](crate::error::IndexNotFoundException)
+/// See [`IndexNotFoundException`](crate::error::IndexNotFoundException).
 pub mod index_not_found_exception {
-    /// A builder for [`IndexNotFoundException`](crate::error::IndexNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`IndexNotFoundException`](crate::error::IndexNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7602,7 +7602,7 @@ pub mod index_not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`IndexNotFoundException`](crate::error::IndexNotFoundException)
+        /// Consumes the builder and constructs a [`IndexNotFoundException`](crate::error::IndexNotFoundException).
         pub fn build(self) -> crate::error::IndexNotFoundException {
             crate::error::IndexNotFoundException {
                 message: self.message,
@@ -7611,7 +7611,7 @@ pub mod index_not_found_exception {
     }
 }
 impl IndexNotFoundException {
-    /// Creates a new builder-style object to manufacture [`IndexNotFoundException`](crate::error::IndexNotFoundException)
+    /// Creates a new builder-style object to manufacture [`IndexNotFoundException`](crate::error::IndexNotFoundException).
     pub fn builder() -> crate::error::index_not_found_exception::Builder {
         crate::error::index_not_found_exception::Builder::default()
     }
@@ -7647,10 +7647,10 @@ impl std::fmt::Display for GlobalTableNotFoundException {
     }
 }
 impl std::error::Error for GlobalTableNotFoundException {}
-/// See [`GlobalTableNotFoundException`](crate::error::GlobalTableNotFoundException)
+/// See [`GlobalTableNotFoundException`](crate::error::GlobalTableNotFoundException).
 pub mod global_table_not_found_exception {
-    /// A builder for [`GlobalTableNotFoundException`](crate::error::GlobalTableNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`GlobalTableNotFoundException`](crate::error::GlobalTableNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7666,7 +7666,7 @@ pub mod global_table_not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlobalTableNotFoundException`](crate::error::GlobalTableNotFoundException)
+        /// Consumes the builder and constructs a [`GlobalTableNotFoundException`](crate::error::GlobalTableNotFoundException).
         pub fn build(self) -> crate::error::GlobalTableNotFoundException {
             crate::error::GlobalTableNotFoundException {
                 message: self.message,
@@ -7675,13 +7675,13 @@ pub mod global_table_not_found_exception {
     }
 }
 impl GlobalTableNotFoundException {
-    /// Creates a new builder-style object to manufacture [`GlobalTableNotFoundException`](crate::error::GlobalTableNotFoundException)
+    /// Creates a new builder-style object to manufacture [`GlobalTableNotFoundException`](crate::error::GlobalTableNotFoundException).
     pub fn builder() -> crate::error::global_table_not_found_exception::Builder {
         crate::error::global_table_not_found_exception::Builder::default()
     }
 }
 
-/// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account.</p>
+/// <p>A source table with the name <code>TableName</code> does not currently exist within the subscriber's account or the subscriber is operating in the wrong Amazon Web Services Region.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct TableNotFoundException {
@@ -7711,10 +7711,10 @@ impl std::fmt::Display for TableNotFoundException {
     }
 }
 impl std::error::Error for TableNotFoundException {}
-/// See [`TableNotFoundException`](crate::error::TableNotFoundException)
+/// See [`TableNotFoundException`](crate::error::TableNotFoundException).
 pub mod table_not_found_exception {
-    /// A builder for [`TableNotFoundException`](crate::error::TableNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`TableNotFoundException`](crate::error::TableNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7730,7 +7730,7 @@ pub mod table_not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableNotFoundException`](crate::error::TableNotFoundException)
+        /// Consumes the builder and constructs a [`TableNotFoundException`](crate::error::TableNotFoundException).
         pub fn build(self) -> crate::error::TableNotFoundException {
             crate::error::TableNotFoundException {
                 message: self.message,
@@ -7739,7 +7739,7 @@ pub mod table_not_found_exception {
     }
 }
 impl TableNotFoundException {
-    /// Creates a new builder-style object to manufacture [`TableNotFoundException`](crate::error::TableNotFoundException)
+    /// Creates a new builder-style object to manufacture [`TableNotFoundException`](crate::error::TableNotFoundException).
     pub fn builder() -> crate::error::table_not_found_exception::Builder {
         crate::error::table_not_found_exception::Builder::default()
     }
@@ -7775,10 +7775,10 @@ impl std::fmt::Display for ReplicaAlreadyExistsException {
     }
 }
 impl std::error::Error for ReplicaAlreadyExistsException {}
-/// See [`ReplicaAlreadyExistsException`](crate::error::ReplicaAlreadyExistsException)
+/// See [`ReplicaAlreadyExistsException`](crate::error::ReplicaAlreadyExistsException).
 pub mod replica_already_exists_exception {
-    /// A builder for [`ReplicaAlreadyExistsException`](crate::error::ReplicaAlreadyExistsException)
-    #[non_exhaustive]
+
+    /// A builder for [`ReplicaAlreadyExistsException`](crate::error::ReplicaAlreadyExistsException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7794,7 +7794,7 @@ pub mod replica_already_exists_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ReplicaAlreadyExistsException`](crate::error::ReplicaAlreadyExistsException)
+        /// Consumes the builder and constructs a [`ReplicaAlreadyExistsException`](crate::error::ReplicaAlreadyExistsException).
         pub fn build(self) -> crate::error::ReplicaAlreadyExistsException {
             crate::error::ReplicaAlreadyExistsException {
                 message: self.message,
@@ -7803,7 +7803,7 @@ pub mod replica_already_exists_exception {
     }
 }
 impl ReplicaAlreadyExistsException {
-    /// Creates a new builder-style object to manufacture [`ReplicaAlreadyExistsException`](crate::error::ReplicaAlreadyExistsException)
+    /// Creates a new builder-style object to manufacture [`ReplicaAlreadyExistsException`](crate::error::ReplicaAlreadyExistsException).
     pub fn builder() -> crate::error::replica_already_exists_exception::Builder {
         crate::error::replica_already_exists_exception::Builder::default()
     }
@@ -7839,10 +7839,10 @@ impl std::fmt::Display for ContinuousBackupsUnavailableException {
     }
 }
 impl std::error::Error for ContinuousBackupsUnavailableException {}
-/// See [`ContinuousBackupsUnavailableException`](crate::error::ContinuousBackupsUnavailableException)
+/// See [`ContinuousBackupsUnavailableException`](crate::error::ContinuousBackupsUnavailableException).
 pub mod continuous_backups_unavailable_exception {
-    /// A builder for [`ContinuousBackupsUnavailableException`](crate::error::ContinuousBackupsUnavailableException)
-    #[non_exhaustive]
+
+    /// A builder for [`ContinuousBackupsUnavailableException`](crate::error::ContinuousBackupsUnavailableException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7858,7 +7858,7 @@ pub mod continuous_backups_unavailable_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ContinuousBackupsUnavailableException`](crate::error::ContinuousBackupsUnavailableException)
+        /// Consumes the builder and constructs a [`ContinuousBackupsUnavailableException`](crate::error::ContinuousBackupsUnavailableException).
         pub fn build(self) -> crate::error::ContinuousBackupsUnavailableException {
             crate::error::ContinuousBackupsUnavailableException {
                 message: self.message,
@@ -7867,7 +7867,7 @@ pub mod continuous_backups_unavailable_exception {
     }
 }
 impl ContinuousBackupsUnavailableException {
-    /// Creates a new builder-style object to manufacture [`ContinuousBackupsUnavailableException`](crate::error::ContinuousBackupsUnavailableException)
+    /// Creates a new builder-style object to manufacture [`ContinuousBackupsUnavailableException`](crate::error::ContinuousBackupsUnavailableException).
     pub fn builder() -> crate::error::continuous_backups_unavailable_exception::Builder {
         crate::error::continuous_backups_unavailable_exception::Builder::default()
     }
@@ -7903,10 +7903,10 @@ impl std::fmt::Display for TransactionInProgressException {
     }
 }
 impl std::error::Error for TransactionInProgressException {}
-/// See [`TransactionInProgressException`](crate::error::TransactionInProgressException)
+/// See [`TransactionInProgressException`](crate::error::TransactionInProgressException).
 pub mod transaction_in_progress_exception {
-    /// A builder for [`TransactionInProgressException`](crate::error::TransactionInProgressException)
-    #[non_exhaustive]
+
+    /// A builder for [`TransactionInProgressException`](crate::error::TransactionInProgressException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7922,7 +7922,7 @@ pub mod transaction_in_progress_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TransactionInProgressException`](crate::error::TransactionInProgressException)
+        /// Consumes the builder and constructs a [`TransactionInProgressException`](crate::error::TransactionInProgressException).
         pub fn build(self) -> crate::error::TransactionInProgressException {
             crate::error::TransactionInProgressException {
                 message: self.message,
@@ -7931,7 +7931,7 @@ pub mod transaction_in_progress_exception {
     }
 }
 impl TransactionInProgressException {
-    /// Creates a new builder-style object to manufacture [`TransactionInProgressException`](crate::error::TransactionInProgressException)
+    /// Creates a new builder-style object to manufacture [`TransactionInProgressException`](crate::error::TransactionInProgressException).
     pub fn builder() -> crate::error::transaction_in_progress_exception::Builder {
         crate::error::transaction_in_progress_exception::Builder::default()
     }
@@ -7954,13 +7954,13 @@ impl TransactionInProgressException {
 /// <li> <p>There is insufficient provisioned capacity for the transaction to be completed.</p> </li>
 /// <li> <p>There is a user error, such as an invalid data format.</p> </li>
 /// </ul> <note>
-/// <p>If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property. This property is not set for other languages. Transaction cancellation reasons are ordered in the order of requested items, if an item has no error it will have <code>NONE</code> code and <code>Null</code> message.</p>
+/// <p>If using Java, DynamoDB lists the cancellation reasons on the <code>CancellationReasons</code> property. This property is not set for other languages. Transaction cancellation reasons are ordered in the order of requested items, if an item has no error it will have <code>None</code> code and <code>Null</code> message.</p>
 /// </note>
 /// <p>Cancellation reason codes and possible error messages:</p>
 /// <ul>
 /// <li> <p>No Errors:</p>
 /// <ul>
-/// <li> <p>Code: <code>NONE</code> </p> </li>
+/// <li> <p>Code: <code>None</code> </p> </li>
 /// <li> <p>Message: <code>null</code> </p> </li>
 /// </ul> </li>
 /// <li> <p>Conditional Check Failed:</p>
@@ -8060,10 +8060,10 @@ impl std::fmt::Display for TransactionCanceledException {
     }
 }
 impl std::error::Error for TransactionCanceledException {}
-/// See [`TransactionCanceledException`](crate::error::TransactionCanceledException)
+/// See [`TransactionCanceledException`](crate::error::TransactionCanceledException).
 pub mod transaction_canceled_exception {
-    /// A builder for [`TransactionCanceledException`](crate::error::TransactionCanceledException)
-    #[non_exhaustive]
+
+    /// A builder for [`TransactionCanceledException`](crate::error::TransactionCanceledException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8100,7 +8100,7 @@ pub mod transaction_canceled_exception {
             self.cancellation_reasons = input;
             self
         }
-        /// Consumes the builder and constructs a [`TransactionCanceledException`](crate::error::TransactionCanceledException)
+        /// Consumes the builder and constructs a [`TransactionCanceledException`](crate::error::TransactionCanceledException).
         pub fn build(self) -> crate::error::TransactionCanceledException {
             crate::error::TransactionCanceledException {
                 message: self.message,
@@ -8110,7 +8110,7 @@ pub mod transaction_canceled_exception {
     }
 }
 impl TransactionCanceledException {
-    /// Creates a new builder-style object to manufacture [`TransactionCanceledException`](crate::error::TransactionCanceledException)
+    /// Creates a new builder-style object to manufacture [`TransactionCanceledException`](crate::error::TransactionCanceledException).
     pub fn builder() -> crate::error::transaction_canceled_exception::Builder {
         crate::error::transaction_canceled_exception::Builder::default()
     }
@@ -8146,10 +8146,10 @@ impl std::fmt::Display for IdempotentParameterMismatchException {
     }
 }
 impl std::error::Error for IdempotentParameterMismatchException {}
-/// See [`IdempotentParameterMismatchException`](crate::error::IdempotentParameterMismatchException)
+/// See [`IdempotentParameterMismatchException`](crate::error::IdempotentParameterMismatchException).
 pub mod idempotent_parameter_mismatch_exception {
-    /// A builder for [`IdempotentParameterMismatchException`](crate::error::IdempotentParameterMismatchException)
-    #[non_exhaustive]
+
+    /// A builder for [`IdempotentParameterMismatchException`](crate::error::IdempotentParameterMismatchException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8165,7 +8165,7 @@ pub mod idempotent_parameter_mismatch_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`IdempotentParameterMismatchException`](crate::error::IdempotentParameterMismatchException)
+        /// Consumes the builder and constructs a [`IdempotentParameterMismatchException`](crate::error::IdempotentParameterMismatchException).
         pub fn build(self) -> crate::error::IdempotentParameterMismatchException {
             crate::error::IdempotentParameterMismatchException {
                 message: self.message,
@@ -8174,7 +8174,7 @@ pub mod idempotent_parameter_mismatch_exception {
     }
 }
 impl IdempotentParameterMismatchException {
-    /// Creates a new builder-style object to manufacture [`IdempotentParameterMismatchException`](crate::error::IdempotentParameterMismatchException)
+    /// Creates a new builder-style object to manufacture [`IdempotentParameterMismatchException`](crate::error::IdempotentParameterMismatchException).
     pub fn builder() -> crate::error::idempotent_parameter_mismatch_exception::Builder {
         crate::error::idempotent_parameter_mismatch_exception::Builder::default()
     }
@@ -8210,10 +8210,10 @@ impl std::fmt::Display for TableInUseException {
     }
 }
 impl std::error::Error for TableInUseException {}
-/// See [`TableInUseException`](crate::error::TableInUseException)
+/// See [`TableInUseException`](crate::error::TableInUseException).
 pub mod table_in_use_exception {
-    /// A builder for [`TableInUseException`](crate::error::TableInUseException)
-    #[non_exhaustive]
+
+    /// A builder for [`TableInUseException`](crate::error::TableInUseException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8229,7 +8229,7 @@ pub mod table_in_use_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableInUseException`](crate::error::TableInUseException)
+        /// Consumes the builder and constructs a [`TableInUseException`](crate::error::TableInUseException).
         pub fn build(self) -> crate::error::TableInUseException {
             crate::error::TableInUseException {
                 message: self.message,
@@ -8238,7 +8238,7 @@ pub mod table_in_use_exception {
     }
 }
 impl TableInUseException {
-    /// Creates a new builder-style object to manufacture [`TableInUseException`](crate::error::TableInUseException)
+    /// Creates a new builder-style object to manufacture [`TableInUseException`](crate::error::TableInUseException).
     pub fn builder() -> crate::error::table_in_use_exception::Builder {
         crate::error::table_in_use_exception::Builder::default()
     }
@@ -8274,10 +8274,10 @@ impl std::fmt::Display for TableAlreadyExistsException {
     }
 }
 impl std::error::Error for TableAlreadyExistsException {}
-/// See [`TableAlreadyExistsException`](crate::error::TableAlreadyExistsException)
+/// See [`TableAlreadyExistsException`](crate::error::TableAlreadyExistsException).
 pub mod table_already_exists_exception {
-    /// A builder for [`TableAlreadyExistsException`](crate::error::TableAlreadyExistsException)
-    #[non_exhaustive]
+
+    /// A builder for [`TableAlreadyExistsException`](crate::error::TableAlreadyExistsException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8293,7 +8293,7 @@ pub mod table_already_exists_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TableAlreadyExistsException`](crate::error::TableAlreadyExistsException)
+        /// Consumes the builder and constructs a [`TableAlreadyExistsException`](crate::error::TableAlreadyExistsException).
         pub fn build(self) -> crate::error::TableAlreadyExistsException {
             crate::error::TableAlreadyExistsException {
                 message: self.message,
@@ -8302,7 +8302,7 @@ pub mod table_already_exists_exception {
     }
 }
 impl TableAlreadyExistsException {
-    /// Creates a new builder-style object to manufacture [`TableAlreadyExistsException`](crate::error::TableAlreadyExistsException)
+    /// Creates a new builder-style object to manufacture [`TableAlreadyExistsException`](crate::error::TableAlreadyExistsException).
     pub fn builder() -> crate::error::table_already_exists_exception::Builder {
         crate::error::table_already_exists_exception::Builder::default()
     }
@@ -8338,10 +8338,10 @@ impl std::fmt::Display for PointInTimeRecoveryUnavailableException {
     }
 }
 impl std::error::Error for PointInTimeRecoveryUnavailableException {}
-/// See [`PointInTimeRecoveryUnavailableException`](crate::error::PointInTimeRecoveryUnavailableException)
+/// See [`PointInTimeRecoveryUnavailableException`](crate::error::PointInTimeRecoveryUnavailableException).
 pub mod point_in_time_recovery_unavailable_exception {
-    /// A builder for [`PointInTimeRecoveryUnavailableException`](crate::error::PointInTimeRecoveryUnavailableException)
-    #[non_exhaustive]
+
+    /// A builder for [`PointInTimeRecoveryUnavailableException`](crate::error::PointInTimeRecoveryUnavailableException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8357,7 +8357,7 @@ pub mod point_in_time_recovery_unavailable_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`PointInTimeRecoveryUnavailableException`](crate::error::PointInTimeRecoveryUnavailableException)
+        /// Consumes the builder and constructs a [`PointInTimeRecoveryUnavailableException`](crate::error::PointInTimeRecoveryUnavailableException).
         pub fn build(self) -> crate::error::PointInTimeRecoveryUnavailableException {
             crate::error::PointInTimeRecoveryUnavailableException {
                 message: self.message,
@@ -8366,7 +8366,7 @@ pub mod point_in_time_recovery_unavailable_exception {
     }
 }
 impl PointInTimeRecoveryUnavailableException {
-    /// Creates a new builder-style object to manufacture [`PointInTimeRecoveryUnavailableException`](crate::error::PointInTimeRecoveryUnavailableException)
+    /// Creates a new builder-style object to manufacture [`PointInTimeRecoveryUnavailableException`](crate::error::PointInTimeRecoveryUnavailableException).
     pub fn builder() -> crate::error::point_in_time_recovery_unavailable_exception::Builder {
         crate::error::point_in_time_recovery_unavailable_exception::Builder::default()
     }
@@ -8402,10 +8402,10 @@ impl std::fmt::Display for InvalidRestoreTimeException {
     }
 }
 impl std::error::Error for InvalidRestoreTimeException {}
-/// See [`InvalidRestoreTimeException`](crate::error::InvalidRestoreTimeException)
+/// See [`InvalidRestoreTimeException`](crate::error::InvalidRestoreTimeException).
 pub mod invalid_restore_time_exception {
-    /// A builder for [`InvalidRestoreTimeException`](crate::error::InvalidRestoreTimeException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidRestoreTimeException`](crate::error::InvalidRestoreTimeException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8421,7 +8421,7 @@ pub mod invalid_restore_time_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidRestoreTimeException`](crate::error::InvalidRestoreTimeException)
+        /// Consumes the builder and constructs a [`InvalidRestoreTimeException`](crate::error::InvalidRestoreTimeException).
         pub fn build(self) -> crate::error::InvalidRestoreTimeException {
             crate::error::InvalidRestoreTimeException {
                 message: self.message,
@@ -8430,7 +8430,7 @@ pub mod invalid_restore_time_exception {
     }
 }
 impl InvalidRestoreTimeException {
-    /// Creates a new builder-style object to manufacture [`InvalidRestoreTimeException`](crate::error::InvalidRestoreTimeException)
+    /// Creates a new builder-style object to manufacture [`InvalidRestoreTimeException`](crate::error::InvalidRestoreTimeException).
     pub fn builder() -> crate::error::invalid_restore_time_exception::Builder {
         crate::error::invalid_restore_time_exception::Builder::default()
     }
@@ -8466,10 +8466,10 @@ impl std::fmt::Display for BackupNotFoundException {
     }
 }
 impl std::error::Error for BackupNotFoundException {}
-/// See [`BackupNotFoundException`](crate::error::BackupNotFoundException)
+/// See [`BackupNotFoundException`](crate::error::BackupNotFoundException).
 pub mod backup_not_found_exception {
-    /// A builder for [`BackupNotFoundException`](crate::error::BackupNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`BackupNotFoundException`](crate::error::BackupNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8485,7 +8485,7 @@ pub mod backup_not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupNotFoundException`](crate::error::BackupNotFoundException)
+        /// Consumes the builder and constructs a [`BackupNotFoundException`](crate::error::BackupNotFoundException).
         pub fn build(self) -> crate::error::BackupNotFoundException {
             crate::error::BackupNotFoundException {
                 message: self.message,
@@ -8494,7 +8494,7 @@ pub mod backup_not_found_exception {
     }
 }
 impl BackupNotFoundException {
-    /// Creates a new builder-style object to manufacture [`BackupNotFoundException`](crate::error::BackupNotFoundException)
+    /// Creates a new builder-style object to manufacture [`BackupNotFoundException`](crate::error::BackupNotFoundException).
     pub fn builder() -> crate::error::backup_not_found_exception::Builder {
         crate::error::backup_not_found_exception::Builder::default()
     }
@@ -8530,10 +8530,10 @@ impl std::fmt::Display for BackupInUseException {
     }
 }
 impl std::error::Error for BackupInUseException {}
-/// See [`BackupInUseException`](crate::error::BackupInUseException)
+/// See [`BackupInUseException`](crate::error::BackupInUseException).
 pub mod backup_in_use_exception {
-    /// A builder for [`BackupInUseException`](crate::error::BackupInUseException)
-    #[non_exhaustive]
+
+    /// A builder for [`BackupInUseException`](crate::error::BackupInUseException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8549,7 +8549,7 @@ pub mod backup_in_use_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BackupInUseException`](crate::error::BackupInUseException)
+        /// Consumes the builder and constructs a [`BackupInUseException`](crate::error::BackupInUseException).
         pub fn build(self) -> crate::error::BackupInUseException {
             crate::error::BackupInUseException {
                 message: self.message,
@@ -8558,7 +8558,7 @@ pub mod backup_in_use_exception {
     }
 }
 impl BackupInUseException {
-    /// Creates a new builder-style object to manufacture [`BackupInUseException`](crate::error::BackupInUseException)
+    /// Creates a new builder-style object to manufacture [`BackupInUseException`](crate::error::BackupInUseException).
     pub fn builder() -> crate::error::backup_in_use_exception::Builder {
         crate::error::backup_in_use_exception::Builder::default()
     }
@@ -8594,10 +8594,10 @@ impl std::fmt::Display for InvalidExportTimeException {
     }
 }
 impl std::error::Error for InvalidExportTimeException {}
-/// See [`InvalidExportTimeException`](crate::error::InvalidExportTimeException)
+/// See [`InvalidExportTimeException`](crate::error::InvalidExportTimeException).
 pub mod invalid_export_time_exception {
-    /// A builder for [`InvalidExportTimeException`](crate::error::InvalidExportTimeException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidExportTimeException`](crate::error::InvalidExportTimeException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8613,7 +8613,7 @@ pub mod invalid_export_time_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidExportTimeException`](crate::error::InvalidExportTimeException)
+        /// Consumes the builder and constructs a [`InvalidExportTimeException`](crate::error::InvalidExportTimeException).
         pub fn build(self) -> crate::error::InvalidExportTimeException {
             crate::error::InvalidExportTimeException {
                 message: self.message,
@@ -8622,7 +8622,7 @@ pub mod invalid_export_time_exception {
     }
 }
 impl InvalidExportTimeException {
-    /// Creates a new builder-style object to manufacture [`InvalidExportTimeException`](crate::error::InvalidExportTimeException)
+    /// Creates a new builder-style object to manufacture [`InvalidExportTimeException`](crate::error::InvalidExportTimeException).
     pub fn builder() -> crate::error::invalid_export_time_exception::Builder {
         crate::error::invalid_export_time_exception::Builder::default()
     }
@@ -8658,10 +8658,10 @@ impl std::fmt::Display for ExportConflictException {
     }
 }
 impl std::error::Error for ExportConflictException {}
-/// See [`ExportConflictException`](crate::error::ExportConflictException)
+/// See [`ExportConflictException`](crate::error::ExportConflictException).
 pub mod export_conflict_exception {
-    /// A builder for [`ExportConflictException`](crate::error::ExportConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`ExportConflictException`](crate::error::ExportConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8677,7 +8677,7 @@ pub mod export_conflict_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportConflictException`](crate::error::ExportConflictException)
+        /// Consumes the builder and constructs a [`ExportConflictException`](crate::error::ExportConflictException).
         pub fn build(self) -> crate::error::ExportConflictException {
             crate::error::ExportConflictException {
                 message: self.message,
@@ -8686,7 +8686,7 @@ pub mod export_conflict_exception {
     }
 }
 impl ExportConflictException {
-    /// Creates a new builder-style object to manufacture [`ExportConflictException`](crate::error::ExportConflictException)
+    /// Creates a new builder-style object to manufacture [`ExportConflictException`](crate::error::ExportConflictException).
     pub fn builder() -> crate::error::export_conflict_exception::Builder {
         crate::error::export_conflict_exception::Builder::default()
     }
@@ -8722,10 +8722,10 @@ impl std::fmt::Display for DuplicateItemException {
     }
 }
 impl std::error::Error for DuplicateItemException {}
-/// See [`DuplicateItemException`](crate::error::DuplicateItemException)
+/// See [`DuplicateItemException`](crate::error::DuplicateItemException).
 pub mod duplicate_item_exception {
-    /// A builder for [`DuplicateItemException`](crate::error::DuplicateItemException)
-    #[non_exhaustive]
+
+    /// A builder for [`DuplicateItemException`](crate::error::DuplicateItemException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8741,7 +8741,7 @@ pub mod duplicate_item_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DuplicateItemException`](crate::error::DuplicateItemException)
+        /// Consumes the builder and constructs a [`DuplicateItemException`](crate::error::DuplicateItemException).
         pub fn build(self) -> crate::error::DuplicateItemException {
             crate::error::DuplicateItemException {
                 message: self.message,
@@ -8750,7 +8750,7 @@ pub mod duplicate_item_exception {
     }
 }
 impl DuplicateItemException {
-    /// Creates a new builder-style object to manufacture [`DuplicateItemException`](crate::error::DuplicateItemException)
+    /// Creates a new builder-style object to manufacture [`DuplicateItemException`](crate::error::DuplicateItemException).
     pub fn builder() -> crate::error::duplicate_item_exception::Builder {
         crate::error::duplicate_item_exception::Builder::default()
     }
@@ -8786,10 +8786,10 @@ impl std::fmt::Display for ExportNotFoundException {
     }
 }
 impl std::error::Error for ExportNotFoundException {}
-/// See [`ExportNotFoundException`](crate::error::ExportNotFoundException)
+/// See [`ExportNotFoundException`](crate::error::ExportNotFoundException).
 pub mod export_not_found_exception {
-    /// A builder for [`ExportNotFoundException`](crate::error::ExportNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ExportNotFoundException`](crate::error::ExportNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8805,7 +8805,7 @@ pub mod export_not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ExportNotFoundException`](crate::error::ExportNotFoundException)
+        /// Consumes the builder and constructs a [`ExportNotFoundException`](crate::error::ExportNotFoundException).
         pub fn build(self) -> crate::error::ExportNotFoundException {
             crate::error::ExportNotFoundException {
                 message: self.message,
@@ -8814,7 +8814,7 @@ pub mod export_not_found_exception {
     }
 }
 impl ExportNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ExportNotFoundException`](crate::error::ExportNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ExportNotFoundException`](crate::error::ExportNotFoundException).
     pub fn builder() -> crate::error::export_not_found_exception::Builder {
         crate::error::export_not_found_exception::Builder::default()
     }
@@ -8850,10 +8850,10 @@ impl std::fmt::Display for GlobalTableAlreadyExistsException {
     }
 }
 impl std::error::Error for GlobalTableAlreadyExistsException {}
-/// See [`GlobalTableAlreadyExistsException`](crate::error::GlobalTableAlreadyExistsException)
+/// See [`GlobalTableAlreadyExistsException`](crate::error::GlobalTableAlreadyExistsException).
 pub mod global_table_already_exists_exception {
-    /// A builder for [`GlobalTableAlreadyExistsException`](crate::error::GlobalTableAlreadyExistsException)
-    #[non_exhaustive]
+
+    /// A builder for [`GlobalTableAlreadyExistsException`](crate::error::GlobalTableAlreadyExistsException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8869,7 +8869,7 @@ pub mod global_table_already_exists_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`GlobalTableAlreadyExistsException`](crate::error::GlobalTableAlreadyExistsException)
+        /// Consumes the builder and constructs a [`GlobalTableAlreadyExistsException`](crate::error::GlobalTableAlreadyExistsException).
         pub fn build(self) -> crate::error::GlobalTableAlreadyExistsException {
             crate::error::GlobalTableAlreadyExistsException {
                 message: self.message,
@@ -8878,7 +8878,7 @@ pub mod global_table_already_exists_exception {
     }
 }
 impl GlobalTableAlreadyExistsException {
-    /// Creates a new builder-style object to manufacture [`GlobalTableAlreadyExistsException`](crate::error::GlobalTableAlreadyExistsException)
+    /// Creates a new builder-style object to manufacture [`GlobalTableAlreadyExistsException`](crate::error::GlobalTableAlreadyExistsException).
     pub fn builder() -> crate::error::global_table_already_exists_exception::Builder {
         crate::error::global_table_already_exists_exception::Builder::default()
     }

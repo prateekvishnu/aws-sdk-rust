@@ -26,10 +26,10 @@ impl std::fmt::Debug for ListUsersOutput {
         formatter.finish()
     }
 }
-/// See [`ListUsersOutput`](crate::output::ListUsersOutput)
+/// See [`ListUsersOutput`](crate::output::ListUsersOutput).
 pub mod list_users_output {
-    /// A builder for [`ListUsersOutput`](crate::output::ListUsersOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListUsersOutput`](crate::output::ListUsersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) users: std::option::Option<std::vec::Vec<crate::model::User>>,
@@ -65,7 +65,7 @@ pub mod list_users_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListUsersOutput`](crate::output::ListUsersOutput)
+        /// Consumes the builder and constructs a [`ListUsersOutput`](crate::output::ListUsersOutput).
         pub fn build(self) -> crate::output::ListUsersOutput {
             crate::output::ListUsersOutput {
                 users: self.users,
@@ -75,7 +75,7 @@ pub mod list_users_output {
     }
 }
 impl ListUsersOutput {
-    /// Creates a new builder-style object to manufacture [`ListUsersOutput`](crate::output::ListUsersOutput)
+    /// Creates a new builder-style object to manufacture [`ListUsersOutput`](crate::output::ListUsersOutput).
     pub fn builder() -> crate::output::list_users_output::Builder {
         crate::output::list_users_output::Builder::default()
     }
@@ -108,10 +108,10 @@ impl std::fmt::Debug for ListGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListGroupsOutput`](crate::output::ListGroupsOutput)
+/// See [`ListGroupsOutput`](crate::output::ListGroupsOutput).
 pub mod list_groups_output {
-    /// A builder for [`ListGroupsOutput`](crate::output::ListGroupsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListGroupsOutput`](crate::output::ListGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) groups: std::option::Option<std::vec::Vec<crate::model::Group>>,
@@ -147,7 +147,7 @@ pub mod list_groups_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGroupsOutput`](crate::output::ListGroupsOutput)
+        /// Consumes the builder and constructs a [`ListGroupsOutput`](crate::output::ListGroupsOutput).
         pub fn build(self) -> crate::output::ListGroupsOutput {
             crate::output::ListGroupsOutput {
                 groups: self.groups,
@@ -157,7 +157,7 @@ pub mod list_groups_output {
     }
 }
 impl ListGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListGroupsOutput`](crate::output::ListGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListGroupsOutput`](crate::output::ListGroupsOutput).
     pub fn builder() -> crate::output::list_groups_output::Builder {
         crate::output::list_groups_output::Builder::default()
     }
@@ -190,10 +190,10 @@ impl std::fmt::Debug for DescribeUserOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeUserOutput`](crate::output::DescribeUserOutput)
+/// See [`DescribeUserOutput`](crate::output::DescribeUserOutput).
 pub mod describe_user_output {
-    /// A builder for [`DescribeUserOutput`](crate::output::DescribeUserOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeUserOutput`](crate::output::DescribeUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_name: std::option::Option<std::string::String>,
@@ -220,7 +220,7 @@ pub mod describe_user_output {
             self.user_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeUserOutput`](crate::output::DescribeUserOutput)
+        /// Consumes the builder and constructs a [`DescribeUserOutput`](crate::output::DescribeUserOutput).
         pub fn build(self) -> crate::output::DescribeUserOutput {
             crate::output::DescribeUserOutput {
                 user_name: self.user_name,
@@ -230,7 +230,7 @@ pub mod describe_user_output {
     }
 }
 impl DescribeUserOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeUserOutput`](crate::output::DescribeUserOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeUserOutput`](crate::output::DescribeUserOutput).
     pub fn builder() -> crate::output::describe_user_output::Builder {
         crate::output::describe_user_output::Builder::default()
     }
@@ -263,10 +263,10 @@ impl std::fmt::Debug for DescribeGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeGroupOutput`](crate::output::DescribeGroupOutput)
+/// See [`DescribeGroupOutput`](crate::output::DescribeGroupOutput).
 pub mod describe_group_output {
-    /// A builder for [`DescribeGroupOutput`](crate::output::DescribeGroupOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeGroupOutput`](crate::output::DescribeGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) group_id: std::option::Option<std::string::String>,
@@ -293,7 +293,7 @@ pub mod describe_group_output {
             self.display_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeGroupOutput`](crate::output::DescribeGroupOutput)
+        /// Consumes the builder and constructs a [`DescribeGroupOutput`](crate::output::DescribeGroupOutput).
         pub fn build(self) -> crate::output::DescribeGroupOutput {
             crate::output::DescribeGroupOutput {
                 group_id: self.group_id,
@@ -303,7 +303,7 @@ pub mod describe_group_output {
     }
 }
 impl DescribeGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeGroupOutput`](crate::output::DescribeGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeGroupOutput`](crate::output::DescribeGroupOutput).
     pub fn builder() -> crate::output::describe_group_output::Builder {
         crate::output::describe_group_output::Builder::default()
     }

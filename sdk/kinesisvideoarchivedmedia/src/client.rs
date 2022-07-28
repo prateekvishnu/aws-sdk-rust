@@ -99,7 +99,7 @@ impl Client {
     ///   - [`clip_fragment_selector(ClipFragmentSelector)`](crate::client::fluent_builders::GetClip::clip_fragment_selector) / [`set_clip_fragment_selector(Option<ClipFragmentSelector>)`](crate::client::fluent_builders::GetClip::set_clip_fragment_selector): <p>The time range of the requested clip and the source of the timestamps.</p>
     /// - On success, responds with [`GetClipOutput`](crate::output::GetClipOutput) with field(s):
     ///   - [`content_type(Option<String>)`](crate::output::GetClipOutput::content_type): <p>The content type of the media in the requested clip.</p>
-    ///   - [`payload(byte_stream::ByteStream)`](crate::output::GetClipOutput::payload): <p>Traditional MP4 file that contains the media clip from the specified video stream. The output will contain the first 100 MB or the first 200 fragments from the specified start timestamp. For more information, see <a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html">Kinesis Video Streams Limits</a>. </p>
+    ///   - [`payload(ByteStream)`](crate::output::GetClipOutput::payload): <p>Traditional MP4 file that contains the media clip from the specified video stream. The output will contain the first 100 MB or the first 200 fragments from the specified start timestamp. For more information, see <a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html">Kinesis Video Streams Limits</a>. </p>
     /// - On failure, responds with [`SdkError<GetClipError>`](crate::error::GetClipError)
     pub fn get_clip(&self) -> fluent_builders::GetClip {
         fluent_builders::GetClip::new(self.handle.clone())
@@ -169,7 +169,7 @@ impl Client {
     ///   - [`fragments(Vec<String>)`](crate::client::fluent_builders::GetMediaForFragmentList::fragments) / [`set_fragments(Option<Vec<String>>)`](crate::client::fluent_builders::GetMediaForFragmentList::set_fragments): <p>A list of the numbers of fragments for which to retrieve media. You retrieve these values with <code>ListFragments</code>.</p>
     /// - On success, responds with [`GetMediaForFragmentListOutput`](crate::output::GetMediaForFragmentListOutput) with field(s):
     ///   - [`content_type(Option<String>)`](crate::output::GetMediaForFragmentListOutput::content_type): <p>The content type of the requested media.</p>
-    ///   - [`payload(byte_stream::ByteStream)`](crate::output::GetMediaForFragmentListOutput::payload): <p>The payload that Kinesis Video Streams returns is a sequence of chunks from the specified stream. For information about the chunks, see <a href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_dataplane_PutMedia.html">PutMedia</a>. The chunks that Kinesis Video Streams returns in the <code>GetMediaForFragmentList</code> call also include the following additional Matroska (MKV) tags: </p>  <ul>   <li> <p>AWS_KINESISVIDEO_FRAGMENT_NUMBER - Fragment number returned in the chunk.</p> </li>   <li> <p>AWS_KINESISVIDEO_SERVER_SIDE_TIMESTAMP - Server-side timestamp of the fragment.</p> </li>   <li> <p>AWS_KINESISVIDEO_PRODUCER_SIDE_TIMESTAMP - Producer-side timestamp of the fragment.</p> </li>  </ul>  <p>The following tags will be included if an exception occurs:</p>  <ul>   <li> <p>AWS_KINESISVIDEO_FRAGMENT_NUMBER - The number of the fragment that threw the exception</p> </li>   <li> <p>AWS_KINESISVIDEO_EXCEPTION_ERROR_CODE - The integer code of the exception</p> </li>   <li> <p>AWS_KINESISVIDEO_EXCEPTION_MESSAGE - A text description of the exception</p> </li>  </ul>
+    ///   - [`payload(ByteStream)`](crate::output::GetMediaForFragmentListOutput::payload): <p>The payload that Kinesis Video Streams returns is a sequence of chunks from the specified stream. For information about the chunks, see <a href="http://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_dataplane_PutMedia.html">PutMedia</a>. The chunks that Kinesis Video Streams returns in the <code>GetMediaForFragmentList</code> call also include the following additional Matroska (MKV) tags: </p>  <ul>   <li> <p>AWS_KINESISVIDEO_FRAGMENT_NUMBER - Fragment number returned in the chunk.</p> </li>   <li> <p>AWS_KINESISVIDEO_SERVER_SIDE_TIMESTAMP - Server-side timestamp of the fragment.</p> </li>   <li> <p>AWS_KINESISVIDEO_PRODUCER_SIDE_TIMESTAMP - Producer-side timestamp of the fragment.</p> </li>  </ul>  <p>The following tags will be included if an exception occurs:</p>  <ul>   <li> <p>AWS_KINESISVIDEO_FRAGMENT_NUMBER - The number of the fragment that threw the exception</p> </li>   <li> <p>AWS_KINESISVIDEO_EXCEPTION_ERROR_CODE - The integer code of the exception</p> </li>   <li> <p>AWS_KINESISVIDEO_EXCEPTION_MESSAGE - A text description of the exception</p> </li>  </ul>
     /// - On failure, responds with [`SdkError<GetMediaForFragmentListError>`](crate::error::GetMediaForFragmentListError)
     pub fn get_media_for_fragment_list(&self) -> fluent_builders::GetMediaForFragmentList {
         fluent_builders::GetMediaForFragmentList::new(self.handle.clone())
@@ -191,13 +191,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `GetClip`.
     ///
     /// <p>Downloads an MP4 file (clip) containing the archived, on-demand media from the specified video stream over the specified time range. </p>

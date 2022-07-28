@@ -103,6 +103,110 @@ impl std::error::Error for BatchGetNamedQueryError {
     }
 }
 
+/// Error type for the `BatchGetPreparedStatement` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct BatchGetPreparedStatementError {
+    /// Kind of error that occurred.
+    pub kind: BatchGetPreparedStatementErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `BatchGetPreparedStatement` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum BatchGetPreparedStatementErrorKind {
+    /// <p>Indicates a platform issue, which may be due to a transient condition or outage.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>Indicates that something is wrong with the input to the request. For example, a required parameter may be missing or out of range.</p>
+    InvalidRequestException(crate::error::InvalidRequestException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for BatchGetPreparedStatementError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            BatchGetPreparedStatementErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            BatchGetPreparedStatementErrorKind::InvalidRequestException(_inner) => _inner.fmt(f),
+            BatchGetPreparedStatementErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for BatchGetPreparedStatementError {
+    fn code(&self) -> Option<&str> {
+        BatchGetPreparedStatementError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl BatchGetPreparedStatementError {
+    /// Creates a new `BatchGetPreparedStatementError`.
+    pub fn new(kind: BatchGetPreparedStatementErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `BatchGetPreparedStatementError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: BatchGetPreparedStatementErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `BatchGetPreparedStatementError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: BatchGetPreparedStatementErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `BatchGetPreparedStatementErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            BatchGetPreparedStatementErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `BatchGetPreparedStatementErrorKind::InvalidRequestException`.
+    pub fn is_invalid_request_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            BatchGetPreparedStatementErrorKind::InvalidRequestException(_)
+        )
+    }
+}
+impl std::error::Error for BatchGetPreparedStatementError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            BatchGetPreparedStatementErrorKind::InternalServerException(_inner) => Some(_inner),
+            BatchGetPreparedStatementErrorKind::InvalidRequestException(_inner) => Some(_inner),
+            BatchGetPreparedStatementErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `BatchGetQueryExecution` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -3775,10 +3879,10 @@ impl std::fmt::Display for InvalidRequestException {
     }
 }
 impl std::error::Error for InvalidRequestException {}
-/// See [`InvalidRequestException`](crate::error::InvalidRequestException)
+/// See [`InvalidRequestException`](crate::error::InvalidRequestException).
 pub mod invalid_request_exception {
-    /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) athena_error_code: std::option::Option<std::string::String>,
@@ -3808,7 +3912,7 @@ pub mod invalid_request_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException)
+        /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException).
         pub fn build(self) -> crate::error::InvalidRequestException {
             crate::error::InvalidRequestException {
                 athena_error_code: self.athena_error_code,
@@ -3818,7 +3922,7 @@ pub mod invalid_request_exception {
     }
 }
 impl InvalidRequestException {
-    /// Creates a new builder-style object to manufacture [`InvalidRequestException`](crate::error::InvalidRequestException)
+    /// Creates a new builder-style object to manufacture [`InvalidRequestException`](crate::error::InvalidRequestException).
     pub fn builder() -> crate::error::invalid_request_exception::Builder {
         crate::error::invalid_request_exception::Builder::default()
     }
@@ -3854,10 +3958,10 @@ impl std::fmt::Display for InternalServerException {
     }
 }
 impl std::error::Error for InternalServerException {}
-/// See [`InternalServerException`](crate::error::InternalServerException)
+/// See [`InternalServerException`](crate::error::InternalServerException).
 pub mod internal_server_exception {
-    /// A builder for [`InternalServerException`](crate::error::InternalServerException)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalServerException`](crate::error::InternalServerException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3873,7 +3977,7 @@ pub mod internal_server_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException)
+        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException).
         pub fn build(self) -> crate::error::InternalServerException {
             crate::error::InternalServerException {
                 message: self.message,
@@ -3882,7 +3986,7 @@ pub mod internal_server_exception {
     }
 }
 impl InternalServerException {
-    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException)
+    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException).
     pub fn builder() -> crate::error::internal_server_exception::Builder {
         crate::error::internal_server_exception::Builder::default()
     }
@@ -3894,11 +3998,11 @@ impl InternalServerException {
 pub struct ResourceNotFoundException {
     #[allow(missing_docs)] // documentation missing in model
     pub message: std::option::Option<std::string::String>,
-    #[allow(missing_docs)] // documentation missing in model
+    /// <p>The name of the Amazon resource.</p>
     pub resource_name: std::option::Option<std::string::String>,
 }
 impl ResourceNotFoundException {
-    #[allow(missing_docs)] // documentation missing in model
+    /// <p>The name of the Amazon resource.</p>
     pub fn resource_name(&self) -> std::option::Option<&str> {
         self.resource_name.as_deref()
     }
@@ -3927,10 +4031,10 @@ impl std::fmt::Display for ResourceNotFoundException {
     }
 }
 impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
 pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3947,12 +4051,12 @@ pub mod resource_not_found_exception {
             self.message = input;
             self
         }
-        #[allow(missing_docs)] // documentation missing in model
+        /// <p>The name of the Amazon resource.</p>
         pub fn resource_name(mut self, input: impl Into<std::string::String>) -> Self {
             self.resource_name = Some(input.into());
             self
         }
-        #[allow(missing_docs)] // documentation missing in model
+        /// <p>The name of the Amazon resource.</p>
         pub fn set_resource_name(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -3960,7 +4064,7 @@ pub mod resource_not_found_exception {
             self.resource_name = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
         pub fn build(self) -> crate::error::ResourceNotFoundException {
             crate::error::ResourceNotFoundException {
                 message: self.message,
@@ -3970,7 +4074,7 @@ pub mod resource_not_found_exception {
     }
 }
 impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     pub fn builder() -> crate::error::resource_not_found_exception::Builder {
         crate::error::resource_not_found_exception::Builder::default()
     }
@@ -4015,10 +4119,10 @@ impl std::fmt::Display for TooManyRequestsException {
     }
 }
 impl std::error::Error for TooManyRequestsException {}
-/// See [`TooManyRequestsException`](crate::error::TooManyRequestsException)
+/// See [`TooManyRequestsException`](crate::error::TooManyRequestsException).
 pub mod too_many_requests_exception {
-    /// A builder for [`TooManyRequestsException`](crate::error::TooManyRequestsException)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyRequestsException`](crate::error::TooManyRequestsException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4048,7 +4152,7 @@ pub mod too_many_requests_exception {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyRequestsException`](crate::error::TooManyRequestsException)
+        /// Consumes the builder and constructs a [`TooManyRequestsException`](crate::error::TooManyRequestsException).
         pub fn build(self) -> crate::error::TooManyRequestsException {
             crate::error::TooManyRequestsException {
                 message: self.message,
@@ -4058,7 +4162,7 @@ pub mod too_many_requests_exception {
     }
 }
 impl TooManyRequestsException {
-    /// Creates a new builder-style object to manufacture [`TooManyRequestsException`](crate::error::TooManyRequestsException)
+    /// Creates a new builder-style object to manufacture [`TooManyRequestsException`](crate::error::TooManyRequestsException).
     pub fn builder() -> crate::error::too_many_requests_exception::Builder {
         crate::error::too_many_requests_exception::Builder::default()
     }
@@ -4094,10 +4198,10 @@ impl std::fmt::Display for MetadataException {
     }
 }
 impl std::error::Error for MetadataException {}
-/// See [`MetadataException`](crate::error::MetadataException)
+/// See [`MetadataException`](crate::error::MetadataException).
 pub mod metadata_exception {
-    /// A builder for [`MetadataException`](crate::error::MetadataException)
-    #[non_exhaustive]
+
+    /// A builder for [`MetadataException`](crate::error::MetadataException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4113,7 +4217,7 @@ pub mod metadata_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`MetadataException`](crate::error::MetadataException)
+        /// Consumes the builder and constructs a [`MetadataException`](crate::error::MetadataException).
         pub fn build(self) -> crate::error::MetadataException {
             crate::error::MetadataException {
                 message: self.message,
@@ -4122,7 +4226,7 @@ pub mod metadata_exception {
     }
 }
 impl MetadataException {
-    /// Creates a new builder-style object to manufacture [`MetadataException`](crate::error::MetadataException)
+    /// Creates a new builder-style object to manufacture [`MetadataException`](crate::error::MetadataException).
     pub fn builder() -> crate::error::metadata_exception::Builder {
         crate::error::metadata_exception::Builder::default()
     }

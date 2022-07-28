@@ -125,6 +125,132 @@ impl std::error::Error for BatchAcknowledgeAlarmError {
     }
 }
 
+/// Error type for the `BatchDeleteDetector` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct BatchDeleteDetectorError {
+    /// Kind of error that occurred.
+    pub kind: BatchDeleteDetectorErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `BatchDeleteDetector` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum BatchDeleteDetectorErrorKind {
+    /// <p>An internal failure occurred.</p>
+    InternalFailureException(crate::error::InternalFailureException),
+    /// <p>The request was invalid.</p>
+    InvalidRequestException(crate::error::InvalidRequestException),
+    /// <p>The service is currently unavailable.</p>
+    ServiceUnavailableException(crate::error::ServiceUnavailableException),
+    /// <p>The request could not be completed due to throttling.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for BatchDeleteDetectorError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            BatchDeleteDetectorErrorKind::InternalFailureException(_inner) => _inner.fmt(f),
+            BatchDeleteDetectorErrorKind::InvalidRequestException(_inner) => _inner.fmt(f),
+            BatchDeleteDetectorErrorKind::ServiceUnavailableException(_inner) => _inner.fmt(f),
+            BatchDeleteDetectorErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            BatchDeleteDetectorErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for BatchDeleteDetectorError {
+    fn code(&self) -> Option<&str> {
+        BatchDeleteDetectorError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl BatchDeleteDetectorError {
+    /// Creates a new `BatchDeleteDetectorError`.
+    pub fn new(kind: BatchDeleteDetectorErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `BatchDeleteDetectorError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: BatchDeleteDetectorErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `BatchDeleteDetectorError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: BatchDeleteDetectorErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `BatchDeleteDetectorErrorKind::InternalFailureException`.
+    pub fn is_internal_failure_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            BatchDeleteDetectorErrorKind::InternalFailureException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `BatchDeleteDetectorErrorKind::InvalidRequestException`.
+    pub fn is_invalid_request_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            BatchDeleteDetectorErrorKind::InvalidRequestException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `BatchDeleteDetectorErrorKind::ServiceUnavailableException`.
+    pub fn is_service_unavailable_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            BatchDeleteDetectorErrorKind::ServiceUnavailableException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `BatchDeleteDetectorErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            BatchDeleteDetectorErrorKind::ThrottlingException(_)
+        )
+    }
+}
+impl std::error::Error for BatchDeleteDetectorError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            BatchDeleteDetectorErrorKind::InternalFailureException(_inner) => Some(_inner),
+            BatchDeleteDetectorErrorKind::InvalidRequestException(_inner) => Some(_inner),
+            BatchDeleteDetectorErrorKind::ServiceUnavailableException(_inner) => Some(_inner),
+            BatchDeleteDetectorErrorKind::ThrottlingException(_inner) => Some(_inner),
+            BatchDeleteDetectorErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `BatchDisableAlarm` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -1438,10 +1564,10 @@ impl std::fmt::Display for ThrottlingException {
     }
 }
 impl std::error::Error for ThrottlingException {}
-/// See [`ThrottlingException`](crate::error::ThrottlingException)
+/// See [`ThrottlingException`](crate::error::ThrottlingException).
 pub mod throttling_exception {
-    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
-    #[non_exhaustive]
+
+    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -1457,7 +1583,7 @@ pub mod throttling_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException)
+        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException).
         pub fn build(self) -> crate::error::ThrottlingException {
             crate::error::ThrottlingException {
                 message: self.message,
@@ -1466,7 +1592,7 @@ pub mod throttling_exception {
     }
 }
 impl ThrottlingException {
-    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException)
+    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException).
     pub fn builder() -> crate::error::throttling_exception::Builder {
         crate::error::throttling_exception::Builder::default()
     }
@@ -1502,10 +1628,10 @@ impl std::fmt::Display for ServiceUnavailableException {
     }
 }
 impl std::error::Error for ServiceUnavailableException {}
-/// See [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
+/// See [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
 pub mod service_unavailable_exception {
-    /// A builder for [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
-    #[non_exhaustive]
+
+    /// A builder for [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -1521,7 +1647,7 @@ pub mod service_unavailable_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
+        /// Consumes the builder and constructs a [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
         pub fn build(self) -> crate::error::ServiceUnavailableException {
             crate::error::ServiceUnavailableException {
                 message: self.message,
@@ -1530,7 +1656,7 @@ pub mod service_unavailable_exception {
     }
 }
 impl ServiceUnavailableException {
-    /// Creates a new builder-style object to manufacture [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
+    /// Creates a new builder-style object to manufacture [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
     pub fn builder() -> crate::error::service_unavailable_exception::Builder {
         crate::error::service_unavailable_exception::Builder::default()
     }
@@ -1566,10 +1692,10 @@ impl std::fmt::Display for ResourceNotFoundException {
     }
 }
 impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
 pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -1585,7 +1711,7 @@ pub mod resource_not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
         pub fn build(self) -> crate::error::ResourceNotFoundException {
             crate::error::ResourceNotFoundException {
                 message: self.message,
@@ -1594,7 +1720,7 @@ pub mod resource_not_found_exception {
     }
 }
 impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     pub fn builder() -> crate::error::resource_not_found_exception::Builder {
         crate::error::resource_not_found_exception::Builder::default()
     }
@@ -1630,10 +1756,10 @@ impl std::fmt::Display for InvalidRequestException {
     }
 }
 impl std::error::Error for InvalidRequestException {}
-/// See [`InvalidRequestException`](crate::error::InvalidRequestException)
+/// See [`InvalidRequestException`](crate::error::InvalidRequestException).
 pub mod invalid_request_exception {
-    /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -1649,7 +1775,7 @@ pub mod invalid_request_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException)
+        /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException).
         pub fn build(self) -> crate::error::InvalidRequestException {
             crate::error::InvalidRequestException {
                 message: self.message,
@@ -1658,7 +1784,7 @@ pub mod invalid_request_exception {
     }
 }
 impl InvalidRequestException {
-    /// Creates a new builder-style object to manufacture [`InvalidRequestException`](crate::error::InvalidRequestException)
+    /// Creates a new builder-style object to manufacture [`InvalidRequestException`](crate::error::InvalidRequestException).
     pub fn builder() -> crate::error::invalid_request_exception::Builder {
         crate::error::invalid_request_exception::Builder::default()
     }
@@ -1694,10 +1820,10 @@ impl std::fmt::Display for InternalFailureException {
     }
 }
 impl std::error::Error for InternalFailureException {}
-/// See [`InternalFailureException`](crate::error::InternalFailureException)
+/// See [`InternalFailureException`](crate::error::InternalFailureException).
 pub mod internal_failure_exception {
-    /// A builder for [`InternalFailureException`](crate::error::InternalFailureException)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalFailureException`](crate::error::InternalFailureException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -1713,7 +1839,7 @@ pub mod internal_failure_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalFailureException`](crate::error::InternalFailureException)
+        /// Consumes the builder and constructs a [`InternalFailureException`](crate::error::InternalFailureException).
         pub fn build(self) -> crate::error::InternalFailureException {
             crate::error::InternalFailureException {
                 message: self.message,
@@ -1722,7 +1848,7 @@ pub mod internal_failure_exception {
     }
 }
 impl InternalFailureException {
-    /// Creates a new builder-style object to manufacture [`InternalFailureException`](crate::error::InternalFailureException)
+    /// Creates a new builder-style object to manufacture [`InternalFailureException`](crate::error::InternalFailureException).
     pub fn builder() -> crate::error::internal_failure_exception::Builder {
         crate::error::internal_failure_exception::Builder::default()
     }

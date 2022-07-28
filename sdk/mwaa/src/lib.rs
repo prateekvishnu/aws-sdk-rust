@@ -5,11 +5,11 @@
 #![allow(clippy::should_implement_trait)]
 #![allow(clippy::blacklisted_name)]
 #![allow(clippy::vec_init_then_push)]
+#![allow(clippy::type_complexity)]
 #![allow(rustdoc::bare_urls)]
 #![warn(missing_docs)]
 //! <fullname>Amazon Managed Workflows for Apache Airflow</fullname>
 //! <p>This section contains the Amazon Managed Workflows for Apache Airflow (MWAA) API reference documentation. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/what-is-mwaa.html">What Is Amazon MWAA?</a>.</p>
-//!
 //! <p>
 //! <b>Endpoints</b>
 //! </p>
@@ -88,7 +88,6 @@
 //! </ul>
 //! </li>
 //! </ul>
-//!
 //! <p>
 //! <b>Regions</b>
 //! </p>
@@ -126,7 +125,7 @@ mod json_deser;
 mod json_errors;
 mod json_ser;
 /// Generated accessors for nested fields
-mod lens;
+pub mod lens;
 pub mod middleware;
 /// Data structures used by operation inputs/outputs.
 pub mod model;

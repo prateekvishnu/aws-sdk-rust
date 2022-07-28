@@ -162,10 +162,10 @@ impl std::fmt::Display for RateExceededException {
     }
 }
 impl std::error::Error for RateExceededException {}
-/// See [`RateExceededException`](crate::error::RateExceededException)
+/// See [`RateExceededException`](crate::error::RateExceededException).
 pub mod rate_exceeded_exception {
-    /// A builder for [`RateExceededException`](crate::error::RateExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`RateExceededException`](crate::error::RateExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -181,7 +181,7 @@ pub mod rate_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`RateExceededException`](crate::error::RateExceededException)
+        /// Consumes the builder and constructs a [`RateExceededException`](crate::error::RateExceededException).
         pub fn build(self) -> crate::error::RateExceededException {
             crate::error::RateExceededException {
                 message: self.message,
@@ -190,7 +190,7 @@ pub mod rate_exceeded_exception {
     }
 }
 impl RateExceededException {
-    /// Creates a new builder-style object to manufacture [`RateExceededException`](crate::error::RateExceededException)
+    /// Creates a new builder-style object to manufacture [`RateExceededException`](crate::error::RateExceededException).
     pub fn builder() -> crate::error::rate_exceeded_exception::Builder {
         crate::error::rate_exceeded_exception::Builder::default()
     }
@@ -226,10 +226,10 @@ impl std::fmt::Display for OccConflictException {
     }
 }
 impl std::error::Error for OccConflictException {}
-/// See [`OccConflictException`](crate::error::OccConflictException)
+/// See [`OccConflictException`](crate::error::OccConflictException).
 pub mod occ_conflict_exception {
-    /// A builder for [`OccConflictException`](crate::error::OccConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`OccConflictException`](crate::error::OccConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -245,7 +245,7 @@ pub mod occ_conflict_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`OccConflictException`](crate::error::OccConflictException)
+        /// Consumes the builder and constructs a [`OccConflictException`](crate::error::OccConflictException).
         pub fn build(self) -> crate::error::OccConflictException {
             crate::error::OccConflictException {
                 message: self.message,
@@ -254,7 +254,7 @@ pub mod occ_conflict_exception {
     }
 }
 impl OccConflictException {
-    /// Creates a new builder-style object to manufacture [`OccConflictException`](crate::error::OccConflictException)
+    /// Creates a new builder-style object to manufacture [`OccConflictException`](crate::error::OccConflictException).
     pub fn builder() -> crate::error::occ_conflict_exception::Builder {
         crate::error::occ_conflict_exception::Builder::default()
     }
@@ -290,10 +290,10 @@ impl std::fmt::Display for LimitExceededException {
     }
 }
 impl std::error::Error for LimitExceededException {}
-/// See [`LimitExceededException`](crate::error::LimitExceededException)
+/// See [`LimitExceededException`](crate::error::LimitExceededException).
 pub mod limit_exceeded_exception {
-    /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`LimitExceededException`](crate::error::LimitExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -309,7 +309,7 @@ pub mod limit_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`LimitExceededException`](crate::error::LimitExceededException)
+        /// Consumes the builder and constructs a [`LimitExceededException`](crate::error::LimitExceededException).
         pub fn build(self) -> crate::error::LimitExceededException {
             crate::error::LimitExceededException {
                 message: self.message,
@@ -318,7 +318,7 @@ pub mod limit_exceeded_exception {
     }
 }
 impl LimitExceededException {
-    /// Creates a new builder-style object to manufacture [`LimitExceededException`](crate::error::LimitExceededException)
+    /// Creates a new builder-style object to manufacture [`LimitExceededException`](crate::error::LimitExceededException).
     pub fn builder() -> crate::error::limit_exceeded_exception::Builder {
         crate::error::limit_exceeded_exception::Builder::default()
     }
@@ -363,10 +363,10 @@ impl std::fmt::Display for InvalidSessionException {
     }
 }
 impl std::error::Error for InvalidSessionException {}
-/// See [`InvalidSessionException`](crate::error::InvalidSessionException)
+/// See [`InvalidSessionException`](crate::error::InvalidSessionException).
 pub mod invalid_session_exception {
-    /// A builder for [`InvalidSessionException`](crate::error::InvalidSessionException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidSessionException`](crate::error::InvalidSessionException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -393,7 +393,7 @@ pub mod invalid_session_exception {
             self.code = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidSessionException`](crate::error::InvalidSessionException)
+        /// Consumes the builder and constructs a [`InvalidSessionException`](crate::error::InvalidSessionException).
         pub fn build(self) -> crate::error::InvalidSessionException {
             crate::error::InvalidSessionException {
                 message: self.message,
@@ -403,7 +403,7 @@ pub mod invalid_session_exception {
     }
 }
 impl InvalidSessionException {
-    /// Creates a new builder-style object to manufacture [`InvalidSessionException`](crate::error::InvalidSessionException)
+    /// Creates a new builder-style object to manufacture [`InvalidSessionException`](crate::error::InvalidSessionException).
     pub fn builder() -> crate::error::invalid_session_exception::Builder {
         crate::error::invalid_session_exception::Builder::default()
     }
@@ -439,10 +439,10 @@ impl std::fmt::Display for CapacityExceededException {
     }
 }
 impl std::error::Error for CapacityExceededException {}
-/// See [`CapacityExceededException`](crate::error::CapacityExceededException)
+/// See [`CapacityExceededException`](crate::error::CapacityExceededException).
 pub mod capacity_exceeded_exception {
-    /// A builder for [`CapacityExceededException`](crate::error::CapacityExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`CapacityExceededException`](crate::error::CapacityExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -458,7 +458,7 @@ pub mod capacity_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`CapacityExceededException`](crate::error::CapacityExceededException)
+        /// Consumes the builder and constructs a [`CapacityExceededException`](crate::error::CapacityExceededException).
         pub fn build(self) -> crate::error::CapacityExceededException {
             crate::error::CapacityExceededException {
                 message: self.message,
@@ -467,7 +467,7 @@ pub mod capacity_exceeded_exception {
     }
 }
 impl CapacityExceededException {
-    /// Creates a new builder-style object to manufacture [`CapacityExceededException`](crate::error::CapacityExceededException)
+    /// Creates a new builder-style object to manufacture [`CapacityExceededException`](crate::error::CapacityExceededException).
     pub fn builder() -> crate::error::capacity_exceeded_exception::Builder {
         crate::error::capacity_exceeded_exception::Builder::default()
     }
@@ -512,10 +512,10 @@ impl std::fmt::Display for BadRequestException {
     }
 }
 impl std::error::Error for BadRequestException {}
-/// See [`BadRequestException`](crate::error::BadRequestException)
+/// See [`BadRequestException`](crate::error::BadRequestException).
 pub mod bad_request_exception {
-    /// A builder for [`BadRequestException`](crate::error::BadRequestException)
-    #[non_exhaustive]
+
+    /// A builder for [`BadRequestException`](crate::error::BadRequestException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -542,7 +542,7 @@ pub mod bad_request_exception {
             self.code = input;
             self
         }
-        /// Consumes the builder and constructs a [`BadRequestException`](crate::error::BadRequestException)
+        /// Consumes the builder and constructs a [`BadRequestException`](crate::error::BadRequestException).
         pub fn build(self) -> crate::error::BadRequestException {
             crate::error::BadRequestException {
                 message: self.message,
@@ -552,7 +552,7 @@ pub mod bad_request_exception {
     }
 }
 impl BadRequestException {
-    /// Creates a new builder-style object to manufacture [`BadRequestException`](crate::error::BadRequestException)
+    /// Creates a new builder-style object to manufacture [`BadRequestException`](crate::error::BadRequestException).
     pub fn builder() -> crate::error::bad_request_exception::Builder {
         crate::error::bad_request_exception::Builder::default()
     }

@@ -3149,6 +3149,131 @@ impl std::error::Error for UntagResourceError {
     }
 }
 
+/// Error type for the `UpdateRoute` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct UpdateRouteError {
+    /// Kind of error that occurred.
+    pub kind: UpdateRouteErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `UpdateRoute` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum UpdateRouteErrorKind {
+    /// <p>The user does not have sufficient access to perform this action. </p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>An unexpected error occurred while processing the request.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>The request references a resource that does not exist. </p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>Request was denied because the request was throttled. </p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p>The input does not satisfy the constraints specified by an Amazon Web Service. </p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for UpdateRouteError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            UpdateRouteErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            UpdateRouteErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            UpdateRouteErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            UpdateRouteErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            UpdateRouteErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            UpdateRouteErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for UpdateRouteError {
+    fn code(&self) -> Option<&str> {
+        UpdateRouteError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl UpdateRouteError {
+    /// Creates a new `UpdateRouteError`.
+    pub fn new(kind: UpdateRouteErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `UpdateRouteError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: UpdateRouteErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `UpdateRouteError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: UpdateRouteErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `UpdateRouteErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(&self.kind, UpdateRouteErrorKind::AccessDeniedException(_))
+    }
+    /// Returns `true` if the error kind is `UpdateRouteErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(&self.kind, UpdateRouteErrorKind::InternalServerException(_))
+    }
+    /// Returns `true` if the error kind is `UpdateRouteErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateRouteErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateRouteErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(&self.kind, UpdateRouteErrorKind::ThrottlingException(_))
+    }
+    /// Returns `true` if the error kind is `UpdateRouteErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(&self.kind, UpdateRouteErrorKind::ValidationException(_))
+    }
+}
+impl std::error::Error for UpdateRouteError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            UpdateRouteErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            UpdateRouteErrorKind::InternalServerException(_inner) => Some(_inner),
+            UpdateRouteErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            UpdateRouteErrorKind::ThrottlingException(_inner) => Some(_inner),
+            UpdateRouteErrorKind::ValidationException(_inner) => Some(_inner),
+            UpdateRouteErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// <p>The input does not satisfy the constraints specified by an Amazon Web Service. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
@@ -3179,10 +3304,10 @@ impl std::fmt::Display for ValidationException {
     }
 }
 impl std::error::Error for ValidationException {}
-/// See [`ValidationException`](crate::error::ValidationException)
+/// See [`ValidationException`](crate::error::ValidationException).
 pub mod validation_exception {
-    /// A builder for [`ValidationException`](crate::error::ValidationException)
-    #[non_exhaustive]
+
+    /// A builder for [`ValidationException`](crate::error::ValidationException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3198,7 +3323,7 @@ pub mod validation_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException)
+        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException).
         pub fn build(self) -> crate::error::ValidationException {
             crate::error::ValidationException {
                 message: self.message,
@@ -3207,180 +3332,9 @@ pub mod validation_exception {
     }
 }
 impl ValidationException {
-    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException)
+    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException).
     pub fn builder() -> crate::error::validation_exception::Builder {
         crate::error::validation_exception::Builder::default()
-    }
-}
-
-/// <p>The request references a resource that does not exist. </p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct ResourceNotFoundException {
-    #[allow(missing_docs)] // documentation missing in model
-    pub message: std::option::Option<std::string::String>,
-    /// <p>The ID of the resource. </p>
-    pub resource_id: std::option::Option<std::string::String>,
-    /// <p>The type of resource. </p>
-    pub resource_type: std::option::Option<std::string::String>,
-}
-impl ResourceNotFoundException {
-    /// <p>The ID of the resource. </p>
-    pub fn resource_id(&self) -> std::option::Option<&str> {
-        self.resource_id.as_deref()
-    }
-    /// <p>The type of resource. </p>
-    pub fn resource_type(&self) -> std::option::Option<&str> {
-        self.resource_type.as_deref()
-    }
-}
-impl std::fmt::Debug for ResourceNotFoundException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("ResourceNotFoundException");
-        formatter.field("message", &self.message);
-        formatter.field("resource_id", &self.resource_id);
-        formatter.field("resource_type", &self.resource_type);
-        formatter.finish()
-    }
-}
-impl ResourceNotFoundException {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for ResourceNotFoundException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "ResourceNotFoundException")?;
-        if let Some(inner_2) = &self.message {
-            write!(f, ": {}", inner_2)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-        pub(crate) resource_id: std::option::Option<std::string::String>,
-        pub(crate) resource_type: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// <p>The ID of the resource. </p>
-        pub fn resource_id(mut self, input: impl Into<std::string::String>) -> Self {
-            self.resource_id = Some(input.into());
-            self
-        }
-        /// <p>The ID of the resource. </p>
-        pub fn set_resource_id(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.resource_id = input;
-            self
-        }
-        /// <p>The type of resource. </p>
-        pub fn resource_type(mut self, input: impl Into<std::string::String>) -> Self {
-            self.resource_type = Some(input.into());
-            self
-        }
-        /// <p>The type of resource. </p>
-        pub fn set_resource_type(
-            mut self,
-            input: std::option::Option<std::string::String>,
-        ) -> Self {
-            self.resource_type = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-        pub fn build(self) -> crate::error::ResourceNotFoundException {
-            crate::error::ResourceNotFoundException {
-                message: self.message,
-                resource_id: self.resource_id,
-                resource_type: self.resource_type,
-            }
-        }
-    }
-}
-impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    pub fn builder() -> crate::error::resource_not_found_exception::Builder {
-        crate::error::resource_not_found_exception::Builder::default()
-    }
-}
-
-/// <p>An unexpected error occurred while processing the request.</p>
-#[non_exhaustive]
-#[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct InternalServerException {
-    #[allow(missing_docs)] // documentation missing in model
-    pub message: std::option::Option<std::string::String>,
-}
-impl std::fmt::Debug for InternalServerException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("InternalServerException");
-        formatter.field("message", &self.message);
-        formatter.finish()
-    }
-}
-impl InternalServerException {
-    /// Returns the error message.
-    pub fn message(&self) -> Option<&str> {
-        self.message.as_deref()
-    }
-}
-impl std::fmt::Display for InternalServerException {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "InternalServerException")?;
-        if let Some(inner_3) = &self.message {
-            write!(f, ": {}", inner_3)?;
-        }
-        Ok(())
-    }
-}
-impl std::error::Error for InternalServerException {}
-/// See [`InternalServerException`](crate::error::InternalServerException)
-pub mod internal_server_exception {
-    /// A builder for [`InternalServerException`](crate::error::InternalServerException)
-    #[non_exhaustive]
-    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
-    pub struct Builder {
-        pub(crate) message: std::option::Option<std::string::String>,
-    }
-    impl Builder {
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
-            self.message = Some(input.into());
-            self
-        }
-        #[allow(missing_docs)] // documentation missing in model
-        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
-            self.message = input;
-            self
-        }
-        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException)
-        pub fn build(self) -> crate::error::InternalServerException {
-            crate::error::InternalServerException {
-                message: self.message,
-            }
-        }
-    }
-}
-impl InternalServerException {
-    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException)
-    pub fn builder() -> crate::error::internal_server_exception::Builder {
-        crate::error::internal_server_exception::Builder::default()
     }
 }
 
@@ -3430,17 +3384,17 @@ impl ThrottlingException {
 impl std::fmt::Display for ThrottlingException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "ThrottlingException")?;
-        if let Some(inner_4) = &self.message {
-            write!(f, ": {}", inner_4)?;
+        if let Some(inner_2) = &self.message {
+            write!(f, ": {}", inner_2)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for ThrottlingException {}
-/// See [`ThrottlingException`](crate::error::ThrottlingException)
+/// See [`ThrottlingException`](crate::error::ThrottlingException).
 pub mod throttling_exception {
-    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
-    #[non_exhaustive]
+
+    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3489,7 +3443,7 @@ pub mod throttling_exception {
             self.retry_after_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException)
+        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException).
         pub fn build(self) -> crate::error::ThrottlingException {
             crate::error::ThrottlingException {
                 message: self.message,
@@ -3501,46 +3455,153 @@ pub mod throttling_exception {
     }
 }
 impl ThrottlingException {
-    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException)
+    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException).
     pub fn builder() -> crate::error::throttling_exception::Builder {
         crate::error::throttling_exception::Builder::default()
     }
 }
 
-/// <p>The resource policy is not valid.</p>
+/// <p>The request references a resource that does not exist. </p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
-pub struct InvalidResourcePolicyException {
+pub struct ResourceNotFoundException {
     #[allow(missing_docs)] // documentation missing in model
     pub message: std::option::Option<std::string::String>,
+    /// <p>The ID of the resource. </p>
+    pub resource_id: std::option::Option<std::string::String>,
+    /// <p>The type of resource. </p>
+    pub resource_type: std::option::Option<std::string::String>,
 }
-impl std::fmt::Debug for InvalidResourcePolicyException {
+impl ResourceNotFoundException {
+    /// <p>The ID of the resource. </p>
+    pub fn resource_id(&self) -> std::option::Option<&str> {
+        self.resource_id.as_deref()
+    }
+    /// <p>The type of resource. </p>
+    pub fn resource_type(&self) -> std::option::Option<&str> {
+        self.resource_type.as_deref()
+    }
+}
+impl std::fmt::Debug for ResourceNotFoundException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let mut formatter = f.debug_struct("InvalidResourcePolicyException");
+        let mut formatter = f.debug_struct("ResourceNotFoundException");
         formatter.field("message", &self.message);
+        formatter.field("resource_id", &self.resource_id);
+        formatter.field("resource_type", &self.resource_type);
         formatter.finish()
     }
 }
-impl InvalidResourcePolicyException {
+impl ResourceNotFoundException {
     /// Returns the error message.
     pub fn message(&self) -> Option<&str> {
         self.message.as_deref()
     }
 }
-impl std::fmt::Display for InvalidResourcePolicyException {
+impl std::fmt::Display for ResourceNotFoundException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "InvalidResourcePolicyException")?;
-        if let Some(inner_5) = &self.message {
-            write!(f, ": {}", inner_5)?;
+        write!(f, "ResourceNotFoundException")?;
+        if let Some(inner_3) = &self.message {
+            write!(f, ": {}", inner_3)?;
         }
         Ok(())
     }
 }
-impl std::error::Error for InvalidResourcePolicyException {}
-/// See [`InvalidResourcePolicyException`](crate::error::InvalidResourcePolicyException)
-pub mod invalid_resource_policy_exception {
-    /// A builder for [`InvalidResourcePolicyException`](crate::error::InvalidResourcePolicyException)
-    #[non_exhaustive]
+impl std::error::Error for ResourceNotFoundException {}
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
+pub mod resource_not_found_exception {
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+        pub(crate) resource_id: std::option::Option<std::string::String>,
+        pub(crate) resource_type: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// <p>The ID of the resource. </p>
+        pub fn resource_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.resource_id = Some(input.into());
+            self
+        }
+        /// <p>The ID of the resource. </p>
+        pub fn set_resource_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.resource_id = input;
+            self
+        }
+        /// <p>The type of resource. </p>
+        pub fn resource_type(mut self, input: impl Into<std::string::String>) -> Self {
+            self.resource_type = Some(input.into());
+            self
+        }
+        /// <p>The type of resource. </p>
+        pub fn set_resource_type(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.resource_type = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
+        pub fn build(self) -> crate::error::ResourceNotFoundException {
+            crate::error::ResourceNotFoundException {
+                message: self.message,
+                resource_id: self.resource_id,
+                resource_type: self.resource_type,
+            }
+        }
+    }
+}
+impl ResourceNotFoundException {
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
+    pub fn builder() -> crate::error::resource_not_found_exception::Builder {
+        crate::error::resource_not_found_exception::Builder::default()
+    }
+}
+
+/// <p>An unexpected error occurred while processing the request.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct InternalServerException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for InternalServerException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("InternalServerException");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl InternalServerException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for InternalServerException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "InternalServerException")?;
+        if let Some(inner_4) = &self.message {
+            write!(f, ": {}", inner_4)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for InternalServerException {}
+/// See [`InternalServerException`](crate::error::InternalServerException).
+pub mod internal_server_exception {
+
+    /// A builder for [`InternalServerException`](crate::error::InternalServerException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3556,18 +3617,18 @@ pub mod invalid_resource_policy_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidResourcePolicyException`](crate::error::InvalidResourcePolicyException)
-        pub fn build(self) -> crate::error::InvalidResourcePolicyException {
-            crate::error::InvalidResourcePolicyException {
+        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException).
+        pub fn build(self) -> crate::error::InternalServerException {
+            crate::error::InternalServerException {
                 message: self.message,
             }
         }
     }
 }
-impl InvalidResourcePolicyException {
-    /// Creates a new builder-style object to manufacture [`InvalidResourcePolicyException`](crate::error::InvalidResourcePolicyException)
-    pub fn builder() -> crate::error::invalid_resource_policy_exception::Builder {
-        crate::error::invalid_resource_policy_exception::Builder::default()
+impl InternalServerException {
+    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException).
+    pub fn builder() -> crate::error::internal_server_exception::Builder {
+        crate::error::internal_server_exception::Builder::default()
     }
 }
 
@@ -3594,17 +3655,17 @@ impl AccessDeniedException {
 impl std::fmt::Display for AccessDeniedException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "AccessDeniedException")?;
-        if let Some(inner_6) = &self.message {
-            write!(f, ": {}", inner_6)?;
+        if let Some(inner_5) = &self.message {
+            write!(f, ": {}", inner_5)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for AccessDeniedException {}
-/// See [`AccessDeniedException`](crate::error::AccessDeniedException)
+/// See [`AccessDeniedException`](crate::error::AccessDeniedException).
 pub mod access_denied_exception {
-    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
-    #[non_exhaustive]
+
+    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3620,7 +3681,7 @@ pub mod access_denied_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException)
+        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException).
         pub fn build(self) -> crate::error::AccessDeniedException {
             crate::error::AccessDeniedException {
                 message: self.message,
@@ -3629,9 +3690,73 @@ pub mod access_denied_exception {
     }
 }
 impl AccessDeniedException {
-    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException)
+    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException).
     pub fn builder() -> crate::error::access_denied_exception::Builder {
         crate::error::access_denied_exception::Builder::default()
+    }
+}
+
+/// <p>The resource policy is not valid.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct InvalidResourcePolicyException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for InvalidResourcePolicyException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("InvalidResourcePolicyException");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl InvalidResourcePolicyException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for InvalidResourcePolicyException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "InvalidResourcePolicyException")?;
+        if let Some(inner_6) = &self.message {
+            write!(f, ": {}", inner_6)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for InvalidResourcePolicyException {}
+/// See [`InvalidResourcePolicyException`](crate::error::InvalidResourcePolicyException).
+pub mod invalid_resource_policy_exception {
+
+    /// A builder for [`InvalidResourcePolicyException`](crate::error::InvalidResourcePolicyException).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`InvalidResourcePolicyException`](crate::error::InvalidResourcePolicyException).
+        pub fn build(self) -> crate::error::InvalidResourcePolicyException {
+            crate::error::InvalidResourcePolicyException {
+                message: self.message,
+            }
+        }
+    }
+}
+impl InvalidResourcePolicyException {
+    /// Creates a new builder-style object to manufacture [`InvalidResourcePolicyException`](crate::error::InvalidResourcePolicyException).
+    pub fn builder() -> crate::error::invalid_resource_policy_exception::Builder {
+        crate::error::invalid_resource_policy_exception::Builder::default()
     }
 }
 
@@ -3695,10 +3820,10 @@ impl std::fmt::Display for ServiceQuotaExceededException {
     }
 }
 impl std::error::Error for ServiceQuotaExceededException {}
-/// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+/// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
 pub mod service_quota_exceeded_exception {
-    /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3761,7 +3886,7 @@ pub mod service_quota_exceeded_exception {
             self.service_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+        /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
         pub fn build(self) -> crate::error::ServiceQuotaExceededException {
             crate::error::ServiceQuotaExceededException {
                 message: self.message,
@@ -3774,7 +3899,7 @@ pub mod service_quota_exceeded_exception {
     }
 }
 impl ServiceQuotaExceededException {
-    /// Creates a new builder-style object to manufacture [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+    /// Creates a new builder-style object to manufacture [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
     pub fn builder() -> crate::error::service_quota_exceeded_exception::Builder {
         crate::error::service_quota_exceeded_exception::Builder::default()
     }
@@ -3826,10 +3951,10 @@ impl std::fmt::Display for ConflictException {
     }
 }
 impl std::error::Error for ConflictException {}
-/// See [`ConflictException`](crate::error::ConflictException)
+/// See [`ConflictException`](crate::error::ConflictException).
 pub mod conflict_exception {
-    /// A builder for [`ConflictException`](crate::error::ConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`ConflictException`](crate::error::ConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -3870,7 +3995,7 @@ pub mod conflict_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException)
+        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException).
         pub fn build(self) -> crate::error::ConflictException {
             crate::error::ConflictException {
                 message: self.message,
@@ -3881,7 +4006,7 @@ pub mod conflict_exception {
     }
 }
 impl ConflictException {
-    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException)
+    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException).
     pub fn builder() -> crate::error::conflict_exception::Builder {
         crate::error::conflict_exception::Builder::default()
     }

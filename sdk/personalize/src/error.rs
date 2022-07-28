@@ -1307,6 +1307,8 @@ pub enum CreateRecommenderErrorKind {
     LimitExceededException(crate::error::LimitExceededException),
     /// <p>The specified resource already exists.</p>
     ResourceAlreadyExistsException(crate::error::ResourceAlreadyExistsException),
+    /// <p>The specified resource is in use.</p>
+    ResourceInUseException(crate::error::ResourceInUseException),
     /// <p>Could not find the specified resource.</p>
     ResourceNotFoundException(crate::error::ResourceNotFoundException),
     /// <p>You have exceeded the maximum number of tags you can apply to this resource. </p>
@@ -1320,6 +1322,7 @@ impl std::fmt::Display for CreateRecommenderError {
             CreateRecommenderErrorKind::InvalidInputException(_inner) => _inner.fmt(f),
             CreateRecommenderErrorKind::LimitExceededException(_inner) => _inner.fmt(f),
             CreateRecommenderErrorKind::ResourceAlreadyExistsException(_inner) => _inner.fmt(f),
+            CreateRecommenderErrorKind::ResourceInUseException(_inner) => _inner.fmt(f),
             CreateRecommenderErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
             CreateRecommenderErrorKind::TooManyTagsException(_inner) => _inner.fmt(f),
             CreateRecommenderErrorKind::Unhandled(_inner) => _inner.fmt(f),
@@ -1397,6 +1400,13 @@ impl CreateRecommenderError {
             CreateRecommenderErrorKind::ResourceAlreadyExistsException(_)
         )
     }
+    /// Returns `true` if the error kind is `CreateRecommenderErrorKind::ResourceInUseException`.
+    pub fn is_resource_in_use_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateRecommenderErrorKind::ResourceInUseException(_)
+        )
+    }
     /// Returns `true` if the error kind is `CreateRecommenderErrorKind::ResourceNotFoundException`.
     pub fn is_resource_not_found_exception(&self) -> bool {
         matches!(
@@ -1418,6 +1428,7 @@ impl std::error::Error for CreateRecommenderError {
             CreateRecommenderErrorKind::InvalidInputException(_inner) => Some(_inner),
             CreateRecommenderErrorKind::LimitExceededException(_inner) => Some(_inner),
             CreateRecommenderErrorKind::ResourceAlreadyExistsException(_inner) => Some(_inner),
+            CreateRecommenderErrorKind::ResourceInUseException(_inner) => Some(_inner),
             CreateRecommenderErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
             CreateRecommenderErrorKind::TooManyTagsException(_inner) => Some(_inner),
             CreateRecommenderErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
@@ -6907,10 +6918,10 @@ impl std::fmt::Display for ResourceNotFoundException {
     }
 }
 impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
 pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6926,7 +6937,7 @@ pub mod resource_not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
         pub fn build(self) -> crate::error::ResourceNotFoundException {
             crate::error::ResourceNotFoundException {
                 message: self.message,
@@ -6935,7 +6946,7 @@ pub mod resource_not_found_exception {
     }
 }
 impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     pub fn builder() -> crate::error::resource_not_found_exception::Builder {
         crate::error::resource_not_found_exception::Builder::default()
     }
@@ -6971,10 +6982,10 @@ impl std::fmt::Display for ResourceInUseException {
     }
 }
 impl std::error::Error for ResourceInUseException {}
-/// See [`ResourceInUseException`](crate::error::ResourceInUseException)
+/// See [`ResourceInUseException`](crate::error::ResourceInUseException).
 pub mod resource_in_use_exception {
-    /// A builder for [`ResourceInUseException`](crate::error::ResourceInUseException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceInUseException`](crate::error::ResourceInUseException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -6990,7 +7001,7 @@ pub mod resource_in_use_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceInUseException`](crate::error::ResourceInUseException)
+        /// Consumes the builder and constructs a [`ResourceInUseException`](crate::error::ResourceInUseException).
         pub fn build(self) -> crate::error::ResourceInUseException {
             crate::error::ResourceInUseException {
                 message: self.message,
@@ -6999,7 +7010,7 @@ pub mod resource_in_use_exception {
     }
 }
 impl ResourceInUseException {
-    /// Creates a new builder-style object to manufacture [`ResourceInUseException`](crate::error::ResourceInUseException)
+    /// Creates a new builder-style object to manufacture [`ResourceInUseException`](crate::error::ResourceInUseException).
     pub fn builder() -> crate::error::resource_in_use_exception::Builder {
         crate::error::resource_in_use_exception::Builder::default()
     }
@@ -7035,10 +7046,10 @@ impl std::fmt::Display for InvalidInputException {
     }
 }
 impl std::error::Error for InvalidInputException {}
-/// See [`InvalidInputException`](crate::error::InvalidInputException)
+/// See [`InvalidInputException`](crate::error::InvalidInputException).
 pub mod invalid_input_exception {
-    /// A builder for [`InvalidInputException`](crate::error::InvalidInputException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidInputException`](crate::error::InvalidInputException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7054,7 +7065,7 @@ pub mod invalid_input_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidInputException`](crate::error::InvalidInputException)
+        /// Consumes the builder and constructs a [`InvalidInputException`](crate::error::InvalidInputException).
         pub fn build(self) -> crate::error::InvalidInputException {
             crate::error::InvalidInputException {
                 message: self.message,
@@ -7063,7 +7074,7 @@ pub mod invalid_input_exception {
     }
 }
 impl InvalidInputException {
-    /// Creates a new builder-style object to manufacture [`InvalidInputException`](crate::error::InvalidInputException)
+    /// Creates a new builder-style object to manufacture [`InvalidInputException`](crate::error::InvalidInputException).
     pub fn builder() -> crate::error::invalid_input_exception::Builder {
         crate::error::invalid_input_exception::Builder::default()
     }
@@ -7099,10 +7110,10 @@ impl std::fmt::Display for TooManyTagKeysException {
     }
 }
 impl std::error::Error for TooManyTagKeysException {}
-/// See [`TooManyTagKeysException`](crate::error::TooManyTagKeysException)
+/// See [`TooManyTagKeysException`](crate::error::TooManyTagKeysException).
 pub mod too_many_tag_keys_exception {
-    /// A builder for [`TooManyTagKeysException`](crate::error::TooManyTagKeysException)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyTagKeysException`](crate::error::TooManyTagKeysException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7118,7 +7129,7 @@ pub mod too_many_tag_keys_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyTagKeysException`](crate::error::TooManyTagKeysException)
+        /// Consumes the builder and constructs a [`TooManyTagKeysException`](crate::error::TooManyTagKeysException).
         pub fn build(self) -> crate::error::TooManyTagKeysException {
             crate::error::TooManyTagKeysException {
                 message: self.message,
@@ -7127,7 +7138,7 @@ pub mod too_many_tag_keys_exception {
     }
 }
 impl TooManyTagKeysException {
-    /// Creates a new builder-style object to manufacture [`TooManyTagKeysException`](crate::error::TooManyTagKeysException)
+    /// Creates a new builder-style object to manufacture [`TooManyTagKeysException`](crate::error::TooManyTagKeysException).
     pub fn builder() -> crate::error::too_many_tag_keys_exception::Builder {
         crate::error::too_many_tag_keys_exception::Builder::default()
     }
@@ -7163,10 +7174,10 @@ impl std::fmt::Display for TooManyTagsException {
     }
 }
 impl std::error::Error for TooManyTagsException {}
-/// See [`TooManyTagsException`](crate::error::TooManyTagsException)
+/// See [`TooManyTagsException`](crate::error::TooManyTagsException).
 pub mod too_many_tags_exception {
-    /// A builder for [`TooManyTagsException`](crate::error::TooManyTagsException)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyTagsException`](crate::error::TooManyTagsException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7182,7 +7193,7 @@ pub mod too_many_tags_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyTagsException`](crate::error::TooManyTagsException)
+        /// Consumes the builder and constructs a [`TooManyTagsException`](crate::error::TooManyTagsException).
         pub fn build(self) -> crate::error::TooManyTagsException {
             crate::error::TooManyTagsException {
                 message: self.message,
@@ -7191,7 +7202,7 @@ pub mod too_many_tags_exception {
     }
 }
 impl TooManyTagsException {
-    /// Creates a new builder-style object to manufacture [`TooManyTagsException`](crate::error::TooManyTagsException)
+    /// Creates a new builder-style object to manufacture [`TooManyTagsException`](crate::error::TooManyTagsException).
     pub fn builder() -> crate::error::too_many_tags_exception::Builder {
         crate::error::too_many_tags_exception::Builder::default()
     }
@@ -7227,10 +7238,10 @@ impl std::fmt::Display for LimitExceededException {
     }
 }
 impl std::error::Error for LimitExceededException {}
-/// See [`LimitExceededException`](crate::error::LimitExceededException)
+/// See [`LimitExceededException`](crate::error::LimitExceededException).
 pub mod limit_exceeded_exception {
-    /// A builder for [`LimitExceededException`](crate::error::LimitExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`LimitExceededException`](crate::error::LimitExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7246,7 +7257,7 @@ pub mod limit_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`LimitExceededException`](crate::error::LimitExceededException)
+        /// Consumes the builder and constructs a [`LimitExceededException`](crate::error::LimitExceededException).
         pub fn build(self) -> crate::error::LimitExceededException {
             crate::error::LimitExceededException {
                 message: self.message,
@@ -7255,7 +7266,7 @@ pub mod limit_exceeded_exception {
     }
 }
 impl LimitExceededException {
-    /// Creates a new builder-style object to manufacture [`LimitExceededException`](crate::error::LimitExceededException)
+    /// Creates a new builder-style object to manufacture [`LimitExceededException`](crate::error::LimitExceededException).
     pub fn builder() -> crate::error::limit_exceeded_exception::Builder {
         crate::error::limit_exceeded_exception::Builder::default()
     }
@@ -7291,10 +7302,10 @@ impl std::fmt::Display for InvalidNextTokenException {
     }
 }
 impl std::error::Error for InvalidNextTokenException {}
-/// See [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
+/// See [`InvalidNextTokenException`](crate::error::InvalidNextTokenException).
 pub mod invalid_next_token_exception {
-    /// A builder for [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidNextTokenException`](crate::error::InvalidNextTokenException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7310,7 +7321,7 @@ pub mod invalid_next_token_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
+        /// Consumes the builder and constructs a [`InvalidNextTokenException`](crate::error::InvalidNextTokenException).
         pub fn build(self) -> crate::error::InvalidNextTokenException {
             crate::error::InvalidNextTokenException {
                 message: self.message,
@@ -7319,7 +7330,7 @@ pub mod invalid_next_token_exception {
     }
 }
 impl InvalidNextTokenException {
-    /// Creates a new builder-style object to manufacture [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
+    /// Creates a new builder-style object to manufacture [`InvalidNextTokenException`](crate::error::InvalidNextTokenException).
     pub fn builder() -> crate::error::invalid_next_token_exception::Builder {
         crate::error::invalid_next_token_exception::Builder::default()
     }
@@ -7355,10 +7366,10 @@ impl std::fmt::Display for ResourceAlreadyExistsException {
     }
 }
 impl std::error::Error for ResourceAlreadyExistsException {}
-/// See [`ResourceAlreadyExistsException`](crate::error::ResourceAlreadyExistsException)
+/// See [`ResourceAlreadyExistsException`](crate::error::ResourceAlreadyExistsException).
 pub mod resource_already_exists_exception {
-    /// A builder for [`ResourceAlreadyExistsException`](crate::error::ResourceAlreadyExistsException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceAlreadyExistsException`](crate::error::ResourceAlreadyExistsException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7374,7 +7385,7 @@ pub mod resource_already_exists_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceAlreadyExistsException`](crate::error::ResourceAlreadyExistsException)
+        /// Consumes the builder and constructs a [`ResourceAlreadyExistsException`](crate::error::ResourceAlreadyExistsException).
         pub fn build(self) -> crate::error::ResourceAlreadyExistsException {
             crate::error::ResourceAlreadyExistsException {
                 message: self.message,
@@ -7383,7 +7394,7 @@ pub mod resource_already_exists_exception {
     }
 }
 impl ResourceAlreadyExistsException {
-    /// Creates a new builder-style object to manufacture [`ResourceAlreadyExistsException`](crate::error::ResourceAlreadyExistsException)
+    /// Creates a new builder-style object to manufacture [`ResourceAlreadyExistsException`](crate::error::ResourceAlreadyExistsException).
     pub fn builder() -> crate::error::resource_already_exists_exception::Builder {
         crate::error::resource_already_exists_exception::Builder::default()
     }

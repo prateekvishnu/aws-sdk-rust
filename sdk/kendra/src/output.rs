@@ -9,21 +9,21 @@ impl std::fmt::Debug for UpdateThesaurusOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateThesaurusOutput`](crate::output::UpdateThesaurusOutput)
+/// See [`UpdateThesaurusOutput`](crate::output::UpdateThesaurusOutput).
 pub mod update_thesaurus_output {
-    /// A builder for [`UpdateThesaurusOutput`](crate::output::UpdateThesaurusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateThesaurusOutput`](crate::output::UpdateThesaurusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateThesaurusOutput`](crate::output::UpdateThesaurusOutput)
+        /// Consumes the builder and constructs a [`UpdateThesaurusOutput`](crate::output::UpdateThesaurusOutput).
         pub fn build(self) -> crate::output::UpdateThesaurusOutput {
             crate::output::UpdateThesaurusOutput {}
         }
     }
 }
 impl UpdateThesaurusOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateThesaurusOutput`](crate::output::UpdateThesaurusOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateThesaurusOutput`](crate::output::UpdateThesaurusOutput).
     pub fn builder() -> crate::output::update_thesaurus_output::Builder {
         crate::output::update_thesaurus_output::Builder::default()
     }
@@ -39,21 +39,21 @@ impl std::fmt::Debug for UpdateQuerySuggestionsConfigOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateQuerySuggestionsConfigOutput`](crate::output::UpdateQuerySuggestionsConfigOutput)
+/// See [`UpdateQuerySuggestionsConfigOutput`](crate::output::UpdateQuerySuggestionsConfigOutput).
 pub mod update_query_suggestions_config_output {
-    /// A builder for [`UpdateQuerySuggestionsConfigOutput`](crate::output::UpdateQuerySuggestionsConfigOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateQuerySuggestionsConfigOutput`](crate::output::UpdateQuerySuggestionsConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateQuerySuggestionsConfigOutput`](crate::output::UpdateQuerySuggestionsConfigOutput)
+        /// Consumes the builder and constructs a [`UpdateQuerySuggestionsConfigOutput`](crate::output::UpdateQuerySuggestionsConfigOutput).
         pub fn build(self) -> crate::output::UpdateQuerySuggestionsConfigOutput {
             crate::output::UpdateQuerySuggestionsConfigOutput {}
         }
     }
 }
 impl UpdateQuerySuggestionsConfigOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateQuerySuggestionsConfigOutput`](crate::output::UpdateQuerySuggestionsConfigOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateQuerySuggestionsConfigOutput`](crate::output::UpdateQuerySuggestionsConfigOutput).
     pub fn builder() -> crate::output::update_query_suggestions_config_output::Builder {
         crate::output::update_query_suggestions_config_output::Builder::default()
     }
@@ -69,21 +69,21 @@ impl std::fmt::Debug for UpdateQuerySuggestionsBlockListOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateQuerySuggestionsBlockListOutput`](crate::output::UpdateQuerySuggestionsBlockListOutput)
+/// See [`UpdateQuerySuggestionsBlockListOutput`](crate::output::UpdateQuerySuggestionsBlockListOutput).
 pub mod update_query_suggestions_block_list_output {
-    /// A builder for [`UpdateQuerySuggestionsBlockListOutput`](crate::output::UpdateQuerySuggestionsBlockListOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateQuerySuggestionsBlockListOutput`](crate::output::UpdateQuerySuggestionsBlockListOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateQuerySuggestionsBlockListOutput`](crate::output::UpdateQuerySuggestionsBlockListOutput)
+        /// Consumes the builder and constructs a [`UpdateQuerySuggestionsBlockListOutput`](crate::output::UpdateQuerySuggestionsBlockListOutput).
         pub fn build(self) -> crate::output::UpdateQuerySuggestionsBlockListOutput {
             crate::output::UpdateQuerySuggestionsBlockListOutput {}
         }
     }
 }
 impl UpdateQuerySuggestionsBlockListOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateQuerySuggestionsBlockListOutput`](crate::output::UpdateQuerySuggestionsBlockListOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateQuerySuggestionsBlockListOutput`](crate::output::UpdateQuerySuggestionsBlockListOutput).
     pub fn builder() -> crate::output::update_query_suggestions_block_list_output::Builder {
         crate::output::update_query_suggestions_block_list_output::Builder::default()
     }
@@ -99,21 +99,21 @@ impl std::fmt::Debug for UpdateIndexOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateIndexOutput`](crate::output::UpdateIndexOutput)
+/// See [`UpdateIndexOutput`](crate::output::UpdateIndexOutput).
 pub mod update_index_output {
-    /// A builder for [`UpdateIndexOutput`](crate::output::UpdateIndexOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateIndexOutput`](crate::output::UpdateIndexOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateIndexOutput`](crate::output::UpdateIndexOutput)
+        /// Consumes the builder and constructs a [`UpdateIndexOutput`](crate::output::UpdateIndexOutput).
         pub fn build(self) -> crate::output::UpdateIndexOutput {
             crate::output::UpdateIndexOutput {}
         }
     }
 }
 impl UpdateIndexOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateIndexOutput`](crate::output::UpdateIndexOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateIndexOutput`](crate::output::UpdateIndexOutput).
     pub fn builder() -> crate::output::update_index_output::Builder {
         crate::output::update_index_output::Builder::default()
     }
@@ -129,21 +129,21 @@ impl std::fmt::Debug for UpdateExperienceOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateExperienceOutput`](crate::output::UpdateExperienceOutput)
+/// See [`UpdateExperienceOutput`](crate::output::UpdateExperienceOutput).
 pub mod update_experience_output {
-    /// A builder for [`UpdateExperienceOutput`](crate::output::UpdateExperienceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateExperienceOutput`](crate::output::UpdateExperienceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateExperienceOutput`](crate::output::UpdateExperienceOutput)
+        /// Consumes the builder and constructs a [`UpdateExperienceOutput`](crate::output::UpdateExperienceOutput).
         pub fn build(self) -> crate::output::UpdateExperienceOutput {
             crate::output::UpdateExperienceOutput {}
         }
     }
 }
 impl UpdateExperienceOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateExperienceOutput`](crate::output::UpdateExperienceOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateExperienceOutput`](crate::output::UpdateExperienceOutput).
     pub fn builder() -> crate::output::update_experience_output::Builder {
         crate::output::update_experience_output::Builder::default()
     }
@@ -159,23 +159,53 @@ impl std::fmt::Debug for UpdateDataSourceOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput)
+/// See [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput).
 pub mod update_data_source_output {
-    /// A builder for [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput)
+        /// Consumes the builder and constructs a [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput).
         pub fn build(self) -> crate::output::UpdateDataSourceOutput {
             crate::output::UpdateDataSourceOutput {}
         }
     }
 }
 impl UpdateDataSourceOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDataSourceOutput`](crate::output::UpdateDataSourceOutput).
     pub fn builder() -> crate::output::update_data_source_output::Builder {
         crate::output::update_data_source_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateAccessControlConfigurationOutput {}
+impl std::fmt::Debug for UpdateAccessControlConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateAccessControlConfigurationOutput");
+        formatter.finish()
+    }
+}
+/// See [`UpdateAccessControlConfigurationOutput`](crate::output::UpdateAccessControlConfigurationOutput).
+pub mod update_access_control_configuration_output {
+
+    /// A builder for [`UpdateAccessControlConfigurationOutput`](crate::output::UpdateAccessControlConfigurationOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`UpdateAccessControlConfigurationOutput`](crate::output::UpdateAccessControlConfigurationOutput).
+        pub fn build(self) -> crate::output::UpdateAccessControlConfigurationOutput {
+            crate::output::UpdateAccessControlConfigurationOutput {}
+        }
+    }
+}
+impl UpdateAccessControlConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateAccessControlConfigurationOutput`](crate::output::UpdateAccessControlConfigurationOutput).
+    pub fn builder() -> crate::output::update_access_control_configuration_output::Builder {
+        crate::output::update_access_control_configuration_output::Builder::default()
     }
 }
 
@@ -189,21 +219,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -219,21 +249,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -249,21 +279,21 @@ impl std::fmt::Debug for SubmitFeedbackOutput {
         formatter.finish()
     }
 }
-/// See [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput)
+/// See [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput).
 pub mod submit_feedback_output {
-    /// A builder for [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput)
+        /// Consumes the builder and constructs a [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput).
         pub fn build(self) -> crate::output::SubmitFeedbackOutput {
             crate::output::SubmitFeedbackOutput {}
         }
     }
 }
 impl SubmitFeedbackOutput {
-    /// Creates a new builder-style object to manufacture [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput)
+    /// Creates a new builder-style object to manufacture [`SubmitFeedbackOutput`](crate::output::SubmitFeedbackOutput).
     pub fn builder() -> crate::output::submit_feedback_output::Builder {
         crate::output::submit_feedback_output::Builder::default()
     }
@@ -279,21 +309,21 @@ impl std::fmt::Debug for StopDataSourceSyncJobOutput {
         formatter.finish()
     }
 }
-/// See [`StopDataSourceSyncJobOutput`](crate::output::StopDataSourceSyncJobOutput)
+/// See [`StopDataSourceSyncJobOutput`](crate::output::StopDataSourceSyncJobOutput).
 pub mod stop_data_source_sync_job_output {
-    /// A builder for [`StopDataSourceSyncJobOutput`](crate::output::StopDataSourceSyncJobOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`StopDataSourceSyncJobOutput`](crate::output::StopDataSourceSyncJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`StopDataSourceSyncJobOutput`](crate::output::StopDataSourceSyncJobOutput)
+        /// Consumes the builder and constructs a [`StopDataSourceSyncJobOutput`](crate::output::StopDataSourceSyncJobOutput).
         pub fn build(self) -> crate::output::StopDataSourceSyncJobOutput {
             crate::output::StopDataSourceSyncJobOutput {}
         }
     }
 }
 impl StopDataSourceSyncJobOutput {
-    /// Creates a new builder-style object to manufacture [`StopDataSourceSyncJobOutput`](crate::output::StopDataSourceSyncJobOutput)
+    /// Creates a new builder-style object to manufacture [`StopDataSourceSyncJobOutput`](crate::output::StopDataSourceSyncJobOutput).
     pub fn builder() -> crate::output::stop_data_source_sync_job_output::Builder {
         crate::output::stop_data_source_sync_job_output::Builder::default()
     }
@@ -319,10 +349,10 @@ impl std::fmt::Debug for StartDataSourceSyncJobOutput {
         formatter.finish()
     }
 }
-/// See [`StartDataSourceSyncJobOutput`](crate::output::StartDataSourceSyncJobOutput)
+/// See [`StartDataSourceSyncJobOutput`](crate::output::StartDataSourceSyncJobOutput).
 pub mod start_data_source_sync_job_output {
-    /// A builder for [`StartDataSourceSyncJobOutput`](crate::output::StartDataSourceSyncJobOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`StartDataSourceSyncJobOutput`](crate::output::StartDataSourceSyncJobOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) execution_id: std::option::Option<std::string::String>,
@@ -338,7 +368,7 @@ pub mod start_data_source_sync_job_output {
             self.execution_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartDataSourceSyncJobOutput`](crate::output::StartDataSourceSyncJobOutput)
+        /// Consumes the builder and constructs a [`StartDataSourceSyncJobOutput`](crate::output::StartDataSourceSyncJobOutput).
         pub fn build(self) -> crate::output::StartDataSourceSyncJobOutput {
             crate::output::StartDataSourceSyncJobOutput {
                 execution_id: self.execution_id,
@@ -347,7 +377,7 @@ pub mod start_data_source_sync_job_output {
     }
 }
 impl StartDataSourceSyncJobOutput {
-    /// Creates a new builder-style object to manufacture [`StartDataSourceSyncJobOutput`](crate::output::StartDataSourceSyncJobOutput)
+    /// Creates a new builder-style object to manufacture [`StartDataSourceSyncJobOutput`](crate::output::StartDataSourceSyncJobOutput).
     pub fn builder() -> crate::output::start_data_source_sync_job_output::Builder {
         crate::output::start_data_source_sync_job_output::Builder::default()
     }
@@ -413,10 +443,10 @@ impl std::fmt::Debug for QueryOutput {
         formatter.finish()
     }
 }
-/// See [`QueryOutput`](crate::output::QueryOutput)
+/// See [`QueryOutput`](crate::output::QueryOutput).
 pub mod query_output {
-    /// A builder for [`QueryOutput`](crate::output::QueryOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`QueryOutput`](crate::output::QueryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query_id: std::option::Option<std::string::String>,
@@ -526,7 +556,7 @@ pub mod query_output {
             self.spell_corrected_queries = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryOutput`](crate::output::QueryOutput)
+        /// Consumes the builder and constructs a [`QueryOutput`](crate::output::QueryOutput).
         pub fn build(self) -> crate::output::QueryOutput {
             crate::output::QueryOutput {
                 query_id: self.query_id,
@@ -540,7 +570,7 @@ pub mod query_output {
     }
 }
 impl QueryOutput {
-    /// Creates a new builder-style object to manufacture [`QueryOutput`](crate::output::QueryOutput)
+    /// Creates a new builder-style object to manufacture [`QueryOutput`](crate::output::QueryOutput).
     pub fn builder() -> crate::output::query_output::Builder {
         crate::output::query_output::Builder::default()
     }
@@ -556,21 +586,21 @@ impl std::fmt::Debug for PutPrincipalMappingOutput {
         formatter.finish()
     }
 }
-/// See [`PutPrincipalMappingOutput`](crate::output::PutPrincipalMappingOutput)
+/// See [`PutPrincipalMappingOutput`](crate::output::PutPrincipalMappingOutput).
 pub mod put_principal_mapping_output {
-    /// A builder for [`PutPrincipalMappingOutput`](crate::output::PutPrincipalMappingOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`PutPrincipalMappingOutput`](crate::output::PutPrincipalMappingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutPrincipalMappingOutput`](crate::output::PutPrincipalMappingOutput)
+        /// Consumes the builder and constructs a [`PutPrincipalMappingOutput`](crate::output::PutPrincipalMappingOutput).
         pub fn build(self) -> crate::output::PutPrincipalMappingOutput {
             crate::output::PutPrincipalMappingOutput {}
         }
     }
 }
 impl PutPrincipalMappingOutput {
-    /// Creates a new builder-style object to manufacture [`PutPrincipalMappingOutput`](crate::output::PutPrincipalMappingOutput)
+    /// Creates a new builder-style object to manufacture [`PutPrincipalMappingOutput`](crate::output::PutPrincipalMappingOutput).
     pub fn builder() -> crate::output::put_principal_mapping_output::Builder {
         crate::output::put_principal_mapping_output::Builder::default()
     }
@@ -605,10 +635,10 @@ impl std::fmt::Debug for ListThesauriOutput {
         formatter.finish()
     }
 }
-/// See [`ListThesauriOutput`](crate::output::ListThesauriOutput)
+/// See [`ListThesauriOutput`](crate::output::ListThesauriOutput).
 pub mod list_thesauri_output {
-    /// A builder for [`ListThesauriOutput`](crate::output::ListThesauriOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListThesauriOutput`](crate::output::ListThesauriOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -645,7 +675,7 @@ pub mod list_thesauri_output {
             self.thesaurus_summary_items = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListThesauriOutput`](crate::output::ListThesauriOutput)
+        /// Consumes the builder and constructs a [`ListThesauriOutput`](crate::output::ListThesauriOutput).
         pub fn build(self) -> crate::output::ListThesauriOutput {
             crate::output::ListThesauriOutput {
                 next_token: self.next_token,
@@ -655,7 +685,7 @@ pub mod list_thesauri_output {
     }
 }
 impl ListThesauriOutput {
-    /// Creates a new builder-style object to manufacture [`ListThesauriOutput`](crate::output::ListThesauriOutput)
+    /// Creates a new builder-style object to manufacture [`ListThesauriOutput`](crate::output::ListThesauriOutput).
     pub fn builder() -> crate::output::list_thesauri_output::Builder {
         crate::output::list_thesauri_output::Builder::default()
     }
@@ -681,10 +711,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -709,14 +739,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -756,10 +786,10 @@ impl std::fmt::Debug for ListQuerySuggestionsBlockListsOutput {
         formatter.finish()
     }
 }
-/// See [`ListQuerySuggestionsBlockListsOutput`](crate::output::ListQuerySuggestionsBlockListsOutput)
+/// See [`ListQuerySuggestionsBlockListsOutput`](crate::output::ListQuerySuggestionsBlockListsOutput).
 pub mod list_query_suggestions_block_lists_output {
-    /// A builder for [`ListQuerySuggestionsBlockListsOutput`](crate::output::ListQuerySuggestionsBlockListsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListQuerySuggestionsBlockListsOutput`](crate::output::ListQuerySuggestionsBlockListsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) block_list_summary_items:
@@ -805,7 +835,7 @@ pub mod list_query_suggestions_block_lists_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListQuerySuggestionsBlockListsOutput`](crate::output::ListQuerySuggestionsBlockListsOutput)
+        /// Consumes the builder and constructs a [`ListQuerySuggestionsBlockListsOutput`](crate::output::ListQuerySuggestionsBlockListsOutput).
         pub fn build(self) -> crate::output::ListQuerySuggestionsBlockListsOutput {
             crate::output::ListQuerySuggestionsBlockListsOutput {
                 block_list_summary_items: self.block_list_summary_items,
@@ -815,7 +845,7 @@ pub mod list_query_suggestions_block_lists_output {
     }
 }
 impl ListQuerySuggestionsBlockListsOutput {
-    /// Creates a new builder-style object to manufacture [`ListQuerySuggestionsBlockListsOutput`](crate::output::ListQuerySuggestionsBlockListsOutput)
+    /// Creates a new builder-style object to manufacture [`ListQuerySuggestionsBlockListsOutput`](crate::output::ListQuerySuggestionsBlockListsOutput).
     pub fn builder() -> crate::output::list_query_suggestions_block_lists_output::Builder {
         crate::output::list_query_suggestions_block_lists_output::Builder::default()
     }
@@ -854,10 +884,10 @@ impl std::fmt::Debug for ListIndicesOutput {
         formatter.finish()
     }
 }
-/// See [`ListIndicesOutput`](crate::output::ListIndicesOutput)
+/// See [`ListIndicesOutput`](crate::output::ListIndicesOutput).
 pub mod list_indices_output {
-    /// A builder for [`ListIndicesOutput`](crate::output::ListIndicesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListIndicesOutput`](crate::output::ListIndicesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index_configuration_summary_items:
@@ -897,7 +927,7 @@ pub mod list_indices_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListIndicesOutput`](crate::output::ListIndicesOutput)
+        /// Consumes the builder and constructs a [`ListIndicesOutput`](crate::output::ListIndicesOutput).
         pub fn build(self) -> crate::output::ListIndicesOutput {
             crate::output::ListIndicesOutput {
                 index_configuration_summary_items: self.index_configuration_summary_items,
@@ -907,7 +937,7 @@ pub mod list_indices_output {
     }
 }
 impl ListIndicesOutput {
-    /// Creates a new builder-style object to manufacture [`ListIndicesOutput`](crate::output::ListIndicesOutput)
+    /// Creates a new builder-style object to manufacture [`ListIndicesOutput`](crate::output::ListIndicesOutput).
     pub fn builder() -> crate::output::list_indices_output::Builder {
         crate::output::list_indices_output::Builder::default()
     }
@@ -940,10 +970,10 @@ impl std::fmt::Debug for ListGroupsOlderThanOrderingIdOutput {
         formatter.finish()
     }
 }
-/// See [`ListGroupsOlderThanOrderingIdOutput`](crate::output::ListGroupsOlderThanOrderingIdOutput)
+/// See [`ListGroupsOlderThanOrderingIdOutput`](crate::output::ListGroupsOlderThanOrderingIdOutput).
 pub mod list_groups_older_than_ordering_id_output {
-    /// A builder for [`ListGroupsOlderThanOrderingIdOutput`](crate::output::ListGroupsOlderThanOrderingIdOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListGroupsOlderThanOrderingIdOutput`](crate::output::ListGroupsOlderThanOrderingIdOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) groups_summaries: std::option::Option<std::vec::Vec<crate::model::GroupSummary>>,
@@ -979,7 +1009,7 @@ pub mod list_groups_older_than_ordering_id_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListGroupsOlderThanOrderingIdOutput`](crate::output::ListGroupsOlderThanOrderingIdOutput)
+        /// Consumes the builder and constructs a [`ListGroupsOlderThanOrderingIdOutput`](crate::output::ListGroupsOlderThanOrderingIdOutput).
         pub fn build(self) -> crate::output::ListGroupsOlderThanOrderingIdOutput {
             crate::output::ListGroupsOlderThanOrderingIdOutput {
                 groups_summaries: self.groups_summaries,
@@ -989,7 +1019,7 @@ pub mod list_groups_older_than_ordering_id_output {
     }
 }
 impl ListGroupsOlderThanOrderingIdOutput {
-    /// Creates a new builder-style object to manufacture [`ListGroupsOlderThanOrderingIdOutput`](crate::output::ListGroupsOlderThanOrderingIdOutput)
+    /// Creates a new builder-style object to manufacture [`ListGroupsOlderThanOrderingIdOutput`](crate::output::ListGroupsOlderThanOrderingIdOutput).
     pub fn builder() -> crate::output::list_groups_older_than_ordering_id_output::Builder {
         crate::output::list_groups_older_than_ordering_id_output::Builder::default()
     }
@@ -1022,10 +1052,10 @@ impl std::fmt::Debug for ListFaqsOutput {
         formatter.finish()
     }
 }
-/// See [`ListFaqsOutput`](crate::output::ListFaqsOutput)
+/// See [`ListFaqsOutput`](crate::output::ListFaqsOutput).
 pub mod list_faqs_output {
-    /// A builder for [`ListFaqsOutput`](crate::output::ListFaqsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListFaqsOutput`](crate::output::ListFaqsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -1061,7 +1091,7 @@ pub mod list_faqs_output {
             self.faq_summary_items = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListFaqsOutput`](crate::output::ListFaqsOutput)
+        /// Consumes the builder and constructs a [`ListFaqsOutput`](crate::output::ListFaqsOutput).
         pub fn build(self) -> crate::output::ListFaqsOutput {
             crate::output::ListFaqsOutput {
                 next_token: self.next_token,
@@ -1071,7 +1101,7 @@ pub mod list_faqs_output {
     }
 }
 impl ListFaqsOutput {
-    /// Creates a new builder-style object to manufacture [`ListFaqsOutput`](crate::output::ListFaqsOutput)
+    /// Creates a new builder-style object to manufacture [`ListFaqsOutput`](crate::output::ListFaqsOutput).
     pub fn builder() -> crate::output::list_faqs_output::Builder {
         crate::output::list_faqs_output::Builder::default()
     }
@@ -1104,10 +1134,10 @@ impl std::fmt::Debug for ListExperiencesOutput {
         formatter.finish()
     }
 }
-/// See [`ListExperiencesOutput`](crate::output::ListExperiencesOutput)
+/// See [`ListExperiencesOutput`](crate::output::ListExperiencesOutput).
 pub mod list_experiences_output {
-    /// A builder for [`ListExperiencesOutput`](crate::output::ListExperiencesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListExperiencesOutput`](crate::output::ListExperiencesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary_items:
@@ -1144,7 +1174,7 @@ pub mod list_experiences_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListExperiencesOutput`](crate::output::ListExperiencesOutput)
+        /// Consumes the builder and constructs a [`ListExperiencesOutput`](crate::output::ListExperiencesOutput).
         pub fn build(self) -> crate::output::ListExperiencesOutput {
             crate::output::ListExperiencesOutput {
                 summary_items: self.summary_items,
@@ -1154,7 +1184,7 @@ pub mod list_experiences_output {
     }
 }
 impl ListExperiencesOutput {
-    /// Creates a new builder-style object to manufacture [`ListExperiencesOutput`](crate::output::ListExperiencesOutput)
+    /// Creates a new builder-style object to manufacture [`ListExperiencesOutput`](crate::output::ListExperiencesOutput).
     pub fn builder() -> crate::output::list_experiences_output::Builder {
         crate::output::list_experiences_output::Builder::default()
     }
@@ -1187,10 +1217,10 @@ impl std::fmt::Debug for ListExperienceEntitiesOutput {
         formatter.finish()
     }
 }
-/// See [`ListExperienceEntitiesOutput`](crate::output::ListExperienceEntitiesOutput)
+/// See [`ListExperienceEntitiesOutput`](crate::output::ListExperienceEntitiesOutput).
 pub mod list_experience_entities_output {
-    /// A builder for [`ListExperienceEntitiesOutput`](crate::output::ListExperienceEntitiesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListExperienceEntitiesOutput`](crate::output::ListExperienceEntitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary_items:
@@ -1227,7 +1257,7 @@ pub mod list_experience_entities_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListExperienceEntitiesOutput`](crate::output::ListExperienceEntitiesOutput)
+        /// Consumes the builder and constructs a [`ListExperienceEntitiesOutput`](crate::output::ListExperienceEntitiesOutput).
         pub fn build(self) -> crate::output::ListExperienceEntitiesOutput {
             crate::output::ListExperienceEntitiesOutput {
                 summary_items: self.summary_items,
@@ -1237,7 +1267,7 @@ pub mod list_experience_entities_output {
     }
 }
 impl ListExperienceEntitiesOutput {
-    /// Creates a new builder-style object to manufacture [`ListExperienceEntitiesOutput`](crate::output::ListExperienceEntitiesOutput)
+    /// Creates a new builder-style object to manufacture [`ListExperienceEntitiesOutput`](crate::output::ListExperienceEntitiesOutput).
     pub fn builder() -> crate::output::list_experience_entities_output::Builder {
         crate::output::list_experience_entities_output::Builder::default()
     }
@@ -1270,10 +1300,10 @@ impl std::fmt::Debug for ListEntityPersonasOutput {
         formatter.finish()
     }
 }
-/// See [`ListEntityPersonasOutput`](crate::output::ListEntityPersonasOutput)
+/// See [`ListEntityPersonasOutput`](crate::output::ListEntityPersonasOutput).
 pub mod list_entity_personas_output {
-    /// A builder for [`ListEntityPersonasOutput`](crate::output::ListEntityPersonasOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListEntityPersonasOutput`](crate::output::ListEntityPersonasOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary_items: std::option::Option<std::vec::Vec<crate::model::PersonasSummary>>,
@@ -1309,7 +1339,7 @@ pub mod list_entity_personas_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListEntityPersonasOutput`](crate::output::ListEntityPersonasOutput)
+        /// Consumes the builder and constructs a [`ListEntityPersonasOutput`](crate::output::ListEntityPersonasOutput).
         pub fn build(self) -> crate::output::ListEntityPersonasOutput {
             crate::output::ListEntityPersonasOutput {
                 summary_items: self.summary_items,
@@ -1319,7 +1349,7 @@ pub mod list_entity_personas_output {
     }
 }
 impl ListEntityPersonasOutput {
-    /// Creates a new builder-style object to manufacture [`ListEntityPersonasOutput`](crate::output::ListEntityPersonasOutput)
+    /// Creates a new builder-style object to manufacture [`ListEntityPersonasOutput`](crate::output::ListEntityPersonasOutput).
     pub fn builder() -> crate::output::list_entity_personas_output::Builder {
         crate::output::list_entity_personas_output::Builder::default()
     }
@@ -1352,10 +1382,10 @@ impl std::fmt::Debug for ListDataSourceSyncJobsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDataSourceSyncJobsOutput`](crate::output::ListDataSourceSyncJobsOutput)
+/// See [`ListDataSourceSyncJobsOutput`](crate::output::ListDataSourceSyncJobsOutput).
 pub mod list_data_source_sync_jobs_output {
-    /// A builder for [`ListDataSourceSyncJobsOutput`](crate::output::ListDataSourceSyncJobsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListDataSourceSyncJobsOutput`](crate::output::ListDataSourceSyncJobsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) history: std::option::Option<std::vec::Vec<crate::model::DataSourceSyncJob>>,
@@ -1391,7 +1421,7 @@ pub mod list_data_source_sync_jobs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDataSourceSyncJobsOutput`](crate::output::ListDataSourceSyncJobsOutput)
+        /// Consumes the builder and constructs a [`ListDataSourceSyncJobsOutput`](crate::output::ListDataSourceSyncJobsOutput).
         pub fn build(self) -> crate::output::ListDataSourceSyncJobsOutput {
             crate::output::ListDataSourceSyncJobsOutput {
                 history: self.history,
@@ -1401,7 +1431,7 @@ pub mod list_data_source_sync_jobs_output {
     }
 }
 impl ListDataSourceSyncJobsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDataSourceSyncJobsOutput`](crate::output::ListDataSourceSyncJobsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDataSourceSyncJobsOutput`](crate::output::ListDataSourceSyncJobsOutput).
     pub fn builder() -> crate::output::list_data_source_sync_jobs_output::Builder {
         crate::output::list_data_source_sync_jobs_output::Builder::default()
     }
@@ -1434,10 +1464,10 @@ impl std::fmt::Debug for ListDataSourcesOutput {
         formatter.finish()
     }
 }
-/// See [`ListDataSourcesOutput`](crate::output::ListDataSourcesOutput)
+/// See [`ListDataSourcesOutput`](crate::output::ListDataSourcesOutput).
 pub mod list_data_sources_output {
-    /// A builder for [`ListDataSourcesOutput`](crate::output::ListDataSourcesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListDataSourcesOutput`](crate::output::ListDataSourcesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) summary_items:
@@ -1474,7 +1504,7 @@ pub mod list_data_sources_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDataSourcesOutput`](crate::output::ListDataSourcesOutput)
+        /// Consumes the builder and constructs a [`ListDataSourcesOutput`](crate::output::ListDataSourcesOutput).
         pub fn build(self) -> crate::output::ListDataSourcesOutput {
             crate::output::ListDataSourcesOutput {
                 summary_items: self.summary_items,
@@ -1484,9 +1514,103 @@ pub mod list_data_sources_output {
     }
 }
 impl ListDataSourcesOutput {
-    /// Creates a new builder-style object to manufacture [`ListDataSourcesOutput`](crate::output::ListDataSourcesOutput)
+    /// Creates a new builder-style object to manufacture [`ListDataSourcesOutput`](crate::output::ListDataSourcesOutput).
     pub fn builder() -> crate::output::list_data_sources_output::Builder {
         crate::output::list_data_sources_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListAccessControlConfigurationsOutput {
+    /// <p>If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to retrieve the next set of access control configurations.</p>
+    pub next_token: std::option::Option<std::string::String>,
+    /// <p>The details of your access control configurations.</p>
+    pub access_control_configurations:
+        std::option::Option<std::vec::Vec<crate::model::AccessControlConfigurationSummary>>,
+}
+impl ListAccessControlConfigurationsOutput {
+    /// <p>If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to retrieve the next set of access control configurations.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+    /// <p>The details of your access control configurations.</p>
+    pub fn access_control_configurations(
+        &self,
+    ) -> std::option::Option<&[crate::model::AccessControlConfigurationSummary]> {
+        self.access_control_configurations.as_deref()
+    }
+}
+impl std::fmt::Debug for ListAccessControlConfigurationsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListAccessControlConfigurationsOutput");
+        formatter.field("next_token", &self.next_token);
+        formatter.field(
+            "access_control_configurations",
+            &self.access_control_configurations,
+        );
+        formatter.finish()
+    }
+}
+/// See [`ListAccessControlConfigurationsOutput`](crate::output::ListAccessControlConfigurationsOutput).
+pub mod list_access_control_configurations_output {
+
+    /// A builder for [`ListAccessControlConfigurationsOutput`](crate::output::ListAccessControlConfigurationsOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) next_token: std::option::Option<std::string::String>,
+        pub(crate) access_control_configurations:
+            std::option::Option<std::vec::Vec<crate::model::AccessControlConfigurationSummary>>,
+    }
+    impl Builder {
+        /// <p>If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to retrieve the next set of access control configurations.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to retrieve the next set of access control configurations.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Appends an item to `access_control_configurations`.
+        ///
+        /// To override the contents of this collection use [`set_access_control_configurations`](Self::set_access_control_configurations).
+        ///
+        /// <p>The details of your access control configurations.</p>
+        pub fn access_control_configurations(
+            mut self,
+            input: crate::model::AccessControlConfigurationSummary,
+        ) -> Self {
+            let mut v = self.access_control_configurations.unwrap_or_default();
+            v.push(input);
+            self.access_control_configurations = Some(v);
+            self
+        }
+        /// <p>The details of your access control configurations.</p>
+        pub fn set_access_control_configurations(
+            mut self,
+            input: std::option::Option<
+                std::vec::Vec<crate::model::AccessControlConfigurationSummary>,
+            >,
+        ) -> Self {
+            self.access_control_configurations = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListAccessControlConfigurationsOutput`](crate::output::ListAccessControlConfigurationsOutput).
+        pub fn build(self) -> crate::output::ListAccessControlConfigurationsOutput {
+            crate::output::ListAccessControlConfigurationsOutput {
+                next_token: self.next_token,
+                access_control_configurations: self.access_control_configurations,
+            }
+        }
+    }
+}
+impl ListAccessControlConfigurationsOutput {
+    /// Creates a new builder-style object to manufacture [`ListAccessControlConfigurationsOutput`](crate::output::ListAccessControlConfigurationsOutput).
+    pub fn builder() -> crate::output::list_access_control_configurations_output::Builder {
+        crate::output::list_access_control_configurations_output::Builder::default()
     }
 }
 
@@ -1531,10 +1655,10 @@ impl std::fmt::Debug for GetSnapshotsOutput {
         formatter.finish()
     }
 }
-/// See [`GetSnapshotsOutput`](crate::output::GetSnapshotsOutput)
+/// See [`GetSnapshotsOutput`](crate::output::GetSnapshotsOutput).
 pub mod get_snapshots_output {
-    /// A builder for [`GetSnapshotsOutput`](crate::output::GetSnapshotsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetSnapshotsOutput`](crate::output::GetSnapshotsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) snap_shot_time_filter: std::option::Option<crate::model::TimeRange>,
@@ -1605,7 +1729,7 @@ pub mod get_snapshots_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetSnapshotsOutput`](crate::output::GetSnapshotsOutput)
+        /// Consumes the builder and constructs a [`GetSnapshotsOutput`](crate::output::GetSnapshotsOutput).
         pub fn build(self) -> crate::output::GetSnapshotsOutput {
             crate::output::GetSnapshotsOutput {
                 snap_shot_time_filter: self.snap_shot_time_filter,
@@ -1617,7 +1741,7 @@ pub mod get_snapshots_output {
     }
 }
 impl GetSnapshotsOutput {
-    /// Creates a new builder-style object to manufacture [`GetSnapshotsOutput`](crate::output::GetSnapshotsOutput)
+    /// Creates a new builder-style object to manufacture [`GetSnapshotsOutput`](crate::output::GetSnapshotsOutput).
     pub fn builder() -> crate::output::get_snapshots_output::Builder {
         crate::output::get_snapshots_output::Builder::default()
     }
@@ -1650,10 +1774,10 @@ impl std::fmt::Debug for GetQuerySuggestionsOutput {
         formatter.finish()
     }
 }
-/// See [`GetQuerySuggestionsOutput`](crate::output::GetQuerySuggestionsOutput)
+/// See [`GetQuerySuggestionsOutput`](crate::output::GetQuerySuggestionsOutput).
 pub mod get_query_suggestions_output {
-    /// A builder for [`GetQuerySuggestionsOutput`](crate::output::GetQuerySuggestionsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetQuerySuggestionsOutput`](crate::output::GetQuerySuggestionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) query_suggestions_id: std::option::Option<std::string::String>,
@@ -1692,7 +1816,7 @@ pub mod get_query_suggestions_output {
             self.suggestions = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetQuerySuggestionsOutput`](crate::output::GetQuerySuggestionsOutput)
+        /// Consumes the builder and constructs a [`GetQuerySuggestionsOutput`](crate::output::GetQuerySuggestionsOutput).
         pub fn build(self) -> crate::output::GetQuerySuggestionsOutput {
             crate::output::GetQuerySuggestionsOutput {
                 query_suggestions_id: self.query_suggestions_id,
@@ -1702,7 +1826,7 @@ pub mod get_query_suggestions_output {
     }
 }
 impl GetQuerySuggestionsOutput {
-    /// Creates a new builder-style object to manufacture [`GetQuerySuggestionsOutput`](crate::output::GetQuerySuggestionsOutput)
+    /// Creates a new builder-style object to manufacture [`GetQuerySuggestionsOutput`](crate::output::GetQuerySuggestionsOutput).
     pub fn builder() -> crate::output::get_query_suggestions_output::Builder {
         crate::output::get_query_suggestions_output::Builder::default()
     }
@@ -1728,10 +1852,10 @@ impl std::fmt::Debug for DisassociatePersonasFromEntitiesOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociatePersonasFromEntitiesOutput`](crate::output::DisassociatePersonasFromEntitiesOutput)
+/// See [`DisassociatePersonasFromEntitiesOutput`](crate::output::DisassociatePersonasFromEntitiesOutput).
 pub mod disassociate_personas_from_entities_output {
-    /// A builder for [`DisassociatePersonasFromEntitiesOutput`](crate::output::DisassociatePersonasFromEntitiesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DisassociatePersonasFromEntitiesOutput`](crate::output::DisassociatePersonasFromEntitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_entity_list:
@@ -1757,7 +1881,7 @@ pub mod disassociate_personas_from_entities_output {
             self.failed_entity_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociatePersonasFromEntitiesOutput`](crate::output::DisassociatePersonasFromEntitiesOutput)
+        /// Consumes the builder and constructs a [`DisassociatePersonasFromEntitiesOutput`](crate::output::DisassociatePersonasFromEntitiesOutput).
         pub fn build(self) -> crate::output::DisassociatePersonasFromEntitiesOutput {
             crate::output::DisassociatePersonasFromEntitiesOutput {
                 failed_entity_list: self.failed_entity_list,
@@ -1766,7 +1890,7 @@ pub mod disassociate_personas_from_entities_output {
     }
 }
 impl DisassociatePersonasFromEntitiesOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociatePersonasFromEntitiesOutput`](crate::output::DisassociatePersonasFromEntitiesOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociatePersonasFromEntitiesOutput`](crate::output::DisassociatePersonasFromEntitiesOutput).
     pub fn builder() -> crate::output::disassociate_personas_from_entities_output::Builder {
         crate::output::disassociate_personas_from_entities_output::Builder::default()
     }
@@ -1792,10 +1916,10 @@ impl std::fmt::Debug for DisassociateEntitiesFromExperienceOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateEntitiesFromExperienceOutput`](crate::output::DisassociateEntitiesFromExperienceOutput)
+/// See [`DisassociateEntitiesFromExperienceOutput`](crate::output::DisassociateEntitiesFromExperienceOutput).
 pub mod disassociate_entities_from_experience_output {
-    /// A builder for [`DisassociateEntitiesFromExperienceOutput`](crate::output::DisassociateEntitiesFromExperienceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DisassociateEntitiesFromExperienceOutput`](crate::output::DisassociateEntitiesFromExperienceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_entity_list:
@@ -1821,7 +1945,7 @@ pub mod disassociate_entities_from_experience_output {
             self.failed_entity_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateEntitiesFromExperienceOutput`](crate::output::DisassociateEntitiesFromExperienceOutput)
+        /// Consumes the builder and constructs a [`DisassociateEntitiesFromExperienceOutput`](crate::output::DisassociateEntitiesFromExperienceOutput).
         pub fn build(self) -> crate::output::DisassociateEntitiesFromExperienceOutput {
             crate::output::DisassociateEntitiesFromExperienceOutput {
                 failed_entity_list: self.failed_entity_list,
@@ -1830,7 +1954,7 @@ pub mod disassociate_entities_from_experience_output {
     }
 }
 impl DisassociateEntitiesFromExperienceOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateEntitiesFromExperienceOutput`](crate::output::DisassociateEntitiesFromExperienceOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateEntitiesFromExperienceOutput`](crate::output::DisassociateEntitiesFromExperienceOutput).
     pub fn builder() -> crate::output::disassociate_entities_from_experience_output::Builder {
         crate::output::disassociate_entities_from_experience_output::Builder::default()
     }
@@ -1842,7 +1966,7 @@ impl DisassociateEntitiesFromExperienceOutput {
 pub struct DescribeThesaurusOutput {
     /// <p>The identifier of the thesaurus.</p>
     pub id: std::option::Option<std::string::String>,
-    /// <p>The identifier of the index associated with the thesaurus to describe.</p>
+    /// <p>The identifier of the index for the thesaurus.</p>
     pub index_id: std::option::Option<std::string::String>,
     /// <p>The thesaurus name.</p>
     pub name: std::option::Option<std::string::String>,
@@ -1873,7 +1997,7 @@ impl DescribeThesaurusOutput {
     pub fn id(&self) -> std::option::Option<&str> {
         self.id.as_deref()
     }
-    /// <p>The identifier of the index associated with the thesaurus to describe.</p>
+    /// <p>The identifier of the index for the thesaurus.</p>
     pub fn index_id(&self) -> std::option::Option<&str> {
         self.index_id.as_deref()
     }
@@ -1942,10 +2066,10 @@ impl std::fmt::Debug for DescribeThesaurusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeThesaurusOutput`](crate::output::DescribeThesaurusOutput)
+/// See [`DescribeThesaurusOutput`](crate::output::DescribeThesaurusOutput).
 pub mod describe_thesaurus_output {
-    /// A builder for [`DescribeThesaurusOutput`](crate::output::DescribeThesaurusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeThesaurusOutput`](crate::output::DescribeThesaurusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -1973,12 +2097,12 @@ pub mod describe_thesaurus_output {
             self.id = input;
             self
         }
-        /// <p>The identifier of the index associated with the thesaurus to describe.</p>
+        /// <p>The identifier of the index for the thesaurus.</p>
         pub fn index_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.index_id = Some(input.into());
             self
         }
-        /// <p>The identifier of the index associated with the thesaurus to describe.</p>
+        /// <p>The identifier of the index for the thesaurus.</p>
         pub fn set_index_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.index_id = input;
             self
@@ -2110,7 +2234,7 @@ pub mod describe_thesaurus_output {
             self.synonym_rule_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeThesaurusOutput`](crate::output::DescribeThesaurusOutput)
+        /// Consumes the builder and constructs a [`DescribeThesaurusOutput`](crate::output::DescribeThesaurusOutput).
         pub fn build(self) -> crate::output::DescribeThesaurusOutput {
             crate::output::DescribeThesaurusOutput {
                 id: self.id,
@@ -2131,7 +2255,7 @@ pub mod describe_thesaurus_output {
     }
 }
 impl DescribeThesaurusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeThesaurusOutput`](crate::output::DescribeThesaurusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeThesaurusOutput`](crate::output::DescribeThesaurusOutput).
     pub fn builder() -> crate::output::describe_thesaurus_output::Builder {
         crate::output::describe_thesaurus_output::Builder::default()
     }
@@ -2141,66 +2265,66 @@ impl DescribeThesaurusOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeQuerySuggestionsConfigOutput {
-    /// <p>Shows whether query suggestions are currently in <code>ENABLED</code> mode or <code>LEARN_ONLY</code> mode.</p>
+    /// <p>Whether query suggestions are currently in <code>ENABLED</code> mode or <code>LEARN_ONLY</code> mode.</p>
     /// <p>By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions for your users. You can change the mode using the <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html">UpdateQuerySuggestionsConfig</a> API.</p>
     pub mode: std::option::Option<crate::model::Mode>,
-    /// <p>Shows whether the status of query suggestions settings is currently Active or Updating.</p>
+    /// <p>Whether the status of query suggestions settings is currently <code>ACTIVE</code> or <code>UPDATING</code>.</p>
     /// <p>Active means the current settings apply and Updating means your changed settings are in the process of applying.</p>
     pub status: std::option::Option<crate::model::QuerySuggestionsStatus>,
-    /// <p>Shows how recent your queries are in your query log time window (in days).</p>
+    /// <p>How recent your queries are in your query log time window (in days).</p>
     pub query_log_look_back_window_in_days: std::option::Option<i32>,
-    /// <p>Shows whether Amazon Kendra uses all queries or only uses queries that include user information to generate query suggestions.</p>
+    /// <p> <code>TRUE</code> to use all queries, otherwise use only queries that include user information to generate the query suggestions.</p>
     pub include_queries_without_user_information: std::option::Option<bool>,
-    /// <p>Shows the minimum number of unique users who must search a query in order for the query to be eligible to suggest to your users.</p>
+    /// <p>The minimum number of unique users who must search a query in order for the query to be eligible to suggest to your users.</p>
     pub minimum_number_of_querying_users: std::option::Option<i32>,
-    /// <p>Shows the minimum number of times a query must be searched in order for the query to be eligible to suggest to your users.</p>
+    /// <p>The minimum number of times a query must be searched in order for the query to be eligible to suggest to your users.</p>
     pub minimum_query_count: std::option::Option<i32>,
-    /// <p>Shows the date-time query suggestions for an index was last updated.</p>
+    /// <p>The date-time query suggestions for an index was last updated.</p>
     pub last_suggestions_build_time: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p>Shows the date-time query suggestions for an index was last cleared.</p>
+    /// <p>The date-time query suggestions for an index was last cleared.</p>
     /// <p>After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query log from the time you cleared suggestions. Amazon Kendra only considers re-occurences of a query from the time you cleared suggestions. </p>
     pub last_clear_time: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p>Shows the current total count of query suggestions for an index.</p>
+    /// <p>The current total count of query suggestions for an index.</p>
     /// <p>This count can change when you update your query suggestions settings, if you filter out certain queries from suggestions using a block list, and as the query log accumulates more queries for Amazon Kendra to learn from.</p>
     pub total_suggestions_count: std::option::Option<i32>,
 }
 impl DescribeQuerySuggestionsConfigOutput {
-    /// <p>Shows whether query suggestions are currently in <code>ENABLED</code> mode or <code>LEARN_ONLY</code> mode.</p>
+    /// <p>Whether query suggestions are currently in <code>ENABLED</code> mode or <code>LEARN_ONLY</code> mode.</p>
     /// <p>By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions for your users. You can change the mode using the <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html">UpdateQuerySuggestionsConfig</a> API.</p>
     pub fn mode(&self) -> std::option::Option<&crate::model::Mode> {
         self.mode.as_ref()
     }
-    /// <p>Shows whether the status of query suggestions settings is currently Active or Updating.</p>
+    /// <p>Whether the status of query suggestions settings is currently <code>ACTIVE</code> or <code>UPDATING</code>.</p>
     /// <p>Active means the current settings apply and Updating means your changed settings are in the process of applying.</p>
     pub fn status(&self) -> std::option::Option<&crate::model::QuerySuggestionsStatus> {
         self.status.as_ref()
     }
-    /// <p>Shows how recent your queries are in your query log time window (in days).</p>
+    /// <p>How recent your queries are in your query log time window (in days).</p>
     pub fn query_log_look_back_window_in_days(&self) -> std::option::Option<i32> {
         self.query_log_look_back_window_in_days
     }
-    /// <p>Shows whether Amazon Kendra uses all queries or only uses queries that include user information to generate query suggestions.</p>
+    /// <p> <code>TRUE</code> to use all queries, otherwise use only queries that include user information to generate the query suggestions.</p>
     pub fn include_queries_without_user_information(&self) -> std::option::Option<bool> {
         self.include_queries_without_user_information
     }
-    /// <p>Shows the minimum number of unique users who must search a query in order for the query to be eligible to suggest to your users.</p>
+    /// <p>The minimum number of unique users who must search a query in order for the query to be eligible to suggest to your users.</p>
     pub fn minimum_number_of_querying_users(&self) -> std::option::Option<i32> {
         self.minimum_number_of_querying_users
     }
-    /// <p>Shows the minimum number of times a query must be searched in order for the query to be eligible to suggest to your users.</p>
+    /// <p>The minimum number of times a query must be searched in order for the query to be eligible to suggest to your users.</p>
     pub fn minimum_query_count(&self) -> std::option::Option<i32> {
         self.minimum_query_count
     }
-    /// <p>Shows the date-time query suggestions for an index was last updated.</p>
+    /// <p>The date-time query suggestions for an index was last updated.</p>
     pub fn last_suggestions_build_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.last_suggestions_build_time.as_ref()
     }
-    /// <p>Shows the date-time query suggestions for an index was last cleared.</p>
+    /// <p>The date-time query suggestions for an index was last cleared.</p>
     /// <p>After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query log from the time you cleared suggestions. Amazon Kendra only considers re-occurences of a query from the time you cleared suggestions. </p>
     pub fn last_clear_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.last_clear_time.as_ref()
     }
-    /// <p>Shows the current total count of query suggestions for an index.</p>
+    /// <p>The current total count of query suggestions for an index.</p>
     /// <p>This count can change when you update your query suggestions settings, if you filter out certain queries from suggestions using a block list, and as the query log accumulates more queries for Amazon Kendra to learn from.</p>
     pub fn total_suggestions_count(&self) -> std::option::Option<i32> {
         self.total_suggestions_count
@@ -2233,10 +2357,10 @@ impl std::fmt::Debug for DescribeQuerySuggestionsConfigOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeQuerySuggestionsConfigOutput`](crate::output::DescribeQuerySuggestionsConfigOutput)
+/// See [`DescribeQuerySuggestionsConfigOutput`](crate::output::DescribeQuerySuggestionsConfigOutput).
 pub mod describe_query_suggestions_config_output {
-    /// A builder for [`DescribeQuerySuggestionsConfigOutput`](crate::output::DescribeQuerySuggestionsConfigOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeQuerySuggestionsConfigOutput`](crate::output::DescribeQuerySuggestionsConfigOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) mode: std::option::Option<crate::model::Mode>,
@@ -2250,25 +2374,25 @@ pub mod describe_query_suggestions_config_output {
         pub(crate) total_suggestions_count: std::option::Option<i32>,
     }
     impl Builder {
-        /// <p>Shows whether query suggestions are currently in <code>ENABLED</code> mode or <code>LEARN_ONLY</code> mode.</p>
+        /// <p>Whether query suggestions are currently in <code>ENABLED</code> mode or <code>LEARN_ONLY</code> mode.</p>
         /// <p>By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions for your users. You can change the mode using the <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html">UpdateQuerySuggestionsConfig</a> API.</p>
         pub fn mode(mut self, input: crate::model::Mode) -> Self {
             self.mode = Some(input);
             self
         }
-        /// <p>Shows whether query suggestions are currently in <code>ENABLED</code> mode or <code>LEARN_ONLY</code> mode.</p>
+        /// <p>Whether query suggestions are currently in <code>ENABLED</code> mode or <code>LEARN_ONLY</code> mode.</p>
         /// <p>By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions for your users. You can change the mode using the <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html">UpdateQuerySuggestionsConfig</a> API.</p>
         pub fn set_mode(mut self, input: std::option::Option<crate::model::Mode>) -> Self {
             self.mode = input;
             self
         }
-        /// <p>Shows whether the status of query suggestions settings is currently Active or Updating.</p>
+        /// <p>Whether the status of query suggestions settings is currently <code>ACTIVE</code> or <code>UPDATING</code>.</p>
         /// <p>Active means the current settings apply and Updating means your changed settings are in the process of applying.</p>
         pub fn status(mut self, input: crate::model::QuerySuggestionsStatus) -> Self {
             self.status = Some(input);
             self
         }
-        /// <p>Shows whether the status of query suggestions settings is currently Active or Updating.</p>
+        /// <p>Whether the status of query suggestions settings is currently <code>ACTIVE</code> or <code>UPDATING</code>.</p>
         /// <p>Active means the current settings apply and Updating means your changed settings are in the process of applying.</p>
         pub fn set_status(
             mut self,
@@ -2277,12 +2401,12 @@ pub mod describe_query_suggestions_config_output {
             self.status = input;
             self
         }
-        /// <p>Shows how recent your queries are in your query log time window (in days).</p>
+        /// <p>How recent your queries are in your query log time window (in days).</p>
         pub fn query_log_look_back_window_in_days(mut self, input: i32) -> Self {
             self.query_log_look_back_window_in_days = Some(input);
             self
         }
-        /// <p>Shows how recent your queries are in your query log time window (in days).</p>
+        /// <p>How recent your queries are in your query log time window (in days).</p>
         pub fn set_query_log_look_back_window_in_days(
             mut self,
             input: std::option::Option<i32>,
@@ -2290,12 +2414,12 @@ pub mod describe_query_suggestions_config_output {
             self.query_log_look_back_window_in_days = input;
             self
         }
-        /// <p>Shows whether Amazon Kendra uses all queries or only uses queries that include user information to generate query suggestions.</p>
+        /// <p> <code>TRUE</code> to use all queries, otherwise use only queries that include user information to generate the query suggestions.</p>
         pub fn include_queries_without_user_information(mut self, input: bool) -> Self {
             self.include_queries_without_user_information = Some(input);
             self
         }
-        /// <p>Shows whether Amazon Kendra uses all queries or only uses queries that include user information to generate query suggestions.</p>
+        /// <p> <code>TRUE</code> to use all queries, otherwise use only queries that include user information to generate the query suggestions.</p>
         pub fn set_include_queries_without_user_information(
             mut self,
             input: std::option::Option<bool>,
@@ -2303,12 +2427,12 @@ pub mod describe_query_suggestions_config_output {
             self.include_queries_without_user_information = input;
             self
         }
-        /// <p>Shows the minimum number of unique users who must search a query in order for the query to be eligible to suggest to your users.</p>
+        /// <p>The minimum number of unique users who must search a query in order for the query to be eligible to suggest to your users.</p>
         pub fn minimum_number_of_querying_users(mut self, input: i32) -> Self {
             self.minimum_number_of_querying_users = Some(input);
             self
         }
-        /// <p>Shows the minimum number of unique users who must search a query in order for the query to be eligible to suggest to your users.</p>
+        /// <p>The minimum number of unique users who must search a query in order for the query to be eligible to suggest to your users.</p>
         pub fn set_minimum_number_of_querying_users(
             mut self,
             input: std::option::Option<i32>,
@@ -2316,22 +2440,22 @@ pub mod describe_query_suggestions_config_output {
             self.minimum_number_of_querying_users = input;
             self
         }
-        /// <p>Shows the minimum number of times a query must be searched in order for the query to be eligible to suggest to your users.</p>
+        /// <p>The minimum number of times a query must be searched in order for the query to be eligible to suggest to your users.</p>
         pub fn minimum_query_count(mut self, input: i32) -> Self {
             self.minimum_query_count = Some(input);
             self
         }
-        /// <p>Shows the minimum number of times a query must be searched in order for the query to be eligible to suggest to your users.</p>
+        /// <p>The minimum number of times a query must be searched in order for the query to be eligible to suggest to your users.</p>
         pub fn set_minimum_query_count(mut self, input: std::option::Option<i32>) -> Self {
             self.minimum_query_count = input;
             self
         }
-        /// <p>Shows the date-time query suggestions for an index was last updated.</p>
+        /// <p>The date-time query suggestions for an index was last updated.</p>
         pub fn last_suggestions_build_time(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.last_suggestions_build_time = Some(input);
             self
         }
-        /// <p>Shows the date-time query suggestions for an index was last updated.</p>
+        /// <p>The date-time query suggestions for an index was last updated.</p>
         pub fn set_last_suggestions_build_time(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -2339,13 +2463,13 @@ pub mod describe_query_suggestions_config_output {
             self.last_suggestions_build_time = input;
             self
         }
-        /// <p>Shows the date-time query suggestions for an index was last cleared.</p>
+        /// <p>The date-time query suggestions for an index was last cleared.</p>
         /// <p>After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query log from the time you cleared suggestions. Amazon Kendra only considers re-occurences of a query from the time you cleared suggestions. </p>
         pub fn last_clear_time(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.last_clear_time = Some(input);
             self
         }
-        /// <p>Shows the date-time query suggestions for an index was last cleared.</p>
+        /// <p>The date-time query suggestions for an index was last cleared.</p>
         /// <p>After you clear suggestions, Amazon Kendra learns new suggestions based on new queries added to the query log from the time you cleared suggestions. Amazon Kendra only considers re-occurences of a query from the time you cleared suggestions. </p>
         pub fn set_last_clear_time(
             mut self,
@@ -2354,19 +2478,19 @@ pub mod describe_query_suggestions_config_output {
             self.last_clear_time = input;
             self
         }
-        /// <p>Shows the current total count of query suggestions for an index.</p>
+        /// <p>The current total count of query suggestions for an index.</p>
         /// <p>This count can change when you update your query suggestions settings, if you filter out certain queries from suggestions using a block list, and as the query log accumulates more queries for Amazon Kendra to learn from.</p>
         pub fn total_suggestions_count(mut self, input: i32) -> Self {
             self.total_suggestions_count = Some(input);
             self
         }
-        /// <p>Shows the current total count of query suggestions for an index.</p>
+        /// <p>The current total count of query suggestions for an index.</p>
         /// <p>This count can change when you update your query suggestions settings, if you filter out certain queries from suggestions using a block list, and as the query log accumulates more queries for Amazon Kendra to learn from.</p>
         pub fn set_total_suggestions_count(mut self, input: std::option::Option<i32>) -> Self {
             self.total_suggestions_count = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeQuerySuggestionsConfigOutput`](crate::output::DescribeQuerySuggestionsConfigOutput)
+        /// Consumes the builder and constructs a [`DescribeQuerySuggestionsConfigOutput`](crate::output::DescribeQuerySuggestionsConfigOutput).
         pub fn build(self) -> crate::output::DescribeQuerySuggestionsConfigOutput {
             crate::output::DescribeQuerySuggestionsConfigOutput {
                 mode: self.mode,
@@ -2384,7 +2508,7 @@ pub mod describe_query_suggestions_config_output {
     }
 }
 impl DescribeQuerySuggestionsConfigOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeQuerySuggestionsConfigOutput`](crate::output::DescribeQuerySuggestionsConfigOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeQuerySuggestionsConfigOutput`](crate::output::DescribeQuerySuggestionsConfigOutput).
     pub fn builder() -> crate::output::describe_query_suggestions_config_output::Builder {
         crate::output::describe_query_suggestions_config_output::Builder::default()
     }
@@ -2394,64 +2518,64 @@ impl DescribeQuerySuggestionsConfigOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeQuerySuggestionsBlockListOutput {
-    /// <p>Shows the identifier of the index for the block list.</p>
+    /// <p>The identifier of the index for the block list.</p>
     pub index_id: std::option::Option<std::string::String>,
-    /// <p>Shows the unique identifier of the block list.</p>
+    /// <p>The identifier of the block list.</p>
     pub id: std::option::Option<std::string::String>,
-    /// <p>Shows the name of the block list.</p>
+    /// <p>The name of the block list.</p>
     pub name: std::option::Option<std::string::String>,
-    /// <p>Shows the description for the block list.</p>
+    /// <p>The description for the block list.</p>
     pub description: std::option::Option<std::string::String>,
-    /// <p>Shows whether the current status of the block list is <code>ACTIVE</code> or <code>INACTIVE</code>.</p>
+    /// <p>The current status of the block list. When the value is <code>ACTIVE</code>, the block list is ready for use.</p>
     pub status: std::option::Option<crate::model::QuerySuggestionsBlockListStatus>,
-    /// <p>Shows the error message with details when there are issues in processing the block list.</p>
+    /// <p>The error message containing details if there are issues processing the block list.</p>
     pub error_message: std::option::Option<std::string::String>,
-    /// <p>Shows the date-time a block list for query suggestions was created.</p>
+    /// <p>The date-time a block list for query suggestions was created.</p>
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p>Shows the date-time a block list for query suggestions was last updated.</p>
+    /// <p>The date-time a block list for query suggestions was last updated.</p>
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>Shows the current S3 path to your block list text file in your S3 bucket.</p>
     /// <p>Each block word or phrase should be on a separate line in a text file.</p>
     /// <p>For information on the current quota limits for block lists, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/quotas.html">Quotas for Amazon Kendra</a>.</p>
     pub source_s3_path: std::option::Option<crate::model::S3Path>,
-    /// <p>Shows the current number of valid, non-empty words or phrases in the block list text file.</p>
+    /// <p>The current number of valid, non-empty words or phrases in the block list text file.</p>
     pub item_count: std::option::Option<i32>,
-    /// <p>Shows the current size of the block list text file in S3.</p>
+    /// <p>The current size of the block list text file in S3.</p>
     pub file_size_bytes: std::option::Option<i64>,
-    /// <p>Shows the current IAM (Identity and Access Management) role used by Amazon Kendra to access the block list text file in S3.</p>
+    /// <p>The IAM (Identity and Access Management) role used by Amazon Kendra to access the block list text file in S3.</p>
     /// <p>The role needs S3 read permissions to your file in S3 and needs to give STS (Security Token Service) assume role permissions to Amazon Kendra.</p>
     pub role_arn: std::option::Option<std::string::String>,
 }
 impl DescribeQuerySuggestionsBlockListOutput {
-    /// <p>Shows the identifier of the index for the block list.</p>
+    /// <p>The identifier of the index for the block list.</p>
     pub fn index_id(&self) -> std::option::Option<&str> {
         self.index_id.as_deref()
     }
-    /// <p>Shows the unique identifier of the block list.</p>
+    /// <p>The identifier of the block list.</p>
     pub fn id(&self) -> std::option::Option<&str> {
         self.id.as_deref()
     }
-    /// <p>Shows the name of the block list.</p>
+    /// <p>The name of the block list.</p>
     pub fn name(&self) -> std::option::Option<&str> {
         self.name.as_deref()
     }
-    /// <p>Shows the description for the block list.</p>
+    /// <p>The description for the block list.</p>
     pub fn description(&self) -> std::option::Option<&str> {
         self.description.as_deref()
     }
-    /// <p>Shows whether the current status of the block list is <code>ACTIVE</code> or <code>INACTIVE</code>.</p>
+    /// <p>The current status of the block list. When the value is <code>ACTIVE</code>, the block list is ready for use.</p>
     pub fn status(&self) -> std::option::Option<&crate::model::QuerySuggestionsBlockListStatus> {
         self.status.as_ref()
     }
-    /// <p>Shows the error message with details when there are issues in processing the block list.</p>
+    /// <p>The error message containing details if there are issues processing the block list.</p>
     pub fn error_message(&self) -> std::option::Option<&str> {
         self.error_message.as_deref()
     }
-    /// <p>Shows the date-time a block list for query suggestions was created.</p>
+    /// <p>The date-time a block list for query suggestions was created.</p>
     pub fn created_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.created_at.as_ref()
     }
-    /// <p>Shows the date-time a block list for query suggestions was last updated.</p>
+    /// <p>The date-time a block list for query suggestions was last updated.</p>
     pub fn updated_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.updated_at.as_ref()
     }
@@ -2461,15 +2585,15 @@ impl DescribeQuerySuggestionsBlockListOutput {
     pub fn source_s3_path(&self) -> std::option::Option<&crate::model::S3Path> {
         self.source_s3_path.as_ref()
     }
-    /// <p>Shows the current number of valid, non-empty words or phrases in the block list text file.</p>
+    /// <p>The current number of valid, non-empty words or phrases in the block list text file.</p>
     pub fn item_count(&self) -> std::option::Option<i32> {
         self.item_count
     }
-    /// <p>Shows the current size of the block list text file in S3.</p>
+    /// <p>The current size of the block list text file in S3.</p>
     pub fn file_size_bytes(&self) -> std::option::Option<i64> {
         self.file_size_bytes
     }
-    /// <p>Shows the current IAM (Identity and Access Management) role used by Amazon Kendra to access the block list text file in S3.</p>
+    /// <p>The IAM (Identity and Access Management) role used by Amazon Kendra to access the block list text file in S3.</p>
     /// <p>The role needs S3 read permissions to your file in S3 and needs to give STS (Security Token Service) assume role permissions to Amazon Kendra.</p>
     pub fn role_arn(&self) -> std::option::Option<&str> {
         self.role_arn.as_deref()
@@ -2493,10 +2617,10 @@ impl std::fmt::Debug for DescribeQuerySuggestionsBlockListOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeQuerySuggestionsBlockListOutput`](crate::output::DescribeQuerySuggestionsBlockListOutput)
+/// See [`DescribeQuerySuggestionsBlockListOutput`](crate::output::DescribeQuerySuggestionsBlockListOutput).
 pub mod describe_query_suggestions_block_list_output {
-    /// A builder for [`DescribeQuerySuggestionsBlockListOutput`](crate::output::DescribeQuerySuggestionsBlockListOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeQuerySuggestionsBlockListOutput`](crate::output::DescribeQuerySuggestionsBlockListOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index_id: std::option::Option<std::string::String>,
@@ -2513,52 +2637,52 @@ pub mod describe_query_suggestions_block_list_output {
         pub(crate) role_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>Shows the identifier of the index for the block list.</p>
+        /// <p>The identifier of the index for the block list.</p>
         pub fn index_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.index_id = Some(input.into());
             self
         }
-        /// <p>Shows the identifier of the index for the block list.</p>
+        /// <p>The identifier of the index for the block list.</p>
         pub fn set_index_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.index_id = input;
             self
         }
-        /// <p>Shows the unique identifier of the block list.</p>
+        /// <p>The identifier of the block list.</p>
         pub fn id(mut self, input: impl Into<std::string::String>) -> Self {
             self.id = Some(input.into());
             self
         }
-        /// <p>Shows the unique identifier of the block list.</p>
+        /// <p>The identifier of the block list.</p>
         pub fn set_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.id = input;
             self
         }
-        /// <p>Shows the name of the block list.</p>
+        /// <p>The name of the block list.</p>
         pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
             self.name = Some(input.into());
             self
         }
-        /// <p>Shows the name of the block list.</p>
+        /// <p>The name of the block list.</p>
         pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.name = input;
             self
         }
-        /// <p>Shows the description for the block list.</p>
+        /// <p>The description for the block list.</p>
         pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
             self.description = Some(input.into());
             self
         }
-        /// <p>Shows the description for the block list.</p>
+        /// <p>The description for the block list.</p>
         pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.description = input;
             self
         }
-        /// <p>Shows whether the current status of the block list is <code>ACTIVE</code> or <code>INACTIVE</code>.</p>
+        /// <p>The current status of the block list. When the value is <code>ACTIVE</code>, the block list is ready for use.</p>
         pub fn status(mut self, input: crate::model::QuerySuggestionsBlockListStatus) -> Self {
             self.status = Some(input);
             self
         }
-        /// <p>Shows whether the current status of the block list is <code>ACTIVE</code> or <code>INACTIVE</code>.</p>
+        /// <p>The current status of the block list. When the value is <code>ACTIVE</code>, the block list is ready for use.</p>
         pub fn set_status(
             mut self,
             input: std::option::Option<crate::model::QuerySuggestionsBlockListStatus>,
@@ -2566,12 +2690,12 @@ pub mod describe_query_suggestions_block_list_output {
             self.status = input;
             self
         }
-        /// <p>Shows the error message with details when there are issues in processing the block list.</p>
+        /// <p>The error message containing details if there are issues processing the block list.</p>
         pub fn error_message(mut self, input: impl Into<std::string::String>) -> Self {
             self.error_message = Some(input.into());
             self
         }
-        /// <p>Shows the error message with details when there are issues in processing the block list.</p>
+        /// <p>The error message containing details if there are issues processing the block list.</p>
         pub fn set_error_message(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -2579,12 +2703,12 @@ pub mod describe_query_suggestions_block_list_output {
             self.error_message = input;
             self
         }
-        /// <p>Shows the date-time a block list for query suggestions was created.</p>
+        /// <p>The date-time a block list for query suggestions was created.</p>
         pub fn created_at(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.created_at = Some(input);
             self
         }
-        /// <p>Shows the date-time a block list for query suggestions was created.</p>
+        /// <p>The date-time a block list for query suggestions was created.</p>
         pub fn set_created_at(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -2592,12 +2716,12 @@ pub mod describe_query_suggestions_block_list_output {
             self.created_at = input;
             self
         }
-        /// <p>Shows the date-time a block list for query suggestions was last updated.</p>
+        /// <p>The date-time a block list for query suggestions was last updated.</p>
         pub fn updated_at(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.updated_at = Some(input);
             self
         }
-        /// <p>Shows the date-time a block list for query suggestions was last updated.</p>
+        /// <p>The date-time a block list for query suggestions was last updated.</p>
         pub fn set_updated_at(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -2622,39 +2746,39 @@ pub mod describe_query_suggestions_block_list_output {
             self.source_s3_path = input;
             self
         }
-        /// <p>Shows the current number of valid, non-empty words or phrases in the block list text file.</p>
+        /// <p>The current number of valid, non-empty words or phrases in the block list text file.</p>
         pub fn item_count(mut self, input: i32) -> Self {
             self.item_count = Some(input);
             self
         }
-        /// <p>Shows the current number of valid, non-empty words or phrases in the block list text file.</p>
+        /// <p>The current number of valid, non-empty words or phrases in the block list text file.</p>
         pub fn set_item_count(mut self, input: std::option::Option<i32>) -> Self {
             self.item_count = input;
             self
         }
-        /// <p>Shows the current size of the block list text file in S3.</p>
+        /// <p>The current size of the block list text file in S3.</p>
         pub fn file_size_bytes(mut self, input: i64) -> Self {
             self.file_size_bytes = Some(input);
             self
         }
-        /// <p>Shows the current size of the block list text file in S3.</p>
+        /// <p>The current size of the block list text file in S3.</p>
         pub fn set_file_size_bytes(mut self, input: std::option::Option<i64>) -> Self {
             self.file_size_bytes = input;
             self
         }
-        /// <p>Shows the current IAM (Identity and Access Management) role used by Amazon Kendra to access the block list text file in S3.</p>
+        /// <p>The IAM (Identity and Access Management) role used by Amazon Kendra to access the block list text file in S3.</p>
         /// <p>The role needs S3 read permissions to your file in S3 and needs to give STS (Security Token Service) assume role permissions to Amazon Kendra.</p>
         pub fn role_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.role_arn = Some(input.into());
             self
         }
-        /// <p>Shows the current IAM (Identity and Access Management) role used by Amazon Kendra to access the block list text file in S3.</p>
+        /// <p>The IAM (Identity and Access Management) role used by Amazon Kendra to access the block list text file in S3.</p>
         /// <p>The role needs S3 read permissions to your file in S3 and needs to give STS (Security Token Service) assume role permissions to Amazon Kendra.</p>
         pub fn set_role_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.role_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeQuerySuggestionsBlockListOutput`](crate::output::DescribeQuerySuggestionsBlockListOutput)
+        /// Consumes the builder and constructs a [`DescribeQuerySuggestionsBlockListOutput`](crate::output::DescribeQuerySuggestionsBlockListOutput).
         pub fn build(self) -> crate::output::DescribeQuerySuggestionsBlockListOutput {
             crate::output::DescribeQuerySuggestionsBlockListOutput {
                 index_id: self.index_id,
@@ -2674,7 +2798,7 @@ pub mod describe_query_suggestions_block_list_output {
     }
 }
 impl DescribeQuerySuggestionsBlockListOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeQuerySuggestionsBlockListOutput`](crate::output::DescribeQuerySuggestionsBlockListOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeQuerySuggestionsBlockListOutput`](crate::output::DescribeQuerySuggestionsBlockListOutput).
     pub fn builder() -> crate::output::describe_query_suggestions_block_list_output::Builder {
         crate::output::describe_query_suggestions_block_list_output::Builder::default()
     }
@@ -2741,10 +2865,10 @@ impl std::fmt::Debug for DescribePrincipalMappingOutput {
         formatter.finish()
     }
 }
-/// See [`DescribePrincipalMappingOutput`](crate::output::DescribePrincipalMappingOutput)
+/// See [`DescribePrincipalMappingOutput`](crate::output::DescribePrincipalMappingOutput).
 pub mod describe_principal_mapping_output {
-    /// A builder for [`DescribePrincipalMappingOutput`](crate::output::DescribePrincipalMappingOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribePrincipalMappingOutput`](crate::output::DescribePrincipalMappingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) index_id: std::option::Option<std::string::String>,
@@ -2823,7 +2947,7 @@ pub mod describe_principal_mapping_output {
             self.group_ordering_id_summaries = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribePrincipalMappingOutput`](crate::output::DescribePrincipalMappingOutput)
+        /// Consumes the builder and constructs a [`DescribePrincipalMappingOutput`](crate::output::DescribePrincipalMappingOutput).
         pub fn build(self) -> crate::output::DescribePrincipalMappingOutput {
             crate::output::DescribePrincipalMappingOutput {
                 index_id: self.index_id,
@@ -2835,7 +2959,7 @@ pub mod describe_principal_mapping_output {
     }
 }
 impl DescribePrincipalMappingOutput {
-    /// Creates a new builder-style object to manufacture [`DescribePrincipalMappingOutput`](crate::output::DescribePrincipalMappingOutput)
+    /// Creates a new builder-style object to manufacture [`DescribePrincipalMappingOutput`](crate::output::DescribePrincipalMappingOutput).
     pub fn builder() -> crate::output::describe_principal_mapping_output::Builder {
         crate::output::describe_principal_mapping_output::Builder::default()
     }
@@ -2864,7 +2988,7 @@ pub struct DescribeIndexOutput {
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Unix datetime that the index was last updated.</p>
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p>Configuration settings for any metadata applied to the documents in the index.</p>
+    /// <p>Configuration information for document metadata or fields. Document metadata are fields or attributes associated with your documents. For example, the company department name associated with each document.</p>
     pub document_metadata_configurations:
         std::option::Option<std::vec::Vec<crate::model::DocumentMetadataConfiguration>>,
     /// <p>Provides information about the number of FAQ questions and answers and the number of text documents indexed.</p>
@@ -2878,7 +3002,7 @@ pub struct DescribeIndexOutput {
         std::option::Option<std::vec::Vec<crate::model::UserTokenConfiguration>>,
     /// <p>The user context policy for the Amazon Kendra index.</p>
     pub user_context_policy: std::option::Option<crate::model::UserContextPolicy>,
-    /// <p>Shows whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source.</p>
+    /// <p>Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source.</p>
     pub user_group_resolution_configuration:
         std::option::Option<crate::model::UserGroupResolutionConfiguration>,
 }
@@ -2921,7 +3045,7 @@ impl DescribeIndexOutput {
     pub fn updated_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.updated_at.as_ref()
     }
-    /// <p>Configuration settings for any metadata applied to the documents in the index.</p>
+    /// <p>Configuration information for document metadata or fields. Document metadata are fields or attributes associated with your documents. For example, the company department name associated with each document.</p>
     pub fn document_metadata_configurations(
         &self,
     ) -> std::option::Option<&[crate::model::DocumentMetadataConfiguration]> {
@@ -2949,7 +3073,7 @@ impl DescribeIndexOutput {
     pub fn user_context_policy(&self) -> std::option::Option<&crate::model::UserContextPolicy> {
         self.user_context_policy.as_ref()
     }
-    /// <p>Shows whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source.</p>
+    /// <p>Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source.</p>
     pub fn user_group_resolution_configuration(
         &self,
     ) -> std::option::Option<&crate::model::UserGroupResolutionConfiguration> {
@@ -2987,10 +3111,10 @@ impl std::fmt::Debug for DescribeIndexOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeIndexOutput`](crate::output::DescribeIndexOutput)
+/// See [`DescribeIndexOutput`](crate::output::DescribeIndexOutput).
 pub mod describe_index_output {
-    /// A builder for [`DescribeIndexOutput`](crate::output::DescribeIndexOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeIndexOutput`](crate::output::DescribeIndexOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3124,7 +3248,7 @@ pub mod describe_index_output {
         ///
         /// To override the contents of this collection use [`set_document_metadata_configurations`](Self::set_document_metadata_configurations).
         ///
-        /// <p>Configuration settings for any metadata applied to the documents in the index.</p>
+        /// <p>Configuration information for document metadata or fields. Document metadata are fields or attributes associated with your documents. For example, the company department name associated with each document.</p>
         pub fn document_metadata_configurations(
             mut self,
             input: crate::model::DocumentMetadataConfiguration,
@@ -3134,7 +3258,7 @@ pub mod describe_index_output {
             self.document_metadata_configurations = Some(v);
             self
         }
-        /// <p>Configuration settings for any metadata applied to the documents in the index.</p>
+        /// <p>Configuration information for document metadata or fields. Document metadata are fields or attributes associated with your documents. For example, the company department name associated with each document.</p>
         pub fn set_document_metadata_configurations(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::DocumentMetadataConfiguration>>,
@@ -3216,7 +3340,7 @@ pub mod describe_index_output {
             self.user_context_policy = input;
             self
         }
-        /// <p>Shows whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source.</p>
+        /// <p>Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source.</p>
         pub fn user_group_resolution_configuration(
             mut self,
             input: crate::model::UserGroupResolutionConfiguration,
@@ -3224,7 +3348,7 @@ pub mod describe_index_output {
             self.user_group_resolution_configuration = Some(input);
             self
         }
-        /// <p>Shows whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source.</p>
+        /// <p>Whether you have enabled the configuration for fetching access levels of groups and users from an Amazon Web Services Single Sign On identity source.</p>
         pub fn set_user_group_resolution_configuration(
             mut self,
             input: std::option::Option<crate::model::UserGroupResolutionConfiguration>,
@@ -3232,7 +3356,7 @@ pub mod describe_index_output {
             self.user_group_resolution_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeIndexOutput`](crate::output::DescribeIndexOutput)
+        /// Consumes the builder and constructs a [`DescribeIndexOutput`](crate::output::DescribeIndexOutput).
         pub fn build(self) -> crate::output::DescribeIndexOutput {
             crate::output::DescribeIndexOutput {
                 name: self.name,
@@ -3256,7 +3380,7 @@ pub mod describe_index_output {
     }
 }
 impl DescribeIndexOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeIndexOutput`](crate::output::DescribeIndexOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeIndexOutput`](crate::output::DescribeIndexOutput).
     pub fn builder() -> crate::output::describe_index_output::Builder {
         crate::output::describe_index_output::Builder::default()
     }
@@ -3268,7 +3392,7 @@ impl DescribeIndexOutput {
 pub struct DescribeFaqOutput {
     /// <p>The identifier of the FAQ.</p>
     pub id: std::option::Option<std::string::String>,
-    /// <p>The identifier of the index that contains the FAQ.</p>
+    /// <p>The identifier of the index for the FAQ.</p>
     pub index_id: std::option::Option<std::string::String>,
     /// <p>The name that you gave the FAQ when it was created.</p>
     pub name: std::option::Option<std::string::String>,
@@ -3296,7 +3420,7 @@ impl DescribeFaqOutput {
     pub fn id(&self) -> std::option::Option<&str> {
         self.id.as_deref()
     }
-    /// <p>The identifier of the index that contains the FAQ.</p>
+    /// <p>The identifier of the index for the FAQ.</p>
     pub fn index_id(&self) -> std::option::Option<&str> {
         self.index_id.as_deref()
     }
@@ -3359,10 +3483,10 @@ impl std::fmt::Debug for DescribeFaqOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeFaqOutput`](crate::output::DescribeFaqOutput)
+/// See [`DescribeFaqOutput`](crate::output::DescribeFaqOutput).
 pub mod describe_faq_output {
-    /// A builder for [`DescribeFaqOutput`](crate::output::DescribeFaqOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeFaqOutput`](crate::output::DescribeFaqOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3389,12 +3513,12 @@ pub mod describe_faq_output {
             self.id = input;
             self
         }
-        /// <p>The identifier of the index that contains the FAQ.</p>
+        /// <p>The identifier of the index for the FAQ.</p>
         pub fn index_id(mut self, input: impl Into<std::string::String>) -> Self {
             self.index_id = Some(input.into());
             self
         }
-        /// <p>The identifier of the index that contains the FAQ.</p>
+        /// <p>The identifier of the index for the FAQ.</p>
         pub fn set_index_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.index_id = input;
             self
@@ -3514,7 +3638,7 @@ pub mod describe_faq_output {
             self.language_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeFaqOutput`](crate::output::DescribeFaqOutput)
+        /// Consumes the builder and constructs a [`DescribeFaqOutput`](crate::output::DescribeFaqOutput).
         pub fn build(self) -> crate::output::DescribeFaqOutput {
             crate::output::DescribeFaqOutput {
                 id: self.id,
@@ -3534,7 +3658,7 @@ pub mod describe_faq_output {
     }
 }
 impl DescribeFaqOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeFaqOutput`](crate::output::DescribeFaqOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeFaqOutput`](crate::output::DescribeFaqOutput).
     pub fn builder() -> crate::output::describe_faq_output::Builder {
         crate::output::describe_faq_output::Builder::default()
     }
@@ -3630,10 +3754,10 @@ impl std::fmt::Debug for DescribeExperienceOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeExperienceOutput`](crate::output::DescribeExperienceOutput)
+/// See [`DescribeExperienceOutput`](crate::output::DescribeExperienceOutput).
 pub mod describe_experience_output {
-    /// A builder for [`DescribeExperienceOutput`](crate::output::DescribeExperienceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeExperienceOutput`](crate::output::DescribeExperienceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3783,7 +3907,7 @@ pub mod describe_experience_output {
             self.error_message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeExperienceOutput`](crate::output::DescribeExperienceOutput)
+        /// Consumes the builder and constructs a [`DescribeExperienceOutput`](crate::output::DescribeExperienceOutput).
         pub fn build(self) -> crate::output::DescribeExperienceOutput {
             crate::output::DescribeExperienceOutput {
                 id: self.id,
@@ -3802,7 +3926,7 @@ pub mod describe_experience_output {
     }
 }
 impl DescribeExperienceOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeExperienceOutput`](crate::output::DescribeExperienceOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeExperienceOutput`](crate::output::DescribeExperienceOutput).
     pub fn builder() -> crate::output::describe_experience_output::Builder {
         crate::output::describe_experience_output::Builder::default()
     }
@@ -3820,13 +3944,13 @@ pub struct DescribeDataSourceOutput {
     pub name: std::option::Option<std::string::String>,
     /// <p>The type of the data source.</p>
     pub r#type: std::option::Option<crate::model::DataSourceType>,
-    /// <p>Describes how the data source is configured. The specific information in the description depends on the data source provider.</p>
+    /// <p>Configuration details for the data source. This shows how the data source is configured. The configuration options for a data source depend on the data source provider.</p>
     pub configuration: std::option::Option<crate::model::DataSourceConfiguration>,
     /// <p>The Unix timestamp of when the data source was created.</p>
     pub created_at: std::option::Option<aws_smithy_types::DateTime>,
     /// <p>The Unix timestamp of when the data source was last updated.</p>
     pub updated_at: std::option::Option<aws_smithy_types::DateTime>,
-    /// <p>The description of the data source.</p>
+    /// <p>The description for the data source.</p>
     pub description: std::option::Option<std::string::String>,
     /// <p>The current status of the data source. When the status is <code>ACTIVE</code> the data source is ready to use. When the status is <code>FAILED</code>, the <code>ErrorMessage</code> field contains the reason that the data source failed.</p>
     pub status: std::option::Option<crate::model::DataSourceStatus>,
@@ -3860,7 +3984,7 @@ impl DescribeDataSourceOutput {
     pub fn r#type(&self) -> std::option::Option<&crate::model::DataSourceType> {
         self.r#type.as_ref()
     }
-    /// <p>Describes how the data source is configured. The specific information in the description depends on the data source provider.</p>
+    /// <p>Configuration details for the data source. This shows how the data source is configured. The configuration options for a data source depend on the data source provider.</p>
     pub fn configuration(&self) -> std::option::Option<&crate::model::DataSourceConfiguration> {
         self.configuration.as_ref()
     }
@@ -3872,7 +3996,7 @@ impl DescribeDataSourceOutput {
     pub fn updated_at(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.updated_at.as_ref()
     }
-    /// <p>The description of the data source.</p>
+    /// <p>The description for the data source.</p>
     pub fn description(&self) -> std::option::Option<&str> {
         self.description.as_deref()
     }
@@ -3927,10 +4051,10 @@ impl std::fmt::Debug for DescribeDataSourceOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeDataSourceOutput`](crate::output::DescribeDataSourceOutput)
+/// See [`DescribeDataSourceOutput`](crate::output::DescribeDataSourceOutput).
 pub mod describe_data_source_output {
-    /// A builder for [`DescribeDataSourceOutput`](crate::output::DescribeDataSourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeDataSourceOutput`](crate::output::DescribeDataSourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3993,12 +4117,12 @@ pub mod describe_data_source_output {
             self.r#type = input;
             self
         }
-        /// <p>Describes how the data source is configured. The specific information in the description depends on the data source provider.</p>
+        /// <p>Configuration details for the data source. This shows how the data source is configured. The configuration options for a data source depend on the data source provider.</p>
         pub fn configuration(mut self, input: crate::model::DataSourceConfiguration) -> Self {
             self.configuration = Some(input);
             self
         }
-        /// <p>Describes how the data source is configured. The specific information in the description depends on the data source provider.</p>
+        /// <p>Configuration details for the data source. This shows how the data source is configured. The configuration options for a data source depend on the data source provider.</p>
         pub fn set_configuration(
             mut self,
             input: std::option::Option<crate::model::DataSourceConfiguration>,
@@ -4032,12 +4156,12 @@ pub mod describe_data_source_output {
             self.updated_at = input;
             self
         }
-        /// <p>The description of the data source.</p>
+        /// <p>The description for the data source.</p>
         pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
             self.description = Some(input.into());
             self
         }
-        /// <p>The description of the data source.</p>
+        /// <p>The description for the data source.</p>
         pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.description = input;
             self
@@ -4119,7 +4243,7 @@ pub mod describe_data_source_output {
             self.custom_document_enrichment_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeDataSourceOutput`](crate::output::DescribeDataSourceOutput)
+        /// Consumes the builder and constructs a [`DescribeDataSourceOutput`](crate::output::DescribeDataSourceOutput).
         pub fn build(self) -> crate::output::DescribeDataSourceOutput {
             crate::output::DescribeDataSourceOutput {
                 id: self.id,
@@ -4142,9 +4266,170 @@ pub mod describe_data_source_output {
     }
 }
 impl DescribeDataSourceOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeDataSourceOutput`](crate::output::DescribeDataSourceOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeDataSourceOutput`](crate::output::DescribeDataSourceOutput).
     pub fn builder() -> crate::output::describe_data_source_output::Builder {
         crate::output::describe_data_source_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DescribeAccessControlConfigurationOutput {
+    /// <p>The name for the access control configuration.</p>
+    pub name: std::option::Option<std::string::String>,
+    /// <p>The description for the access control configuration.</p>
+    pub description: std::option::Option<std::string::String>,
+    /// <p>The error message containing details if there are issues processing the access control configuration.</p>
+    pub error_message: std::option::Option<std::string::String>,
+    /// <p>Information on principals (users and/or groups) and which documents they should have access to. This is useful for user context filtering, where search results are filtered based on the user or their group access to documents.</p>
+    pub access_control_list: std::option::Option<std::vec::Vec<crate::model::Principal>>,
+    /// <p>The list of <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_Principal.html">principal</a> lists that define the hierarchy for which documents users should have access to.</p>
+    pub hierarchical_access_control_list:
+        std::option::Option<std::vec::Vec<crate::model::HierarchicalPrincipal>>,
+}
+impl DescribeAccessControlConfigurationOutput {
+    /// <p>The name for the access control configuration.</p>
+    pub fn name(&self) -> std::option::Option<&str> {
+        self.name.as_deref()
+    }
+    /// <p>The description for the access control configuration.</p>
+    pub fn description(&self) -> std::option::Option<&str> {
+        self.description.as_deref()
+    }
+    /// <p>The error message containing details if there are issues processing the access control configuration.</p>
+    pub fn error_message(&self) -> std::option::Option<&str> {
+        self.error_message.as_deref()
+    }
+    /// <p>Information on principals (users and/or groups) and which documents they should have access to. This is useful for user context filtering, where search results are filtered based on the user or their group access to documents.</p>
+    pub fn access_control_list(&self) -> std::option::Option<&[crate::model::Principal]> {
+        self.access_control_list.as_deref()
+    }
+    /// <p>The list of <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_Principal.html">principal</a> lists that define the hierarchy for which documents users should have access to.</p>
+    pub fn hierarchical_access_control_list(
+        &self,
+    ) -> std::option::Option<&[crate::model::HierarchicalPrincipal]> {
+        self.hierarchical_access_control_list.as_deref()
+    }
+}
+impl std::fmt::Debug for DescribeAccessControlConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DescribeAccessControlConfigurationOutput");
+        formatter.field("name", &self.name);
+        formatter.field("description", &self.description);
+        formatter.field("error_message", &self.error_message);
+        formatter.field("access_control_list", &self.access_control_list);
+        formatter.field(
+            "hierarchical_access_control_list",
+            &self.hierarchical_access_control_list,
+        );
+        formatter.finish()
+    }
+}
+/// See [`DescribeAccessControlConfigurationOutput`](crate::output::DescribeAccessControlConfigurationOutput).
+pub mod describe_access_control_configuration_output {
+
+    /// A builder for [`DescribeAccessControlConfigurationOutput`](crate::output::DescribeAccessControlConfigurationOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) name: std::option::Option<std::string::String>,
+        pub(crate) description: std::option::Option<std::string::String>,
+        pub(crate) error_message: std::option::Option<std::string::String>,
+        pub(crate) access_control_list: std::option::Option<std::vec::Vec<crate::model::Principal>>,
+        pub(crate) hierarchical_access_control_list:
+            std::option::Option<std::vec::Vec<crate::model::HierarchicalPrincipal>>,
+    }
+    impl Builder {
+        /// <p>The name for the access control configuration.</p>
+        pub fn name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.name = Some(input.into());
+            self
+        }
+        /// <p>The name for the access control configuration.</p>
+        pub fn set_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.name = input;
+            self
+        }
+        /// <p>The description for the access control configuration.</p>
+        pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.description = Some(input.into());
+            self
+        }
+        /// <p>The description for the access control configuration.</p>
+        pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.description = input;
+            self
+        }
+        /// <p>The error message containing details if there are issues processing the access control configuration.</p>
+        pub fn error_message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.error_message = Some(input.into());
+            self
+        }
+        /// <p>The error message containing details if there are issues processing the access control configuration.</p>
+        pub fn set_error_message(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.error_message = input;
+            self
+        }
+        /// Appends an item to `access_control_list`.
+        ///
+        /// To override the contents of this collection use [`set_access_control_list`](Self::set_access_control_list).
+        ///
+        /// <p>Information on principals (users and/or groups) and which documents they should have access to. This is useful for user context filtering, where search results are filtered based on the user or their group access to documents.</p>
+        pub fn access_control_list(mut self, input: crate::model::Principal) -> Self {
+            let mut v = self.access_control_list.unwrap_or_default();
+            v.push(input);
+            self.access_control_list = Some(v);
+            self
+        }
+        /// <p>Information on principals (users and/or groups) and which documents they should have access to. This is useful for user context filtering, where search results are filtered based on the user or their group access to documents.</p>
+        pub fn set_access_control_list(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::Principal>>,
+        ) -> Self {
+            self.access_control_list = input;
+            self
+        }
+        /// Appends an item to `hierarchical_access_control_list`.
+        ///
+        /// To override the contents of this collection use [`set_hierarchical_access_control_list`](Self::set_hierarchical_access_control_list).
+        ///
+        /// <p>The list of <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_Principal.html">principal</a> lists that define the hierarchy for which documents users should have access to.</p>
+        pub fn hierarchical_access_control_list(
+            mut self,
+            input: crate::model::HierarchicalPrincipal,
+        ) -> Self {
+            let mut v = self.hierarchical_access_control_list.unwrap_or_default();
+            v.push(input);
+            self.hierarchical_access_control_list = Some(v);
+            self
+        }
+        /// <p>The list of <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_Principal.html">principal</a> lists that define the hierarchy for which documents users should have access to.</p>
+        pub fn set_hierarchical_access_control_list(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::HierarchicalPrincipal>>,
+        ) -> Self {
+            self.hierarchical_access_control_list = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DescribeAccessControlConfigurationOutput`](crate::output::DescribeAccessControlConfigurationOutput).
+        pub fn build(self) -> crate::output::DescribeAccessControlConfigurationOutput {
+            crate::output::DescribeAccessControlConfigurationOutput {
+                name: self.name,
+                description: self.description,
+                error_message: self.error_message,
+                access_control_list: self.access_control_list,
+                hierarchical_access_control_list: self.hierarchical_access_control_list,
+            }
+        }
+    }
+}
+impl DescribeAccessControlConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`DescribeAccessControlConfigurationOutput`](crate::output::DescribeAccessControlConfigurationOutput).
+    pub fn builder() -> crate::output::describe_access_control_configuration_output::Builder {
+        crate::output::describe_access_control_configuration_output::Builder::default()
     }
 }
 
@@ -4158,21 +4443,21 @@ impl std::fmt::Debug for DeleteThesaurusOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteThesaurusOutput`](crate::output::DeleteThesaurusOutput)
+/// See [`DeleteThesaurusOutput`](crate::output::DeleteThesaurusOutput).
 pub mod delete_thesaurus_output {
-    /// A builder for [`DeleteThesaurusOutput`](crate::output::DeleteThesaurusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteThesaurusOutput`](crate::output::DeleteThesaurusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteThesaurusOutput`](crate::output::DeleteThesaurusOutput)
+        /// Consumes the builder and constructs a [`DeleteThesaurusOutput`](crate::output::DeleteThesaurusOutput).
         pub fn build(self) -> crate::output::DeleteThesaurusOutput {
             crate::output::DeleteThesaurusOutput {}
         }
     }
 }
 impl DeleteThesaurusOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteThesaurusOutput`](crate::output::DeleteThesaurusOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteThesaurusOutput`](crate::output::DeleteThesaurusOutput).
     pub fn builder() -> crate::output::delete_thesaurus_output::Builder {
         crate::output::delete_thesaurus_output::Builder::default()
     }
@@ -4188,21 +4473,21 @@ impl std::fmt::Debug for DeleteQuerySuggestionsBlockListOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteQuerySuggestionsBlockListOutput`](crate::output::DeleteQuerySuggestionsBlockListOutput)
+/// See [`DeleteQuerySuggestionsBlockListOutput`](crate::output::DeleteQuerySuggestionsBlockListOutput).
 pub mod delete_query_suggestions_block_list_output {
-    /// A builder for [`DeleteQuerySuggestionsBlockListOutput`](crate::output::DeleteQuerySuggestionsBlockListOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteQuerySuggestionsBlockListOutput`](crate::output::DeleteQuerySuggestionsBlockListOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteQuerySuggestionsBlockListOutput`](crate::output::DeleteQuerySuggestionsBlockListOutput)
+        /// Consumes the builder and constructs a [`DeleteQuerySuggestionsBlockListOutput`](crate::output::DeleteQuerySuggestionsBlockListOutput).
         pub fn build(self) -> crate::output::DeleteQuerySuggestionsBlockListOutput {
             crate::output::DeleteQuerySuggestionsBlockListOutput {}
         }
     }
 }
 impl DeleteQuerySuggestionsBlockListOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteQuerySuggestionsBlockListOutput`](crate::output::DeleteQuerySuggestionsBlockListOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteQuerySuggestionsBlockListOutput`](crate::output::DeleteQuerySuggestionsBlockListOutput).
     pub fn builder() -> crate::output::delete_query_suggestions_block_list_output::Builder {
         crate::output::delete_query_suggestions_block_list_output::Builder::default()
     }
@@ -4218,21 +4503,21 @@ impl std::fmt::Debug for DeletePrincipalMappingOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePrincipalMappingOutput`](crate::output::DeletePrincipalMappingOutput)
+/// See [`DeletePrincipalMappingOutput`](crate::output::DeletePrincipalMappingOutput).
 pub mod delete_principal_mapping_output {
-    /// A builder for [`DeletePrincipalMappingOutput`](crate::output::DeletePrincipalMappingOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeletePrincipalMappingOutput`](crate::output::DeletePrincipalMappingOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeletePrincipalMappingOutput`](crate::output::DeletePrincipalMappingOutput)
+        /// Consumes the builder and constructs a [`DeletePrincipalMappingOutput`](crate::output::DeletePrincipalMappingOutput).
         pub fn build(self) -> crate::output::DeletePrincipalMappingOutput {
             crate::output::DeletePrincipalMappingOutput {}
         }
     }
 }
 impl DeletePrincipalMappingOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePrincipalMappingOutput`](crate::output::DeletePrincipalMappingOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePrincipalMappingOutput`](crate::output::DeletePrincipalMappingOutput).
     pub fn builder() -> crate::output::delete_principal_mapping_output::Builder {
         crate::output::delete_principal_mapping_output::Builder::default()
     }
@@ -4248,21 +4533,21 @@ impl std::fmt::Debug for DeleteIndexOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteIndexOutput`](crate::output::DeleteIndexOutput)
+/// See [`DeleteIndexOutput`](crate::output::DeleteIndexOutput).
 pub mod delete_index_output {
-    /// A builder for [`DeleteIndexOutput`](crate::output::DeleteIndexOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteIndexOutput`](crate::output::DeleteIndexOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteIndexOutput`](crate::output::DeleteIndexOutput)
+        /// Consumes the builder and constructs a [`DeleteIndexOutput`](crate::output::DeleteIndexOutput).
         pub fn build(self) -> crate::output::DeleteIndexOutput {
             crate::output::DeleteIndexOutput {}
         }
     }
 }
 impl DeleteIndexOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteIndexOutput`](crate::output::DeleteIndexOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteIndexOutput`](crate::output::DeleteIndexOutput).
     pub fn builder() -> crate::output::delete_index_output::Builder {
         crate::output::delete_index_output::Builder::default()
     }
@@ -4278,21 +4563,21 @@ impl std::fmt::Debug for DeleteFaqOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteFaqOutput`](crate::output::DeleteFaqOutput)
+/// See [`DeleteFaqOutput`](crate::output::DeleteFaqOutput).
 pub mod delete_faq_output {
-    /// A builder for [`DeleteFaqOutput`](crate::output::DeleteFaqOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteFaqOutput`](crate::output::DeleteFaqOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteFaqOutput`](crate::output::DeleteFaqOutput)
+        /// Consumes the builder and constructs a [`DeleteFaqOutput`](crate::output::DeleteFaqOutput).
         pub fn build(self) -> crate::output::DeleteFaqOutput {
             crate::output::DeleteFaqOutput {}
         }
     }
 }
 impl DeleteFaqOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteFaqOutput`](crate::output::DeleteFaqOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteFaqOutput`](crate::output::DeleteFaqOutput).
     pub fn builder() -> crate::output::delete_faq_output::Builder {
         crate::output::delete_faq_output::Builder::default()
     }
@@ -4308,21 +4593,21 @@ impl std::fmt::Debug for DeleteExperienceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteExperienceOutput`](crate::output::DeleteExperienceOutput)
+/// See [`DeleteExperienceOutput`](crate::output::DeleteExperienceOutput).
 pub mod delete_experience_output {
-    /// A builder for [`DeleteExperienceOutput`](crate::output::DeleteExperienceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteExperienceOutput`](crate::output::DeleteExperienceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteExperienceOutput`](crate::output::DeleteExperienceOutput)
+        /// Consumes the builder and constructs a [`DeleteExperienceOutput`](crate::output::DeleteExperienceOutput).
         pub fn build(self) -> crate::output::DeleteExperienceOutput {
             crate::output::DeleteExperienceOutput {}
         }
     }
 }
 impl DeleteExperienceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteExperienceOutput`](crate::output::DeleteExperienceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteExperienceOutput`](crate::output::DeleteExperienceOutput).
     pub fn builder() -> crate::output::delete_experience_output::Builder {
         crate::output::delete_experience_output::Builder::default()
     }
@@ -4338,23 +4623,53 @@ impl std::fmt::Debug for DeleteDataSourceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput)
+/// See [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput).
 pub mod delete_data_source_output {
-    /// A builder for [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput)
+        /// Consumes the builder and constructs a [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput).
         pub fn build(self) -> crate::output::DeleteDataSourceOutput {
             crate::output::DeleteDataSourceOutput {}
         }
     }
 }
 impl DeleteDataSourceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDataSourceOutput`](crate::output::DeleteDataSourceOutput).
     pub fn builder() -> crate::output::delete_data_source_output::Builder {
         crate::output::delete_data_source_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DeleteAccessControlConfigurationOutput {}
+impl std::fmt::Debug for DeleteAccessControlConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DeleteAccessControlConfigurationOutput");
+        formatter.finish()
+    }
+}
+/// See [`DeleteAccessControlConfigurationOutput`](crate::output::DeleteAccessControlConfigurationOutput).
+pub mod delete_access_control_configuration_output {
+
+    /// A builder for [`DeleteAccessControlConfigurationOutput`](crate::output::DeleteAccessControlConfigurationOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`DeleteAccessControlConfigurationOutput`](crate::output::DeleteAccessControlConfigurationOutput).
+        pub fn build(self) -> crate::output::DeleteAccessControlConfigurationOutput {
+            crate::output::DeleteAccessControlConfigurationOutput {}
+        }
+    }
+}
+impl DeleteAccessControlConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`DeleteAccessControlConfigurationOutput`](crate::output::DeleteAccessControlConfigurationOutput).
+    pub fn builder() -> crate::output::delete_access_control_configuration_output::Builder {
+        crate::output::delete_access_control_configuration_output::Builder::default()
     }
 }
 
@@ -4378,10 +4693,10 @@ impl std::fmt::Debug for CreateThesaurusOutput {
         formatter.finish()
     }
 }
-/// See [`CreateThesaurusOutput`](crate::output::CreateThesaurusOutput)
+/// See [`CreateThesaurusOutput`](crate::output::CreateThesaurusOutput).
 pub mod create_thesaurus_output {
-    /// A builder for [`CreateThesaurusOutput`](crate::output::CreateThesaurusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateThesaurusOutput`](crate::output::CreateThesaurusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4397,14 +4712,14 @@ pub mod create_thesaurus_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateThesaurusOutput`](crate::output::CreateThesaurusOutput)
+        /// Consumes the builder and constructs a [`CreateThesaurusOutput`](crate::output::CreateThesaurusOutput).
         pub fn build(self) -> crate::output::CreateThesaurusOutput {
             crate::output::CreateThesaurusOutput { id: self.id }
         }
     }
 }
 impl CreateThesaurusOutput {
-    /// Creates a new builder-style object to manufacture [`CreateThesaurusOutput`](crate::output::CreateThesaurusOutput)
+    /// Creates a new builder-style object to manufacture [`CreateThesaurusOutput`](crate::output::CreateThesaurusOutput).
     pub fn builder() -> crate::output::create_thesaurus_output::Builder {
         crate::output::create_thesaurus_output::Builder::default()
     }
@@ -4430,10 +4745,10 @@ impl std::fmt::Debug for CreateQuerySuggestionsBlockListOutput {
         formatter.finish()
     }
 }
-/// See [`CreateQuerySuggestionsBlockListOutput`](crate::output::CreateQuerySuggestionsBlockListOutput)
+/// See [`CreateQuerySuggestionsBlockListOutput`](crate::output::CreateQuerySuggestionsBlockListOutput).
 pub mod create_query_suggestions_block_list_output {
-    /// A builder for [`CreateQuerySuggestionsBlockListOutput`](crate::output::CreateQuerySuggestionsBlockListOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateQuerySuggestionsBlockListOutput`](crate::output::CreateQuerySuggestionsBlockListOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4449,14 +4764,14 @@ pub mod create_query_suggestions_block_list_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateQuerySuggestionsBlockListOutput`](crate::output::CreateQuerySuggestionsBlockListOutput)
+        /// Consumes the builder and constructs a [`CreateQuerySuggestionsBlockListOutput`](crate::output::CreateQuerySuggestionsBlockListOutput).
         pub fn build(self) -> crate::output::CreateQuerySuggestionsBlockListOutput {
             crate::output::CreateQuerySuggestionsBlockListOutput { id: self.id }
         }
     }
 }
 impl CreateQuerySuggestionsBlockListOutput {
-    /// Creates a new builder-style object to manufacture [`CreateQuerySuggestionsBlockListOutput`](crate::output::CreateQuerySuggestionsBlockListOutput)
+    /// Creates a new builder-style object to manufacture [`CreateQuerySuggestionsBlockListOutput`](crate::output::CreateQuerySuggestionsBlockListOutput).
     pub fn builder() -> crate::output::create_query_suggestions_block_list_output::Builder {
         crate::output::create_query_suggestions_block_list_output::Builder::default()
     }
@@ -4482,10 +4797,10 @@ impl std::fmt::Debug for CreateIndexOutput {
         formatter.finish()
     }
 }
-/// See [`CreateIndexOutput`](crate::output::CreateIndexOutput)
+/// See [`CreateIndexOutput`](crate::output::CreateIndexOutput).
 pub mod create_index_output {
-    /// A builder for [`CreateIndexOutput`](crate::output::CreateIndexOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateIndexOutput`](crate::output::CreateIndexOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4501,14 +4816,14 @@ pub mod create_index_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateIndexOutput`](crate::output::CreateIndexOutput)
+        /// Consumes the builder and constructs a [`CreateIndexOutput`](crate::output::CreateIndexOutput).
         pub fn build(self) -> crate::output::CreateIndexOutput {
             crate::output::CreateIndexOutput { id: self.id }
         }
     }
 }
 impl CreateIndexOutput {
-    /// Creates a new builder-style object to manufacture [`CreateIndexOutput`](crate::output::CreateIndexOutput)
+    /// Creates a new builder-style object to manufacture [`CreateIndexOutput`](crate::output::CreateIndexOutput).
     pub fn builder() -> crate::output::create_index_output::Builder {
         crate::output::create_index_output::Builder::default()
     }
@@ -4534,10 +4849,10 @@ impl std::fmt::Debug for CreateFaqOutput {
         formatter.finish()
     }
 }
-/// See [`CreateFaqOutput`](crate::output::CreateFaqOutput)
+/// See [`CreateFaqOutput`](crate::output::CreateFaqOutput).
 pub mod create_faq_output {
-    /// A builder for [`CreateFaqOutput`](crate::output::CreateFaqOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateFaqOutput`](crate::output::CreateFaqOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4553,14 +4868,14 @@ pub mod create_faq_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateFaqOutput`](crate::output::CreateFaqOutput)
+        /// Consumes the builder and constructs a [`CreateFaqOutput`](crate::output::CreateFaqOutput).
         pub fn build(self) -> crate::output::CreateFaqOutput {
             crate::output::CreateFaqOutput { id: self.id }
         }
     }
 }
 impl CreateFaqOutput {
-    /// Creates a new builder-style object to manufacture [`CreateFaqOutput`](crate::output::CreateFaqOutput)
+    /// Creates a new builder-style object to manufacture [`CreateFaqOutput`](crate::output::CreateFaqOutput).
     pub fn builder() -> crate::output::create_faq_output::Builder {
         crate::output::create_faq_output::Builder::default()
     }
@@ -4586,10 +4901,10 @@ impl std::fmt::Debug for CreateExperienceOutput {
         formatter.finish()
     }
 }
-/// See [`CreateExperienceOutput`](crate::output::CreateExperienceOutput)
+/// See [`CreateExperienceOutput`](crate::output::CreateExperienceOutput).
 pub mod create_experience_output {
-    /// A builder for [`CreateExperienceOutput`](crate::output::CreateExperienceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateExperienceOutput`](crate::output::CreateExperienceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -4605,14 +4920,14 @@ pub mod create_experience_output {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateExperienceOutput`](crate::output::CreateExperienceOutput)
+        /// Consumes the builder and constructs a [`CreateExperienceOutput`](crate::output::CreateExperienceOutput).
         pub fn build(self) -> crate::output::CreateExperienceOutput {
             crate::output::CreateExperienceOutput { id: self.id }
         }
     }
 }
 impl CreateExperienceOutput {
-    /// Creates a new builder-style object to manufacture [`CreateExperienceOutput`](crate::output::CreateExperienceOutput)
+    /// Creates a new builder-style object to manufacture [`CreateExperienceOutput`](crate::output::CreateExperienceOutput).
     pub fn builder() -> crate::output::create_experience_output::Builder {
         crate::output::create_experience_output::Builder::default()
     }
@@ -4622,11 +4937,11 @@ impl CreateExperienceOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateDataSourceOutput {
-    /// <p>A unique identifier for the data source.</p>
+    /// <p>The identifier of the data source connector.</p>
     pub id: std::option::Option<std::string::String>,
 }
 impl CreateDataSourceOutput {
-    /// <p>A unique identifier for the data source.</p>
+    /// <p>The identifier of the data source connector.</p>
     pub fn id(&self) -> std::option::Option<&str> {
         self.id.as_deref()
     }
@@ -4638,35 +4953,87 @@ impl std::fmt::Debug for CreateDataSourceOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDataSourceOutput`](crate::output::CreateDataSourceOutput)
+/// See [`CreateDataSourceOutput`](crate::output::CreateDataSourceOutput).
 pub mod create_data_source_output {
-    /// A builder for [`CreateDataSourceOutput`](crate::output::CreateDataSourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateDataSourceOutput`](crate::output::CreateDataSourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>A unique identifier for the data source.</p>
+        /// <p>The identifier of the data source connector.</p>
         pub fn id(mut self, input: impl Into<std::string::String>) -> Self {
             self.id = Some(input.into());
             self
         }
-        /// <p>A unique identifier for the data source.</p>
+        /// <p>The identifier of the data source connector.</p>
         pub fn set_id(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDataSourceOutput`](crate::output::CreateDataSourceOutput)
+        /// Consumes the builder and constructs a [`CreateDataSourceOutput`](crate::output::CreateDataSourceOutput).
         pub fn build(self) -> crate::output::CreateDataSourceOutput {
             crate::output::CreateDataSourceOutput { id: self.id }
         }
     }
 }
 impl CreateDataSourceOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDataSourceOutput`](crate::output::CreateDataSourceOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDataSourceOutput`](crate::output::CreateDataSourceOutput).
     pub fn builder() -> crate::output::create_data_source_output::Builder {
         crate::output::create_data_source_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CreateAccessControlConfigurationOutput {
+    /// <p>The identifier of the access control configuration for your documents in an index.</p>
+    pub id: std::option::Option<std::string::String>,
+}
+impl CreateAccessControlConfigurationOutput {
+    /// <p>The identifier of the access control configuration for your documents in an index.</p>
+    pub fn id(&self) -> std::option::Option<&str> {
+        self.id.as_deref()
+    }
+}
+impl std::fmt::Debug for CreateAccessControlConfigurationOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CreateAccessControlConfigurationOutput");
+        formatter.field("id", &self.id);
+        formatter.finish()
+    }
+}
+/// See [`CreateAccessControlConfigurationOutput`](crate::output::CreateAccessControlConfigurationOutput).
+pub mod create_access_control_configuration_output {
+
+    /// A builder for [`CreateAccessControlConfigurationOutput`](crate::output::CreateAccessControlConfigurationOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) id: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The identifier of the access control configuration for your documents in an index.</p>
+        pub fn id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.id = Some(input.into());
+            self
+        }
+        /// <p>The identifier of the access control configuration for your documents in an index.</p>
+        pub fn set_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.id = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CreateAccessControlConfigurationOutput`](crate::output::CreateAccessControlConfigurationOutput).
+        pub fn build(self) -> crate::output::CreateAccessControlConfigurationOutput {
+            crate::output::CreateAccessControlConfigurationOutput { id: self.id }
+        }
+    }
+}
+impl CreateAccessControlConfigurationOutput {
+    /// Creates a new builder-style object to manufacture [`CreateAccessControlConfigurationOutput`](crate::output::CreateAccessControlConfigurationOutput).
+    pub fn builder() -> crate::output::create_access_control_configuration_output::Builder {
+        crate::output::create_access_control_configuration_output::Builder::default()
     }
 }
 
@@ -4680,21 +5047,21 @@ impl std::fmt::Debug for ClearQuerySuggestionsOutput {
         formatter.finish()
     }
 }
-/// See [`ClearQuerySuggestionsOutput`](crate::output::ClearQuerySuggestionsOutput)
+/// See [`ClearQuerySuggestionsOutput`](crate::output::ClearQuerySuggestionsOutput).
 pub mod clear_query_suggestions_output {
-    /// A builder for [`ClearQuerySuggestionsOutput`](crate::output::ClearQuerySuggestionsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ClearQuerySuggestionsOutput`](crate::output::ClearQuerySuggestionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`ClearQuerySuggestionsOutput`](crate::output::ClearQuerySuggestionsOutput)
+        /// Consumes the builder and constructs a [`ClearQuerySuggestionsOutput`](crate::output::ClearQuerySuggestionsOutput).
         pub fn build(self) -> crate::output::ClearQuerySuggestionsOutput {
             crate::output::ClearQuerySuggestionsOutput {}
         }
     }
 }
 impl ClearQuerySuggestionsOutput {
-    /// Creates a new builder-style object to manufacture [`ClearQuerySuggestionsOutput`](crate::output::ClearQuerySuggestionsOutput)
+    /// Creates a new builder-style object to manufacture [`ClearQuerySuggestionsOutput`](crate::output::ClearQuerySuggestionsOutput).
     pub fn builder() -> crate::output::clear_query_suggestions_output::Builder {
         crate::output::clear_query_suggestions_output::Builder::default()
     }
@@ -4725,10 +5092,10 @@ impl std::fmt::Debug for BatchPutDocumentOutput {
         formatter.finish()
     }
 }
-/// See [`BatchPutDocumentOutput`](crate::output::BatchPutDocumentOutput)
+/// See [`BatchPutDocumentOutput`](crate::output::BatchPutDocumentOutput).
 pub mod batch_put_document_output {
-    /// A builder for [`BatchPutDocumentOutput`](crate::output::BatchPutDocumentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchPutDocumentOutput`](crate::output::BatchPutDocumentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_documents: std::option::Option<
@@ -4762,7 +5129,7 @@ pub mod batch_put_document_output {
             self.failed_documents = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchPutDocumentOutput`](crate::output::BatchPutDocumentOutput)
+        /// Consumes the builder and constructs a [`BatchPutDocumentOutput`](crate::output::BatchPutDocumentOutput).
         pub fn build(self) -> crate::output::BatchPutDocumentOutput {
             crate::output::BatchPutDocumentOutput {
                 failed_documents: self.failed_documents,
@@ -4771,7 +5138,7 @@ pub mod batch_put_document_output {
     }
 }
 impl BatchPutDocumentOutput {
-    /// Creates a new builder-style object to manufacture [`BatchPutDocumentOutput`](crate::output::BatchPutDocumentOutput)
+    /// Creates a new builder-style object to manufacture [`BatchPutDocumentOutput`](crate::output::BatchPutDocumentOutput).
     pub fn builder() -> crate::output::batch_put_document_output::Builder {
         crate::output::batch_put_document_output::Builder::default()
     }
@@ -4807,10 +5174,10 @@ impl std::fmt::Debug for BatchGetDocumentStatusOutput {
         formatter.finish()
     }
 }
-/// See [`BatchGetDocumentStatusOutput`](crate::output::BatchGetDocumentStatusOutput)
+/// See [`BatchGetDocumentStatusOutput`](crate::output::BatchGetDocumentStatusOutput).
 pub mod batch_get_document_status_output {
-    /// A builder for [`BatchGetDocumentStatusOutput`](crate::output::BatchGetDocumentStatusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchGetDocumentStatusOutput`](crate::output::BatchGetDocumentStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) errors:
@@ -4858,7 +5225,7 @@ pub mod batch_get_document_status_output {
             self.document_status_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchGetDocumentStatusOutput`](crate::output::BatchGetDocumentStatusOutput)
+        /// Consumes the builder and constructs a [`BatchGetDocumentStatusOutput`](crate::output::BatchGetDocumentStatusOutput).
         pub fn build(self) -> crate::output::BatchGetDocumentStatusOutput {
             crate::output::BatchGetDocumentStatusOutput {
                 errors: self.errors,
@@ -4868,7 +5235,7 @@ pub mod batch_get_document_status_output {
     }
 }
 impl BatchGetDocumentStatusOutput {
-    /// Creates a new builder-style object to manufacture [`BatchGetDocumentStatusOutput`](crate::output::BatchGetDocumentStatusOutput)
+    /// Creates a new builder-style object to manufacture [`BatchGetDocumentStatusOutput`](crate::output::BatchGetDocumentStatusOutput).
     pub fn builder() -> crate::output::batch_get_document_status_output::Builder {
         crate::output::batch_get_document_status_output::Builder::default()
     }
@@ -4897,10 +5264,10 @@ impl std::fmt::Debug for BatchDeleteDocumentOutput {
         formatter.finish()
     }
 }
-/// See [`BatchDeleteDocumentOutput`](crate::output::BatchDeleteDocumentOutput)
+/// See [`BatchDeleteDocumentOutput`](crate::output::BatchDeleteDocumentOutput).
 pub mod batch_delete_document_output {
-    /// A builder for [`BatchDeleteDocumentOutput`](crate::output::BatchDeleteDocumentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`BatchDeleteDocumentOutput`](crate::output::BatchDeleteDocumentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_documents: std::option::Option<
@@ -4932,7 +5299,7 @@ pub mod batch_delete_document_output {
             self.failed_documents = input;
             self
         }
-        /// Consumes the builder and constructs a [`BatchDeleteDocumentOutput`](crate::output::BatchDeleteDocumentOutput)
+        /// Consumes the builder and constructs a [`BatchDeleteDocumentOutput`](crate::output::BatchDeleteDocumentOutput).
         pub fn build(self) -> crate::output::BatchDeleteDocumentOutput {
             crate::output::BatchDeleteDocumentOutput {
                 failed_documents: self.failed_documents,
@@ -4941,7 +5308,7 @@ pub mod batch_delete_document_output {
     }
 }
 impl BatchDeleteDocumentOutput {
-    /// Creates a new builder-style object to manufacture [`BatchDeleteDocumentOutput`](crate::output::BatchDeleteDocumentOutput)
+    /// Creates a new builder-style object to manufacture [`BatchDeleteDocumentOutput`](crate::output::BatchDeleteDocumentOutput).
     pub fn builder() -> crate::output::batch_delete_document_output::Builder {
         crate::output::batch_delete_document_output::Builder::default()
     }
@@ -4967,10 +5334,10 @@ impl std::fmt::Debug for AssociatePersonasToEntitiesOutput {
         formatter.finish()
     }
 }
-/// See [`AssociatePersonasToEntitiesOutput`](crate::output::AssociatePersonasToEntitiesOutput)
+/// See [`AssociatePersonasToEntitiesOutput`](crate::output::AssociatePersonasToEntitiesOutput).
 pub mod associate_personas_to_entities_output {
-    /// A builder for [`AssociatePersonasToEntitiesOutput`](crate::output::AssociatePersonasToEntitiesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`AssociatePersonasToEntitiesOutput`](crate::output::AssociatePersonasToEntitiesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_entity_list:
@@ -4996,7 +5363,7 @@ pub mod associate_personas_to_entities_output {
             self.failed_entity_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociatePersonasToEntitiesOutput`](crate::output::AssociatePersonasToEntitiesOutput)
+        /// Consumes the builder and constructs a [`AssociatePersonasToEntitiesOutput`](crate::output::AssociatePersonasToEntitiesOutput).
         pub fn build(self) -> crate::output::AssociatePersonasToEntitiesOutput {
             crate::output::AssociatePersonasToEntitiesOutput {
                 failed_entity_list: self.failed_entity_list,
@@ -5005,7 +5372,7 @@ pub mod associate_personas_to_entities_output {
     }
 }
 impl AssociatePersonasToEntitiesOutput {
-    /// Creates a new builder-style object to manufacture [`AssociatePersonasToEntitiesOutput`](crate::output::AssociatePersonasToEntitiesOutput)
+    /// Creates a new builder-style object to manufacture [`AssociatePersonasToEntitiesOutput`](crate::output::AssociatePersonasToEntitiesOutput).
     pub fn builder() -> crate::output::associate_personas_to_entities_output::Builder {
         crate::output::associate_personas_to_entities_output::Builder::default()
     }
@@ -5031,10 +5398,10 @@ impl std::fmt::Debug for AssociateEntitiesToExperienceOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateEntitiesToExperienceOutput`](crate::output::AssociateEntitiesToExperienceOutput)
+/// See [`AssociateEntitiesToExperienceOutput`](crate::output::AssociateEntitiesToExperienceOutput).
 pub mod associate_entities_to_experience_output {
-    /// A builder for [`AssociateEntitiesToExperienceOutput`](crate::output::AssociateEntitiesToExperienceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`AssociateEntitiesToExperienceOutput`](crate::output::AssociateEntitiesToExperienceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) failed_entity_list:
@@ -5060,7 +5427,7 @@ pub mod associate_entities_to_experience_output {
             self.failed_entity_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateEntitiesToExperienceOutput`](crate::output::AssociateEntitiesToExperienceOutput)
+        /// Consumes the builder and constructs a [`AssociateEntitiesToExperienceOutput`](crate::output::AssociateEntitiesToExperienceOutput).
         pub fn build(self) -> crate::output::AssociateEntitiesToExperienceOutput {
             crate::output::AssociateEntitiesToExperienceOutput {
                 failed_entity_list: self.failed_entity_list,
@@ -5069,7 +5436,7 @@ pub mod associate_entities_to_experience_output {
     }
 }
 impl AssociateEntitiesToExperienceOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateEntitiesToExperienceOutput`](crate::output::AssociateEntitiesToExperienceOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateEntitiesToExperienceOutput`](crate::output::AssociateEntitiesToExperienceOutput).
     pub fn builder() -> crate::output::associate_entities_to_experience_output::Builder {
         crate::output::associate_entities_to_experience_output::Builder::default()
     }

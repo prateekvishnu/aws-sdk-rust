@@ -19,10 +19,10 @@ impl std::fmt::Debug for UpdateUserOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateUserOutput`](crate::output::UpdateUserOutput)
+/// See [`UpdateUserOutput`](crate::output::UpdateUserOutput).
 pub mod update_user_output {
-    /// A builder for [`UpdateUserOutput`](crate::output::UpdateUserOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateUserOutput`](crate::output::UpdateUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -38,7 +38,7 @@ pub mod update_user_output {
             self.user_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateUserOutput`](crate::output::UpdateUserOutput)
+        /// Consumes the builder and constructs a [`UpdateUserOutput`](crate::output::UpdateUserOutput).
         pub fn build(self) -> crate::output::UpdateUserOutput {
             crate::output::UpdateUserOutput {
                 user_id: self.user_id,
@@ -47,7 +47,7 @@ pub mod update_user_output {
     }
 }
 impl UpdateUserOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateUserOutput`](crate::output::UpdateUserOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateUserOutput`](crate::output::UpdateUserOutput).
     pub fn builder() -> crate::output::update_user_output::Builder {
         crate::output::update_user_output::Builder::default()
     }
@@ -73,10 +73,10 @@ impl std::fmt::Debug for UpdatePermissionGroupOutput {
         formatter.finish()
     }
 }
-/// See [`UpdatePermissionGroupOutput`](crate::output::UpdatePermissionGroupOutput)
+/// See [`UpdatePermissionGroupOutput`](crate::output::UpdatePermissionGroupOutput).
 pub mod update_permission_group_output {
-    /// A builder for [`UpdatePermissionGroupOutput`](crate::output::UpdatePermissionGroupOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdatePermissionGroupOutput`](crate::output::UpdatePermissionGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_group_id: std::option::Option<std::string::String>,
@@ -95,7 +95,7 @@ pub mod update_permission_group_output {
             self.permission_group_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdatePermissionGroupOutput`](crate::output::UpdatePermissionGroupOutput)
+        /// Consumes the builder and constructs a [`UpdatePermissionGroupOutput`](crate::output::UpdatePermissionGroupOutput).
         pub fn build(self) -> crate::output::UpdatePermissionGroupOutput {
             crate::output::UpdatePermissionGroupOutput {
                 permission_group_id: self.permission_group_id,
@@ -104,7 +104,7 @@ pub mod update_permission_group_output {
     }
 }
 impl UpdatePermissionGroupOutput {
-    /// Creates a new builder-style object to manufacture [`UpdatePermissionGroupOutput`](crate::output::UpdatePermissionGroupOutput)
+    /// Creates a new builder-style object to manufacture [`UpdatePermissionGroupOutput`](crate::output::UpdatePermissionGroupOutput).
     pub fn builder() -> crate::output::update_permission_group_output::Builder {
         crate::output::update_permission_group_output::Builder::default()
     }
@@ -130,10 +130,10 @@ impl std::fmt::Debug for UpdateDatasetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateDatasetOutput`](crate::output::UpdateDatasetOutput)
+/// See [`UpdateDatasetOutput`](crate::output::UpdateDatasetOutput).
 pub mod update_dataset_output {
-    /// A builder for [`UpdateDatasetOutput`](crate::output::UpdateDatasetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateDatasetOutput`](crate::output::UpdateDatasetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_id: std::option::Option<std::string::String>,
@@ -149,7 +149,7 @@ pub mod update_dataset_output {
             self.dataset_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateDatasetOutput`](crate::output::UpdateDatasetOutput)
+        /// Consumes the builder and constructs a [`UpdateDatasetOutput`](crate::output::UpdateDatasetOutput).
         pub fn build(self) -> crate::output::UpdateDatasetOutput {
             crate::output::UpdateDatasetOutput {
                 dataset_id: self.dataset_id,
@@ -158,7 +158,7 @@ pub mod update_dataset_output {
     }
 }
 impl UpdateDatasetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateDatasetOutput`](crate::output::UpdateDatasetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateDatasetOutput`](crate::output::UpdateDatasetOutput).
     pub fn builder() -> crate::output::update_dataset_output::Builder {
         crate::output::update_dataset_output::Builder::default()
     }
@@ -191,10 +191,10 @@ impl std::fmt::Debug for UpdateChangesetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateChangesetOutput`](crate::output::UpdateChangesetOutput)
+/// See [`UpdateChangesetOutput`](crate::output::UpdateChangesetOutput).
 pub mod update_changeset_output {
-    /// A builder for [`UpdateChangesetOutput`](crate::output::UpdateChangesetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateChangesetOutput`](crate::output::UpdateChangesetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) changeset_id: std::option::Option<std::string::String>,
@@ -221,7 +221,7 @@ pub mod update_changeset_output {
             self.dataset_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`UpdateChangesetOutput`](crate::output::UpdateChangesetOutput)
+        /// Consumes the builder and constructs a [`UpdateChangesetOutput`](crate::output::UpdateChangesetOutput).
         pub fn build(self) -> crate::output::UpdateChangesetOutput {
             crate::output::UpdateChangesetOutput {
                 changeset_id: self.changeset_id,
@@ -231,7 +231,7 @@ pub mod update_changeset_output {
     }
 }
 impl UpdateChangesetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateChangesetOutput`](crate::output::UpdateChangesetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateChangesetOutput`](crate::output::UpdateChangesetOutput).
     pub fn builder() -> crate::output::update_changeset_output::Builder {
         crate::output::update_changeset_output::Builder::default()
     }
@@ -264,10 +264,10 @@ impl std::fmt::Debug for ResetUserPasswordOutput {
         formatter.finish()
     }
 }
-/// See [`ResetUserPasswordOutput`](crate::output::ResetUserPasswordOutput)
+/// See [`ResetUserPasswordOutput`](crate::output::ResetUserPasswordOutput).
 pub mod reset_user_password_output {
-    /// A builder for [`ResetUserPasswordOutput`](crate::output::ResetUserPasswordOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ResetUserPasswordOutput`](crate::output::ResetUserPasswordOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -297,7 +297,7 @@ pub mod reset_user_password_output {
             self.temporary_password = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResetUserPasswordOutput`](crate::output::ResetUserPasswordOutput)
+        /// Consumes the builder and constructs a [`ResetUserPasswordOutput`](crate::output::ResetUserPasswordOutput).
         pub fn build(self) -> crate::output::ResetUserPasswordOutput {
             crate::output::ResetUserPasswordOutput {
                 user_id: self.user_id,
@@ -307,9 +307,91 @@ pub mod reset_user_password_output {
     }
 }
 impl ResetUserPasswordOutput {
-    /// Creates a new builder-style object to manufacture [`ResetUserPasswordOutput`](crate::output::ResetUserPasswordOutput)
+    /// Creates a new builder-style object to manufacture [`ResetUserPasswordOutput`](crate::output::ResetUserPasswordOutput).
     pub fn builder() -> crate::output::reset_user_password_output::Builder {
         crate::output::reset_user_password_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListUsersByPermissionGroupOutput {
+    /// <p>Lists details of all users in a specific permission group.</p>
+    pub users: std::option::Option<std::vec::Vec<crate::model::UserByPermissionGroup>>,
+    /// <p>A token that indicates where a results page should begin.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListUsersByPermissionGroupOutput {
+    /// <p>Lists details of all users in a specific permission group.</p>
+    pub fn users(&self) -> std::option::Option<&[crate::model::UserByPermissionGroup]> {
+        self.users.as_deref()
+    }
+    /// <p>A token that indicates where a results page should begin.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListUsersByPermissionGroupOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListUsersByPermissionGroupOutput");
+        formatter.field("users", &self.users);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListUsersByPermissionGroupOutput`](crate::output::ListUsersByPermissionGroupOutput).
+pub mod list_users_by_permission_group_output {
+
+    /// A builder for [`ListUsersByPermissionGroupOutput`](crate::output::ListUsersByPermissionGroupOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) users: std::option::Option<std::vec::Vec<crate::model::UserByPermissionGroup>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `users`.
+        ///
+        /// To override the contents of this collection use [`set_users`](Self::set_users).
+        ///
+        /// <p>Lists details of all users in a specific permission group.</p>
+        pub fn users(mut self, input: crate::model::UserByPermissionGroup) -> Self {
+            let mut v = self.users.unwrap_or_default();
+            v.push(input);
+            self.users = Some(v);
+            self
+        }
+        /// <p>Lists details of all users in a specific permission group.</p>
+        pub fn set_users(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::UserByPermissionGroup>>,
+        ) -> Self {
+            self.users = input;
+            self
+        }
+        /// <p>A token that indicates where a results page should begin.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>A token that indicates where a results page should begin.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListUsersByPermissionGroupOutput`](crate::output::ListUsersByPermissionGroupOutput).
+        pub fn build(self) -> crate::output::ListUsersByPermissionGroupOutput {
+            crate::output::ListUsersByPermissionGroupOutput {
+                users: self.users,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListUsersByPermissionGroupOutput {
+    /// Creates a new builder-style object to manufacture [`ListUsersByPermissionGroupOutput`](crate::output::ListUsersByPermissionGroupOutput).
+    pub fn builder() -> crate::output::list_users_by_permission_group_output::Builder {
+        crate::output::list_users_by_permission_group_output::Builder::default()
     }
 }
 
@@ -340,10 +422,10 @@ impl std::fmt::Debug for ListUsersOutput {
         formatter.finish()
     }
 }
-/// See [`ListUsersOutput`](crate::output::ListUsersOutput)
+/// See [`ListUsersOutput`](crate::output::ListUsersOutput).
 pub mod list_users_output {
-    /// A builder for [`ListUsersOutput`](crate::output::ListUsersOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListUsersOutput`](crate::output::ListUsersOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) users: std::option::Option<std::vec::Vec<crate::model::User>>,
@@ -379,7 +461,7 @@ pub mod list_users_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListUsersOutput`](crate::output::ListUsersOutput)
+        /// Consumes the builder and constructs a [`ListUsersOutput`](crate::output::ListUsersOutput).
         pub fn build(self) -> crate::output::ListUsersOutput {
             crate::output::ListUsersOutput {
                 users: self.users,
@@ -389,9 +471,92 @@ pub mod list_users_output {
     }
 }
 impl ListUsersOutput {
-    /// Creates a new builder-style object to manufacture [`ListUsersOutput`](crate::output::ListUsersOutput)
+    /// Creates a new builder-style object to manufacture [`ListUsersOutput`](crate::output::ListUsersOutput).
     pub fn builder() -> crate::output::list_users_output::Builder {
         crate::output::list_users_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListPermissionGroupsByUserOutput {
+    /// <p>A list of returned permission groups.</p>
+    pub permission_groups: std::option::Option<std::vec::Vec<crate::model::PermissionGroupByUser>>,
+    /// <p>A token that indicates where a results page should begin.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListPermissionGroupsByUserOutput {
+    /// <p>A list of returned permission groups.</p>
+    pub fn permission_groups(&self) -> std::option::Option<&[crate::model::PermissionGroupByUser]> {
+        self.permission_groups.as_deref()
+    }
+    /// <p>A token that indicates where a results page should begin.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListPermissionGroupsByUserOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("ListPermissionGroupsByUserOutput");
+        formatter.field("permission_groups", &self.permission_groups);
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListPermissionGroupsByUserOutput`](crate::output::ListPermissionGroupsByUserOutput).
+pub mod list_permission_groups_by_user_output {
+
+    /// A builder for [`ListPermissionGroupsByUserOutput`](crate::output::ListPermissionGroupsByUserOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) permission_groups:
+            std::option::Option<std::vec::Vec<crate::model::PermissionGroupByUser>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `permission_groups`.
+        ///
+        /// To override the contents of this collection use [`set_permission_groups`](Self::set_permission_groups).
+        ///
+        /// <p>A list of returned permission groups.</p>
+        pub fn permission_groups(mut self, input: crate::model::PermissionGroupByUser) -> Self {
+            let mut v = self.permission_groups.unwrap_or_default();
+            v.push(input);
+            self.permission_groups = Some(v);
+            self
+        }
+        /// <p>A list of returned permission groups.</p>
+        pub fn set_permission_groups(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::PermissionGroupByUser>>,
+        ) -> Self {
+            self.permission_groups = input;
+            self
+        }
+        /// <p>A token that indicates where a results page should begin.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>A token that indicates where a results page should begin.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListPermissionGroupsByUserOutput`](crate::output::ListPermissionGroupsByUserOutput).
+        pub fn build(self) -> crate::output::ListPermissionGroupsByUserOutput {
+            crate::output::ListPermissionGroupsByUserOutput {
+                permission_groups: self.permission_groups,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListPermissionGroupsByUserOutput {
+    /// Creates a new builder-style object to manufacture [`ListPermissionGroupsByUserOutput`](crate::output::ListPermissionGroupsByUserOutput).
+    pub fn builder() -> crate::output::list_permission_groups_by_user_output::Builder {
+        crate::output::list_permission_groups_by_user_output::Builder::default()
     }
 }
 
@@ -422,10 +587,10 @@ impl std::fmt::Debug for ListPermissionGroupsOutput {
         formatter.finish()
     }
 }
-/// See [`ListPermissionGroupsOutput`](crate::output::ListPermissionGroupsOutput)
+/// See [`ListPermissionGroupsOutput`](crate::output::ListPermissionGroupsOutput).
 pub mod list_permission_groups_output {
-    /// A builder for [`ListPermissionGroupsOutput`](crate::output::ListPermissionGroupsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListPermissionGroupsOutput`](crate::output::ListPermissionGroupsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_groups:
@@ -462,7 +627,7 @@ pub mod list_permission_groups_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPermissionGroupsOutput`](crate::output::ListPermissionGroupsOutput)
+        /// Consumes the builder and constructs a [`ListPermissionGroupsOutput`](crate::output::ListPermissionGroupsOutput).
         pub fn build(self) -> crate::output::ListPermissionGroupsOutput {
             crate::output::ListPermissionGroupsOutput {
                 permission_groups: self.permission_groups,
@@ -472,7 +637,7 @@ pub mod list_permission_groups_output {
     }
 }
 impl ListPermissionGroupsOutput {
-    /// Creates a new builder-style object to manufacture [`ListPermissionGroupsOutput`](crate::output::ListPermissionGroupsOutput)
+    /// Creates a new builder-style object to manufacture [`ListPermissionGroupsOutput`](crate::output::ListPermissionGroupsOutput).
     pub fn builder() -> crate::output::list_permission_groups_output::Builder {
         crate::output::list_permission_groups_output::Builder::default()
     }
@@ -505,10 +670,10 @@ impl std::fmt::Debug for ListDataViewsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDataViewsOutput`](crate::output::ListDataViewsOutput)
+/// See [`ListDataViewsOutput`](crate::output::ListDataViewsOutput).
 pub mod list_data_views_output {
-    /// A builder for [`ListDataViewsOutput`](crate::output::ListDataViewsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListDataViewsOutput`](crate::output::ListDataViewsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -544,7 +709,7 @@ pub mod list_data_views_output {
             self.data_views = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDataViewsOutput`](crate::output::ListDataViewsOutput)
+        /// Consumes the builder and constructs a [`ListDataViewsOutput`](crate::output::ListDataViewsOutput).
         pub fn build(self) -> crate::output::ListDataViewsOutput {
             crate::output::ListDataViewsOutput {
                 next_token: self.next_token,
@@ -554,7 +719,7 @@ pub mod list_data_views_output {
     }
 }
 impl ListDataViewsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDataViewsOutput`](crate::output::ListDataViewsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDataViewsOutput`](crate::output::ListDataViewsOutput).
     pub fn builder() -> crate::output::list_data_views_output::Builder {
         crate::output::list_data_views_output::Builder::default()
     }
@@ -587,10 +752,10 @@ impl std::fmt::Debug for ListDatasetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
+/// See [`ListDatasetsOutput`](crate::output::ListDatasetsOutput).
 pub mod list_datasets_output {
-    /// A builder for [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListDatasetsOutput`](crate::output::ListDatasetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) datasets: std::option::Option<std::vec::Vec<crate::model::Dataset>>,
@@ -626,7 +791,7 @@ pub mod list_datasets_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
+        /// Consumes the builder and constructs a [`ListDatasetsOutput`](crate::output::ListDatasetsOutput).
         pub fn build(self) -> crate::output::ListDatasetsOutput {
             crate::output::ListDatasetsOutput {
                 datasets: self.datasets,
@@ -636,7 +801,7 @@ pub mod list_datasets_output {
     }
 }
 impl ListDatasetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListDatasetsOutput`](crate::output::ListDatasetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListDatasetsOutput`](crate::output::ListDatasetsOutput).
     pub fn builder() -> crate::output::list_datasets_output::Builder {
         crate::output::list_datasets_output::Builder::default()
     }
@@ -669,10 +834,10 @@ impl std::fmt::Debug for ListChangesetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListChangesetsOutput`](crate::output::ListChangesetsOutput)
+/// See [`ListChangesetsOutput`](crate::output::ListChangesetsOutput).
 pub mod list_changesets_output {
-    /// A builder for [`ListChangesetsOutput`](crate::output::ListChangesetsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListChangesetsOutput`](crate::output::ListChangesetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) changesets: std::option::Option<std::vec::Vec<crate::model::ChangesetSummary>>,
@@ -708,7 +873,7 @@ pub mod list_changesets_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListChangesetsOutput`](crate::output::ListChangesetsOutput)
+        /// Consumes the builder and constructs a [`ListChangesetsOutput`](crate::output::ListChangesetsOutput).
         pub fn build(self) -> crate::output::ListChangesetsOutput {
             crate::output::ListChangesetsOutput {
                 changesets: self.changesets,
@@ -718,7 +883,7 @@ pub mod list_changesets_output {
     }
 }
 impl ListChangesetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListChangesetsOutput`](crate::output::ListChangesetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListChangesetsOutput`](crate::output::ListChangesetsOutput).
     pub fn builder() -> crate::output::list_changesets_output::Builder {
         crate::output::list_changesets_output::Builder::default()
     }
@@ -758,10 +923,10 @@ impl std::fmt::Debug for GetWorkingLocationOutput {
         formatter.finish()
     }
 }
-/// See [`GetWorkingLocationOutput`](crate::output::GetWorkingLocationOutput)
+/// See [`GetWorkingLocationOutput`](crate::output::GetWorkingLocationOutput).
 pub mod get_working_location_output {
-    /// A builder for [`GetWorkingLocationOutput`](crate::output::GetWorkingLocationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetWorkingLocationOutput`](crate::output::GetWorkingLocationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) s3_uri: std::option::Option<std::string::String>,
@@ -799,7 +964,7 @@ pub mod get_working_location_output {
             self.s3_bucket = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetWorkingLocationOutput`](crate::output::GetWorkingLocationOutput)
+        /// Consumes the builder and constructs a [`GetWorkingLocationOutput`](crate::output::GetWorkingLocationOutput).
         pub fn build(self) -> crate::output::GetWorkingLocationOutput {
             crate::output::GetWorkingLocationOutput {
                 s3_uri: self.s3_uri,
@@ -810,7 +975,7 @@ pub mod get_working_location_output {
     }
 }
 impl GetWorkingLocationOutput {
-    /// Creates a new builder-style object to manufacture [`GetWorkingLocationOutput`](crate::output::GetWorkingLocationOutput)
+    /// Creates a new builder-style object to manufacture [`GetWorkingLocationOutput`](crate::output::GetWorkingLocationOutput).
     pub fn builder() -> crate::output::get_working_location_output::Builder {
         crate::output::get_working_location_output::Builder::default()
     }
@@ -840,7 +1005,7 @@ pub struct GetUserOutput {
     /// <li> <p> <code>SUPER_USER</code> – A user with permission to all the functionality and data in FinSpace.</p> </li>
     /// </ul>
     /// <ul>
-    /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permissions group.</p> </li>
+    /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permission group.</p> </li>
     /// </ul>
     pub r#type: std::option::Option<crate::model::UserType>,
     /// <p>Indicates whether the user can use the <code>GetProgrammaticAccessCredentials</code> API to obtain credentials that can then be used to access other FinSpace Data API operations. </p>
@@ -893,7 +1058,7 @@ impl GetUserOutput {
     /// <li> <p> <code>SUPER_USER</code> – A user with permission to all the functionality and data in FinSpace.</p> </li>
     /// </ul>
     /// <ul>
-    /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permissions group.</p> </li>
+    /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permission group.</p> </li>
     /// </ul>
     pub fn r#type(&self) -> std::option::Option<&crate::model::UserType> {
         self.r#type.as_ref()
@@ -950,10 +1115,10 @@ impl std::fmt::Debug for GetUserOutput {
         formatter.finish()
     }
 }
-/// See [`GetUserOutput`](crate::output::GetUserOutput)
+/// See [`GetUserOutput`](crate::output::GetUserOutput).
 pub mod get_user_output {
-    /// A builder for [`GetUserOutput`](crate::output::GetUserOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetUserOutput`](crate::output::GetUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -1039,7 +1204,7 @@ pub mod get_user_output {
         /// <li> <p> <code>SUPER_USER</code> – A user with permission to all the functionality and data in FinSpace.</p> </li>
         /// </ul>
         /// <ul>
-        /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permissions group.</p> </li>
+        /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permission group.</p> </li>
         /// </ul>
         pub fn r#type(mut self, input: crate::model::UserType) -> Self {
             self.r#type = Some(input);
@@ -1050,7 +1215,7 @@ pub mod get_user_output {
         /// <li> <p> <code>SUPER_USER</code> – A user with permission to all the functionality and data in FinSpace.</p> </li>
         /// </ul>
         /// <ul>
-        /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permissions group.</p> </li>
+        /// <li> <p> <code>APP_USER</code> – A user with specific permissions in FinSpace. The users are assigned permissions by adding them to a permission group.</p> </li>
         /// </ul>
         pub fn set_type(mut self, input: std::option::Option<crate::model::UserType>) -> Self {
             self.r#type = input;
@@ -1140,7 +1305,7 @@ pub mod get_user_output {
             self.last_login_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetUserOutput`](crate::output::GetUserOutput)
+        /// Consumes the builder and constructs a [`GetUserOutput`](crate::output::GetUserOutput).
         pub fn build(self) -> crate::output::GetUserOutput {
             crate::output::GetUserOutput {
                 user_id: self.user_id,
@@ -1161,7 +1326,7 @@ pub mod get_user_output {
     }
 }
 impl GetUserOutput {
-    /// Creates a new builder-style object to manufacture [`GetUserOutput`](crate::output::GetUserOutput)
+    /// Creates a new builder-style object to manufacture [`GetUserOutput`](crate::output::GetUserOutput).
     pub fn builder() -> crate::output::get_user_output::Builder {
         crate::output::get_user_output::Builder::default()
     }
@@ -1194,10 +1359,10 @@ impl std::fmt::Debug for GetProgrammaticAccessCredentialsOutput {
         formatter.finish()
     }
 }
-/// See [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput)
+/// See [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput).
 pub mod get_programmatic_access_credentials_output {
-    /// A builder for [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) credentials: std::option::Option<crate::model::Credentials>,
@@ -1227,7 +1392,7 @@ pub mod get_programmatic_access_credentials_output {
             self.duration_in_minutes = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput)
+        /// Consumes the builder and constructs a [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput).
         pub fn build(self) -> crate::output::GetProgrammaticAccessCredentialsOutput {
             crate::output::GetProgrammaticAccessCredentialsOutput {
                 credentials: self.credentials,
@@ -1237,9 +1402,145 @@ pub mod get_programmatic_access_credentials_output {
     }
 }
 impl GetProgrammaticAccessCredentialsOutput {
-    /// Creates a new builder-style object to manufacture [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput)
+    /// Creates a new builder-style object to manufacture [`GetProgrammaticAccessCredentialsOutput`](crate::output::GetProgrammaticAccessCredentialsOutput).
     pub fn builder() -> crate::output::get_programmatic_access_credentials_output::Builder {
         crate::output::get_programmatic_access_credentials_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetPermissionGroupOutput {
+    /// <p>The structure for a permission group.</p>
+    pub permission_group: std::option::Option<crate::model::PermissionGroup>,
+}
+impl GetPermissionGroupOutput {
+    /// <p>The structure for a permission group.</p>
+    pub fn permission_group(&self) -> std::option::Option<&crate::model::PermissionGroup> {
+        self.permission_group.as_ref()
+    }
+}
+impl std::fmt::Debug for GetPermissionGroupOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetPermissionGroupOutput");
+        formatter.field("permission_group", &self.permission_group);
+        formatter.finish()
+    }
+}
+/// See [`GetPermissionGroupOutput`](crate::output::GetPermissionGroupOutput).
+pub mod get_permission_group_output {
+
+    /// A builder for [`GetPermissionGroupOutput`](crate::output::GetPermissionGroupOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) permission_group: std::option::Option<crate::model::PermissionGroup>,
+    }
+    impl Builder {
+        /// <p>The structure for a permission group.</p>
+        pub fn permission_group(mut self, input: crate::model::PermissionGroup) -> Self {
+            self.permission_group = Some(input);
+            self
+        }
+        /// <p>The structure for a permission group.</p>
+        pub fn set_permission_group(
+            mut self,
+            input: std::option::Option<crate::model::PermissionGroup>,
+        ) -> Self {
+            self.permission_group = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetPermissionGroupOutput`](crate::output::GetPermissionGroupOutput).
+        pub fn build(self) -> crate::output::GetPermissionGroupOutput {
+            crate::output::GetPermissionGroupOutput {
+                permission_group: self.permission_group,
+            }
+        }
+    }
+}
+impl GetPermissionGroupOutput {
+    /// Creates a new builder-style object to manufacture [`GetPermissionGroupOutput`](crate::output::GetPermissionGroupOutput).
+    pub fn builder() -> crate::output::get_permission_group_output::Builder {
+        crate::output::get_permission_group_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetExternalDataViewAccessDetailsOutput {
+    /// <p>The credentials required to access the external Dataview from the S3 location.</p>
+    pub credentials: std::option::Option<crate::model::AwsCredentials>,
+    /// <p>The location where the external Dataview is stored.</p>
+    pub s3_location: std::option::Option<crate::model::S3Location>,
+}
+impl GetExternalDataViewAccessDetailsOutput {
+    /// <p>The credentials required to access the external Dataview from the S3 location.</p>
+    pub fn credentials(&self) -> std::option::Option<&crate::model::AwsCredentials> {
+        self.credentials.as_ref()
+    }
+    /// <p>The location where the external Dataview is stored.</p>
+    pub fn s3_location(&self) -> std::option::Option<&crate::model::S3Location> {
+        self.s3_location.as_ref()
+    }
+}
+impl std::fmt::Debug for GetExternalDataViewAccessDetailsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetExternalDataViewAccessDetailsOutput");
+        formatter.field("credentials", &self.credentials);
+        formatter.field("s3_location", &self.s3_location);
+        formatter.finish()
+    }
+}
+/// See [`GetExternalDataViewAccessDetailsOutput`](crate::output::GetExternalDataViewAccessDetailsOutput).
+pub mod get_external_data_view_access_details_output {
+
+    /// A builder for [`GetExternalDataViewAccessDetailsOutput`](crate::output::GetExternalDataViewAccessDetailsOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) credentials: std::option::Option<crate::model::AwsCredentials>,
+        pub(crate) s3_location: std::option::Option<crate::model::S3Location>,
+    }
+    impl Builder {
+        /// <p>The credentials required to access the external Dataview from the S3 location.</p>
+        pub fn credentials(mut self, input: crate::model::AwsCredentials) -> Self {
+            self.credentials = Some(input);
+            self
+        }
+        /// <p>The credentials required to access the external Dataview from the S3 location.</p>
+        pub fn set_credentials(
+            mut self,
+            input: std::option::Option<crate::model::AwsCredentials>,
+        ) -> Self {
+            self.credentials = input;
+            self
+        }
+        /// <p>The location where the external Dataview is stored.</p>
+        pub fn s3_location(mut self, input: crate::model::S3Location) -> Self {
+            self.s3_location = Some(input);
+            self
+        }
+        /// <p>The location where the external Dataview is stored.</p>
+        pub fn set_s3_location(
+            mut self,
+            input: std::option::Option<crate::model::S3Location>,
+        ) -> Self {
+            self.s3_location = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetExternalDataViewAccessDetailsOutput`](crate::output::GetExternalDataViewAccessDetailsOutput).
+        pub fn build(self) -> crate::output::GetExternalDataViewAccessDetailsOutput {
+            crate::output::GetExternalDataViewAccessDetailsOutput {
+                credentials: self.credentials,
+                s3_location: self.s3_location,
+            }
+        }
+    }
+}
+impl GetExternalDataViewAccessDetailsOutput {
+    /// Creates a new builder-style object to manufacture [`GetExternalDataViewAccessDetailsOutput`](crate::output::GetExternalDataViewAccessDetailsOutput).
+    pub fn builder() -> crate::output::get_external_data_view_access_details_output::Builder {
+        crate::output::get_external_data_view_access_details_output::Builder::default()
     }
 }
 
@@ -1362,10 +1663,10 @@ impl std::fmt::Debug for GetDataViewOutput {
         formatter.finish()
     }
 }
-/// See [`GetDataViewOutput`](crate::output::GetDataViewOutput)
+/// See [`GetDataViewOutput`](crate::output::GetDataViewOutput).
 pub mod get_data_view_output {
-    /// A builder for [`GetDataViewOutput`](crate::output::GetDataViewOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetDataViewOutput`](crate::output::GetDataViewOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) auto_update: std::option::Option<bool>,
@@ -1556,7 +1857,7 @@ pub mod get_data_view_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDataViewOutput`](crate::output::GetDataViewOutput)
+        /// Consumes the builder and constructs a [`GetDataViewOutput`](crate::output::GetDataViewOutput).
         pub fn build(self) -> crate::output::GetDataViewOutput {
             crate::output::GetDataViewOutput {
                 auto_update: self.auto_update.unwrap_or_default(),
@@ -1576,7 +1877,7 @@ pub mod get_data_view_output {
     }
 }
 impl GetDataViewOutput {
-    /// Creates a new builder-style object to manufacture [`GetDataViewOutput`](crate::output::GetDataViewOutput)
+    /// Creates a new builder-style object to manufacture [`GetDataViewOutput`](crate::output::GetDataViewOutput).
     pub fn builder() -> crate::output::get_data_view_output::Builder {
         crate::output::get_data_view_output::Builder::default()
     }
@@ -1685,10 +1986,10 @@ impl std::fmt::Debug for GetDatasetOutput {
         formatter.finish()
     }
 }
-/// See [`GetDatasetOutput`](crate::output::GetDatasetOutput)
+/// See [`GetDatasetOutput`](crate::output::GetDatasetOutput).
 pub mod get_dataset_output {
-    /// A builder for [`GetDatasetOutput`](crate::output::GetDatasetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetDatasetOutput`](crate::output::GetDatasetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_id: std::option::Option<std::string::String>,
@@ -1835,7 +2136,7 @@ pub mod get_dataset_output {
             self.status = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDatasetOutput`](crate::output::GetDatasetOutput)
+        /// Consumes the builder and constructs a [`GetDatasetOutput`](crate::output::GetDatasetOutput).
         pub fn build(self) -> crate::output::GetDatasetOutput {
             crate::output::GetDatasetOutput {
                 dataset_id: self.dataset_id,
@@ -1853,7 +2154,7 @@ pub mod get_dataset_output {
     }
 }
 impl GetDatasetOutput {
-    /// Creates a new builder-style object to manufacture [`GetDatasetOutput`](crate::output::GetDatasetOutput)
+    /// Creates a new builder-style object to manufacture [`GetDatasetOutput`](crate::output::GetDatasetOutput).
     pub fn builder() -> crate::output::get_dataset_output::Builder {
         crate::output::get_dataset_output::Builder::default()
     }
@@ -1981,10 +2282,10 @@ impl std::fmt::Debug for GetChangesetOutput {
         formatter.finish()
     }
 }
-/// See [`GetChangesetOutput`](crate::output::GetChangesetOutput)
+/// See [`GetChangesetOutput`](crate::output::GetChangesetOutput).
 pub mod get_changeset_output {
-    /// A builder for [`GetChangesetOutput`](crate::output::GetChangesetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetChangesetOutput`](crate::output::GetChangesetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) changeset_id: std::option::Option<std::string::String>,
@@ -2194,7 +2495,7 @@ pub mod get_changeset_output {
             self.updated_by_changeset_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetChangesetOutput`](crate::output::GetChangesetOutput)
+        /// Consumes the builder and constructs a [`GetChangesetOutput`](crate::output::GetChangesetOutput).
         pub fn build(self) -> crate::output::GetChangesetOutput {
             crate::output::GetChangesetOutput {
                 changeset_id: self.changeset_id,
@@ -2215,7 +2516,7 @@ pub mod get_changeset_output {
     }
 }
 impl GetChangesetOutput {
-    /// Creates a new builder-style object to manufacture [`GetChangesetOutput`](crate::output::GetChangesetOutput)
+    /// Creates a new builder-style object to manufacture [`GetChangesetOutput`](crate::output::GetChangesetOutput).
     pub fn builder() -> crate::output::get_changeset_output::Builder {
         crate::output::get_changeset_output::Builder::default()
     }
@@ -2241,10 +2542,10 @@ impl std::fmt::Debug for EnableUserOutput {
         formatter.finish()
     }
 }
-/// See [`EnableUserOutput`](crate::output::EnableUserOutput)
+/// See [`EnableUserOutput`](crate::output::EnableUserOutput).
 pub mod enable_user_output {
-    /// A builder for [`EnableUserOutput`](crate::output::EnableUserOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`EnableUserOutput`](crate::output::EnableUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -2260,7 +2561,7 @@ pub mod enable_user_output {
             self.user_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`EnableUserOutput`](crate::output::EnableUserOutput)
+        /// Consumes the builder and constructs a [`EnableUserOutput`](crate::output::EnableUserOutput).
         pub fn build(self) -> crate::output::EnableUserOutput {
             crate::output::EnableUserOutput {
                 user_id: self.user_id,
@@ -2269,9 +2570,63 @@ pub mod enable_user_output {
     }
 }
 impl EnableUserOutput {
-    /// Creates a new builder-style object to manufacture [`EnableUserOutput`](crate::output::EnableUserOutput)
+    /// Creates a new builder-style object to manufacture [`EnableUserOutput`](crate::output::EnableUserOutput).
     pub fn builder() -> crate::output::enable_user_output::Builder {
         crate::output::enable_user_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DisassociateUserFromPermissionGroupOutput {
+    /// <p>The returned status code of the response.</p>
+    pub status_code: i32,
+}
+impl DisassociateUserFromPermissionGroupOutput {
+    /// <p>The returned status code of the response.</p>
+    pub fn status_code(&self) -> i32 {
+        self.status_code
+    }
+}
+impl std::fmt::Debug for DisassociateUserFromPermissionGroupOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DisassociateUserFromPermissionGroupOutput");
+        formatter.field("status_code", &self.status_code);
+        formatter.finish()
+    }
+}
+/// See [`DisassociateUserFromPermissionGroupOutput`](crate::output::DisassociateUserFromPermissionGroupOutput).
+pub mod disassociate_user_from_permission_group_output {
+
+    /// A builder for [`DisassociateUserFromPermissionGroupOutput`](crate::output::DisassociateUserFromPermissionGroupOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) status_code: std::option::Option<i32>,
+    }
+    impl Builder {
+        /// <p>The returned status code of the response.</p>
+        pub fn status_code(mut self, input: i32) -> Self {
+            self.status_code = Some(input);
+            self
+        }
+        /// <p>The returned status code of the response.</p>
+        pub fn set_status_code(mut self, input: std::option::Option<i32>) -> Self {
+            self.status_code = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DisassociateUserFromPermissionGroupOutput`](crate::output::DisassociateUserFromPermissionGroupOutput).
+        pub fn build(self) -> crate::output::DisassociateUserFromPermissionGroupOutput {
+            crate::output::DisassociateUserFromPermissionGroupOutput {
+                status_code: self.status_code.unwrap_or_default(),
+            }
+        }
+    }
+}
+impl DisassociateUserFromPermissionGroupOutput {
+    /// Creates a new builder-style object to manufacture [`DisassociateUserFromPermissionGroupOutput`](crate::output::DisassociateUserFromPermissionGroupOutput).
+    pub fn builder() -> crate::output::disassociate_user_from_permission_group_output::Builder {
+        crate::output::disassociate_user_from_permission_group_output::Builder::default()
     }
 }
 
@@ -2295,10 +2650,10 @@ impl std::fmt::Debug for DisableUserOutput {
         formatter.finish()
     }
 }
-/// See [`DisableUserOutput`](crate::output::DisableUserOutput)
+/// See [`DisableUserOutput`](crate::output::DisableUserOutput).
 pub mod disable_user_output {
-    /// A builder for [`DisableUserOutput`](crate::output::DisableUserOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DisableUserOutput`](crate::output::DisableUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -2314,7 +2669,7 @@ pub mod disable_user_output {
             self.user_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisableUserOutput`](crate::output::DisableUserOutput)
+        /// Consumes the builder and constructs a [`DisableUserOutput`](crate::output::DisableUserOutput).
         pub fn build(self) -> crate::output::DisableUserOutput {
             crate::output::DisableUserOutput {
                 user_id: self.user_id,
@@ -2323,7 +2678,7 @@ pub mod disable_user_output {
     }
 }
 impl DisableUserOutput {
-    /// Creates a new builder-style object to manufacture [`DisableUserOutput`](crate::output::DisableUserOutput)
+    /// Creates a new builder-style object to manufacture [`DisableUserOutput`](crate::output::DisableUserOutput).
     pub fn builder() -> crate::output::disable_user_output::Builder {
         crate::output::disable_user_output::Builder::default()
     }
@@ -2349,10 +2704,10 @@ impl std::fmt::Debug for DeletePermissionGroupOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePermissionGroupOutput`](crate::output::DeletePermissionGroupOutput)
+/// See [`DeletePermissionGroupOutput`](crate::output::DeletePermissionGroupOutput).
 pub mod delete_permission_group_output {
-    /// A builder for [`DeletePermissionGroupOutput`](crate::output::DeletePermissionGroupOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeletePermissionGroupOutput`](crate::output::DeletePermissionGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_group_id: std::option::Option<std::string::String>,
@@ -2371,7 +2726,7 @@ pub mod delete_permission_group_output {
             self.permission_group_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeletePermissionGroupOutput`](crate::output::DeletePermissionGroupOutput)
+        /// Consumes the builder and constructs a [`DeletePermissionGroupOutput`](crate::output::DeletePermissionGroupOutput).
         pub fn build(self) -> crate::output::DeletePermissionGroupOutput {
             crate::output::DeletePermissionGroupOutput {
                 permission_group_id: self.permission_group_id,
@@ -2380,7 +2735,7 @@ pub mod delete_permission_group_output {
     }
 }
 impl DeletePermissionGroupOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePermissionGroupOutput`](crate::output::DeletePermissionGroupOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePermissionGroupOutput`](crate::output::DeletePermissionGroupOutput).
     pub fn builder() -> crate::output::delete_permission_group_output::Builder {
         crate::output::delete_permission_group_output::Builder::default()
     }
@@ -2406,10 +2761,10 @@ impl std::fmt::Debug for DeleteDatasetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
+/// See [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
 pub mod delete_dataset_output {
-    /// A builder for [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_id: std::option::Option<std::string::String>,
@@ -2425,7 +2780,7 @@ pub mod delete_dataset_output {
             self.dataset_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
+        /// Consumes the builder and constructs a [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
         pub fn build(self) -> crate::output::DeleteDatasetOutput {
             crate::output::DeleteDatasetOutput {
                 dataset_id: self.dataset_id,
@@ -2434,7 +2789,7 @@ pub mod delete_dataset_output {
     }
 }
 impl DeleteDatasetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteDatasetOutput`](crate::output::DeleteDatasetOutput).
     pub fn builder() -> crate::output::delete_dataset_output::Builder {
         crate::output::delete_dataset_output::Builder::default()
     }
@@ -2460,10 +2815,10 @@ impl std::fmt::Debug for CreateUserOutput {
         formatter.finish()
     }
 }
-/// See [`CreateUserOutput`](crate::output::CreateUserOutput)
+/// See [`CreateUserOutput`](crate::output::CreateUserOutput).
 pub mod create_user_output {
-    /// A builder for [`CreateUserOutput`](crate::output::CreateUserOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateUserOutput`](crate::output::CreateUserOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_id: std::option::Option<std::string::String>,
@@ -2479,7 +2834,7 @@ pub mod create_user_output {
             self.user_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateUserOutput`](crate::output::CreateUserOutput)
+        /// Consumes the builder and constructs a [`CreateUserOutput`](crate::output::CreateUserOutput).
         pub fn build(self) -> crate::output::CreateUserOutput {
             crate::output::CreateUserOutput {
                 user_id: self.user_id,
@@ -2488,7 +2843,7 @@ pub mod create_user_output {
     }
 }
 impl CreateUserOutput {
-    /// Creates a new builder-style object to manufacture [`CreateUserOutput`](crate::output::CreateUserOutput)
+    /// Creates a new builder-style object to manufacture [`CreateUserOutput`](crate::output::CreateUserOutput).
     pub fn builder() -> crate::output::create_user_output::Builder {
         crate::output::create_user_output::Builder::default()
     }
@@ -2514,10 +2869,10 @@ impl std::fmt::Debug for CreatePermissionGroupOutput {
         formatter.finish()
     }
 }
-/// See [`CreatePermissionGroupOutput`](crate::output::CreatePermissionGroupOutput)
+/// See [`CreatePermissionGroupOutput`](crate::output::CreatePermissionGroupOutput).
 pub mod create_permission_group_output {
-    /// A builder for [`CreatePermissionGroupOutput`](crate::output::CreatePermissionGroupOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreatePermissionGroupOutput`](crate::output::CreatePermissionGroupOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_group_id: std::option::Option<std::string::String>,
@@ -2536,7 +2891,7 @@ pub mod create_permission_group_output {
             self.permission_group_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreatePermissionGroupOutput`](crate::output::CreatePermissionGroupOutput)
+        /// Consumes the builder and constructs a [`CreatePermissionGroupOutput`](crate::output::CreatePermissionGroupOutput).
         pub fn build(self) -> crate::output::CreatePermissionGroupOutput {
             crate::output::CreatePermissionGroupOutput {
                 permission_group_id: self.permission_group_id,
@@ -2545,7 +2900,7 @@ pub mod create_permission_group_output {
     }
 }
 impl CreatePermissionGroupOutput {
-    /// Creates a new builder-style object to manufacture [`CreatePermissionGroupOutput`](crate::output::CreatePermissionGroupOutput)
+    /// Creates a new builder-style object to manufacture [`CreatePermissionGroupOutput`](crate::output::CreatePermissionGroupOutput).
     pub fn builder() -> crate::output::create_permission_group_output::Builder {
         crate::output::create_permission_group_output::Builder::default()
     }
@@ -2578,10 +2933,10 @@ impl std::fmt::Debug for CreateDataViewOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDataViewOutput`](crate::output::CreateDataViewOutput)
+/// See [`CreateDataViewOutput`](crate::output::CreateDataViewOutput).
 pub mod create_data_view_output {
-    /// A builder for [`CreateDataViewOutput`](crate::output::CreateDataViewOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateDataViewOutput`](crate::output::CreateDataViewOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_id: std::option::Option<std::string::String>,
@@ -2608,7 +2963,7 @@ pub mod create_data_view_output {
             self.data_view_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDataViewOutput`](crate::output::CreateDataViewOutput)
+        /// Consumes the builder and constructs a [`CreateDataViewOutput`](crate::output::CreateDataViewOutput).
         pub fn build(self) -> crate::output::CreateDataViewOutput {
             crate::output::CreateDataViewOutput {
                 dataset_id: self.dataset_id,
@@ -2618,7 +2973,7 @@ pub mod create_data_view_output {
     }
 }
 impl CreateDataViewOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDataViewOutput`](crate::output::CreateDataViewOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDataViewOutput`](crate::output::CreateDataViewOutput).
     pub fn builder() -> crate::output::create_data_view_output::Builder {
         crate::output::create_data_view_output::Builder::default()
     }
@@ -2644,10 +2999,10 @@ impl std::fmt::Debug for CreateDatasetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
+/// See [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
 pub mod create_dataset_output {
-    /// A builder for [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_id: std::option::Option<std::string::String>,
@@ -2663,7 +3018,7 @@ pub mod create_dataset_output {
             self.dataset_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
+        /// Consumes the builder and constructs a [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
         pub fn build(self) -> crate::output::CreateDatasetOutput {
             crate::output::CreateDatasetOutput {
                 dataset_id: self.dataset_id,
@@ -2672,7 +3027,7 @@ pub mod create_dataset_output {
     }
 }
 impl CreateDatasetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateDatasetOutput`](crate::output::CreateDatasetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateDatasetOutput`](crate::output::CreateDatasetOutput).
     pub fn builder() -> crate::output::create_dataset_output::Builder {
         crate::output::create_dataset_output::Builder::default()
     }
@@ -2705,10 +3060,10 @@ impl std::fmt::Debug for CreateChangesetOutput {
         formatter.finish()
     }
 }
-/// See [`CreateChangesetOutput`](crate::output::CreateChangesetOutput)
+/// See [`CreateChangesetOutput`](crate::output::CreateChangesetOutput).
 pub mod create_changeset_output {
-    /// A builder for [`CreateChangesetOutput`](crate::output::CreateChangesetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateChangesetOutput`](crate::output::CreateChangesetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) dataset_id: std::option::Option<std::string::String>,
@@ -2735,7 +3090,7 @@ pub mod create_changeset_output {
             self.changeset_id = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateChangesetOutput`](crate::output::CreateChangesetOutput)
+        /// Consumes the builder and constructs a [`CreateChangesetOutput`](crate::output::CreateChangesetOutput).
         pub fn build(self) -> crate::output::CreateChangesetOutput {
             crate::output::CreateChangesetOutput {
                 dataset_id: self.dataset_id,
@@ -2745,8 +3100,62 @@ pub mod create_changeset_output {
     }
 }
 impl CreateChangesetOutput {
-    /// Creates a new builder-style object to manufacture [`CreateChangesetOutput`](crate::output::CreateChangesetOutput)
+    /// Creates a new builder-style object to manufacture [`CreateChangesetOutput`](crate::output::CreateChangesetOutput).
     pub fn builder() -> crate::output::create_changeset_output::Builder {
         crate::output::create_changeset_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct AssociateUserToPermissionGroupOutput {
+    /// <p>The returned status code of the response.</p>
+    pub status_code: i32,
+}
+impl AssociateUserToPermissionGroupOutput {
+    /// <p>The returned status code of the response.</p>
+    pub fn status_code(&self) -> i32 {
+        self.status_code
+    }
+}
+impl std::fmt::Debug for AssociateUserToPermissionGroupOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("AssociateUserToPermissionGroupOutput");
+        formatter.field("status_code", &self.status_code);
+        formatter.finish()
+    }
+}
+/// See [`AssociateUserToPermissionGroupOutput`](crate::output::AssociateUserToPermissionGroupOutput).
+pub mod associate_user_to_permission_group_output {
+
+    /// A builder for [`AssociateUserToPermissionGroupOutput`](crate::output::AssociateUserToPermissionGroupOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) status_code: std::option::Option<i32>,
+    }
+    impl Builder {
+        /// <p>The returned status code of the response.</p>
+        pub fn status_code(mut self, input: i32) -> Self {
+            self.status_code = Some(input);
+            self
+        }
+        /// <p>The returned status code of the response.</p>
+        pub fn set_status_code(mut self, input: std::option::Option<i32>) -> Self {
+            self.status_code = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`AssociateUserToPermissionGroupOutput`](crate::output::AssociateUserToPermissionGroupOutput).
+        pub fn build(self) -> crate::output::AssociateUserToPermissionGroupOutput {
+            crate::output::AssociateUserToPermissionGroupOutput {
+                status_code: self.status_code.unwrap_or_default(),
+            }
+        }
+    }
+}
+impl AssociateUserToPermissionGroupOutput {
+    /// Creates a new builder-style object to manufacture [`AssociateUserToPermissionGroupOutput`](crate::output::AssociateUserToPermissionGroupOutput).
+    pub fn builder() -> crate::output::associate_user_to_permission_group_output::Builder {
+        crate::output::associate_user_to_permission_group_output::Builder::default()
     }
 }

@@ -179,7 +179,7 @@ impl Client {
     ///   - [`app_type(AppType)`](crate::client::fluent_builders::CreateApp::app_type) / [`set_app_type(Option<AppType>)`](crate::client::fluent_builders::CreateApp::set_app_type): <p>The type of app. Supported apps are <code>JupyterServer</code> and <code>KernelGateway</code>. <code>TensorBoard</code> is not supported.</p>
     ///   - [`app_name(impl Into<String>)`](crate::client::fluent_builders::CreateApp::app_name) / [`set_app_name(Option<String>)`](crate::client::fluent_builders::CreateApp::set_app_name): <p>The name of the app.</p>
     ///   - [`tags(Vec<Tag>)`](crate::client::fluent_builders::CreateApp::tags) / [`set_tags(Option<Vec<Tag>>)`](crate::client::fluent_builders::CreateApp::set_tags): <p>Each tag consists of a key and an optional value. Tag keys must be unique per resource.</p>
-    ///   - [`resource_spec(ResourceSpec)`](crate::client::fluent_builders::CreateApp::resource_spec) / [`set_resource_spec(Option<ResourceSpec>)`](crate::client::fluent_builders::CreateApp::set_resource_spec): <p>The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.</p>
+    ///   - [`resource_spec(ResourceSpec)`](crate::client::fluent_builders::CreateApp::resource_spec) / [`set_resource_spec(Option<ResourceSpec>)`](crate::client::fluent_builders::CreateApp::set_resource_spec): <p>The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.</p> <note>   <p>The value of <code>InstanceType</code> passed as part of the <code>ResourceSpec</code> in the <code>CreateApp</code> call overrides the value passed as part of the <code>ResourceSpec</code> configured for the user profile or the domain. If <code>InstanceType</code> is not specified in any of those three <code>ResourceSpec</code> values for a <code>KernelGateway</code> app, the <code>CreateApp</code> call fails with a request validation error.</p>  </note>
     /// - On success, responds with [`CreateAppOutput`](crate::output::CreateAppOutput) with field(s):
     ///   - [`app_arn(Option<String>)`](crate::output::CreateAppOutput::app_arn): <p>The Amazon Resource Name (ARN) of the app.</p>
     /// - On failure, responds with [`SdkError<CreateAppError>`](crate::error::CreateAppError)
@@ -217,11 +217,11 @@ impl Client {
     ///
     /// - The fluent builder is configurable:
     ///   - [`auto_ml_job_name(impl Into<String>)`](crate::client::fluent_builders::CreateAutoMLJob::auto_ml_job_name) / [`set_auto_ml_job_name(Option<String>)`](crate::client::fluent_builders::CreateAutoMLJob::set_auto_ml_job_name): <p>Identifies an Autopilot job. The name must be unique to your account and is case-insensitive.</p>
-    ///   - [`input_data_config(Vec<AutoMlChannel>)`](crate::client::fluent_builders::CreateAutoMLJob::input_data_config) / [`set_input_data_config(Option<Vec<AutoMlChannel>>)`](crate::client::fluent_builders::CreateAutoMLJob::set_input_data_config): <p>An array of channel objects that describes the input data and its location. Each channel is a named input source. Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV. Minimum of 500 rows.</p>
+    ///   - [`input_data_config(Vec<AutoMlChannel>)`](crate::client::fluent_builders::CreateAutoMLJob::input_data_config) / [`set_input_data_config(Option<Vec<AutoMlChannel>>)`](crate::client::fluent_builders::CreateAutoMLJob::set_input_data_config): <p>An array of channel objects that describes the input data and its location. Each channel is a named input source. Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is not a minimum number of rows required for the validation dataset.</p>
     ///   - [`output_data_config(AutoMlOutputDataConfig)`](crate::client::fluent_builders::CreateAutoMLJob::output_data_config) / [`set_output_data_config(Option<AutoMlOutputDataConfig>)`](crate::client::fluent_builders::CreateAutoMLJob::set_output_data_config): <p>Provides information about encryption and the Amazon S3 output path needed to store artifacts from an AutoML job. Format(s) supported: CSV.</p>
-    ///   - [`problem_type(ProblemType)`](crate::client::fluent_builders::CreateAutoMLJob::problem_type) / [`set_problem_type(Option<ProblemType>)`](crate::client::fluent_builders::CreateAutoMLJob::set_problem_type): <p>Defines the type of supervised learning available for the candidates. Options include: <code>BinaryClassification</code>, <code>MulticlassClassification</code>, and <code>Regression</code>. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html"> Amazon SageMaker Autopilot problem types and algorithm support</a>.</p>
+    ///   - [`problem_type(ProblemType)`](crate::client::fluent_builders::CreateAutoMLJob::problem_type) / [`set_problem_type(Option<ProblemType>)`](crate::client::fluent_builders::CreateAutoMLJob::set_problem_type): <p>Defines the type of supervised learning available for the candidates. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html"> Amazon SageMaker Autopilot problem types and algorithm support</a>.</p>
     ///   - [`auto_ml_job_objective(AutoMlJobObjective)`](crate::client::fluent_builders::CreateAutoMLJob::auto_ml_job_objective) / [`set_auto_ml_job_objective(Option<AutoMlJobObjective>)`](crate::client::fluent_builders::CreateAutoMLJob::set_auto_ml_job_objective): <p>Defines the objective metric used to measure the predictive quality of an AutoML job. You provide an <code>AutoMLJobObjective$MetricName</code> and Autopilot infers whether to minimize or maximize it.</p>
-    ///   - [`auto_ml_job_config(AutoMlJobConfig)`](crate::client::fluent_builders::CreateAutoMLJob::auto_ml_job_config) / [`set_auto_ml_job_config(Option<AutoMlJobConfig>)`](crate::client::fluent_builders::CreateAutoMLJob::set_auto_ml_job_config): <p>Contains <code>CompletionCriteria</code> and <code>SecurityConfig</code> settings for the AutoML job.</p>
+    ///   - [`auto_ml_job_config(AutoMlJobConfig)`](crate::client::fluent_builders::CreateAutoMLJob::auto_ml_job_config) / [`set_auto_ml_job_config(Option<AutoMlJobConfig>)`](crate::client::fluent_builders::CreateAutoMLJob::set_auto_ml_job_config): <p>A collection of settings used to configure an AutoML job.</p>
     ///   - [`role_arn(impl Into<String>)`](crate::client::fluent_builders::CreateAutoMLJob::role_arn) / [`set_role_arn(Option<String>)`](crate::client::fluent_builders::CreateAutoMLJob::set_role_arn): <p>The ARN of the role that is used to access the data.</p>
     ///   - [`generate_candidate_definitions_only(bool)`](crate::client::fluent_builders::CreateAutoMLJob::generate_candidate_definitions_only) / [`set_generate_candidate_definitions_only(bool)`](crate::client::fluent_builders::CreateAutoMLJob::set_generate_candidate_definitions_only): <p>Generates possible candidates without training the models. A candidate is a combination of data preprocessors, algorithms, and algorithm parameter settings.</p>
     ///   - [`tags(Vec<Tag>)`](crate::client::fluent_builders::CreateAutoMLJob::tags) / [`set_tags(Option<Vec<Tag>>)`](crate::client::fluent_builders::CreateAutoMLJob::set_tags): <p>Each tag consists of a key and an optional value. Tag keys must be unique per resource.</p>
@@ -333,6 +333,31 @@ impl Client {
     pub fn create_domain(&self) -> fluent_builders::CreateDomain {
         fluent_builders::CreateDomain::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`CreateEdgeDeploymentPlan`](crate::client::fluent_builders::CreateEdgeDeploymentPlan) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`edge_deployment_plan_name(impl Into<String>)`](crate::client::fluent_builders::CreateEdgeDeploymentPlan::edge_deployment_plan_name) / [`set_edge_deployment_plan_name(Option<String>)`](crate::client::fluent_builders::CreateEdgeDeploymentPlan::set_edge_deployment_plan_name): <p>The name of the edge deployment plan.</p>
+    ///   - [`model_configs(Vec<EdgeDeploymentModelConfig>)`](crate::client::fluent_builders::CreateEdgeDeploymentPlan::model_configs) / [`set_model_configs(Option<Vec<EdgeDeploymentModelConfig>>)`](crate::client::fluent_builders::CreateEdgeDeploymentPlan::set_model_configs): <p>List of models associated with the edge deployment plan.</p>
+    ///   - [`device_fleet_name(impl Into<String>)`](crate::client::fluent_builders::CreateEdgeDeploymentPlan::device_fleet_name) / [`set_device_fleet_name(Option<String>)`](crate::client::fluent_builders::CreateEdgeDeploymentPlan::set_device_fleet_name): <p>The device fleet used for this edge deployment plan.</p>
+    ///   - [`stages(Vec<DeploymentStage>)`](crate::client::fluent_builders::CreateEdgeDeploymentPlan::stages) / [`set_stages(Option<Vec<DeploymentStage>>)`](crate::client::fluent_builders::CreateEdgeDeploymentPlan::set_stages): <p>List of stages of the edge deployment plan. The number of stages is limited to 10 per deployment.</p>
+    ///   - [`tags(Vec<Tag>)`](crate::client::fluent_builders::CreateEdgeDeploymentPlan::tags) / [`set_tags(Option<Vec<Tag>>)`](crate::client::fluent_builders::CreateEdgeDeploymentPlan::set_tags): <p>List of tags with which to tag the edge deployment plan.</p>
+    /// - On success, responds with [`CreateEdgeDeploymentPlanOutput`](crate::output::CreateEdgeDeploymentPlanOutput) with field(s):
+    ///   - [`edge_deployment_plan_arn(Option<String>)`](crate::output::CreateEdgeDeploymentPlanOutput::edge_deployment_plan_arn): <p>The ARN of the edge deployment plan.</p>
+    /// - On failure, responds with [`SdkError<CreateEdgeDeploymentPlanError>`](crate::error::CreateEdgeDeploymentPlanError)
+    pub fn create_edge_deployment_plan(&self) -> fluent_builders::CreateEdgeDeploymentPlan {
+        fluent_builders::CreateEdgeDeploymentPlan::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`CreateEdgeDeploymentStage`](crate::client::fluent_builders::CreateEdgeDeploymentStage) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`edge_deployment_plan_name(impl Into<String>)`](crate::client::fluent_builders::CreateEdgeDeploymentStage::edge_deployment_plan_name) / [`set_edge_deployment_plan_name(Option<String>)`](crate::client::fluent_builders::CreateEdgeDeploymentStage::set_edge_deployment_plan_name): <p>The name of the edge deployment plan.</p>
+    ///   - [`stages(Vec<DeploymentStage>)`](crate::client::fluent_builders::CreateEdgeDeploymentStage::stages) / [`set_stages(Option<Vec<DeploymentStage>>)`](crate::client::fluent_builders::CreateEdgeDeploymentStage::set_stages): <p>List of stages to be added to the edge deployment plan.</p>
+    /// - On success, responds with [`CreateEdgeDeploymentStageOutput`](crate::output::CreateEdgeDeploymentStageOutput)
+
+    /// - On failure, responds with [`SdkError<CreateEdgeDeploymentStageError>`](crate::error::CreateEdgeDeploymentStageError)
+    pub fn create_edge_deployment_stage(&self) -> fluent_builders::CreateEdgeDeploymentStage {
+        fluent_builders::CreateEdgeDeploymentStage::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`CreateEdgePackagingJob`](crate::client::fluent_builders::CreateEdgePackagingJob) operation.
     ///
     /// - The fluent builder is configurable:
@@ -368,7 +393,7 @@ impl Client {
     /// - The fluent builder is configurable:
     ///   - [`endpoint_config_name(impl Into<String>)`](crate::client::fluent_builders::CreateEndpointConfig::endpoint_config_name) / [`set_endpoint_config_name(Option<String>)`](crate::client::fluent_builders::CreateEndpointConfig::set_endpoint_config_name): <p>The name of the endpoint configuration. You specify this name in a <code>CreateEndpoint</code> request. </p>
     ///   - [`production_variants(Vec<ProductionVariant>)`](crate::client::fluent_builders::CreateEndpointConfig::production_variants) / [`set_production_variants(Option<Vec<ProductionVariant>>)`](crate::client::fluent_builders::CreateEndpointConfig::set_production_variants): <p>An list of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.</p>
-    ///   - [`data_capture_config(DataCaptureConfig)`](crate::client::fluent_builders::CreateEndpointConfig::data_capture_config) / [`set_data_capture_config(Option<DataCaptureConfig>)`](crate::client::fluent_builders::CreateEndpointConfig::set_data_capture_config): <p></p>
+    ///   - [`data_capture_config(DataCaptureConfig)`](crate::client::fluent_builders::CreateEndpointConfig::data_capture_config) / [`set_data_capture_config(Option<DataCaptureConfig>)`](crate::client::fluent_builders::CreateEndpointConfig::set_data_capture_config): <p>Configuration to control how SageMaker captures inference data.</p>
     ///   - [`tags(Vec<Tag>)`](crate::client::fluent_builders::CreateEndpointConfig::tags) / [`set_tags(Option<Vec<Tag>>)`](crate::client::fluent_builders::CreateEndpointConfig::set_tags): <p>An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways, for example, by purpose, owner, or environment. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>.</p>
     ///   - [`kms_key_id(impl Into<String>)`](crate::client::fluent_builders::CreateEndpointConfig::kms_key_id) / [`set_kms_key_id(Option<String>)`](crate::client::fluent_builders::CreateEndpointConfig::set_kms_key_id): <p>The Amazon Resource Name (ARN) of a Amazon Web Services Key Management Service key that SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.</p>  <p>The KmsKeyId can be any of the following formats: </p>  <ul>   <li> <p>Key ID: <code>1234abcd-12ab-34cd-56ef-1234567890ab</code> </p> </li>   <li> <p>Key ARN: <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code> </p> </li>   <li> <p>Alias name: <code>alias/ExampleAlias</code> </p> </li>   <li> <p>Alias name ARN: <code>arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias</code> </p> </li>  </ul>  <p>The KMS key policy must grant permission to the IAM role that you specify in your <code>CreateEndpoint</code>, <code>UpdateEndpoint</code> requests. For more information, refer to the Amazon Web Services Key Management Service section<a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html"> Using Key Policies in Amazon Web Services KMS </a> </p> <note>   <p>Certain Nitro-based instances include local storage, dependent on the instance type. Local storage volumes are encrypted using a hardware module on the instance. You can't request a <code>KmsKeyId</code> when using an instance type with local storage. If any of the models that you specify in the <code>ProductionVariants</code> parameter use nitro-based instances with local storage, do not specify a value for the <code>KmsKeyId</code> parameter. If you specify a value for <code>KmsKeyId</code> when using any nitro-based instances with local storage, the call to <code>CreateEndpointConfig</code> fails.</p>   <p>For a list of instance types that support local instance storage, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes">Instance Store Volumes</a>.</p>   <p>For more information about local instance storage encryption, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html">SSD Instance Store Volumes</a>.</p>  </note>
     ///   - [`async_inference_config(AsyncInferenceConfig)`](crate::client::fluent_builders::CreateEndpointConfig::async_inference_config) / [`set_async_inference_config(Option<AsyncInferenceConfig>)`](crate::client::fluent_builders::CreateEndpointConfig::set_async_inference_config): <p>Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in order for your Endpoint to be invoked using <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpointAsync.html">InvokeEndpointAsync</a>.</p>
@@ -595,7 +620,7 @@ impl Client {
     ///   - [`customer_metadata_properties(HashMap<String, String>)`](crate::client::fluent_builders::CreateModelPackage::customer_metadata_properties) / [`set_customer_metadata_properties(Option<HashMap<String, String>>)`](crate::client::fluent_builders::CreateModelPackage::set_customer_metadata_properties): <p>The metadata properties associated with the model package versions.</p>
     ///   - [`drift_check_baselines(DriftCheckBaselines)`](crate::client::fluent_builders::CreateModelPackage::drift_check_baselines) / [`set_drift_check_baselines(Option<DriftCheckBaselines>)`](crate::client::fluent_builders::CreateModelPackage::set_drift_check_baselines): <p>Represents the drift check baselines that can be used when the model monitor is set using the model package. For more information, see the topic on <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines-quality-clarify-baseline-lifecycle.html#pipelines-quality-clarify-baseline-drift-detection">Drift Detection against Previous Baselines in SageMaker Pipelines</a> in the <i>Amazon SageMaker Developer Guide</i>. </p>
     ///   - [`domain(impl Into<String>)`](crate::client::fluent_builders::CreateModelPackage::domain) / [`set_domain(Option<String>)`](crate::client::fluent_builders::CreateModelPackage::set_domain): <p>The machine learning domain of your model package and its components. Common machine learning domains include computer vision and natural language processing.</p>
-    ///   - [`task(impl Into<String>)`](crate::client::fluent_builders::CreateModelPackage::task) / [`set_task(Option<String>)`](crate::client::fluent_builders::CreateModelPackage::set_task): <p>The machine learning task your model package accomplishes. Common machine learning tasks include object detection and image classification.</p>
+    ///   - [`task(impl Into<String>)`](crate::client::fluent_builders::CreateModelPackage::task) / [`set_task(Option<String>)`](crate::client::fluent_builders::CreateModelPackage::set_task): <p>The machine learning task your model package accomplishes. Common machine learning tasks include object detection and image classification. The following tasks are supported by Inference Recommender: <code>"IMAGE_CLASSIFICATION"</code> | <code>"OBJECT_DETECTION"</code> | <code>"TEXT_GENERATION"</code> |<code>"IMAGE_SEGMENTATION"</code> | <code>"FILL_MASK"</code> | <code>"CLASSIFICATION"</code> | <code>"REGRESSION"</code> | <code>"OTHER"</code>.</p>  <p>Specify "OTHER" if none of the tasks listed fit your use case.</p>
     ///   - [`sample_payload_url(impl Into<String>)`](crate::client::fluent_builders::CreateModelPackage::sample_payload_url) / [`set_sample_payload_url(Option<String>)`](crate::client::fluent_builders::CreateModelPackage::set_sample_payload_url): <p>The Amazon Simple Storage Service (Amazon S3) path where the sample payload are stored. This path must point to a single gzip compressed tar archive (.tar.gz suffix).</p>
     ///   - [`additional_inference_specifications(Vec<AdditionalInferenceSpecificationDefinition>)`](crate::client::fluent_builders::CreateModelPackage::additional_inference_specifications) / [`set_additional_inference_specifications(Option<Vec<AdditionalInferenceSpecificationDefinition>>)`](crate::client::fluent_builders::CreateModelPackage::set_additional_inference_specifications): <p>An array of additional Inference Specification objects. Each additional Inference Specification specifies artifacts based on this model package that can be used on inference endpoints. Generally used with SageMaker Neo to store the compiled artifacts. </p>
     /// - On success, responds with [`CreateModelPackageOutput`](crate::output::CreateModelPackageOutput) with field(s):
@@ -667,6 +692,7 @@ impl Client {
     ///   - [`additional_code_repositories(Vec<String>)`](crate::client::fluent_builders::CreateNotebookInstance::additional_code_repositories) / [`set_additional_code_repositories(Option<Vec<String>>)`](crate::client::fluent_builders::CreateNotebookInstance::set_additional_code_repositories): <p>An array of up to three Git repositories to associate with the notebook instance. These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in <a href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">Amazon Web Services CodeCommit</a> or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html">Associating Git Repositories with SageMaker Notebook Instances</a>.</p>
     ///   - [`root_access(RootAccess)`](crate::client::fluent_builders::CreateNotebookInstance::root_access) / [`set_root_access(Option<RootAccess>)`](crate::client::fluent_builders::CreateNotebookInstance::set_root_access): <p>Whether root access is enabled or disabled for users of the notebook instance. The default value is <code>Enabled</code>.</p> <note>   <p>Lifecycle configurations need root access to be able to set up a notebook instance. Because of this, lifecycle configurations associated with a notebook instance always run with root access even if you disable root access for users.</p>  </note>
     ///   - [`platform_identifier(impl Into<String>)`](crate::client::fluent_builders::CreateNotebookInstance::platform_identifier) / [`set_platform_identifier(Option<String>)`](crate::client::fluent_builders::CreateNotebookInstance::set_platform_identifier): <p>The platform identifier of the notebook instance runtime environment.</p>
+    ///   - [`instance_metadata_service_configuration(InstanceMetadataServiceConfiguration)`](crate::client::fluent_builders::CreateNotebookInstance::instance_metadata_service_configuration) / [`set_instance_metadata_service_configuration(Option<InstanceMetadataServiceConfiguration>)`](crate::client::fluent_builders::CreateNotebookInstance::set_instance_metadata_service_configuration): <p>Information on the IMDS configuration of the notebook instance</p>
     /// - On success, responds with [`CreateNotebookInstanceOutput`](crate::output::CreateNotebookInstanceOutput) with field(s):
     ///   - [`notebook_instance_arn(Option<String>)`](crate::output::CreateNotebookInstanceOutput::notebook_instance_arn): <p>The Amazon Resource Name (ARN) of the notebook instance. </p>
     /// - On failure, responds with [`SdkError<CreateNotebookInstanceError>`](crate::error::CreateNotebookInstanceError)
@@ -887,6 +913,7 @@ impl Client {
     ///   - [`source_ip_config(SourceIpConfig)`](crate::client::fluent_builders::CreateWorkforce::source_ip_config) / [`set_source_ip_config(Option<SourceIpConfig>)`](crate::client::fluent_builders::CreateWorkforce::set_source_ip_config): <p>A list of IP address ranges (<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>). Used to create an allow list of IP addresses for a private workforce. Workers will only be able to login to their worker portal from an IP address within this range. By default, a workforce isn't restricted to specific IP addresses.</p>
     ///   - [`workforce_name(impl Into<String>)`](crate::client::fluent_builders::CreateWorkforce::workforce_name) / [`set_workforce_name(Option<String>)`](crate::client::fluent_builders::CreateWorkforce::set_workforce_name): <p>The name of the private workforce.</p>
     ///   - [`tags(Vec<Tag>)`](crate::client::fluent_builders::CreateWorkforce::tags) / [`set_tags(Option<Vec<Tag>>)`](crate::client::fluent_builders::CreateWorkforce::set_tags): <p>An array of key-value pairs that contain metadata to help you categorize and organize our workforce. Each tag consists of a key and a value, both of which you define.</p>
+    ///   - [`workforce_vpc_config(WorkforceVpcConfigRequest)`](crate::client::fluent_builders::CreateWorkforce::workforce_vpc_config) / [`set_workforce_vpc_config(Option<WorkforceVpcConfigRequest>)`](crate::client::fluent_builders::CreateWorkforce::set_workforce_vpc_config): <p>Use this parameter to configure a workforce using VPC.</p>
     /// - On success, responds with [`CreateWorkforceOutput`](crate::output::CreateWorkforceOutput) with field(s):
     ///   - [`workforce_arn(Option<String>)`](crate::output::CreateWorkforceOutput::workforce_arn): <p>The Amazon Resource Name (ARN) of the workforce.</p>
     /// - On failure, responds with [`SdkError<CreateWorkforceError>`](crate::error::CreateWorkforceError)
@@ -1026,6 +1053,27 @@ impl Client {
     /// - On failure, responds with [`SdkError<DeleteDomainError>`](crate::error::DeleteDomainError)
     pub fn delete_domain(&self) -> fluent_builders::DeleteDomain {
         fluent_builders::DeleteDomain::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`DeleteEdgeDeploymentPlan`](crate::client::fluent_builders::DeleteEdgeDeploymentPlan) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`edge_deployment_plan_name(impl Into<String>)`](crate::client::fluent_builders::DeleteEdgeDeploymentPlan::edge_deployment_plan_name) / [`set_edge_deployment_plan_name(Option<String>)`](crate::client::fluent_builders::DeleteEdgeDeploymentPlan::set_edge_deployment_plan_name): <p>The name of the edge deployment plan to delete.</p>
+    /// - On success, responds with [`DeleteEdgeDeploymentPlanOutput`](crate::output::DeleteEdgeDeploymentPlanOutput)
+
+    /// - On failure, responds with [`SdkError<DeleteEdgeDeploymentPlanError>`](crate::error::DeleteEdgeDeploymentPlanError)
+    pub fn delete_edge_deployment_plan(&self) -> fluent_builders::DeleteEdgeDeploymentPlan {
+        fluent_builders::DeleteEdgeDeploymentPlan::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`DeleteEdgeDeploymentStage`](crate::client::fluent_builders::DeleteEdgeDeploymentStage) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`edge_deployment_plan_name(impl Into<String>)`](crate::client::fluent_builders::DeleteEdgeDeploymentStage::edge_deployment_plan_name) / [`set_edge_deployment_plan_name(Option<String>)`](crate::client::fluent_builders::DeleteEdgeDeploymentStage::set_edge_deployment_plan_name): <p>The name of the edge deployment plan from which the stage will be deleted.</p>
+    ///   - [`stage_name(impl Into<String>)`](crate::client::fluent_builders::DeleteEdgeDeploymentStage::stage_name) / [`set_stage_name(Option<String>)`](crate::client::fluent_builders::DeleteEdgeDeploymentStage::set_stage_name): <p>The name of the stage.</p>
+    /// - On success, responds with [`DeleteEdgeDeploymentStageOutput`](crate::output::DeleteEdgeDeploymentStageOutput)
+
+    /// - On failure, responds with [`SdkError<DeleteEdgeDeploymentStageError>`](crate::error::DeleteEdgeDeploymentStageError)
+    pub fn delete_edge_deployment_stage(&self) -> fluent_builders::DeleteEdgeDeploymentStage {
+        fluent_builders::DeleteEdgeDeploymentStage::new(self.handle.clone())
     }
     /// Constructs a fluent builder for the [`DeleteEndpoint`](crate::client::fluent_builders::DeleteEndpoint) operation.
     ///
@@ -1601,6 +1649,28 @@ impl Client {
     pub fn describe_domain(&self) -> fluent_builders::DescribeDomain {
         fluent_builders::DescribeDomain::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`DescribeEdgeDeploymentPlan`](crate::client::fluent_builders::DescribeEdgeDeploymentPlan) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`edge_deployment_plan_name(impl Into<String>)`](crate::client::fluent_builders::DescribeEdgeDeploymentPlan::edge_deployment_plan_name) / [`set_edge_deployment_plan_name(Option<String>)`](crate::client::fluent_builders::DescribeEdgeDeploymentPlan::set_edge_deployment_plan_name): <p>The name of the deployment plan to describe.</p>
+    ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::DescribeEdgeDeploymentPlan::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::DescribeEdgeDeploymentPlan::set_next_token): <p>If the edge deployment plan has enough stages to require tokening, then this is the response from the last list of stages returned.</p>
+    ///   - [`max_results(i32)`](crate::client::fluent_builders::DescribeEdgeDeploymentPlan::max_results) / [`set_max_results(i32)`](crate::client::fluent_builders::DescribeEdgeDeploymentPlan::set_max_results): <p>The maximum number of results to select (50 by default).</p>
+    /// - On success, responds with [`DescribeEdgeDeploymentPlanOutput`](crate::output::DescribeEdgeDeploymentPlanOutput) with field(s):
+    ///   - [`edge_deployment_plan_arn(Option<String>)`](crate::output::DescribeEdgeDeploymentPlanOutput::edge_deployment_plan_arn): <p>The ARN of edge deployment plan.</p>
+    ///   - [`edge_deployment_plan_name(Option<String>)`](crate::output::DescribeEdgeDeploymentPlanOutput::edge_deployment_plan_name): <p>The name of the edge deployment plan.</p>
+    ///   - [`model_configs(Option<Vec<EdgeDeploymentModelConfig>>)`](crate::output::DescribeEdgeDeploymentPlanOutput::model_configs): <p>List of models associated with the edge deployment plan.</p>
+    ///   - [`device_fleet_name(Option<String>)`](crate::output::DescribeEdgeDeploymentPlanOutput::device_fleet_name): <p>The device fleet used for this edge deployment plan.</p>
+    ///   - [`edge_deployment_success(i32)`](crate::output::DescribeEdgeDeploymentPlanOutput::edge_deployment_success): <p>The number of edge devices with the successful deployment.</p>
+    ///   - [`edge_deployment_pending(i32)`](crate::output::DescribeEdgeDeploymentPlanOutput::edge_deployment_pending): <p>The number of edge devices yet to pick up deployment, or in progress.</p>
+    ///   - [`edge_deployment_failed(i32)`](crate::output::DescribeEdgeDeploymentPlanOutput::edge_deployment_failed): <p>The number of edge devices that failed the deployment.</p>
+    ///   - [`stages(Option<Vec<DeploymentStageStatusSummary>>)`](crate::output::DescribeEdgeDeploymentPlanOutput::stages): <p>List of stages in the edge deployment plan.</p>
+    ///   - [`next_token(Option<String>)`](crate::output::DescribeEdgeDeploymentPlanOutput::next_token): <p>Token to use when calling the next set of stages in the edge deployment plan.</p>
+    ///   - [`creation_time(Option<DateTime>)`](crate::output::DescribeEdgeDeploymentPlanOutput::creation_time): <p>The time when the edge deployment plan was created.</p>
+    ///   - [`last_modified_time(Option<DateTime>)`](crate::output::DescribeEdgeDeploymentPlanOutput::last_modified_time): <p>The time when the edge deployment plan was last updated.</p>
+    /// - On failure, responds with [`SdkError<DescribeEdgeDeploymentPlanError>`](crate::error::DescribeEdgeDeploymentPlanError)
+    pub fn describe_edge_deployment_plan(&self) -> fluent_builders::DescribeEdgeDeploymentPlan {
+        fluent_builders::DescribeEdgeDeploymentPlan::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`DescribeEdgePackagingJob`](crate::client::fluent_builders::DescribeEdgePackagingJob) operation.
     ///
     /// - The fluent builder is configurable:
@@ -1634,7 +1704,7 @@ impl Client {
     ///   - [`endpoint_arn(Option<String>)`](crate::output::DescribeEndpointOutput::endpoint_arn): <p>The Amazon Resource Name (ARN) of the endpoint.</p>
     ///   - [`endpoint_config_name(Option<String>)`](crate::output::DescribeEndpointOutput::endpoint_config_name): <p>The name of the endpoint configuration associated with this endpoint.</p>
     ///   - [`production_variants(Option<Vec<ProductionVariantSummary>>)`](crate::output::DescribeEndpointOutput::production_variants): <p> An array of <code>ProductionVariantSummary</code> objects, one for each model hosted behind this endpoint. </p>
-    ///   - [`data_capture_config(Option<DataCaptureConfigSummary>)`](crate::output::DescribeEndpointOutput::data_capture_config): <p></p>
+    ///   - [`data_capture_config(Option<DataCaptureConfigSummary>)`](crate::output::DescribeEndpointOutput::data_capture_config): <p>The currently active data capture configuration used by your Endpoint.</p>
     ///   - [`endpoint_status(Option<EndpointStatus>)`](crate::output::DescribeEndpointOutput::endpoint_status): <p>The status of the endpoint.</p>  <ul>   <li> <p> <code>OutOfService</code>: Endpoint is not available to take incoming requests.</p> </li>   <li> <p> <code>Creating</code>: <code>CreateEndpoint</code> is executing.</p> </li>   <li> <p> <code>Updating</code>: <code>UpdateEndpoint</code> or <code>UpdateEndpointWeightsAndCapacities</code> is executing.</p> </li>   <li> <p> <code>SystemUpdating</code>: Endpoint is undergoing maintenance and cannot be updated or deleted or re-scaled until it has completed. This maintenance operation does not change any customer-specified values such as VPC config, KMS encryption, model, instance type, or instance count.</p> </li>   <li> <p> <code>RollingBack</code>: Endpoint fails to scale up or down or change its variant weight and is in the process of rolling back to its previous configuration. Once the rollback completes, endpoint returns to an <code>InService</code> status. This transitional status only applies to an endpoint that has autoscaling enabled and is undergoing variant weight or capacity changes as part of an <code>UpdateEndpointWeightsAndCapacities</code> call or when the <code>UpdateEndpointWeightsAndCapacities</code> operation is called explicitly.</p> </li>   <li> <p> <code>InService</code>: Endpoint is available to process incoming requests.</p> </li>   <li> <p> <code>Deleting</code>: <code>DeleteEndpoint</code> is executing.</p> </li>   <li> <p> <code>Failed</code>: Endpoint could not be created, updated, or re-scaled. Use <code>DescribeEndpointOutput$FailureReason</code> for information about the failure. <code>DeleteEndpoint</code> is the only operation that can be performed on a failed endpoint.</p> </li>  </ul>
     ///   - [`failure_reason(Option<String>)`](crate::output::DescribeEndpointOutput::failure_reason): <p>If the status of the endpoint is <code>Failed</code>, the reason why it failed. </p>
     ///   - [`creation_time(Option<DateTime>)`](crate::output::DescribeEndpointOutput::creation_time): <p>A timestamp that shows when the endpoint was created.</p>
@@ -1654,7 +1724,7 @@ impl Client {
     ///   - [`endpoint_config_name(Option<String>)`](crate::output::DescribeEndpointConfigOutput::endpoint_config_name): <p>Name of the SageMaker endpoint configuration.</p>
     ///   - [`endpoint_config_arn(Option<String>)`](crate::output::DescribeEndpointConfigOutput::endpoint_config_arn): <p>The Amazon Resource Name (ARN) of the endpoint configuration.</p>
     ///   - [`production_variants(Option<Vec<ProductionVariant>>)`](crate::output::DescribeEndpointConfigOutput::production_variants): <p>An array of <code>ProductionVariant</code> objects, one for each model that you want to host at this endpoint.</p>
-    ///   - [`data_capture_config(Option<DataCaptureConfig>)`](crate::output::DescribeEndpointConfigOutput::data_capture_config): <p></p>
+    ///   - [`data_capture_config(Option<DataCaptureConfig>)`](crate::output::DescribeEndpointConfigOutput::data_capture_config): <p>Configuration to control how SageMaker captures inference data.</p>
     ///   - [`kms_key_id(Option<String>)`](crate::output::DescribeEndpointConfigOutput::kms_key_id): <p>Amazon Web Services KMS key ID Amazon SageMaker uses to encrypt data when storing it on the ML storage volume attached to the instance.</p>
     ///   - [`creation_time(Option<DateTime>)`](crate::output::DescribeEndpointConfigOutput::creation_time): <p>A timestamp that shows when the endpoint configuration was created.</p>
     ///   - [`async_inference_config(Option<AsyncInferenceConfig>)`](crate::output::DescribeEndpointConfigOutput::async_inference_config): <p>Returns the description of an endpoint configuration created using the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html"> <code>CreateEndpointConfig</code> </a> API.</p>
@@ -1692,17 +1762,38 @@ impl Client {
     ///   - [`event_time_feature_name(Option<String>)`](crate::output::DescribeFeatureGroupOutput::event_time_feature_name): <p>The name of the feature that stores the <code>EventTime</code> of a Record in a <code>FeatureGroup</code>.</p>  <p> An <code>EventTime</code> is a point in time when a new event occurs that corresponds to the creation or update of a <code>Record</code> in a <code>FeatureGroup</code>. All <code>Records</code> in the <code>FeatureGroup</code> have a corresponding <code>EventTime</code>.</p>
     ///   - [`feature_definitions(Option<Vec<FeatureDefinition>>)`](crate::output::DescribeFeatureGroupOutput::feature_definitions): <p>A list of the <code>Features</code> in the <code>FeatureGroup</code>. Each feature is defined by a <code>FeatureName</code> and <code>FeatureType</code>.</p>
     ///   - [`creation_time(Option<DateTime>)`](crate::output::DescribeFeatureGroupOutput::creation_time): <p>A timestamp indicating when SageMaker created the <code>FeatureGroup</code>.</p>
+    ///   - [`last_modified_time(Option<DateTime>)`](crate::output::DescribeFeatureGroupOutput::last_modified_time): <p>A timestamp indicating when the feature group was last updated.</p>
     ///   - [`online_store_config(Option<OnlineStoreConfig>)`](crate::output::DescribeFeatureGroupOutput::online_store_config): <p>The configuration for the <code>OnlineStore</code>.</p>
     ///   - [`offline_store_config(Option<OfflineStoreConfig>)`](crate::output::DescribeFeatureGroupOutput::offline_store_config): <p>The configuration of the <code>OfflineStore</code>, inducing the S3 location of the <code>OfflineStore</code>, Amazon Web Services Glue or Amazon Web Services Hive data catalogue configurations, and the security configuration.</p>
     ///   - [`role_arn(Option<String>)`](crate::output::DescribeFeatureGroupOutput::role_arn): <p>The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the <code>OfflineStore</code> if an <code>OfflineStoreConfig</code> is provided.</p>
     ///   - [`feature_group_status(Option<FeatureGroupStatus>)`](crate::output::DescribeFeatureGroupOutput::feature_group_status): <p>The status of the feature group.</p>
     ///   - [`offline_store_status(Option<OfflineStoreStatus>)`](crate::output::DescribeFeatureGroupOutput::offline_store_status): <p>The status of the <code>OfflineStore</code>. Notifies you if replicating data into the <code>OfflineStore</code> has failed. Returns either: <code>Active</code> or <code>Blocked</code> </p>
+    ///   - [`last_update_status(Option<LastUpdateStatus>)`](crate::output::DescribeFeatureGroupOutput::last_update_status): <p>A value indicating whether the update made to the feature group was successful.</p>
     ///   - [`failure_reason(Option<String>)`](crate::output::DescribeFeatureGroupOutput::failure_reason): <p>The reason that the <code>FeatureGroup</code> failed to be replicated in the <code>OfflineStore</code>. This is failure can occur because:</p>  <ul>   <li> <p>The <code>FeatureGroup</code> could not be created in the <code>OfflineStore</code>.</p> </li>   <li> <p>The <code>FeatureGroup</code> could not be deleted from the <code>OfflineStore</code>.</p> </li>  </ul>
     ///   - [`description(Option<String>)`](crate::output::DescribeFeatureGroupOutput::description): <p>A free form description of the feature group.</p>
     ///   - [`next_token(Option<String>)`](crate::output::DescribeFeatureGroupOutput::next_token): <p>A token to resume pagination of the list of <code>Features</code> (<code>FeatureDefinitions</code>).</p>
+    ///   - [`online_store_total_size_bytes(Option<i64>)`](crate::output::DescribeFeatureGroupOutput::online_store_total_size_bytes): <p>The size of the <code>OnlineStore</code> in bytes.</p>
     /// - On failure, responds with [`SdkError<DescribeFeatureGroupError>`](crate::error::DescribeFeatureGroupError)
     pub fn describe_feature_group(&self) -> fluent_builders::DescribeFeatureGroup {
         fluent_builders::DescribeFeatureGroup::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`DescribeFeatureMetadata`](crate::client::fluent_builders::DescribeFeatureMetadata) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`feature_group_name(impl Into<String>)`](crate::client::fluent_builders::DescribeFeatureMetadata::feature_group_name) / [`set_feature_group_name(Option<String>)`](crate::client::fluent_builders::DescribeFeatureMetadata::set_feature_group_name): <p>The name of the feature group containing the feature.</p>
+    ///   - [`feature_name(impl Into<String>)`](crate::client::fluent_builders::DescribeFeatureMetadata::feature_name) / [`set_feature_name(Option<String>)`](crate::client::fluent_builders::DescribeFeatureMetadata::set_feature_name): <p>The name of the feature.</p>
+    /// - On success, responds with [`DescribeFeatureMetadataOutput`](crate::output::DescribeFeatureMetadataOutput) with field(s):
+    ///   - [`feature_group_arn(Option<String>)`](crate::output::DescribeFeatureMetadataOutput::feature_group_arn): <p>The Amazon Resource Number (ARN) of the feature group that contains the feature.</p>
+    ///   - [`feature_group_name(Option<String>)`](crate::output::DescribeFeatureMetadataOutput::feature_group_name): <p>The name of the feature group that you've specified.</p>
+    ///   - [`feature_name(Option<String>)`](crate::output::DescribeFeatureMetadataOutput::feature_name): <p>The name of the feature that you've specified.</p>
+    ///   - [`feature_type(Option<FeatureType>)`](crate::output::DescribeFeatureMetadataOutput::feature_type): <p>The data type of the feature.</p>
+    ///   - [`creation_time(Option<DateTime>)`](crate::output::DescribeFeatureMetadataOutput::creation_time): <p>A timestamp indicating when the feature was created.</p>
+    ///   - [`last_modified_time(Option<DateTime>)`](crate::output::DescribeFeatureMetadataOutput::last_modified_time): <p>A timestamp indicating when the metadata for the feature group was modified. For example, if you add a parameter describing the feature, the timestamp changes to reflect the last time you </p>
+    ///   - [`description(Option<String>)`](crate::output::DescribeFeatureMetadataOutput::description): <p>The description you added to describe the feature.</p>
+    ///   - [`parameters(Option<Vec<FeatureParameter>>)`](crate::output::DescribeFeatureMetadataOutput::parameters): <p>The key-value pairs that you added to describe the feature.</p>
+    /// - On failure, responds with [`SdkError<DescribeFeatureMetadataError>`](crate::error::DescribeFeatureMetadataError)
+    pub fn describe_feature_metadata(&self) -> fluent_builders::DescribeFeatureMetadata {
+        fluent_builders::DescribeFeatureMetadata::new(self.handle.clone())
     }
     /// Constructs a fluent builder for the [`DescribeFlowDefinition`](crate::client::fluent_builders::DescribeFlowDefinition) operation.
     ///
@@ -2046,6 +2137,7 @@ impl Client {
     ///   - [`additional_code_repositories(Option<Vec<String>>)`](crate::output::DescribeNotebookInstanceOutput::additional_code_repositories): <p>An array of up to three Git repositories associated with the notebook instance. These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in <a href="https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html">Amazon Web Services CodeCommit</a> or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html">Associating Git Repositories with SageMaker Notebook Instances</a>.</p>
     ///   - [`root_access(Option<RootAccess>)`](crate::output::DescribeNotebookInstanceOutput::root_access): <p>Whether root access is enabled or disabled for users of the notebook instance.</p> <note>   <p>Lifecycle configurations need root access to be able to set up a notebook instance. Because of this, lifecycle configurations associated with a notebook instance always run with root access even if you disable root access for users.</p>  </note>
     ///   - [`platform_identifier(Option<String>)`](crate::output::DescribeNotebookInstanceOutput::platform_identifier): <p>The platform identifier of the notebook instance runtime environment.</p>
+    ///   - [`instance_metadata_service_configuration(Option<InstanceMetadataServiceConfiguration>)`](crate::output::DescribeNotebookInstanceOutput::instance_metadata_service_configuration): <p>Information on the IMDS configuration of the notebook instance</p>
     /// - On failure, responds with [`SdkError<DescribeNotebookInstanceError>`](crate::error::DescribeNotebookInstanceError)
     pub fn describe_notebook_instance(&self) -> fluent_builders::DescribeNotebookInstance {
         fluent_builders::DescribeNotebookInstance::new(self.handle.clone())
@@ -2745,6 +2837,27 @@ impl Client {
     pub fn list_domains(&self) -> fluent_builders::ListDomains {
         fluent_builders::ListDomains::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`ListEdgeDeploymentPlans`](crate::client::fluent_builders::ListEdgeDeploymentPlans) operation.
+    /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::ListEdgeDeploymentPlans::into_paginator).
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::set_next_token): <p>The response from the last list when returning a list large enough to need tokening.</p>
+    ///   - [`max_results(i32)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::set_max_results): <p>The maximum number of results to select (50 by default).</p>
+    ///   - [`creation_time_after(DateTime)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::creation_time_after) / [`set_creation_time_after(Option<DateTime>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::set_creation_time_after): <p>Selects edge deployment plans created after this time.</p>
+    ///   - [`creation_time_before(DateTime)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::creation_time_before) / [`set_creation_time_before(Option<DateTime>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::set_creation_time_before): <p>Selects edge deployment plans created before this time.</p>
+    ///   - [`last_modified_time_after(DateTime)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::last_modified_time_after) / [`set_last_modified_time_after(Option<DateTime>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::set_last_modified_time_after): <p>Selects edge deployment plans that were last updated after this time.</p>
+    ///   - [`last_modified_time_before(DateTime)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::last_modified_time_before) / [`set_last_modified_time_before(Option<DateTime>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::set_last_modified_time_before): <p>Selects edge deployment plans that were last updated before this time.</p>
+    ///   - [`name_contains(impl Into<String>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::name_contains) / [`set_name_contains(Option<String>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::set_name_contains): <p>Selects edge deployment plans with names containing this name.</p>
+    ///   - [`device_fleet_name_contains(impl Into<String>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::device_fleet_name_contains) / [`set_device_fleet_name_contains(Option<String>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::set_device_fleet_name_contains): <p>Selects edge deployment plans with a device fleet name containing this name.</p>
+    ///   - [`sort_by(ListEdgeDeploymentPlansSortBy)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::sort_by) / [`set_sort_by(Option<ListEdgeDeploymentPlansSortBy>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::set_sort_by): <p>The column by which to sort the edge deployment plans. Can be one of <code>NAME</code>, <code>DEVICEFLEETNAME</code>, <code>CREATIONTIME</code>, <code>LASTMODIFIEDTIME</code>.</p>
+    ///   - [`sort_order(SortOrder)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::sort_order) / [`set_sort_order(Option<SortOrder>)`](crate::client::fluent_builders::ListEdgeDeploymentPlans::set_sort_order): <p>The direction of the sorting (ascending or descending).</p>
+    /// - On success, responds with [`ListEdgeDeploymentPlansOutput`](crate::output::ListEdgeDeploymentPlansOutput) with field(s):
+    ///   - [`edge_deployment_plan_summaries(Option<Vec<EdgeDeploymentPlanSummary>>)`](crate::output::ListEdgeDeploymentPlansOutput::edge_deployment_plan_summaries): <p>List of summaries of edge deployment plans.</p>
+    ///   - [`next_token(Option<String>)`](crate::output::ListEdgeDeploymentPlansOutput::next_token): <p>The token to use when calling the next page of results.</p>
+    /// - On failure, responds with [`SdkError<ListEdgeDeploymentPlansError>`](crate::error::ListEdgeDeploymentPlansError)
+    pub fn list_edge_deployment_plans(&self) -> fluent_builders::ListEdgeDeploymentPlans {
+        fluent_builders::ListEdgeDeploymentPlans::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`ListEdgePackagingJobs`](crate::client::fluent_builders::ListEdgePackagingJobs) operation.
     /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::ListEdgePackagingJobs::into_paginator).
     ///
@@ -3351,6 +3464,22 @@ impl Client {
     pub fn list_projects(&self) -> fluent_builders::ListProjects {
         fluent_builders::ListProjects::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`ListStageDevices`](crate::client::fluent_builders::ListStageDevices) operation.
+    /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::ListStageDevices::into_paginator).
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::ListStageDevices::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::ListStageDevices::set_next_token): <p>The response from the last list when returning a list large enough to neeed tokening.</p>
+    ///   - [`max_results(i32)`](crate::client::fluent_builders::ListStageDevices::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::ListStageDevices::set_max_results): <p>The maximum number of requests to select.</p>
+    ///   - [`edge_deployment_plan_name(impl Into<String>)`](crate::client::fluent_builders::ListStageDevices::edge_deployment_plan_name) / [`set_edge_deployment_plan_name(Option<String>)`](crate::client::fluent_builders::ListStageDevices::set_edge_deployment_plan_name): <p>The name of the edge deployment plan.</p>
+    ///   - [`exclude_devices_deployed_in_other_stage(bool)`](crate::client::fluent_builders::ListStageDevices::exclude_devices_deployed_in_other_stage) / [`set_exclude_devices_deployed_in_other_stage(bool)`](crate::client::fluent_builders::ListStageDevices::set_exclude_devices_deployed_in_other_stage): <p>Toggle for excluding devices deployed in other stages.</p>
+    ///   - [`stage_name(impl Into<String>)`](crate::client::fluent_builders::ListStageDevices::stage_name) / [`set_stage_name(Option<String>)`](crate::client::fluent_builders::ListStageDevices::set_stage_name): <p>The name of the stage in the deployment.</p>
+    /// - On success, responds with [`ListStageDevicesOutput`](crate::output::ListStageDevicesOutput) with field(s):
+    ///   - [`device_deployment_summaries(Option<Vec<DeviceDeploymentSummary>>)`](crate::output::ListStageDevicesOutput::device_deployment_summaries): <p>List of summaries of devices allocated to the stage.</p>
+    ///   - [`next_token(Option<String>)`](crate::output::ListStageDevicesOutput::next_token): <p>The token to use when calling the next page of results.</p>
+    /// - On failure, responds with [`SdkError<ListStageDevicesError>`](crate::error::ListStageDevicesError)
+    pub fn list_stage_devices(&self) -> fluent_builders::ListStageDevices {
+        fluent_builders::ListStageDevices::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`ListStudioLifecycleConfigs`](crate::client::fluent_builders::ListStudioLifecycleConfigs) operation.
     /// This operation supports pagination; See [`into_paginator()`](crate::client::fluent_builders::ListStudioLifecycleConfigs::into_paginator).
     ///
@@ -3662,6 +3791,17 @@ impl Client {
     ) -> fluent_builders::SendPipelineExecutionStepSuccess {
         fluent_builders::SendPipelineExecutionStepSuccess::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`StartEdgeDeploymentStage`](crate::client::fluent_builders::StartEdgeDeploymentStage) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`edge_deployment_plan_name(impl Into<String>)`](crate::client::fluent_builders::StartEdgeDeploymentStage::edge_deployment_plan_name) / [`set_edge_deployment_plan_name(Option<String>)`](crate::client::fluent_builders::StartEdgeDeploymentStage::set_edge_deployment_plan_name): <p>The name of the edge deployment plan to start.</p>
+    ///   - [`stage_name(impl Into<String>)`](crate::client::fluent_builders::StartEdgeDeploymentStage::stage_name) / [`set_stage_name(Option<String>)`](crate::client::fluent_builders::StartEdgeDeploymentStage::set_stage_name): <p>The name of the stage to start.</p>
+    /// - On success, responds with [`StartEdgeDeploymentStageOutput`](crate::output::StartEdgeDeploymentStageOutput)
+
+    /// - On failure, responds with [`SdkError<StartEdgeDeploymentStageError>`](crate::error::StartEdgeDeploymentStageError)
+    pub fn start_edge_deployment_stage(&self) -> fluent_builders::StartEdgeDeploymentStage {
+        fluent_builders::StartEdgeDeploymentStage::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`StartMonitoringSchedule`](crate::client::fluent_builders::StartMonitoringSchedule) operation.
     ///
     /// - The fluent builder is configurable:
@@ -3716,6 +3856,17 @@ impl Client {
     /// - On failure, responds with [`SdkError<StopCompilationJobError>`](crate::error::StopCompilationJobError)
     pub fn stop_compilation_job(&self) -> fluent_builders::StopCompilationJob {
         fluent_builders::StopCompilationJob::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`StopEdgeDeploymentStage`](crate::client::fluent_builders::StopEdgeDeploymentStage) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`edge_deployment_plan_name(impl Into<String>)`](crate::client::fluent_builders::StopEdgeDeploymentStage::edge_deployment_plan_name) / [`set_edge_deployment_plan_name(Option<String>)`](crate::client::fluent_builders::StopEdgeDeploymentStage::set_edge_deployment_plan_name): <p>The name of the edge deployment plan to stop.</p>
+    ///   - [`stage_name(impl Into<String>)`](crate::client::fluent_builders::StopEdgeDeploymentStage::stage_name) / [`set_stage_name(Option<String>)`](crate::client::fluent_builders::StopEdgeDeploymentStage::set_stage_name): <p>The name of the stage to stop.</p>
+    /// - On success, responds with [`StopEdgeDeploymentStageOutput`](crate::output::StopEdgeDeploymentStageOutput)
+
+    /// - On failure, responds with [`SdkError<StopEdgeDeploymentStageError>`](crate::error::StopEdgeDeploymentStageError)
+    pub fn stop_edge_deployment_stage(&self) -> fluent_builders::StopEdgeDeploymentStage {
+        fluent_builders::StopEdgeDeploymentStage::new(self.handle.clone())
     }
     /// Constructs a fluent builder for the [`StopEdgePackagingJob`](crate::client::fluent_builders::StopEdgePackagingJob) operation.
     ///
@@ -3959,6 +4110,31 @@ impl Client {
     pub fn update_experiment(&self) -> fluent_builders::UpdateExperiment {
         fluent_builders::UpdateExperiment::new(self.handle.clone())
     }
+    /// Constructs a fluent builder for the [`UpdateFeatureGroup`](crate::client::fluent_builders::UpdateFeatureGroup) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`feature_group_name(impl Into<String>)`](crate::client::fluent_builders::UpdateFeatureGroup::feature_group_name) / [`set_feature_group_name(Option<String>)`](crate::client::fluent_builders::UpdateFeatureGroup::set_feature_group_name): <p>The name of the feature group that you're updating.</p>
+    ///   - [`feature_additions(Vec<FeatureDefinition>)`](crate::client::fluent_builders::UpdateFeatureGroup::feature_additions) / [`set_feature_additions(Option<Vec<FeatureDefinition>>)`](crate::client::fluent_builders::UpdateFeatureGroup::set_feature_additions): <p>A list of the features that you're adding to the feature group.</p>
+    /// - On success, responds with [`UpdateFeatureGroupOutput`](crate::output::UpdateFeatureGroupOutput) with field(s):
+    ///   - [`feature_group_arn(Option<String>)`](crate::output::UpdateFeatureGroupOutput::feature_group_arn): <p>The Amazon Resource Number (ARN) of the feature group that you're updating.</p>
+    /// - On failure, responds with [`SdkError<UpdateFeatureGroupError>`](crate::error::UpdateFeatureGroupError)
+    pub fn update_feature_group(&self) -> fluent_builders::UpdateFeatureGroup {
+        fluent_builders::UpdateFeatureGroup::new(self.handle.clone())
+    }
+    /// Constructs a fluent builder for the [`UpdateFeatureMetadata`](crate::client::fluent_builders::UpdateFeatureMetadata) operation.
+    ///
+    /// - The fluent builder is configurable:
+    ///   - [`feature_group_name(impl Into<String>)`](crate::client::fluent_builders::UpdateFeatureMetadata::feature_group_name) / [`set_feature_group_name(Option<String>)`](crate::client::fluent_builders::UpdateFeatureMetadata::set_feature_group_name): <p>The name of the feature group containing the feature that you're updating.</p>
+    ///   - [`feature_name(impl Into<String>)`](crate::client::fluent_builders::UpdateFeatureMetadata::feature_name) / [`set_feature_name(Option<String>)`](crate::client::fluent_builders::UpdateFeatureMetadata::set_feature_name): <p>The name of the feature that you're updating.</p>
+    ///   - [`description(impl Into<String>)`](crate::client::fluent_builders::UpdateFeatureMetadata::description) / [`set_description(Option<String>)`](crate::client::fluent_builders::UpdateFeatureMetadata::set_description): <p>A description that you can write to better describe the feature.</p>
+    ///   - [`parameter_additions(Vec<FeatureParameter>)`](crate::client::fluent_builders::UpdateFeatureMetadata::parameter_additions) / [`set_parameter_additions(Option<Vec<FeatureParameter>>)`](crate::client::fluent_builders::UpdateFeatureMetadata::set_parameter_additions): <p>A list of key-value pairs that you can add to better describe the feature.</p>
+    ///   - [`parameter_removals(Vec<String>)`](crate::client::fluent_builders::UpdateFeatureMetadata::parameter_removals) / [`set_parameter_removals(Option<Vec<String>>)`](crate::client::fluent_builders::UpdateFeatureMetadata::set_parameter_removals): <p>A list of parameter keys that you can specify to remove parameters that describe your feature.</p>
+    /// - On success, responds with [`UpdateFeatureMetadataOutput`](crate::output::UpdateFeatureMetadataOutput)
+
+    /// - On failure, responds with [`SdkError<UpdateFeatureMetadataError>`](crate::error::UpdateFeatureMetadataError)
+    pub fn update_feature_metadata(&self) -> fluent_builders::UpdateFeatureMetadata {
+        fluent_builders::UpdateFeatureMetadata::new(self.handle.clone())
+    }
     /// Constructs a fluent builder for the [`UpdateImage`](crate::client::fluent_builders::UpdateImage) operation.
     ///
     /// - The fluent builder is configurable:
@@ -4015,6 +4191,7 @@ impl Client {
     ///   - [`disassociate_default_code_repository(bool)`](crate::client::fluent_builders::UpdateNotebookInstance::disassociate_default_code_repository) / [`set_disassociate_default_code_repository(bool)`](crate::client::fluent_builders::UpdateNotebookInstance::set_disassociate_default_code_repository): <p>The name or URL of the default Git repository to remove from this notebook instance. This operation is idempotent. If you specify a Git repository that is not associated with the notebook instance when you call this method, it does not throw an error.</p>
     ///   - [`disassociate_additional_code_repositories(bool)`](crate::client::fluent_builders::UpdateNotebookInstance::disassociate_additional_code_repositories) / [`set_disassociate_additional_code_repositories(bool)`](crate::client::fluent_builders::UpdateNotebookInstance::set_disassociate_additional_code_repositories): <p>A list of names or URLs of the default Git repositories to remove from this notebook instance. This operation is idempotent. If you specify a Git repository that is not associated with the notebook instance when you call this method, it does not throw an error.</p>
     ///   - [`root_access(RootAccess)`](crate::client::fluent_builders::UpdateNotebookInstance::root_access) / [`set_root_access(Option<RootAccess>)`](crate::client::fluent_builders::UpdateNotebookInstance::set_root_access): <p>Whether root access is enabled or disabled for users of the notebook instance. The default value is <code>Enabled</code>.</p> <note>   <p>If you set this to <code>Disabled</code>, users don't have root access on the notebook instance, but lifecycle configuration scripts still run with root permissions.</p>  </note>
+    ///   - [`instance_metadata_service_configuration(InstanceMetadataServiceConfiguration)`](crate::client::fluent_builders::UpdateNotebookInstance::instance_metadata_service_configuration) / [`set_instance_metadata_service_configuration(Option<InstanceMetadataServiceConfiguration>)`](crate::client::fluent_builders::UpdateNotebookInstance::set_instance_metadata_service_configuration): <p>Information on the IMDS configuration of the notebook instance</p>
     /// - On success, responds with [`UpdateNotebookInstanceOutput`](crate::output::UpdateNotebookInstanceOutput)
 
     /// - On failure, responds with [`SdkError<UpdateNotebookInstanceError>`](crate::error::UpdateNotebookInstanceError)
@@ -4138,6 +4315,7 @@ impl Client {
     ///   - [`workforce_name(impl Into<String>)`](crate::client::fluent_builders::UpdateWorkforce::workforce_name) / [`set_workforce_name(Option<String>)`](crate::client::fluent_builders::UpdateWorkforce::set_workforce_name): <p>The name of the private workforce that you want to update. You can find your workforce name by using the operation.</p>
     ///   - [`source_ip_config(SourceIpConfig)`](crate::client::fluent_builders::UpdateWorkforce::source_ip_config) / [`set_source_ip_config(Option<SourceIpConfig>)`](crate::client::fluent_builders::UpdateWorkforce::set_source_ip_config): <p>A list of one to ten worker IP address ranges (<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>) that can be used to access tasks assigned to this workforce.</p>  <p>Maximum: Ten CIDR values</p>
     ///   - [`oidc_config(OidcConfig)`](crate::client::fluent_builders::UpdateWorkforce::oidc_config) / [`set_oidc_config(Option<OidcConfig>)`](crate::client::fluent_builders::UpdateWorkforce::set_oidc_config): <p>Use this parameter to update your OIDC Identity Provider (IdP) configuration for a workforce made using your own IdP.</p>
+    ///   - [`workforce_vpc_config(WorkforceVpcConfigRequest)`](crate::client::fluent_builders::UpdateWorkforce::workforce_vpc_config) / [`set_workforce_vpc_config(Option<WorkforceVpcConfigRequest>)`](crate::client::fluent_builders::UpdateWorkforce::set_workforce_vpc_config): <p>Use this parameter to update your VPC configuration for a workforce.</p>
     /// - On success, responds with [`UpdateWorkforceOutput`](crate::output::UpdateWorkforceOutput) with field(s):
     ///   - [`workforce(Option<Workforce>)`](crate::output::UpdateWorkforceOutput::workforce): <p>A single private workforce. You can create one private work force in each Amazon Web Services Region. By default, any workforce-related API operation used in a specific region will apply to the workforce created in that region. To learn how to create a private workforce, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-workforce-create-private.html">Create a Private Workforce</a>.</p>
     /// - On failure, responds with [`SdkError<UpdateWorkforceError>`](crate::error::UpdateWorkforceError)
@@ -4159,13 +4337,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `AddAssociation`.
     ///
     /// <p>Creates an <i>association</i> between the source and the destination. A source can be associated with multiple destinations, and a destination can be associated with multiple sources. An association is a lineage tracking entity. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage Tracking</a>.</p>
@@ -4884,12 +5061,16 @@ pub mod fluent_builders {
             self.inner = self.inner.set_tags(input);
             self
         }
-        /// <p>The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.</p>
+        /// <p>The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.</p> <note>
+        /// <p>The value of <code>InstanceType</code> passed as part of the <code>ResourceSpec</code> in the <code>CreateApp</code> call overrides the value passed as part of the <code>ResourceSpec</code> configured for the user profile or the domain. If <code>InstanceType</code> is not specified in any of those three <code>ResourceSpec</code> values for a <code>KernelGateway</code> app, the <code>CreateApp</code> call fails with a request validation error.</p>
+        /// </note>
         pub fn resource_spec(mut self, input: crate::model::ResourceSpec) -> Self {
             self.inner = self.inner.resource_spec(input);
             self
         }
-        /// <p>The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.</p>
+        /// <p>The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.</p> <note>
+        /// <p>The value of <code>InstanceType</code> passed as part of the <code>ResourceSpec</code> in the <code>CreateApp</code> call overrides the value passed as part of the <code>ResourceSpec</code> configured for the user profile or the domain. If <code>InstanceType</code> is not specified in any of those three <code>ResourceSpec</code> values for a <code>KernelGateway</code> app, the <code>CreateApp</code> call fails with a request validation error.</p>
+        /// </note>
         pub fn set_resource_spec(
             mut self,
             input: std::option::Option<crate::model::ResourceSpec>,
@@ -5183,12 +5364,12 @@ pub mod fluent_builders {
         ///
         /// To override the contents of this collection use [`set_input_data_config`](Self::set_input_data_config).
         ///
-        /// <p>An array of channel objects that describes the input data and its location. Each channel is a named input source. Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV. Minimum of 500 rows.</p>
+        /// <p>An array of channel objects that describes the input data and its location. Each channel is a named input source. Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is not a minimum number of rows required for the validation dataset.</p>
         pub fn input_data_config(mut self, input: crate::model::AutoMlChannel) -> Self {
             self.inner = self.inner.input_data_config(input);
             self
         }
-        /// <p>An array of channel objects that describes the input data and its location. Each channel is a named input source. Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV. Minimum of 500 rows.</p>
+        /// <p>An array of channel objects that describes the input data and its location. Each channel is a named input source. Similar to <code>InputDataConfig</code> supported by . Format(s) supported: CSV, Parquet. A minimum of 500 rows is required for the training dataset. There is not a minimum number of rows required for the validation dataset.</p>
         pub fn set_input_data_config(
             mut self,
             input: std::option::Option<std::vec::Vec<crate::model::AutoMlChannel>>,
@@ -5209,12 +5390,12 @@ pub mod fluent_builders {
             self.inner = self.inner.set_output_data_config(input);
             self
         }
-        /// <p>Defines the type of supervised learning available for the candidates. Options include: <code>BinaryClassification</code>, <code>MulticlassClassification</code>, and <code>Regression</code>. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html"> Amazon SageMaker Autopilot problem types and algorithm support</a>.</p>
+        /// <p>Defines the type of supervised learning available for the candidates. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html"> Amazon SageMaker Autopilot problem types and algorithm support</a>.</p>
         pub fn problem_type(mut self, input: crate::model::ProblemType) -> Self {
             self.inner = self.inner.problem_type(input);
             self
         }
-        /// <p>Defines the type of supervised learning available for the candidates. Options include: <code>BinaryClassification</code>, <code>MulticlassClassification</code>, and <code>Regression</code>. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html"> Amazon SageMaker Autopilot problem types and algorithm support</a>.</p>
+        /// <p>Defines the type of supervised learning available for the candidates. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development-problem-types.html"> Amazon SageMaker Autopilot problem types and algorithm support</a>.</p>
         pub fn set_problem_type(
             mut self,
             input: std::option::Option<crate::model::ProblemType>,
@@ -5235,12 +5416,12 @@ pub mod fluent_builders {
             self.inner = self.inner.set_auto_ml_job_objective(input);
             self
         }
-        /// <p>Contains <code>CompletionCriteria</code> and <code>SecurityConfig</code> settings for the AutoML job.</p>
+        /// <p>A collection of settings used to configure an AutoML job.</p>
         pub fn auto_ml_job_config(mut self, input: crate::model::AutoMlJobConfig) -> Self {
             self.inner = self.inner.auto_ml_job_config(input);
             self
         }
-        /// <p>Contains <code>CompletionCriteria</code> and <code>SecurityConfig</code> settings for the AutoML job.</p>
+        /// <p>A collection of settings used to configure an AutoML job.</p>
         pub fn set_auto_ml_job_config(
             mut self,
             input: std::option::Option<crate::model::AutoMlJobConfig>,
@@ -6208,6 +6389,199 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `CreateEdgeDeploymentPlan`.
+    ///
+    /// <p>Creates an edge deployment plan, consisting of multiple stages. Each stage may have a different deployment configuration and devices.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct CreateEdgeDeploymentPlan {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::create_edge_deployment_plan_input::Builder,
+    }
+    impl CreateEdgeDeploymentPlan {
+        /// Creates a new `CreateEdgeDeploymentPlan`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::CreateEdgeDeploymentPlanOutput,
+            aws_smithy_http::result::SdkError<crate::error::CreateEdgeDeploymentPlanError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The name of the edge deployment plan.</p>
+        pub fn edge_deployment_plan_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.edge_deployment_plan_name(input.into());
+            self
+        }
+        /// <p>The name of the edge deployment plan.</p>
+        pub fn set_edge_deployment_plan_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_edge_deployment_plan_name(input);
+            self
+        }
+        /// Appends an item to `ModelConfigs`.
+        ///
+        /// To override the contents of this collection use [`set_model_configs`](Self::set_model_configs).
+        ///
+        /// <p>List of models associated with the edge deployment plan.</p>
+        pub fn model_configs(mut self, input: crate::model::EdgeDeploymentModelConfig) -> Self {
+            self.inner = self.inner.model_configs(input);
+            self
+        }
+        /// <p>List of models associated with the edge deployment plan.</p>
+        pub fn set_model_configs(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::EdgeDeploymentModelConfig>>,
+        ) -> Self {
+            self.inner = self.inner.set_model_configs(input);
+            self
+        }
+        /// <p>The device fleet used for this edge deployment plan.</p>
+        pub fn device_fleet_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.device_fleet_name(input.into());
+            self
+        }
+        /// <p>The device fleet used for this edge deployment plan.</p>
+        pub fn set_device_fleet_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_device_fleet_name(input);
+            self
+        }
+        /// Appends an item to `Stages`.
+        ///
+        /// To override the contents of this collection use [`set_stages`](Self::set_stages).
+        ///
+        /// <p>List of stages of the edge deployment plan. The number of stages is limited to 10 per deployment.</p>
+        pub fn stages(mut self, input: crate::model::DeploymentStage) -> Self {
+            self.inner = self.inner.stages(input);
+            self
+        }
+        /// <p>List of stages of the edge deployment plan. The number of stages is limited to 10 per deployment.</p>
+        pub fn set_stages(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::DeploymentStage>>,
+        ) -> Self {
+            self.inner = self.inner.set_stages(input);
+            self
+        }
+        /// Appends an item to `Tags`.
+        ///
+        /// To override the contents of this collection use [`set_tags`](Self::set_tags).
+        ///
+        /// <p>List of tags with which to tag the edge deployment plan.</p>
+        pub fn tags(mut self, input: crate::model::Tag) -> Self {
+            self.inner = self.inner.tags(input);
+            self
+        }
+        /// <p>List of tags with which to tag the edge deployment plan.</p>
+        pub fn set_tags(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::Tag>>,
+        ) -> Self {
+            self.inner = self.inner.set_tags(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `CreateEdgeDeploymentStage`.
+    ///
+    /// <p>Creates a new stage in an existing edge deployment plan.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct CreateEdgeDeploymentStage {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::create_edge_deployment_stage_input::Builder,
+    }
+    impl CreateEdgeDeploymentStage {
+        /// Creates a new `CreateEdgeDeploymentStage`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::CreateEdgeDeploymentStageOutput,
+            aws_smithy_http::result::SdkError<crate::error::CreateEdgeDeploymentStageError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The name of the edge deployment plan.</p>
+        pub fn edge_deployment_plan_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.edge_deployment_plan_name(input.into());
+            self
+        }
+        /// <p>The name of the edge deployment plan.</p>
+        pub fn set_edge_deployment_plan_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_edge_deployment_plan_name(input);
+            self
+        }
+        /// Appends an item to `Stages`.
+        ///
+        /// To override the contents of this collection use [`set_stages`](Self::set_stages).
+        ///
+        /// <p>List of stages to be added to the edge deployment plan.</p>
+        pub fn stages(mut self, input: crate::model::DeploymentStage) -> Self {
+            self.inner = self.inner.stages(input);
+            self
+        }
+        /// <p>List of stages to be added to the edge deployment plan.</p>
+        pub fn set_stages(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::DeploymentStage>>,
+        ) -> Self {
+            self.inner = self.inner.set_stages(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `CreateEdgePackagingJob`.
     ///
     /// <p>Starts a SageMaker Edge Manager model packaging job. Edge Manager will use the model artifacts from the Amazon Simple Storage Service bucket that you specify. After the model has been packaged, Amazon SageMaker saves the resulting artifacts to an S3 bucket that you specify.</p>
@@ -6543,12 +6917,12 @@ pub mod fluent_builders {
             self.inner = self.inner.set_production_variants(input);
             self
         }
-        /// <p></p>
+        /// <p>Configuration to control how SageMaker captures inference data.</p>
         pub fn data_capture_config(mut self, input: crate::model::DataCaptureConfig) -> Self {
             self.inner = self.inner.data_capture_config(input);
             self
         }
-        /// <p></p>
+        /// <p>Configuration to control how SageMaker captures inference data.</p>
         pub fn set_data_capture_config(
             mut self,
             input: std::option::Option<crate::model::DataCaptureConfig>,
@@ -7927,7 +8301,7 @@ pub mod fluent_builders {
     /// <p>Creates a model in SageMaker. In the request, you name the model and describe a primary container. For the primary container, you specify the Docker image that contains inference code, artifacts (from prior training), and a custom environment map that the inference code uses when you deploy the model for predictions.</p>
     /// <p>Use this API to create a model if you want to use SageMaker hosting services or run a batch transform job.</p>
     /// <p>To host your model, you create an endpoint configuration with the <code>CreateEndpointConfig</code> API, and then create an endpoint with the <code>CreateEndpoint</code> API. SageMaker then deploys all of the containers that you defined for the model in the hosting environment. </p>
-    /// <p>For an example that calls this method when deploying a model to SageMaker hosting services, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy the Model to Amazon SageMaker Hosting Services (Amazon Web Services SDK for Python (Boto 3)).</a> </p>
+    /// <p>For an example that calls this method when deploying a model to SageMaker hosting services, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints-deployment.html#realtime-endpoints-deployment-create-model">Create a Model (Amazon Web Services SDK for Python (Boto 3)).</a> </p>
     /// <p>To run a batch transform using your model, you start a job with the <code>CreateTransformJob</code> API. SageMaker uses your model and your dataset to get inferences which are then saved to a specified S3 location.</p>
     /// <p>In the request, you also provide an IAM role that SageMaker can assume to access model artifacts and docker image for deployment on ML compute hosting instances or for batch transform jobs. In addition, you also use the IAM role to manage permissions the inference code needs. For example, if the inference code access any other Amazon Web Services resources, you grant necessary permissions via this role.</p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
@@ -8738,12 +9112,14 @@ pub mod fluent_builders {
             self.inner = self.inner.set_domain(input);
             self
         }
-        /// <p>The machine learning task your model package accomplishes. Common machine learning tasks include object detection and image classification.</p>
+        /// <p>The machine learning task your model package accomplishes. Common machine learning tasks include object detection and image classification. The following tasks are supported by Inference Recommender: <code>"IMAGE_CLASSIFICATION"</code> | <code>"OBJECT_DETECTION"</code> | <code>"TEXT_GENERATION"</code> |<code>"IMAGE_SEGMENTATION"</code> | <code>"FILL_MASK"</code> | <code>"CLASSIFICATION"</code> | <code>"REGRESSION"</code> | <code>"OTHER"</code>.</p>
+        /// <p>Specify "OTHER" if none of the tasks listed fit your use case.</p>
         pub fn task(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.task(input.into());
             self
         }
-        /// <p>The machine learning task your model package accomplishes. Common machine learning tasks include object detection and image classification.</p>
+        /// <p>The machine learning task your model package accomplishes. Common machine learning tasks include object detection and image classification. The following tasks are supported by Inference Recommender: <code>"IMAGE_CLASSIFICATION"</code> | <code>"OBJECT_DETECTION"</code> | <code>"TEXT_GENERATION"</code> |<code>"IMAGE_SEGMENTATION"</code> | <code>"FILL_MASK"</code> | <code>"CLASSIFICATION"</code> | <code>"REGRESSION"</code> | <code>"OTHER"</code>.</p>
+        /// <p>Specify "OTHER" if none of the tasks listed fit your use case.</p>
         pub fn set_task(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_task(input);
             self
@@ -9419,6 +9795,24 @@ pub mod fluent_builders {
             input: std::option::Option<std::string::String>,
         ) -> Self {
             self.inner = self.inner.set_platform_identifier(input);
+            self
+        }
+        /// <p>Information on the IMDS configuration of the notebook instance</p>
+        pub fn instance_metadata_service_configuration(
+            mut self,
+            input: crate::model::InstanceMetadataServiceConfiguration,
+        ) -> Self {
+            self.inner = self.inner.instance_metadata_service_configuration(input);
+            self
+        }
+        /// <p>Information on the IMDS configuration of the notebook instance</p>
+        pub fn set_instance_metadata_service_configuration(
+            mut self,
+            input: std::option::Option<crate::model::InstanceMetadataServiceConfiguration>,
+        ) -> Self {
+            self.inner = self
+                .inner
+                .set_instance_metadata_service_configuration(input);
             self
         }
     }
@@ -10708,7 +11102,7 @@ pub mod fluent_builders {
     /// <p>In the request body, you provide the following:</p>
     /// <ul>
     /// <li> <p> <code>TransformJobName</code> - Identifies the transform job. The name must be unique within an Amazon Web Services Region in an Amazon Web Services account.</p> </li>
-    /// <li> <p> <code>ModelName</code> - Identifies the model to use. <code>ModelName</code> must be the name of an existing Amazon SageMaker model in the same Amazon Web Services Region and Amazon Web Services account. For information on creating a model, see <code>CreateModel</code>.</p> </li>
+    /// <li> <p> <code>ModelName</code> - Identifies the model to use. <code>ModelName</code> must be the name of an existing Amazon SageMaker model in the same Amazon Web Services Region and Amazon Web Services account. For information on creating a model, see <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateModel.html">CreateModel</a>.</p> </li>
     /// <li> <p> <code>TransformInput</code> - Describes the dataset to be transformed and the Amazon S3 location where it is stored.</p> </li>
     /// <li> <p> <code>TransformOutput</code> - Identifies the Amazon S3 location where you want Amazon SageMaker to save the results from the transform job.</p> </li>
     /// <li> <p> <code>TransformResources</code> - Identifies the ML compute instances for the transform job.</p> </li>
@@ -11528,6 +11922,22 @@ pub mod fluent_builders {
             self.inner = self.inner.set_tags(input);
             self
         }
+        /// <p>Use this parameter to configure a workforce using VPC.</p>
+        pub fn workforce_vpc_config(
+            mut self,
+            input: crate::model::WorkforceVpcConfigRequest,
+        ) -> Self {
+            self.inner = self.inner.workforce_vpc_config(input);
+            self
+        }
+        /// <p>Use this parameter to configure a workforce using VPC.</p>
+        pub fn set_workforce_vpc_config(
+            mut self,
+            input: std::option::Option<crate::model::WorkforceVpcConfigRequest>,
+        ) -> Self {
+            self.inner = self.inner.set_workforce_vpc_config(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `CreateWorkteam`.
     ///
@@ -12334,6 +12744,128 @@ pub mod fluent_builders {
             input: std::option::Option<crate::model::RetentionPolicy>,
         ) -> Self {
             self.inner = self.inner.set_retention_policy(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `DeleteEdgeDeploymentPlan`.
+    ///
+    /// <p>Deletes an edge deployment plan if (and only if) all the stages in the plan are inactive or there are no stages in the plan.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct DeleteEdgeDeploymentPlan {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::delete_edge_deployment_plan_input::Builder,
+    }
+    impl DeleteEdgeDeploymentPlan {
+        /// Creates a new `DeleteEdgeDeploymentPlan`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::DeleteEdgeDeploymentPlanOutput,
+            aws_smithy_http::result::SdkError<crate::error::DeleteEdgeDeploymentPlanError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The name of the edge deployment plan to delete.</p>
+        pub fn edge_deployment_plan_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.edge_deployment_plan_name(input.into());
+            self
+        }
+        /// <p>The name of the edge deployment plan to delete.</p>
+        pub fn set_edge_deployment_plan_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_edge_deployment_plan_name(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `DeleteEdgeDeploymentStage`.
+    ///
+    /// <p>Delete a stage in an edge deployment plan if (and only if) the stage is inactive.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct DeleteEdgeDeploymentStage {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::delete_edge_deployment_stage_input::Builder,
+    }
+    impl DeleteEdgeDeploymentStage {
+        /// Creates a new `DeleteEdgeDeploymentStage`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::DeleteEdgeDeploymentStageOutput,
+            aws_smithy_http::result::SdkError<crate::error::DeleteEdgeDeploymentStageError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The name of the edge deployment plan from which the stage will be deleted.</p>
+        pub fn edge_deployment_plan_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.edge_deployment_plan_name(input.into());
+            self
+        }
+        /// <p>The name of the edge deployment plan from which the stage will be deleted.</p>
+        pub fn set_edge_deployment_plan_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_edge_deployment_plan_name(input);
+            self
+        }
+        /// <p>The name of the stage.</p>
+        pub fn stage_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.stage_name(input.into());
+            self
+        }
+        /// <p>The name of the stage.</p>
+        pub fn set_stage_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_stage_name(input);
             self
         }
     }
@@ -14753,6 +15285,82 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `DescribeEdgeDeploymentPlan`.
+    ///
+    /// <p>Describes an edge deployment plan with deployment status per stage.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct DescribeEdgeDeploymentPlan {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::describe_edge_deployment_plan_input::Builder,
+    }
+    impl DescribeEdgeDeploymentPlan {
+        /// Creates a new `DescribeEdgeDeploymentPlan`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::DescribeEdgeDeploymentPlanOutput,
+            aws_smithy_http::result::SdkError<crate::error::DescribeEdgeDeploymentPlanError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The name of the deployment plan to describe.</p>
+        pub fn edge_deployment_plan_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.edge_deployment_plan_name(input.into());
+            self
+        }
+        /// <p>The name of the deployment plan to describe.</p>
+        pub fn set_edge_deployment_plan_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_edge_deployment_plan_name(input);
+            self
+        }
+        /// <p>If the edge deployment plan has enough stages to require tokening, then this is the response from the last list of stages returned.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.next_token(input.into());
+            self
+        }
+        /// <p>If the edge deployment plan has enough stages to require tokening, then this is the response from the last list of stages returned.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_next_token(input);
+            self
+        }
+        /// <p>The maximum number of results to select (50 by default).</p>
+        pub fn max_results(mut self, input: i32) -> Self {
+            self.inner = self.inner.max_results(input);
+            self
+        }
+        /// <p>The maximum number of results to select (50 by default).</p>
+        pub fn set_max_results(mut self, input: std::option::Option<i32>) -> Self {
+            self.inner = self.inner.set_max_results(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `DescribeEdgePackagingJob`.
     ///
     /// <p>A description of edge packaging jobs.</p>
@@ -15040,6 +15648,72 @@ pub mod fluent_builders {
         /// <p>A token to resume pagination of the list of <code>Features</code> (<code>FeatureDefinitions</code>). 2,500 <code>Features</code> are returned by default.</p>
         pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_next_token(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `DescribeFeatureMetadata`.
+    ///
+    /// <p>Shows the metadata for a feature within a feature group.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct DescribeFeatureMetadata {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::describe_feature_metadata_input::Builder,
+    }
+    impl DescribeFeatureMetadata {
+        /// Creates a new `DescribeFeatureMetadata`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::DescribeFeatureMetadataOutput,
+            aws_smithy_http::result::SdkError<crate::error::DescribeFeatureMetadataError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The name of the feature group containing the feature.</p>
+        pub fn feature_group_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.feature_group_name(input.into());
+            self
+        }
+        /// <p>The name of the feature group containing the feature.</p>
+        pub fn set_feature_group_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_feature_group_name(input);
+            self
+        }
+        /// <p>The name of the feature.</p>
+        pub fn feature_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.feature_name(input.into());
+            self
+        }
+        /// <p>The name of the feature.</p>
+        pub fn set_feature_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_feature_name(input);
             self
         }
     }
@@ -19382,6 +20056,179 @@ pub mod fluent_builders {
         /// <p>Returns a list up to a specified limit.</p>
         pub fn set_max_results(mut self, input: std::option::Option<i32>) -> Self {
             self.inner = self.inner.set_max_results(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `ListEdgeDeploymentPlans`.
+    ///
+    /// <p>Lists all edge deployment plans.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct ListEdgeDeploymentPlans {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::list_edge_deployment_plans_input::Builder,
+    }
+    impl ListEdgeDeploymentPlans {
+        /// Creates a new `ListEdgeDeploymentPlans`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::ListEdgeDeploymentPlansOutput,
+            aws_smithy_http::result::SdkError<crate::error::ListEdgeDeploymentPlansError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// Create a paginator for this request
+        ///
+        /// Paginators are used by calling [`send().await`](crate::paginator::ListEdgeDeploymentPlansPaginator::send) which returns a [`Stream`](tokio_stream::Stream).
+        pub fn into_paginator(self) -> crate::paginator::ListEdgeDeploymentPlansPaginator {
+            crate::paginator::ListEdgeDeploymentPlansPaginator::new(self.handle, self.inner)
+        }
+        /// <p>The response from the last list when returning a list large enough to need tokening.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.next_token(input.into());
+            self
+        }
+        /// <p>The response from the last list when returning a list large enough to need tokening.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_next_token(input);
+            self
+        }
+        /// <p>The maximum number of results to select (50 by default).</p>
+        pub fn max_results(mut self, input: i32) -> Self {
+            self.inner = self.inner.max_results(input);
+            self
+        }
+        /// <p>The maximum number of results to select (50 by default).</p>
+        pub fn set_max_results(mut self, input: std::option::Option<i32>) -> Self {
+            self.inner = self.inner.set_max_results(input);
+            self
+        }
+        /// <p>Selects edge deployment plans created after this time.</p>
+        pub fn creation_time_after(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.inner = self.inner.creation_time_after(input);
+            self
+        }
+        /// <p>Selects edge deployment plans created after this time.</p>
+        pub fn set_creation_time_after(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.inner = self.inner.set_creation_time_after(input);
+            self
+        }
+        /// <p>Selects edge deployment plans created before this time.</p>
+        pub fn creation_time_before(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.inner = self.inner.creation_time_before(input);
+            self
+        }
+        /// <p>Selects edge deployment plans created before this time.</p>
+        pub fn set_creation_time_before(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.inner = self.inner.set_creation_time_before(input);
+            self
+        }
+        /// <p>Selects edge deployment plans that were last updated after this time.</p>
+        pub fn last_modified_time_after(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.inner = self.inner.last_modified_time_after(input);
+            self
+        }
+        /// <p>Selects edge deployment plans that were last updated after this time.</p>
+        pub fn set_last_modified_time_after(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.inner = self.inner.set_last_modified_time_after(input);
+            self
+        }
+        /// <p>Selects edge deployment plans that were last updated before this time.</p>
+        pub fn last_modified_time_before(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.inner = self.inner.last_modified_time_before(input);
+            self
+        }
+        /// <p>Selects edge deployment plans that were last updated before this time.</p>
+        pub fn set_last_modified_time_before(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.inner = self.inner.set_last_modified_time_before(input);
+            self
+        }
+        /// <p>Selects edge deployment plans with names containing this name.</p>
+        pub fn name_contains(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.name_contains(input.into());
+            self
+        }
+        /// <p>Selects edge deployment plans with names containing this name.</p>
+        pub fn set_name_contains(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_name_contains(input);
+            self
+        }
+        /// <p>Selects edge deployment plans with a device fleet name containing this name.</p>
+        pub fn device_fleet_name_contains(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.device_fleet_name_contains(input.into());
+            self
+        }
+        /// <p>Selects edge deployment plans with a device fleet name containing this name.</p>
+        pub fn set_device_fleet_name_contains(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_device_fleet_name_contains(input);
+            self
+        }
+        /// <p>The column by which to sort the edge deployment plans. Can be one of <code>NAME</code>, <code>DEVICEFLEETNAME</code>, <code>CREATIONTIME</code>, <code>LASTMODIFIEDTIME</code>.</p>
+        pub fn sort_by(mut self, input: crate::model::ListEdgeDeploymentPlansSortBy) -> Self {
+            self.inner = self.inner.sort_by(input);
+            self
+        }
+        /// <p>The column by which to sort the edge deployment plans. Can be one of <code>NAME</code>, <code>DEVICEFLEETNAME</code>, <code>CREATIONTIME</code>, <code>LASTMODIFIEDTIME</code>.</p>
+        pub fn set_sort_by(
+            mut self,
+            input: std::option::Option<crate::model::ListEdgeDeploymentPlansSortBy>,
+        ) -> Self {
+            self.inner = self.inner.set_sort_by(input);
+            self
+        }
+        /// <p>The direction of the sorting (ascending or descending).</p>
+        pub fn sort_order(mut self, input: crate::model::SortOrder) -> Self {
+            self.inner = self.inner.sort_order(input);
+            self
+        }
+        /// <p>The direction of the sorting (ascending or descending).</p>
+        pub fn set_sort_order(
+            mut self,
+            input: std::option::Option<crate::model::SortOrder>,
+        ) -> Self {
+            self.inner = self.inner.set_sort_order(input);
             self
         }
     }
@@ -24086,6 +24933,113 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `ListStageDevices`.
+    ///
+    /// <p>Lists devices allocated to the stage, containing detailed device information and deployment status.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct ListStageDevices {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::list_stage_devices_input::Builder,
+    }
+    impl ListStageDevices {
+        /// Creates a new `ListStageDevices`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::ListStageDevicesOutput,
+            aws_smithy_http::result::SdkError<crate::error::ListStageDevicesError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// Create a paginator for this request
+        ///
+        /// Paginators are used by calling [`send().await`](crate::paginator::ListStageDevicesPaginator::send) which returns a [`Stream`](tokio_stream::Stream).
+        pub fn into_paginator(self) -> crate::paginator::ListStageDevicesPaginator {
+            crate::paginator::ListStageDevicesPaginator::new(self.handle, self.inner)
+        }
+        /// <p>The response from the last list when returning a list large enough to neeed tokening.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.next_token(input.into());
+            self
+        }
+        /// <p>The response from the last list when returning a list large enough to neeed tokening.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_next_token(input);
+            self
+        }
+        /// <p>The maximum number of requests to select.</p>
+        pub fn max_results(mut self, input: i32) -> Self {
+            self.inner = self.inner.max_results(input);
+            self
+        }
+        /// <p>The maximum number of requests to select.</p>
+        pub fn set_max_results(mut self, input: std::option::Option<i32>) -> Self {
+            self.inner = self.inner.set_max_results(input);
+            self
+        }
+        /// <p>The name of the edge deployment plan.</p>
+        pub fn edge_deployment_plan_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.edge_deployment_plan_name(input.into());
+            self
+        }
+        /// <p>The name of the edge deployment plan.</p>
+        pub fn set_edge_deployment_plan_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_edge_deployment_plan_name(input);
+            self
+        }
+        /// <p>Toggle for excluding devices deployed in other stages.</p>
+        pub fn exclude_devices_deployed_in_other_stage(mut self, input: bool) -> Self {
+            self.inner = self.inner.exclude_devices_deployed_in_other_stage(input);
+            self
+        }
+        /// <p>Toggle for excluding devices deployed in other stages.</p>
+        pub fn set_exclude_devices_deployed_in_other_stage(
+            mut self,
+            input: std::option::Option<bool>,
+        ) -> Self {
+            self.inner = self
+                .inner
+                .set_exclude_devices_deployed_in_other_stage(input);
+            self
+        }
+        /// <p>The name of the stage in the deployment.</p>
+        pub fn stage_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.stage_name(input.into());
+            self
+        }
+        /// <p>The name of the stage in the deployment.</p>
+        pub fn set_stage_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_stage_name(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `ListStudioLifecycleConfigs`.
     ///
     /// <p>Lists the Studio Lifecycle Configurations in your Amazon Web Services Account.</p>
@@ -26317,6 +27271,72 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `StartEdgeDeploymentStage`.
+    ///
+    /// <p>Starts a stage in an edge deployment plan.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct StartEdgeDeploymentStage {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::start_edge_deployment_stage_input::Builder,
+    }
+    impl StartEdgeDeploymentStage {
+        /// Creates a new `StartEdgeDeploymentStage`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::StartEdgeDeploymentStageOutput,
+            aws_smithy_http::result::SdkError<crate::error::StartEdgeDeploymentStageError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The name of the edge deployment plan to start.</p>
+        pub fn edge_deployment_plan_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.edge_deployment_plan_name(input.into());
+            self
+        }
+        /// <p>The name of the edge deployment plan to start.</p>
+        pub fn set_edge_deployment_plan_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_edge_deployment_plan_name(input);
+            self
+        }
+        /// <p>The name of the stage to start.</p>
+        pub fn stage_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.stage_name(input.into());
+            self
+        }
+        /// <p>The name of the stage to start.</p>
+        pub fn set_stage_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_stage_name(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `StartMonitoringSchedule`.
     ///
     /// <p>Starts a previously stopped monitoring schedule.</p> <note>
@@ -26676,6 +27696,72 @@ pub mod fluent_builders {
             input: std::option::Option<std::string::String>,
         ) -> Self {
             self.inner = self.inner.set_compilation_job_name(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `StopEdgeDeploymentStage`.
+    ///
+    /// <p>Stops a stage in an edge deployment plan.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct StopEdgeDeploymentStage {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::stop_edge_deployment_stage_input::Builder,
+    }
+    impl StopEdgeDeploymentStage {
+        /// Creates a new `StopEdgeDeploymentStage`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::StopEdgeDeploymentStageOutput,
+            aws_smithy_http::result::SdkError<crate::error::StopEdgeDeploymentStageError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The name of the edge deployment plan to stop.</p>
+        pub fn edge_deployment_plan_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.edge_deployment_plan_name(input.into());
+            self
+        }
+        /// <p>The name of the edge deployment plan to stop.</p>
+        pub fn set_edge_deployment_plan_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_edge_deployment_plan_name(input);
+            self
+        }
+        /// <p>The name of the stage to stop.</p>
+        pub fn stage_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.stage_name(input.into());
+            self
+        }
+        /// <p>The name of the stage to stop.</p>
+        pub fn set_stage_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_stage_name(input);
             self
         }
     }
@@ -28269,6 +29355,189 @@ pub mod fluent_builders {
             self
         }
     }
+    /// Fluent builder constructing a request to `UpdateFeatureGroup`.
+    ///
+    /// <p>Updates the feature group.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct UpdateFeatureGroup {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::update_feature_group_input::Builder,
+    }
+    impl UpdateFeatureGroup {
+        /// Creates a new `UpdateFeatureGroup`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::UpdateFeatureGroupOutput,
+            aws_smithy_http::result::SdkError<crate::error::UpdateFeatureGroupError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The name of the feature group that you're updating.</p>
+        pub fn feature_group_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.feature_group_name(input.into());
+            self
+        }
+        /// <p>The name of the feature group that you're updating.</p>
+        pub fn set_feature_group_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_feature_group_name(input);
+            self
+        }
+        /// Appends an item to `FeatureAdditions`.
+        ///
+        /// To override the contents of this collection use [`set_feature_additions`](Self::set_feature_additions).
+        ///
+        /// <p>A list of the features that you're adding to the feature group.</p>
+        pub fn feature_additions(mut self, input: crate::model::FeatureDefinition) -> Self {
+            self.inner = self.inner.feature_additions(input);
+            self
+        }
+        /// <p>A list of the features that you're adding to the feature group.</p>
+        pub fn set_feature_additions(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::FeatureDefinition>>,
+        ) -> Self {
+            self.inner = self.inner.set_feature_additions(input);
+            self
+        }
+    }
+    /// Fluent builder constructing a request to `UpdateFeatureMetadata`.
+    ///
+    /// <p>Updates the description and parameters of the feature group.</p>
+    #[derive(std::clone::Clone, std::fmt::Debug)]
+    pub struct UpdateFeatureMetadata {
+        handle: std::sync::Arc<super::Handle>,
+        inner: crate::input::update_feature_metadata_input::Builder,
+    }
+    impl UpdateFeatureMetadata {
+        /// Creates a new `UpdateFeatureMetadata`.
+        pub(crate) fn new(handle: std::sync::Arc<super::Handle>) -> Self {
+            Self {
+                handle,
+                inner: Default::default(),
+            }
+        }
+
+        /// Sends the request and returns the response.
+        ///
+        /// If an error occurs, an `SdkError` will be returned with additional details that
+        /// can be matched against.
+        ///
+        /// By default, any retryable failures will be retried twice. Retry behavior
+        /// is configurable with the [RetryConfig](aws_smithy_types::retry::RetryConfig), which can be
+        /// set when configuring the client.
+        pub async fn send(
+            self,
+        ) -> std::result::Result<
+            crate::output::UpdateFeatureMetadataOutput,
+            aws_smithy_http::result::SdkError<crate::error::UpdateFeatureMetadataError>,
+        > {
+            let op = self
+                .inner
+                .build()
+                .map_err(|err| aws_smithy_http::result::SdkError::ConstructionFailure(err.into()))?
+                .make_operation(&self.handle.conf)
+                .await
+                .map_err(|err| {
+                    aws_smithy_http::result::SdkError::ConstructionFailure(err.into())
+                })?;
+            self.handle.client.call(op).await
+        }
+        /// <p>The name of the feature group containing the feature that you're updating.</p>
+        pub fn feature_group_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.feature_group_name(input.into());
+            self
+        }
+        /// <p>The name of the feature group containing the feature that you're updating.</p>
+        pub fn set_feature_group_name(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.inner = self.inner.set_feature_group_name(input);
+            self
+        }
+        /// <p>The name of the feature that you're updating.</p>
+        pub fn feature_name(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.feature_name(input.into());
+            self
+        }
+        /// <p>The name of the feature that you're updating.</p>
+        pub fn set_feature_name(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_feature_name(input);
+            self
+        }
+        /// <p>A description that you can write to better describe the feature.</p>
+        pub fn description(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.description(input.into());
+            self
+        }
+        /// <p>A description that you can write to better describe the feature.</p>
+        pub fn set_description(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.inner = self.inner.set_description(input);
+            self
+        }
+        /// Appends an item to `ParameterAdditions`.
+        ///
+        /// To override the contents of this collection use [`set_parameter_additions`](Self::set_parameter_additions).
+        ///
+        /// <p>A list of key-value pairs that you can add to better describe the feature.</p>
+        pub fn parameter_additions(mut self, input: crate::model::FeatureParameter) -> Self {
+            self.inner = self.inner.parameter_additions(input);
+            self
+        }
+        /// <p>A list of key-value pairs that you can add to better describe the feature.</p>
+        pub fn set_parameter_additions(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::FeatureParameter>>,
+        ) -> Self {
+            self.inner = self.inner.set_parameter_additions(input);
+            self
+        }
+        /// Appends an item to `ParameterRemovals`.
+        ///
+        /// To override the contents of this collection use [`set_parameter_removals`](Self::set_parameter_removals).
+        ///
+        /// <p>A list of parameter keys that you can specify to remove parameters that describe your feature.</p>
+        pub fn parameter_removals(mut self, input: impl Into<std::string::String>) -> Self {
+            self.inner = self.inner.parameter_removals(input.into());
+            self
+        }
+        /// <p>A list of parameter keys that you can specify to remove parameters that describe your feature.</p>
+        pub fn set_parameter_removals(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.inner = self.inner.set_parameter_removals(input);
+            self
+        }
+    }
     /// Fluent builder constructing a request to `UpdateImage`.
     ///
     /// <p>Updates the properties of a SageMaker image. To change the image's tags, use the <code>AddTags</code> and <code>DeleteTags</code> APIs.</p>
@@ -28821,6 +30090,24 @@ pub mod fluent_builders {
             input: std::option::Option<crate::model::RootAccess>,
         ) -> Self {
             self.inner = self.inner.set_root_access(input);
+            self
+        }
+        /// <p>Information on the IMDS configuration of the notebook instance</p>
+        pub fn instance_metadata_service_configuration(
+            mut self,
+            input: crate::model::InstanceMetadataServiceConfiguration,
+        ) -> Self {
+            self.inner = self.inner.instance_metadata_service_configuration(input);
+            self
+        }
+        /// <p>Information on the IMDS configuration of the notebook instance</p>
+        pub fn set_instance_metadata_service_configuration(
+            mut self,
+            input: std::option::Option<crate::model::InstanceMetadataServiceConfiguration>,
+        ) -> Self {
+            self.inner = self
+                .inner
+                .set_instance_metadata_service_configuration(input);
             self
         }
     }
@@ -29737,7 +31024,11 @@ pub mod fluent_builders {
     /// Fluent builder constructing a request to `UpdateWorkforce`.
     ///
     /// <p>Use this operation to update your workforce. You can use this operation to require that workers use specific IP addresses to work on tasks and to update your OpenID Connect (OIDC) Identity Provider (IdP) workforce configuration.</p>
+    /// <p>The worker portal is now supported in VPC and public internet.</p>
     /// <p> Use <code>SourceIpConfig</code> to restrict worker access to tasks to a specific range of IP addresses. You specify allowed IP addresses by creating a list of up to ten <a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html">CIDRs</a>. By default, a workforce isn't restricted to specific IP addresses. If you specify a range of IP addresses, workers who attempt to access tasks using any IP address outside the specified range are denied and get a <code>Not Found</code> error message on the worker portal.</p>
+    /// <p>To restrict access to all the workers in public internet, add the <code>SourceIpConfig</code> CIDR value as "0.0.0.0/0".</p> <important>
+    /// <p>Amazon SageMaker does not support Source Ip restriction for worker portals in VPC.</p>
+    /// </important>
     /// <p>Use <code>OidcConfig</code> to update the configuration of a workforce created using your own OIDC IdP. </p> <important>
     /// <p>You can only update your OIDC IdP configuration when there are no work teams associated with your workforce. You can delete work teams using the operation.</p>
     /// </important>
@@ -29822,6 +31113,22 @@ pub mod fluent_builders {
             input: std::option::Option<crate::model::OidcConfig>,
         ) -> Self {
             self.inner = self.inner.set_oidc_config(input);
+            self
+        }
+        /// <p>Use this parameter to update your VPC configuration for a workforce.</p>
+        pub fn workforce_vpc_config(
+            mut self,
+            input: crate::model::WorkforceVpcConfigRequest,
+        ) -> Self {
+            self.inner = self.inner.workforce_vpc_config(input);
+            self
+        }
+        /// <p>Use this parameter to update your VPC configuration for a workforce.</p>
+        pub fn set_workforce_vpc_config(
+            mut self,
+            input: std::option::Option<crate::model::WorkforceVpcConfigRequest>,
+        ) -> Self {
+            self.inner = self.inner.set_workforce_vpc_config(input);
             self
         }
     }

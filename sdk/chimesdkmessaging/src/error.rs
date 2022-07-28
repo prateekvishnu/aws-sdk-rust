@@ -5882,6 +5882,8 @@ pub struct RedactChannelMessageError {
 pub enum RedactChannelMessageErrorKind {
     /// <p>The input parameters don't match the service's restrictions.</p>
     BadRequestException(crate::error::BadRequestException),
+    /// <p>The request could not be processed because of conflict in the current state of the resource.</p>
+    ConflictException(crate::error::ConflictException),
     /// <p>The client is permanently forbidden from making the request.</p>
     ForbiddenException(crate::error::ForbiddenException),
     /// <p>The service encountered an unexpected error.</p>
@@ -5899,6 +5901,7 @@ impl std::fmt::Display for RedactChannelMessageError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match &self.kind {
             RedactChannelMessageErrorKind::BadRequestException(_inner) => _inner.fmt(f),
+            RedactChannelMessageErrorKind::ConflictException(_inner) => _inner.fmt(f),
             RedactChannelMessageErrorKind::ForbiddenException(_inner) => _inner.fmt(f),
             RedactChannelMessageErrorKind::ServiceFailureException(_inner) => _inner.fmt(f),
             RedactChannelMessageErrorKind::ServiceUnavailableException(_inner) => _inner.fmt(f),
@@ -5965,6 +5968,13 @@ impl RedactChannelMessageError {
             RedactChannelMessageErrorKind::BadRequestException(_)
         )
     }
+    /// Returns `true` if the error kind is `RedactChannelMessageErrorKind::ConflictException`.
+    pub fn is_conflict_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            RedactChannelMessageErrorKind::ConflictException(_)
+        )
+    }
     /// Returns `true` if the error kind is `RedactChannelMessageErrorKind::ForbiddenException`.
     pub fn is_forbidden_exception(&self) -> bool {
         matches!(
@@ -6005,12 +6015,155 @@ impl std::error::Error for RedactChannelMessageError {
     fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
         match &self.kind {
             RedactChannelMessageErrorKind::BadRequestException(_inner) => Some(_inner),
+            RedactChannelMessageErrorKind::ConflictException(_inner) => Some(_inner),
             RedactChannelMessageErrorKind::ForbiddenException(_inner) => Some(_inner),
             RedactChannelMessageErrorKind::ServiceFailureException(_inner) => Some(_inner),
             RedactChannelMessageErrorKind::ServiceUnavailableException(_inner) => Some(_inner),
             RedactChannelMessageErrorKind::ThrottledClientException(_inner) => Some(_inner),
             RedactChannelMessageErrorKind::UnauthorizedClientException(_inner) => Some(_inner),
             RedactChannelMessageErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `SearchChannels` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct SearchChannelsError {
+    /// Kind of error that occurred.
+    pub kind: SearchChannelsErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `SearchChannels` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum SearchChannelsErrorKind {
+    /// <p>The input parameters don't match the service's restrictions.</p>
+    BadRequestException(crate::error::BadRequestException),
+    /// <p>The client is permanently forbidden from making the request.</p>
+    ForbiddenException(crate::error::ForbiddenException),
+    /// <p>The service encountered an unexpected error.</p>
+    ServiceFailureException(crate::error::ServiceFailureException),
+    /// <p>The service is currently unavailable.</p>
+    ServiceUnavailableException(crate::error::ServiceUnavailableException),
+    /// <p>The client exceeded its request rate limit.</p>
+    ThrottledClientException(crate::error::ThrottledClientException),
+    /// <p>The client is not currently authorized to make the request.</p>
+    UnauthorizedClientException(crate::error::UnauthorizedClientException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for SearchChannelsError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            SearchChannelsErrorKind::BadRequestException(_inner) => _inner.fmt(f),
+            SearchChannelsErrorKind::ForbiddenException(_inner) => _inner.fmt(f),
+            SearchChannelsErrorKind::ServiceFailureException(_inner) => _inner.fmt(f),
+            SearchChannelsErrorKind::ServiceUnavailableException(_inner) => _inner.fmt(f),
+            SearchChannelsErrorKind::ThrottledClientException(_inner) => _inner.fmt(f),
+            SearchChannelsErrorKind::UnauthorizedClientException(_inner) => _inner.fmt(f),
+            SearchChannelsErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for SearchChannelsError {
+    fn code(&self) -> Option<&str> {
+        SearchChannelsError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl SearchChannelsError {
+    /// Creates a new `SearchChannelsError`.
+    pub fn new(kind: SearchChannelsErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `SearchChannelsError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: SearchChannelsErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `SearchChannelsError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: SearchChannelsErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `SearchChannelsErrorKind::BadRequestException`.
+    pub fn is_bad_request_exception(&self) -> bool {
+        matches!(&self.kind, SearchChannelsErrorKind::BadRequestException(_))
+    }
+    /// Returns `true` if the error kind is `SearchChannelsErrorKind::ForbiddenException`.
+    pub fn is_forbidden_exception(&self) -> bool {
+        matches!(&self.kind, SearchChannelsErrorKind::ForbiddenException(_))
+    }
+    /// Returns `true` if the error kind is `SearchChannelsErrorKind::ServiceFailureException`.
+    pub fn is_service_failure_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            SearchChannelsErrorKind::ServiceFailureException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `SearchChannelsErrorKind::ServiceUnavailableException`.
+    pub fn is_service_unavailable_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            SearchChannelsErrorKind::ServiceUnavailableException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `SearchChannelsErrorKind::ThrottledClientException`.
+    pub fn is_throttled_client_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            SearchChannelsErrorKind::ThrottledClientException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `SearchChannelsErrorKind::UnauthorizedClientException`.
+    pub fn is_unauthorized_client_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            SearchChannelsErrorKind::UnauthorizedClientException(_)
+        )
+    }
+}
+impl std::error::Error for SearchChannelsError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            SearchChannelsErrorKind::BadRequestException(_inner) => Some(_inner),
+            SearchChannelsErrorKind::ForbiddenException(_inner) => Some(_inner),
+            SearchChannelsErrorKind::ServiceFailureException(_inner) => Some(_inner),
+            SearchChannelsErrorKind::ServiceUnavailableException(_inner) => Some(_inner),
+            SearchChannelsErrorKind::ThrottledClientException(_inner) => Some(_inner),
+            SearchChannelsErrorKind::UnauthorizedClientException(_inner) => Some(_inner),
+            SearchChannelsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -7129,10 +7282,10 @@ impl std::fmt::Display for UnauthorizedClientException {
     }
 }
 impl std::error::Error for UnauthorizedClientException {}
-/// See [`UnauthorizedClientException`](crate::error::UnauthorizedClientException)
+/// See [`UnauthorizedClientException`](crate::error::UnauthorizedClientException).
 pub mod unauthorized_client_exception {
-    /// A builder for [`UnauthorizedClientException`](crate::error::UnauthorizedClientException)
-    #[non_exhaustive]
+
+    /// A builder for [`UnauthorizedClientException`](crate::error::UnauthorizedClientException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ErrorCode>,
@@ -7159,7 +7312,7 @@ pub mod unauthorized_client_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`UnauthorizedClientException`](crate::error::UnauthorizedClientException)
+        /// Consumes the builder and constructs a [`UnauthorizedClientException`](crate::error::UnauthorizedClientException).
         pub fn build(self) -> crate::error::UnauthorizedClientException {
             crate::error::UnauthorizedClientException {
                 code: self.code,
@@ -7169,7 +7322,7 @@ pub mod unauthorized_client_exception {
     }
 }
 impl UnauthorizedClientException {
-    /// Creates a new builder-style object to manufacture [`UnauthorizedClientException`](crate::error::UnauthorizedClientException)
+    /// Creates a new builder-style object to manufacture [`UnauthorizedClientException`](crate::error::UnauthorizedClientException).
     pub fn builder() -> crate::error::unauthorized_client_exception::Builder {
         crate::error::unauthorized_client_exception::Builder::default()
     }
@@ -7214,10 +7367,10 @@ impl std::fmt::Display for ThrottledClientException {
     }
 }
 impl std::error::Error for ThrottledClientException {}
-/// See [`ThrottledClientException`](crate::error::ThrottledClientException)
+/// See [`ThrottledClientException`](crate::error::ThrottledClientException).
 pub mod throttled_client_exception {
-    /// A builder for [`ThrottledClientException`](crate::error::ThrottledClientException)
-    #[non_exhaustive]
+
+    /// A builder for [`ThrottledClientException`](crate::error::ThrottledClientException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ErrorCode>,
@@ -7244,7 +7397,7 @@ pub mod throttled_client_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThrottledClientException`](crate::error::ThrottledClientException)
+        /// Consumes the builder and constructs a [`ThrottledClientException`](crate::error::ThrottledClientException).
         pub fn build(self) -> crate::error::ThrottledClientException {
             crate::error::ThrottledClientException {
                 code: self.code,
@@ -7254,7 +7407,7 @@ pub mod throttled_client_exception {
     }
 }
 impl ThrottledClientException {
-    /// Creates a new builder-style object to manufacture [`ThrottledClientException`](crate::error::ThrottledClientException)
+    /// Creates a new builder-style object to manufacture [`ThrottledClientException`](crate::error::ThrottledClientException).
     pub fn builder() -> crate::error::throttled_client_exception::Builder {
         crate::error::throttled_client_exception::Builder::default()
     }
@@ -7299,10 +7452,10 @@ impl std::fmt::Display for ServiceUnavailableException {
     }
 }
 impl std::error::Error for ServiceUnavailableException {}
-/// See [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
+/// See [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
 pub mod service_unavailable_exception {
-    /// A builder for [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
-    #[non_exhaustive]
+
+    /// A builder for [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ErrorCode>,
@@ -7329,7 +7482,7 @@ pub mod service_unavailable_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
+        /// Consumes the builder and constructs a [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
         pub fn build(self) -> crate::error::ServiceUnavailableException {
             crate::error::ServiceUnavailableException {
                 code: self.code,
@@ -7339,7 +7492,7 @@ pub mod service_unavailable_exception {
     }
 }
 impl ServiceUnavailableException {
-    /// Creates a new builder-style object to manufacture [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
+    /// Creates a new builder-style object to manufacture [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
     pub fn builder() -> crate::error::service_unavailable_exception::Builder {
         crate::error::service_unavailable_exception::Builder::default()
     }
@@ -7384,10 +7537,10 @@ impl std::fmt::Display for ServiceFailureException {
     }
 }
 impl std::error::Error for ServiceFailureException {}
-/// See [`ServiceFailureException`](crate::error::ServiceFailureException)
+/// See [`ServiceFailureException`](crate::error::ServiceFailureException).
 pub mod service_failure_exception {
-    /// A builder for [`ServiceFailureException`](crate::error::ServiceFailureException)
-    #[non_exhaustive]
+
+    /// A builder for [`ServiceFailureException`](crate::error::ServiceFailureException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ErrorCode>,
@@ -7414,7 +7567,7 @@ pub mod service_failure_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceFailureException`](crate::error::ServiceFailureException)
+        /// Consumes the builder and constructs a [`ServiceFailureException`](crate::error::ServiceFailureException).
         pub fn build(self) -> crate::error::ServiceFailureException {
             crate::error::ServiceFailureException {
                 code: self.code,
@@ -7424,7 +7577,7 @@ pub mod service_failure_exception {
     }
 }
 impl ServiceFailureException {
-    /// Creates a new builder-style object to manufacture [`ServiceFailureException`](crate::error::ServiceFailureException)
+    /// Creates a new builder-style object to manufacture [`ServiceFailureException`](crate::error::ServiceFailureException).
     pub fn builder() -> crate::error::service_failure_exception::Builder {
         crate::error::service_failure_exception::Builder::default()
     }
@@ -7469,10 +7622,10 @@ impl std::fmt::Display for ForbiddenException {
     }
 }
 impl std::error::Error for ForbiddenException {}
-/// See [`ForbiddenException`](crate::error::ForbiddenException)
+/// See [`ForbiddenException`](crate::error::ForbiddenException).
 pub mod forbidden_exception {
-    /// A builder for [`ForbiddenException`](crate::error::ForbiddenException)
-    #[non_exhaustive]
+
+    /// A builder for [`ForbiddenException`](crate::error::ForbiddenException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ErrorCode>,
@@ -7499,7 +7652,7 @@ pub mod forbidden_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ForbiddenException`](crate::error::ForbiddenException)
+        /// Consumes the builder and constructs a [`ForbiddenException`](crate::error::ForbiddenException).
         pub fn build(self) -> crate::error::ForbiddenException {
             crate::error::ForbiddenException {
                 code: self.code,
@@ -7509,7 +7662,7 @@ pub mod forbidden_exception {
     }
 }
 impl ForbiddenException {
-    /// Creates a new builder-style object to manufacture [`ForbiddenException`](crate::error::ForbiddenException)
+    /// Creates a new builder-style object to manufacture [`ForbiddenException`](crate::error::ForbiddenException).
     pub fn builder() -> crate::error::forbidden_exception::Builder {
         crate::error::forbidden_exception::Builder::default()
     }
@@ -7554,10 +7707,10 @@ impl std::fmt::Display for ConflictException {
     }
 }
 impl std::error::Error for ConflictException {}
-/// See [`ConflictException`](crate::error::ConflictException)
+/// See [`ConflictException`](crate::error::ConflictException).
 pub mod conflict_exception {
-    /// A builder for [`ConflictException`](crate::error::ConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`ConflictException`](crate::error::ConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ErrorCode>,
@@ -7584,7 +7737,7 @@ pub mod conflict_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException)
+        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException).
         pub fn build(self) -> crate::error::ConflictException {
             crate::error::ConflictException {
                 code: self.code,
@@ -7594,7 +7747,7 @@ pub mod conflict_exception {
     }
 }
 impl ConflictException {
-    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException)
+    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException).
     pub fn builder() -> crate::error::conflict_exception::Builder {
         crate::error::conflict_exception::Builder::default()
     }
@@ -7639,10 +7792,10 @@ impl std::fmt::Display for BadRequestException {
     }
 }
 impl std::error::Error for BadRequestException {}
-/// See [`BadRequestException`](crate::error::BadRequestException)
+/// See [`BadRequestException`](crate::error::BadRequestException).
 pub mod bad_request_exception {
-    /// A builder for [`BadRequestException`](crate::error::BadRequestException)
-    #[non_exhaustive]
+
+    /// A builder for [`BadRequestException`](crate::error::BadRequestException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ErrorCode>,
@@ -7669,7 +7822,7 @@ pub mod bad_request_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`BadRequestException`](crate::error::BadRequestException)
+        /// Consumes the builder and constructs a [`BadRequestException`](crate::error::BadRequestException).
         pub fn build(self) -> crate::error::BadRequestException {
             crate::error::BadRequestException {
                 code: self.code,
@@ -7679,7 +7832,7 @@ pub mod bad_request_exception {
     }
 }
 impl BadRequestException {
-    /// Creates a new builder-style object to manufacture [`BadRequestException`](crate::error::BadRequestException)
+    /// Creates a new builder-style object to manufacture [`BadRequestException`](crate::error::BadRequestException).
     pub fn builder() -> crate::error::bad_request_exception::Builder {
         crate::error::bad_request_exception::Builder::default()
     }
@@ -7724,10 +7877,10 @@ impl std::fmt::Display for ResourceLimitExceededException {
     }
 }
 impl std::error::Error for ResourceLimitExceededException {}
-/// See [`ResourceLimitExceededException`](crate::error::ResourceLimitExceededException)
+/// See [`ResourceLimitExceededException`](crate::error::ResourceLimitExceededException).
 pub mod resource_limit_exceeded_exception {
-    /// A builder for [`ResourceLimitExceededException`](crate::error::ResourceLimitExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceLimitExceededException`](crate::error::ResourceLimitExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ErrorCode>,
@@ -7754,7 +7907,7 @@ pub mod resource_limit_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceLimitExceededException`](crate::error::ResourceLimitExceededException)
+        /// Consumes the builder and constructs a [`ResourceLimitExceededException`](crate::error::ResourceLimitExceededException).
         pub fn build(self) -> crate::error::ResourceLimitExceededException {
             crate::error::ResourceLimitExceededException {
                 code: self.code,
@@ -7764,7 +7917,7 @@ pub mod resource_limit_exceeded_exception {
     }
 }
 impl ResourceLimitExceededException {
-    /// Creates a new builder-style object to manufacture [`ResourceLimitExceededException`](crate::error::ResourceLimitExceededException)
+    /// Creates a new builder-style object to manufacture [`ResourceLimitExceededException`](crate::error::ResourceLimitExceededException).
     pub fn builder() -> crate::error::resource_limit_exceeded_exception::Builder {
         crate::error::resource_limit_exceeded_exception::Builder::default()
     }
@@ -7809,10 +7962,10 @@ impl std::fmt::Display for NotFoundException {
     }
 }
 impl std::error::Error for NotFoundException {}
-/// See [`NotFoundException`](crate::error::NotFoundException)
+/// See [`NotFoundException`](crate::error::NotFoundException).
 pub mod not_found_exception {
-    /// A builder for [`NotFoundException`](crate::error::NotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`NotFoundException`](crate::error::NotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::ErrorCode>,
@@ -7839,7 +7992,7 @@ pub mod not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotFoundException`](crate::error::NotFoundException)
+        /// Consumes the builder and constructs a [`NotFoundException`](crate::error::NotFoundException).
         pub fn build(self) -> crate::error::NotFoundException {
             crate::error::NotFoundException {
                 code: self.code,
@@ -7849,7 +8002,7 @@ pub mod not_found_exception {
     }
 }
 impl NotFoundException {
-    /// Creates a new builder-style object to manufacture [`NotFoundException`](crate::error::NotFoundException)
+    /// Creates a new builder-style object to manufacture [`NotFoundException`](crate::error::NotFoundException).
     pub fn builder() -> crate::error::not_found_exception::Builder {
         crate::error::not_found_exception::Builder::default()
     }

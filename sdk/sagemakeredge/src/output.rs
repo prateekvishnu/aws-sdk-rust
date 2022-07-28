@@ -9,21 +9,21 @@ impl std::fmt::Debug for SendHeartbeatOutput {
         formatter.finish()
     }
 }
-/// See [`SendHeartbeatOutput`](crate::output::SendHeartbeatOutput)
+/// See [`SendHeartbeatOutput`](crate::output::SendHeartbeatOutput).
 pub mod send_heartbeat_output {
-    /// A builder for [`SendHeartbeatOutput`](crate::output::SendHeartbeatOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`SendHeartbeatOutput`](crate::output::SendHeartbeatOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`SendHeartbeatOutput`](crate::output::SendHeartbeatOutput)
+        /// Consumes the builder and constructs a [`SendHeartbeatOutput`](crate::output::SendHeartbeatOutput).
         pub fn build(self) -> crate::output::SendHeartbeatOutput {
             crate::output::SendHeartbeatOutput {}
         }
     }
 }
 impl SendHeartbeatOutput {
-    /// Creates a new builder-style object to manufacture [`SendHeartbeatOutput`](crate::output::SendHeartbeatOutput)
+    /// Creates a new builder-style object to manufacture [`SendHeartbeatOutput`](crate::output::SendHeartbeatOutput).
     pub fn builder() -> crate::output::send_heartbeat_output::Builder {
         crate::output::send_heartbeat_output::Builder::default()
     }
@@ -56,10 +56,10 @@ impl std::fmt::Debug for GetDeviceRegistrationOutput {
         formatter.finish()
     }
 }
-/// See [`GetDeviceRegistrationOutput`](crate::output::GetDeviceRegistrationOutput)
+/// See [`GetDeviceRegistrationOutput`](crate::output::GetDeviceRegistrationOutput).
 pub mod get_device_registration_output {
-    /// A builder for [`GetDeviceRegistrationOutput`](crate::output::GetDeviceRegistrationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetDeviceRegistrationOutput`](crate::output::GetDeviceRegistrationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) device_registration: std::option::Option<std::string::String>,
@@ -89,7 +89,7 @@ pub mod get_device_registration_output {
             self.cache_ttl = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetDeviceRegistrationOutput`](crate::output::GetDeviceRegistrationOutput)
+        /// Consumes the builder and constructs a [`GetDeviceRegistrationOutput`](crate::output::GetDeviceRegistrationOutput).
         pub fn build(self) -> crate::output::GetDeviceRegistrationOutput {
             crate::output::GetDeviceRegistrationOutput {
                 device_registration: self.device_registration,
@@ -99,8 +99,71 @@ pub mod get_device_registration_output {
     }
 }
 impl GetDeviceRegistrationOutput {
-    /// Creates a new builder-style object to manufacture [`GetDeviceRegistrationOutput`](crate::output::GetDeviceRegistrationOutput)
+    /// Creates a new builder-style object to manufacture [`GetDeviceRegistrationOutput`](crate::output::GetDeviceRegistrationOutput).
     pub fn builder() -> crate::output::get_device_registration_output::Builder {
         crate::output::get_device_registration_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetDeploymentsOutput {
+    /// <p>Returns a list of the configurations of the active deployments on the device.</p>
+    pub deployments: std::option::Option<std::vec::Vec<crate::model::EdgeDeployment>>,
+}
+impl GetDeploymentsOutput {
+    /// <p>Returns a list of the configurations of the active deployments on the device.</p>
+    pub fn deployments(&self) -> std::option::Option<&[crate::model::EdgeDeployment]> {
+        self.deployments.as_deref()
+    }
+}
+impl std::fmt::Debug for GetDeploymentsOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetDeploymentsOutput");
+        formatter.field("deployments", &self.deployments);
+        formatter.finish()
+    }
+}
+/// See [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput).
+pub mod get_deployments_output {
+
+    /// A builder for [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) deployments: std::option::Option<std::vec::Vec<crate::model::EdgeDeployment>>,
+    }
+    impl Builder {
+        /// Appends an item to `deployments`.
+        ///
+        /// To override the contents of this collection use [`set_deployments`](Self::set_deployments).
+        ///
+        /// <p>Returns a list of the configurations of the active deployments on the device.</p>
+        pub fn deployments(mut self, input: crate::model::EdgeDeployment) -> Self {
+            let mut v = self.deployments.unwrap_or_default();
+            v.push(input);
+            self.deployments = Some(v);
+            self
+        }
+        /// <p>Returns a list of the configurations of the active deployments on the device.</p>
+        pub fn set_deployments(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::EdgeDeployment>>,
+        ) -> Self {
+            self.deployments = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput).
+        pub fn build(self) -> crate::output::GetDeploymentsOutput {
+            crate::output::GetDeploymentsOutput {
+                deployments: self.deployments,
+            }
+        }
+    }
+}
+impl GetDeploymentsOutput {
+    /// Creates a new builder-style object to manufacture [`GetDeploymentsOutput`](crate::output::GetDeploymentsOutput).
+    pub fn builder() -> crate::output::get_deployments_output::Builder {
+        crate::output::get_deployments_output::Builder::default()
     }
 }

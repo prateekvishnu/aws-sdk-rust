@@ -10,7 +10,7 @@ pub struct ChangeServerLifeCycleState {
     _private: (),
 }
 impl ChangeServerLifeCycleState {
-    /// Creates a new builder-style object to manufacture [`ChangeServerLifeCycleStateInput`](crate::input::ChangeServerLifeCycleStateInput)
+    /// Creates a new builder-style object to manufacture [`ChangeServerLifeCycleStateInput`](crate::input::ChangeServerLifeCycleStateInput).
     pub fn builder() -> crate::input::change_server_life_cycle_state_input::Builder {
         crate::input::change_server_life_cycle_state_input::Builder::default()
     }
@@ -33,6 +33,40 @@ impl aws_smithy_http::response::ParseStrictResponse for ChangeServerLifeCycleSta
     }
 }
 
+/// Operation shape for `CreateLaunchConfigurationTemplate`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`create_launch_configuration_template`](crate::client::Client::create_launch_configuration_template).
+///
+/// See [`crate::client::fluent_builders::CreateLaunchConfigurationTemplate`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct CreateLaunchConfigurationTemplate {
+    _private: (),
+}
+impl CreateLaunchConfigurationTemplate {
+    /// Creates a new builder-style object to manufacture [`CreateLaunchConfigurationTemplateInput`](crate::input::CreateLaunchConfigurationTemplateInput).
+    pub fn builder() -> crate::input::create_launch_configuration_template_input::Builder {
+        crate::input::create_launch_configuration_template_input::Builder::default()
+    }
+    /// Creates a new `CreateLaunchConfigurationTemplate` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for CreateLaunchConfigurationTemplate {
+    type Output = std::result::Result<
+        crate::output::CreateLaunchConfigurationTemplateOutput,
+        crate::error::CreateLaunchConfigurationTemplateError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 201 {
+            crate::operation_deser::parse_create_launch_configuration_template_error(response)
+        } else {
+            crate::operation_deser::parse_create_launch_configuration_template_response(response)
+        }
+    }
+}
+
 /// Operation shape for `CreateReplicationConfigurationTemplate`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -44,7 +78,7 @@ pub struct CreateReplicationConfigurationTemplate {
     _private: (),
 }
 impl CreateReplicationConfigurationTemplate {
-    /// Creates a new builder-style object to manufacture [`CreateReplicationConfigurationTemplateInput`](crate::input::CreateReplicationConfigurationTemplateInput)
+    /// Creates a new builder-style object to manufacture [`CreateReplicationConfigurationTemplateInput`](crate::input::CreateReplicationConfigurationTemplateInput).
     pub fn builder() -> crate::input::create_replication_configuration_template_input::Builder {
         crate::input::create_replication_configuration_template_input::Builder::default()
     }
@@ -80,7 +114,7 @@ pub struct DeleteJob {
     _private: (),
 }
 impl DeleteJob {
-    /// Creates a new builder-style object to manufacture [`DeleteJobInput`](crate::input::DeleteJobInput)
+    /// Creates a new builder-style object to manufacture [`DeleteJobInput`](crate::input::DeleteJobInput).
     pub fn builder() -> crate::input::delete_job_input::Builder {
         crate::input::delete_job_input::Builder::default()
     }
@@ -100,6 +134,40 @@ impl aws_smithy_http::response::ParseStrictResponse for DeleteJob {
     }
 }
 
+/// Operation shape for `DeleteLaunchConfigurationTemplate`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`delete_launch_configuration_template`](crate::client::Client::delete_launch_configuration_template).
+///
+/// See [`crate::client::fluent_builders::DeleteLaunchConfigurationTemplate`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DeleteLaunchConfigurationTemplate {
+    _private: (),
+}
+impl DeleteLaunchConfigurationTemplate {
+    /// Creates a new builder-style object to manufacture [`DeleteLaunchConfigurationTemplateInput`](crate::input::DeleteLaunchConfigurationTemplateInput).
+    pub fn builder() -> crate::input::delete_launch_configuration_template_input::Builder {
+        crate::input::delete_launch_configuration_template_input::Builder::default()
+    }
+    /// Creates a new `DeleteLaunchConfigurationTemplate` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DeleteLaunchConfigurationTemplate {
+    type Output = std::result::Result<
+        crate::output::DeleteLaunchConfigurationTemplateOutput,
+        crate::error::DeleteLaunchConfigurationTemplateError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 204 {
+            crate::operation_deser::parse_delete_launch_configuration_template_error(response)
+        } else {
+            crate::operation_deser::parse_delete_launch_configuration_template_response(response)
+        }
+    }
+}
+
 /// Operation shape for `DeleteReplicationConfigurationTemplate`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -111,7 +179,7 @@ pub struct DeleteReplicationConfigurationTemplate {
     _private: (),
 }
 impl DeleteReplicationConfigurationTemplate {
-    /// Creates a new builder-style object to manufacture [`DeleteReplicationConfigurationTemplateInput`](crate::input::DeleteReplicationConfigurationTemplateInput)
+    /// Creates a new builder-style object to manufacture [`DeleteReplicationConfigurationTemplateInput`](crate::input::DeleteReplicationConfigurationTemplateInput).
     pub fn builder() -> crate::input::delete_replication_configuration_template_input::Builder {
         crate::input::delete_replication_configuration_template_input::Builder::default()
     }
@@ -147,7 +215,7 @@ pub struct DeleteSourceServer {
     _private: (),
 }
 impl DeleteSourceServer {
-    /// Creates a new builder-style object to manufacture [`DeleteSourceServerInput`](crate::input::DeleteSourceServerInput)
+    /// Creates a new builder-style object to manufacture [`DeleteSourceServerInput`](crate::input::DeleteSourceServerInput).
     pub fn builder() -> crate::input::delete_source_server_input::Builder {
         crate::input::delete_source_server_input::Builder::default()
     }
@@ -181,7 +249,7 @@ pub struct DeleteVcenterClient {
     _private: (),
 }
 impl DeleteVcenterClient {
-    /// Creates a new builder-style object to manufacture [`DeleteVcenterClientInput`](crate::input::DeleteVcenterClientInput)
+    /// Creates a new builder-style object to manufacture [`DeleteVcenterClientInput`](crate::input::DeleteVcenterClientInput).
     pub fn builder() -> crate::input::delete_vcenter_client_input::Builder {
         crate::input::delete_vcenter_client_input::Builder::default()
     }
@@ -215,7 +283,7 @@ pub struct DescribeJobLogItems {
     _private: (),
 }
 impl DescribeJobLogItems {
-    /// Creates a new builder-style object to manufacture [`DescribeJobLogItemsInput`](crate::input::DescribeJobLogItemsInput)
+    /// Creates a new builder-style object to manufacture [`DescribeJobLogItemsInput`](crate::input::DescribeJobLogItemsInput).
     pub fn builder() -> crate::input::describe_job_log_items_input::Builder {
         crate::input::describe_job_log_items_input::Builder::default()
     }
@@ -249,7 +317,7 @@ pub struct DescribeJobs {
     _private: (),
 }
 impl DescribeJobs {
-    /// Creates a new builder-style object to manufacture [`DescribeJobsInput`](crate::input::DescribeJobsInput)
+    /// Creates a new builder-style object to manufacture [`DescribeJobsInput`](crate::input::DescribeJobsInput).
     pub fn builder() -> crate::input::describe_jobs_input::Builder {
         crate::input::describe_jobs_input::Builder::default()
     }
@@ -270,6 +338,40 @@ impl aws_smithy_http::response::ParseStrictResponse for DescribeJobs {
     }
 }
 
+/// Operation shape for `DescribeLaunchConfigurationTemplates`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`describe_launch_configuration_templates`](crate::client::Client::describe_launch_configuration_templates).
+///
+/// See [`crate::client::fluent_builders::DescribeLaunchConfigurationTemplates`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DescribeLaunchConfigurationTemplates {
+    _private: (),
+}
+impl DescribeLaunchConfigurationTemplates {
+    /// Creates a new builder-style object to manufacture [`DescribeLaunchConfigurationTemplatesInput`](crate::input::DescribeLaunchConfigurationTemplatesInput).
+    pub fn builder() -> crate::input::describe_launch_configuration_templates_input::Builder {
+        crate::input::describe_launch_configuration_templates_input::Builder::default()
+    }
+    /// Creates a new `DescribeLaunchConfigurationTemplates` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DescribeLaunchConfigurationTemplates {
+    type Output = std::result::Result<
+        crate::output::DescribeLaunchConfigurationTemplatesOutput,
+        crate::error::DescribeLaunchConfigurationTemplatesError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_describe_launch_configuration_templates_error(response)
+        } else {
+            crate::operation_deser::parse_describe_launch_configuration_templates_response(response)
+        }
+    }
+}
+
 /// Operation shape for `DescribeReplicationConfigurationTemplates`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -281,7 +383,7 @@ pub struct DescribeReplicationConfigurationTemplates {
     _private: (),
 }
 impl DescribeReplicationConfigurationTemplates {
-    /// Creates a new builder-style object to manufacture [`DescribeReplicationConfigurationTemplatesInput`](crate::input::DescribeReplicationConfigurationTemplatesInput)
+    /// Creates a new builder-style object to manufacture [`DescribeReplicationConfigurationTemplatesInput`](crate::input::DescribeReplicationConfigurationTemplatesInput).
     pub fn builder() -> crate::input::describe_replication_configuration_templates_input::Builder {
         crate::input::describe_replication_configuration_templates_input::Builder::default()
     }
@@ -319,7 +421,7 @@ pub struct DescribeSourceServers {
     _private: (),
 }
 impl DescribeSourceServers {
-    /// Creates a new builder-style object to manufacture [`DescribeSourceServersInput`](crate::input::DescribeSourceServersInput)
+    /// Creates a new builder-style object to manufacture [`DescribeSourceServersInput`](crate::input::DescribeSourceServersInput).
     pub fn builder() -> crate::input::describe_source_servers_input::Builder {
         crate::input::describe_source_servers_input::Builder::default()
     }
@@ -353,7 +455,7 @@ pub struct DescribeVcenterClients {
     _private: (),
 }
 impl DescribeVcenterClients {
-    /// Creates a new builder-style object to manufacture [`DescribeVcenterClientsInput`](crate::input::DescribeVcenterClientsInput)
+    /// Creates a new builder-style object to manufacture [`DescribeVcenterClientsInput`](crate::input::DescribeVcenterClientsInput).
     pub fn builder() -> crate::input::describe_vcenter_clients_input::Builder {
         crate::input::describe_vcenter_clients_input::Builder::default()
     }
@@ -387,7 +489,7 @@ pub struct DisconnectFromService {
     _private: (),
 }
 impl DisconnectFromService {
-    /// Creates a new builder-style object to manufacture [`DisconnectFromServiceInput`](crate::input::DisconnectFromServiceInput)
+    /// Creates a new builder-style object to manufacture [`DisconnectFromServiceInput`](crate::input::DisconnectFromServiceInput).
     pub fn builder() -> crate::input::disconnect_from_service_input::Builder {
         crate::input::disconnect_from_service_input::Builder::default()
     }
@@ -421,7 +523,7 @@ pub struct FinalizeCutover {
     _private: (),
 }
 impl FinalizeCutover {
-    /// Creates a new builder-style object to manufacture [`FinalizeCutoverInput`](crate::input::FinalizeCutoverInput)
+    /// Creates a new builder-style object to manufacture [`FinalizeCutoverInput`](crate::input::FinalizeCutoverInput).
     pub fn builder() -> crate::input::finalize_cutover_input::Builder {
         crate::input::finalize_cutover_input::Builder::default()
     }
@@ -455,7 +557,7 @@ pub struct GetLaunchConfiguration {
     _private: (),
 }
 impl GetLaunchConfiguration {
-    /// Creates a new builder-style object to manufacture [`GetLaunchConfigurationInput`](crate::input::GetLaunchConfigurationInput)
+    /// Creates a new builder-style object to manufacture [`GetLaunchConfigurationInput`](crate::input::GetLaunchConfigurationInput).
     pub fn builder() -> crate::input::get_launch_configuration_input::Builder {
         crate::input::get_launch_configuration_input::Builder::default()
     }
@@ -489,7 +591,7 @@ pub struct GetReplicationConfiguration {
     _private: (),
 }
 impl GetReplicationConfiguration {
-    /// Creates a new builder-style object to manufacture [`GetReplicationConfigurationInput`](crate::input::GetReplicationConfigurationInput)
+    /// Creates a new builder-style object to manufacture [`GetReplicationConfigurationInput`](crate::input::GetReplicationConfigurationInput).
     pub fn builder() -> crate::input::get_replication_configuration_input::Builder {
         crate::input::get_replication_configuration_input::Builder::default()
     }
@@ -523,7 +625,7 @@ pub struct InitializeService {
     _private: (),
 }
 impl InitializeService {
-    /// Creates a new builder-style object to manufacture [`InitializeServiceInput`](crate::input::InitializeServiceInput)
+    /// Creates a new builder-style object to manufacture [`InitializeServiceInput`](crate::input::InitializeServiceInput).
     pub fn builder() -> crate::input::initialize_service_input::Builder {
         crate::input::initialize_service_input::Builder::default()
     }
@@ -557,7 +659,7 @@ pub struct ListTagsForResource {
     _private: (),
 }
 impl ListTagsForResource {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
     pub fn builder() -> crate::input::list_tags_for_resource_input::Builder {
         crate::input::list_tags_for_resource_input::Builder::default()
     }
@@ -591,7 +693,7 @@ pub struct MarkAsArchived {
     _private: (),
 }
 impl MarkAsArchived {
-    /// Creates a new builder-style object to manufacture [`MarkAsArchivedInput`](crate::input::MarkAsArchivedInput)
+    /// Creates a new builder-style object to manufacture [`MarkAsArchivedInput`](crate::input::MarkAsArchivedInput).
     pub fn builder() -> crate::input::mark_as_archived_input::Builder {
         crate::input::mark_as_archived_input::Builder::default()
     }
@@ -623,7 +725,7 @@ pub struct RetryDataReplication {
     _private: (),
 }
 impl RetryDataReplication {
-    /// Creates a new builder-style object to manufacture [`RetryDataReplicationInput`](crate::input::RetryDataReplicationInput)
+    /// Creates a new builder-style object to manufacture [`RetryDataReplicationInput`](crate::input::RetryDataReplicationInput).
     pub fn builder() -> crate::input::retry_data_replication_input::Builder {
         crate::input::retry_data_replication_input::Builder::default()
     }
@@ -657,7 +759,7 @@ pub struct StartCutover {
     _private: (),
 }
 impl StartCutover {
-    /// Creates a new builder-style object to manufacture [`StartCutoverInput`](crate::input::StartCutoverInput)
+    /// Creates a new builder-style object to manufacture [`StartCutoverInput`](crate::input::StartCutoverInput).
     pub fn builder() -> crate::input::start_cutover_input::Builder {
         crate::input::start_cutover_input::Builder::default()
     }
@@ -689,7 +791,7 @@ pub struct StartReplication {
     _private: (),
 }
 impl StartReplication {
-    /// Creates a new builder-style object to manufacture [`StartReplicationInput`](crate::input::StartReplicationInput)
+    /// Creates a new builder-style object to manufacture [`StartReplicationInput`](crate::input::StartReplicationInput).
     pub fn builder() -> crate::input::start_replication_input::Builder {
         crate::input::start_replication_input::Builder::default()
     }
@@ -723,7 +825,7 @@ pub struct StartTest {
     _private: (),
 }
 impl StartTest {
-    /// Creates a new builder-style object to manufacture [`StartTestInput`](crate::input::StartTestInput)
+    /// Creates a new builder-style object to manufacture [`StartTestInput`](crate::input::StartTestInput).
     pub fn builder() -> crate::input::start_test_input::Builder {
         crate::input::start_test_input::Builder::default()
     }
@@ -754,7 +856,7 @@ pub struct TagResource {
     _private: (),
 }
 impl TagResource {
-    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput)
+    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
     pub fn builder() -> crate::input::tag_resource_input::Builder {
         crate::input::tag_resource_input::Builder::default()
     }
@@ -786,7 +888,7 @@ pub struct TerminateTargetInstances {
     _private: (),
 }
 impl TerminateTargetInstances {
-    /// Creates a new builder-style object to manufacture [`TerminateTargetInstancesInput`](crate::input::TerminateTargetInstancesInput)
+    /// Creates a new builder-style object to manufacture [`TerminateTargetInstancesInput`](crate::input::TerminateTargetInstancesInput).
     pub fn builder() -> crate::input::terminate_target_instances_input::Builder {
         crate::input::terminate_target_instances_input::Builder::default()
     }
@@ -820,7 +922,7 @@ pub struct UntagResource {
     _private: (),
 }
 impl UntagResource {
-    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
     pub fn builder() -> crate::input::untag_resource_input::Builder {
         crate::input::untag_resource_input::Builder::default()
     }
@@ -852,7 +954,7 @@ pub struct UpdateLaunchConfiguration {
     _private: (),
 }
 impl UpdateLaunchConfiguration {
-    /// Creates a new builder-style object to manufacture [`UpdateLaunchConfigurationInput`](crate::input::UpdateLaunchConfigurationInput)
+    /// Creates a new builder-style object to manufacture [`UpdateLaunchConfigurationInput`](crate::input::UpdateLaunchConfigurationInput).
     pub fn builder() -> crate::input::update_launch_configuration_input::Builder {
         crate::input::update_launch_configuration_input::Builder::default()
     }
@@ -875,6 +977,40 @@ impl aws_smithy_http::response::ParseStrictResponse for UpdateLaunchConfiguratio
     }
 }
 
+/// Operation shape for `UpdateLaunchConfigurationTemplate`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`update_launch_configuration_template`](crate::client::Client::update_launch_configuration_template).
+///
+/// See [`crate::client::fluent_builders::UpdateLaunchConfigurationTemplate`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct UpdateLaunchConfigurationTemplate {
+    _private: (),
+}
+impl UpdateLaunchConfigurationTemplate {
+    /// Creates a new builder-style object to manufacture [`UpdateLaunchConfigurationTemplateInput`](crate::input::UpdateLaunchConfigurationTemplateInput).
+    pub fn builder() -> crate::input::update_launch_configuration_template_input::Builder {
+        crate::input::update_launch_configuration_template_input::Builder::default()
+    }
+    /// Creates a new `UpdateLaunchConfigurationTemplate` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for UpdateLaunchConfigurationTemplate {
+    type Output = std::result::Result<
+        crate::output::UpdateLaunchConfigurationTemplateOutput,
+        crate::error::UpdateLaunchConfigurationTemplateError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_update_launch_configuration_template_error(response)
+        } else {
+            crate::operation_deser::parse_update_launch_configuration_template_response(response)
+        }
+    }
+}
+
 /// Operation shape for `UpdateReplicationConfiguration`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -886,7 +1022,7 @@ pub struct UpdateReplicationConfiguration {
     _private: (),
 }
 impl UpdateReplicationConfiguration {
-    /// Creates a new builder-style object to manufacture [`UpdateReplicationConfigurationInput`](crate::input::UpdateReplicationConfigurationInput)
+    /// Creates a new builder-style object to manufacture [`UpdateReplicationConfigurationInput`](crate::input::UpdateReplicationConfigurationInput).
     pub fn builder() -> crate::input::update_replication_configuration_input::Builder {
         crate::input::update_replication_configuration_input::Builder::default()
     }
@@ -920,7 +1056,7 @@ pub struct UpdateReplicationConfigurationTemplate {
     _private: (),
 }
 impl UpdateReplicationConfigurationTemplate {
-    /// Creates a new builder-style object to manufacture [`UpdateReplicationConfigurationTemplateInput`](crate::input::UpdateReplicationConfigurationTemplateInput)
+    /// Creates a new builder-style object to manufacture [`UpdateReplicationConfigurationTemplateInput`](crate::input::UpdateReplicationConfigurationTemplateInput).
     pub fn builder() -> crate::input::update_replication_configuration_template_input::Builder {
         crate::input::update_replication_configuration_template_input::Builder::default()
     }
@@ -956,7 +1092,7 @@ pub struct UpdateSourceServerReplicationType {
     _private: (),
 }
 impl UpdateSourceServerReplicationType {
-    /// Creates a new builder-style object to manufacture [`UpdateSourceServerReplicationTypeInput`](crate::input::UpdateSourceServerReplicationTypeInput)
+    /// Creates a new builder-style object to manufacture [`UpdateSourceServerReplicationTypeInput`](crate::input::UpdateSourceServerReplicationTypeInput).
     pub fn builder() -> crate::input::update_source_server_replication_type_input::Builder {
         crate::input::update_source_server_replication_type_input::Builder::default()
     }

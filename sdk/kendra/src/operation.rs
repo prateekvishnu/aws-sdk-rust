@@ -10,7 +10,7 @@ pub struct AssociateEntitiesToExperience {
     _private: (),
 }
 impl AssociateEntitiesToExperience {
-    /// Creates a new builder-style object to manufacture [`AssociateEntitiesToExperienceInput`](crate::input::AssociateEntitiesToExperienceInput)
+    /// Creates a new builder-style object to manufacture [`AssociateEntitiesToExperienceInput`](crate::input::AssociateEntitiesToExperienceInput).
     pub fn builder() -> crate::input::associate_entities_to_experience_input::Builder {
         crate::input::associate_entities_to_experience_input::Builder::default()
     }
@@ -44,7 +44,7 @@ pub struct AssociatePersonasToEntities {
     _private: (),
 }
 impl AssociatePersonasToEntities {
-    /// Creates a new builder-style object to manufacture [`AssociatePersonasToEntitiesInput`](crate::input::AssociatePersonasToEntitiesInput)
+    /// Creates a new builder-style object to manufacture [`AssociatePersonasToEntitiesInput`](crate::input::AssociatePersonasToEntitiesInput).
     pub fn builder() -> crate::input::associate_personas_to_entities_input::Builder {
         crate::input::associate_personas_to_entities_input::Builder::default()
     }
@@ -78,7 +78,7 @@ pub struct BatchDeleteDocument {
     _private: (),
 }
 impl BatchDeleteDocument {
-    /// Creates a new builder-style object to manufacture [`BatchDeleteDocumentInput`](crate::input::BatchDeleteDocumentInput)
+    /// Creates a new builder-style object to manufacture [`BatchDeleteDocumentInput`](crate::input::BatchDeleteDocumentInput).
     pub fn builder() -> crate::input::batch_delete_document_input::Builder {
         crate::input::batch_delete_document_input::Builder::default()
     }
@@ -112,7 +112,7 @@ pub struct BatchGetDocumentStatus {
     _private: (),
 }
 impl BatchGetDocumentStatus {
-    /// Creates a new builder-style object to manufacture [`BatchGetDocumentStatusInput`](crate::input::BatchGetDocumentStatusInput)
+    /// Creates a new builder-style object to manufacture [`BatchGetDocumentStatusInput`](crate::input::BatchGetDocumentStatusInput).
     pub fn builder() -> crate::input::batch_get_document_status_input::Builder {
         crate::input::batch_get_document_status_input::Builder::default()
     }
@@ -146,7 +146,7 @@ pub struct BatchPutDocument {
     _private: (),
 }
 impl BatchPutDocument {
-    /// Creates a new builder-style object to manufacture [`BatchPutDocumentInput`](crate::input::BatchPutDocumentInput)
+    /// Creates a new builder-style object to manufacture [`BatchPutDocumentInput`](crate::input::BatchPutDocumentInput).
     pub fn builder() -> crate::input::batch_put_document_input::Builder {
         crate::input::batch_put_document_input::Builder::default()
     }
@@ -180,7 +180,7 @@ pub struct ClearQuerySuggestions {
     _private: (),
 }
 impl ClearQuerySuggestions {
-    /// Creates a new builder-style object to manufacture [`ClearQuerySuggestionsInput`](crate::input::ClearQuerySuggestionsInput)
+    /// Creates a new builder-style object to manufacture [`ClearQuerySuggestionsInput`](crate::input::ClearQuerySuggestionsInput).
     pub fn builder() -> crate::input::clear_query_suggestions_input::Builder {
         crate::input::clear_query_suggestions_input::Builder::default()
     }
@@ -203,6 +203,40 @@ impl aws_smithy_http::response::ParseStrictResponse for ClearQuerySuggestions {
     }
 }
 
+/// Operation shape for `CreateAccessControlConfiguration`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`create_access_control_configuration`](crate::client::Client::create_access_control_configuration).
+///
+/// See [`crate::client::fluent_builders::CreateAccessControlConfiguration`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct CreateAccessControlConfiguration {
+    _private: (),
+}
+impl CreateAccessControlConfiguration {
+    /// Creates a new builder-style object to manufacture [`CreateAccessControlConfigurationInput`](crate::input::CreateAccessControlConfigurationInput).
+    pub fn builder() -> crate::input::create_access_control_configuration_input::Builder {
+        crate::input::create_access_control_configuration_input::Builder::default()
+    }
+    /// Creates a new `CreateAccessControlConfiguration` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for CreateAccessControlConfiguration {
+    type Output = std::result::Result<
+        crate::output::CreateAccessControlConfigurationOutput,
+        crate::error::CreateAccessControlConfigurationError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_create_access_control_configuration_error(response)
+        } else {
+            crate::operation_deser::parse_create_access_control_configuration_response(response)
+        }
+    }
+}
+
 /// Operation shape for `CreateDataSource`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -214,7 +248,7 @@ pub struct CreateDataSource {
     _private: (),
 }
 impl CreateDataSource {
-    /// Creates a new builder-style object to manufacture [`CreateDataSourceInput`](crate::input::CreateDataSourceInput)
+    /// Creates a new builder-style object to manufacture [`CreateDataSourceInput`](crate::input::CreateDataSourceInput).
     pub fn builder() -> crate::input::create_data_source_input::Builder {
         crate::input::create_data_source_input::Builder::default()
     }
@@ -248,7 +282,7 @@ pub struct CreateExperience {
     _private: (),
 }
 impl CreateExperience {
-    /// Creates a new builder-style object to manufacture [`CreateExperienceInput`](crate::input::CreateExperienceInput)
+    /// Creates a new builder-style object to manufacture [`CreateExperienceInput`](crate::input::CreateExperienceInput).
     pub fn builder() -> crate::input::create_experience_input::Builder {
         crate::input::create_experience_input::Builder::default()
     }
@@ -282,7 +316,7 @@ pub struct CreateFaq {
     _private: (),
 }
 impl CreateFaq {
-    /// Creates a new builder-style object to manufacture [`CreateFaqInput`](crate::input::CreateFaqInput)
+    /// Creates a new builder-style object to manufacture [`CreateFaqInput`](crate::input::CreateFaqInput).
     pub fn builder() -> crate::input::create_faq_input::Builder {
         crate::input::create_faq_input::Builder::default()
     }
@@ -313,7 +347,7 @@ pub struct CreateIndex {
     _private: (),
 }
 impl CreateIndex {
-    /// Creates a new builder-style object to manufacture [`CreateIndexInput`](crate::input::CreateIndexInput)
+    /// Creates a new builder-style object to manufacture [`CreateIndexInput`](crate::input::CreateIndexInput).
     pub fn builder() -> crate::input::create_index_input::Builder {
         crate::input::create_index_input::Builder::default()
     }
@@ -345,7 +379,7 @@ pub struct CreateQuerySuggestionsBlockList {
     _private: (),
 }
 impl CreateQuerySuggestionsBlockList {
-    /// Creates a new builder-style object to manufacture [`CreateQuerySuggestionsBlockListInput`](crate::input::CreateQuerySuggestionsBlockListInput)
+    /// Creates a new builder-style object to manufacture [`CreateQuerySuggestionsBlockListInput`](crate::input::CreateQuerySuggestionsBlockListInput).
     pub fn builder() -> crate::input::create_query_suggestions_block_list_input::Builder {
         crate::input::create_query_suggestions_block_list_input::Builder::default()
     }
@@ -379,7 +413,7 @@ pub struct CreateThesaurus {
     _private: (),
 }
 impl CreateThesaurus {
-    /// Creates a new builder-style object to manufacture [`CreateThesaurusInput`](crate::input::CreateThesaurusInput)
+    /// Creates a new builder-style object to manufacture [`CreateThesaurusInput`](crate::input::CreateThesaurusInput).
     pub fn builder() -> crate::input::create_thesaurus_input::Builder {
         crate::input::create_thesaurus_input::Builder::default()
     }
@@ -402,6 +436,40 @@ impl aws_smithy_http::response::ParseStrictResponse for CreateThesaurus {
     }
 }
 
+/// Operation shape for `DeleteAccessControlConfiguration`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`delete_access_control_configuration`](crate::client::Client::delete_access_control_configuration).
+///
+/// See [`crate::client::fluent_builders::DeleteAccessControlConfiguration`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DeleteAccessControlConfiguration {
+    _private: (),
+}
+impl DeleteAccessControlConfiguration {
+    /// Creates a new builder-style object to manufacture [`DeleteAccessControlConfigurationInput`](crate::input::DeleteAccessControlConfigurationInput).
+    pub fn builder() -> crate::input::delete_access_control_configuration_input::Builder {
+        crate::input::delete_access_control_configuration_input::Builder::default()
+    }
+    /// Creates a new `DeleteAccessControlConfiguration` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DeleteAccessControlConfiguration {
+    type Output = std::result::Result<
+        crate::output::DeleteAccessControlConfigurationOutput,
+        crate::error::DeleteAccessControlConfigurationError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_delete_access_control_configuration_error(response)
+        } else {
+            crate::operation_deser::parse_delete_access_control_configuration_response(response)
+        }
+    }
+}
+
 /// Operation shape for `DeleteDataSource`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -413,7 +481,7 @@ pub struct DeleteDataSource {
     _private: (),
 }
 impl DeleteDataSource {
-    /// Creates a new builder-style object to manufacture [`DeleteDataSourceInput`](crate::input::DeleteDataSourceInput)
+    /// Creates a new builder-style object to manufacture [`DeleteDataSourceInput`](crate::input::DeleteDataSourceInput).
     pub fn builder() -> crate::input::delete_data_source_input::Builder {
         crate::input::delete_data_source_input::Builder::default()
     }
@@ -447,7 +515,7 @@ pub struct DeleteExperience {
     _private: (),
 }
 impl DeleteExperience {
-    /// Creates a new builder-style object to manufacture [`DeleteExperienceInput`](crate::input::DeleteExperienceInput)
+    /// Creates a new builder-style object to manufacture [`DeleteExperienceInput`](crate::input::DeleteExperienceInput).
     pub fn builder() -> crate::input::delete_experience_input::Builder {
         crate::input::delete_experience_input::Builder::default()
     }
@@ -481,7 +549,7 @@ pub struct DeleteFaq {
     _private: (),
 }
 impl DeleteFaq {
-    /// Creates a new builder-style object to manufacture [`DeleteFaqInput`](crate::input::DeleteFaqInput)
+    /// Creates a new builder-style object to manufacture [`DeleteFaqInput`](crate::input::DeleteFaqInput).
     pub fn builder() -> crate::input::delete_faq_input::Builder {
         crate::input::delete_faq_input::Builder::default()
     }
@@ -512,7 +580,7 @@ pub struct DeleteIndex {
     _private: (),
 }
 impl DeleteIndex {
-    /// Creates a new builder-style object to manufacture [`DeleteIndexInput`](crate::input::DeleteIndexInput)
+    /// Creates a new builder-style object to manufacture [`DeleteIndexInput`](crate::input::DeleteIndexInput).
     pub fn builder() -> crate::input::delete_index_input::Builder {
         crate::input::delete_index_input::Builder::default()
     }
@@ -544,7 +612,7 @@ pub struct DeletePrincipalMapping {
     _private: (),
 }
 impl DeletePrincipalMapping {
-    /// Creates a new builder-style object to manufacture [`DeletePrincipalMappingInput`](crate::input::DeletePrincipalMappingInput)
+    /// Creates a new builder-style object to manufacture [`DeletePrincipalMappingInput`](crate::input::DeletePrincipalMappingInput).
     pub fn builder() -> crate::input::delete_principal_mapping_input::Builder {
         crate::input::delete_principal_mapping_input::Builder::default()
     }
@@ -578,7 +646,7 @@ pub struct DeleteQuerySuggestionsBlockList {
     _private: (),
 }
 impl DeleteQuerySuggestionsBlockList {
-    /// Creates a new builder-style object to manufacture [`DeleteQuerySuggestionsBlockListInput`](crate::input::DeleteQuerySuggestionsBlockListInput)
+    /// Creates a new builder-style object to manufacture [`DeleteQuerySuggestionsBlockListInput`](crate::input::DeleteQuerySuggestionsBlockListInput).
     pub fn builder() -> crate::input::delete_query_suggestions_block_list_input::Builder {
         crate::input::delete_query_suggestions_block_list_input::Builder::default()
     }
@@ -612,7 +680,7 @@ pub struct DeleteThesaurus {
     _private: (),
 }
 impl DeleteThesaurus {
-    /// Creates a new builder-style object to manufacture [`DeleteThesaurusInput`](crate::input::DeleteThesaurusInput)
+    /// Creates a new builder-style object to manufacture [`DeleteThesaurusInput`](crate::input::DeleteThesaurusInput).
     pub fn builder() -> crate::input::delete_thesaurus_input::Builder {
         crate::input::delete_thesaurus_input::Builder::default()
     }
@@ -635,6 +703,40 @@ impl aws_smithy_http::response::ParseStrictResponse for DeleteThesaurus {
     }
 }
 
+/// Operation shape for `DescribeAccessControlConfiguration`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`describe_access_control_configuration`](crate::client::Client::describe_access_control_configuration).
+///
+/// See [`crate::client::fluent_builders::DescribeAccessControlConfiguration`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DescribeAccessControlConfiguration {
+    _private: (),
+}
+impl DescribeAccessControlConfiguration {
+    /// Creates a new builder-style object to manufacture [`DescribeAccessControlConfigurationInput`](crate::input::DescribeAccessControlConfigurationInput).
+    pub fn builder() -> crate::input::describe_access_control_configuration_input::Builder {
+        crate::input::describe_access_control_configuration_input::Builder::default()
+    }
+    /// Creates a new `DescribeAccessControlConfiguration` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DescribeAccessControlConfiguration {
+    type Output = std::result::Result<
+        crate::output::DescribeAccessControlConfigurationOutput,
+        crate::error::DescribeAccessControlConfigurationError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_describe_access_control_configuration_error(response)
+        } else {
+            crate::operation_deser::parse_describe_access_control_configuration_response(response)
+        }
+    }
+}
+
 /// Operation shape for `DescribeDataSource`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -646,7 +748,7 @@ pub struct DescribeDataSource {
     _private: (),
 }
 impl DescribeDataSource {
-    /// Creates a new builder-style object to manufacture [`DescribeDataSourceInput`](crate::input::DescribeDataSourceInput)
+    /// Creates a new builder-style object to manufacture [`DescribeDataSourceInput`](crate::input::DescribeDataSourceInput).
     pub fn builder() -> crate::input::describe_data_source_input::Builder {
         crate::input::describe_data_source_input::Builder::default()
     }
@@ -680,7 +782,7 @@ pub struct DescribeExperience {
     _private: (),
 }
 impl DescribeExperience {
-    /// Creates a new builder-style object to manufacture [`DescribeExperienceInput`](crate::input::DescribeExperienceInput)
+    /// Creates a new builder-style object to manufacture [`DescribeExperienceInput`](crate::input::DescribeExperienceInput).
     pub fn builder() -> crate::input::describe_experience_input::Builder {
         crate::input::describe_experience_input::Builder::default()
     }
@@ -714,7 +816,7 @@ pub struct DescribeFaq {
     _private: (),
 }
 impl DescribeFaq {
-    /// Creates a new builder-style object to manufacture [`DescribeFaqInput`](crate::input::DescribeFaqInput)
+    /// Creates a new builder-style object to manufacture [`DescribeFaqInput`](crate::input::DescribeFaqInput).
     pub fn builder() -> crate::input::describe_faq_input::Builder {
         crate::input::describe_faq_input::Builder::default()
     }
@@ -746,7 +848,7 @@ pub struct DescribeIndex {
     _private: (),
 }
 impl DescribeIndex {
-    /// Creates a new builder-style object to manufacture [`DescribeIndexInput`](crate::input::DescribeIndexInput)
+    /// Creates a new builder-style object to manufacture [`DescribeIndexInput`](crate::input::DescribeIndexInput).
     pub fn builder() -> crate::input::describe_index_input::Builder {
         crate::input::describe_index_input::Builder::default()
     }
@@ -778,7 +880,7 @@ pub struct DescribePrincipalMapping {
     _private: (),
 }
 impl DescribePrincipalMapping {
-    /// Creates a new builder-style object to manufacture [`DescribePrincipalMappingInput`](crate::input::DescribePrincipalMappingInput)
+    /// Creates a new builder-style object to manufacture [`DescribePrincipalMappingInput`](crate::input::DescribePrincipalMappingInput).
     pub fn builder() -> crate::input::describe_principal_mapping_input::Builder {
         crate::input::describe_principal_mapping_input::Builder::default()
     }
@@ -812,7 +914,7 @@ pub struct DescribeQuerySuggestionsBlockList {
     _private: (),
 }
 impl DescribeQuerySuggestionsBlockList {
-    /// Creates a new builder-style object to manufacture [`DescribeQuerySuggestionsBlockListInput`](crate::input::DescribeQuerySuggestionsBlockListInput)
+    /// Creates a new builder-style object to manufacture [`DescribeQuerySuggestionsBlockListInput`](crate::input::DescribeQuerySuggestionsBlockListInput).
     pub fn builder() -> crate::input::describe_query_suggestions_block_list_input::Builder {
         crate::input::describe_query_suggestions_block_list_input::Builder::default()
     }
@@ -846,7 +948,7 @@ pub struct DescribeQuerySuggestionsConfig {
     _private: (),
 }
 impl DescribeQuerySuggestionsConfig {
-    /// Creates a new builder-style object to manufacture [`DescribeQuerySuggestionsConfigInput`](crate::input::DescribeQuerySuggestionsConfigInput)
+    /// Creates a new builder-style object to manufacture [`DescribeQuerySuggestionsConfigInput`](crate::input::DescribeQuerySuggestionsConfigInput).
     pub fn builder() -> crate::input::describe_query_suggestions_config_input::Builder {
         crate::input::describe_query_suggestions_config_input::Builder::default()
     }
@@ -880,7 +982,7 @@ pub struct DescribeThesaurus {
     _private: (),
 }
 impl DescribeThesaurus {
-    /// Creates a new builder-style object to manufacture [`DescribeThesaurusInput`](crate::input::DescribeThesaurusInput)
+    /// Creates a new builder-style object to manufacture [`DescribeThesaurusInput`](crate::input::DescribeThesaurusInput).
     pub fn builder() -> crate::input::describe_thesaurus_input::Builder {
         crate::input::describe_thesaurus_input::Builder::default()
     }
@@ -914,7 +1016,7 @@ pub struct DisassociateEntitiesFromExperience {
     _private: (),
 }
 impl DisassociateEntitiesFromExperience {
-    /// Creates a new builder-style object to manufacture [`DisassociateEntitiesFromExperienceInput`](crate::input::DisassociateEntitiesFromExperienceInput)
+    /// Creates a new builder-style object to manufacture [`DisassociateEntitiesFromExperienceInput`](crate::input::DisassociateEntitiesFromExperienceInput).
     pub fn builder() -> crate::input::disassociate_entities_from_experience_input::Builder {
         crate::input::disassociate_entities_from_experience_input::Builder::default()
     }
@@ -948,7 +1050,7 @@ pub struct DisassociatePersonasFromEntities {
     _private: (),
 }
 impl DisassociatePersonasFromEntities {
-    /// Creates a new builder-style object to manufacture [`DisassociatePersonasFromEntitiesInput`](crate::input::DisassociatePersonasFromEntitiesInput)
+    /// Creates a new builder-style object to manufacture [`DisassociatePersonasFromEntitiesInput`](crate::input::DisassociatePersonasFromEntitiesInput).
     pub fn builder() -> crate::input::disassociate_personas_from_entities_input::Builder {
         crate::input::disassociate_personas_from_entities_input::Builder::default()
     }
@@ -982,7 +1084,7 @@ pub struct GetQuerySuggestions {
     _private: (),
 }
 impl GetQuerySuggestions {
-    /// Creates a new builder-style object to manufacture [`GetQuerySuggestionsInput`](crate::input::GetQuerySuggestionsInput)
+    /// Creates a new builder-style object to manufacture [`GetQuerySuggestionsInput`](crate::input::GetQuerySuggestionsInput).
     pub fn builder() -> crate::input::get_query_suggestions_input::Builder {
         crate::input::get_query_suggestions_input::Builder::default()
     }
@@ -1016,7 +1118,7 @@ pub struct GetSnapshots {
     _private: (),
 }
 impl GetSnapshots {
-    /// Creates a new builder-style object to manufacture [`GetSnapshotsInput`](crate::input::GetSnapshotsInput)
+    /// Creates a new builder-style object to manufacture [`GetSnapshotsInput`](crate::input::GetSnapshotsInput).
     pub fn builder() -> crate::input::get_snapshots_input::Builder {
         crate::input::get_snapshots_input::Builder::default()
     }
@@ -1037,6 +1139,40 @@ impl aws_smithy_http::response::ParseStrictResponse for GetSnapshots {
     }
 }
 
+/// Operation shape for `ListAccessControlConfigurations`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`list_access_control_configurations`](crate::client::Client::list_access_control_configurations).
+///
+/// See [`crate::client::fluent_builders::ListAccessControlConfigurations`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct ListAccessControlConfigurations {
+    _private: (),
+}
+impl ListAccessControlConfigurations {
+    /// Creates a new builder-style object to manufacture [`ListAccessControlConfigurationsInput`](crate::input::ListAccessControlConfigurationsInput).
+    pub fn builder() -> crate::input::list_access_control_configurations_input::Builder {
+        crate::input::list_access_control_configurations_input::Builder::default()
+    }
+    /// Creates a new `ListAccessControlConfigurations` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for ListAccessControlConfigurations {
+    type Output = std::result::Result<
+        crate::output::ListAccessControlConfigurationsOutput,
+        crate::error::ListAccessControlConfigurationsError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_list_access_control_configurations_error(response)
+        } else {
+            crate::operation_deser::parse_list_access_control_configurations_response(response)
+        }
+    }
+}
+
 /// Operation shape for `ListDataSources`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -1048,7 +1184,7 @@ pub struct ListDataSources {
     _private: (),
 }
 impl ListDataSources {
-    /// Creates a new builder-style object to manufacture [`ListDataSourcesInput`](crate::input::ListDataSourcesInput)
+    /// Creates a new builder-style object to manufacture [`ListDataSourcesInput`](crate::input::ListDataSourcesInput).
     pub fn builder() -> crate::input::list_data_sources_input::Builder {
         crate::input::list_data_sources_input::Builder::default()
     }
@@ -1082,7 +1218,7 @@ pub struct ListDataSourceSyncJobs {
     _private: (),
 }
 impl ListDataSourceSyncJobs {
-    /// Creates a new builder-style object to manufacture [`ListDataSourceSyncJobsInput`](crate::input::ListDataSourceSyncJobsInput)
+    /// Creates a new builder-style object to manufacture [`ListDataSourceSyncJobsInput`](crate::input::ListDataSourceSyncJobsInput).
     pub fn builder() -> crate::input::list_data_source_sync_jobs_input::Builder {
         crate::input::list_data_source_sync_jobs_input::Builder::default()
     }
@@ -1116,7 +1252,7 @@ pub struct ListEntityPersonas {
     _private: (),
 }
 impl ListEntityPersonas {
-    /// Creates a new builder-style object to manufacture [`ListEntityPersonasInput`](crate::input::ListEntityPersonasInput)
+    /// Creates a new builder-style object to manufacture [`ListEntityPersonasInput`](crate::input::ListEntityPersonasInput).
     pub fn builder() -> crate::input::list_entity_personas_input::Builder {
         crate::input::list_entity_personas_input::Builder::default()
     }
@@ -1150,7 +1286,7 @@ pub struct ListExperienceEntities {
     _private: (),
 }
 impl ListExperienceEntities {
-    /// Creates a new builder-style object to manufacture [`ListExperienceEntitiesInput`](crate::input::ListExperienceEntitiesInput)
+    /// Creates a new builder-style object to manufacture [`ListExperienceEntitiesInput`](crate::input::ListExperienceEntitiesInput).
     pub fn builder() -> crate::input::list_experience_entities_input::Builder {
         crate::input::list_experience_entities_input::Builder::default()
     }
@@ -1184,7 +1320,7 @@ pub struct ListExperiences {
     _private: (),
 }
 impl ListExperiences {
-    /// Creates a new builder-style object to manufacture [`ListExperiencesInput`](crate::input::ListExperiencesInput)
+    /// Creates a new builder-style object to manufacture [`ListExperiencesInput`](crate::input::ListExperiencesInput).
     pub fn builder() -> crate::input::list_experiences_input::Builder {
         crate::input::list_experiences_input::Builder::default()
     }
@@ -1218,7 +1354,7 @@ pub struct ListFaqs {
     _private: (),
 }
 impl ListFaqs {
-    /// Creates a new builder-style object to manufacture [`ListFaqsInput`](crate::input::ListFaqsInput)
+    /// Creates a new builder-style object to manufacture [`ListFaqsInput`](crate::input::ListFaqsInput).
     pub fn builder() -> crate::input::list_faqs_input::Builder {
         crate::input::list_faqs_input::Builder::default()
     }
@@ -1249,7 +1385,7 @@ pub struct ListGroupsOlderThanOrderingId {
     _private: (),
 }
 impl ListGroupsOlderThanOrderingId {
-    /// Creates a new builder-style object to manufacture [`ListGroupsOlderThanOrderingIdInput`](crate::input::ListGroupsOlderThanOrderingIdInput)
+    /// Creates a new builder-style object to manufacture [`ListGroupsOlderThanOrderingIdInput`](crate::input::ListGroupsOlderThanOrderingIdInput).
     pub fn builder() -> crate::input::list_groups_older_than_ordering_id_input::Builder {
         crate::input::list_groups_older_than_ordering_id_input::Builder::default()
     }
@@ -1283,7 +1419,7 @@ pub struct ListIndices {
     _private: (),
 }
 impl ListIndices {
-    /// Creates a new builder-style object to manufacture [`ListIndicesInput`](crate::input::ListIndicesInput)
+    /// Creates a new builder-style object to manufacture [`ListIndicesInput`](crate::input::ListIndicesInput).
     pub fn builder() -> crate::input::list_indices_input::Builder {
         crate::input::list_indices_input::Builder::default()
     }
@@ -1315,7 +1451,7 @@ pub struct ListQuerySuggestionsBlockLists {
     _private: (),
 }
 impl ListQuerySuggestionsBlockLists {
-    /// Creates a new builder-style object to manufacture [`ListQuerySuggestionsBlockListsInput`](crate::input::ListQuerySuggestionsBlockListsInput)
+    /// Creates a new builder-style object to manufacture [`ListQuerySuggestionsBlockListsInput`](crate::input::ListQuerySuggestionsBlockListsInput).
     pub fn builder() -> crate::input::list_query_suggestions_block_lists_input::Builder {
         crate::input::list_query_suggestions_block_lists_input::Builder::default()
     }
@@ -1349,7 +1485,7 @@ pub struct ListTagsForResource {
     _private: (),
 }
 impl ListTagsForResource {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
     pub fn builder() -> crate::input::list_tags_for_resource_input::Builder {
         crate::input::list_tags_for_resource_input::Builder::default()
     }
@@ -1383,7 +1519,7 @@ pub struct ListThesauri {
     _private: (),
 }
 impl ListThesauri {
-    /// Creates a new builder-style object to manufacture [`ListThesauriInput`](crate::input::ListThesauriInput)
+    /// Creates a new builder-style object to manufacture [`ListThesauriInput`](crate::input::ListThesauriInput).
     pub fn builder() -> crate::input::list_thesauri_input::Builder {
         crate::input::list_thesauri_input::Builder::default()
     }
@@ -1415,7 +1551,7 @@ pub struct PutPrincipalMapping {
     _private: (),
 }
 impl PutPrincipalMapping {
-    /// Creates a new builder-style object to manufacture [`PutPrincipalMappingInput`](crate::input::PutPrincipalMappingInput)
+    /// Creates a new builder-style object to manufacture [`PutPrincipalMappingInput`](crate::input::PutPrincipalMappingInput).
     pub fn builder() -> crate::input::put_principal_mapping_input::Builder {
         crate::input::put_principal_mapping_input::Builder::default()
     }
@@ -1449,7 +1585,7 @@ pub struct Query {
     _private: (),
 }
 impl Query {
-    /// Creates a new builder-style object to manufacture [`QueryInput`](crate::input::QueryInput)
+    /// Creates a new builder-style object to manufacture [`QueryInput`](crate::input::QueryInput).
     pub fn builder() -> crate::input::query_input::Builder {
         crate::input::query_input::Builder::default()
     }
@@ -1480,7 +1616,7 @@ pub struct StartDataSourceSyncJob {
     _private: (),
 }
 impl StartDataSourceSyncJob {
-    /// Creates a new builder-style object to manufacture [`StartDataSourceSyncJobInput`](crate::input::StartDataSourceSyncJobInput)
+    /// Creates a new builder-style object to manufacture [`StartDataSourceSyncJobInput`](crate::input::StartDataSourceSyncJobInput).
     pub fn builder() -> crate::input::start_data_source_sync_job_input::Builder {
         crate::input::start_data_source_sync_job_input::Builder::default()
     }
@@ -1514,7 +1650,7 @@ pub struct StopDataSourceSyncJob {
     _private: (),
 }
 impl StopDataSourceSyncJob {
-    /// Creates a new builder-style object to manufacture [`StopDataSourceSyncJobInput`](crate::input::StopDataSourceSyncJobInput)
+    /// Creates a new builder-style object to manufacture [`StopDataSourceSyncJobInput`](crate::input::StopDataSourceSyncJobInput).
     pub fn builder() -> crate::input::stop_data_source_sync_job_input::Builder {
         crate::input::stop_data_source_sync_job_input::Builder::default()
     }
@@ -1548,7 +1684,7 @@ pub struct SubmitFeedback {
     _private: (),
 }
 impl SubmitFeedback {
-    /// Creates a new builder-style object to manufacture [`SubmitFeedbackInput`](crate::input::SubmitFeedbackInput)
+    /// Creates a new builder-style object to manufacture [`SubmitFeedbackInput`](crate::input::SubmitFeedbackInput).
     pub fn builder() -> crate::input::submit_feedback_input::Builder {
         crate::input::submit_feedback_input::Builder::default()
     }
@@ -1580,7 +1716,7 @@ pub struct TagResource {
     _private: (),
 }
 impl TagResource {
-    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput)
+    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
     pub fn builder() -> crate::input::tag_resource_input::Builder {
         crate::input::tag_resource_input::Builder::default()
     }
@@ -1612,7 +1748,7 @@ pub struct UntagResource {
     _private: (),
 }
 impl UntagResource {
-    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
     pub fn builder() -> crate::input::untag_resource_input::Builder {
         crate::input::untag_resource_input::Builder::default()
     }
@@ -1633,6 +1769,40 @@ impl aws_smithy_http::response::ParseStrictResponse for UntagResource {
     }
 }
 
+/// Operation shape for `UpdateAccessControlConfiguration`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`update_access_control_configuration`](crate::client::Client::update_access_control_configuration).
+///
+/// See [`crate::client::fluent_builders::UpdateAccessControlConfiguration`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct UpdateAccessControlConfiguration {
+    _private: (),
+}
+impl UpdateAccessControlConfiguration {
+    /// Creates a new builder-style object to manufacture [`UpdateAccessControlConfigurationInput`](crate::input::UpdateAccessControlConfigurationInput).
+    pub fn builder() -> crate::input::update_access_control_configuration_input::Builder {
+        crate::input::update_access_control_configuration_input::Builder::default()
+    }
+    /// Creates a new `UpdateAccessControlConfiguration` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for UpdateAccessControlConfiguration {
+    type Output = std::result::Result<
+        crate::output::UpdateAccessControlConfigurationOutput,
+        crate::error::UpdateAccessControlConfigurationError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_update_access_control_configuration_error(response)
+        } else {
+            crate::operation_deser::parse_update_access_control_configuration_response(response)
+        }
+    }
+}
+
 /// Operation shape for `UpdateDataSource`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -1644,7 +1814,7 @@ pub struct UpdateDataSource {
     _private: (),
 }
 impl UpdateDataSource {
-    /// Creates a new builder-style object to manufacture [`UpdateDataSourceInput`](crate::input::UpdateDataSourceInput)
+    /// Creates a new builder-style object to manufacture [`UpdateDataSourceInput`](crate::input::UpdateDataSourceInput).
     pub fn builder() -> crate::input::update_data_source_input::Builder {
         crate::input::update_data_source_input::Builder::default()
     }
@@ -1678,7 +1848,7 @@ pub struct UpdateExperience {
     _private: (),
 }
 impl UpdateExperience {
-    /// Creates a new builder-style object to manufacture [`UpdateExperienceInput`](crate::input::UpdateExperienceInput)
+    /// Creates a new builder-style object to manufacture [`UpdateExperienceInput`](crate::input::UpdateExperienceInput).
     pub fn builder() -> crate::input::update_experience_input::Builder {
         crate::input::update_experience_input::Builder::default()
     }
@@ -1712,7 +1882,7 @@ pub struct UpdateIndex {
     _private: (),
 }
 impl UpdateIndex {
-    /// Creates a new builder-style object to manufacture [`UpdateIndexInput`](crate::input::UpdateIndexInput)
+    /// Creates a new builder-style object to manufacture [`UpdateIndexInput`](crate::input::UpdateIndexInput).
     pub fn builder() -> crate::input::update_index_input::Builder {
         crate::input::update_index_input::Builder::default()
     }
@@ -1744,7 +1914,7 @@ pub struct UpdateQuerySuggestionsBlockList {
     _private: (),
 }
 impl UpdateQuerySuggestionsBlockList {
-    /// Creates a new builder-style object to manufacture [`UpdateQuerySuggestionsBlockListInput`](crate::input::UpdateQuerySuggestionsBlockListInput)
+    /// Creates a new builder-style object to manufacture [`UpdateQuerySuggestionsBlockListInput`](crate::input::UpdateQuerySuggestionsBlockListInput).
     pub fn builder() -> crate::input::update_query_suggestions_block_list_input::Builder {
         crate::input::update_query_suggestions_block_list_input::Builder::default()
     }
@@ -1778,7 +1948,7 @@ pub struct UpdateQuerySuggestionsConfig {
     _private: (),
 }
 impl UpdateQuerySuggestionsConfig {
-    /// Creates a new builder-style object to manufacture [`UpdateQuerySuggestionsConfigInput`](crate::input::UpdateQuerySuggestionsConfigInput)
+    /// Creates a new builder-style object to manufacture [`UpdateQuerySuggestionsConfigInput`](crate::input::UpdateQuerySuggestionsConfigInput).
     pub fn builder() -> crate::input::update_query_suggestions_config_input::Builder {
         crate::input::update_query_suggestions_config_input::Builder::default()
     }
@@ -1812,7 +1982,7 @@ pub struct UpdateThesaurus {
     _private: (),
 }
 impl UpdateThesaurus {
-    /// Creates a new builder-style object to manufacture [`UpdateThesaurusInput`](crate::input::UpdateThesaurusInput)
+    /// Creates a new builder-style object to manufacture [`UpdateThesaurusInput`](crate::input::UpdateThesaurusInput).
     pub fn builder() -> crate::input::update_thesaurus_input::Builder {
         crate::input::update_thesaurus_input::Builder::default()
     }

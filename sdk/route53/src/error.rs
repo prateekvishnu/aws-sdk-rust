@@ -165,7 +165,7 @@ pub enum AssociateVPCWithHostedZoneErrorKind {
     InvalidInput(crate::error::InvalidInput),
     /// <p>The VPC ID that you specified either isn't a valid ID or the current account is not authorized to access this VPC.</p>
     InvalidVpcId(crate::error::InvalidVpcId),
-    /// <p>This operation can't be completed either because the current account has reached the limit on reusable delegation sets that it can create or because you've reached the limit on the number of Amazon VPCs that you can associate with a private hosted zone. To get the current limit on the number of reusable delegation sets, see <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetAccountLimit.html">GetAccountLimit</a>. To get the current limit on the number of Amazon VPCs that you can associate with a private hosted zone, see <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZoneLimit.html">GetHostedZoneLimit</a>. To request a higher limit, <a href="http://aws.amazon.com/route53-request">create a case</a> with the Amazon Web Services Support Center.</p>
+    /// <p>This operation can't be completed because the current account has reached the limit on the resource you are trying to create. To request a higher limit, <a href="http://aws.amazon.com/route53-request">create a case</a> with the Amazon Web Services Support Center.</p>
     LimitsExceeded(crate::error::LimitsExceeded),
     /// <p>No hosted zone exists with the ID that you specified.</p>
     NoSuchHostedZone(crate::error::NoSuchHostedZone),
@@ -312,6 +312,152 @@ impl std::error::Error for AssociateVPCWithHostedZoneError {
             AssociateVPCWithHostedZoneErrorKind::PriorRequestNotComplete(_inner) => Some(_inner),
             AssociateVPCWithHostedZoneErrorKind::PublicZoneVpcAssociation(_inner) => Some(_inner),
             AssociateVPCWithHostedZoneErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `ChangeCidrCollection` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct ChangeCidrCollectionError {
+    /// Kind of error that occurred.
+    pub kind: ChangeCidrCollectionErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `ChangeCidrCollection` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum ChangeCidrCollectionErrorKind {
+    /// <p>This CIDR block is already in use.</p>
+    CidrBlockInUseException(crate::error::CidrBlockInUseException),
+    /// <p>The CIDR collection version you provided, doesn't match the one in the <code>ListCidrCollections</code> operation.</p>
+    CidrCollectionVersionMismatchException(crate::error::CidrCollectionVersionMismatchException),
+    /// <p>Another user submitted a request to create, update, or delete the object at the same time that you did. Retry the request. </p>
+    ConcurrentModification(crate::error::ConcurrentModification),
+    /// <p>The input is not valid.</p>
+    InvalidInput(crate::error::InvalidInput),
+    /// <p>This operation can't be completed because the current account has reached the limit on the resource you are trying to create. To request a higher limit, <a href="http://aws.amazon.com/route53-request">create a case</a> with the Amazon Web Services Support Center.</p>
+    LimitsExceeded(crate::error::LimitsExceeded),
+    /// <p>The CIDR collection you specified, doesn't exist.</p>
+    NoSuchCidrCollectionException(crate::error::NoSuchCidrCollectionException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for ChangeCidrCollectionError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            ChangeCidrCollectionErrorKind::CidrBlockInUseException(_inner) => _inner.fmt(f),
+            ChangeCidrCollectionErrorKind::CidrCollectionVersionMismatchException(_inner) => {
+                _inner.fmt(f)
+            }
+            ChangeCidrCollectionErrorKind::ConcurrentModification(_inner) => _inner.fmt(f),
+            ChangeCidrCollectionErrorKind::InvalidInput(_inner) => _inner.fmt(f),
+            ChangeCidrCollectionErrorKind::LimitsExceeded(_inner) => _inner.fmt(f),
+            ChangeCidrCollectionErrorKind::NoSuchCidrCollectionException(_inner) => _inner.fmt(f),
+            ChangeCidrCollectionErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for ChangeCidrCollectionError {
+    fn code(&self) -> Option<&str> {
+        ChangeCidrCollectionError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl ChangeCidrCollectionError {
+    /// Creates a new `ChangeCidrCollectionError`.
+    pub fn new(kind: ChangeCidrCollectionErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `ChangeCidrCollectionError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: ChangeCidrCollectionErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `ChangeCidrCollectionError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: ChangeCidrCollectionErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `ChangeCidrCollectionErrorKind::CidrBlockInUseException`.
+    pub fn is_cidr_block_in_use_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ChangeCidrCollectionErrorKind::CidrBlockInUseException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ChangeCidrCollectionErrorKind::CidrCollectionVersionMismatchException`.
+    pub fn is_cidr_collection_version_mismatch_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ChangeCidrCollectionErrorKind::CidrCollectionVersionMismatchException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ChangeCidrCollectionErrorKind::ConcurrentModification`.
+    pub fn is_concurrent_modification(&self) -> bool {
+        matches!(
+            &self.kind,
+            ChangeCidrCollectionErrorKind::ConcurrentModification(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ChangeCidrCollectionErrorKind::InvalidInput`.
+    pub fn is_invalid_input(&self) -> bool {
+        matches!(&self.kind, ChangeCidrCollectionErrorKind::InvalidInput(_))
+    }
+    /// Returns `true` if the error kind is `ChangeCidrCollectionErrorKind::LimitsExceeded`.
+    pub fn is_limits_exceeded(&self) -> bool {
+        matches!(&self.kind, ChangeCidrCollectionErrorKind::LimitsExceeded(_))
+    }
+    /// Returns `true` if the error kind is `ChangeCidrCollectionErrorKind::NoSuchCidrCollectionException`.
+    pub fn is_no_such_cidr_collection_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ChangeCidrCollectionErrorKind::NoSuchCidrCollectionException(_)
+        )
+    }
+}
+impl std::error::Error for ChangeCidrCollectionError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            ChangeCidrCollectionErrorKind::CidrBlockInUseException(_inner) => Some(_inner),
+            ChangeCidrCollectionErrorKind::CidrCollectionVersionMismatchException(_inner) => {
+                Some(_inner)
+            }
+            ChangeCidrCollectionErrorKind::ConcurrentModification(_inner) => Some(_inner),
+            ChangeCidrCollectionErrorKind::InvalidInput(_inner) => Some(_inner),
+            ChangeCidrCollectionErrorKind::LimitsExceeded(_inner) => Some(_inner),
+            ChangeCidrCollectionErrorKind::NoSuchCidrCollectionException(_inner) => Some(_inner),
+            ChangeCidrCollectionErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -583,6 +729,130 @@ impl std::error::Error for ChangeTagsForResourceError {
             ChangeTagsForResourceErrorKind::PriorRequestNotComplete(_inner) => Some(_inner),
             ChangeTagsForResourceErrorKind::ThrottlingException(_inner) => Some(_inner),
             ChangeTagsForResourceErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `CreateCidrCollection` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct CreateCidrCollectionError {
+    /// Kind of error that occurred.
+    pub kind: CreateCidrCollectionErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `CreateCidrCollection` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum CreateCidrCollectionErrorKind {
+    /// <p>A CIDR collection with this name and a different caller reference already exists in this account.</p>
+    CidrCollectionAlreadyExistsException(crate::error::CidrCollectionAlreadyExistsException),
+    /// <p>Another user submitted a request to create, update, or delete the object at the same time that you did. Retry the request. </p>
+    ConcurrentModification(crate::error::ConcurrentModification),
+    /// <p>The input is not valid.</p>
+    InvalidInput(crate::error::InvalidInput),
+    /// <p>This operation can't be completed because the current account has reached the limit on the resource you are trying to create. To request a higher limit, <a href="http://aws.amazon.com/route53-request">create a case</a> with the Amazon Web Services Support Center.</p>
+    LimitsExceeded(crate::error::LimitsExceeded),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for CreateCidrCollectionError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            CreateCidrCollectionErrorKind::CidrCollectionAlreadyExistsException(_inner) => {
+                _inner.fmt(f)
+            }
+            CreateCidrCollectionErrorKind::ConcurrentModification(_inner) => _inner.fmt(f),
+            CreateCidrCollectionErrorKind::InvalidInput(_inner) => _inner.fmt(f),
+            CreateCidrCollectionErrorKind::LimitsExceeded(_inner) => _inner.fmt(f),
+            CreateCidrCollectionErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for CreateCidrCollectionError {
+    fn code(&self) -> Option<&str> {
+        CreateCidrCollectionError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl CreateCidrCollectionError {
+    /// Creates a new `CreateCidrCollectionError`.
+    pub fn new(kind: CreateCidrCollectionErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `CreateCidrCollectionError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: CreateCidrCollectionErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `CreateCidrCollectionError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: CreateCidrCollectionErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `CreateCidrCollectionErrorKind::CidrCollectionAlreadyExistsException`.
+    pub fn is_cidr_collection_already_exists_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateCidrCollectionErrorKind::CidrCollectionAlreadyExistsException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateCidrCollectionErrorKind::ConcurrentModification`.
+    pub fn is_concurrent_modification(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateCidrCollectionErrorKind::ConcurrentModification(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateCidrCollectionErrorKind::InvalidInput`.
+    pub fn is_invalid_input(&self) -> bool {
+        matches!(&self.kind, CreateCidrCollectionErrorKind::InvalidInput(_))
+    }
+    /// Returns `true` if the error kind is `CreateCidrCollectionErrorKind::LimitsExceeded`.
+    pub fn is_limits_exceeded(&self) -> bool {
+        matches!(&self.kind, CreateCidrCollectionErrorKind::LimitsExceeded(_))
+    }
+}
+impl std::error::Error for CreateCidrCollectionError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            CreateCidrCollectionErrorKind::CidrCollectionAlreadyExistsException(_inner) => {
+                Some(_inner)
+            }
+            CreateCidrCollectionErrorKind::ConcurrentModification(_inner) => Some(_inner),
+            CreateCidrCollectionErrorKind::InvalidInput(_inner) => Some(_inner),
+            CreateCidrCollectionErrorKind::LimitsExceeded(_inner) => Some(_inner),
+            CreateCidrCollectionErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -1258,7 +1528,7 @@ pub enum CreateReusableDelegationSetErrorKind {
     InvalidArgument(crate::error::InvalidArgument),
     /// <p>The input is not valid.</p>
     InvalidInput(crate::error::InvalidInput),
-    /// <p>This operation can't be completed either because the current account has reached the limit on reusable delegation sets that it can create or because you've reached the limit on the number of Amazon VPCs that you can associate with a private hosted zone. To get the current limit on the number of reusable delegation sets, see <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetAccountLimit.html">GetAccountLimit</a>. To get the current limit on the number of Amazon VPCs that you can associate with a private hosted zone, see <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZoneLimit.html">GetHostedZoneLimit</a>. To request a higher limit, <a href="http://aws.amazon.com/route53-request">create a case</a> with the Amazon Web Services Support Center.</p>
+    /// <p>This operation can't be completed because the current account has reached the limit on the resource you are trying to create. To request a higher limit, <a href="http://aws.amazon.com/route53-request">create a case</a> with the Amazon Web Services Support Center.</p>
     LimitsExceeded(crate::error::LimitsExceeded),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -2129,6 +2399,129 @@ impl std::error::Error for DeactivateKeySigningKeyError {
             DeactivateKeySigningKeyErrorKind::KeySigningKeyInUse(_inner) => Some(_inner),
             DeactivateKeySigningKeyErrorKind::NoSuchKeySigningKey(_inner) => Some(_inner),
             DeactivateKeySigningKeyErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DeleteCidrCollection` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DeleteCidrCollectionError {
+    /// Kind of error that occurred.
+    pub kind: DeleteCidrCollectionErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DeleteCidrCollection` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DeleteCidrCollectionErrorKind {
+    /// <p>This CIDR collection is in use, and isn't empty.</p>
+    CidrCollectionInUseException(crate::error::CidrCollectionInUseException),
+    /// <p>Another user submitted a request to create, update, or delete the object at the same time that you did. Retry the request. </p>
+    ConcurrentModification(crate::error::ConcurrentModification),
+    /// <p>The input is not valid.</p>
+    InvalidInput(crate::error::InvalidInput),
+    /// <p>The CIDR collection you specified, doesn't exist.</p>
+    NoSuchCidrCollectionException(crate::error::NoSuchCidrCollectionException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DeleteCidrCollectionError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DeleteCidrCollectionErrorKind::CidrCollectionInUseException(_inner) => _inner.fmt(f),
+            DeleteCidrCollectionErrorKind::ConcurrentModification(_inner) => _inner.fmt(f),
+            DeleteCidrCollectionErrorKind::InvalidInput(_inner) => _inner.fmt(f),
+            DeleteCidrCollectionErrorKind::NoSuchCidrCollectionException(_inner) => _inner.fmt(f),
+            DeleteCidrCollectionErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DeleteCidrCollectionError {
+    fn code(&self) -> Option<&str> {
+        DeleteCidrCollectionError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DeleteCidrCollectionError {
+    /// Creates a new `DeleteCidrCollectionError`.
+    pub fn new(kind: DeleteCidrCollectionErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DeleteCidrCollectionError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DeleteCidrCollectionErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DeleteCidrCollectionError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DeleteCidrCollectionErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DeleteCidrCollectionErrorKind::CidrCollectionInUseException`.
+    pub fn is_cidr_collection_in_use_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteCidrCollectionErrorKind::CidrCollectionInUseException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteCidrCollectionErrorKind::ConcurrentModification`.
+    pub fn is_concurrent_modification(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteCidrCollectionErrorKind::ConcurrentModification(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteCidrCollectionErrorKind::InvalidInput`.
+    pub fn is_invalid_input(&self) -> bool {
+        matches!(&self.kind, DeleteCidrCollectionErrorKind::InvalidInput(_))
+    }
+    /// Returns `true` if the error kind is `DeleteCidrCollectionErrorKind::NoSuchCidrCollectionException`.
+    pub fn is_no_such_cidr_collection_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteCidrCollectionErrorKind::NoSuchCidrCollectionException(_)
+        )
+    }
+}
+impl std::error::Error for DeleteCidrCollectionError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DeleteCidrCollectionErrorKind::CidrCollectionInUseException(_inner) => Some(_inner),
+            DeleteCidrCollectionErrorKind::ConcurrentModification(_inner) => Some(_inner),
+            DeleteCidrCollectionErrorKind::InvalidInput(_inner) => Some(_inner),
+            DeleteCidrCollectionErrorKind::NoSuchCidrCollectionException(_inner) => Some(_inner),
+            DeleteCidrCollectionErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -5411,6 +5804,309 @@ impl std::error::Error for GetTrafficPolicyInstanceCountError {
     }
 }
 
+/// Error type for the `ListCidrBlocks` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct ListCidrBlocksError {
+    /// Kind of error that occurred.
+    pub kind: ListCidrBlocksErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `ListCidrBlocks` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum ListCidrBlocksErrorKind {
+    /// <p>The input is not valid.</p>
+    InvalidInput(crate::error::InvalidInput),
+    /// <p>The CIDR collection you specified, doesn't exist.</p>
+    NoSuchCidrCollectionException(crate::error::NoSuchCidrCollectionException),
+    /// <p>The CIDR collection location doesn't match any locations in your account.</p>
+    NoSuchCidrLocationException(crate::error::NoSuchCidrLocationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for ListCidrBlocksError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            ListCidrBlocksErrorKind::InvalidInput(_inner) => _inner.fmt(f),
+            ListCidrBlocksErrorKind::NoSuchCidrCollectionException(_inner) => _inner.fmt(f),
+            ListCidrBlocksErrorKind::NoSuchCidrLocationException(_inner) => _inner.fmt(f),
+            ListCidrBlocksErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for ListCidrBlocksError {
+    fn code(&self) -> Option<&str> {
+        ListCidrBlocksError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl ListCidrBlocksError {
+    /// Creates a new `ListCidrBlocksError`.
+    pub fn new(kind: ListCidrBlocksErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `ListCidrBlocksError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: ListCidrBlocksErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `ListCidrBlocksError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: ListCidrBlocksErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `ListCidrBlocksErrorKind::InvalidInput`.
+    pub fn is_invalid_input(&self) -> bool {
+        matches!(&self.kind, ListCidrBlocksErrorKind::InvalidInput(_))
+    }
+    /// Returns `true` if the error kind is `ListCidrBlocksErrorKind::NoSuchCidrCollectionException`.
+    pub fn is_no_such_cidr_collection_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListCidrBlocksErrorKind::NoSuchCidrCollectionException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ListCidrBlocksErrorKind::NoSuchCidrLocationException`.
+    pub fn is_no_such_cidr_location_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListCidrBlocksErrorKind::NoSuchCidrLocationException(_)
+        )
+    }
+}
+impl std::error::Error for ListCidrBlocksError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            ListCidrBlocksErrorKind::InvalidInput(_inner) => Some(_inner),
+            ListCidrBlocksErrorKind::NoSuchCidrCollectionException(_inner) => Some(_inner),
+            ListCidrBlocksErrorKind::NoSuchCidrLocationException(_inner) => Some(_inner),
+            ListCidrBlocksErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `ListCidrCollections` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct ListCidrCollectionsError {
+    /// Kind of error that occurred.
+    pub kind: ListCidrCollectionsErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `ListCidrCollections` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum ListCidrCollectionsErrorKind {
+    /// <p>The input is not valid.</p>
+    InvalidInput(crate::error::InvalidInput),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for ListCidrCollectionsError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            ListCidrCollectionsErrorKind::InvalidInput(_inner) => _inner.fmt(f),
+            ListCidrCollectionsErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for ListCidrCollectionsError {
+    fn code(&self) -> Option<&str> {
+        ListCidrCollectionsError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl ListCidrCollectionsError {
+    /// Creates a new `ListCidrCollectionsError`.
+    pub fn new(kind: ListCidrCollectionsErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `ListCidrCollectionsError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: ListCidrCollectionsErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `ListCidrCollectionsError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: ListCidrCollectionsErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `ListCidrCollectionsErrorKind::InvalidInput`.
+    pub fn is_invalid_input(&self) -> bool {
+        matches!(&self.kind, ListCidrCollectionsErrorKind::InvalidInput(_))
+    }
+}
+impl std::error::Error for ListCidrCollectionsError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            ListCidrCollectionsErrorKind::InvalidInput(_inner) => Some(_inner),
+            ListCidrCollectionsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `ListCidrLocations` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct ListCidrLocationsError {
+    /// Kind of error that occurred.
+    pub kind: ListCidrLocationsErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `ListCidrLocations` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum ListCidrLocationsErrorKind {
+    /// <p>The input is not valid.</p>
+    InvalidInput(crate::error::InvalidInput),
+    /// <p>The CIDR collection you specified, doesn't exist.</p>
+    NoSuchCidrCollectionException(crate::error::NoSuchCidrCollectionException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for ListCidrLocationsError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            ListCidrLocationsErrorKind::InvalidInput(_inner) => _inner.fmt(f),
+            ListCidrLocationsErrorKind::NoSuchCidrCollectionException(_inner) => _inner.fmt(f),
+            ListCidrLocationsErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for ListCidrLocationsError {
+    fn code(&self) -> Option<&str> {
+        ListCidrLocationsError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl ListCidrLocationsError {
+    /// Creates a new `ListCidrLocationsError`.
+    pub fn new(kind: ListCidrLocationsErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `ListCidrLocationsError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: ListCidrLocationsErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `ListCidrLocationsError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: ListCidrLocationsErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `ListCidrLocationsErrorKind::InvalidInput`.
+    pub fn is_invalid_input(&self) -> bool {
+        matches!(&self.kind, ListCidrLocationsErrorKind::InvalidInput(_))
+    }
+    /// Returns `true` if the error kind is `ListCidrLocationsErrorKind::NoSuchCidrCollectionException`.
+    pub fn is_no_such_cidr_collection_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListCidrLocationsErrorKind::NoSuchCidrCollectionException(_)
+        )
+    }
+}
+impl std::error::Error for ListCidrLocationsError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            ListCidrLocationsErrorKind::InvalidInput(_inner) => Some(_inner),
+            ListCidrLocationsErrorKind::NoSuchCidrCollectionException(_inner) => Some(_inner),
+            ListCidrLocationsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `ListGeoLocations` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -7776,10 +8472,10 @@ impl std::fmt::Display for PriorRequestNotComplete {
     }
 }
 impl std::error::Error for PriorRequestNotComplete {}
-/// See [`PriorRequestNotComplete`](crate::error::PriorRequestNotComplete)
+/// See [`PriorRequestNotComplete`](crate::error::PriorRequestNotComplete).
 pub mod prior_request_not_complete {
-    /// A builder for [`PriorRequestNotComplete`](crate::error::PriorRequestNotComplete)
-    #[non_exhaustive]
+
+    /// A builder for [`PriorRequestNotComplete`](crate::error::PriorRequestNotComplete).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7795,7 +8491,7 @@ pub mod prior_request_not_complete {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`PriorRequestNotComplete`](crate::error::PriorRequestNotComplete)
+        /// Consumes the builder and constructs a [`PriorRequestNotComplete`](crate::error::PriorRequestNotComplete).
         pub fn build(self) -> crate::error::PriorRequestNotComplete {
             crate::error::PriorRequestNotComplete {
                 message: self.message,
@@ -7804,7 +8500,7 @@ pub mod prior_request_not_complete {
     }
 }
 impl PriorRequestNotComplete {
-    /// Creates a new builder-style object to manufacture [`PriorRequestNotComplete`](crate::error::PriorRequestNotComplete)
+    /// Creates a new builder-style object to manufacture [`PriorRequestNotComplete`](crate::error::PriorRequestNotComplete).
     pub fn builder() -> crate::error::prior_request_not_complete::Builder {
         crate::error::prior_request_not_complete::Builder::default()
     }
@@ -7840,10 +8536,10 @@ impl std::fmt::Display for NoSuchTrafficPolicyInstance {
     }
 }
 impl std::error::Error for NoSuchTrafficPolicyInstance {}
-/// See [`NoSuchTrafficPolicyInstance`](crate::error::NoSuchTrafficPolicyInstance)
+/// See [`NoSuchTrafficPolicyInstance`](crate::error::NoSuchTrafficPolicyInstance).
 pub mod no_such_traffic_policy_instance {
-    /// A builder for [`NoSuchTrafficPolicyInstance`](crate::error::NoSuchTrafficPolicyInstance)
-    #[non_exhaustive]
+
+    /// A builder for [`NoSuchTrafficPolicyInstance`](crate::error::NoSuchTrafficPolicyInstance).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7859,7 +8555,7 @@ pub mod no_such_traffic_policy_instance {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoSuchTrafficPolicyInstance`](crate::error::NoSuchTrafficPolicyInstance)
+        /// Consumes the builder and constructs a [`NoSuchTrafficPolicyInstance`](crate::error::NoSuchTrafficPolicyInstance).
         pub fn build(self) -> crate::error::NoSuchTrafficPolicyInstance {
             crate::error::NoSuchTrafficPolicyInstance {
                 message: self.message,
@@ -7868,7 +8564,7 @@ pub mod no_such_traffic_policy_instance {
     }
 }
 impl NoSuchTrafficPolicyInstance {
-    /// Creates a new builder-style object to manufacture [`NoSuchTrafficPolicyInstance`](crate::error::NoSuchTrafficPolicyInstance)
+    /// Creates a new builder-style object to manufacture [`NoSuchTrafficPolicyInstance`](crate::error::NoSuchTrafficPolicyInstance).
     pub fn builder() -> crate::error::no_such_traffic_policy_instance::Builder {
         crate::error::no_such_traffic_policy_instance::Builder::default()
     }
@@ -7904,10 +8600,10 @@ impl std::fmt::Display for NoSuchTrafficPolicy {
     }
 }
 impl std::error::Error for NoSuchTrafficPolicy {}
-/// See [`NoSuchTrafficPolicy`](crate::error::NoSuchTrafficPolicy)
+/// See [`NoSuchTrafficPolicy`](crate::error::NoSuchTrafficPolicy).
 pub mod no_such_traffic_policy {
-    /// A builder for [`NoSuchTrafficPolicy`](crate::error::NoSuchTrafficPolicy)
-    #[non_exhaustive]
+
+    /// A builder for [`NoSuchTrafficPolicy`](crate::error::NoSuchTrafficPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7923,7 +8619,7 @@ pub mod no_such_traffic_policy {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoSuchTrafficPolicy`](crate::error::NoSuchTrafficPolicy)
+        /// Consumes the builder and constructs a [`NoSuchTrafficPolicy`](crate::error::NoSuchTrafficPolicy).
         pub fn build(self) -> crate::error::NoSuchTrafficPolicy {
             crate::error::NoSuchTrafficPolicy {
                 message: self.message,
@@ -7932,7 +8628,7 @@ pub mod no_such_traffic_policy {
     }
 }
 impl NoSuchTrafficPolicy {
-    /// Creates a new builder-style object to manufacture [`NoSuchTrafficPolicy`](crate::error::NoSuchTrafficPolicy)
+    /// Creates a new builder-style object to manufacture [`NoSuchTrafficPolicy`](crate::error::NoSuchTrafficPolicy).
     pub fn builder() -> crate::error::no_such_traffic_policy::Builder {
         crate::error::no_such_traffic_policy::Builder::default()
     }
@@ -7968,10 +8664,10 @@ impl std::fmt::Display for InvalidInput {
     }
 }
 impl std::error::Error for InvalidInput {}
-/// See [`InvalidInput`](crate::error::InvalidInput)
+/// See [`InvalidInput`](crate::error::InvalidInput).
 pub mod invalid_input {
-    /// A builder for [`InvalidInput`](crate::error::InvalidInput)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidInput`](crate::error::InvalidInput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7987,7 +8683,7 @@ pub mod invalid_input {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidInput`](crate::error::InvalidInput)
+        /// Consumes the builder and constructs a [`InvalidInput`](crate::error::InvalidInput).
         pub fn build(self) -> crate::error::InvalidInput {
             crate::error::InvalidInput {
                 message: self.message,
@@ -7996,7 +8692,7 @@ pub mod invalid_input {
     }
 }
 impl InvalidInput {
-    /// Creates a new builder-style object to manufacture [`InvalidInput`](crate::error::InvalidInput)
+    /// Creates a new builder-style object to manufacture [`InvalidInput`](crate::error::InvalidInput).
     pub fn builder() -> crate::error::invalid_input::Builder {
         crate::error::invalid_input::Builder::default()
     }
@@ -8032,10 +8728,10 @@ impl std::fmt::Display for ConflictingTypes {
     }
 }
 impl std::error::Error for ConflictingTypes {}
-/// See [`ConflictingTypes`](crate::error::ConflictingTypes)
+/// See [`ConflictingTypes`](crate::error::ConflictingTypes).
 pub mod conflicting_types {
-    /// A builder for [`ConflictingTypes`](crate::error::ConflictingTypes)
-    #[non_exhaustive]
+
+    /// A builder for [`ConflictingTypes`](crate::error::ConflictingTypes).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8051,7 +8747,7 @@ pub mod conflicting_types {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConflictingTypes`](crate::error::ConflictingTypes)
+        /// Consumes the builder and constructs a [`ConflictingTypes`](crate::error::ConflictingTypes).
         pub fn build(self) -> crate::error::ConflictingTypes {
             crate::error::ConflictingTypes {
                 message: self.message,
@@ -8060,7 +8756,7 @@ pub mod conflicting_types {
     }
 }
 impl ConflictingTypes {
-    /// Creates a new builder-style object to manufacture [`ConflictingTypes`](crate::error::ConflictingTypes)
+    /// Creates a new builder-style object to manufacture [`ConflictingTypes`](crate::error::ConflictingTypes).
     pub fn builder() -> crate::error::conflicting_types::Builder {
         crate::error::conflicting_types::Builder::default()
     }
@@ -8096,10 +8792,10 @@ impl std::fmt::Display for ConcurrentModification {
     }
 }
 impl std::error::Error for ConcurrentModification {}
-/// See [`ConcurrentModification`](crate::error::ConcurrentModification)
+/// See [`ConcurrentModification`](crate::error::ConcurrentModification).
 pub mod concurrent_modification {
-    /// A builder for [`ConcurrentModification`](crate::error::ConcurrentModification)
-    #[non_exhaustive]
+
+    /// A builder for [`ConcurrentModification`](crate::error::ConcurrentModification).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8115,7 +8811,7 @@ pub mod concurrent_modification {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConcurrentModification`](crate::error::ConcurrentModification)
+        /// Consumes the builder and constructs a [`ConcurrentModification`](crate::error::ConcurrentModification).
         pub fn build(self) -> crate::error::ConcurrentModification {
             crate::error::ConcurrentModification {
                 message: self.message,
@@ -8124,7 +8820,7 @@ pub mod concurrent_modification {
     }
 }
 impl ConcurrentModification {
-    /// Creates a new builder-style object to manufacture [`ConcurrentModification`](crate::error::ConcurrentModification)
+    /// Creates a new builder-style object to manufacture [`ConcurrentModification`](crate::error::ConcurrentModification).
     pub fn builder() -> crate::error::concurrent_modification::Builder {
         crate::error::concurrent_modification::Builder::default()
     }
@@ -8160,10 +8856,10 @@ impl std::fmt::Display for NoSuchHostedZone {
     }
 }
 impl std::error::Error for NoSuchHostedZone {}
-/// See [`NoSuchHostedZone`](crate::error::NoSuchHostedZone)
+/// See [`NoSuchHostedZone`](crate::error::NoSuchHostedZone).
 pub mod no_such_hosted_zone {
-    /// A builder for [`NoSuchHostedZone`](crate::error::NoSuchHostedZone)
-    #[non_exhaustive]
+
+    /// A builder for [`NoSuchHostedZone`](crate::error::NoSuchHostedZone).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8179,7 +8875,7 @@ pub mod no_such_hosted_zone {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoSuchHostedZone`](crate::error::NoSuchHostedZone)
+        /// Consumes the builder and constructs a [`NoSuchHostedZone`](crate::error::NoSuchHostedZone).
         pub fn build(self) -> crate::error::NoSuchHostedZone {
             crate::error::NoSuchHostedZone {
                 message: self.message,
@@ -8188,7 +8884,7 @@ pub mod no_such_hosted_zone {
     }
 }
 impl NoSuchHostedZone {
-    /// Creates a new builder-style object to manufacture [`NoSuchHostedZone`](crate::error::NoSuchHostedZone)
+    /// Creates a new builder-style object to manufacture [`NoSuchHostedZone`](crate::error::NoSuchHostedZone).
     pub fn builder() -> crate::error::no_such_hosted_zone::Builder {
         crate::error::no_such_hosted_zone::Builder::default()
     }
@@ -8224,10 +8920,10 @@ impl std::fmt::Display for NoSuchHealthCheck {
     }
 }
 impl std::error::Error for NoSuchHealthCheck {}
-/// See [`NoSuchHealthCheck`](crate::error::NoSuchHealthCheck)
+/// See [`NoSuchHealthCheck`](crate::error::NoSuchHealthCheck).
 pub mod no_such_health_check {
-    /// A builder for [`NoSuchHealthCheck`](crate::error::NoSuchHealthCheck)
-    #[non_exhaustive]
+
+    /// A builder for [`NoSuchHealthCheck`](crate::error::NoSuchHealthCheck).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8243,7 +8939,7 @@ pub mod no_such_health_check {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoSuchHealthCheck`](crate::error::NoSuchHealthCheck)
+        /// Consumes the builder and constructs a [`NoSuchHealthCheck`](crate::error::NoSuchHealthCheck).
         pub fn build(self) -> crate::error::NoSuchHealthCheck {
             crate::error::NoSuchHealthCheck {
                 message: self.message,
@@ -8252,7 +8948,7 @@ pub mod no_such_health_check {
     }
 }
 impl NoSuchHealthCheck {
-    /// Creates a new builder-style object to manufacture [`NoSuchHealthCheck`](crate::error::NoSuchHealthCheck)
+    /// Creates a new builder-style object to manufacture [`NoSuchHealthCheck`](crate::error::NoSuchHealthCheck).
     pub fn builder() -> crate::error::no_such_health_check::Builder {
         crate::error::no_such_health_check::Builder::default()
     }
@@ -8288,10 +8984,10 @@ impl std::fmt::Display for HealthCheckVersionMismatch {
     }
 }
 impl std::error::Error for HealthCheckVersionMismatch {}
-/// See [`HealthCheckVersionMismatch`](crate::error::HealthCheckVersionMismatch)
+/// See [`HealthCheckVersionMismatch`](crate::error::HealthCheckVersionMismatch).
 pub mod health_check_version_mismatch {
-    /// A builder for [`HealthCheckVersionMismatch`](crate::error::HealthCheckVersionMismatch)
-    #[non_exhaustive]
+
+    /// A builder for [`HealthCheckVersionMismatch`](crate::error::HealthCheckVersionMismatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8307,7 +9003,7 @@ pub mod health_check_version_mismatch {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`HealthCheckVersionMismatch`](crate::error::HealthCheckVersionMismatch)
+        /// Consumes the builder and constructs a [`HealthCheckVersionMismatch`](crate::error::HealthCheckVersionMismatch).
         pub fn build(self) -> crate::error::HealthCheckVersionMismatch {
             crate::error::HealthCheckVersionMismatch {
                 message: self.message,
@@ -8316,7 +9012,7 @@ pub mod health_check_version_mismatch {
     }
 }
 impl HealthCheckVersionMismatch {
-    /// Creates a new builder-style object to manufacture [`HealthCheckVersionMismatch`](crate::error::HealthCheckVersionMismatch)
+    /// Creates a new builder-style object to manufacture [`HealthCheckVersionMismatch`](crate::error::HealthCheckVersionMismatch).
     pub fn builder() -> crate::error::health_check_version_mismatch::Builder {
         crate::error::health_check_version_mismatch::Builder::default()
     }
@@ -8352,10 +9048,10 @@ impl std::fmt::Display for InvalidPaginationToken {
     }
 }
 impl std::error::Error for InvalidPaginationToken {}
-/// See [`InvalidPaginationToken`](crate::error::InvalidPaginationToken)
+/// See [`InvalidPaginationToken`](crate::error::InvalidPaginationToken).
 pub mod invalid_pagination_token {
-    /// A builder for [`InvalidPaginationToken`](crate::error::InvalidPaginationToken)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidPaginationToken`](crate::error::InvalidPaginationToken).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8371,7 +9067,7 @@ pub mod invalid_pagination_token {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidPaginationToken`](crate::error::InvalidPaginationToken)
+        /// Consumes the builder and constructs a [`InvalidPaginationToken`](crate::error::InvalidPaginationToken).
         pub fn build(self) -> crate::error::InvalidPaginationToken {
             crate::error::InvalidPaginationToken {
                 message: self.message,
@@ -8380,7 +9076,7 @@ pub mod invalid_pagination_token {
     }
 }
 impl InvalidPaginationToken {
-    /// Creates a new builder-style object to manufacture [`InvalidPaginationToken`](crate::error::InvalidPaginationToken)
+    /// Creates a new builder-style object to manufacture [`InvalidPaginationToken`](crate::error::InvalidPaginationToken).
     pub fn builder() -> crate::error::invalid_pagination_token::Builder {
         crate::error::invalid_pagination_token::Builder::default()
     }
@@ -8416,10 +9112,10 @@ impl std::fmt::Display for ThrottlingException {
     }
 }
 impl std::error::Error for ThrottlingException {}
-/// See [`ThrottlingException`](crate::error::ThrottlingException)
+/// See [`ThrottlingException`](crate::error::ThrottlingException).
 pub mod throttling_exception {
-    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
-    #[non_exhaustive]
+
+    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8435,7 +9131,7 @@ pub mod throttling_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException)
+        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException).
         pub fn build(self) -> crate::error::ThrottlingException {
             crate::error::ThrottlingException {
                 message: self.message,
@@ -8444,7 +9140,7 @@ pub mod throttling_exception {
     }
 }
 impl ThrottlingException {
-    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException)
+    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException).
     pub fn builder() -> crate::error::throttling_exception::Builder {
         crate::error::throttling_exception::Builder::default()
     }
@@ -8480,10 +9176,10 @@ impl std::fmt::Display for InvalidDomainName {
     }
 }
 impl std::error::Error for InvalidDomainName {}
-/// See [`InvalidDomainName`](crate::error::InvalidDomainName)
+/// See [`InvalidDomainName`](crate::error::InvalidDomainName).
 pub mod invalid_domain_name {
-    /// A builder for [`InvalidDomainName`](crate::error::InvalidDomainName)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidDomainName`](crate::error::InvalidDomainName).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8499,7 +9195,7 @@ pub mod invalid_domain_name {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidDomainName`](crate::error::InvalidDomainName)
+        /// Consumes the builder and constructs a [`InvalidDomainName`](crate::error::InvalidDomainName).
         pub fn build(self) -> crate::error::InvalidDomainName {
             crate::error::InvalidDomainName {
                 message: self.message,
@@ -8508,7 +9204,7 @@ pub mod invalid_domain_name {
     }
 }
 impl InvalidDomainName {
-    /// Creates a new builder-style object to manufacture [`InvalidDomainName`](crate::error::InvalidDomainName)
+    /// Creates a new builder-style object to manufacture [`InvalidDomainName`](crate::error::InvalidDomainName).
     pub fn builder() -> crate::error::invalid_domain_name::Builder {
         crate::error::invalid_domain_name::Builder::default()
     }
@@ -8544,10 +9240,10 @@ impl std::fmt::Display for NoSuchDelegationSet {
     }
 }
 impl std::error::Error for NoSuchDelegationSet {}
-/// See [`NoSuchDelegationSet`](crate::error::NoSuchDelegationSet)
+/// See [`NoSuchDelegationSet`](crate::error::NoSuchDelegationSet).
 pub mod no_such_delegation_set {
-    /// A builder for [`NoSuchDelegationSet`](crate::error::NoSuchDelegationSet)
-    #[non_exhaustive]
+
+    /// A builder for [`NoSuchDelegationSet`](crate::error::NoSuchDelegationSet).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8563,7 +9259,7 @@ pub mod no_such_delegation_set {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoSuchDelegationSet`](crate::error::NoSuchDelegationSet)
+        /// Consumes the builder and constructs a [`NoSuchDelegationSet`](crate::error::NoSuchDelegationSet).
         pub fn build(self) -> crate::error::NoSuchDelegationSet {
             crate::error::NoSuchDelegationSet {
                 message: self.message,
@@ -8572,7 +9268,7 @@ pub mod no_such_delegation_set {
     }
 }
 impl NoSuchDelegationSet {
-    /// Creates a new builder-style object to manufacture [`NoSuchDelegationSet`](crate::error::NoSuchDelegationSet)
+    /// Creates a new builder-style object to manufacture [`NoSuchDelegationSet`](crate::error::NoSuchDelegationSet).
     pub fn builder() -> crate::error::no_such_delegation_set::Builder {
         crate::error::no_such_delegation_set::Builder::default()
     }
@@ -8608,10 +9304,10 @@ impl std::fmt::Display for DelegationSetNotReusable {
     }
 }
 impl std::error::Error for DelegationSetNotReusable {}
-/// See [`DelegationSetNotReusable`](crate::error::DelegationSetNotReusable)
+/// See [`DelegationSetNotReusable`](crate::error::DelegationSetNotReusable).
 pub mod delegation_set_not_reusable {
-    /// A builder for [`DelegationSetNotReusable`](crate::error::DelegationSetNotReusable)
-    #[non_exhaustive]
+
+    /// A builder for [`DelegationSetNotReusable`](crate::error::DelegationSetNotReusable).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8627,7 +9323,7 @@ pub mod delegation_set_not_reusable {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DelegationSetNotReusable`](crate::error::DelegationSetNotReusable)
+        /// Consumes the builder and constructs a [`DelegationSetNotReusable`](crate::error::DelegationSetNotReusable).
         pub fn build(self) -> crate::error::DelegationSetNotReusable {
             crate::error::DelegationSetNotReusable {
                 message: self.message,
@@ -8636,7 +9332,7 @@ pub mod delegation_set_not_reusable {
     }
 }
 impl DelegationSetNotReusable {
-    /// Creates a new builder-style object to manufacture [`DelegationSetNotReusable`](crate::error::DelegationSetNotReusable)
+    /// Creates a new builder-style object to manufacture [`DelegationSetNotReusable`](crate::error::DelegationSetNotReusable).
     pub fn builder() -> crate::error::delegation_set_not_reusable::Builder {
         crate::error::delegation_set_not_reusable::Builder::default()
     }
@@ -8672,10 +9368,10 @@ impl std::fmt::Display for IncompatibleVersion {
     }
 }
 impl std::error::Error for IncompatibleVersion {}
-/// See [`IncompatibleVersion`](crate::error::IncompatibleVersion)
+/// See [`IncompatibleVersion`](crate::error::IncompatibleVersion).
 pub mod incompatible_version {
-    /// A builder for [`IncompatibleVersion`](crate::error::IncompatibleVersion)
-    #[non_exhaustive]
+
+    /// A builder for [`IncompatibleVersion`](crate::error::IncompatibleVersion).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8691,7 +9387,7 @@ pub mod incompatible_version {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`IncompatibleVersion`](crate::error::IncompatibleVersion)
+        /// Consumes the builder and constructs a [`IncompatibleVersion`](crate::error::IncompatibleVersion).
         pub fn build(self) -> crate::error::IncompatibleVersion {
             crate::error::IncompatibleVersion {
                 message: self.message,
@@ -8700,9 +9396,137 @@ pub mod incompatible_version {
     }
 }
 impl IncompatibleVersion {
-    /// Creates a new builder-style object to manufacture [`IncompatibleVersion`](crate::error::IncompatibleVersion)
+    /// Creates a new builder-style object to manufacture [`IncompatibleVersion`](crate::error::IncompatibleVersion).
     pub fn builder() -> crate::error::incompatible_version::Builder {
         crate::error::incompatible_version::Builder::default()
+    }
+}
+
+/// <p>The CIDR collection you specified, doesn't exist.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct NoSuchCidrCollectionException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for NoSuchCidrCollectionException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("NoSuchCidrCollectionException");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl NoSuchCidrCollectionException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for NoSuchCidrCollectionException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "NoSuchCidrCollectionException")?;
+        if let Some(inner_16) = &self.message {
+            write!(f, ": {}", inner_16)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for NoSuchCidrCollectionException {}
+/// See [`NoSuchCidrCollectionException`](crate::error::NoSuchCidrCollectionException).
+pub mod no_such_cidr_collection_exception {
+
+    /// A builder for [`NoSuchCidrCollectionException`](crate::error::NoSuchCidrCollectionException).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`NoSuchCidrCollectionException`](crate::error::NoSuchCidrCollectionException).
+        pub fn build(self) -> crate::error::NoSuchCidrCollectionException {
+            crate::error::NoSuchCidrCollectionException {
+                message: self.message,
+            }
+        }
+    }
+}
+impl NoSuchCidrCollectionException {
+    /// Creates a new builder-style object to manufacture [`NoSuchCidrCollectionException`](crate::error::NoSuchCidrCollectionException).
+    pub fn builder() -> crate::error::no_such_cidr_collection_exception::Builder {
+        crate::error::no_such_cidr_collection_exception::Builder::default()
+    }
+}
+
+/// <p>The CIDR collection location doesn't match any locations in your account.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct NoSuchCidrLocationException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for NoSuchCidrLocationException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("NoSuchCidrLocationException");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl NoSuchCidrLocationException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for NoSuchCidrLocationException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "NoSuchCidrLocationException")?;
+        if let Some(inner_17) = &self.message {
+            write!(f, ": {}", inner_17)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for NoSuchCidrLocationException {}
+/// See [`NoSuchCidrLocationException`](crate::error::NoSuchCidrLocationException).
+pub mod no_such_cidr_location_exception {
+
+    /// A builder for [`NoSuchCidrLocationException`](crate::error::NoSuchCidrLocationException).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`NoSuchCidrLocationException`](crate::error::NoSuchCidrLocationException).
+        pub fn build(self) -> crate::error::NoSuchCidrLocationException {
+            crate::error::NoSuchCidrLocationException {
+                message: self.message,
+            }
+        }
+    }
+}
+impl NoSuchCidrLocationException {
+    /// Creates a new builder-style object to manufacture [`NoSuchCidrLocationException`](crate::error::NoSuchCidrLocationException).
+    pub fn builder() -> crate::error::no_such_cidr_location_exception::Builder {
+        crate::error::no_such_cidr_location_exception::Builder::default()
     }
 }
 
@@ -8729,17 +9553,17 @@ impl NoSuchQueryLoggingConfig {
 impl std::fmt::Display for NoSuchQueryLoggingConfig {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "NoSuchQueryLoggingConfig")?;
-        if let Some(inner_16) = &self.message {
-            write!(f, ": {}", inner_16)?;
+        if let Some(inner_18) = &self.message {
+            write!(f, ": {}", inner_18)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for NoSuchQueryLoggingConfig {}
-/// See [`NoSuchQueryLoggingConfig`](crate::error::NoSuchQueryLoggingConfig)
+/// See [`NoSuchQueryLoggingConfig`](crate::error::NoSuchQueryLoggingConfig).
 pub mod no_such_query_logging_config {
-    /// A builder for [`NoSuchQueryLoggingConfig`](crate::error::NoSuchQueryLoggingConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`NoSuchQueryLoggingConfig`](crate::error::NoSuchQueryLoggingConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8755,7 +9579,7 @@ pub mod no_such_query_logging_config {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoSuchQueryLoggingConfig`](crate::error::NoSuchQueryLoggingConfig)
+        /// Consumes the builder and constructs a [`NoSuchQueryLoggingConfig`](crate::error::NoSuchQueryLoggingConfig).
         pub fn build(self) -> crate::error::NoSuchQueryLoggingConfig {
             crate::error::NoSuchQueryLoggingConfig {
                 message: self.message,
@@ -8764,7 +9588,7 @@ pub mod no_such_query_logging_config {
     }
 }
 impl NoSuchQueryLoggingConfig {
-    /// Creates a new builder-style object to manufacture [`NoSuchQueryLoggingConfig`](crate::error::NoSuchQueryLoggingConfig)
+    /// Creates a new builder-style object to manufacture [`NoSuchQueryLoggingConfig`](crate::error::NoSuchQueryLoggingConfig).
     pub fn builder() -> crate::error::no_such_query_logging_config::Builder {
         crate::error::no_such_query_logging_config::Builder::default()
     }
@@ -8793,17 +9617,17 @@ impl HostedZoneNotPrivate {
 impl std::fmt::Display for HostedZoneNotPrivate {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "HostedZoneNotPrivate")?;
-        if let Some(inner_17) = &self.message {
-            write!(f, ": {}", inner_17)?;
+        if let Some(inner_19) = &self.message {
+            write!(f, ": {}", inner_19)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for HostedZoneNotPrivate {}
-/// See [`HostedZoneNotPrivate`](crate::error::HostedZoneNotPrivate)
+/// See [`HostedZoneNotPrivate`](crate::error::HostedZoneNotPrivate).
 pub mod hosted_zone_not_private {
-    /// A builder for [`HostedZoneNotPrivate`](crate::error::HostedZoneNotPrivate)
-    #[non_exhaustive]
+
+    /// A builder for [`HostedZoneNotPrivate`](crate::error::HostedZoneNotPrivate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8819,7 +9643,7 @@ pub mod hosted_zone_not_private {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedZoneNotPrivate`](crate::error::HostedZoneNotPrivate)
+        /// Consumes the builder and constructs a [`HostedZoneNotPrivate`](crate::error::HostedZoneNotPrivate).
         pub fn build(self) -> crate::error::HostedZoneNotPrivate {
             crate::error::HostedZoneNotPrivate {
                 message: self.message,
@@ -8828,7 +9652,7 @@ pub mod hosted_zone_not_private {
     }
 }
 impl HostedZoneNotPrivate {
-    /// Creates a new builder-style object to manufacture [`HostedZoneNotPrivate`](crate::error::HostedZoneNotPrivate)
+    /// Creates a new builder-style object to manufacture [`HostedZoneNotPrivate`](crate::error::HostedZoneNotPrivate).
     pub fn builder() -> crate::error::hosted_zone_not_private::Builder {
         crate::error::hosted_zone_not_private::Builder::default()
     }
@@ -8857,17 +9681,17 @@ impl NoSuchGeoLocation {
 impl std::fmt::Display for NoSuchGeoLocation {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "NoSuchGeoLocation")?;
-        if let Some(inner_18) = &self.message {
-            write!(f, ": {}", inner_18)?;
+        if let Some(inner_20) = &self.message {
+            write!(f, ": {}", inner_20)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for NoSuchGeoLocation {}
-/// See [`NoSuchGeoLocation`](crate::error::NoSuchGeoLocation)
+/// See [`NoSuchGeoLocation`](crate::error::NoSuchGeoLocation).
 pub mod no_such_geo_location {
-    /// A builder for [`NoSuchGeoLocation`](crate::error::NoSuchGeoLocation)
-    #[non_exhaustive]
+
+    /// A builder for [`NoSuchGeoLocation`](crate::error::NoSuchGeoLocation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8883,7 +9707,7 @@ pub mod no_such_geo_location {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoSuchGeoLocation`](crate::error::NoSuchGeoLocation)
+        /// Consumes the builder and constructs a [`NoSuchGeoLocation`](crate::error::NoSuchGeoLocation).
         pub fn build(self) -> crate::error::NoSuchGeoLocation {
             crate::error::NoSuchGeoLocation {
                 message: self.message,
@@ -8892,7 +9716,7 @@ pub mod no_such_geo_location {
     }
 }
 impl NoSuchGeoLocation {
-    /// Creates a new builder-style object to manufacture [`NoSuchGeoLocation`](crate::error::NoSuchGeoLocation)
+    /// Creates a new builder-style object to manufacture [`NoSuchGeoLocation`](crate::error::NoSuchGeoLocation).
     pub fn builder() -> crate::error::no_such_geo_location::Builder {
         crate::error::no_such_geo_location::Builder::default()
     }
@@ -8921,17 +9745,17 @@ impl InvalidArgument {
 impl std::fmt::Display for InvalidArgument {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidArgument")?;
-        if let Some(inner_19) = &self.message {
-            write!(f, ": {}", inner_19)?;
+        if let Some(inner_21) = &self.message {
+            write!(f, ": {}", inner_21)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for InvalidArgument {}
-/// See [`InvalidArgument`](crate::error::InvalidArgument)
+/// See [`InvalidArgument`](crate::error::InvalidArgument).
 pub mod invalid_argument {
-    /// A builder for [`InvalidArgument`](crate::error::InvalidArgument)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidArgument`](crate::error::InvalidArgument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8947,7 +9771,7 @@ pub mod invalid_argument {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidArgument`](crate::error::InvalidArgument)
+        /// Consumes the builder and constructs a [`InvalidArgument`](crate::error::InvalidArgument).
         pub fn build(self) -> crate::error::InvalidArgument {
             crate::error::InvalidArgument {
                 message: self.message,
@@ -8956,7 +9780,7 @@ pub mod invalid_argument {
     }
 }
 impl InvalidArgument {
-    /// Creates a new builder-style object to manufacture [`InvalidArgument`](crate::error::InvalidArgument)
+    /// Creates a new builder-style object to manufacture [`InvalidArgument`](crate::error::InvalidArgument).
     pub fn builder() -> crate::error::invalid_argument::Builder {
         crate::error::invalid_argument::Builder::default()
     }
@@ -8985,17 +9809,17 @@ impl NoSuchChange {
 impl std::fmt::Display for NoSuchChange {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "NoSuchChange")?;
-        if let Some(inner_20) = &self.message {
-            write!(f, ": {}", inner_20)?;
+        if let Some(inner_22) = &self.message {
+            write!(f, ": {}", inner_22)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for NoSuchChange {}
-/// See [`NoSuchChange`](crate::error::NoSuchChange)
+/// See [`NoSuchChange`](crate::error::NoSuchChange).
 pub mod no_such_change {
-    /// A builder for [`NoSuchChange`](crate::error::NoSuchChange)
-    #[non_exhaustive]
+
+    /// A builder for [`NoSuchChange`](crate::error::NoSuchChange).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9011,7 +9835,7 @@ pub mod no_such_change {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoSuchChange`](crate::error::NoSuchChange)
+        /// Consumes the builder and constructs a [`NoSuchChange`](crate::error::NoSuchChange).
         pub fn build(self) -> crate::error::NoSuchChange {
             crate::error::NoSuchChange {
                 message: self.message,
@@ -9020,7 +9844,7 @@ pub mod no_such_change {
     }
 }
 impl NoSuchChange {
-    /// Creates a new builder-style object to manufacture [`NoSuchChange`](crate::error::NoSuchChange)
+    /// Creates a new builder-style object to manufacture [`NoSuchChange`](crate::error::NoSuchChange).
     pub fn builder() -> crate::error::no_such_change::Builder {
         crate::error::no_such_change::Builder::default()
     }
@@ -9049,17 +9873,17 @@ impl KeySigningKeyWithActiveStatusNotFound {
 impl std::fmt::Display for KeySigningKeyWithActiveStatusNotFound {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "KeySigningKeyWithActiveStatusNotFound")?;
-        if let Some(inner_21) = &self.message {
-            write!(f, ": {}", inner_21)?;
+        if let Some(inner_23) = &self.message {
+            write!(f, ": {}", inner_23)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for KeySigningKeyWithActiveStatusNotFound {}
-/// See [`KeySigningKeyWithActiveStatusNotFound`](crate::error::KeySigningKeyWithActiveStatusNotFound)
+/// See [`KeySigningKeyWithActiveStatusNotFound`](crate::error::KeySigningKeyWithActiveStatusNotFound).
 pub mod key_signing_key_with_active_status_not_found {
-    /// A builder for [`KeySigningKeyWithActiveStatusNotFound`](crate::error::KeySigningKeyWithActiveStatusNotFound)
-    #[non_exhaustive]
+
+    /// A builder for [`KeySigningKeyWithActiveStatusNotFound`](crate::error::KeySigningKeyWithActiveStatusNotFound).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9075,7 +9899,7 @@ pub mod key_signing_key_with_active_status_not_found {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeySigningKeyWithActiveStatusNotFound`](crate::error::KeySigningKeyWithActiveStatusNotFound)
+        /// Consumes the builder and constructs a [`KeySigningKeyWithActiveStatusNotFound`](crate::error::KeySigningKeyWithActiveStatusNotFound).
         pub fn build(self) -> crate::error::KeySigningKeyWithActiveStatusNotFound {
             crate::error::KeySigningKeyWithActiveStatusNotFound {
                 message: self.message,
@@ -9084,7 +9908,7 @@ pub mod key_signing_key_with_active_status_not_found {
     }
 }
 impl KeySigningKeyWithActiveStatusNotFound {
-    /// Creates a new builder-style object to manufacture [`KeySigningKeyWithActiveStatusNotFound`](crate::error::KeySigningKeyWithActiveStatusNotFound)
+    /// Creates a new builder-style object to manufacture [`KeySigningKeyWithActiveStatusNotFound`](crate::error::KeySigningKeyWithActiveStatusNotFound).
     pub fn builder() -> crate::error::key_signing_key_with_active_status_not_found::Builder {
         crate::error::key_signing_key_with_active_status_not_found::Builder::default()
     }
@@ -9113,17 +9937,17 @@ impl InvalidKmsArn {
 impl std::fmt::Display for InvalidKmsArn {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidKmsArn [InvalidKMSArn]")?;
-        if let Some(inner_22) = &self.message {
-            write!(f, ": {}", inner_22)?;
+        if let Some(inner_24) = &self.message {
+            write!(f, ": {}", inner_24)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for InvalidKmsArn {}
-/// See [`InvalidKmsArn`](crate::error::InvalidKmsArn)
+/// See [`InvalidKmsArn`](crate::error::InvalidKmsArn).
 pub mod invalid_kms_arn {
-    /// A builder for [`InvalidKmsArn`](crate::error::InvalidKmsArn)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidKmsArn`](crate::error::InvalidKmsArn).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9139,7 +9963,7 @@ pub mod invalid_kms_arn {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidKmsArn`](crate::error::InvalidKmsArn)
+        /// Consumes the builder and constructs a [`InvalidKmsArn`](crate::error::InvalidKmsArn).
         pub fn build(self) -> crate::error::InvalidKmsArn {
             crate::error::InvalidKmsArn {
                 message: self.message,
@@ -9148,7 +9972,7 @@ pub mod invalid_kms_arn {
     }
 }
 impl InvalidKmsArn {
-    /// Creates a new builder-style object to manufacture [`InvalidKmsArn`](crate::error::InvalidKmsArn)
+    /// Creates a new builder-style object to manufacture [`InvalidKmsArn`](crate::error::InvalidKmsArn).
     pub fn builder() -> crate::error::invalid_kms_arn::Builder {
         crate::error::invalid_kms_arn::Builder::default()
     }
@@ -9177,17 +10001,17 @@ impl InvalidKeySigningKeyStatus {
 impl std::fmt::Display for InvalidKeySigningKeyStatus {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidKeySigningKeyStatus")?;
-        if let Some(inner_23) = &self.message {
-            write!(f, ": {}", inner_23)?;
+        if let Some(inner_25) = &self.message {
+            write!(f, ": {}", inner_25)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for InvalidKeySigningKeyStatus {}
-/// See [`InvalidKeySigningKeyStatus`](crate::error::InvalidKeySigningKeyStatus)
+/// See [`InvalidKeySigningKeyStatus`](crate::error::InvalidKeySigningKeyStatus).
 pub mod invalid_key_signing_key_status {
-    /// A builder for [`InvalidKeySigningKeyStatus`](crate::error::InvalidKeySigningKeyStatus)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidKeySigningKeyStatus`](crate::error::InvalidKeySigningKeyStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9203,7 +10027,7 @@ pub mod invalid_key_signing_key_status {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidKeySigningKeyStatus`](crate::error::InvalidKeySigningKeyStatus)
+        /// Consumes the builder and constructs a [`InvalidKeySigningKeyStatus`](crate::error::InvalidKeySigningKeyStatus).
         pub fn build(self) -> crate::error::InvalidKeySigningKeyStatus {
             crate::error::InvalidKeySigningKeyStatus {
                 message: self.message,
@@ -9212,7 +10036,7 @@ pub mod invalid_key_signing_key_status {
     }
 }
 impl InvalidKeySigningKeyStatus {
-    /// Creates a new builder-style object to manufacture [`InvalidKeySigningKeyStatus`](crate::error::InvalidKeySigningKeyStatus)
+    /// Creates a new builder-style object to manufacture [`InvalidKeySigningKeyStatus`](crate::error::InvalidKeySigningKeyStatus).
     pub fn builder() -> crate::error::invalid_key_signing_key_status::Builder {
         crate::error::invalid_key_signing_key_status::Builder::default()
     }
@@ -9241,17 +10065,17 @@ impl HostedZonePartiallyDelegated {
 impl std::fmt::Display for HostedZonePartiallyDelegated {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "HostedZonePartiallyDelegated")?;
-        if let Some(inner_24) = &self.message {
-            write!(f, ": {}", inner_24)?;
+        if let Some(inner_26) = &self.message {
+            write!(f, ": {}", inner_26)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for HostedZonePartiallyDelegated {}
-/// See [`HostedZonePartiallyDelegated`](crate::error::HostedZonePartiallyDelegated)
+/// See [`HostedZonePartiallyDelegated`](crate::error::HostedZonePartiallyDelegated).
 pub mod hosted_zone_partially_delegated {
-    /// A builder for [`HostedZonePartiallyDelegated`](crate::error::HostedZonePartiallyDelegated)
-    #[non_exhaustive]
+
+    /// A builder for [`HostedZonePartiallyDelegated`](crate::error::HostedZonePartiallyDelegated).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9267,7 +10091,7 @@ pub mod hosted_zone_partially_delegated {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedZonePartiallyDelegated`](crate::error::HostedZonePartiallyDelegated)
+        /// Consumes the builder and constructs a [`HostedZonePartiallyDelegated`](crate::error::HostedZonePartiallyDelegated).
         pub fn build(self) -> crate::error::HostedZonePartiallyDelegated {
             crate::error::HostedZonePartiallyDelegated {
                 message: self.message,
@@ -9276,7 +10100,7 @@ pub mod hosted_zone_partially_delegated {
     }
 }
 impl HostedZonePartiallyDelegated {
-    /// Creates a new builder-style object to manufacture [`HostedZonePartiallyDelegated`](crate::error::HostedZonePartiallyDelegated)
+    /// Creates a new builder-style object to manufacture [`HostedZonePartiallyDelegated`](crate::error::HostedZonePartiallyDelegated).
     pub fn builder() -> crate::error::hosted_zone_partially_delegated::Builder {
         crate::error::hosted_zone_partially_delegated::Builder::default()
     }
@@ -9305,17 +10129,17 @@ impl DnssecNotFound {
 impl std::fmt::Display for DnssecNotFound {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DnssecNotFound [DNSSECNotFound]")?;
-        if let Some(inner_25) = &self.message {
-            write!(f, ": {}", inner_25)?;
+        if let Some(inner_27) = &self.message {
+            write!(f, ": {}", inner_27)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for DnssecNotFound {}
-/// See [`DnssecNotFound`](crate::error::DnssecNotFound)
+/// See [`DnssecNotFound`](crate::error::DnssecNotFound).
 pub mod dnssec_not_found {
-    /// A builder for [`DnssecNotFound`](crate::error::DnssecNotFound)
-    #[non_exhaustive]
+
+    /// A builder for [`DnssecNotFound`](crate::error::DnssecNotFound).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9331,7 +10155,7 @@ pub mod dnssec_not_found {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DnssecNotFound`](crate::error::DnssecNotFound)
+        /// Consumes the builder and constructs a [`DnssecNotFound`](crate::error::DnssecNotFound).
         pub fn build(self) -> crate::error::DnssecNotFound {
             crate::error::DnssecNotFound {
                 message: self.message,
@@ -9340,7 +10164,7 @@ pub mod dnssec_not_found {
     }
 }
 impl DnssecNotFound {
-    /// Creates a new builder-style object to manufacture [`DnssecNotFound`](crate::error::DnssecNotFound)
+    /// Creates a new builder-style object to manufacture [`DnssecNotFound`](crate::error::DnssecNotFound).
     pub fn builder() -> crate::error::dnssec_not_found::Builder {
         crate::error::dnssec_not_found::Builder::default()
     }
@@ -9369,17 +10193,17 @@ impl VpcAssociationNotFound {
 impl std::fmt::Display for VpcAssociationNotFound {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "VpcAssociationNotFound [VPCAssociationNotFound]")?;
-        if let Some(inner_26) = &self.message {
-            write!(f, ": {}", inner_26)?;
+        if let Some(inner_28) = &self.message {
+            write!(f, ": {}", inner_28)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for VpcAssociationNotFound {}
-/// See [`VpcAssociationNotFound`](crate::error::VpcAssociationNotFound)
+/// See [`VpcAssociationNotFound`](crate::error::VpcAssociationNotFound).
 pub mod vpc_association_not_found {
-    /// A builder for [`VpcAssociationNotFound`](crate::error::VpcAssociationNotFound)
-    #[non_exhaustive]
+
+    /// A builder for [`VpcAssociationNotFound`](crate::error::VpcAssociationNotFound).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9395,7 +10219,7 @@ pub mod vpc_association_not_found {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcAssociationNotFound`](crate::error::VpcAssociationNotFound)
+        /// Consumes the builder and constructs a [`VpcAssociationNotFound`](crate::error::VpcAssociationNotFound).
         pub fn build(self) -> crate::error::VpcAssociationNotFound {
             crate::error::VpcAssociationNotFound {
                 message: self.message,
@@ -9404,7 +10228,7 @@ pub mod vpc_association_not_found {
     }
 }
 impl VpcAssociationNotFound {
-    /// Creates a new builder-style object to manufacture [`VpcAssociationNotFound`](crate::error::VpcAssociationNotFound)
+    /// Creates a new builder-style object to manufacture [`VpcAssociationNotFound`](crate::error::VpcAssociationNotFound).
     pub fn builder() -> crate::error::vpc_association_not_found::Builder {
         crate::error::vpc_association_not_found::Builder::default()
     }
@@ -9433,17 +10257,17 @@ impl LastVpcAssociation {
 impl std::fmt::Display for LastVpcAssociation {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "LastVpcAssociation [LastVPCAssociation]")?;
-        if let Some(inner_27) = &self.message {
-            write!(f, ": {}", inner_27)?;
+        if let Some(inner_29) = &self.message {
+            write!(f, ": {}", inner_29)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for LastVpcAssociation {}
-/// See [`LastVpcAssociation`](crate::error::LastVpcAssociation)
+/// See [`LastVpcAssociation`](crate::error::LastVpcAssociation).
 pub mod last_vpc_association {
-    /// A builder for [`LastVpcAssociation`](crate::error::LastVpcAssociation)
-    #[non_exhaustive]
+
+    /// A builder for [`LastVpcAssociation`](crate::error::LastVpcAssociation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9459,7 +10283,7 @@ pub mod last_vpc_association {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`LastVpcAssociation`](crate::error::LastVpcAssociation)
+        /// Consumes the builder and constructs a [`LastVpcAssociation`](crate::error::LastVpcAssociation).
         pub fn build(self) -> crate::error::LastVpcAssociation {
             crate::error::LastVpcAssociation {
                 message: self.message,
@@ -9468,7 +10292,7 @@ pub mod last_vpc_association {
     }
 }
 impl LastVpcAssociation {
-    /// Creates a new builder-style object to manufacture [`LastVpcAssociation`](crate::error::LastVpcAssociation)
+    /// Creates a new builder-style object to manufacture [`LastVpcAssociation`](crate::error::LastVpcAssociation).
     pub fn builder() -> crate::error::last_vpc_association::Builder {
         crate::error::last_vpc_association::Builder::default()
     }
@@ -9497,17 +10321,17 @@ impl InvalidVpcId {
 impl std::fmt::Display for InvalidVpcId {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidVpcId [InvalidVPCId]")?;
-        if let Some(inner_28) = &self.message {
-            write!(f, ": {}", inner_28)?;
+        if let Some(inner_30) = &self.message {
+            write!(f, ": {}", inner_30)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for InvalidVpcId {}
-/// See [`InvalidVpcId`](crate::error::InvalidVpcId)
+/// See [`InvalidVpcId`](crate::error::InvalidVpcId).
 pub mod invalid_vpc_id {
-    /// A builder for [`InvalidVpcId`](crate::error::InvalidVpcId)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidVpcId`](crate::error::InvalidVpcId).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9523,7 +10347,7 @@ pub mod invalid_vpc_id {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidVpcId`](crate::error::InvalidVpcId)
+        /// Consumes the builder and constructs a [`InvalidVpcId`](crate::error::InvalidVpcId).
         pub fn build(self) -> crate::error::InvalidVpcId {
             crate::error::InvalidVpcId {
                 message: self.message,
@@ -9532,7 +10356,7 @@ pub mod invalid_vpc_id {
     }
 }
 impl InvalidVpcId {
-    /// Creates a new builder-style object to manufacture [`InvalidVpcId`](crate::error::InvalidVpcId)
+    /// Creates a new builder-style object to manufacture [`InvalidVpcId`](crate::error::InvalidVpcId).
     pub fn builder() -> crate::error::invalid_vpc_id::Builder {
         crate::error::invalid_vpc_id::Builder::default()
     }
@@ -9564,17 +10388,17 @@ impl std::fmt::Display for KeySigningKeyInParentDsRecord {
             f,
             "KeySigningKeyInParentDsRecord [KeySigningKeyInParentDSRecord]"
         )?;
-        if let Some(inner_29) = &self.message {
-            write!(f, ": {}", inner_29)?;
+        if let Some(inner_31) = &self.message {
+            write!(f, ": {}", inner_31)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for KeySigningKeyInParentDsRecord {}
-/// See [`KeySigningKeyInParentDsRecord`](crate::error::KeySigningKeyInParentDsRecord)
+/// See [`KeySigningKeyInParentDsRecord`](crate::error::KeySigningKeyInParentDsRecord).
 pub mod key_signing_key_in_parent_ds_record {
-    /// A builder for [`KeySigningKeyInParentDsRecord`](crate::error::KeySigningKeyInParentDsRecord)
-    #[non_exhaustive]
+
+    /// A builder for [`KeySigningKeyInParentDsRecord`](crate::error::KeySigningKeyInParentDsRecord).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9590,7 +10414,7 @@ pub mod key_signing_key_in_parent_ds_record {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeySigningKeyInParentDsRecord`](crate::error::KeySigningKeyInParentDsRecord)
+        /// Consumes the builder and constructs a [`KeySigningKeyInParentDsRecord`](crate::error::KeySigningKeyInParentDsRecord).
         pub fn build(self) -> crate::error::KeySigningKeyInParentDsRecord {
             crate::error::KeySigningKeyInParentDsRecord {
                 message: self.message,
@@ -9599,7 +10423,7 @@ pub mod key_signing_key_in_parent_ds_record {
     }
 }
 impl KeySigningKeyInParentDsRecord {
-    /// Creates a new builder-style object to manufacture [`KeySigningKeyInParentDsRecord`](crate::error::KeySigningKeyInParentDsRecord)
+    /// Creates a new builder-style object to manufacture [`KeySigningKeyInParentDsRecord`](crate::error::KeySigningKeyInParentDsRecord).
     pub fn builder() -> crate::error::key_signing_key_in_parent_ds_record::Builder {
         crate::error::key_signing_key_in_parent_ds_record::Builder::default()
     }
@@ -9631,17 +10455,17 @@ impl std::fmt::Display for VpcAssociationAuthorizationNotFound {
             f,
             "VpcAssociationAuthorizationNotFound [VPCAssociationAuthorizationNotFound]"
         )?;
-        if let Some(inner_30) = &self.message {
-            write!(f, ": {}", inner_30)?;
+        if let Some(inner_32) = &self.message {
+            write!(f, ": {}", inner_32)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for VpcAssociationAuthorizationNotFound {}
-/// See [`VpcAssociationAuthorizationNotFound`](crate::error::VpcAssociationAuthorizationNotFound)
+/// See [`VpcAssociationAuthorizationNotFound`](crate::error::VpcAssociationAuthorizationNotFound).
 pub mod vpc_association_authorization_not_found {
-    /// A builder for [`VpcAssociationAuthorizationNotFound`](crate::error::VpcAssociationAuthorizationNotFound)
-    #[non_exhaustive]
+
+    /// A builder for [`VpcAssociationAuthorizationNotFound`](crate::error::VpcAssociationAuthorizationNotFound).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9657,7 +10481,7 @@ pub mod vpc_association_authorization_not_found {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`VpcAssociationAuthorizationNotFound`](crate::error::VpcAssociationAuthorizationNotFound)
+        /// Consumes the builder and constructs a [`VpcAssociationAuthorizationNotFound`](crate::error::VpcAssociationAuthorizationNotFound).
         pub fn build(self) -> crate::error::VpcAssociationAuthorizationNotFound {
             crate::error::VpcAssociationAuthorizationNotFound {
                 message: self.message,
@@ -9666,7 +10490,7 @@ pub mod vpc_association_authorization_not_found {
     }
 }
 impl VpcAssociationAuthorizationNotFound {
-    /// Creates a new builder-style object to manufacture [`VpcAssociationAuthorizationNotFound`](crate::error::VpcAssociationAuthorizationNotFound)
+    /// Creates a new builder-style object to manufacture [`VpcAssociationAuthorizationNotFound`](crate::error::VpcAssociationAuthorizationNotFound).
     pub fn builder() -> crate::error::vpc_association_authorization_not_found::Builder {
         crate::error::vpc_association_authorization_not_found::Builder::default()
     }
@@ -9695,17 +10519,17 @@ impl TrafficPolicyInUse {
 impl std::fmt::Display for TrafficPolicyInUse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "TrafficPolicyInUse")?;
-        if let Some(inner_31) = &self.message {
-            write!(f, ": {}", inner_31)?;
+        if let Some(inner_33) = &self.message {
+            write!(f, ": {}", inner_33)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for TrafficPolicyInUse {}
-/// See [`TrafficPolicyInUse`](crate::error::TrafficPolicyInUse)
+/// See [`TrafficPolicyInUse`](crate::error::TrafficPolicyInUse).
 pub mod traffic_policy_in_use {
-    /// A builder for [`TrafficPolicyInUse`](crate::error::TrafficPolicyInUse)
-    #[non_exhaustive]
+
+    /// A builder for [`TrafficPolicyInUse`](crate::error::TrafficPolicyInUse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9721,7 +10545,7 @@ pub mod traffic_policy_in_use {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrafficPolicyInUse`](crate::error::TrafficPolicyInUse)
+        /// Consumes the builder and constructs a [`TrafficPolicyInUse`](crate::error::TrafficPolicyInUse).
         pub fn build(self) -> crate::error::TrafficPolicyInUse {
             crate::error::TrafficPolicyInUse {
                 message: self.message,
@@ -9730,7 +10554,7 @@ pub mod traffic_policy_in_use {
     }
 }
 impl TrafficPolicyInUse {
-    /// Creates a new builder-style object to manufacture [`TrafficPolicyInUse`](crate::error::TrafficPolicyInUse)
+    /// Creates a new builder-style object to manufacture [`TrafficPolicyInUse`](crate::error::TrafficPolicyInUse).
     pub fn builder() -> crate::error::traffic_policy_in_use::Builder {
         crate::error::traffic_policy_in_use::Builder::default()
     }
@@ -9759,17 +10583,17 @@ impl DelegationSetInUse {
 impl std::fmt::Display for DelegationSetInUse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DelegationSetInUse")?;
-        if let Some(inner_32) = &self.message {
-            write!(f, ": {}", inner_32)?;
+        if let Some(inner_34) = &self.message {
+            write!(f, ": {}", inner_34)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for DelegationSetInUse {}
-/// See [`DelegationSetInUse`](crate::error::DelegationSetInUse)
+/// See [`DelegationSetInUse`](crate::error::DelegationSetInUse).
 pub mod delegation_set_in_use {
-    /// A builder for [`DelegationSetInUse`](crate::error::DelegationSetInUse)
-    #[non_exhaustive]
+
+    /// A builder for [`DelegationSetInUse`](crate::error::DelegationSetInUse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9785,7 +10609,7 @@ pub mod delegation_set_in_use {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DelegationSetInUse`](crate::error::DelegationSetInUse)
+        /// Consumes the builder and constructs a [`DelegationSetInUse`](crate::error::DelegationSetInUse).
         pub fn build(self) -> crate::error::DelegationSetInUse {
             crate::error::DelegationSetInUse {
                 message: self.message,
@@ -9794,7 +10618,7 @@ pub mod delegation_set_in_use {
     }
 }
 impl DelegationSetInUse {
-    /// Creates a new builder-style object to manufacture [`DelegationSetInUse`](crate::error::DelegationSetInUse)
+    /// Creates a new builder-style object to manufacture [`DelegationSetInUse`](crate::error::DelegationSetInUse).
     pub fn builder() -> crate::error::delegation_set_in_use::Builder {
         crate::error::delegation_set_in_use::Builder::default()
     }
@@ -9823,17 +10647,17 @@ impl NoSuchKeySigningKey {
 impl std::fmt::Display for NoSuchKeySigningKey {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "NoSuchKeySigningKey")?;
-        if let Some(inner_33) = &self.message {
-            write!(f, ": {}", inner_33)?;
+        if let Some(inner_35) = &self.message {
+            write!(f, ": {}", inner_35)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for NoSuchKeySigningKey {}
-/// See [`NoSuchKeySigningKey`](crate::error::NoSuchKeySigningKey)
+/// See [`NoSuchKeySigningKey`](crate::error::NoSuchKeySigningKey).
 pub mod no_such_key_signing_key {
-    /// A builder for [`NoSuchKeySigningKey`](crate::error::NoSuchKeySigningKey)
-    #[non_exhaustive]
+
+    /// A builder for [`NoSuchKeySigningKey`](crate::error::NoSuchKeySigningKey).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9849,7 +10673,7 @@ pub mod no_such_key_signing_key {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoSuchKeySigningKey`](crate::error::NoSuchKeySigningKey)
+        /// Consumes the builder and constructs a [`NoSuchKeySigningKey`](crate::error::NoSuchKeySigningKey).
         pub fn build(self) -> crate::error::NoSuchKeySigningKey {
             crate::error::NoSuchKeySigningKey {
                 message: self.message,
@@ -9858,7 +10682,7 @@ pub mod no_such_key_signing_key {
     }
 }
 impl NoSuchKeySigningKey {
-    /// Creates a new builder-style object to manufacture [`NoSuchKeySigningKey`](crate::error::NoSuchKeySigningKey)
+    /// Creates a new builder-style object to manufacture [`NoSuchKeySigningKey`](crate::error::NoSuchKeySigningKey).
     pub fn builder() -> crate::error::no_such_key_signing_key::Builder {
         crate::error::no_such_key_signing_key::Builder::default()
     }
@@ -9887,17 +10711,17 @@ impl InvalidSigningStatus {
 impl std::fmt::Display for InvalidSigningStatus {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidSigningStatus")?;
-        if let Some(inner_34) = &self.message {
-            write!(f, ": {}", inner_34)?;
+        if let Some(inner_36) = &self.message {
+            write!(f, ": {}", inner_36)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for InvalidSigningStatus {}
-/// See [`InvalidSigningStatus`](crate::error::InvalidSigningStatus)
+/// See [`InvalidSigningStatus`](crate::error::InvalidSigningStatus).
 pub mod invalid_signing_status {
-    /// A builder for [`InvalidSigningStatus`](crate::error::InvalidSigningStatus)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidSigningStatus`](crate::error::InvalidSigningStatus).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9913,7 +10737,7 @@ pub mod invalid_signing_status {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidSigningStatus`](crate::error::InvalidSigningStatus)
+        /// Consumes the builder and constructs a [`InvalidSigningStatus`](crate::error::InvalidSigningStatus).
         pub fn build(self) -> crate::error::InvalidSigningStatus {
             crate::error::InvalidSigningStatus {
                 message: self.message,
@@ -9922,7 +10746,7 @@ pub mod invalid_signing_status {
     }
 }
 impl InvalidSigningStatus {
-    /// Creates a new builder-style object to manufacture [`InvalidSigningStatus`](crate::error::InvalidSigningStatus)
+    /// Creates a new builder-style object to manufacture [`InvalidSigningStatus`](crate::error::InvalidSigningStatus).
     pub fn builder() -> crate::error::invalid_signing_status::Builder {
         crate::error::invalid_signing_status::Builder::default()
     }
@@ -9951,17 +10775,17 @@ impl HostedZoneNotEmpty {
 impl std::fmt::Display for HostedZoneNotEmpty {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "HostedZoneNotEmpty")?;
-        if let Some(inner_35) = &self.message {
-            write!(f, ": {}", inner_35)?;
+        if let Some(inner_37) = &self.message {
+            write!(f, ": {}", inner_37)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for HostedZoneNotEmpty {}
-/// See [`HostedZoneNotEmpty`](crate::error::HostedZoneNotEmpty)
+/// See [`HostedZoneNotEmpty`](crate::error::HostedZoneNotEmpty).
 pub mod hosted_zone_not_empty {
-    /// A builder for [`HostedZoneNotEmpty`](crate::error::HostedZoneNotEmpty)
-    #[non_exhaustive]
+
+    /// A builder for [`HostedZoneNotEmpty`](crate::error::HostedZoneNotEmpty).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -9977,7 +10801,7 @@ pub mod hosted_zone_not_empty {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedZoneNotEmpty`](crate::error::HostedZoneNotEmpty)
+        /// Consumes the builder and constructs a [`HostedZoneNotEmpty`](crate::error::HostedZoneNotEmpty).
         pub fn build(self) -> crate::error::HostedZoneNotEmpty {
             crate::error::HostedZoneNotEmpty {
                 message: self.message,
@@ -9986,7 +10810,7 @@ pub mod hosted_zone_not_empty {
     }
 }
 impl HostedZoneNotEmpty {
-    /// Creates a new builder-style object to manufacture [`HostedZoneNotEmpty`](crate::error::HostedZoneNotEmpty)
+    /// Creates a new builder-style object to manufacture [`HostedZoneNotEmpty`](crate::error::HostedZoneNotEmpty).
     pub fn builder() -> crate::error::hosted_zone_not_empty::Builder {
         crate::error::hosted_zone_not_empty::Builder::default()
     }
@@ -10015,17 +10839,17 @@ impl HealthCheckInUse {
 impl std::fmt::Display for HealthCheckInUse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "HealthCheckInUse")?;
-        if let Some(inner_36) = &self.message {
-            write!(f, ": {}", inner_36)?;
+        if let Some(inner_38) = &self.message {
+            write!(f, ": {}", inner_38)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for HealthCheckInUse {}
-/// See [`HealthCheckInUse`](crate::error::HealthCheckInUse)
+/// See [`HealthCheckInUse`](crate::error::HealthCheckInUse).
 pub mod health_check_in_use {
-    /// A builder for [`HealthCheckInUse`](crate::error::HealthCheckInUse)
-    #[non_exhaustive]
+
+    /// A builder for [`HealthCheckInUse`](crate::error::HealthCheckInUse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10041,7 +10865,7 @@ pub mod health_check_in_use {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`HealthCheckInUse`](crate::error::HealthCheckInUse)
+        /// Consumes the builder and constructs a [`HealthCheckInUse`](crate::error::HealthCheckInUse).
         pub fn build(self) -> crate::error::HealthCheckInUse {
             crate::error::HealthCheckInUse {
                 message: self.message,
@@ -10050,9 +10874,73 @@ pub mod health_check_in_use {
     }
 }
 impl HealthCheckInUse {
-    /// Creates a new builder-style object to manufacture [`HealthCheckInUse`](crate::error::HealthCheckInUse)
+    /// Creates a new builder-style object to manufacture [`HealthCheckInUse`](crate::error::HealthCheckInUse).
     pub fn builder() -> crate::error::health_check_in_use::Builder {
         crate::error::health_check_in_use::Builder::default()
+    }
+}
+
+/// <p>This CIDR collection is in use, and isn't empty.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CidrCollectionInUseException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for CidrCollectionInUseException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CidrCollectionInUseException");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl CidrCollectionInUseException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for CidrCollectionInUseException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "CidrCollectionInUseException")?;
+        if let Some(inner_39) = &self.message {
+            write!(f, ": {}", inner_39)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for CidrCollectionInUseException {}
+/// See [`CidrCollectionInUseException`](crate::error::CidrCollectionInUseException).
+pub mod cidr_collection_in_use_exception {
+
+    /// A builder for [`CidrCollectionInUseException`](crate::error::CidrCollectionInUseException).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CidrCollectionInUseException`](crate::error::CidrCollectionInUseException).
+        pub fn build(self) -> crate::error::CidrCollectionInUseException {
+            crate::error::CidrCollectionInUseException {
+                message: self.message,
+            }
+        }
+    }
+}
+impl CidrCollectionInUseException {
+    /// Creates a new builder-style object to manufacture [`CidrCollectionInUseException`](crate::error::CidrCollectionInUseException).
+    pub fn builder() -> crate::error::cidr_collection_in_use_exception::Builder {
+        crate::error::cidr_collection_in_use_exception::Builder::default()
     }
 }
 
@@ -10079,17 +10967,17 @@ impl KeySigningKeyInUse {
 impl std::fmt::Display for KeySigningKeyInUse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "KeySigningKeyInUse")?;
-        if let Some(inner_37) = &self.message {
-            write!(f, ": {}", inner_37)?;
+        if let Some(inner_40) = &self.message {
+            write!(f, ": {}", inner_40)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for KeySigningKeyInUse {}
-/// See [`KeySigningKeyInUse`](crate::error::KeySigningKeyInUse)
+/// See [`KeySigningKeyInUse`](crate::error::KeySigningKeyInUse).
 pub mod key_signing_key_in_use {
-    /// A builder for [`KeySigningKeyInUse`](crate::error::KeySigningKeyInUse)
-    #[non_exhaustive]
+
+    /// A builder for [`KeySigningKeyInUse`](crate::error::KeySigningKeyInUse).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10105,7 +10993,7 @@ pub mod key_signing_key_in_use {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeySigningKeyInUse`](crate::error::KeySigningKeyInUse)
+        /// Consumes the builder and constructs a [`KeySigningKeyInUse`](crate::error::KeySigningKeyInUse).
         pub fn build(self) -> crate::error::KeySigningKeyInUse {
             crate::error::KeySigningKeyInUse {
                 message: self.message,
@@ -10114,7 +11002,7 @@ pub mod key_signing_key_in_use {
     }
 }
 impl KeySigningKeyInUse {
-    /// Creates a new builder-style object to manufacture [`KeySigningKeyInUse`](crate::error::KeySigningKeyInUse)
+    /// Creates a new builder-style object to manufacture [`KeySigningKeyInUse`](crate::error::KeySigningKeyInUse).
     pub fn builder() -> crate::error::key_signing_key_in_use::Builder {
         crate::error::key_signing_key_in_use::Builder::default()
     }
@@ -10146,17 +11034,17 @@ impl std::fmt::Display for TooManyVpcAssociationAuthorizations {
             f,
             "TooManyVpcAssociationAuthorizations [TooManyVPCAssociationAuthorizations]"
         )?;
-        if let Some(inner_38) = &self.message {
-            write!(f, ": {}", inner_38)?;
+        if let Some(inner_41) = &self.message {
+            write!(f, ": {}", inner_41)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for TooManyVpcAssociationAuthorizations {}
-/// See [`TooManyVpcAssociationAuthorizations`](crate::error::TooManyVpcAssociationAuthorizations)
+/// See [`TooManyVpcAssociationAuthorizations`](crate::error::TooManyVpcAssociationAuthorizations).
 pub mod too_many_vpc_association_authorizations {
-    /// A builder for [`TooManyVpcAssociationAuthorizations`](crate::error::TooManyVpcAssociationAuthorizations)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyVpcAssociationAuthorizations`](crate::error::TooManyVpcAssociationAuthorizations).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10172,7 +11060,7 @@ pub mod too_many_vpc_association_authorizations {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyVpcAssociationAuthorizations`](crate::error::TooManyVpcAssociationAuthorizations)
+        /// Consumes the builder and constructs a [`TooManyVpcAssociationAuthorizations`](crate::error::TooManyVpcAssociationAuthorizations).
         pub fn build(self) -> crate::error::TooManyVpcAssociationAuthorizations {
             crate::error::TooManyVpcAssociationAuthorizations {
                 message: self.message,
@@ -10181,7 +11069,7 @@ pub mod too_many_vpc_association_authorizations {
     }
 }
 impl TooManyVpcAssociationAuthorizations {
-    /// Creates a new builder-style object to manufacture [`TooManyVpcAssociationAuthorizations`](crate::error::TooManyVpcAssociationAuthorizations)
+    /// Creates a new builder-style object to manufacture [`TooManyVpcAssociationAuthorizations`](crate::error::TooManyVpcAssociationAuthorizations).
     pub fn builder() -> crate::error::too_many_vpc_association_authorizations::Builder {
         crate::error::too_many_vpc_association_authorizations::Builder::default()
     }
@@ -10211,17 +11099,17 @@ impl TooManyTrafficPolicyVersionsForCurrentPolicy {
 impl std::fmt::Display for TooManyTrafficPolicyVersionsForCurrentPolicy {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "TooManyTrafficPolicyVersionsForCurrentPolicy")?;
-        if let Some(inner_39) = &self.message {
-            write!(f, ": {}", inner_39)?;
+        if let Some(inner_42) = &self.message {
+            write!(f, ": {}", inner_42)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for TooManyTrafficPolicyVersionsForCurrentPolicy {}
-/// See [`TooManyTrafficPolicyVersionsForCurrentPolicy`](crate::error::TooManyTrafficPolicyVersionsForCurrentPolicy)
+/// See [`TooManyTrafficPolicyVersionsForCurrentPolicy`](crate::error::TooManyTrafficPolicyVersionsForCurrentPolicy).
 pub mod too_many_traffic_policy_versions_for_current_policy {
-    /// A builder for [`TooManyTrafficPolicyVersionsForCurrentPolicy`](crate::error::TooManyTrafficPolicyVersionsForCurrentPolicy)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyTrafficPolicyVersionsForCurrentPolicy`](crate::error::TooManyTrafficPolicyVersionsForCurrentPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10237,7 +11125,7 @@ pub mod too_many_traffic_policy_versions_for_current_policy {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyTrafficPolicyVersionsForCurrentPolicy`](crate::error::TooManyTrafficPolicyVersionsForCurrentPolicy)
+        /// Consumes the builder and constructs a [`TooManyTrafficPolicyVersionsForCurrentPolicy`](crate::error::TooManyTrafficPolicyVersionsForCurrentPolicy).
         pub fn build(self) -> crate::error::TooManyTrafficPolicyVersionsForCurrentPolicy {
             crate::error::TooManyTrafficPolicyVersionsForCurrentPolicy {
                 message: self.message,
@@ -10246,7 +11134,7 @@ pub mod too_many_traffic_policy_versions_for_current_policy {
     }
 }
 impl TooManyTrafficPolicyVersionsForCurrentPolicy {
-    /// Creates a new builder-style object to manufacture [`TooManyTrafficPolicyVersionsForCurrentPolicy`](crate::error::TooManyTrafficPolicyVersionsForCurrentPolicy)
+    /// Creates a new builder-style object to manufacture [`TooManyTrafficPolicyVersionsForCurrentPolicy`](crate::error::TooManyTrafficPolicyVersionsForCurrentPolicy).
     pub fn builder() -> crate::error::too_many_traffic_policy_versions_for_current_policy::Builder {
         crate::error::too_many_traffic_policy_versions_for_current_policy::Builder::default()
     }
@@ -10275,17 +11163,17 @@ impl InvalidTrafficPolicyDocument {
 impl std::fmt::Display for InvalidTrafficPolicyDocument {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidTrafficPolicyDocument")?;
-        if let Some(inner_40) = &self.message {
-            write!(f, ": {}", inner_40)?;
+        if let Some(inner_43) = &self.message {
+            write!(f, ": {}", inner_43)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for InvalidTrafficPolicyDocument {}
-/// See [`InvalidTrafficPolicyDocument`](crate::error::InvalidTrafficPolicyDocument)
+/// See [`InvalidTrafficPolicyDocument`](crate::error::InvalidTrafficPolicyDocument).
 pub mod invalid_traffic_policy_document {
-    /// A builder for [`InvalidTrafficPolicyDocument`](crate::error::InvalidTrafficPolicyDocument)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidTrafficPolicyDocument`](crate::error::InvalidTrafficPolicyDocument).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10301,7 +11189,7 @@ pub mod invalid_traffic_policy_document {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidTrafficPolicyDocument`](crate::error::InvalidTrafficPolicyDocument)
+        /// Consumes the builder and constructs a [`InvalidTrafficPolicyDocument`](crate::error::InvalidTrafficPolicyDocument).
         pub fn build(self) -> crate::error::InvalidTrafficPolicyDocument {
             crate::error::InvalidTrafficPolicyDocument {
                 message: self.message,
@@ -10310,7 +11198,7 @@ pub mod invalid_traffic_policy_document {
     }
 }
 impl InvalidTrafficPolicyDocument {
-    /// Creates a new builder-style object to manufacture [`InvalidTrafficPolicyDocument`](crate::error::InvalidTrafficPolicyDocument)
+    /// Creates a new builder-style object to manufacture [`InvalidTrafficPolicyDocument`](crate::error::InvalidTrafficPolicyDocument).
     pub fn builder() -> crate::error::invalid_traffic_policy_document::Builder {
         crate::error::invalid_traffic_policy_document::Builder::default()
     }
@@ -10339,17 +11227,17 @@ impl TrafficPolicyInstanceAlreadyExists {
 impl std::fmt::Display for TrafficPolicyInstanceAlreadyExists {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "TrafficPolicyInstanceAlreadyExists")?;
-        if let Some(inner_41) = &self.message {
-            write!(f, ": {}", inner_41)?;
+        if let Some(inner_44) = &self.message {
+            write!(f, ": {}", inner_44)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for TrafficPolicyInstanceAlreadyExists {}
-/// See [`TrafficPolicyInstanceAlreadyExists`](crate::error::TrafficPolicyInstanceAlreadyExists)
+/// See [`TrafficPolicyInstanceAlreadyExists`](crate::error::TrafficPolicyInstanceAlreadyExists).
 pub mod traffic_policy_instance_already_exists {
-    /// A builder for [`TrafficPolicyInstanceAlreadyExists`](crate::error::TrafficPolicyInstanceAlreadyExists)
-    #[non_exhaustive]
+
+    /// A builder for [`TrafficPolicyInstanceAlreadyExists`](crate::error::TrafficPolicyInstanceAlreadyExists).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10365,7 +11253,7 @@ pub mod traffic_policy_instance_already_exists {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrafficPolicyInstanceAlreadyExists`](crate::error::TrafficPolicyInstanceAlreadyExists)
+        /// Consumes the builder and constructs a [`TrafficPolicyInstanceAlreadyExists`](crate::error::TrafficPolicyInstanceAlreadyExists).
         pub fn build(self) -> crate::error::TrafficPolicyInstanceAlreadyExists {
             crate::error::TrafficPolicyInstanceAlreadyExists {
                 message: self.message,
@@ -10374,7 +11262,7 @@ pub mod traffic_policy_instance_already_exists {
     }
 }
 impl TrafficPolicyInstanceAlreadyExists {
-    /// Creates a new builder-style object to manufacture [`TrafficPolicyInstanceAlreadyExists`](crate::error::TrafficPolicyInstanceAlreadyExists)
+    /// Creates a new builder-style object to manufacture [`TrafficPolicyInstanceAlreadyExists`](crate::error::TrafficPolicyInstanceAlreadyExists).
     pub fn builder() -> crate::error::traffic_policy_instance_already_exists::Builder {
         crate::error::traffic_policy_instance_already_exists::Builder::default()
     }
@@ -10406,17 +11294,17 @@ impl TooManyTrafficPolicyInstances {
 impl std::fmt::Display for TooManyTrafficPolicyInstances {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "TooManyTrafficPolicyInstances")?;
-        if let Some(inner_42) = &self.message {
-            write!(f, ": {}", inner_42)?;
+        if let Some(inner_45) = &self.message {
+            write!(f, ": {}", inner_45)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for TooManyTrafficPolicyInstances {}
-/// See [`TooManyTrafficPolicyInstances`](crate::error::TooManyTrafficPolicyInstances)
+/// See [`TooManyTrafficPolicyInstances`](crate::error::TooManyTrafficPolicyInstances).
 pub mod too_many_traffic_policy_instances {
-    /// A builder for [`TooManyTrafficPolicyInstances`](crate::error::TooManyTrafficPolicyInstances)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyTrafficPolicyInstances`](crate::error::TooManyTrafficPolicyInstances).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10432,7 +11320,7 @@ pub mod too_many_traffic_policy_instances {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyTrafficPolicyInstances`](crate::error::TooManyTrafficPolicyInstances)
+        /// Consumes the builder and constructs a [`TooManyTrafficPolicyInstances`](crate::error::TooManyTrafficPolicyInstances).
         pub fn build(self) -> crate::error::TooManyTrafficPolicyInstances {
             crate::error::TooManyTrafficPolicyInstances {
                 message: self.message,
@@ -10441,7 +11329,7 @@ pub mod too_many_traffic_policy_instances {
     }
 }
 impl TooManyTrafficPolicyInstances {
-    /// Creates a new builder-style object to manufacture [`TooManyTrafficPolicyInstances`](crate::error::TooManyTrafficPolicyInstances)
+    /// Creates a new builder-style object to manufacture [`TooManyTrafficPolicyInstances`](crate::error::TooManyTrafficPolicyInstances).
     pub fn builder() -> crate::error::too_many_traffic_policy_instances::Builder {
         crate::error::too_many_traffic_policy_instances::Builder::default()
     }
@@ -10470,17 +11358,17 @@ impl TrafficPolicyAlreadyExists {
 impl std::fmt::Display for TrafficPolicyAlreadyExists {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "TrafficPolicyAlreadyExists")?;
-        if let Some(inner_43) = &self.message {
-            write!(f, ": {}", inner_43)?;
+        if let Some(inner_46) = &self.message {
+            write!(f, ": {}", inner_46)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for TrafficPolicyAlreadyExists {}
-/// See [`TrafficPolicyAlreadyExists`](crate::error::TrafficPolicyAlreadyExists)
+/// See [`TrafficPolicyAlreadyExists`](crate::error::TrafficPolicyAlreadyExists).
 pub mod traffic_policy_already_exists {
-    /// A builder for [`TrafficPolicyAlreadyExists`](crate::error::TrafficPolicyAlreadyExists)
-    #[non_exhaustive]
+
+    /// A builder for [`TrafficPolicyAlreadyExists`](crate::error::TrafficPolicyAlreadyExists).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10496,7 +11384,7 @@ pub mod traffic_policy_already_exists {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TrafficPolicyAlreadyExists`](crate::error::TrafficPolicyAlreadyExists)
+        /// Consumes the builder and constructs a [`TrafficPolicyAlreadyExists`](crate::error::TrafficPolicyAlreadyExists).
         pub fn build(self) -> crate::error::TrafficPolicyAlreadyExists {
             crate::error::TrafficPolicyAlreadyExists {
                 message: self.message,
@@ -10505,7 +11393,7 @@ pub mod traffic_policy_already_exists {
     }
 }
 impl TrafficPolicyAlreadyExists {
-    /// Creates a new builder-style object to manufacture [`TrafficPolicyAlreadyExists`](crate::error::TrafficPolicyAlreadyExists)
+    /// Creates a new builder-style object to manufacture [`TrafficPolicyAlreadyExists`](crate::error::TrafficPolicyAlreadyExists).
     pub fn builder() -> crate::error::traffic_policy_already_exists::Builder {
         crate::error::traffic_policy_already_exists::Builder::default()
     }
@@ -10537,17 +11425,17 @@ impl TooManyTrafficPolicies {
 impl std::fmt::Display for TooManyTrafficPolicies {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "TooManyTrafficPolicies")?;
-        if let Some(inner_44) = &self.message {
-            write!(f, ": {}", inner_44)?;
+        if let Some(inner_47) = &self.message {
+            write!(f, ": {}", inner_47)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for TooManyTrafficPolicies {}
-/// See [`TooManyTrafficPolicies`](crate::error::TooManyTrafficPolicies)
+/// See [`TooManyTrafficPolicies`](crate::error::TooManyTrafficPolicies).
 pub mod too_many_traffic_policies {
-    /// A builder for [`TooManyTrafficPolicies`](crate::error::TooManyTrafficPolicies)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyTrafficPolicies`](crate::error::TooManyTrafficPolicies).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10563,7 +11451,7 @@ pub mod too_many_traffic_policies {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyTrafficPolicies`](crate::error::TooManyTrafficPolicies)
+        /// Consumes the builder and constructs a [`TooManyTrafficPolicies`](crate::error::TooManyTrafficPolicies).
         pub fn build(self) -> crate::error::TooManyTrafficPolicies {
             crate::error::TooManyTrafficPolicies {
                 message: self.message,
@@ -10572,13 +11460,13 @@ pub mod too_many_traffic_policies {
     }
 }
 impl TooManyTrafficPolicies {
-    /// Creates a new builder-style object to manufacture [`TooManyTrafficPolicies`](crate::error::TooManyTrafficPolicies)
+    /// Creates a new builder-style object to manufacture [`TooManyTrafficPolicies`](crate::error::TooManyTrafficPolicies).
     pub fn builder() -> crate::error::too_many_traffic_policies::Builder {
         crate::error::too_many_traffic_policies::Builder::default()
     }
 }
 
-/// <p>This operation can't be completed either because the current account has reached the limit on reusable delegation sets that it can create or because you've reached the limit on the number of Amazon VPCs that you can associate with a private hosted zone. To get the current limit on the number of reusable delegation sets, see <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetAccountLimit.html">GetAccountLimit</a>. To get the current limit on the number of Amazon VPCs that you can associate with a private hosted zone, see <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZoneLimit.html">GetHostedZoneLimit</a>. To request a higher limit, <a href="http://aws.amazon.com/route53-request">create a case</a> with the Amazon Web Services Support Center.</p>
+/// <p>This operation can't be completed because the current account has reached the limit on the resource you are trying to create. To request a higher limit, <a href="http://aws.amazon.com/route53-request">create a case</a> with the Amazon Web Services Support Center.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct LimitsExceeded {
@@ -10601,17 +11489,17 @@ impl LimitsExceeded {
 impl std::fmt::Display for LimitsExceeded {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "LimitsExceeded")?;
-        if let Some(inner_45) = &self.message {
-            write!(f, ": {}", inner_45)?;
+        if let Some(inner_48) = &self.message {
+            write!(f, ": {}", inner_48)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for LimitsExceeded {}
-/// See [`LimitsExceeded`](crate::error::LimitsExceeded)
+/// See [`LimitsExceeded`](crate::error::LimitsExceeded).
 pub mod limits_exceeded {
-    /// A builder for [`LimitsExceeded`](crate::error::LimitsExceeded)
-    #[non_exhaustive]
+
+    /// A builder for [`LimitsExceeded`](crate::error::LimitsExceeded).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10627,7 +11515,7 @@ pub mod limits_exceeded {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`LimitsExceeded`](crate::error::LimitsExceeded)
+        /// Consumes the builder and constructs a [`LimitsExceeded`](crate::error::LimitsExceeded).
         pub fn build(self) -> crate::error::LimitsExceeded {
             crate::error::LimitsExceeded {
                 message: self.message,
@@ -10636,7 +11524,7 @@ pub mod limits_exceeded {
     }
 }
 impl LimitsExceeded {
-    /// Creates a new builder-style object to manufacture [`LimitsExceeded`](crate::error::LimitsExceeded)
+    /// Creates a new builder-style object to manufacture [`LimitsExceeded`](crate::error::LimitsExceeded).
     pub fn builder() -> crate::error::limits_exceeded::Builder {
         crate::error::limits_exceeded::Builder::default()
     }
@@ -10665,17 +11553,17 @@ impl HostedZoneNotFound {
 impl std::fmt::Display for HostedZoneNotFound {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "HostedZoneNotFound")?;
-        if let Some(inner_46) = &self.message {
-            write!(f, ": {}", inner_46)?;
+        if let Some(inner_49) = &self.message {
+            write!(f, ": {}", inner_49)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for HostedZoneNotFound {}
-/// See [`HostedZoneNotFound`](crate::error::HostedZoneNotFound)
+/// See [`HostedZoneNotFound`](crate::error::HostedZoneNotFound).
 pub mod hosted_zone_not_found {
-    /// A builder for [`HostedZoneNotFound`](crate::error::HostedZoneNotFound)
-    #[non_exhaustive]
+
+    /// A builder for [`HostedZoneNotFound`](crate::error::HostedZoneNotFound).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10691,7 +11579,7 @@ pub mod hosted_zone_not_found {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedZoneNotFound`](crate::error::HostedZoneNotFound)
+        /// Consumes the builder and constructs a [`HostedZoneNotFound`](crate::error::HostedZoneNotFound).
         pub fn build(self) -> crate::error::HostedZoneNotFound {
             crate::error::HostedZoneNotFound {
                 message: self.message,
@@ -10700,7 +11588,7 @@ pub mod hosted_zone_not_found {
     }
 }
 impl HostedZoneNotFound {
-    /// Creates a new builder-style object to manufacture [`HostedZoneNotFound`](crate::error::HostedZoneNotFound)
+    /// Creates a new builder-style object to manufacture [`HostedZoneNotFound`](crate::error::HostedZoneNotFound).
     pub fn builder() -> crate::error::hosted_zone_not_found::Builder {
         crate::error::hosted_zone_not_found::Builder::default()
     }
@@ -10729,17 +11617,17 @@ impl DelegationSetNotAvailable {
 impl std::fmt::Display for DelegationSetNotAvailable {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DelegationSetNotAvailable")?;
-        if let Some(inner_47) = &self.message {
-            write!(f, ": {}", inner_47)?;
+        if let Some(inner_50) = &self.message {
+            write!(f, ": {}", inner_50)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for DelegationSetNotAvailable {}
-/// See [`DelegationSetNotAvailable`](crate::error::DelegationSetNotAvailable)
+/// See [`DelegationSetNotAvailable`](crate::error::DelegationSetNotAvailable).
 pub mod delegation_set_not_available {
-    /// A builder for [`DelegationSetNotAvailable`](crate::error::DelegationSetNotAvailable)
-    #[non_exhaustive]
+
+    /// A builder for [`DelegationSetNotAvailable`](crate::error::DelegationSetNotAvailable).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10755,7 +11643,7 @@ pub mod delegation_set_not_available {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DelegationSetNotAvailable`](crate::error::DelegationSetNotAvailable)
+        /// Consumes the builder and constructs a [`DelegationSetNotAvailable`](crate::error::DelegationSetNotAvailable).
         pub fn build(self) -> crate::error::DelegationSetNotAvailable {
             crate::error::DelegationSetNotAvailable {
                 message: self.message,
@@ -10764,7 +11652,7 @@ pub mod delegation_set_not_available {
     }
 }
 impl DelegationSetNotAvailable {
-    /// Creates a new builder-style object to manufacture [`DelegationSetNotAvailable`](crate::error::DelegationSetNotAvailable)
+    /// Creates a new builder-style object to manufacture [`DelegationSetNotAvailable`](crate::error::DelegationSetNotAvailable).
     pub fn builder() -> crate::error::delegation_set_not_available::Builder {
         crate::error::delegation_set_not_available::Builder::default()
     }
@@ -10793,17 +11681,17 @@ impl DelegationSetAlreadyReusable {
 impl std::fmt::Display for DelegationSetAlreadyReusable {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DelegationSetAlreadyReusable")?;
-        if let Some(inner_48) = &self.message {
-            write!(f, ": {}", inner_48)?;
+        if let Some(inner_51) = &self.message {
+            write!(f, ": {}", inner_51)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for DelegationSetAlreadyReusable {}
-/// See [`DelegationSetAlreadyReusable`](crate::error::DelegationSetAlreadyReusable)
+/// See [`DelegationSetAlreadyReusable`](crate::error::DelegationSetAlreadyReusable).
 pub mod delegation_set_already_reusable {
-    /// A builder for [`DelegationSetAlreadyReusable`](crate::error::DelegationSetAlreadyReusable)
-    #[non_exhaustive]
+
+    /// A builder for [`DelegationSetAlreadyReusable`](crate::error::DelegationSetAlreadyReusable).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10819,7 +11707,7 @@ pub mod delegation_set_already_reusable {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DelegationSetAlreadyReusable`](crate::error::DelegationSetAlreadyReusable)
+        /// Consumes the builder and constructs a [`DelegationSetAlreadyReusable`](crate::error::DelegationSetAlreadyReusable).
         pub fn build(self) -> crate::error::DelegationSetAlreadyReusable {
             crate::error::DelegationSetAlreadyReusable {
                 message: self.message,
@@ -10828,7 +11716,7 @@ pub mod delegation_set_already_reusable {
     }
 }
 impl DelegationSetAlreadyReusable {
-    /// Creates a new builder-style object to manufacture [`DelegationSetAlreadyReusable`](crate::error::DelegationSetAlreadyReusable)
+    /// Creates a new builder-style object to manufacture [`DelegationSetAlreadyReusable`](crate::error::DelegationSetAlreadyReusable).
     pub fn builder() -> crate::error::delegation_set_already_reusable::Builder {
         crate::error::delegation_set_already_reusable::Builder::default()
     }
@@ -10857,17 +11745,17 @@ impl DelegationSetAlreadyCreated {
 impl std::fmt::Display for DelegationSetAlreadyCreated {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "DelegationSetAlreadyCreated")?;
-        if let Some(inner_49) = &self.message {
-            write!(f, ": {}", inner_49)?;
+        if let Some(inner_52) = &self.message {
+            write!(f, ": {}", inner_52)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for DelegationSetAlreadyCreated {}
-/// See [`DelegationSetAlreadyCreated`](crate::error::DelegationSetAlreadyCreated)
+/// See [`DelegationSetAlreadyCreated`](crate::error::DelegationSetAlreadyCreated).
 pub mod delegation_set_already_created {
-    /// A builder for [`DelegationSetAlreadyCreated`](crate::error::DelegationSetAlreadyCreated)
-    #[non_exhaustive]
+
+    /// A builder for [`DelegationSetAlreadyCreated`](crate::error::DelegationSetAlreadyCreated).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10883,7 +11771,7 @@ pub mod delegation_set_already_created {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`DelegationSetAlreadyCreated`](crate::error::DelegationSetAlreadyCreated)
+        /// Consumes the builder and constructs a [`DelegationSetAlreadyCreated`](crate::error::DelegationSetAlreadyCreated).
         pub fn build(self) -> crate::error::DelegationSetAlreadyCreated {
             crate::error::DelegationSetAlreadyCreated {
                 message: self.message,
@@ -10892,7 +11780,7 @@ pub mod delegation_set_already_created {
     }
 }
 impl DelegationSetAlreadyCreated {
-    /// Creates a new builder-style object to manufacture [`DelegationSetAlreadyCreated`](crate::error::DelegationSetAlreadyCreated)
+    /// Creates a new builder-style object to manufacture [`DelegationSetAlreadyCreated`](crate::error::DelegationSetAlreadyCreated).
     pub fn builder() -> crate::error::delegation_set_already_created::Builder {
         crate::error::delegation_set_already_created::Builder::default()
     }
@@ -10921,17 +11809,17 @@ impl QueryLoggingConfigAlreadyExists {
 impl std::fmt::Display for QueryLoggingConfigAlreadyExists {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "QueryLoggingConfigAlreadyExists")?;
-        if let Some(inner_50) = &self.message {
-            write!(f, ": {}", inner_50)?;
+        if let Some(inner_53) = &self.message {
+            write!(f, ": {}", inner_53)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for QueryLoggingConfigAlreadyExists {}
-/// See [`QueryLoggingConfigAlreadyExists`](crate::error::QueryLoggingConfigAlreadyExists)
+/// See [`QueryLoggingConfigAlreadyExists`](crate::error::QueryLoggingConfigAlreadyExists).
 pub mod query_logging_config_already_exists {
-    /// A builder for [`QueryLoggingConfigAlreadyExists`](crate::error::QueryLoggingConfigAlreadyExists)
-    #[non_exhaustive]
+
+    /// A builder for [`QueryLoggingConfigAlreadyExists`](crate::error::QueryLoggingConfigAlreadyExists).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -10947,7 +11835,7 @@ pub mod query_logging_config_already_exists {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryLoggingConfigAlreadyExists`](crate::error::QueryLoggingConfigAlreadyExists)
+        /// Consumes the builder and constructs a [`QueryLoggingConfigAlreadyExists`](crate::error::QueryLoggingConfigAlreadyExists).
         pub fn build(self) -> crate::error::QueryLoggingConfigAlreadyExists {
             crate::error::QueryLoggingConfigAlreadyExists {
                 message: self.message,
@@ -10956,7 +11844,7 @@ pub mod query_logging_config_already_exists {
     }
 }
 impl QueryLoggingConfigAlreadyExists {
-    /// Creates a new builder-style object to manufacture [`QueryLoggingConfigAlreadyExists`](crate::error::QueryLoggingConfigAlreadyExists)
+    /// Creates a new builder-style object to manufacture [`QueryLoggingConfigAlreadyExists`](crate::error::QueryLoggingConfigAlreadyExists).
     pub fn builder() -> crate::error::query_logging_config_already_exists::Builder {
         crate::error::query_logging_config_already_exists::Builder::default()
     }
@@ -10985,17 +11873,17 @@ impl NoSuchCloudWatchLogsLogGroup {
 impl std::fmt::Display for NoSuchCloudWatchLogsLogGroup {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "NoSuchCloudWatchLogsLogGroup")?;
-        if let Some(inner_51) = &self.message {
-            write!(f, ": {}", inner_51)?;
+        if let Some(inner_54) = &self.message {
+            write!(f, ": {}", inner_54)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for NoSuchCloudWatchLogsLogGroup {}
-/// See [`NoSuchCloudWatchLogsLogGroup`](crate::error::NoSuchCloudWatchLogsLogGroup)
+/// See [`NoSuchCloudWatchLogsLogGroup`](crate::error::NoSuchCloudWatchLogsLogGroup).
 pub mod no_such_cloud_watch_logs_log_group {
-    /// A builder for [`NoSuchCloudWatchLogsLogGroup`](crate::error::NoSuchCloudWatchLogsLogGroup)
-    #[non_exhaustive]
+
+    /// A builder for [`NoSuchCloudWatchLogsLogGroup`](crate::error::NoSuchCloudWatchLogsLogGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11011,7 +11899,7 @@ pub mod no_such_cloud_watch_logs_log_group {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NoSuchCloudWatchLogsLogGroup`](crate::error::NoSuchCloudWatchLogsLogGroup)
+        /// Consumes the builder and constructs a [`NoSuchCloudWatchLogsLogGroup`](crate::error::NoSuchCloudWatchLogsLogGroup).
         pub fn build(self) -> crate::error::NoSuchCloudWatchLogsLogGroup {
             crate::error::NoSuchCloudWatchLogsLogGroup {
                 message: self.message,
@@ -11020,7 +11908,7 @@ pub mod no_such_cloud_watch_logs_log_group {
     }
 }
 impl NoSuchCloudWatchLogsLogGroup {
-    /// Creates a new builder-style object to manufacture [`NoSuchCloudWatchLogsLogGroup`](crate::error::NoSuchCloudWatchLogsLogGroup)
+    /// Creates a new builder-style object to manufacture [`NoSuchCloudWatchLogsLogGroup`](crate::error::NoSuchCloudWatchLogsLogGroup).
     pub fn builder() -> crate::error::no_such_cloud_watch_logs_log_group::Builder {
         crate::error::no_such_cloud_watch_logs_log_group::Builder::default()
     }
@@ -11055,17 +11943,17 @@ impl InsufficientCloudWatchLogsResourcePolicy {
 impl std::fmt::Display for InsufficientCloudWatchLogsResourcePolicy {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InsufficientCloudWatchLogsResourcePolicy")?;
-        if let Some(inner_52) = &self.message {
-            write!(f, ": {}", inner_52)?;
+        if let Some(inner_55) = &self.message {
+            write!(f, ": {}", inner_55)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for InsufficientCloudWatchLogsResourcePolicy {}
-/// See [`InsufficientCloudWatchLogsResourcePolicy`](crate::error::InsufficientCloudWatchLogsResourcePolicy)
+/// See [`InsufficientCloudWatchLogsResourcePolicy`](crate::error::InsufficientCloudWatchLogsResourcePolicy).
 pub mod insufficient_cloud_watch_logs_resource_policy {
-    /// A builder for [`InsufficientCloudWatchLogsResourcePolicy`](crate::error::InsufficientCloudWatchLogsResourcePolicy)
-    #[non_exhaustive]
+
+    /// A builder for [`InsufficientCloudWatchLogsResourcePolicy`](crate::error::InsufficientCloudWatchLogsResourcePolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11081,7 +11969,7 @@ pub mod insufficient_cloud_watch_logs_resource_policy {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InsufficientCloudWatchLogsResourcePolicy`](crate::error::InsufficientCloudWatchLogsResourcePolicy)
+        /// Consumes the builder and constructs a [`InsufficientCloudWatchLogsResourcePolicy`](crate::error::InsufficientCloudWatchLogsResourcePolicy).
         pub fn build(self) -> crate::error::InsufficientCloudWatchLogsResourcePolicy {
             crate::error::InsufficientCloudWatchLogsResourcePolicy {
                 message: self.message,
@@ -11090,7 +11978,7 @@ pub mod insufficient_cloud_watch_logs_resource_policy {
     }
 }
 impl InsufficientCloudWatchLogsResourcePolicy {
-    /// Creates a new builder-style object to manufacture [`InsufficientCloudWatchLogsResourcePolicy`](crate::error::InsufficientCloudWatchLogsResourcePolicy)
+    /// Creates a new builder-style object to manufacture [`InsufficientCloudWatchLogsResourcePolicy`](crate::error::InsufficientCloudWatchLogsResourcePolicy).
     pub fn builder() -> crate::error::insufficient_cloud_watch_logs_resource_policy::Builder {
         crate::error::insufficient_cloud_watch_logs_resource_policy::Builder::default()
     }
@@ -11119,17 +12007,17 @@ impl TooManyKeySigningKeys {
 impl std::fmt::Display for TooManyKeySigningKeys {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "TooManyKeySigningKeys")?;
-        if let Some(inner_53) = &self.message {
-            write!(f, ": {}", inner_53)?;
+        if let Some(inner_56) = &self.message {
+            write!(f, ": {}", inner_56)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for TooManyKeySigningKeys {}
-/// See [`TooManyKeySigningKeys`](crate::error::TooManyKeySigningKeys)
+/// See [`TooManyKeySigningKeys`](crate::error::TooManyKeySigningKeys).
 pub mod too_many_key_signing_keys {
-    /// A builder for [`TooManyKeySigningKeys`](crate::error::TooManyKeySigningKeys)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyKeySigningKeys`](crate::error::TooManyKeySigningKeys).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11145,7 +12033,7 @@ pub mod too_many_key_signing_keys {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyKeySigningKeys`](crate::error::TooManyKeySigningKeys)
+        /// Consumes the builder and constructs a [`TooManyKeySigningKeys`](crate::error::TooManyKeySigningKeys).
         pub fn build(self) -> crate::error::TooManyKeySigningKeys {
             crate::error::TooManyKeySigningKeys {
                 message: self.message,
@@ -11154,7 +12042,7 @@ pub mod too_many_key_signing_keys {
     }
 }
 impl TooManyKeySigningKeys {
-    /// Creates a new builder-style object to manufacture [`TooManyKeySigningKeys`](crate::error::TooManyKeySigningKeys)
+    /// Creates a new builder-style object to manufacture [`TooManyKeySigningKeys`](crate::error::TooManyKeySigningKeys).
     pub fn builder() -> crate::error::too_many_key_signing_keys::Builder {
         crate::error::too_many_key_signing_keys::Builder::default()
     }
@@ -11183,17 +12071,17 @@ impl KeySigningKeyAlreadyExists {
 impl std::fmt::Display for KeySigningKeyAlreadyExists {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "KeySigningKeyAlreadyExists")?;
-        if let Some(inner_54) = &self.message {
-            write!(f, ": {}", inner_54)?;
+        if let Some(inner_57) = &self.message {
+            write!(f, ": {}", inner_57)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for KeySigningKeyAlreadyExists {}
-/// See [`KeySigningKeyAlreadyExists`](crate::error::KeySigningKeyAlreadyExists)
+/// See [`KeySigningKeyAlreadyExists`](crate::error::KeySigningKeyAlreadyExists).
 pub mod key_signing_key_already_exists {
-    /// A builder for [`KeySigningKeyAlreadyExists`](crate::error::KeySigningKeyAlreadyExists)
-    #[non_exhaustive]
+
+    /// A builder for [`KeySigningKeyAlreadyExists`](crate::error::KeySigningKeyAlreadyExists).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11209,7 +12097,7 @@ pub mod key_signing_key_already_exists {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`KeySigningKeyAlreadyExists`](crate::error::KeySigningKeyAlreadyExists)
+        /// Consumes the builder and constructs a [`KeySigningKeyAlreadyExists`](crate::error::KeySigningKeyAlreadyExists).
         pub fn build(self) -> crate::error::KeySigningKeyAlreadyExists {
             crate::error::KeySigningKeyAlreadyExists {
                 message: self.message,
@@ -11218,7 +12106,7 @@ pub mod key_signing_key_already_exists {
     }
 }
 impl KeySigningKeyAlreadyExists {
-    /// Creates a new builder-style object to manufacture [`KeySigningKeyAlreadyExists`](crate::error::KeySigningKeyAlreadyExists)
+    /// Creates a new builder-style object to manufacture [`KeySigningKeyAlreadyExists`](crate::error::KeySigningKeyAlreadyExists).
     pub fn builder() -> crate::error::key_signing_key_already_exists::Builder {
         crate::error::key_signing_key_already_exists::Builder::default()
     }
@@ -11247,17 +12135,17 @@ impl InvalidKeySigningKeyName {
 impl std::fmt::Display for InvalidKeySigningKeyName {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidKeySigningKeyName")?;
-        if let Some(inner_55) = &self.message {
-            write!(f, ": {}", inner_55)?;
+        if let Some(inner_58) = &self.message {
+            write!(f, ": {}", inner_58)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for InvalidKeySigningKeyName {}
-/// See [`InvalidKeySigningKeyName`](crate::error::InvalidKeySigningKeyName)
+/// See [`InvalidKeySigningKeyName`](crate::error::InvalidKeySigningKeyName).
 pub mod invalid_key_signing_key_name {
-    /// A builder for [`InvalidKeySigningKeyName`](crate::error::InvalidKeySigningKeyName)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidKeySigningKeyName`](crate::error::InvalidKeySigningKeyName).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11273,7 +12161,7 @@ pub mod invalid_key_signing_key_name {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidKeySigningKeyName`](crate::error::InvalidKeySigningKeyName)
+        /// Consumes the builder and constructs a [`InvalidKeySigningKeyName`](crate::error::InvalidKeySigningKeyName).
         pub fn build(self) -> crate::error::InvalidKeySigningKeyName {
             crate::error::InvalidKeySigningKeyName {
                 message: self.message,
@@ -11282,7 +12170,7 @@ pub mod invalid_key_signing_key_name {
     }
 }
 impl InvalidKeySigningKeyName {
-    /// Creates a new builder-style object to manufacture [`InvalidKeySigningKeyName`](crate::error::InvalidKeySigningKeyName)
+    /// Creates a new builder-style object to manufacture [`InvalidKeySigningKeyName`](crate::error::InvalidKeySigningKeyName).
     pub fn builder() -> crate::error::invalid_key_signing_key_name::Builder {
         crate::error::invalid_key_signing_key_name::Builder::default()
     }
@@ -11315,17 +12203,17 @@ impl TooManyHostedZones {
 impl std::fmt::Display for TooManyHostedZones {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "TooManyHostedZones")?;
-        if let Some(inner_56) = &self.message {
-            write!(f, ": {}", inner_56)?;
+        if let Some(inner_59) = &self.message {
+            write!(f, ": {}", inner_59)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for TooManyHostedZones {}
-/// See [`TooManyHostedZones`](crate::error::TooManyHostedZones)
+/// See [`TooManyHostedZones`](crate::error::TooManyHostedZones).
 pub mod too_many_hosted_zones {
-    /// A builder for [`TooManyHostedZones`](crate::error::TooManyHostedZones)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyHostedZones`](crate::error::TooManyHostedZones).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11341,7 +12229,7 @@ pub mod too_many_hosted_zones {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyHostedZones`](crate::error::TooManyHostedZones)
+        /// Consumes the builder and constructs a [`TooManyHostedZones`](crate::error::TooManyHostedZones).
         pub fn build(self) -> crate::error::TooManyHostedZones {
             crate::error::TooManyHostedZones {
                 message: self.message,
@@ -11350,7 +12238,7 @@ pub mod too_many_hosted_zones {
     }
 }
 impl TooManyHostedZones {
-    /// Creates a new builder-style object to manufacture [`TooManyHostedZones`](crate::error::TooManyHostedZones)
+    /// Creates a new builder-style object to manufacture [`TooManyHostedZones`](crate::error::TooManyHostedZones).
     pub fn builder() -> crate::error::too_many_hosted_zones::Builder {
         crate::error::too_many_hosted_zones::Builder::default()
     }
@@ -11379,17 +12267,17 @@ impl HostedZoneAlreadyExists {
 impl std::fmt::Display for HostedZoneAlreadyExists {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "HostedZoneAlreadyExists")?;
-        if let Some(inner_57) = &self.message {
-            write!(f, ": {}", inner_57)?;
+        if let Some(inner_60) = &self.message {
+            write!(f, ": {}", inner_60)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for HostedZoneAlreadyExists {}
-/// See [`HostedZoneAlreadyExists`](crate::error::HostedZoneAlreadyExists)
+/// See [`HostedZoneAlreadyExists`](crate::error::HostedZoneAlreadyExists).
 pub mod hosted_zone_already_exists {
-    /// A builder for [`HostedZoneAlreadyExists`](crate::error::HostedZoneAlreadyExists)
-    #[non_exhaustive]
+
+    /// A builder for [`HostedZoneAlreadyExists`](crate::error::HostedZoneAlreadyExists).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11405,7 +12293,7 @@ pub mod hosted_zone_already_exists {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostedZoneAlreadyExists`](crate::error::HostedZoneAlreadyExists)
+        /// Consumes the builder and constructs a [`HostedZoneAlreadyExists`](crate::error::HostedZoneAlreadyExists).
         pub fn build(self) -> crate::error::HostedZoneAlreadyExists {
             crate::error::HostedZoneAlreadyExists {
                 message: self.message,
@@ -11414,7 +12302,7 @@ pub mod hosted_zone_already_exists {
     }
 }
 impl HostedZoneAlreadyExists {
-    /// Creates a new builder-style object to manufacture [`HostedZoneAlreadyExists`](crate::error::HostedZoneAlreadyExists)
+    /// Creates a new builder-style object to manufacture [`HostedZoneAlreadyExists`](crate::error::HostedZoneAlreadyExists).
     pub fn builder() -> crate::error::hosted_zone_already_exists::Builder {
         crate::error::hosted_zone_already_exists::Builder::default()
     }
@@ -11448,17 +12336,17 @@ impl ConflictingDomainExists {
 impl std::fmt::Display for ConflictingDomainExists {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "ConflictingDomainExists")?;
-        if let Some(inner_58) = &self.message {
-            write!(f, ": {}", inner_58)?;
+        if let Some(inner_61) = &self.message {
+            write!(f, ": {}", inner_61)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for ConflictingDomainExists {}
-/// See [`ConflictingDomainExists`](crate::error::ConflictingDomainExists)
+/// See [`ConflictingDomainExists`](crate::error::ConflictingDomainExists).
 pub mod conflicting_domain_exists {
-    /// A builder for [`ConflictingDomainExists`](crate::error::ConflictingDomainExists)
-    #[non_exhaustive]
+
+    /// A builder for [`ConflictingDomainExists`](crate::error::ConflictingDomainExists).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11474,7 +12362,7 @@ pub mod conflicting_domain_exists {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConflictingDomainExists`](crate::error::ConflictingDomainExists)
+        /// Consumes the builder and constructs a [`ConflictingDomainExists`](crate::error::ConflictingDomainExists).
         pub fn build(self) -> crate::error::ConflictingDomainExists {
             crate::error::ConflictingDomainExists {
                 message: self.message,
@@ -11483,7 +12371,7 @@ pub mod conflicting_domain_exists {
     }
 }
 impl ConflictingDomainExists {
-    /// Creates a new builder-style object to manufacture [`ConflictingDomainExists`](crate::error::ConflictingDomainExists)
+    /// Creates a new builder-style object to manufacture [`ConflictingDomainExists`](crate::error::ConflictingDomainExists).
     pub fn builder() -> crate::error::conflicting_domain_exists::Builder {
         crate::error::conflicting_domain_exists::Builder::default()
     }
@@ -11515,17 +12403,17 @@ impl TooManyHealthChecks {
 impl std::fmt::Display for TooManyHealthChecks {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "TooManyHealthChecks")?;
-        if let Some(inner_59) = &self.message {
-            write!(f, ": {}", inner_59)?;
+        if let Some(inner_62) = &self.message {
+            write!(f, ": {}", inner_62)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for TooManyHealthChecks {}
-/// See [`TooManyHealthChecks`](crate::error::TooManyHealthChecks)
+/// See [`TooManyHealthChecks`](crate::error::TooManyHealthChecks).
 pub mod too_many_health_checks {
-    /// A builder for [`TooManyHealthChecks`](crate::error::TooManyHealthChecks)
-    #[non_exhaustive]
+
+    /// A builder for [`TooManyHealthChecks`](crate::error::TooManyHealthChecks).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11541,7 +12429,7 @@ pub mod too_many_health_checks {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`TooManyHealthChecks`](crate::error::TooManyHealthChecks)
+        /// Consumes the builder and constructs a [`TooManyHealthChecks`](crate::error::TooManyHealthChecks).
         pub fn build(self) -> crate::error::TooManyHealthChecks {
             crate::error::TooManyHealthChecks {
                 message: self.message,
@@ -11550,7 +12438,7 @@ pub mod too_many_health_checks {
     }
 }
 impl TooManyHealthChecks {
-    /// Creates a new builder-style object to manufacture [`TooManyHealthChecks`](crate::error::TooManyHealthChecks)
+    /// Creates a new builder-style object to manufacture [`TooManyHealthChecks`](crate::error::TooManyHealthChecks).
     pub fn builder() -> crate::error::too_many_health_checks::Builder {
         crate::error::too_many_health_checks::Builder::default()
     }
@@ -11583,17 +12471,17 @@ impl HealthCheckAlreadyExists {
 impl std::fmt::Display for HealthCheckAlreadyExists {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "HealthCheckAlreadyExists")?;
-        if let Some(inner_60) = &self.message {
-            write!(f, ": {}", inner_60)?;
+        if let Some(inner_63) = &self.message {
+            write!(f, ": {}", inner_63)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for HealthCheckAlreadyExists {}
-/// See [`HealthCheckAlreadyExists`](crate::error::HealthCheckAlreadyExists)
+/// See [`HealthCheckAlreadyExists`](crate::error::HealthCheckAlreadyExists).
 pub mod health_check_already_exists {
-    /// A builder for [`HealthCheckAlreadyExists`](crate::error::HealthCheckAlreadyExists)
-    #[non_exhaustive]
+
+    /// A builder for [`HealthCheckAlreadyExists`](crate::error::HealthCheckAlreadyExists).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11609,7 +12497,7 @@ pub mod health_check_already_exists {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`HealthCheckAlreadyExists`](crate::error::HealthCheckAlreadyExists)
+        /// Consumes the builder and constructs a [`HealthCheckAlreadyExists`](crate::error::HealthCheckAlreadyExists).
         pub fn build(self) -> crate::error::HealthCheckAlreadyExists {
             crate::error::HealthCheckAlreadyExists {
                 message: self.message,
@@ -11618,9 +12506,73 @@ pub mod health_check_already_exists {
     }
 }
 impl HealthCheckAlreadyExists {
-    /// Creates a new builder-style object to manufacture [`HealthCheckAlreadyExists`](crate::error::HealthCheckAlreadyExists)
+    /// Creates a new builder-style object to manufacture [`HealthCheckAlreadyExists`](crate::error::HealthCheckAlreadyExists).
     pub fn builder() -> crate::error::health_check_already_exists::Builder {
         crate::error::health_check_already_exists::Builder::default()
+    }
+}
+
+/// <p>A CIDR collection with this name and a different caller reference already exists in this account.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CidrCollectionAlreadyExistsException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for CidrCollectionAlreadyExistsException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CidrCollectionAlreadyExistsException");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl CidrCollectionAlreadyExistsException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for CidrCollectionAlreadyExistsException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "CidrCollectionAlreadyExistsException")?;
+        if let Some(inner_64) = &self.message {
+            write!(f, ": {}", inner_64)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for CidrCollectionAlreadyExistsException {}
+/// See [`CidrCollectionAlreadyExistsException`](crate::error::CidrCollectionAlreadyExistsException).
+pub mod cidr_collection_already_exists_exception {
+
+    /// A builder for [`CidrCollectionAlreadyExistsException`](crate::error::CidrCollectionAlreadyExistsException).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CidrCollectionAlreadyExistsException`](crate::error::CidrCollectionAlreadyExistsException).
+        pub fn build(self) -> crate::error::CidrCollectionAlreadyExistsException {
+            crate::error::CidrCollectionAlreadyExistsException {
+                message: self.message,
+            }
+        }
+    }
+}
+impl CidrCollectionAlreadyExistsException {
+    /// Creates a new builder-style object to manufacture [`CidrCollectionAlreadyExistsException`](crate::error::CidrCollectionAlreadyExistsException).
+    pub fn builder() -> crate::error::cidr_collection_already_exists_exception::Builder {
+        crate::error::cidr_collection_already_exists_exception::Builder::default()
     }
 }
 
@@ -11656,17 +12608,17 @@ impl InvalidChangeBatch {
 impl std::fmt::Display for InvalidChangeBatch {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "InvalidChangeBatch")?;
-        if let Some(inner_61) = &self.message {
-            write!(f, ": {}", inner_61)?;
+        if let Some(inner_65) = &self.message {
+            write!(f, ": {}", inner_65)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for InvalidChangeBatch {}
-/// See [`InvalidChangeBatch`](crate::error::InvalidChangeBatch)
+/// See [`InvalidChangeBatch`](crate::error::InvalidChangeBatch).
 pub mod invalid_change_batch {
-    /// A builder for [`InvalidChangeBatch`](crate::error::InvalidChangeBatch)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidChangeBatch`](crate::error::InvalidChangeBatch).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) messages: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -11702,7 +12654,7 @@ pub mod invalid_change_batch {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidChangeBatch`](crate::error::InvalidChangeBatch)
+        /// Consumes the builder and constructs a [`InvalidChangeBatch`](crate::error::InvalidChangeBatch).
         pub fn build(self) -> crate::error::InvalidChangeBatch {
             crate::error::InvalidChangeBatch {
                 messages: self.messages,
@@ -11712,9 +12664,137 @@ pub mod invalid_change_batch {
     }
 }
 impl InvalidChangeBatch {
-    /// Creates a new builder-style object to manufacture [`InvalidChangeBatch`](crate::error::InvalidChangeBatch)
+    /// Creates a new builder-style object to manufacture [`InvalidChangeBatch`](crate::error::InvalidChangeBatch).
     pub fn builder() -> crate::error::invalid_change_batch::Builder {
         crate::error::invalid_change_batch::Builder::default()
+    }
+}
+
+/// <p>The CIDR collection version you provided, doesn't match the one in the <code>ListCidrCollections</code> operation.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CidrCollectionVersionMismatchException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for CidrCollectionVersionMismatchException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CidrCollectionVersionMismatchException");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl CidrCollectionVersionMismatchException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for CidrCollectionVersionMismatchException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "CidrCollectionVersionMismatchException")?;
+        if let Some(inner_66) = &self.message {
+            write!(f, ": {}", inner_66)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for CidrCollectionVersionMismatchException {}
+/// See [`CidrCollectionVersionMismatchException`](crate::error::CidrCollectionVersionMismatchException).
+pub mod cidr_collection_version_mismatch_exception {
+
+    /// A builder for [`CidrCollectionVersionMismatchException`](crate::error::CidrCollectionVersionMismatchException).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CidrCollectionVersionMismatchException`](crate::error::CidrCollectionVersionMismatchException).
+        pub fn build(self) -> crate::error::CidrCollectionVersionMismatchException {
+            crate::error::CidrCollectionVersionMismatchException {
+                message: self.message,
+            }
+        }
+    }
+}
+impl CidrCollectionVersionMismatchException {
+    /// Creates a new builder-style object to manufacture [`CidrCollectionVersionMismatchException`](crate::error::CidrCollectionVersionMismatchException).
+    pub fn builder() -> crate::error::cidr_collection_version_mismatch_exception::Builder {
+        crate::error::cidr_collection_version_mismatch_exception::Builder::default()
+    }
+}
+
+/// <p>This CIDR block is already in use.</p>
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CidrBlockInUseException {
+    #[allow(missing_docs)] // documentation missing in model
+    pub message: std::option::Option<std::string::String>,
+}
+impl std::fmt::Debug for CidrBlockInUseException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CidrBlockInUseException");
+        formatter.field("message", &self.message);
+        formatter.finish()
+    }
+}
+impl CidrBlockInUseException {
+    /// Returns the error message.
+    pub fn message(&self) -> Option<&str> {
+        self.message.as_deref()
+    }
+}
+impl std::fmt::Display for CidrBlockInUseException {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "CidrBlockInUseException")?;
+        if let Some(inner_67) = &self.message {
+            write!(f, ": {}", inner_67)?;
+        }
+        Ok(())
+    }
+}
+impl std::error::Error for CidrBlockInUseException {}
+/// See [`CidrBlockInUseException`](crate::error::CidrBlockInUseException).
+pub mod cidr_block_in_use_exception {
+
+    /// A builder for [`CidrBlockInUseException`](crate::error::CidrBlockInUseException).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) message: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn message(mut self, input: impl Into<std::string::String>) -> Self {
+            self.message = Some(input.into());
+            self
+        }
+        #[allow(missing_docs)] // documentation missing in model
+        pub fn set_message(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.message = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CidrBlockInUseException`](crate::error::CidrBlockInUseException).
+        pub fn build(self) -> crate::error::CidrBlockInUseException {
+            crate::error::CidrBlockInUseException {
+                message: self.message,
+            }
+        }
+    }
+}
+impl CidrBlockInUseException {
+    /// Creates a new builder-style object to manufacture [`CidrBlockInUseException`](crate::error::CidrBlockInUseException).
+    pub fn builder() -> crate::error::cidr_block_in_use_exception::Builder {
+        crate::error::cidr_block_in_use_exception::Builder::default()
     }
 }
 
@@ -11741,17 +12821,17 @@ impl PublicZoneVpcAssociation {
 impl std::fmt::Display for PublicZoneVpcAssociation {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "PublicZoneVpcAssociation [PublicZoneVPCAssociation]")?;
-        if let Some(inner_62) = &self.message {
-            write!(f, ": {}", inner_62)?;
+        if let Some(inner_68) = &self.message {
+            write!(f, ": {}", inner_68)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for PublicZoneVpcAssociation {}
-/// See [`PublicZoneVpcAssociation`](crate::error::PublicZoneVpcAssociation)
+/// See [`PublicZoneVpcAssociation`](crate::error::PublicZoneVpcAssociation).
 pub mod public_zone_vpc_association {
-    /// A builder for [`PublicZoneVpcAssociation`](crate::error::PublicZoneVpcAssociation)
-    #[non_exhaustive]
+
+    /// A builder for [`PublicZoneVpcAssociation`](crate::error::PublicZoneVpcAssociation).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11767,7 +12847,7 @@ pub mod public_zone_vpc_association {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`PublicZoneVpcAssociation`](crate::error::PublicZoneVpcAssociation)
+        /// Consumes the builder and constructs a [`PublicZoneVpcAssociation`](crate::error::PublicZoneVpcAssociation).
         pub fn build(self) -> crate::error::PublicZoneVpcAssociation {
             crate::error::PublicZoneVpcAssociation {
                 message: self.message,
@@ -11776,7 +12856,7 @@ pub mod public_zone_vpc_association {
     }
 }
 impl PublicZoneVpcAssociation {
-    /// Creates a new builder-style object to manufacture [`PublicZoneVpcAssociation`](crate::error::PublicZoneVpcAssociation)
+    /// Creates a new builder-style object to manufacture [`PublicZoneVpcAssociation`](crate::error::PublicZoneVpcAssociation).
     pub fn builder() -> crate::error::public_zone_vpc_association::Builder {
         crate::error::public_zone_vpc_association::Builder::default()
     }
@@ -11805,17 +12885,17 @@ impl NotAuthorizedException {
 impl std::fmt::Display for NotAuthorizedException {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "NotAuthorizedException")?;
-        if let Some(inner_63) = &self.message {
-            write!(f, ": {}", inner_63)?;
+        if let Some(inner_69) = &self.message {
+            write!(f, ": {}", inner_69)?;
         }
         Ok(())
     }
 }
 impl std::error::Error for NotAuthorizedException {}
-/// See [`NotAuthorizedException`](crate::error::NotAuthorizedException)
+/// See [`NotAuthorizedException`](crate::error::NotAuthorizedException).
 pub mod not_authorized_exception {
-    /// A builder for [`NotAuthorizedException`](crate::error::NotAuthorizedException)
-    #[non_exhaustive]
+
+    /// A builder for [`NotAuthorizedException`](crate::error::NotAuthorizedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -11831,7 +12911,7 @@ pub mod not_authorized_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`NotAuthorizedException`](crate::error::NotAuthorizedException)
+        /// Consumes the builder and constructs a [`NotAuthorizedException`](crate::error::NotAuthorizedException).
         pub fn build(self) -> crate::error::NotAuthorizedException {
             crate::error::NotAuthorizedException {
                 message: self.message,
@@ -11840,7 +12920,7 @@ pub mod not_authorized_exception {
     }
 }
 impl NotAuthorizedException {
-    /// Creates a new builder-style object to manufacture [`NotAuthorizedException`](crate::error::NotAuthorizedException)
+    /// Creates a new builder-style object to manufacture [`NotAuthorizedException`](crate::error::NotAuthorizedException).
     pub fn builder() -> crate::error::not_authorized_exception::Builder {
         crate::error::not_authorized_exception::Builder::default()
     }

@@ -291,6 +291,173 @@ impl std::error::Error for CreateWorkspaceError {
     }
 }
 
+/// Error type for the `CreateWorkspaceApiKey` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct CreateWorkspaceApiKeyError {
+    /// Kind of error that occurred.
+    pub kind: CreateWorkspaceApiKeyErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `CreateWorkspaceApiKey` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum CreateWorkspaceApiKeyErrorKind {
+    /// <p>You do not have sufficient permissions to perform this action. </p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>A resource was in an inconsistent state during an update or a deletion.</p>
+    ConflictException(crate::error::ConflictException),
+    /// <p>Unexpected error while processing the request. Retry the request.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>The request references a resource that does not exist.</p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>The request would cause a service quota to be exceeded.</p>
+    ServiceQuotaExceededException(crate::error::ServiceQuotaExceededException),
+    /// <p>The request was denied because of request throttling. Retry the request.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p>The value of a parameter in the request caused an error.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for CreateWorkspaceApiKeyError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            CreateWorkspaceApiKeyErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            CreateWorkspaceApiKeyErrorKind::ConflictException(_inner) => _inner.fmt(f),
+            CreateWorkspaceApiKeyErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            CreateWorkspaceApiKeyErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            CreateWorkspaceApiKeyErrorKind::ServiceQuotaExceededException(_inner) => _inner.fmt(f),
+            CreateWorkspaceApiKeyErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            CreateWorkspaceApiKeyErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            CreateWorkspaceApiKeyErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for CreateWorkspaceApiKeyError {
+    fn code(&self) -> Option<&str> {
+        CreateWorkspaceApiKeyError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        match &self.kind {
+            CreateWorkspaceApiKeyErrorKind::InternalServerException(inner) => {
+                Some(inner.retryable_error_kind())
+            }
+            CreateWorkspaceApiKeyErrorKind::ThrottlingException(inner) => {
+                Some(inner.retryable_error_kind())
+            }
+            _ => None,
+        }
+    }
+}
+impl CreateWorkspaceApiKeyError {
+    /// Creates a new `CreateWorkspaceApiKeyError`.
+    pub fn new(kind: CreateWorkspaceApiKeyErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `CreateWorkspaceApiKeyError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: CreateWorkspaceApiKeyErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `CreateWorkspaceApiKeyError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: CreateWorkspaceApiKeyErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `CreateWorkspaceApiKeyErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateWorkspaceApiKeyErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateWorkspaceApiKeyErrorKind::ConflictException`.
+    pub fn is_conflict_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateWorkspaceApiKeyErrorKind::ConflictException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateWorkspaceApiKeyErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateWorkspaceApiKeyErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateWorkspaceApiKeyErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateWorkspaceApiKeyErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateWorkspaceApiKeyErrorKind::ServiceQuotaExceededException`.
+    pub fn is_service_quota_exceeded_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateWorkspaceApiKeyErrorKind::ServiceQuotaExceededException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateWorkspaceApiKeyErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateWorkspaceApiKeyErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateWorkspaceApiKeyErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateWorkspaceApiKeyErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for CreateWorkspaceApiKeyError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            CreateWorkspaceApiKeyErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            CreateWorkspaceApiKeyErrorKind::ConflictException(_inner) => Some(_inner),
+            CreateWorkspaceApiKeyErrorKind::InternalServerException(_inner) => Some(_inner),
+            CreateWorkspaceApiKeyErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            CreateWorkspaceApiKeyErrorKind::ServiceQuotaExceededException(_inner) => Some(_inner),
+            CreateWorkspaceApiKeyErrorKind::ThrottlingException(_inner) => Some(_inner),
+            CreateWorkspaceApiKeyErrorKind::ValidationException(_inner) => Some(_inner),
+            CreateWorkspaceApiKeyErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `DeleteWorkspace` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -434,6 +601,162 @@ impl std::error::Error for DeleteWorkspaceError {
             DeleteWorkspaceErrorKind::ThrottlingException(_inner) => Some(_inner),
             DeleteWorkspaceErrorKind::ValidationException(_inner) => Some(_inner),
             DeleteWorkspaceErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DeleteWorkspaceApiKey` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DeleteWorkspaceApiKeyError {
+    /// Kind of error that occurred.
+    pub kind: DeleteWorkspaceApiKeyErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DeleteWorkspaceApiKey` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DeleteWorkspaceApiKeyErrorKind {
+    /// <p>You do not have sufficient permissions to perform this action. </p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p>A resource was in an inconsistent state during an update or a deletion.</p>
+    ConflictException(crate::error::ConflictException),
+    /// <p>Unexpected error while processing the request. Retry the request.</p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p>The request references a resource that does not exist.</p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p>The request was denied because of request throttling. Retry the request.</p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p>The value of a parameter in the request caused an error.</p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DeleteWorkspaceApiKeyError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DeleteWorkspaceApiKeyErrorKind::AccessDeniedException(_inner) => _inner.fmt(f),
+            DeleteWorkspaceApiKeyErrorKind::ConflictException(_inner) => _inner.fmt(f),
+            DeleteWorkspaceApiKeyErrorKind::InternalServerException(_inner) => _inner.fmt(f),
+            DeleteWorkspaceApiKeyErrorKind::ResourceNotFoundException(_inner) => _inner.fmt(f),
+            DeleteWorkspaceApiKeyErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            DeleteWorkspaceApiKeyErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            DeleteWorkspaceApiKeyErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DeleteWorkspaceApiKeyError {
+    fn code(&self) -> Option<&str> {
+        DeleteWorkspaceApiKeyError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        match &self.kind {
+            DeleteWorkspaceApiKeyErrorKind::InternalServerException(inner) => {
+                Some(inner.retryable_error_kind())
+            }
+            DeleteWorkspaceApiKeyErrorKind::ThrottlingException(inner) => {
+                Some(inner.retryable_error_kind())
+            }
+            _ => None,
+        }
+    }
+}
+impl DeleteWorkspaceApiKeyError {
+    /// Creates a new `DeleteWorkspaceApiKeyError`.
+    pub fn new(kind: DeleteWorkspaceApiKeyErrorKind, meta: aws_smithy_types::Error) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DeleteWorkspaceApiKeyError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DeleteWorkspaceApiKeyErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DeleteWorkspaceApiKeyError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DeleteWorkspaceApiKeyErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DeleteWorkspaceApiKeyErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteWorkspaceApiKeyErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteWorkspaceApiKeyErrorKind::ConflictException`.
+    pub fn is_conflict_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteWorkspaceApiKeyErrorKind::ConflictException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteWorkspaceApiKeyErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteWorkspaceApiKeyErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteWorkspaceApiKeyErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteWorkspaceApiKeyErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteWorkspaceApiKeyErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteWorkspaceApiKeyErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteWorkspaceApiKeyErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteWorkspaceApiKeyErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for DeleteWorkspaceApiKeyError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DeleteWorkspaceApiKeyErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            DeleteWorkspaceApiKeyErrorKind::ConflictException(_inner) => Some(_inner),
+            DeleteWorkspaceApiKeyErrorKind::InternalServerException(_inner) => Some(_inner),
+            DeleteWorkspaceApiKeyErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
+            DeleteWorkspaceApiKeyErrorKind::ThrottlingException(_inner) => Some(_inner),
+            DeleteWorkspaceApiKeyErrorKind::ValidationException(_inner) => Some(_inner),
+            DeleteWorkspaceApiKeyErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -2071,10 +2394,10 @@ impl std::fmt::Display for ThrottlingException {
     }
 }
 impl std::error::Error for ThrottlingException {}
-/// See [`ThrottlingException`](crate::error::ThrottlingException)
+/// See [`ThrottlingException`](crate::error::ThrottlingException).
 pub mod throttling_exception {
-    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
-    #[non_exhaustive]
+
+    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -2123,7 +2446,7 @@ pub mod throttling_exception {
             self.retry_after_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException)
+        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException).
         pub fn build(self) -> crate::error::ThrottlingException {
             crate::error::ThrottlingException {
                 message: self.message,
@@ -2135,7 +2458,7 @@ pub mod throttling_exception {
     }
 }
 impl ThrottlingException {
-    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException)
+    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException).
     pub fn builder() -> crate::error::throttling_exception::Builder {
         crate::error::throttling_exception::Builder::default()
     }
@@ -2184,10 +2507,10 @@ impl std::fmt::Display for InternalServerException {
     }
 }
 impl std::error::Error for InternalServerException {}
-/// See [`InternalServerException`](crate::error::InternalServerException)
+/// See [`InternalServerException`](crate::error::InternalServerException).
 pub mod internal_server_exception {
-    /// A builder for [`InternalServerException`](crate::error::InternalServerException)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalServerException`](crate::error::InternalServerException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -2214,7 +2537,7 @@ pub mod internal_server_exception {
             self.retry_after_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException)
+        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException).
         pub fn build(self) -> crate::error::InternalServerException {
             crate::error::InternalServerException {
                 message: self.message,
@@ -2224,7 +2547,7 @@ pub mod internal_server_exception {
     }
 }
 impl InternalServerException {
-    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException)
+    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException).
     pub fn builder() -> crate::error::internal_server_exception::Builder {
         crate::error::internal_server_exception::Builder::default()
     }
@@ -2260,10 +2583,10 @@ impl std::fmt::Display for AccessDeniedException {
     }
 }
 impl std::error::Error for AccessDeniedException {}
-/// See [`AccessDeniedException`](crate::error::AccessDeniedException)
+/// See [`AccessDeniedException`](crate::error::AccessDeniedException).
 pub mod access_denied_exception {
-    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
-    #[non_exhaustive]
+
+    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -2279,7 +2602,7 @@ pub mod access_denied_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException)
+        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException).
         pub fn build(self) -> crate::error::AccessDeniedException {
             crate::error::AccessDeniedException {
                 message: self.message,
@@ -2288,7 +2611,7 @@ pub mod access_denied_exception {
     }
 }
 impl AccessDeniedException {
-    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException)
+    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException).
     pub fn builder() -> crate::error::access_denied_exception::Builder {
         crate::error::access_denied_exception::Builder::default()
     }
@@ -2340,10 +2663,10 @@ impl std::fmt::Display for ValidationException {
     }
 }
 impl std::error::Error for ValidationException {}
-/// See [`ValidationException`](crate::error::ValidationException)
+/// See [`ValidationException`](crate::error::ValidationException).
 pub mod validation_exception {
-    /// A builder for [`ValidationException`](crate::error::ValidationException)
-    #[non_exhaustive]
+
+    /// A builder for [`ValidationException`](crate::error::ValidationException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -2394,7 +2717,7 @@ pub mod validation_exception {
             self.field_list = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException)
+        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException).
         pub fn build(self) -> crate::error::ValidationException {
             crate::error::ValidationException {
                 message: self.message,
@@ -2405,7 +2728,7 @@ pub mod validation_exception {
     }
 }
 impl ValidationException {
-    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException)
+    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException).
     pub fn builder() -> crate::error::validation_exception::Builder {
         crate::error::validation_exception::Builder::default()
     }
@@ -2471,10 +2794,10 @@ impl std::fmt::Display for ServiceQuotaExceededException {
     }
 }
 impl std::error::Error for ServiceQuotaExceededException {}
-/// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+/// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
 pub mod service_quota_exceeded_exception {
-    /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -2537,7 +2860,7 @@ pub mod service_quota_exceeded_exception {
             self.quota_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+        /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
         pub fn build(self) -> crate::error::ServiceQuotaExceededException {
             crate::error::ServiceQuotaExceededException {
                 message: self.message,
@@ -2550,7 +2873,7 @@ pub mod service_quota_exceeded_exception {
     }
 }
 impl ServiceQuotaExceededException {
-    /// Creates a new builder-style object to manufacture [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+    /// Creates a new builder-style object to manufacture [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
     pub fn builder() -> crate::error::service_quota_exceeded_exception::Builder {
         crate::error::service_quota_exceeded_exception::Builder::default()
     }
@@ -2602,10 +2925,10 @@ impl std::fmt::Display for ConflictException {
     }
 }
 impl std::error::Error for ConflictException {}
-/// See [`ConflictException`](crate::error::ConflictException)
+/// See [`ConflictException`](crate::error::ConflictException).
 pub mod conflict_exception {
-    /// A builder for [`ConflictException`](crate::error::ConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`ConflictException`](crate::error::ConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -2646,7 +2969,7 @@ pub mod conflict_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException)
+        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException).
         pub fn build(self) -> crate::error::ConflictException {
             crate::error::ConflictException {
                 message: self.message,
@@ -2657,7 +2980,7 @@ pub mod conflict_exception {
     }
 }
 impl ConflictException {
-    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException)
+    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException).
     pub fn builder() -> crate::error::conflict_exception::Builder {
         crate::error::conflict_exception::Builder::default()
     }
@@ -2709,10 +3032,10 @@ impl std::fmt::Display for ResourceNotFoundException {
     }
 }
 impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
 pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -2753,7 +3076,7 @@ pub mod resource_not_found_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
         pub fn build(self) -> crate::error::ResourceNotFoundException {
             crate::error::ResourceNotFoundException {
                 message: self.message,
@@ -2764,7 +3087,7 @@ pub mod resource_not_found_exception {
     }
 }
 impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     pub fn builder() -> crate::error::resource_not_found_exception::Builder {
         crate::error::resource_not_found_exception::Builder::default()
     }

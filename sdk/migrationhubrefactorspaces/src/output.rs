@@ -2,6 +2,161 @@
 #[allow(missing_docs)] // documentation missing in model
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct UpdateRouteOutput {
+    /// <p> The unique identifier of the route. </p>
+    pub route_id: std::option::Option<std::string::String>,
+    /// <p> The Amazon Resource Name (ARN) of the route. The format for this ARN is <code>arn:aws:refactor-spaces:<i>region</i>:<i>account-id</i>:<i>resource-type/resource-id</i> </code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    pub arn: std::option::Option<std::string::String>,
+    /// <p> The ID of service in which the route was created. Traffic that matches this route is forwarded to this service. </p>
+    pub service_id: std::option::Option<std::string::String>,
+    /// <p> The ID of the application in which the route is being updated. </p>
+    pub application_id: std::option::Option<std::string::String>,
+    /// <p> The current state of the route. </p>
+    pub state: std::option::Option<crate::model::RouteState>,
+    /// <p> A timestamp that indicates when the route was last updated. </p>
+    pub last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
+}
+impl UpdateRouteOutput {
+    /// <p> The unique identifier of the route. </p>
+    pub fn route_id(&self) -> std::option::Option<&str> {
+        self.route_id.as_deref()
+    }
+    /// <p> The Amazon Resource Name (ARN) of the route. The format for this ARN is <code>arn:aws:refactor-spaces:<i>region</i>:<i>account-id</i>:<i>resource-type/resource-id</i> </code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+    pub fn arn(&self) -> std::option::Option<&str> {
+        self.arn.as_deref()
+    }
+    /// <p> The ID of service in which the route was created. Traffic that matches this route is forwarded to this service. </p>
+    pub fn service_id(&self) -> std::option::Option<&str> {
+        self.service_id.as_deref()
+    }
+    /// <p> The ID of the application in which the route is being updated. </p>
+    pub fn application_id(&self) -> std::option::Option<&str> {
+        self.application_id.as_deref()
+    }
+    /// <p> The current state of the route. </p>
+    pub fn state(&self) -> std::option::Option<&crate::model::RouteState> {
+        self.state.as_ref()
+    }
+    /// <p> A timestamp that indicates when the route was last updated. </p>
+    pub fn last_updated_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.last_updated_time.as_ref()
+    }
+}
+impl std::fmt::Debug for UpdateRouteOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("UpdateRouteOutput");
+        formatter.field("route_id", &self.route_id);
+        formatter.field("arn", &self.arn);
+        formatter.field("service_id", &self.service_id);
+        formatter.field("application_id", &self.application_id);
+        formatter.field("state", &self.state);
+        formatter.field("last_updated_time", &self.last_updated_time);
+        formatter.finish()
+    }
+}
+/// See [`UpdateRouteOutput`](crate::output::UpdateRouteOutput).
+pub mod update_route_output {
+
+    /// A builder for [`UpdateRouteOutput`](crate::output::UpdateRouteOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) route_id: std::option::Option<std::string::String>,
+        pub(crate) arn: std::option::Option<std::string::String>,
+        pub(crate) service_id: std::option::Option<std::string::String>,
+        pub(crate) application_id: std::option::Option<std::string::String>,
+        pub(crate) state: std::option::Option<crate::model::RouteState>,
+        pub(crate) last_updated_time: std::option::Option<aws_smithy_types::DateTime>,
+    }
+    impl Builder {
+        /// <p> The unique identifier of the route. </p>
+        pub fn route_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.route_id = Some(input.into());
+            self
+        }
+        /// <p> The unique identifier of the route. </p>
+        pub fn set_route_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.route_id = input;
+            self
+        }
+        /// <p> The Amazon Resource Name (ARN) of the route. The format for this ARN is <code>arn:aws:refactor-spaces:<i>region</i>:<i>account-id</i>:<i>resource-type/resource-id</i> </code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+        pub fn arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.arn = Some(input.into());
+            self
+        }
+        /// <p> The Amazon Resource Name (ARN) of the route. The format for this ARN is <code>arn:aws:refactor-spaces:<i>region</i>:<i>account-id</i>:<i>resource-type/resource-id</i> </code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>Amazon Web Services General Reference</i>. </p>
+        pub fn set_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.arn = input;
+            self
+        }
+        /// <p> The ID of service in which the route was created. Traffic that matches this route is forwarded to this service. </p>
+        pub fn service_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.service_id = Some(input.into());
+            self
+        }
+        /// <p> The ID of service in which the route was created. Traffic that matches this route is forwarded to this service. </p>
+        pub fn set_service_id(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.service_id = input;
+            self
+        }
+        /// <p> The ID of the application in which the route is being updated. </p>
+        pub fn application_id(mut self, input: impl Into<std::string::String>) -> Self {
+            self.application_id = Some(input.into());
+            self
+        }
+        /// <p> The ID of the application in which the route is being updated. </p>
+        pub fn set_application_id(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.application_id = input;
+            self
+        }
+        /// <p> The current state of the route. </p>
+        pub fn state(mut self, input: crate::model::RouteState) -> Self {
+            self.state = Some(input);
+            self
+        }
+        /// <p> The current state of the route. </p>
+        pub fn set_state(mut self, input: std::option::Option<crate::model::RouteState>) -> Self {
+            self.state = input;
+            self
+        }
+        /// <p> A timestamp that indicates when the route was last updated. </p>
+        pub fn last_updated_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.last_updated_time = Some(input);
+            self
+        }
+        /// <p> A timestamp that indicates when the route was last updated. </p>
+        pub fn set_last_updated_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.last_updated_time = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`UpdateRouteOutput`](crate::output::UpdateRouteOutput).
+        pub fn build(self) -> crate::output::UpdateRouteOutput {
+            crate::output::UpdateRouteOutput {
+                route_id: self.route_id,
+                arn: self.arn,
+                service_id: self.service_id,
+                application_id: self.application_id,
+                state: self.state,
+                last_updated_time: self.last_updated_time,
+            }
+        }
+    }
+}
+impl UpdateRouteOutput {
+    /// Creates a new builder-style object to manufacture [`UpdateRouteOutput`](crate::output::UpdateRouteOutput).
+    pub fn builder() -> crate::output::update_route_output::Builder {
+        crate::output::update_route_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct UntagResourceOutput {}
 impl std::fmt::Debug for UntagResourceOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
@@ -9,21 +164,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -39,21 +194,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -69,21 +224,21 @@ impl std::fmt::Debug for PutResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
+/// See [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
 pub mod put_resource_policy_output {
-    /// A builder for [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
         pub fn build(self) -> crate::output::PutResourcePolicyOutput {
             crate::output::PutResourcePolicyOutput {}
         }
     }
 }
 impl PutResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`PutResourcePolicyOutput`](crate::output::PutResourcePolicyOutput).
     pub fn builder() -> crate::output::put_resource_policy_output::Builder {
         crate::output::put_resource_policy_output::Builder::default()
     }
@@ -113,10 +268,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -149,14 +304,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -189,10 +344,10 @@ impl std::fmt::Debug for ListServicesOutput {
         formatter.finish()
     }
 }
-/// See [`ListServicesOutput`](crate::output::ListServicesOutput)
+/// See [`ListServicesOutput`](crate::output::ListServicesOutput).
 pub mod list_services_output {
-    /// A builder for [`ListServicesOutput`](crate::output::ListServicesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListServicesOutput`](crate::output::ListServicesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_summary_list:
@@ -229,7 +384,7 @@ pub mod list_services_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListServicesOutput`](crate::output::ListServicesOutput)
+        /// Consumes the builder and constructs a [`ListServicesOutput`](crate::output::ListServicesOutput).
         pub fn build(self) -> crate::output::ListServicesOutput {
             crate::output::ListServicesOutput {
                 service_summary_list: self.service_summary_list,
@@ -239,7 +394,7 @@ pub mod list_services_output {
     }
 }
 impl ListServicesOutput {
-    /// Creates a new builder-style object to manufacture [`ListServicesOutput`](crate::output::ListServicesOutput)
+    /// Creates a new builder-style object to manufacture [`ListServicesOutput`](crate::output::ListServicesOutput).
     pub fn builder() -> crate::output::list_services_output::Builder {
         crate::output::list_services_output::Builder::default()
     }
@@ -272,10 +427,10 @@ impl std::fmt::Debug for ListRoutesOutput {
         formatter.finish()
     }
 }
-/// See [`ListRoutesOutput`](crate::output::ListRoutesOutput)
+/// See [`ListRoutesOutput`](crate::output::ListRoutesOutput).
 pub mod list_routes_output {
-    /// A builder for [`ListRoutesOutput`](crate::output::ListRoutesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListRoutesOutput`](crate::output::ListRoutesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) route_summary_list:
@@ -312,7 +467,7 @@ pub mod list_routes_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRoutesOutput`](crate::output::ListRoutesOutput)
+        /// Consumes the builder and constructs a [`ListRoutesOutput`](crate::output::ListRoutesOutput).
         pub fn build(self) -> crate::output::ListRoutesOutput {
             crate::output::ListRoutesOutput {
                 route_summary_list: self.route_summary_list,
@@ -322,7 +477,7 @@ pub mod list_routes_output {
     }
 }
 impl ListRoutesOutput {
-    /// Creates a new builder-style object to manufacture [`ListRoutesOutput`](crate::output::ListRoutesOutput)
+    /// Creates a new builder-style object to manufacture [`ListRoutesOutput`](crate::output::ListRoutesOutput).
     pub fn builder() -> crate::output::list_routes_output::Builder {
         crate::output::list_routes_output::Builder::default()
     }
@@ -355,10 +510,10 @@ impl std::fmt::Debug for ListEnvironmentVpcsOutput {
         formatter.finish()
     }
 }
-/// See [`ListEnvironmentVpcsOutput`](crate::output::ListEnvironmentVpcsOutput)
+/// See [`ListEnvironmentVpcsOutput`](crate::output::ListEnvironmentVpcsOutput).
 pub mod list_environment_vpcs_output {
-    /// A builder for [`ListEnvironmentVpcsOutput`](crate::output::ListEnvironmentVpcsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListEnvironmentVpcsOutput`](crate::output::ListEnvironmentVpcsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) environment_vpc_list:
@@ -395,7 +550,7 @@ pub mod list_environment_vpcs_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListEnvironmentVpcsOutput`](crate::output::ListEnvironmentVpcsOutput)
+        /// Consumes the builder and constructs a [`ListEnvironmentVpcsOutput`](crate::output::ListEnvironmentVpcsOutput).
         pub fn build(self) -> crate::output::ListEnvironmentVpcsOutput {
             crate::output::ListEnvironmentVpcsOutput {
                 environment_vpc_list: self.environment_vpc_list,
@@ -405,7 +560,7 @@ pub mod list_environment_vpcs_output {
     }
 }
 impl ListEnvironmentVpcsOutput {
-    /// Creates a new builder-style object to manufacture [`ListEnvironmentVpcsOutput`](crate::output::ListEnvironmentVpcsOutput)
+    /// Creates a new builder-style object to manufacture [`ListEnvironmentVpcsOutput`](crate::output::ListEnvironmentVpcsOutput).
     pub fn builder() -> crate::output::list_environment_vpcs_output::Builder {
         crate::output::list_environment_vpcs_output::Builder::default()
     }
@@ -441,10 +596,10 @@ impl std::fmt::Debug for ListEnvironmentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput)
+/// See [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput).
 pub mod list_environments_output {
-    /// A builder for [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) environment_summary_list:
@@ -481,7 +636,7 @@ pub mod list_environments_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput)
+        /// Consumes the builder and constructs a [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput).
         pub fn build(self) -> crate::output::ListEnvironmentsOutput {
             crate::output::ListEnvironmentsOutput {
                 environment_summary_list: self.environment_summary_list,
@@ -491,7 +646,7 @@ pub mod list_environments_output {
     }
 }
 impl ListEnvironmentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListEnvironmentsOutput`](crate::output::ListEnvironmentsOutput).
     pub fn builder() -> crate::output::list_environments_output::Builder {
         crate::output::list_environments_output::Builder::default()
     }
@@ -527,10 +682,10 @@ impl std::fmt::Debug for ListApplicationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
+/// See [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
 pub mod list_applications_output {
-    /// A builder for [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) application_summary_list:
@@ -567,7 +722,7 @@ pub mod list_applications_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
+        /// Consumes the builder and constructs a [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
         pub fn build(self) -> crate::output::ListApplicationsOutput {
             crate::output::ListApplicationsOutput {
                 application_summary_list: self.application_summary_list,
@@ -577,7 +732,7 @@ pub mod list_applications_output {
     }
 }
 impl ListApplicationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListApplicationsOutput`](crate::output::ListApplicationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListApplicationsOutput`](crate::output::ListApplicationsOutput).
     pub fn builder() -> crate::output::list_applications_output::Builder {
         crate::output::list_applications_output::Builder::default()
     }
@@ -725,10 +880,10 @@ impl std::fmt::Debug for GetServiceOutput {
         formatter.finish()
     }
 }
-/// See [`GetServiceOutput`](crate::output::GetServiceOutput)
+/// See [`GetServiceOutput`](crate::output::GetServiceOutput).
 pub mod get_service_output {
-    /// A builder for [`GetServiceOutput`](crate::output::GetServiceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetServiceOutput`](crate::output::GetServiceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_id: std::option::Option<std::string::String>,
@@ -973,7 +1128,7 @@ pub mod get_service_output {
             self.created_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetServiceOutput`](crate::output::GetServiceOutput)
+        /// Consumes the builder and constructs a [`GetServiceOutput`](crate::output::GetServiceOutput).
         pub fn build(self) -> crate::output::GetServiceOutput {
             crate::output::GetServiceOutput {
                 service_id: self.service_id,
@@ -998,7 +1153,7 @@ pub mod get_service_output {
     }
 }
 impl GetServiceOutput {
-    /// Creates a new builder-style object to manufacture [`GetServiceOutput`](crate::output::GetServiceOutput)
+    /// Creates a new builder-style object to manufacture [`GetServiceOutput`](crate::output::GetServiceOutput).
     pub fn builder() -> crate::output::get_service_output::Builder {
         crate::output::get_service_output::Builder::default()
     }
@@ -1148,10 +1303,10 @@ impl std::fmt::Debug for GetRouteOutput {
         formatter.finish()
     }
 }
-/// See [`GetRouteOutput`](crate::output::GetRouteOutput)
+/// See [`GetRouteOutput`](crate::output::GetRouteOutput).
 pub mod get_route_output {
-    /// A builder for [`GetRouteOutput`](crate::output::GetRouteOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetRouteOutput`](crate::output::GetRouteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) route_id: std::option::Option<std::string::String>,
@@ -1414,7 +1569,7 @@ pub mod get_route_output {
             self.created_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetRouteOutput`](crate::output::GetRouteOutput)
+        /// Consumes the builder and constructs a [`GetRouteOutput`](crate::output::GetRouteOutput).
         pub fn build(self) -> crate::output::GetRouteOutput {
             crate::output::GetRouteOutput {
                 route_id: self.route_id,
@@ -1439,7 +1594,7 @@ pub mod get_route_output {
     }
 }
 impl GetRouteOutput {
-    /// Creates a new builder-style object to manufacture [`GetRouteOutput`](crate::output::GetRouteOutput)
+    /// Creates a new builder-style object to manufacture [`GetRouteOutput`](crate::output::GetRouteOutput).
     pub fn builder() -> crate::output::get_route_output::Builder {
         crate::output::get_route_output::Builder::default()
     }
@@ -1465,10 +1620,10 @@ impl std::fmt::Debug for GetResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput)
+/// See [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput).
 pub mod get_resource_policy_output {
-    /// A builder for [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) policy: std::option::Option<std::string::String>,
@@ -1484,7 +1639,7 @@ pub mod get_resource_policy_output {
             self.policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput).
         pub fn build(self) -> crate::output::GetResourcePolicyOutput {
             crate::output::GetResourcePolicyOutput {
                 policy: self.policy,
@@ -1493,7 +1648,7 @@ pub mod get_resource_policy_output {
     }
 }
 impl GetResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`GetResourcePolicyOutput`](crate::output::GetResourcePolicyOutput).
     pub fn builder() -> crate::output::get_resource_policy_output::Builder {
         crate::output::get_resource_policy_output::Builder::default()
     }
@@ -1600,10 +1755,10 @@ impl std::fmt::Debug for GetEnvironmentOutput {
         formatter.finish()
     }
 }
-/// See [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput)
+/// See [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput).
 pub mod get_environment_output {
-    /// A builder for [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -1781,7 +1936,7 @@ pub mod get_environment_output {
             self.created_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput)
+        /// Consumes the builder and constructs a [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput).
         pub fn build(self) -> crate::output::GetEnvironmentOutput {
             crate::output::GetEnvironmentOutput {
                 name: self.name,
@@ -1801,7 +1956,7 @@ pub mod get_environment_output {
     }
 }
 impl GetEnvironmentOutput {
-    /// Creates a new builder-style object to manufacture [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput)
+    /// Creates a new builder-style object to manufacture [`GetEnvironmentOutput`](crate::output::GetEnvironmentOutput).
     pub fn builder() -> crate::output::get_environment_output::Builder {
         crate::output::get_environment_output::Builder::default()
     }
@@ -1922,10 +2077,10 @@ impl std::fmt::Debug for GetApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`GetApplicationOutput`](crate::output::GetApplicationOutput)
+/// See [`GetApplicationOutput`](crate::output::GetApplicationOutput).
 pub mod get_application_output {
-    /// A builder for [`GetApplicationOutput`](crate::output::GetApplicationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetApplicationOutput`](crate::output::GetApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2131,7 +2286,7 @@ pub mod get_application_output {
             self.created_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetApplicationOutput`](crate::output::GetApplicationOutput)
+        /// Consumes the builder and constructs a [`GetApplicationOutput`](crate::output::GetApplicationOutput).
         pub fn build(self) -> crate::output::GetApplicationOutput {
             crate::output::GetApplicationOutput {
                 name: self.name,
@@ -2153,7 +2308,7 @@ pub mod get_application_output {
     }
 }
 impl GetApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`GetApplicationOutput`](crate::output::GetApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`GetApplicationOutput`](crate::output::GetApplicationOutput).
     pub fn builder() -> crate::output::get_application_output::Builder {
         crate::output::get_application_output::Builder::default()
     }
@@ -2221,10 +2376,10 @@ impl std::fmt::Debug for DeleteServiceOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteServiceOutput`](crate::output::DeleteServiceOutput)
+/// See [`DeleteServiceOutput`](crate::output::DeleteServiceOutput).
 pub mod delete_service_output {
-    /// A builder for [`DeleteServiceOutput`](crate::output::DeleteServiceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteServiceOutput`](crate::output::DeleteServiceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_id: std::option::Option<std::string::String>,
@@ -2315,7 +2470,7 @@ pub mod delete_service_output {
             self.last_updated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteServiceOutput`](crate::output::DeleteServiceOutput)
+        /// Consumes the builder and constructs a [`DeleteServiceOutput`](crate::output::DeleteServiceOutput).
         pub fn build(self) -> crate::output::DeleteServiceOutput {
             crate::output::DeleteServiceOutput {
                 service_id: self.service_id,
@@ -2330,7 +2485,7 @@ pub mod delete_service_output {
     }
 }
 impl DeleteServiceOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteServiceOutput`](crate::output::DeleteServiceOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteServiceOutput`](crate::output::DeleteServiceOutput).
     pub fn builder() -> crate::output::delete_service_output::Builder {
         crate::output::delete_service_output::Builder::default()
     }
@@ -2391,10 +2546,10 @@ impl std::fmt::Debug for DeleteRouteOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteRouteOutput`](crate::output::DeleteRouteOutput)
+/// See [`DeleteRouteOutput`](crate::output::DeleteRouteOutput).
 pub mod delete_route_output {
-    /// A builder for [`DeleteRouteOutput`](crate::output::DeleteRouteOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteRouteOutput`](crate::output::DeleteRouteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) route_id: std::option::Option<std::string::String>,
@@ -2471,7 +2626,7 @@ pub mod delete_route_output {
             self.last_updated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteRouteOutput`](crate::output::DeleteRouteOutput)
+        /// Consumes the builder and constructs a [`DeleteRouteOutput`](crate::output::DeleteRouteOutput).
         pub fn build(self) -> crate::output::DeleteRouteOutput {
             crate::output::DeleteRouteOutput {
                 route_id: self.route_id,
@@ -2485,7 +2640,7 @@ pub mod delete_route_output {
     }
 }
 impl DeleteRouteOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteRouteOutput`](crate::output::DeleteRouteOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteRouteOutput`](crate::output::DeleteRouteOutput).
     pub fn builder() -> crate::output::delete_route_output::Builder {
         crate::output::delete_route_output::Builder::default()
     }
@@ -2501,21 +2656,21 @@ impl std::fmt::Debug for DeleteResourcePolicyOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+/// See [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
 pub mod delete_resource_policy_output {
-    /// A builder for [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+        /// Consumes the builder and constructs a [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
         pub fn build(self) -> crate::output::DeleteResourcePolicyOutput {
             crate::output::DeleteResourcePolicyOutput {}
         }
     }
 }
 impl DeleteResourcePolicyOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteResourcePolicyOutput`](crate::output::DeleteResourcePolicyOutput).
     pub fn builder() -> crate::output::delete_resource_policy_output::Builder {
         crate::output::delete_resource_policy_output::Builder::default()
     }
@@ -2569,10 +2724,10 @@ impl std::fmt::Debug for DeleteEnvironmentOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput)
+/// See [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput).
 pub mod delete_environment_output {
-    /// A builder for [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2641,7 +2796,7 @@ pub mod delete_environment_output {
             self.last_updated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput)
+        /// Consumes the builder and constructs a [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput).
         pub fn build(self) -> crate::output::DeleteEnvironmentOutput {
             crate::output::DeleteEnvironmentOutput {
                 name: self.name,
@@ -2654,7 +2809,7 @@ pub mod delete_environment_output {
     }
 }
 impl DeleteEnvironmentOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteEnvironmentOutput`](crate::output::DeleteEnvironmentOutput).
     pub fn builder() -> crate::output::delete_environment_output::Builder {
         crate::output::delete_environment_output::Builder::default()
     }
@@ -2715,10 +2870,10 @@ impl std::fmt::Debug for DeleteApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
+/// See [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
 pub mod delete_application_output {
-    /// A builder for [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -2801,7 +2956,7 @@ pub mod delete_application_output {
             self.last_updated_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
+        /// Consumes the builder and constructs a [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
         pub fn build(self) -> crate::output::DeleteApplicationOutput {
             crate::output::DeleteApplicationOutput {
                 name: self.name,
@@ -2815,7 +2970,7 @@ pub mod delete_application_output {
     }
 }
 impl DeleteApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteApplicationOutput`](crate::output::DeleteApplicationOutput).
     pub fn builder() -> crate::output::delete_application_output::Builder {
         crate::output::delete_application_output::Builder::default()
     }
@@ -2950,10 +3105,10 @@ impl std::fmt::Debug for CreateServiceOutput {
         formatter.finish()
     }
 }
-/// See [`CreateServiceOutput`](crate::output::CreateServiceOutput)
+/// See [`CreateServiceOutput`](crate::output::CreateServiceOutput).
 pub mod create_service_output {
-    /// A builder for [`CreateServiceOutput`](crate::output::CreateServiceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateServiceOutput`](crate::output::CreateServiceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) service_id: std::option::Option<std::string::String>,
@@ -3178,7 +3333,7 @@ pub mod create_service_output {
             self.created_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateServiceOutput`](crate::output::CreateServiceOutput)
+        /// Consumes the builder and constructs a [`CreateServiceOutput`](crate::output::CreateServiceOutput).
         pub fn build(self) -> crate::output::CreateServiceOutput {
             crate::output::CreateServiceOutput {
                 service_id: self.service_id,
@@ -3202,7 +3357,7 @@ pub mod create_service_output {
     }
 }
 impl CreateServiceOutput {
-    /// Creates a new builder-style object to manufacture [`CreateServiceOutput`](crate::output::CreateServiceOutput)
+    /// Creates a new builder-style object to manufacture [`CreateServiceOutput`](crate::output::CreateServiceOutput).
     pub fn builder() -> crate::output::create_service_output::Builder {
         crate::output::create_service_output::Builder::default()
     }
@@ -3226,9 +3381,9 @@ pub struct CreateRouteOutput {
     pub service_id: std::option::Option<std::string::String>,
     /// <p>The ID of the application in which the route is created.</p>
     pub application_id: std::option::Option<std::string::String>,
-    /// <p>onfiguration for the URI path route type. </p>
+    /// <p>Configuration for the URI path route type. </p>
     pub uri_path_route: std::option::Option<crate::model::UriPathRouteInput>,
-    /// <p>The current state of the route. </p>
+    /// <p>The current state of the route. Activation state only allows <code>ACTIVE</code> or <code>INACTIVE</code> as user inputs. <code>FAILED</code> is a route state that is system generated.</p>
     pub state: std::option::Option<crate::model::RouteState>,
     /// <p>The tags assigned to the created route. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key-value pair. </p>
     pub tags:
@@ -3267,11 +3422,11 @@ impl CreateRouteOutput {
     pub fn application_id(&self) -> std::option::Option<&str> {
         self.application_id.as_deref()
     }
-    /// <p>onfiguration for the URI path route type. </p>
+    /// <p>Configuration for the URI path route type. </p>
     pub fn uri_path_route(&self) -> std::option::Option<&crate::model::UriPathRouteInput> {
         self.uri_path_route.as_ref()
     }
-    /// <p>The current state of the route. </p>
+    /// <p>The current state of the route. Activation state only allows <code>ACTIVE</code> or <code>INACTIVE</code> as user inputs. <code>FAILED</code> is a route state that is system generated.</p>
     pub fn state(&self) -> std::option::Option<&crate::model::RouteState> {
         self.state.as_ref()
     }
@@ -3309,10 +3464,10 @@ impl std::fmt::Debug for CreateRouteOutput {
         formatter.finish()
     }
 }
-/// See [`CreateRouteOutput`](crate::output::CreateRouteOutput)
+/// See [`CreateRouteOutput`](crate::output::CreateRouteOutput).
 pub mod create_route_output {
-    /// A builder for [`CreateRouteOutput`](crate::output::CreateRouteOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateRouteOutput`](crate::output::CreateRouteOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) route_id: std::option::Option<std::string::String>,
@@ -3413,12 +3568,12 @@ pub mod create_route_output {
             self.application_id = input;
             self
         }
-        /// <p>onfiguration for the URI path route type. </p>
+        /// <p>Configuration for the URI path route type. </p>
         pub fn uri_path_route(mut self, input: crate::model::UriPathRouteInput) -> Self {
             self.uri_path_route = Some(input);
             self
         }
-        /// <p>onfiguration for the URI path route type. </p>
+        /// <p>Configuration for the URI path route type. </p>
         pub fn set_uri_path_route(
             mut self,
             input: std::option::Option<crate::model::UriPathRouteInput>,
@@ -3426,12 +3581,12 @@ pub mod create_route_output {
             self.uri_path_route = input;
             self
         }
-        /// <p>The current state of the route. </p>
+        /// <p>The current state of the route. Activation state only allows <code>ACTIVE</code> or <code>INACTIVE</code> as user inputs. <code>FAILED</code> is a route state that is system generated.</p>
         pub fn state(mut self, input: crate::model::RouteState) -> Self {
             self.state = Some(input);
             self
         }
-        /// <p>The current state of the route. </p>
+        /// <p>The current state of the route. Activation state only allows <code>ACTIVE</code> or <code>INACTIVE</code> as user inputs. <code>FAILED</code> is a route state that is system generated.</p>
         pub fn set_state(mut self, input: std::option::Option<crate::model::RouteState>) -> Self {
             self.state = input;
             self
@@ -3487,7 +3642,7 @@ pub mod create_route_output {
             self.created_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateRouteOutput`](crate::output::CreateRouteOutput)
+        /// Consumes the builder and constructs a [`CreateRouteOutput`](crate::output::CreateRouteOutput).
         pub fn build(self) -> crate::output::CreateRouteOutput {
             crate::output::CreateRouteOutput {
                 route_id: self.route_id,
@@ -3507,7 +3662,7 @@ pub mod create_route_output {
     }
 }
 impl CreateRouteOutput {
-    /// Creates a new builder-style object to manufacture [`CreateRouteOutput`](crate::output::CreateRouteOutput)
+    /// Creates a new builder-style object to manufacture [`CreateRouteOutput`](crate::output::CreateRouteOutput).
     pub fn builder() -> crate::output::create_route_output::Builder {
         crate::output::create_route_output::Builder::default()
     }
@@ -3600,10 +3755,10 @@ impl std::fmt::Debug for CreateEnvironmentOutput {
         formatter.finish()
     }
 }
-/// See [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput)
+/// See [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput).
 pub mod create_environment_output {
-    /// A builder for [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -3753,7 +3908,7 @@ pub mod create_environment_output {
             self.created_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput)
+        /// Consumes the builder and constructs a [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput).
         pub fn build(self) -> crate::output::CreateEnvironmentOutput {
             crate::output::CreateEnvironmentOutput {
                 name: self.name,
@@ -3771,7 +3926,7 @@ pub mod create_environment_output {
     }
 }
 impl CreateEnvironmentOutput {
-    /// Creates a new builder-style object to manufacture [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput)
+    /// Creates a new builder-style object to manufacture [`CreateEnvironmentOutput`](crate::output::CreateEnvironmentOutput).
     pub fn builder() -> crate::output::create_environment_output::Builder {
         crate::output::create_environment_output::Builder::default()
     }
@@ -3885,10 +4040,10 @@ impl std::fmt::Debug for CreateApplicationOutput {
         formatter.finish()
     }
 }
-/// See [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
+/// See [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
 pub mod create_application_output {
-    /// A builder for [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -4080,7 +4235,7 @@ pub mod create_application_output {
             self.created_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
+        /// Consumes the builder and constructs a [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
         pub fn build(self) -> crate::output::CreateApplicationOutput {
             crate::output::CreateApplicationOutput {
                 name: self.name,
@@ -4101,7 +4256,7 @@ pub mod create_application_output {
     }
 }
 impl CreateApplicationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateApplicationOutput`](crate::output::CreateApplicationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateApplicationOutput`](crate::output::CreateApplicationOutput).
     pub fn builder() -> crate::output::create_application_output::Builder {
         crate::output::create_application_output::Builder::default()
     }

@@ -98,10 +98,10 @@ impl std::fmt::Debug for AvailabilityZone {
         formatter.finish()
     }
 }
-/// See [`AvailabilityZone`](crate::model::AvailabilityZone)
+/// See [`AvailabilityZone`](crate::model::AvailabilityZone).
 pub mod availability_zone {
-    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone)
-    #[non_exhaustive]
+
+    /// A builder for [`AvailabilityZone`](crate::model::AvailabilityZone).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) zone_name: std::option::Option<std::string::String>,
@@ -160,7 +160,7 @@ pub mod availability_zone {
             self.load_balancer_addresses = input;
             self
         }
-        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone)
+        /// Consumes the builder and constructs a [`AvailabilityZone`](crate::model::AvailabilityZone).
         pub fn build(self) -> crate::model::AvailabilityZone {
             crate::model::AvailabilityZone {
                 zone_name: self.zone_name,
@@ -172,7 +172,7 @@ pub mod availability_zone {
     }
 }
 impl AvailabilityZone {
-    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone)
+    /// Creates a new builder-style object to manufacture [`AvailabilityZone`](crate::model::AvailabilityZone).
     pub fn builder() -> crate::model::availability_zone::Builder {
         crate::model::availability_zone::Builder::default()
     }
@@ -219,10 +219,10 @@ impl std::fmt::Debug for LoadBalancerAddress {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerAddress`](crate::model::LoadBalancerAddress)
+/// See [`LoadBalancerAddress`](crate::model::LoadBalancerAddress).
 pub mod load_balancer_address {
-    /// A builder for [`LoadBalancerAddress`](crate::model::LoadBalancerAddress)
-    #[non_exhaustive]
+
+    /// A builder for [`LoadBalancerAddress`](crate::model::LoadBalancerAddress).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ip_address: std::option::Option<std::string::String>,
@@ -280,7 +280,7 @@ pub mod load_balancer_address {
             self.i_pv6_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerAddress`](crate::model::LoadBalancerAddress)
+        /// Consumes the builder and constructs a [`LoadBalancerAddress`](crate::model::LoadBalancerAddress).
         pub fn build(self) -> crate::model::LoadBalancerAddress {
             crate::model::LoadBalancerAddress {
                 ip_address: self.ip_address,
@@ -292,7 +292,7 @@ pub mod load_balancer_address {
     }
 }
 impl LoadBalancerAddress {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerAddress`](crate::model::LoadBalancerAddress)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerAddress`](crate::model::LoadBalancerAddress).
     pub fn builder() -> crate::model::load_balancer_address::Builder {
         crate::model::load_balancer_address::Builder::default()
     }
@@ -339,10 +339,10 @@ impl std::fmt::Debug for SubnetMapping {
         formatter.finish()
     }
 }
-/// See [`SubnetMapping`](crate::model::SubnetMapping)
+/// See [`SubnetMapping`](crate::model::SubnetMapping).
 pub mod subnet_mapping {
-    /// A builder for [`SubnetMapping`](crate::model::SubnetMapping)
-    #[non_exhaustive]
+
+    /// A builder for [`SubnetMapping`](crate::model::SubnetMapping).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) subnet_id: std::option::Option<std::string::String>,
@@ -400,7 +400,7 @@ pub mod subnet_mapping {
             self.i_pv6_address = input;
             self
         }
-        /// Consumes the builder and constructs a [`SubnetMapping`](crate::model::SubnetMapping)
+        /// Consumes the builder and constructs a [`SubnetMapping`](crate::model::SubnetMapping).
         pub fn build(self) -> crate::model::SubnetMapping {
             crate::model::SubnetMapping {
                 subnet_id: self.subnet_id,
@@ -412,7 +412,7 @@ pub mod subnet_mapping {
     }
 }
 impl SubnetMapping {
-    /// Creates a new builder-style object to manufacture [`SubnetMapping`](crate::model::SubnetMapping)
+    /// Creates a new builder-style object to manufacture [`SubnetMapping`](crate::model::SubnetMapping).
     pub fn builder() -> crate::model::subnet_mapping::Builder {
         crate::model::subnet_mapping::Builder::default()
     }
@@ -466,10 +466,10 @@ impl std::fmt::Debug for Rule {
         formatter.finish()
     }
 }
-/// See [`Rule`](crate::model::Rule)
+/// See [`Rule`](crate::model::Rule).
 pub mod rule {
-    /// A builder for [`Rule`](crate::model::Rule)
-    #[non_exhaustive]
+
+    /// A builder for [`Rule`](crate::model::Rule).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_arn: std::option::Option<std::string::String>,
@@ -547,7 +547,7 @@ pub mod rule {
             self.is_default = input;
             self
         }
-        /// Consumes the builder and constructs a [`Rule`](crate::model::Rule)
+        /// Consumes the builder and constructs a [`Rule`](crate::model::Rule).
         pub fn build(self) -> crate::model::Rule {
             crate::model::Rule {
                 rule_arn: self.rule_arn,
@@ -560,7 +560,7 @@ pub mod rule {
     }
 }
 impl Rule {
-    /// Creates a new builder-style object to manufacture [`Rule`](crate::model::Rule)
+    /// Creates a new builder-style object to manufacture [`Rule`](crate::model::Rule).
     pub fn builder() -> crate::model::rule::Builder {
         crate::model::rule::Builder::default()
     }
@@ -646,10 +646,10 @@ impl std::fmt::Debug for Action {
         formatter.finish()
     }
 }
-/// See [`Action`](crate::model::Action)
+/// See [`Action`](crate::model::Action).
 pub mod action {
-    /// A builder for [`Action`](crate::model::Action)
-    #[non_exhaustive]
+
+    /// A builder for [`Action`](crate::model::Action).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) r#type: std::option::Option<crate::model::ActionTypeEnum>,
@@ -775,7 +775,7 @@ pub mod action {
             self.forward_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`Action`](crate::model::Action)
+        /// Consumes the builder and constructs a [`Action`](crate::model::Action).
         pub fn build(self) -> crate::model::Action {
             crate::model::Action {
                 r#type: self.r#type,
@@ -791,7 +791,7 @@ pub mod action {
     }
 }
 impl Action {
-    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action)
+    /// Creates a new builder-style object to manufacture [`Action`](crate::model::Action).
     pub fn builder() -> crate::model::action::Builder {
         crate::model::action::Builder::default()
     }
@@ -830,10 +830,10 @@ impl std::fmt::Debug for ForwardActionConfig {
         formatter.finish()
     }
 }
-/// See [`ForwardActionConfig`](crate::model::ForwardActionConfig)
+/// See [`ForwardActionConfig`](crate::model::ForwardActionConfig).
 pub mod forward_action_config {
-    /// A builder for [`ForwardActionConfig`](crate::model::ForwardActionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`ForwardActionConfig`](crate::model::ForwardActionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_groups:
@@ -877,7 +877,7 @@ pub mod forward_action_config {
             self.target_group_stickiness_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`ForwardActionConfig`](crate::model::ForwardActionConfig)
+        /// Consumes the builder and constructs a [`ForwardActionConfig`](crate::model::ForwardActionConfig).
         pub fn build(self) -> crate::model::ForwardActionConfig {
             crate::model::ForwardActionConfig {
                 target_groups: self.target_groups,
@@ -887,7 +887,7 @@ pub mod forward_action_config {
     }
 }
 impl ForwardActionConfig {
-    /// Creates a new builder-style object to manufacture [`ForwardActionConfig`](crate::model::ForwardActionConfig)
+    /// Creates a new builder-style object to manufacture [`ForwardActionConfig`](crate::model::ForwardActionConfig).
     pub fn builder() -> crate::model::forward_action_config::Builder {
         crate::model::forward_action_config::Builder::default()
     }
@@ -920,10 +920,10 @@ impl std::fmt::Debug for TargetGroupStickinessConfig {
         formatter.finish()
     }
 }
-/// See [`TargetGroupStickinessConfig`](crate::model::TargetGroupStickinessConfig)
+/// See [`TargetGroupStickinessConfig`](crate::model::TargetGroupStickinessConfig).
 pub mod target_group_stickiness_config {
-    /// A builder for [`TargetGroupStickinessConfig`](crate::model::TargetGroupStickinessConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`TargetGroupStickinessConfig`](crate::model::TargetGroupStickinessConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) enabled: std::option::Option<bool>,
@@ -950,7 +950,7 @@ pub mod target_group_stickiness_config {
             self.duration_seconds = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetGroupStickinessConfig`](crate::model::TargetGroupStickinessConfig)
+        /// Consumes the builder and constructs a [`TargetGroupStickinessConfig`](crate::model::TargetGroupStickinessConfig).
         pub fn build(self) -> crate::model::TargetGroupStickinessConfig {
             crate::model::TargetGroupStickinessConfig {
                 enabled: self.enabled,
@@ -960,7 +960,7 @@ pub mod target_group_stickiness_config {
     }
 }
 impl TargetGroupStickinessConfig {
-    /// Creates a new builder-style object to manufacture [`TargetGroupStickinessConfig`](crate::model::TargetGroupStickinessConfig)
+    /// Creates a new builder-style object to manufacture [`TargetGroupStickinessConfig`](crate::model::TargetGroupStickinessConfig).
     pub fn builder() -> crate::model::target_group_stickiness_config::Builder {
         crate::model::target_group_stickiness_config::Builder::default()
     }
@@ -993,10 +993,10 @@ impl std::fmt::Debug for TargetGroupTuple {
         formatter.finish()
     }
 }
-/// See [`TargetGroupTuple`](crate::model::TargetGroupTuple)
+/// See [`TargetGroupTuple`](crate::model::TargetGroupTuple).
 pub mod target_group_tuple {
-    /// A builder for [`TargetGroupTuple`](crate::model::TargetGroupTuple)
-    #[non_exhaustive]
+
+    /// A builder for [`TargetGroupTuple`](crate::model::TargetGroupTuple).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_group_arn: std::option::Option<std::string::String>,
@@ -1026,7 +1026,7 @@ pub mod target_group_tuple {
             self.weight = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetGroupTuple`](crate::model::TargetGroupTuple)
+        /// Consumes the builder and constructs a [`TargetGroupTuple`](crate::model::TargetGroupTuple).
         pub fn build(self) -> crate::model::TargetGroupTuple {
             crate::model::TargetGroupTuple {
                 target_group_arn: self.target_group_arn,
@@ -1036,7 +1036,7 @@ pub mod target_group_tuple {
     }
 }
 impl TargetGroupTuple {
-    /// Creates a new builder-style object to manufacture [`TargetGroupTuple`](crate::model::TargetGroupTuple)
+    /// Creates a new builder-style object to manufacture [`TargetGroupTuple`](crate::model::TargetGroupTuple).
     pub fn builder() -> crate::model::target_group_tuple::Builder {
         crate::model::target_group_tuple::Builder::default()
     }
@@ -1078,10 +1078,10 @@ impl std::fmt::Debug for FixedResponseActionConfig {
         formatter.finish()
     }
 }
-/// See [`FixedResponseActionConfig`](crate::model::FixedResponseActionConfig)
+/// See [`FixedResponseActionConfig`](crate::model::FixedResponseActionConfig).
 pub mod fixed_response_action_config {
-    /// A builder for [`FixedResponseActionConfig`](crate::model::FixedResponseActionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`FixedResponseActionConfig`](crate::model::FixedResponseActionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message_body: std::option::Option<std::string::String>,
@@ -1121,7 +1121,7 @@ pub mod fixed_response_action_config {
             self.content_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`FixedResponseActionConfig`](crate::model::FixedResponseActionConfig)
+        /// Consumes the builder and constructs a [`FixedResponseActionConfig`](crate::model::FixedResponseActionConfig).
         pub fn build(self) -> crate::model::FixedResponseActionConfig {
             crate::model::FixedResponseActionConfig {
                 message_body: self.message_body,
@@ -1132,7 +1132,7 @@ pub mod fixed_response_action_config {
     }
 }
 impl FixedResponseActionConfig {
-    /// Creates a new builder-style object to manufacture [`FixedResponseActionConfig`](crate::model::FixedResponseActionConfig)
+    /// Creates a new builder-style object to manufacture [`FixedResponseActionConfig`](crate::model::FixedResponseActionConfig).
     pub fn builder() -> crate::model::fixed_response_action_config::Builder {
         crate::model::fixed_response_action_config::Builder::default()
     }
@@ -1203,10 +1203,10 @@ impl std::fmt::Debug for RedirectActionConfig {
         formatter.finish()
     }
 }
-/// See [`RedirectActionConfig`](crate::model::RedirectActionConfig)
+/// See [`RedirectActionConfig`](crate::model::RedirectActionConfig).
 pub mod redirect_action_config {
-    /// A builder for [`RedirectActionConfig`](crate::model::RedirectActionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`RedirectActionConfig`](crate::model::RedirectActionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) protocol: std::option::Option<std::string::String>,
@@ -1280,7 +1280,7 @@ pub mod redirect_action_config {
             self.status_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`RedirectActionConfig`](crate::model::RedirectActionConfig)
+        /// Consumes the builder and constructs a [`RedirectActionConfig`](crate::model::RedirectActionConfig).
         pub fn build(self) -> crate::model::RedirectActionConfig {
             crate::model::RedirectActionConfig {
                 protocol: self.protocol,
@@ -1294,7 +1294,7 @@ pub mod redirect_action_config {
     }
 }
 impl RedirectActionConfig {
-    /// Creates a new builder-style object to manufacture [`RedirectActionConfig`](crate::model::RedirectActionConfig)
+    /// Creates a new builder-style object to manufacture [`RedirectActionConfig`](crate::model::RedirectActionConfig).
     pub fn builder() -> crate::model::redirect_action_config::Builder {
         crate::model::redirect_action_config::Builder::default()
     }
@@ -1449,10 +1449,10 @@ impl std::fmt::Debug for AuthenticateCognitoActionConfig {
         formatter.finish()
     }
 }
-/// See [`AuthenticateCognitoActionConfig`](crate::model::AuthenticateCognitoActionConfig)
+/// See [`AuthenticateCognitoActionConfig`](crate::model::AuthenticateCognitoActionConfig).
 pub mod authenticate_cognito_action_config {
-    /// A builder for [`AuthenticateCognitoActionConfig`](crate::model::AuthenticateCognitoActionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`AuthenticateCognitoActionConfig`](crate::model::AuthenticateCognitoActionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) user_pool_arn: std::option::Option<std::string::String>,
@@ -1595,7 +1595,7 @@ pub mod authenticate_cognito_action_config {
             self.on_unauthenticated_request = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthenticateCognitoActionConfig`](crate::model::AuthenticateCognitoActionConfig)
+        /// Consumes the builder and constructs a [`AuthenticateCognitoActionConfig`](crate::model::AuthenticateCognitoActionConfig).
         pub fn build(self) -> crate::model::AuthenticateCognitoActionConfig {
             crate::model::AuthenticateCognitoActionConfig {
                 user_pool_arn: self.user_pool_arn,
@@ -1611,7 +1611,7 @@ pub mod authenticate_cognito_action_config {
     }
 }
 impl AuthenticateCognitoActionConfig {
-    /// Creates a new builder-style object to manufacture [`AuthenticateCognitoActionConfig`](crate::model::AuthenticateCognitoActionConfig)
+    /// Creates a new builder-style object to manufacture [`AuthenticateCognitoActionConfig`](crate::model::AuthenticateCognitoActionConfig).
     pub fn builder() -> crate::model::authenticate_cognito_action_config::Builder {
         crate::model::authenticate_cognito_action_config::Builder::default()
     }
@@ -1801,10 +1801,10 @@ impl std::fmt::Debug for AuthenticateOidcActionConfig {
         formatter.finish()
     }
 }
-/// See [`AuthenticateOidcActionConfig`](crate::model::AuthenticateOidcActionConfig)
+/// See [`AuthenticateOidcActionConfig`](crate::model::AuthenticateOidcActionConfig).
 pub mod authenticate_oidc_action_config {
-    /// A builder for [`AuthenticateOidcActionConfig`](crate::model::AuthenticateOidcActionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`AuthenticateOidcActionConfig`](crate::model::AuthenticateOidcActionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) issuer: std::option::Option<std::string::String>,
@@ -1992,7 +1992,7 @@ pub mod authenticate_oidc_action_config {
             self.use_existing_client_secret = input;
             self
         }
-        /// Consumes the builder and constructs a [`AuthenticateOidcActionConfig`](crate::model::AuthenticateOidcActionConfig)
+        /// Consumes the builder and constructs a [`AuthenticateOidcActionConfig`](crate::model::AuthenticateOidcActionConfig).
         pub fn build(self) -> crate::model::AuthenticateOidcActionConfig {
             crate::model::AuthenticateOidcActionConfig {
                 issuer: self.issuer,
@@ -2012,7 +2012,7 @@ pub mod authenticate_oidc_action_config {
     }
 }
 impl AuthenticateOidcActionConfig {
-    /// Creates a new builder-style object to manufacture [`AuthenticateOidcActionConfig`](crate::model::AuthenticateOidcActionConfig)
+    /// Creates a new builder-style object to manufacture [`AuthenticateOidcActionConfig`](crate::model::AuthenticateOidcActionConfig).
     pub fn builder() -> crate::model::authenticate_oidc_action_config::Builder {
         crate::model::authenticate_oidc_action_config::Builder::default()
     }
@@ -2151,7 +2151,7 @@ impl AsRef<str> for ActionTypeEnum {
 }
 
 /// <p>Information about a condition for a rule.</p>
-/// <p>Each rule can optionally include up to one of each of the following conditions: <code>http-request-method</code>, <code>host-header</code>, <code>path-pattern</code>, and <code>source-ip</code>. Each rule can also optionally include one or more of each of the following conditions: <code>http-header</code> and <code>query-string</code>.</p>
+/// <p>Each rule can optionally include up to one of each of the following conditions: <code>http-request-method</code>, <code>host-header</code>, <code>path-pattern</code>, and <code>source-ip</code>. Each rule can also optionally include one or more of each of the following conditions: <code>http-header</code> and <code>query-string</code>. Note that the value for a condition cannot be empty.</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct RuleCondition {
@@ -2280,10 +2280,10 @@ impl std::fmt::Debug for RuleCondition {
         formatter.finish()
     }
 }
-/// See [`RuleCondition`](crate::model::RuleCondition)
+/// See [`RuleCondition`](crate::model::RuleCondition).
 pub mod rule_condition {
-    /// A builder for [`RuleCondition`](crate::model::RuleCondition)
-    #[non_exhaustive]
+
+    /// A builder for [`RuleCondition`](crate::model::RuleCondition).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) field: std::option::Option<std::string::String>,
@@ -2467,7 +2467,7 @@ pub mod rule_condition {
             self.source_ip_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`RuleCondition`](crate::model::RuleCondition)
+        /// Consumes the builder and constructs a [`RuleCondition`](crate::model::RuleCondition).
         pub fn build(self) -> crate::model::RuleCondition {
             crate::model::RuleCondition {
                 field: self.field,
@@ -2483,7 +2483,7 @@ pub mod rule_condition {
     }
 }
 impl RuleCondition {
-    /// Creates a new builder-style object to manufacture [`RuleCondition`](crate::model::RuleCondition)
+    /// Creates a new builder-style object to manufacture [`RuleCondition`](crate::model::RuleCondition).
     pub fn builder() -> crate::model::rule_condition::Builder {
         crate::model::rule_condition::Builder::default()
     }
@@ -2512,10 +2512,10 @@ impl std::fmt::Debug for SourceIpConditionConfig {
         formatter.finish()
     }
 }
-/// See [`SourceIpConditionConfig`](crate::model::SourceIpConditionConfig)
+/// See [`SourceIpConditionConfig`](crate::model::SourceIpConditionConfig).
 pub mod source_ip_condition_config {
-    /// A builder for [`SourceIpConditionConfig`](crate::model::SourceIpConditionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`SourceIpConditionConfig`](crate::model::SourceIpConditionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) values: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2542,7 +2542,7 @@ pub mod source_ip_condition_config {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`SourceIpConditionConfig`](crate::model::SourceIpConditionConfig)
+        /// Consumes the builder and constructs a [`SourceIpConditionConfig`](crate::model::SourceIpConditionConfig).
         pub fn build(self) -> crate::model::SourceIpConditionConfig {
             crate::model::SourceIpConditionConfig {
                 values: self.values,
@@ -2551,7 +2551,7 @@ pub mod source_ip_condition_config {
     }
 }
 impl SourceIpConditionConfig {
-    /// Creates a new builder-style object to manufacture [`SourceIpConditionConfig`](crate::model::SourceIpConditionConfig)
+    /// Creates a new builder-style object to manufacture [`SourceIpConditionConfig`](crate::model::SourceIpConditionConfig).
     pub fn builder() -> crate::model::source_ip_condition_config::Builder {
         crate::model::source_ip_condition_config::Builder::default()
     }
@@ -2580,10 +2580,10 @@ impl std::fmt::Debug for HttpRequestMethodConditionConfig {
         formatter.finish()
     }
 }
-/// See [`HttpRequestMethodConditionConfig`](crate::model::HttpRequestMethodConditionConfig)
+/// See [`HttpRequestMethodConditionConfig`](crate::model::HttpRequestMethodConditionConfig).
 pub mod http_request_method_condition_config {
-    /// A builder for [`HttpRequestMethodConditionConfig`](crate::model::HttpRequestMethodConditionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`HttpRequestMethodConditionConfig`](crate::model::HttpRequestMethodConditionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) values: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2610,7 +2610,7 @@ pub mod http_request_method_condition_config {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpRequestMethodConditionConfig`](crate::model::HttpRequestMethodConditionConfig)
+        /// Consumes the builder and constructs a [`HttpRequestMethodConditionConfig`](crate::model::HttpRequestMethodConditionConfig).
         pub fn build(self) -> crate::model::HttpRequestMethodConditionConfig {
             crate::model::HttpRequestMethodConditionConfig {
                 values: self.values,
@@ -2619,7 +2619,7 @@ pub mod http_request_method_condition_config {
     }
 }
 impl HttpRequestMethodConditionConfig {
-    /// Creates a new builder-style object to manufacture [`HttpRequestMethodConditionConfig`](crate::model::HttpRequestMethodConditionConfig)
+    /// Creates a new builder-style object to manufacture [`HttpRequestMethodConditionConfig`](crate::model::HttpRequestMethodConditionConfig).
     pub fn builder() -> crate::model::http_request_method_condition_config::Builder {
         crate::model::http_request_method_condition_config::Builder::default()
     }
@@ -2648,10 +2648,10 @@ impl std::fmt::Debug for QueryStringConditionConfig {
         formatter.finish()
     }
 }
-/// See [`QueryStringConditionConfig`](crate::model::QueryStringConditionConfig)
+/// See [`QueryStringConditionConfig`](crate::model::QueryStringConditionConfig).
 pub mod query_string_condition_config {
-    /// A builder for [`QueryStringConditionConfig`](crate::model::QueryStringConditionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`QueryStringConditionConfig`](crate::model::QueryStringConditionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) values:
@@ -2679,7 +2679,7 @@ pub mod query_string_condition_config {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryStringConditionConfig`](crate::model::QueryStringConditionConfig)
+        /// Consumes the builder and constructs a [`QueryStringConditionConfig`](crate::model::QueryStringConditionConfig).
         pub fn build(self) -> crate::model::QueryStringConditionConfig {
             crate::model::QueryStringConditionConfig {
                 values: self.values,
@@ -2688,7 +2688,7 @@ pub mod query_string_condition_config {
     }
 }
 impl QueryStringConditionConfig {
-    /// Creates a new builder-style object to manufacture [`QueryStringConditionConfig`](crate::model::QueryStringConditionConfig)
+    /// Creates a new builder-style object to manufacture [`QueryStringConditionConfig`](crate::model::QueryStringConditionConfig).
     pub fn builder() -> crate::model::query_string_condition_config::Builder {
         crate::model::query_string_condition_config::Builder::default()
     }
@@ -2721,10 +2721,10 @@ impl std::fmt::Debug for QueryStringKeyValuePair {
         formatter.finish()
     }
 }
-/// See [`QueryStringKeyValuePair`](crate::model::QueryStringKeyValuePair)
+/// See [`QueryStringKeyValuePair`](crate::model::QueryStringKeyValuePair).
 pub mod query_string_key_value_pair {
-    /// A builder for [`QueryStringKeyValuePair`](crate::model::QueryStringKeyValuePair)
-    #[non_exhaustive]
+
+    /// A builder for [`QueryStringKeyValuePair`](crate::model::QueryStringKeyValuePair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -2751,7 +2751,7 @@ pub mod query_string_key_value_pair {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`QueryStringKeyValuePair`](crate::model::QueryStringKeyValuePair)
+        /// Consumes the builder and constructs a [`QueryStringKeyValuePair`](crate::model::QueryStringKeyValuePair).
         pub fn build(self) -> crate::model::QueryStringKeyValuePair {
             crate::model::QueryStringKeyValuePair {
                 key: self.key,
@@ -2761,7 +2761,7 @@ pub mod query_string_key_value_pair {
     }
 }
 impl QueryStringKeyValuePair {
-    /// Creates a new builder-style object to manufacture [`QueryStringKeyValuePair`](crate::model::QueryStringKeyValuePair)
+    /// Creates a new builder-style object to manufacture [`QueryStringKeyValuePair`](crate::model::QueryStringKeyValuePair).
     pub fn builder() -> crate::model::query_string_key_value_pair::Builder {
         crate::model::query_string_key_value_pair::Builder::default()
     }
@@ -2801,10 +2801,10 @@ impl std::fmt::Debug for HttpHeaderConditionConfig {
         formatter.finish()
     }
 }
-/// See [`HttpHeaderConditionConfig`](crate::model::HttpHeaderConditionConfig)
+/// See [`HttpHeaderConditionConfig`](crate::model::HttpHeaderConditionConfig).
 pub mod http_header_condition_config {
-    /// A builder for [`HttpHeaderConditionConfig`](crate::model::HttpHeaderConditionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`HttpHeaderConditionConfig`](crate::model::HttpHeaderConditionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) http_header_name: std::option::Option<std::string::String>,
@@ -2849,7 +2849,7 @@ pub mod http_header_condition_config {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`HttpHeaderConditionConfig`](crate::model::HttpHeaderConditionConfig)
+        /// Consumes the builder and constructs a [`HttpHeaderConditionConfig`](crate::model::HttpHeaderConditionConfig).
         pub fn build(self) -> crate::model::HttpHeaderConditionConfig {
             crate::model::HttpHeaderConditionConfig {
                 http_header_name: self.http_header_name,
@@ -2859,7 +2859,7 @@ pub mod http_header_condition_config {
     }
 }
 impl HttpHeaderConditionConfig {
-    /// Creates a new builder-style object to manufacture [`HttpHeaderConditionConfig`](crate::model::HttpHeaderConditionConfig)
+    /// Creates a new builder-style object to manufacture [`HttpHeaderConditionConfig`](crate::model::HttpHeaderConditionConfig).
     pub fn builder() -> crate::model::http_header_condition_config::Builder {
         crate::model::http_header_condition_config::Builder::default()
     }
@@ -2887,10 +2887,10 @@ impl std::fmt::Debug for PathPatternConditionConfig {
         formatter.finish()
     }
 }
-/// See [`PathPatternConditionConfig`](crate::model::PathPatternConditionConfig)
+/// See [`PathPatternConditionConfig`](crate::model::PathPatternConditionConfig).
 pub mod path_pattern_condition_config {
-    /// A builder for [`PathPatternConditionConfig`](crate::model::PathPatternConditionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`PathPatternConditionConfig`](crate::model::PathPatternConditionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) values: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2917,7 +2917,7 @@ pub mod path_pattern_condition_config {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`PathPatternConditionConfig`](crate::model::PathPatternConditionConfig)
+        /// Consumes the builder and constructs a [`PathPatternConditionConfig`](crate::model::PathPatternConditionConfig).
         pub fn build(self) -> crate::model::PathPatternConditionConfig {
             crate::model::PathPatternConditionConfig {
                 values: self.values,
@@ -2926,7 +2926,7 @@ pub mod path_pattern_condition_config {
     }
 }
 impl PathPatternConditionConfig {
-    /// Creates a new builder-style object to manufacture [`PathPatternConditionConfig`](crate::model::PathPatternConditionConfig)
+    /// Creates a new builder-style object to manufacture [`PathPatternConditionConfig`](crate::model::PathPatternConditionConfig).
     pub fn builder() -> crate::model::path_pattern_condition_config::Builder {
         crate::model::path_pattern_condition_config::Builder::default()
     }
@@ -2954,10 +2954,10 @@ impl std::fmt::Debug for HostHeaderConditionConfig {
         formatter.finish()
     }
 }
-/// See [`HostHeaderConditionConfig`](crate::model::HostHeaderConditionConfig)
+/// See [`HostHeaderConditionConfig`](crate::model::HostHeaderConditionConfig).
 pub mod host_header_condition_config {
-    /// A builder for [`HostHeaderConditionConfig`](crate::model::HostHeaderConditionConfig)
-    #[non_exhaustive]
+
+    /// A builder for [`HostHeaderConditionConfig`](crate::model::HostHeaderConditionConfig).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) values: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -2984,7 +2984,7 @@ pub mod host_header_condition_config {
             self.values = input;
             self
         }
-        /// Consumes the builder and constructs a [`HostHeaderConditionConfig`](crate::model::HostHeaderConditionConfig)
+        /// Consumes the builder and constructs a [`HostHeaderConditionConfig`](crate::model::HostHeaderConditionConfig).
         pub fn build(self) -> crate::model::HostHeaderConditionConfig {
             crate::model::HostHeaderConditionConfig {
                 values: self.values,
@@ -2993,7 +2993,7 @@ pub mod host_header_condition_config {
     }
 }
 impl HostHeaderConditionConfig {
-    /// Creates a new builder-style object to manufacture [`HostHeaderConditionConfig`](crate::model::HostHeaderConditionConfig)
+    /// Creates a new builder-style object to manufacture [`HostHeaderConditionConfig`](crate::model::HostHeaderConditionConfig).
     pub fn builder() -> crate::model::host_header_condition_config::Builder {
         crate::model::host_header_condition_config::Builder::default()
     }
@@ -3026,10 +3026,10 @@ impl std::fmt::Debug for RulePriorityPair {
         formatter.finish()
     }
 }
-/// See [`RulePriorityPair`](crate::model::RulePriorityPair)
+/// See [`RulePriorityPair`](crate::model::RulePriorityPair).
 pub mod rule_priority_pair {
-    /// A builder for [`RulePriorityPair`](crate::model::RulePriorityPair)
-    #[non_exhaustive]
+
+    /// A builder for [`RulePriorityPair`](crate::model::RulePriorityPair).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) rule_arn: std::option::Option<std::string::String>,
@@ -3056,7 +3056,7 @@ pub mod rule_priority_pair {
             self.priority = input;
             self
         }
-        /// Consumes the builder and constructs a [`RulePriorityPair`](crate::model::RulePriorityPair)
+        /// Consumes the builder and constructs a [`RulePriorityPair`](crate::model::RulePriorityPair).
         pub fn build(self) -> crate::model::RulePriorityPair {
             crate::model::RulePriorityPair {
                 rule_arn: self.rule_arn,
@@ -3066,7 +3066,7 @@ pub mod rule_priority_pair {
     }
 }
 impl RulePriorityPair {
-    /// Creates a new builder-style object to manufacture [`RulePriorityPair`](crate::model::RulePriorityPair)
+    /// Creates a new builder-style object to manufacture [`RulePriorityPair`](crate::model::RulePriorityPair).
     pub fn builder() -> crate::model::rule_priority_pair::Builder {
         crate::model::rule_priority_pair::Builder::default()
     }
@@ -3099,10 +3099,10 @@ impl std::fmt::Debug for Certificate {
         formatter.finish()
     }
 }
-/// See [`Certificate`](crate::model::Certificate)
+/// See [`Certificate`](crate::model::Certificate).
 pub mod certificate {
-    /// A builder for [`Certificate`](crate::model::Certificate)
-    #[non_exhaustive]
+
+    /// A builder for [`Certificate`](crate::model::Certificate).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) certificate_arn: std::option::Option<std::string::String>,
@@ -3132,7 +3132,7 @@ pub mod certificate {
             self.is_default = input;
             self
         }
-        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate)
+        /// Consumes the builder and constructs a [`Certificate`](crate::model::Certificate).
         pub fn build(self) -> crate::model::Certificate {
             crate::model::Certificate {
                 certificate_arn: self.certificate_arn,
@@ -3142,7 +3142,7 @@ pub mod certificate {
     }
 }
 impl Certificate {
-    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate)
+    /// Creates a new builder-style object to manufacture [`Certificate`](crate::model::Certificate).
     pub fn builder() -> crate::model::certificate::Builder {
         crate::model::certificate::Builder::default()
     }
@@ -3190,10 +3190,10 @@ impl std::fmt::Debug for TargetDescription {
         formatter.finish()
     }
 }
-/// See [`TargetDescription`](crate::model::TargetDescription)
+/// See [`TargetDescription`](crate::model::TargetDescription).
 pub mod target_description {
-    /// A builder for [`TargetDescription`](crate::model::TargetDescription)
-    #[non_exhaustive]
+
+    /// A builder for [`TargetDescription`](crate::model::TargetDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) id: std::option::Option<std::string::String>,
@@ -3242,7 +3242,7 @@ pub mod target_description {
             self.availability_zone = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetDescription`](crate::model::TargetDescription)
+        /// Consumes the builder and constructs a [`TargetDescription`](crate::model::TargetDescription).
         pub fn build(self) -> crate::model::TargetDescription {
             crate::model::TargetDescription {
                 id: self.id,
@@ -3253,7 +3253,7 @@ pub mod target_description {
     }
 }
 impl TargetDescription {
-    /// Creates a new builder-style object to manufacture [`TargetDescription`](crate::model::TargetDescription)
+    /// Creates a new builder-style object to manufacture [`TargetDescription`](crate::model::TargetDescription).
     pub fn builder() -> crate::model::target_description::Builder {
         crate::model::target_description::Builder::default()
     }
@@ -3340,10 +3340,10 @@ impl std::fmt::Debug for TargetGroupAttribute {
         formatter.finish()
     }
 }
-/// See [`TargetGroupAttribute`](crate::model::TargetGroupAttribute)
+/// See [`TargetGroupAttribute`](crate::model::TargetGroupAttribute).
 pub mod target_group_attribute {
-    /// A builder for [`TargetGroupAttribute`](crate::model::TargetGroupAttribute)
-    #[non_exhaustive]
+
+    /// A builder for [`TargetGroupAttribute`](crate::model::TargetGroupAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -3424,7 +3424,7 @@ pub mod target_group_attribute {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetGroupAttribute`](crate::model::TargetGroupAttribute)
+        /// Consumes the builder and constructs a [`TargetGroupAttribute`](crate::model::TargetGroupAttribute).
         pub fn build(self) -> crate::model::TargetGroupAttribute {
             crate::model::TargetGroupAttribute {
                 key: self.key,
@@ -3434,7 +3434,7 @@ pub mod target_group_attribute {
     }
 }
 impl TargetGroupAttribute {
-    /// Creates a new builder-style object to manufacture [`TargetGroupAttribute`](crate::model::TargetGroupAttribute)
+    /// Creates a new builder-style object to manufacture [`TargetGroupAttribute`](crate::model::TargetGroupAttribute).
     pub fn builder() -> crate::model::target_group_attribute::Builder {
         crate::model::target_group_attribute::Builder::default()
     }
@@ -3587,10 +3587,10 @@ impl std::fmt::Debug for TargetGroup {
         formatter.finish()
     }
 }
-/// See [`TargetGroup`](crate::model::TargetGroup)
+/// See [`TargetGroup`](crate::model::TargetGroup).
 pub mod target_group {
-    /// A builder for [`TargetGroup`](crate::model::TargetGroup)
-    #[non_exhaustive]
+
+    /// A builder for [`TargetGroup`](crate::model::TargetGroup).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target_group_arn: std::option::Option<std::string::String>,
@@ -3835,7 +3835,7 @@ pub mod target_group {
             self.ip_address_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetGroup`](crate::model::TargetGroup)
+        /// Consumes the builder and constructs a [`TargetGroup`](crate::model::TargetGroup).
         pub fn build(self) -> crate::model::TargetGroup {
             crate::model::TargetGroup {
                 target_group_arn: self.target_group_arn,
@@ -3861,7 +3861,7 @@ pub mod target_group {
     }
 }
 impl TargetGroup {
-    /// Creates a new builder-style object to manufacture [`TargetGroup`](crate::model::TargetGroup)
+    /// Creates a new builder-style object to manufacture [`TargetGroup`](crate::model::TargetGroup).
     pub fn builder() -> crate::model::target_group::Builder {
         crate::model::target_group::Builder::default()
     }
@@ -4016,10 +4016,10 @@ impl std::fmt::Debug for Matcher {
         formatter.finish()
     }
 }
-/// See [`Matcher`](crate::model::Matcher)
+/// See [`Matcher`](crate::model::Matcher).
 pub mod matcher {
-    /// A builder for [`Matcher`](crate::model::Matcher)
-    #[non_exhaustive]
+
+    /// A builder for [`Matcher`](crate::model::Matcher).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) http_code: std::option::Option<std::string::String>,
@@ -4050,7 +4050,7 @@ pub mod matcher {
             self.grpc_code = input;
             self
         }
-        /// Consumes the builder and constructs a [`Matcher`](crate::model::Matcher)
+        /// Consumes the builder and constructs a [`Matcher`](crate::model::Matcher).
         pub fn build(self) -> crate::model::Matcher {
             crate::model::Matcher {
                 http_code: self.http_code,
@@ -4060,7 +4060,7 @@ pub mod matcher {
     }
 }
 impl Matcher {
-    /// Creates a new builder-style object to manufacture [`Matcher`](crate::model::Matcher)
+    /// Creates a new builder-style object to manufacture [`Matcher`](crate::model::Matcher).
     pub fn builder() -> crate::model::matcher::Builder {
         crate::model::matcher::Builder::default()
     }
@@ -4155,15 +4155,22 @@ pub struct LoadBalancerAttribute {
     /// <li> <p> <code>access_logs.s3.enabled</code> - Indicates whether access logs are enabled. The value is <code>true</code> or <code>false</code>. The default is <code>false</code>.</p> </li>
     /// <li> <p> <code>access_logs.s3.bucket</code> - The name of the S3 bucket for the access logs. This attribute is required if access logs are enabled. The bucket must exist in the same region as the load balancer and have a bucket policy that grants Elastic Load Balancing permissions to write to the bucket.</p> </li>
     /// <li> <p> <code>access_logs.s3.prefix</code> - The prefix for the location in the S3 bucket for the access logs.</p> </li>
-    /// <li> <p> <code>ipv6.deny-all-igw-traffic</code> - Blocks internet gateway (IGW) access to the load balancer. It is set to <code>false</code> for internet-facing load balancers and <code>true</code> for internal load balancers, preventing unintended access to your internal load balancer through an internet gateway.</p> </li>
+    /// <li> <p> <code>ipv6.deny_all_igw_traffic</code> - Blocks internet gateway (IGW) access to the load balancer. It is set to <code>false</code> for internet-facing load balancers and <code>true</code> for internal load balancers, preventing unintended access to your internal load balancer through an internet gateway.</p> </li>
     /// </ul>
     /// <p>The following attributes are supported by only Application Load Balancers:</p>
     /// <ul>
     /// <li> <p> <code>idle_timeout.timeout_seconds</code> - The idle timeout value, in seconds. The valid range is 1-4000 seconds. The default is 60 seconds.</p> </li>
     /// <li> <p> <code>routing.http.desync_mitigation_mode</code> - Determines how the load balancer handles requests that might pose a security risk to your application. The possible values are <code>monitor</code>, <code>defensive</code>, and <code>strictest</code>. The default is <code>defensive</code>.</p> </li>
     /// <li> <p> <code>routing.http.drop_invalid_header_fields.enabled</code> - Indicates whether HTTP headers with invalid header fields are removed by the load balancer (<code>true</code>) or routed to targets (<code>false</code>). The default is <code>false</code>.</p> </li>
+    /// <li> <p> <code>routing.http.preserve_host_header.enabled</code> - Indicates whether the Application Load Balancer should preserve the <code>Host</code> header in the HTTP request and send it to the target without any change. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
     /// <li> <p> <code>routing.http.x_amzn_tls_version_and_cipher_suite.enabled</code> - Indicates whether the two headers (<code>x-amzn-tls-version</code> and <code>x-amzn-tls-cipher-suite</code>), which contain information about the negotiated TLS version and cipher suite, are added to the client request before sending it to the target. The <code>x-amzn-tls-version</code> header has information about the TLS protocol version negotiated with the client, and the <code>x-amzn-tls-cipher-suite</code> header has information about the cipher suite negotiated with the client. Both headers are in OpenSSL format. The possible values for the attribute are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
     /// <li> <p> <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code> header should preserve the source port that the client used to connect to the load balancer. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
+    /// <li> <p> <code>routing.http.xff_header_processing.mode</code> - Enables you to modify, preserve, or remove the <code>X-Forwarded-For</code> header in the HTTP request before the Application Load Balancer sends the request to the target. The possible values are <code>append</code>, <code>preserve</code>, and <code>remove</code>. The default is <code>append</code>.</p>
+    /// <ul>
+    /// <li> <p>If the value is <code>append</code>, the Application Load Balancer adds the client IP address (of the last hop) to the <code>X-Forwarded-For</code> header in the HTTP request before it sends it to targets.</p> </li>
+    /// <li> <p>If the value is <code>preserve</code> the Application Load Balancer preserves the <code>X-Forwarded-For</code> header in the HTTP request, and sends it to targets without any change.</p> </li>
+    /// <li> <p>If the value is <code>remove</code>, the Application Load Balancer removes the <code>X-Forwarded-For</code> header in the HTTP request before it sends it to targets.</p> </li>
+    /// </ul> </li>
     /// <li> <p> <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens.</p> </li>
     /// <li> <p> <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to Amazon Web Services WAF. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
     /// </ul>
@@ -4186,15 +4193,22 @@ impl LoadBalancerAttribute {
     /// <li> <p> <code>access_logs.s3.enabled</code> - Indicates whether access logs are enabled. The value is <code>true</code> or <code>false</code>. The default is <code>false</code>.</p> </li>
     /// <li> <p> <code>access_logs.s3.bucket</code> - The name of the S3 bucket for the access logs. This attribute is required if access logs are enabled. The bucket must exist in the same region as the load balancer and have a bucket policy that grants Elastic Load Balancing permissions to write to the bucket.</p> </li>
     /// <li> <p> <code>access_logs.s3.prefix</code> - The prefix for the location in the S3 bucket for the access logs.</p> </li>
-    /// <li> <p> <code>ipv6.deny-all-igw-traffic</code> - Blocks internet gateway (IGW) access to the load balancer. It is set to <code>false</code> for internet-facing load balancers and <code>true</code> for internal load balancers, preventing unintended access to your internal load balancer through an internet gateway.</p> </li>
+    /// <li> <p> <code>ipv6.deny_all_igw_traffic</code> - Blocks internet gateway (IGW) access to the load balancer. It is set to <code>false</code> for internet-facing load balancers and <code>true</code> for internal load balancers, preventing unintended access to your internal load balancer through an internet gateway.</p> </li>
     /// </ul>
     /// <p>The following attributes are supported by only Application Load Balancers:</p>
     /// <ul>
     /// <li> <p> <code>idle_timeout.timeout_seconds</code> - The idle timeout value, in seconds. The valid range is 1-4000 seconds. The default is 60 seconds.</p> </li>
     /// <li> <p> <code>routing.http.desync_mitigation_mode</code> - Determines how the load balancer handles requests that might pose a security risk to your application. The possible values are <code>monitor</code>, <code>defensive</code>, and <code>strictest</code>. The default is <code>defensive</code>.</p> </li>
     /// <li> <p> <code>routing.http.drop_invalid_header_fields.enabled</code> - Indicates whether HTTP headers with invalid header fields are removed by the load balancer (<code>true</code>) or routed to targets (<code>false</code>). The default is <code>false</code>.</p> </li>
+    /// <li> <p> <code>routing.http.preserve_host_header.enabled</code> - Indicates whether the Application Load Balancer should preserve the <code>Host</code> header in the HTTP request and send it to the target without any change. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
     /// <li> <p> <code>routing.http.x_amzn_tls_version_and_cipher_suite.enabled</code> - Indicates whether the two headers (<code>x-amzn-tls-version</code> and <code>x-amzn-tls-cipher-suite</code>), which contain information about the negotiated TLS version and cipher suite, are added to the client request before sending it to the target. The <code>x-amzn-tls-version</code> header has information about the TLS protocol version negotiated with the client, and the <code>x-amzn-tls-cipher-suite</code> header has information about the cipher suite negotiated with the client. Both headers are in OpenSSL format. The possible values for the attribute are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
     /// <li> <p> <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code> header should preserve the source port that the client used to connect to the load balancer. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
+    /// <li> <p> <code>routing.http.xff_header_processing.mode</code> - Enables you to modify, preserve, or remove the <code>X-Forwarded-For</code> header in the HTTP request before the Application Load Balancer sends the request to the target. The possible values are <code>append</code>, <code>preserve</code>, and <code>remove</code>. The default is <code>append</code>.</p>
+    /// <ul>
+    /// <li> <p>If the value is <code>append</code>, the Application Load Balancer adds the client IP address (of the last hop) to the <code>X-Forwarded-For</code> header in the HTTP request before it sends it to targets.</p> </li>
+    /// <li> <p>If the value is <code>preserve</code> the Application Load Balancer preserves the <code>X-Forwarded-For</code> header in the HTTP request, and sends it to targets without any change.</p> </li>
+    /// <li> <p>If the value is <code>remove</code>, the Application Load Balancer removes the <code>X-Forwarded-For</code> header in the HTTP request before it sends it to targets.</p> </li>
+    /// </ul> </li>
     /// <li> <p> <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens.</p> </li>
     /// <li> <p> <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to Amazon Web Services WAF. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
     /// </ul>
@@ -4218,10 +4232,10 @@ impl std::fmt::Debug for LoadBalancerAttribute {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerAttribute`](crate::model::LoadBalancerAttribute)
+/// See [`LoadBalancerAttribute`](crate::model::LoadBalancerAttribute).
 pub mod load_balancer_attribute {
-    /// A builder for [`LoadBalancerAttribute`](crate::model::LoadBalancerAttribute)
-    #[non_exhaustive]
+
+    /// A builder for [`LoadBalancerAttribute`](crate::model::LoadBalancerAttribute).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -4238,15 +4252,22 @@ pub mod load_balancer_attribute {
         /// <li> <p> <code>access_logs.s3.enabled</code> - Indicates whether access logs are enabled. The value is <code>true</code> or <code>false</code>. The default is <code>false</code>.</p> </li>
         /// <li> <p> <code>access_logs.s3.bucket</code> - The name of the S3 bucket for the access logs. This attribute is required if access logs are enabled. The bucket must exist in the same region as the load balancer and have a bucket policy that grants Elastic Load Balancing permissions to write to the bucket.</p> </li>
         /// <li> <p> <code>access_logs.s3.prefix</code> - The prefix for the location in the S3 bucket for the access logs.</p> </li>
-        /// <li> <p> <code>ipv6.deny-all-igw-traffic</code> - Blocks internet gateway (IGW) access to the load balancer. It is set to <code>false</code> for internet-facing load balancers and <code>true</code> for internal load balancers, preventing unintended access to your internal load balancer through an internet gateway.</p> </li>
+        /// <li> <p> <code>ipv6.deny_all_igw_traffic</code> - Blocks internet gateway (IGW) access to the load balancer. It is set to <code>false</code> for internet-facing load balancers and <code>true</code> for internal load balancers, preventing unintended access to your internal load balancer through an internet gateway.</p> </li>
         /// </ul>
         /// <p>The following attributes are supported by only Application Load Balancers:</p>
         /// <ul>
         /// <li> <p> <code>idle_timeout.timeout_seconds</code> - The idle timeout value, in seconds. The valid range is 1-4000 seconds. The default is 60 seconds.</p> </li>
         /// <li> <p> <code>routing.http.desync_mitigation_mode</code> - Determines how the load balancer handles requests that might pose a security risk to your application. The possible values are <code>monitor</code>, <code>defensive</code>, and <code>strictest</code>. The default is <code>defensive</code>.</p> </li>
         /// <li> <p> <code>routing.http.drop_invalid_header_fields.enabled</code> - Indicates whether HTTP headers with invalid header fields are removed by the load balancer (<code>true</code>) or routed to targets (<code>false</code>). The default is <code>false</code>.</p> </li>
+        /// <li> <p> <code>routing.http.preserve_host_header.enabled</code> - Indicates whether the Application Load Balancer should preserve the <code>Host</code> header in the HTTP request and send it to the target without any change. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
         /// <li> <p> <code>routing.http.x_amzn_tls_version_and_cipher_suite.enabled</code> - Indicates whether the two headers (<code>x-amzn-tls-version</code> and <code>x-amzn-tls-cipher-suite</code>), which contain information about the negotiated TLS version and cipher suite, are added to the client request before sending it to the target. The <code>x-amzn-tls-version</code> header has information about the TLS protocol version negotiated with the client, and the <code>x-amzn-tls-cipher-suite</code> header has information about the cipher suite negotiated with the client. Both headers are in OpenSSL format. The possible values for the attribute are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
         /// <li> <p> <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code> header should preserve the source port that the client used to connect to the load balancer. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
+        /// <li> <p> <code>routing.http.xff_header_processing.mode</code> - Enables you to modify, preserve, or remove the <code>X-Forwarded-For</code> header in the HTTP request before the Application Load Balancer sends the request to the target. The possible values are <code>append</code>, <code>preserve</code>, and <code>remove</code>. The default is <code>append</code>.</p>
+        /// <ul>
+        /// <li> <p>If the value is <code>append</code>, the Application Load Balancer adds the client IP address (of the last hop) to the <code>X-Forwarded-For</code> header in the HTTP request before it sends it to targets.</p> </li>
+        /// <li> <p>If the value is <code>preserve</code> the Application Load Balancer preserves the <code>X-Forwarded-For</code> header in the HTTP request, and sends it to targets without any change.</p> </li>
+        /// <li> <p>If the value is <code>remove</code>, the Application Load Balancer removes the <code>X-Forwarded-For</code> header in the HTTP request before it sends it to targets.</p> </li>
+        /// </ul> </li>
         /// <li> <p> <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens.</p> </li>
         /// <li> <p> <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to Amazon Web Services WAF. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
         /// </ul>
@@ -4268,15 +4289,22 @@ pub mod load_balancer_attribute {
         /// <li> <p> <code>access_logs.s3.enabled</code> - Indicates whether access logs are enabled. The value is <code>true</code> or <code>false</code>. The default is <code>false</code>.</p> </li>
         /// <li> <p> <code>access_logs.s3.bucket</code> - The name of the S3 bucket for the access logs. This attribute is required if access logs are enabled. The bucket must exist in the same region as the load balancer and have a bucket policy that grants Elastic Load Balancing permissions to write to the bucket.</p> </li>
         /// <li> <p> <code>access_logs.s3.prefix</code> - The prefix for the location in the S3 bucket for the access logs.</p> </li>
-        /// <li> <p> <code>ipv6.deny-all-igw-traffic</code> - Blocks internet gateway (IGW) access to the load balancer. It is set to <code>false</code> for internet-facing load balancers and <code>true</code> for internal load balancers, preventing unintended access to your internal load balancer through an internet gateway.</p> </li>
+        /// <li> <p> <code>ipv6.deny_all_igw_traffic</code> - Blocks internet gateway (IGW) access to the load balancer. It is set to <code>false</code> for internet-facing load balancers and <code>true</code> for internal load balancers, preventing unintended access to your internal load balancer through an internet gateway.</p> </li>
         /// </ul>
         /// <p>The following attributes are supported by only Application Load Balancers:</p>
         /// <ul>
         /// <li> <p> <code>idle_timeout.timeout_seconds</code> - The idle timeout value, in seconds. The valid range is 1-4000 seconds. The default is 60 seconds.</p> </li>
         /// <li> <p> <code>routing.http.desync_mitigation_mode</code> - Determines how the load balancer handles requests that might pose a security risk to your application. The possible values are <code>monitor</code>, <code>defensive</code>, and <code>strictest</code>. The default is <code>defensive</code>.</p> </li>
         /// <li> <p> <code>routing.http.drop_invalid_header_fields.enabled</code> - Indicates whether HTTP headers with invalid header fields are removed by the load balancer (<code>true</code>) or routed to targets (<code>false</code>). The default is <code>false</code>.</p> </li>
+        /// <li> <p> <code>routing.http.preserve_host_header.enabled</code> - Indicates whether the Application Load Balancer should preserve the <code>Host</code> header in the HTTP request and send it to the target without any change. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
         /// <li> <p> <code>routing.http.x_amzn_tls_version_and_cipher_suite.enabled</code> - Indicates whether the two headers (<code>x-amzn-tls-version</code> and <code>x-amzn-tls-cipher-suite</code>), which contain information about the negotiated TLS version and cipher suite, are added to the client request before sending it to the target. The <code>x-amzn-tls-version</code> header has information about the TLS protocol version negotiated with the client, and the <code>x-amzn-tls-cipher-suite</code> header has information about the cipher suite negotiated with the client. Both headers are in OpenSSL format. The possible values for the attribute are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
         /// <li> <p> <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code> header should preserve the source port that the client used to connect to the load balancer. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
+        /// <li> <p> <code>routing.http.xff_header_processing.mode</code> - Enables you to modify, preserve, or remove the <code>X-Forwarded-For</code> header in the HTTP request before the Application Load Balancer sends the request to the target. The possible values are <code>append</code>, <code>preserve</code>, and <code>remove</code>. The default is <code>append</code>.</p>
+        /// <ul>
+        /// <li> <p>If the value is <code>append</code>, the Application Load Balancer adds the client IP address (of the last hop) to the <code>X-Forwarded-For</code> header in the HTTP request before it sends it to targets.</p> </li>
+        /// <li> <p>If the value is <code>preserve</code> the Application Load Balancer preserves the <code>X-Forwarded-For</code> header in the HTTP request, and sends it to targets without any change.</p> </li>
+        /// <li> <p>If the value is <code>remove</code>, the Application Load Balancer removes the <code>X-Forwarded-For</code> header in the HTTP request before it sends it to targets.</p> </li>
+        /// </ul> </li>
         /// <li> <p> <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens.</p> </li>
         /// <li> <p> <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to Amazon Web Services WAF. The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.</p> </li>
         /// </ul>
@@ -4298,7 +4326,7 @@ pub mod load_balancer_attribute {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerAttribute`](crate::model::LoadBalancerAttribute)
+        /// Consumes the builder and constructs a [`LoadBalancerAttribute`](crate::model::LoadBalancerAttribute).
         pub fn build(self) -> crate::model::LoadBalancerAttribute {
             crate::model::LoadBalancerAttribute {
                 key: self.key,
@@ -4308,7 +4336,7 @@ pub mod load_balancer_attribute {
     }
 }
 impl LoadBalancerAttribute {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerAttribute`](crate::model::LoadBalancerAttribute)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerAttribute`](crate::model::LoadBalancerAttribute).
     pub fn builder() -> crate::model::load_balancer_attribute::Builder {
         crate::model::load_balancer_attribute::Builder::default()
     }
@@ -4383,10 +4411,10 @@ impl std::fmt::Debug for Listener {
         formatter.finish()
     }
 }
-/// See [`Listener`](crate::model::Listener)
+/// See [`Listener`](crate::model::Listener).
 pub mod listener {
-    /// A builder for [`Listener`](crate::model::Listener)
-    #[non_exhaustive]
+
+    /// A builder for [`Listener`](crate::model::Listener).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) listener_arn: std::option::Option<std::string::String>,
@@ -4512,7 +4540,7 @@ pub mod listener {
             self.alpn_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`Listener`](crate::model::Listener)
+        /// Consumes the builder and constructs a [`Listener`](crate::model::Listener).
         pub fn build(self) -> crate::model::Listener {
             crate::model::Listener {
                 listener_arn: self.listener_arn,
@@ -4528,7 +4556,7 @@ pub mod listener {
     }
 }
 impl Listener {
-    /// Creates a new builder-style object to manufacture [`Listener`](crate::model::Listener)
+    /// Creates a new builder-style object to manufacture [`Listener`](crate::model::Listener).
     pub fn builder() -> crate::model::listener::Builder {
         crate::model::listener::Builder::default()
     }
@@ -4568,10 +4596,10 @@ impl std::fmt::Debug for TargetHealthDescription {
         formatter.finish()
     }
 }
-/// See [`TargetHealthDescription`](crate::model::TargetHealthDescription)
+/// See [`TargetHealthDescription`](crate::model::TargetHealthDescription).
 pub mod target_health_description {
-    /// A builder for [`TargetHealthDescription`](crate::model::TargetHealthDescription)
-    #[non_exhaustive]
+
+    /// A builder for [`TargetHealthDescription`](crate::model::TargetHealthDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) target: std::option::Option<crate::model::TargetDescription>,
@@ -4618,7 +4646,7 @@ pub mod target_health_description {
             self.target_health = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetHealthDescription`](crate::model::TargetHealthDescription)
+        /// Consumes the builder and constructs a [`TargetHealthDescription`](crate::model::TargetHealthDescription).
         pub fn build(self) -> crate::model::TargetHealthDescription {
             crate::model::TargetHealthDescription {
                 target: self.target,
@@ -4629,7 +4657,7 @@ pub mod target_health_description {
     }
 }
 impl TargetHealthDescription {
-    /// Creates a new builder-style object to manufacture [`TargetHealthDescription`](crate::model::TargetHealthDescription)
+    /// Creates a new builder-style object to manufacture [`TargetHealthDescription`](crate::model::TargetHealthDescription).
     pub fn builder() -> crate::model::target_health_description::Builder {
         crate::model::target_health_description::Builder::default()
     }
@@ -4727,10 +4755,10 @@ impl std::fmt::Debug for TargetHealth {
         formatter.finish()
     }
 }
-/// See [`TargetHealth`](crate::model::TargetHealth)
+/// See [`TargetHealth`](crate::model::TargetHealth).
 pub mod target_health {
-    /// A builder for [`TargetHealth`](crate::model::TargetHealth)
-    #[non_exhaustive]
+
+    /// A builder for [`TargetHealth`](crate::model::TargetHealth).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) state: std::option::Option<crate::model::TargetHealthStateEnum>,
@@ -4832,7 +4860,7 @@ pub mod target_health {
             self.description = input;
             self
         }
-        /// Consumes the builder and constructs a [`TargetHealth`](crate::model::TargetHealth)
+        /// Consumes the builder and constructs a [`TargetHealth`](crate::model::TargetHealth).
         pub fn build(self) -> crate::model::TargetHealth {
             crate::model::TargetHealth {
                 state: self.state,
@@ -4843,7 +4871,7 @@ pub mod target_health {
     }
 }
 impl TargetHealth {
-    /// Creates a new builder-style object to manufacture [`TargetHealth`](crate::model::TargetHealth)
+    /// Creates a new builder-style object to manufacture [`TargetHealth`](crate::model::TargetHealth).
     pub fn builder() -> crate::model::target_health::Builder {
         crate::model::target_health::Builder::default()
     }
@@ -5062,10 +5090,10 @@ impl std::fmt::Debug for TagDescription {
         formatter.finish()
     }
 }
-/// See [`TagDescription`](crate::model::TagDescription)
+/// See [`TagDescription`](crate::model::TagDescription).
 pub mod tag_description {
-    /// A builder for [`TagDescription`](crate::model::TagDescription)
-    #[non_exhaustive]
+
+    /// A builder for [`TagDescription`](crate::model::TagDescription).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) resource_arn: std::option::Option<std::string::String>,
@@ -5101,7 +5129,7 @@ pub mod tag_description {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`TagDescription`](crate::model::TagDescription)
+        /// Consumes the builder and constructs a [`TagDescription`](crate::model::TagDescription).
         pub fn build(self) -> crate::model::TagDescription {
             crate::model::TagDescription {
                 resource_arn: self.resource_arn,
@@ -5111,7 +5139,7 @@ pub mod tag_description {
     }
 }
 impl TagDescription {
-    /// Creates a new builder-style object to manufacture [`TagDescription`](crate::model::TagDescription)
+    /// Creates a new builder-style object to manufacture [`TagDescription`](crate::model::TagDescription).
     pub fn builder() -> crate::model::tag_description::Builder {
         crate::model::tag_description::Builder::default()
     }
@@ -5144,10 +5172,10 @@ impl std::fmt::Debug for Tag {
         formatter.finish()
     }
 }
-/// See [`Tag`](crate::model::Tag)
+/// See [`Tag`](crate::model::Tag).
 pub mod tag {
-    /// A builder for [`Tag`](crate::model::Tag)
-    #[non_exhaustive]
+
+    /// A builder for [`Tag`](crate::model::Tag).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) key: std::option::Option<std::string::String>,
@@ -5174,7 +5202,7 @@ pub mod tag {
             self.value = input;
             self
         }
-        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag)
+        /// Consumes the builder and constructs a [`Tag`](crate::model::Tag).
         pub fn build(self) -> crate::model::Tag {
             crate::model::Tag {
                 key: self.key,
@@ -5184,7 +5212,7 @@ pub mod tag {
     }
 }
 impl Tag {
-    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag)
+    /// Creates a new builder-style object to manufacture [`Tag`](crate::model::Tag).
     pub fn builder() -> crate::model::tag::Builder {
         crate::model::tag::Builder::default()
     }
@@ -5234,10 +5262,10 @@ impl std::fmt::Debug for SslPolicy {
         formatter.finish()
     }
 }
-/// See [`SslPolicy`](crate::model::SslPolicy)
+/// See [`SslPolicy`](crate::model::SslPolicy).
 pub mod ssl_policy {
-    /// A builder for [`SslPolicy`](crate::model::SslPolicy)
-    #[non_exhaustive]
+
+    /// A builder for [`SslPolicy`](crate::model::SslPolicy).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) ssl_protocols: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -5317,7 +5345,7 @@ pub mod ssl_policy {
             self.supported_load_balancer_types = input;
             self
         }
-        /// Consumes the builder and constructs a [`SslPolicy`](crate::model::SslPolicy)
+        /// Consumes the builder and constructs a [`SslPolicy`](crate::model::SslPolicy).
         pub fn build(self) -> crate::model::SslPolicy {
             crate::model::SslPolicy {
                 ssl_protocols: self.ssl_protocols,
@@ -5329,7 +5357,7 @@ pub mod ssl_policy {
     }
 }
 impl SslPolicy {
-    /// Creates a new builder-style object to manufacture [`SslPolicy`](crate::model::SslPolicy)
+    /// Creates a new builder-style object to manufacture [`SslPolicy`](crate::model::SslPolicy).
     pub fn builder() -> crate::model::ssl_policy::Builder {
         crate::model::ssl_policy::Builder::default()
     }
@@ -5362,10 +5390,10 @@ impl std::fmt::Debug for Cipher {
         formatter.finish()
     }
 }
-/// See [`Cipher`](crate::model::Cipher)
+/// See [`Cipher`](crate::model::Cipher).
 pub mod cipher {
-    /// A builder for [`Cipher`](crate::model::Cipher)
-    #[non_exhaustive]
+
+    /// A builder for [`Cipher`](crate::model::Cipher).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -5392,7 +5420,7 @@ pub mod cipher {
             self.priority = input;
             self
         }
-        /// Consumes the builder and constructs a [`Cipher`](crate::model::Cipher)
+        /// Consumes the builder and constructs a [`Cipher`](crate::model::Cipher).
         pub fn build(self) -> crate::model::Cipher {
             crate::model::Cipher {
                 name: self.name,
@@ -5402,7 +5430,7 @@ pub mod cipher {
     }
 }
 impl Cipher {
-    /// Creates a new builder-style object to manufacture [`Cipher`](crate::model::Cipher)
+    /// Creates a new builder-style object to manufacture [`Cipher`](crate::model::Cipher).
     pub fn builder() -> crate::model::cipher::Builder {
         crate::model::cipher::Builder::default()
     }
@@ -5573,10 +5601,10 @@ impl std::fmt::Debug for LoadBalancer {
         formatter.finish()
     }
 }
-/// See [`LoadBalancer`](crate::model::LoadBalancer)
+/// See [`LoadBalancer`](crate::model::LoadBalancer).
 pub mod load_balancer {
-    /// A builder for [`LoadBalancer`](crate::model::LoadBalancer)
-    #[non_exhaustive]
+
+    /// A builder for [`LoadBalancer`](crate::model::LoadBalancer).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) load_balancer_arn: std::option::Option<std::string::String>,
@@ -5772,7 +5800,7 @@ pub mod load_balancer {
             self.customer_owned_ipv4_pool = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancer`](crate::model::LoadBalancer)
+        /// Consumes the builder and constructs a [`LoadBalancer`](crate::model::LoadBalancer).
         pub fn build(self) -> crate::model::LoadBalancer {
             crate::model::LoadBalancer {
                 load_balancer_arn: self.load_balancer_arn,
@@ -5793,7 +5821,7 @@ pub mod load_balancer {
     }
 }
 impl LoadBalancer {
-    /// Creates a new builder-style object to manufacture [`LoadBalancer`](crate::model::LoadBalancer)
+    /// Creates a new builder-style object to manufacture [`LoadBalancer`](crate::model::LoadBalancer).
     pub fn builder() -> crate::model::load_balancer::Builder {
         crate::model::load_balancer::Builder::default()
     }
@@ -5826,10 +5854,10 @@ impl std::fmt::Debug for LoadBalancerState {
         formatter.finish()
     }
 }
-/// See [`LoadBalancerState`](crate::model::LoadBalancerState)
+/// See [`LoadBalancerState`](crate::model::LoadBalancerState).
 pub mod load_balancer_state {
-    /// A builder for [`LoadBalancerState`](crate::model::LoadBalancerState)
-    #[non_exhaustive]
+
+    /// A builder for [`LoadBalancerState`](crate::model::LoadBalancerState).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code: std::option::Option<crate::model::LoadBalancerStateEnum>,
@@ -5859,7 +5887,7 @@ pub mod load_balancer_state {
             self.reason = input;
             self
         }
-        /// Consumes the builder and constructs a [`LoadBalancerState`](crate::model::LoadBalancerState)
+        /// Consumes the builder and constructs a [`LoadBalancerState`](crate::model::LoadBalancerState).
         pub fn build(self) -> crate::model::LoadBalancerState {
             crate::model::LoadBalancerState {
                 code: self.code,
@@ -5869,7 +5897,7 @@ pub mod load_balancer_state {
     }
 }
 impl LoadBalancerState {
-    /// Creates a new builder-style object to manufacture [`LoadBalancerState`](crate::model::LoadBalancerState)
+    /// Creates a new builder-style object to manufacture [`LoadBalancerState`](crate::model::LoadBalancerState).
     pub fn builder() -> crate::model::load_balancer_state::Builder {
         crate::model::load_balancer_state::Builder::default()
     }
@@ -6060,10 +6088,10 @@ impl std::fmt::Debug for Limit {
         formatter.finish()
     }
 }
-/// See [`Limit`](crate::model::Limit)
+/// See [`Limit`](crate::model::Limit).
 pub mod limit {
-    /// A builder for [`Limit`](crate::model::Limit)
-    #[non_exhaustive]
+
+    /// A builder for [`Limit`](crate::model::Limit).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) name: std::option::Option<std::string::String>,
@@ -6130,7 +6158,7 @@ pub mod limit {
             self.max = input;
             self
         }
-        /// Consumes the builder and constructs a [`Limit`](crate::model::Limit)
+        /// Consumes the builder and constructs a [`Limit`](crate::model::Limit).
         pub fn build(self) -> crate::model::Limit {
             crate::model::Limit {
                 name: self.name,
@@ -6140,7 +6168,7 @@ pub mod limit {
     }
 }
 impl Limit {
-    /// Creates a new builder-style object to manufacture [`Limit`](crate::model::Limit)
+    /// Creates a new builder-style object to manufacture [`Limit`](crate::model::Limit).
     pub fn builder() -> crate::model::limit::Builder {
         crate::model::limit::Builder::default()
     }

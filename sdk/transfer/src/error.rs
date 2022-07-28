@@ -159,7 +159,6 @@ pub enum CreateServerErrorKind {
     /// <p>The request has failed because the Amazon Web ServicesTransfer Family service is not available.</p>
     ServiceUnavailableException(crate::error::ServiceUnavailableException),
     /// <p>The request was denied due to request throttling.</p>
-    /// <p> HTTP Status Code: 400</p>
     ThrottlingException(crate::error::ThrottlingException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -436,7 +435,6 @@ pub enum CreateWorkflowErrorKind {
     /// <p>The request has failed because the Amazon Web ServicesTransfer Family service is not available.</p>
     ServiceUnavailableException(crate::error::ServiceUnavailableException),
     /// <p>The request was denied due to request throttling.</p>
-    /// <p> HTTP Status Code: 400</p>
     ThrottlingException(crate::error::ThrottlingException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -831,7 +829,6 @@ pub enum DeleteSshPublicKeyErrorKind {
     /// <p>The request has failed because the Amazon Web ServicesTransfer Family service is not available.</p>
     ServiceUnavailableException(crate::error::ServiceUnavailableException),
     /// <p>The request was denied due to request throttling.</p>
-    /// <p> HTTP Status Code: 400</p>
     ThrottlingException(crate::error::ThrottlingException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -1972,7 +1969,6 @@ pub enum ImportSshPublicKeyErrorKind {
     /// <p>The request has failed because the Amazon Web ServicesTransfer Family service is not available.</p>
     ServiceUnavailableException(crate::error::ServiceUnavailableException),
     /// <p>The request was denied due to request throttling.</p>
-    /// <p> HTTP Status Code: 400</p>
     ThrottlingException(crate::error::ThrottlingException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -3009,7 +3005,6 @@ pub enum SendWorkflowStepStateErrorKind {
     /// <p>The request has failed because the Amazon Web ServicesTransfer Family service is not available.</p>
     ServiceUnavailableException(crate::error::ServiceUnavailableException),
     /// <p>The request was denied due to request throttling.</p>
-    /// <p> HTTP Status Code: 400</p>
     ThrottlingException(crate::error::ThrottlingException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -3156,7 +3151,6 @@ pub enum StartServerErrorKind {
     /// <p>The request has failed because the Amazon Web ServicesTransfer Family service is not available.</p>
     ServiceUnavailableException(crate::error::ServiceUnavailableException),
     /// <p>The request was denied due to request throttling.</p>
-    /// <p> HTTP Status Code: 400</p>
     ThrottlingException(crate::error::ThrottlingException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -3285,7 +3279,6 @@ pub enum StopServerErrorKind {
     /// <p>The request has failed because the Amazon Web ServicesTransfer Family service is not available.</p>
     ServiceUnavailableException(crate::error::ServiceUnavailableException),
     /// <p>The request was denied due to request throttling.</p>
-    /// <p> HTTP Status Code: 400</p>
     ThrottlingException(crate::error::ThrottlingException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -3923,7 +3916,6 @@ pub enum UpdateServerErrorKind {
     /// <p>The request has failed because the Amazon Web ServicesTransfer Family service is not available.</p>
     ServiceUnavailableException(crate::error::ServiceUnavailableException),
     /// <p>The request was denied due to request throttling.</p>
-    /// <p> HTTP Status Code: 400</p>
     ThrottlingException(crate::error::ThrottlingException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -4076,7 +4068,6 @@ pub enum UpdateUserErrorKind {
     /// <p>The request has failed because the Amazon Web ServicesTransfer Family service is not available.</p>
     ServiceUnavailableException(crate::error::ServiceUnavailableException),
     /// <p>The request was denied due to request throttling.</p>
-    /// <p> HTTP Status Code: 400</p>
     ThrottlingException(crate::error::ThrottlingException),
     /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
     Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
@@ -4184,7 +4175,6 @@ impl std::error::Error for UpdateUserError {
 }
 
 /// <p>The request was denied due to request throttling.</p>
-/// <p> HTTP Status Code: 400</p>
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct ThrottlingException {
@@ -4223,10 +4213,10 @@ impl std::fmt::Display for ThrottlingException {
     }
 }
 impl std::error::Error for ThrottlingException {}
-/// See [`ThrottlingException`](crate::error::ThrottlingException)
+/// See [`ThrottlingException`](crate::error::ThrottlingException).
 pub mod throttling_exception {
-    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
-    #[non_exhaustive]
+
+    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) retry_after_seconds: std::option::Option<std::string::String>,
@@ -4256,7 +4246,7 @@ pub mod throttling_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException)
+        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException).
         pub fn build(self) -> crate::error::ThrottlingException {
             crate::error::ThrottlingException {
                 retry_after_seconds: self.retry_after_seconds,
@@ -4266,7 +4256,7 @@ pub mod throttling_exception {
     }
 }
 impl ThrottlingException {
-    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException)
+    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException).
     pub fn builder() -> crate::error::throttling_exception::Builder {
         crate::error::throttling_exception::Builder::default()
     }
@@ -4302,10 +4292,10 @@ impl std::fmt::Display for ServiceUnavailableException {
     }
 }
 impl std::error::Error for ServiceUnavailableException {}
-/// See [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
+/// See [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
 pub mod service_unavailable_exception {
-    /// A builder for [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
-    #[non_exhaustive]
+
+    /// A builder for [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4321,7 +4311,7 @@ pub mod service_unavailable_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
+        /// Consumes the builder and constructs a [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
         pub fn build(self) -> crate::error::ServiceUnavailableException {
             crate::error::ServiceUnavailableException {
                 message: self.message,
@@ -4330,7 +4320,7 @@ pub mod service_unavailable_exception {
     }
 }
 impl ServiceUnavailableException {
-    /// Creates a new builder-style object to manufacture [`ServiceUnavailableException`](crate::error::ServiceUnavailableException)
+    /// Creates a new builder-style object to manufacture [`ServiceUnavailableException`](crate::error::ServiceUnavailableException).
     pub fn builder() -> crate::error::service_unavailable_exception::Builder {
         crate::error::service_unavailable_exception::Builder::default()
     }
@@ -4382,10 +4372,10 @@ impl std::fmt::Display for ResourceNotFoundException {
     }
 }
 impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
 pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4426,7 +4416,7 @@ pub mod resource_not_found_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
         pub fn build(self) -> crate::error::ResourceNotFoundException {
             crate::error::ResourceNotFoundException {
                 message: self.message,
@@ -4437,7 +4427,7 @@ pub mod resource_not_found_exception {
     }
 }
 impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     pub fn builder() -> crate::error::resource_not_found_exception::Builder {
         crate::error::resource_not_found_exception::Builder::default()
     }
@@ -4473,10 +4463,10 @@ impl std::fmt::Display for InvalidRequestException {
     }
 }
 impl std::error::Error for InvalidRequestException {}
-/// See [`InvalidRequestException`](crate::error::InvalidRequestException)
+/// See [`InvalidRequestException`](crate::error::InvalidRequestException).
 pub mod invalid_request_exception {
-    /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4492,7 +4482,7 @@ pub mod invalid_request_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException)
+        /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException).
         pub fn build(self) -> crate::error::InvalidRequestException {
             crate::error::InvalidRequestException {
                 message: self.message,
@@ -4501,7 +4491,7 @@ pub mod invalid_request_exception {
     }
 }
 impl InvalidRequestException {
-    /// Creates a new builder-style object to manufacture [`InvalidRequestException`](crate::error::InvalidRequestException)
+    /// Creates a new builder-style object to manufacture [`InvalidRequestException`](crate::error::InvalidRequestException).
     pub fn builder() -> crate::error::invalid_request_exception::Builder {
         crate::error::invalid_request_exception::Builder::default()
     }
@@ -4537,10 +4527,10 @@ impl std::fmt::Display for InternalServiceError {
     }
 }
 impl std::error::Error for InternalServiceError {}
-/// See [`InternalServiceError`](crate::error::InternalServiceError)
+/// See [`InternalServiceError`](crate::error::InternalServiceError).
 pub mod internal_service_error {
-    /// A builder for [`InternalServiceError`](crate::error::InternalServiceError)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalServiceError`](crate::error::InternalServiceError).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4556,7 +4546,7 @@ pub mod internal_service_error {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalServiceError`](crate::error::InternalServiceError)
+        /// Consumes the builder and constructs a [`InternalServiceError`](crate::error::InternalServiceError).
         pub fn build(self) -> crate::error::InternalServiceError {
             crate::error::InternalServiceError {
                 message: self.message,
@@ -4565,7 +4555,7 @@ pub mod internal_service_error {
     }
 }
 impl InternalServiceError {
-    /// Creates a new builder-style object to manufacture [`InternalServiceError`](crate::error::InternalServiceError)
+    /// Creates a new builder-style object to manufacture [`InternalServiceError`](crate::error::InternalServiceError).
     pub fn builder() -> crate::error::internal_service_error::Builder {
         crate::error::internal_service_error::Builder::default()
     }
@@ -4617,10 +4607,10 @@ impl std::fmt::Display for ResourceExistsException {
     }
 }
 impl std::error::Error for ResourceExistsException {}
-/// See [`ResourceExistsException`](crate::error::ResourceExistsException)
+/// See [`ResourceExistsException`](crate::error::ResourceExistsException).
 pub mod resource_exists_exception {
-    /// A builder for [`ResourceExistsException`](crate::error::ResourceExistsException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceExistsException`](crate::error::ResourceExistsException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4661,7 +4651,7 @@ pub mod resource_exists_exception {
             self.resource_type = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceExistsException`](crate::error::ResourceExistsException)
+        /// Consumes the builder and constructs a [`ResourceExistsException`](crate::error::ResourceExistsException).
         pub fn build(self) -> crate::error::ResourceExistsException {
             crate::error::ResourceExistsException {
                 message: self.message,
@@ -4672,7 +4662,7 @@ pub mod resource_exists_exception {
     }
 }
 impl ResourceExistsException {
-    /// Creates a new builder-style object to manufacture [`ResourceExistsException`](crate::error::ResourceExistsException)
+    /// Creates a new builder-style object to manufacture [`ResourceExistsException`](crate::error::ResourceExistsException).
     pub fn builder() -> crate::error::resource_exists_exception::Builder {
         crate::error::resource_exists_exception::Builder::default()
     }
@@ -4708,10 +4698,10 @@ impl std::fmt::Display for ConflictException {
     }
 }
 impl std::error::Error for ConflictException {}
-/// See [`ConflictException`](crate::error::ConflictException)
+/// See [`ConflictException`](crate::error::ConflictException).
 pub mod conflict_exception {
-    /// A builder for [`ConflictException`](crate::error::ConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`ConflictException`](crate::error::ConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4727,7 +4717,7 @@ pub mod conflict_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException)
+        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException).
         pub fn build(self) -> crate::error::ConflictException {
             crate::error::ConflictException {
                 message: self.message,
@@ -4736,7 +4726,7 @@ pub mod conflict_exception {
     }
 }
 impl ConflictException {
-    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException)
+    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException).
     pub fn builder() -> crate::error::conflict_exception::Builder {
         crate::error::conflict_exception::Builder::default()
     }
@@ -4772,10 +4762,10 @@ impl std::fmt::Display for AccessDeniedException {
     }
 }
 impl std::error::Error for AccessDeniedException {}
-/// See [`AccessDeniedException`](crate::error::AccessDeniedException)
+/// See [`AccessDeniedException`](crate::error::AccessDeniedException).
 pub mod access_denied_exception {
-    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
-    #[non_exhaustive]
+
+    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4791,7 +4781,7 @@ pub mod access_denied_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException)
+        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException).
         pub fn build(self) -> crate::error::AccessDeniedException {
             crate::error::AccessDeniedException {
                 message: self.message,
@@ -4800,7 +4790,7 @@ pub mod access_denied_exception {
     }
 }
 impl AccessDeniedException {
-    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException)
+    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException).
     pub fn builder() -> crate::error::access_denied_exception::Builder {
         crate::error::access_denied_exception::Builder::default()
     }
@@ -4836,10 +4826,10 @@ impl std::fmt::Display for InvalidNextTokenException {
     }
 }
 impl std::error::Error for InvalidNextTokenException {}
-/// See [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
+/// See [`InvalidNextTokenException`](crate::error::InvalidNextTokenException).
 pub mod invalid_next_token_exception {
-    /// A builder for [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidNextTokenException`](crate::error::InvalidNextTokenException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -4855,7 +4845,7 @@ pub mod invalid_next_token_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
+        /// Consumes the builder and constructs a [`InvalidNextTokenException`](crate::error::InvalidNextTokenException).
         pub fn build(self) -> crate::error::InvalidNextTokenException {
             crate::error::InvalidNextTokenException {
                 message: self.message,
@@ -4864,7 +4854,7 @@ pub mod invalid_next_token_exception {
     }
 }
 impl InvalidNextTokenException {
-    /// Creates a new builder-style object to manufacture [`InvalidNextTokenException`](crate::error::InvalidNextTokenException)
+    /// Creates a new builder-style object to manufacture [`InvalidNextTokenException`](crate::error::InvalidNextTokenException).
     pub fn builder() -> crate::error::invalid_next_token_exception::Builder {
         crate::error::invalid_next_token_exception::Builder::default()
     }

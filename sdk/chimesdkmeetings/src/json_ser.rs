@@ -20,12 +20,49 @@ pub fn serialize_structure_crate_input_batch_create_attendee_input(
     Ok(())
 }
 
+pub fn serialize_structure_crate_input_batch_update_attendee_capabilities_except_input(
+    object: &mut aws_smithy_json::serialize::JsonObjectWriter,
+    input: &crate::input::BatchUpdateAttendeeCapabilitiesExceptInput,
+) -> Result<(), aws_smithy_http::operation::SerializationError> {
+    if let Some(var_5) = &input.capabilities {
+        let mut object_6 = object.key("Capabilities").start_object();
+        crate::json_ser::serialize_structure_crate_model_attendee_capabilities(
+            &mut object_6,
+            var_5,
+        )?;
+        object_6.finish();
+    }
+    if let Some(var_7) = &input.excluded_attendee_ids {
+        let mut array_8 = object.key("ExcludedAttendeeIds").start_array();
+        for item_9 in var_7 {
+            {
+                let mut object_10 = array_8.value().start_object();
+                crate::json_ser::serialize_structure_crate_model_attendee_id_item(
+                    &mut object_10,
+                    item_9,
+                )?;
+                object_10.finish();
+            }
+        }
+        array_8.finish();
+    }
+    Ok(())
+}
+
 pub fn serialize_structure_crate_input_create_attendee_input(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::input::CreateAttendeeInput,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_5) = &input.external_user_id {
-        object.key("ExternalUserId").string(var_5.as_str());
+    if let Some(var_11) = &input.capabilities {
+        let mut object_12 = object.key("Capabilities").start_object();
+        crate::json_ser::serialize_structure_crate_model_attendee_capabilities(
+            &mut object_12,
+            var_11,
+        )?;
+        object_12.finish();
+    }
+    if let Some(var_13) = &input.external_user_id {
+        object.key("ExternalUserId").string(var_13.as_str());
     }
     Ok(())
 }
@@ -34,36 +71,45 @@ pub fn serialize_structure_crate_input_create_meeting_input(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::input::CreateMeetingInput,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_6) = &input.client_request_token {
-        object.key("ClientRequestToken").string(var_6.as_str());
+    if let Some(var_14) = &input.client_request_token {
+        object.key("ClientRequestToken").string(var_14.as_str());
     }
-    if let Some(var_7) = &input.external_meeting_id {
-        object.key("ExternalMeetingId").string(var_7.as_str());
+    if let Some(var_15) = &input.external_meeting_id {
+        object.key("ExternalMeetingId").string(var_15.as_str());
     }
-    if let Some(var_8) = &input.media_region {
-        object.key("MediaRegion").string(var_8.as_str());
+    if let Some(var_16) = &input.media_region {
+        object.key("MediaRegion").string(var_16.as_str());
     }
-    if let Some(var_9) = &input.meeting_features {
-        let mut object_10 = object.key("MeetingFeatures").start_object();
+    if let Some(var_17) = &input.meeting_features {
+        let mut object_18 = object.key("MeetingFeatures").start_object();
         crate::json_ser::serialize_structure_crate_model_meeting_features_configuration(
-            &mut object_10,
-            var_9,
+            &mut object_18,
+            var_17,
         )?;
-        object_10.finish();
+        object_18.finish();
     }
-    if let Some(var_11) = &input.meeting_host_id {
-        object.key("MeetingHostId").string(var_11.as_str());
+    if let Some(var_19) = &input.meeting_host_id {
+        object.key("MeetingHostId").string(var_19.as_str());
     }
-    if let Some(var_12) = &input.notifications_configuration {
-        let mut object_13 = object.key("NotificationsConfiguration").start_object();
+    if let Some(var_20) = &input.notifications_configuration {
+        let mut object_21 = object.key("NotificationsConfiguration").start_object();
         crate::json_ser::serialize_structure_crate_model_notifications_configuration(
-            &mut object_13,
-            var_12,
+            &mut object_21,
+            var_20,
         )?;
-        object_13.finish();
+        object_21.finish();
     }
-    if let Some(var_14) = &input.primary_meeting_id {
-        object.key("PrimaryMeetingId").string(var_14.as_str());
+    if let Some(var_22) = &input.primary_meeting_id {
+        object.key("PrimaryMeetingId").string(var_22.as_str());
+    }
+    if let Some(var_23) = &input.tenant_ids {
+        let mut array_24 = object.key("TenantIds").start_array();
+        for item_25 in var_23 {
+            {
+                array_24.value().string(item_25.as_str());
+            }
+        }
+        array_24.finish();
     }
     Ok(())
 }
@@ -72,50 +118,59 @@ pub fn serialize_structure_crate_input_create_meeting_with_attendees_input(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::input::CreateMeetingWithAttendeesInput,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_15) = &input.attendees {
-        let mut array_16 = object.key("Attendees").start_array();
-        for item_17 in var_15 {
+    if let Some(var_26) = &input.attendees {
+        let mut array_27 = object.key("Attendees").start_array();
+        for item_28 in var_26 {
             {
-                let mut object_18 = array_16.value().start_object();
+                let mut object_29 = array_27.value().start_object();
                 crate::json_ser::serialize_structure_crate_model_create_attendee_request_item(
-                    &mut object_18,
-                    item_17,
+                    &mut object_29,
+                    item_28,
                 )?;
-                object_18.finish();
+                object_29.finish();
             }
         }
-        array_16.finish();
+        array_27.finish();
     }
-    if let Some(var_19) = &input.client_request_token {
-        object.key("ClientRequestToken").string(var_19.as_str());
+    if let Some(var_30) = &input.client_request_token {
+        object.key("ClientRequestToken").string(var_30.as_str());
     }
-    if let Some(var_20) = &input.external_meeting_id {
-        object.key("ExternalMeetingId").string(var_20.as_str());
+    if let Some(var_31) = &input.external_meeting_id {
+        object.key("ExternalMeetingId").string(var_31.as_str());
     }
-    if let Some(var_21) = &input.media_region {
-        object.key("MediaRegion").string(var_21.as_str());
+    if let Some(var_32) = &input.media_region {
+        object.key("MediaRegion").string(var_32.as_str());
     }
-    if let Some(var_22) = &input.meeting_features {
-        let mut object_23 = object.key("MeetingFeatures").start_object();
+    if let Some(var_33) = &input.meeting_features {
+        let mut object_34 = object.key("MeetingFeatures").start_object();
         crate::json_ser::serialize_structure_crate_model_meeting_features_configuration(
-            &mut object_23,
-            var_22,
+            &mut object_34,
+            var_33,
         )?;
-        object_23.finish();
+        object_34.finish();
     }
-    if let Some(var_24) = &input.meeting_host_id {
-        object.key("MeetingHostId").string(var_24.as_str());
+    if let Some(var_35) = &input.meeting_host_id {
+        object.key("MeetingHostId").string(var_35.as_str());
     }
-    if let Some(var_25) = &input.notifications_configuration {
-        let mut object_26 = object.key("NotificationsConfiguration").start_object();
+    if let Some(var_36) = &input.notifications_configuration {
+        let mut object_37 = object.key("NotificationsConfiguration").start_object();
         crate::json_ser::serialize_structure_crate_model_notifications_configuration(
-            &mut object_26,
-            var_25,
+            &mut object_37,
+            var_36,
         )?;
-        object_26.finish();
+        object_37.finish();
     }
-    if let Some(var_27) = &input.primary_meeting_id {
-        object.key("PrimaryMeetingId").string(var_27.as_str());
+    if let Some(var_38) = &input.primary_meeting_id {
+        object.key("PrimaryMeetingId").string(var_38.as_str());
+    }
+    if let Some(var_39) = &input.tenant_ids {
+        let mut array_40 = object.key("TenantIds").start_array();
+        for item_41 in var_39 {
+            {
+                array_40.value().string(item_41.as_str());
+            }
+        }
+        array_40.finish();
     }
     Ok(())
 }
@@ -124,13 +179,28 @@ pub fn serialize_structure_crate_input_start_meeting_transcription_input(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::input::StartMeetingTranscriptionInput,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_28) = &input.transcription_configuration {
-        let mut object_29 = object.key("TranscriptionConfiguration").start_object();
+    if let Some(var_42) = &input.transcription_configuration {
+        let mut object_43 = object.key("TranscriptionConfiguration").start_object();
         crate::json_ser::serialize_structure_crate_model_transcription_configuration(
-            &mut object_29,
-            var_28,
+            &mut object_43,
+            var_42,
         )?;
-        object_29.finish();
+        object_43.finish();
+    }
+    Ok(())
+}
+
+pub fn serialize_structure_crate_input_update_attendee_capabilities_input(
+    object: &mut aws_smithy_json::serialize::JsonObjectWriter,
+    input: &crate::input::UpdateAttendeeCapabilitiesInput,
+) -> Result<(), aws_smithy_http::operation::SerializationError> {
+    if let Some(var_44) = &input.capabilities {
+        let mut object_45 = object.key("Capabilities").start_object();
+        crate::json_ser::serialize_structure_crate_model_attendee_capabilities(
+            &mut object_45,
+            var_44,
+        )?;
+        object_45.finish();
     }
     Ok(())
 }
@@ -139,8 +209,42 @@ pub fn serialize_structure_crate_model_create_attendee_request_item(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::model::CreateAttendeeRequestItem,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_30) = &input.external_user_id {
-        object.key("ExternalUserId").string(var_30.as_str());
+    if let Some(var_46) = &input.external_user_id {
+        object.key("ExternalUserId").string(var_46.as_str());
+    }
+    if let Some(var_47) = &input.capabilities {
+        let mut object_48 = object.key("Capabilities").start_object();
+        crate::json_ser::serialize_structure_crate_model_attendee_capabilities(
+            &mut object_48,
+            var_47,
+        )?;
+        object_48.finish();
+    }
+    Ok(())
+}
+
+pub fn serialize_structure_crate_model_attendee_capabilities(
+    object: &mut aws_smithy_json::serialize::JsonObjectWriter,
+    input: &crate::model::AttendeeCapabilities,
+) -> Result<(), aws_smithy_http::operation::SerializationError> {
+    if let Some(var_49) = &input.audio {
+        object.key("Audio").string(var_49.as_str());
+    }
+    if let Some(var_50) = &input.video {
+        object.key("Video").string(var_50.as_str());
+    }
+    if let Some(var_51) = &input.content {
+        object.key("Content").string(var_51.as_str());
+    }
+    Ok(())
+}
+
+pub fn serialize_structure_crate_model_attendee_id_item(
+    object: &mut aws_smithy_json::serialize::JsonObjectWriter,
+    input: &crate::model::AttendeeIdItem,
+) -> Result<(), aws_smithy_http::operation::SerializationError> {
+    if let Some(var_52) = &input.attendee_id {
+        object.key("AttendeeId").string(var_52.as_str());
     }
     Ok(())
 }
@@ -149,10 +253,10 @@ pub fn serialize_structure_crate_model_meeting_features_configuration(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::model::MeetingFeaturesConfiguration,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_31) = &input.audio {
-        let mut object_32 = object.key("Audio").start_object();
-        crate::json_ser::serialize_structure_crate_model_audio_features(&mut object_32, var_31)?;
-        object_32.finish();
+    if let Some(var_53) = &input.audio {
+        let mut object_54 = object.key("Audio").start_object();
+        crate::json_ser::serialize_structure_crate_model_audio_features(&mut object_54, var_53)?;
+        object_54.finish();
     }
     Ok(())
 }
@@ -161,14 +265,14 @@ pub fn serialize_structure_crate_model_notifications_configuration(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::model::NotificationsConfiguration,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_33) = &input.lambda_function_arn {
-        object.key("LambdaFunctionArn").string(var_33.as_str());
+    if let Some(var_55) = &input.lambda_function_arn {
+        object.key("LambdaFunctionArn").string(var_55.as_str());
     }
-    if let Some(var_34) = &input.sns_topic_arn {
-        object.key("SnsTopicArn").string(var_34.as_str());
+    if let Some(var_56) = &input.sns_topic_arn {
+        object.key("SnsTopicArn").string(var_56.as_str());
     }
-    if let Some(var_35) = &input.sqs_queue_arn {
-        object.key("SqsQueueArn").string(var_35.as_str());
+    if let Some(var_57) = &input.sqs_queue_arn {
+        object.key("SqsQueueArn").string(var_57.as_str());
     }
     Ok(())
 }
@@ -177,21 +281,21 @@ pub fn serialize_structure_crate_model_transcription_configuration(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::model::TranscriptionConfiguration,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_36) = &input.engine_transcribe_settings {
-        let mut object_37 = object.key("EngineTranscribeSettings").start_object();
+    if let Some(var_58) = &input.engine_transcribe_settings {
+        let mut object_59 = object.key("EngineTranscribeSettings").start_object();
         crate::json_ser::serialize_structure_crate_model_engine_transcribe_settings(
-            &mut object_37,
-            var_36,
+            &mut object_59,
+            var_58,
         )?;
-        object_37.finish();
+        object_59.finish();
     }
-    if let Some(var_38) = &input.engine_transcribe_medical_settings {
-        let mut object_39 = object.key("EngineTranscribeMedicalSettings").start_object();
+    if let Some(var_60) = &input.engine_transcribe_medical_settings {
+        let mut object_61 = object.key("EngineTranscribeMedicalSettings").start_object();
         crate::json_ser::serialize_structure_crate_model_engine_transcribe_medical_settings(
-            &mut object_39,
-            var_38,
+            &mut object_61,
+            var_60,
         )?;
-        object_39.finish();
+        object_61.finish();
     }
     Ok(())
 }
@@ -200,8 +304,8 @@ pub fn serialize_structure_crate_model_audio_features(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::model::AudioFeatures,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_40) = &input.echo_reduction {
-        object.key("EchoReduction").string(var_40.as_str());
+    if let Some(var_62) = &input.echo_reduction {
+        object.key("EchoReduction").string(var_62.as_str());
     }
     Ok(())
 }
@@ -210,55 +314,55 @@ pub fn serialize_structure_crate_model_engine_transcribe_settings(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::model::EngineTranscribeSettings,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_41) = &input.language_code {
-        object.key("LanguageCode").string(var_41.as_str());
+    if let Some(var_63) = &input.language_code {
+        object.key("LanguageCode").string(var_63.as_str());
     }
-    if let Some(var_42) = &input.vocabulary_filter_method {
-        object.key("VocabularyFilterMethod").string(var_42.as_str());
+    if let Some(var_64) = &input.vocabulary_filter_method {
+        object.key("VocabularyFilterMethod").string(var_64.as_str());
     }
-    if let Some(var_43) = &input.vocabulary_filter_name {
-        object.key("VocabularyFilterName").string(var_43.as_str());
+    if let Some(var_65) = &input.vocabulary_filter_name {
+        object.key("VocabularyFilterName").string(var_65.as_str());
     }
-    if let Some(var_44) = &input.vocabulary_name {
-        object.key("VocabularyName").string(var_44.as_str());
+    if let Some(var_66) = &input.vocabulary_name {
+        object.key("VocabularyName").string(var_66.as_str());
     }
-    if let Some(var_45) = &input.region {
-        object.key("Region").string(var_45.as_str());
+    if let Some(var_67) = &input.region {
+        object.key("Region").string(var_67.as_str());
     }
     if input.enable_partial_results_stabilization {
         object
             .key("EnablePartialResultsStabilization")
             .boolean(input.enable_partial_results_stabilization);
     }
-    if let Some(var_46) = &input.partial_results_stability {
+    if let Some(var_68) = &input.partial_results_stability {
         object
             .key("PartialResultsStability")
-            .string(var_46.as_str());
+            .string(var_68.as_str());
     }
-    if let Some(var_47) = &input.content_identification_type {
+    if let Some(var_69) = &input.content_identification_type {
         object
             .key("ContentIdentificationType")
-            .string(var_47.as_str());
+            .string(var_69.as_str());
     }
-    if let Some(var_48) = &input.content_redaction_type {
-        object.key("ContentRedactionType").string(var_48.as_str());
+    if let Some(var_70) = &input.content_redaction_type {
+        object.key("ContentRedactionType").string(var_70.as_str());
     }
-    if let Some(var_49) = &input.pii_entity_types {
-        object.key("PiiEntityTypes").string(var_49.as_str());
+    if let Some(var_71) = &input.pii_entity_types {
+        object.key("PiiEntityTypes").string(var_71.as_str());
     }
-    if let Some(var_50) = &input.language_model_name {
-        object.key("LanguageModelName").string(var_50.as_str());
+    if let Some(var_72) = &input.language_model_name {
+        object.key("LanguageModelName").string(var_72.as_str());
     }
     if input.identify_language {
         object
             .key("IdentifyLanguage")
             .boolean(input.identify_language);
     }
-    if let Some(var_51) = &input.language_options {
-        object.key("LanguageOptions").string(var_51.as_str());
+    if let Some(var_73) = &input.language_options {
+        object.key("LanguageOptions").string(var_73.as_str());
     }
-    if let Some(var_52) = &input.preferred_language {
-        object.key("PreferredLanguage").string(var_52.as_str());
+    if let Some(var_74) = &input.preferred_language {
+        object.key("PreferredLanguage").string(var_74.as_str());
     }
     Ok(())
 }
@@ -267,25 +371,25 @@ pub fn serialize_structure_crate_model_engine_transcribe_medical_settings(
     object: &mut aws_smithy_json::serialize::JsonObjectWriter,
     input: &crate::model::EngineTranscribeMedicalSettings,
 ) -> Result<(), aws_smithy_http::operation::SerializationError> {
-    if let Some(var_53) = &input.language_code {
-        object.key("LanguageCode").string(var_53.as_str());
+    if let Some(var_75) = &input.language_code {
+        object.key("LanguageCode").string(var_75.as_str());
     }
-    if let Some(var_54) = &input.specialty {
-        object.key("Specialty").string(var_54.as_str());
+    if let Some(var_76) = &input.specialty {
+        object.key("Specialty").string(var_76.as_str());
     }
-    if let Some(var_55) = &input.r#type {
-        object.key("Type").string(var_55.as_str());
+    if let Some(var_77) = &input.r#type {
+        object.key("Type").string(var_77.as_str());
     }
-    if let Some(var_56) = &input.vocabulary_name {
-        object.key("VocabularyName").string(var_56.as_str());
+    if let Some(var_78) = &input.vocabulary_name {
+        object.key("VocabularyName").string(var_78.as_str());
     }
-    if let Some(var_57) = &input.region {
-        object.key("Region").string(var_57.as_str());
+    if let Some(var_79) = &input.region {
+        object.key("Region").string(var_79.as_str());
     }
-    if let Some(var_58) = &input.content_identification_type {
+    if let Some(var_80) = &input.content_identification_type {
         object
             .key("ContentIdentificationType")
-            .string(var_58.as_str());
+            .string(var_80.as_str());
     }
     Ok(())
 }

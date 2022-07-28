@@ -9,21 +9,21 @@ impl std::fmt::Debug for UpdateTaskExecutionOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateTaskExecutionOutput`](crate::output::UpdateTaskExecutionOutput)
+/// See [`UpdateTaskExecutionOutput`](crate::output::UpdateTaskExecutionOutput).
 pub mod update_task_execution_output {
-    /// A builder for [`UpdateTaskExecutionOutput`](crate::output::UpdateTaskExecutionOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateTaskExecutionOutput`](crate::output::UpdateTaskExecutionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateTaskExecutionOutput`](crate::output::UpdateTaskExecutionOutput)
+        /// Consumes the builder and constructs a [`UpdateTaskExecutionOutput`](crate::output::UpdateTaskExecutionOutput).
         pub fn build(self) -> crate::output::UpdateTaskExecutionOutput {
             crate::output::UpdateTaskExecutionOutput {}
         }
     }
 }
 impl UpdateTaskExecutionOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateTaskExecutionOutput`](crate::output::UpdateTaskExecutionOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateTaskExecutionOutput`](crate::output::UpdateTaskExecutionOutput).
     pub fn builder() -> crate::output::update_task_execution_output::Builder {
         crate::output::update_task_execution_output::Builder::default()
     }
@@ -39,21 +39,21 @@ impl std::fmt::Debug for UpdateTaskOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateTaskOutput`](crate::output::UpdateTaskOutput)
+/// See [`UpdateTaskOutput`](crate::output::UpdateTaskOutput).
 pub mod update_task_output {
-    /// A builder for [`UpdateTaskOutput`](crate::output::UpdateTaskOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateTaskOutput`](crate::output::UpdateTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateTaskOutput`](crate::output::UpdateTaskOutput)
+        /// Consumes the builder and constructs a [`UpdateTaskOutput`](crate::output::UpdateTaskOutput).
         pub fn build(self) -> crate::output::UpdateTaskOutput {
             crate::output::UpdateTaskOutput {}
         }
     }
 }
 impl UpdateTaskOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateTaskOutput`](crate::output::UpdateTaskOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateTaskOutput`](crate::output::UpdateTaskOutput).
     pub fn builder() -> crate::output::update_task_output::Builder {
         crate::output::update_task_output::Builder::default()
     }
@@ -69,21 +69,21 @@ impl std::fmt::Debug for UpdateLocationSmbOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateLocationSmbOutput`](crate::output::UpdateLocationSmbOutput)
+/// See [`UpdateLocationSmbOutput`](crate::output::UpdateLocationSmbOutput).
 pub mod update_location_smb_output {
-    /// A builder for [`UpdateLocationSmbOutput`](crate::output::UpdateLocationSmbOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateLocationSmbOutput`](crate::output::UpdateLocationSmbOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateLocationSmbOutput`](crate::output::UpdateLocationSmbOutput)
+        /// Consumes the builder and constructs a [`UpdateLocationSmbOutput`](crate::output::UpdateLocationSmbOutput).
         pub fn build(self) -> crate::output::UpdateLocationSmbOutput {
             crate::output::UpdateLocationSmbOutput {}
         }
     }
 }
 impl UpdateLocationSmbOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateLocationSmbOutput`](crate::output::UpdateLocationSmbOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateLocationSmbOutput`](crate::output::UpdateLocationSmbOutput).
     pub fn builder() -> crate::output::update_location_smb_output::Builder {
         crate::output::update_location_smb_output::Builder::default()
     }
@@ -99,21 +99,21 @@ impl std::fmt::Debug for UpdateLocationObjectStorageOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateLocationObjectStorageOutput`](crate::output::UpdateLocationObjectStorageOutput)
+/// See [`UpdateLocationObjectStorageOutput`](crate::output::UpdateLocationObjectStorageOutput).
 pub mod update_location_object_storage_output {
-    /// A builder for [`UpdateLocationObjectStorageOutput`](crate::output::UpdateLocationObjectStorageOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateLocationObjectStorageOutput`](crate::output::UpdateLocationObjectStorageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateLocationObjectStorageOutput`](crate::output::UpdateLocationObjectStorageOutput)
+        /// Consumes the builder and constructs a [`UpdateLocationObjectStorageOutput`](crate::output::UpdateLocationObjectStorageOutput).
         pub fn build(self) -> crate::output::UpdateLocationObjectStorageOutput {
             crate::output::UpdateLocationObjectStorageOutput {}
         }
     }
 }
 impl UpdateLocationObjectStorageOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateLocationObjectStorageOutput`](crate::output::UpdateLocationObjectStorageOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateLocationObjectStorageOutput`](crate::output::UpdateLocationObjectStorageOutput).
     pub fn builder() -> crate::output::update_location_object_storage_output::Builder {
         crate::output::update_location_object_storage_output::Builder::default()
     }
@@ -129,21 +129,21 @@ impl std::fmt::Debug for UpdateLocationNfsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateLocationNfsOutput`](crate::output::UpdateLocationNfsOutput)
+/// See [`UpdateLocationNfsOutput`](crate::output::UpdateLocationNfsOutput).
 pub mod update_location_nfs_output {
-    /// A builder for [`UpdateLocationNfsOutput`](crate::output::UpdateLocationNfsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateLocationNfsOutput`](crate::output::UpdateLocationNfsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateLocationNfsOutput`](crate::output::UpdateLocationNfsOutput)
+        /// Consumes the builder and constructs a [`UpdateLocationNfsOutput`](crate::output::UpdateLocationNfsOutput).
         pub fn build(self) -> crate::output::UpdateLocationNfsOutput {
             crate::output::UpdateLocationNfsOutput {}
         }
     }
 }
 impl UpdateLocationNfsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateLocationNfsOutput`](crate::output::UpdateLocationNfsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateLocationNfsOutput`](crate::output::UpdateLocationNfsOutput).
     pub fn builder() -> crate::output::update_location_nfs_output::Builder {
         crate::output::update_location_nfs_output::Builder::default()
     }
@@ -159,21 +159,21 @@ impl std::fmt::Debug for UpdateLocationHdfsOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateLocationHdfsOutput`](crate::output::UpdateLocationHdfsOutput)
+/// See [`UpdateLocationHdfsOutput`](crate::output::UpdateLocationHdfsOutput).
 pub mod update_location_hdfs_output {
-    /// A builder for [`UpdateLocationHdfsOutput`](crate::output::UpdateLocationHdfsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateLocationHdfsOutput`](crate::output::UpdateLocationHdfsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateLocationHdfsOutput`](crate::output::UpdateLocationHdfsOutput)
+        /// Consumes the builder and constructs a [`UpdateLocationHdfsOutput`](crate::output::UpdateLocationHdfsOutput).
         pub fn build(self) -> crate::output::UpdateLocationHdfsOutput {
             crate::output::UpdateLocationHdfsOutput {}
         }
     }
 }
 impl UpdateLocationHdfsOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateLocationHdfsOutput`](crate::output::UpdateLocationHdfsOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateLocationHdfsOutput`](crate::output::UpdateLocationHdfsOutput).
     pub fn builder() -> crate::output::update_location_hdfs_output::Builder {
         crate::output::update_location_hdfs_output::Builder::default()
     }
@@ -189,21 +189,21 @@ impl std::fmt::Debug for UpdateAgentOutput {
         formatter.finish()
     }
 }
-/// See [`UpdateAgentOutput`](crate::output::UpdateAgentOutput)
+/// See [`UpdateAgentOutput`](crate::output::UpdateAgentOutput).
 pub mod update_agent_output {
-    /// A builder for [`UpdateAgentOutput`](crate::output::UpdateAgentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateAgentOutput`](crate::output::UpdateAgentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateAgentOutput`](crate::output::UpdateAgentOutput)
+        /// Consumes the builder and constructs a [`UpdateAgentOutput`](crate::output::UpdateAgentOutput).
         pub fn build(self) -> crate::output::UpdateAgentOutput {
             crate::output::UpdateAgentOutput {}
         }
     }
 }
 impl UpdateAgentOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateAgentOutput`](crate::output::UpdateAgentOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateAgentOutput`](crate::output::UpdateAgentOutput).
     pub fn builder() -> crate::output::update_agent_output::Builder {
         crate::output::update_agent_output::Builder::default()
     }
@@ -219,21 +219,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -249,21 +249,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -289,10 +289,10 @@ impl std::fmt::Debug for StartTaskExecutionOutput {
         formatter.finish()
     }
 }
-/// See [`StartTaskExecutionOutput`](crate::output::StartTaskExecutionOutput)
+/// See [`StartTaskExecutionOutput`](crate::output::StartTaskExecutionOutput).
 pub mod start_task_execution_output {
-    /// A builder for [`StartTaskExecutionOutput`](crate::output::StartTaskExecutionOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`StartTaskExecutionOutput`](crate::output::StartTaskExecutionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_execution_arn: std::option::Option<std::string::String>,
@@ -311,7 +311,7 @@ pub mod start_task_execution_output {
             self.task_execution_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`StartTaskExecutionOutput`](crate::output::StartTaskExecutionOutput)
+        /// Consumes the builder and constructs a [`StartTaskExecutionOutput`](crate::output::StartTaskExecutionOutput).
         pub fn build(self) -> crate::output::StartTaskExecutionOutput {
             crate::output::StartTaskExecutionOutput {
                 task_execution_arn: self.task_execution_arn,
@@ -320,7 +320,7 @@ pub mod start_task_execution_output {
     }
 }
 impl StartTaskExecutionOutput {
-    /// Creates a new builder-style object to manufacture [`StartTaskExecutionOutput`](crate::output::StartTaskExecutionOutput)
+    /// Creates a new builder-style object to manufacture [`StartTaskExecutionOutput`](crate::output::StartTaskExecutionOutput).
     pub fn builder() -> crate::output::start_task_execution_output::Builder {
         crate::output::start_task_execution_output::Builder::default()
     }
@@ -353,10 +353,10 @@ impl std::fmt::Debug for ListTasksOutput {
         formatter.finish()
     }
 }
-/// See [`ListTasksOutput`](crate::output::ListTasksOutput)
+/// See [`ListTasksOutput`](crate::output::ListTasksOutput).
 pub mod list_tasks_output {
-    /// A builder for [`ListTasksOutput`](crate::output::ListTasksOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTasksOutput`](crate::output::ListTasksOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tasks: std::option::Option<std::vec::Vec<crate::model::TaskListEntry>>,
@@ -392,7 +392,7 @@ pub mod list_tasks_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTasksOutput`](crate::output::ListTasksOutput)
+        /// Consumes the builder and constructs a [`ListTasksOutput`](crate::output::ListTasksOutput).
         pub fn build(self) -> crate::output::ListTasksOutput {
             crate::output::ListTasksOutput {
                 tasks: self.tasks,
@@ -402,7 +402,7 @@ pub mod list_tasks_output {
     }
 }
 impl ListTasksOutput {
-    /// Creates a new builder-style object to manufacture [`ListTasksOutput`](crate::output::ListTasksOutput)
+    /// Creates a new builder-style object to manufacture [`ListTasksOutput`](crate::output::ListTasksOutput).
     pub fn builder() -> crate::output::list_tasks_output::Builder {
         crate::output::list_tasks_output::Builder::default()
     }
@@ -435,10 +435,10 @@ impl std::fmt::Debug for ListTaskExecutionsOutput {
         formatter.finish()
     }
 }
-/// See [`ListTaskExecutionsOutput`](crate::output::ListTaskExecutionsOutput)
+/// See [`ListTaskExecutionsOutput`](crate::output::ListTaskExecutionsOutput).
 pub mod list_task_executions_output {
-    /// A builder for [`ListTaskExecutionsOutput`](crate::output::ListTaskExecutionsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTaskExecutionsOutput`](crate::output::ListTaskExecutionsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_executions:
@@ -475,7 +475,7 @@ pub mod list_task_executions_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTaskExecutionsOutput`](crate::output::ListTaskExecutionsOutput)
+        /// Consumes the builder and constructs a [`ListTaskExecutionsOutput`](crate::output::ListTaskExecutionsOutput).
         pub fn build(self) -> crate::output::ListTaskExecutionsOutput {
             crate::output::ListTaskExecutionsOutput {
                 task_executions: self.task_executions,
@@ -485,7 +485,7 @@ pub mod list_task_executions_output {
     }
 }
 impl ListTaskExecutionsOutput {
-    /// Creates a new builder-style object to manufacture [`ListTaskExecutionsOutput`](crate::output::ListTaskExecutionsOutput)
+    /// Creates a new builder-style object to manufacture [`ListTaskExecutionsOutput`](crate::output::ListTaskExecutionsOutput).
     pub fn builder() -> crate::output::list_task_executions_output::Builder {
         crate::output::list_task_executions_output::Builder::default()
     }
@@ -518,10 +518,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::TagListEntry>>,
@@ -557,7 +557,7 @@ pub mod list_tags_for_resource_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 tags: self.tags,
@@ -567,7 +567,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -600,10 +600,10 @@ impl std::fmt::Debug for ListLocationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListLocationsOutput`](crate::output::ListLocationsOutput)
+/// See [`ListLocationsOutput`](crate::output::ListLocationsOutput).
 pub mod list_locations_output {
-    /// A builder for [`ListLocationsOutput`](crate::output::ListLocationsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListLocationsOutput`](crate::output::ListLocationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) locations: std::option::Option<std::vec::Vec<crate::model::LocationListEntry>>,
@@ -639,7 +639,7 @@ pub mod list_locations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListLocationsOutput`](crate::output::ListLocationsOutput)
+        /// Consumes the builder and constructs a [`ListLocationsOutput`](crate::output::ListLocationsOutput).
         pub fn build(self) -> crate::output::ListLocationsOutput {
             crate::output::ListLocationsOutput {
                 locations: self.locations,
@@ -649,7 +649,7 @@ pub mod list_locations_output {
     }
 }
 impl ListLocationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListLocationsOutput`](crate::output::ListLocationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListLocationsOutput`](crate::output::ListLocationsOutput).
     pub fn builder() -> crate::output::list_locations_output::Builder {
         crate::output::list_locations_output::Builder::default()
     }
@@ -682,10 +682,10 @@ impl std::fmt::Debug for ListAgentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAgentsOutput`](crate::output::ListAgentsOutput)
+/// See [`ListAgentsOutput`](crate::output::ListAgentsOutput).
 pub mod list_agents_output {
-    /// A builder for [`ListAgentsOutput`](crate::output::ListAgentsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListAgentsOutput`](crate::output::ListAgentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) agents: std::option::Option<std::vec::Vec<crate::model::AgentListEntry>>,
@@ -721,7 +721,7 @@ pub mod list_agents_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAgentsOutput`](crate::output::ListAgentsOutput)
+        /// Consumes the builder and constructs a [`ListAgentsOutput`](crate::output::ListAgentsOutput).
         pub fn build(self) -> crate::output::ListAgentsOutput {
             crate::output::ListAgentsOutput {
                 agents: self.agents,
@@ -731,7 +731,7 @@ pub mod list_agents_output {
     }
 }
 impl ListAgentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAgentsOutput`](crate::output::ListAgentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAgentsOutput`](crate::output::ListAgentsOutput).
     pub fn builder() -> crate::output::list_agents_output::Builder {
         crate::output::list_agents_output::Builder::default()
     }
@@ -852,10 +852,10 @@ impl std::fmt::Debug for DescribeTaskExecutionOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTaskExecutionOutput`](crate::output::DescribeTaskExecutionOutput)
+/// See [`DescribeTaskExecutionOutput`](crate::output::DescribeTaskExecutionOutput).
 pub mod describe_task_execution_output {
-    /// A builder for [`DescribeTaskExecutionOutput`](crate::output::DescribeTaskExecutionOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeTaskExecutionOutput`](crate::output::DescribeTaskExecutionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_execution_arn: std::option::Option<std::string::String>,
@@ -1034,7 +1034,7 @@ pub mod describe_task_execution_output {
             self.result = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTaskExecutionOutput`](crate::output::DescribeTaskExecutionOutput)
+        /// Consumes the builder and constructs a [`DescribeTaskExecutionOutput`](crate::output::DescribeTaskExecutionOutput).
         pub fn build(self) -> crate::output::DescribeTaskExecutionOutput {
             crate::output::DescribeTaskExecutionOutput {
                 task_execution_arn: self.task_execution_arn,
@@ -1054,7 +1054,7 @@ pub mod describe_task_execution_output {
     }
 }
 impl DescribeTaskExecutionOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTaskExecutionOutput`](crate::output::DescribeTaskExecutionOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTaskExecutionOutput`](crate::output::DescribeTaskExecutionOutput).
     pub fn builder() -> crate::output::describe_task_execution_output::Builder {
         crate::output::describe_task_execution_output::Builder::default()
     }
@@ -1204,10 +1204,10 @@ impl std::fmt::Debug for DescribeTaskOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeTaskOutput`](crate::output::DescribeTaskOutput)
+/// See [`DescribeTaskOutput`](crate::output::DescribeTaskOutput).
 pub mod describe_task_output {
-    /// A builder for [`DescribeTaskOutput`](crate::output::DescribeTaskOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeTaskOutput`](crate::output::DescribeTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_arn: std::option::Option<std::string::String>,
@@ -1458,7 +1458,7 @@ pub mod describe_task_output {
             self.includes = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeTaskOutput`](crate::output::DescribeTaskOutput)
+        /// Consumes the builder and constructs a [`DescribeTaskOutput`](crate::output::DescribeTaskOutput).
         pub fn build(self) -> crate::output::DescribeTaskOutput {
             crate::output::DescribeTaskOutput {
                 task_arn: self.task_arn,
@@ -1482,7 +1482,7 @@ pub mod describe_task_output {
     }
 }
 impl DescribeTaskOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeTaskOutput`](crate::output::DescribeTaskOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeTaskOutput`](crate::output::DescribeTaskOutput).
     pub fn builder() -> crate::output::describe_task_output::Builder {
         crate::output::describe_task_output::Builder::default()
     }
@@ -1550,10 +1550,10 @@ impl std::fmt::Debug for DescribeLocationSmbOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLocationSmbOutput`](crate::output::DescribeLocationSmbOutput)
+/// See [`DescribeLocationSmbOutput`](crate::output::DescribeLocationSmbOutput).
 pub mod describe_location_smb_output {
-    /// A builder for [`DescribeLocationSmbOutput`](crate::output::DescribeLocationSmbOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeLocationSmbOutput`](crate::output::DescribeLocationSmbOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -1650,7 +1650,7 @@ pub mod describe_location_smb_output {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLocationSmbOutput`](crate::output::DescribeLocationSmbOutput)
+        /// Consumes the builder and constructs a [`DescribeLocationSmbOutput`](crate::output::DescribeLocationSmbOutput).
         pub fn build(self) -> crate::output::DescribeLocationSmbOutput {
             crate::output::DescribeLocationSmbOutput {
                 location_arn: self.location_arn,
@@ -1665,7 +1665,7 @@ pub mod describe_location_smb_output {
     }
 }
 impl DescribeLocationSmbOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLocationSmbOutput`](crate::output::DescribeLocationSmbOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLocationSmbOutput`](crate::output::DescribeLocationSmbOutput).
     pub fn builder() -> crate::output::describe_location_smb_output::Builder {
         crate::output::describe_location_smb_output::Builder::default()
     }
@@ -1728,10 +1728,10 @@ impl std::fmt::Debug for DescribeLocationS3Output {
         formatter.finish()
     }
 }
-/// See [`DescribeLocationS3Output`](crate::output::DescribeLocationS3Output)
+/// See [`DescribeLocationS3Output`](crate::output::DescribeLocationS3Output).
 pub mod describe_location_s3_output {
-    /// A builder for [`DescribeLocationS3Output`](crate::output::DescribeLocationS3Output)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeLocationS3Output`](crate::output::DescribeLocationS3Output).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -1819,7 +1819,7 @@ pub mod describe_location_s3_output {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLocationS3Output`](crate::output::DescribeLocationS3Output)
+        /// Consumes the builder and constructs a [`DescribeLocationS3Output`](crate::output::DescribeLocationS3Output).
         pub fn build(self) -> crate::output::DescribeLocationS3Output {
             crate::output::DescribeLocationS3Output {
                 location_arn: self.location_arn,
@@ -1833,7 +1833,7 @@ pub mod describe_location_s3_output {
     }
 }
 impl DescribeLocationS3Output {
-    /// Creates a new builder-style object to manufacture [`DescribeLocationS3Output`](crate::output::DescribeLocationS3Output)
+    /// Creates a new builder-style object to manufacture [`DescribeLocationS3Output`](crate::output::DescribeLocationS3Output).
     pub fn builder() -> crate::output::describe_location_s3_output::Builder {
         crate::output::describe_location_s3_output::Builder::default()
     }
@@ -1843,49 +1843,49 @@ impl DescribeLocationS3Output {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeLocationObjectStorageOutput {
-    /// <p>The Amazon Resource Name (ARN) of the self-managed object storage server location to describe.</p>
+    /// <p>The ARN of the object storage system location.</p>
     pub location_arn: std::option::Option<std::string::String>,
-    /// <p>The URL of the source self-managed object storage server location that was described.</p>
+    /// <p>The URL of the object storage system location.</p>
     pub location_uri: std::option::Option<std::string::String>,
-    /// <p>Optional. The access key is used if credentials are required to access the self-managed object storage server. If your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and <code>SecretKey</code> to provide the user name and password, respectively.</p>
+    /// <p>The access key (for example, a user name) required to authenticate with the object storage server.</p>
     pub access_key: std::option::Option<std::string::String>,
-    /// <p>The port that your self-managed object storage server accepts inbound network traffic on. The server port is set by default to TCP 80 (HTTP) or TCP 443 (HTTPS).</p>
+    /// <p>The port that your object storage server accepts inbound network traffic on (for example, port 443).</p>
     pub server_port: std::option::Option<i32>,
-    /// <p>The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.</p>
+    /// <p>The protocol that your object storage server uses to communicate.</p>
     pub server_protocol: std::option::Option<crate::model::ObjectStorageServerProtocol>,
-    /// <p>The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.</p>
+    /// <p>The ARNs of the DataSync agents that can securely connect with your location.</p>
     pub agent_arns: std::option::Option<std::vec::Vec<std::string::String>>,
-    /// <p>The time that the self-managed object storage server agent was created.</p>
+    /// <p>The time that the location was created.</p>
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
 }
 impl DescribeLocationObjectStorageOutput {
-    /// <p>The Amazon Resource Name (ARN) of the self-managed object storage server location to describe.</p>
+    /// <p>The ARN of the object storage system location.</p>
     pub fn location_arn(&self) -> std::option::Option<&str> {
         self.location_arn.as_deref()
     }
-    /// <p>The URL of the source self-managed object storage server location that was described.</p>
+    /// <p>The URL of the object storage system location.</p>
     pub fn location_uri(&self) -> std::option::Option<&str> {
         self.location_uri.as_deref()
     }
-    /// <p>Optional. The access key is used if credentials are required to access the self-managed object storage server. If your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and <code>SecretKey</code> to provide the user name and password, respectively.</p>
+    /// <p>The access key (for example, a user name) required to authenticate with the object storage server.</p>
     pub fn access_key(&self) -> std::option::Option<&str> {
         self.access_key.as_deref()
     }
-    /// <p>The port that your self-managed object storage server accepts inbound network traffic on. The server port is set by default to TCP 80 (HTTP) or TCP 443 (HTTPS).</p>
+    /// <p>The port that your object storage server accepts inbound network traffic on (for example, port 443).</p>
     pub fn server_port(&self) -> std::option::Option<i32> {
         self.server_port
     }
-    /// <p>The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.</p>
+    /// <p>The protocol that your object storage server uses to communicate.</p>
     pub fn server_protocol(
         &self,
     ) -> std::option::Option<&crate::model::ObjectStorageServerProtocol> {
         self.server_protocol.as_ref()
     }
-    /// <p>The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.</p>
+    /// <p>The ARNs of the DataSync agents that can securely connect with your location.</p>
     pub fn agent_arns(&self) -> std::option::Option<&[std::string::String]> {
         self.agent_arns.as_deref()
     }
-    /// <p>The time that the self-managed object storage server agent was created.</p>
+    /// <p>The time that the location was created.</p>
     pub fn creation_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.creation_time.as_ref()
     }
@@ -1903,10 +1903,10 @@ impl std::fmt::Debug for DescribeLocationObjectStorageOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLocationObjectStorageOutput`](crate::output::DescribeLocationObjectStorageOutput)
+/// See [`DescribeLocationObjectStorageOutput`](crate::output::DescribeLocationObjectStorageOutput).
 pub mod describe_location_object_storage_output {
-    /// A builder for [`DescribeLocationObjectStorageOutput`](crate::output::DescribeLocationObjectStorageOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeLocationObjectStorageOutput`](crate::output::DescribeLocationObjectStorageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -1918,52 +1918,52 @@ pub mod describe_location_object_storage_output {
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the self-managed object storage server location to describe.</p>
+        /// <p>The ARN of the object storage system location.</p>
         pub fn location_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.location_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the self-managed object storage server location to describe.</p>
+        /// <p>The ARN of the object storage system location.</p>
         pub fn set_location_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location_arn = input;
             self
         }
-        /// <p>The URL of the source self-managed object storage server location that was described.</p>
+        /// <p>The URL of the object storage system location.</p>
         pub fn location_uri(mut self, input: impl Into<std::string::String>) -> Self {
             self.location_uri = Some(input.into());
             self
         }
-        /// <p>The URL of the source self-managed object storage server location that was described.</p>
+        /// <p>The URL of the object storage system location.</p>
         pub fn set_location_uri(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location_uri = input;
             self
         }
-        /// <p>Optional. The access key is used if credentials are required to access the self-managed object storage server. If your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and <code>SecretKey</code> to provide the user name and password, respectively.</p>
+        /// <p>The access key (for example, a user name) required to authenticate with the object storage server.</p>
         pub fn access_key(mut self, input: impl Into<std::string::String>) -> Self {
             self.access_key = Some(input.into());
             self
         }
-        /// <p>Optional. The access key is used if credentials are required to access the self-managed object storage server. If your object storage requires a user name and password to authenticate, use <code>AccessKey</code> and <code>SecretKey</code> to provide the user name and password, respectively.</p>
+        /// <p>The access key (for example, a user name) required to authenticate with the object storage server.</p>
         pub fn set_access_key(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.access_key = input;
             self
         }
-        /// <p>The port that your self-managed object storage server accepts inbound network traffic on. The server port is set by default to TCP 80 (HTTP) or TCP 443 (HTTPS).</p>
+        /// <p>The port that your object storage server accepts inbound network traffic on (for example, port 443).</p>
         pub fn server_port(mut self, input: i32) -> Self {
             self.server_port = Some(input);
             self
         }
-        /// <p>The port that your self-managed object storage server accepts inbound network traffic on. The server port is set by default to TCP 80 (HTTP) or TCP 443 (HTTPS).</p>
+        /// <p>The port that your object storage server accepts inbound network traffic on (for example, port 443).</p>
         pub fn set_server_port(mut self, input: std::option::Option<i32>) -> Self {
             self.server_port = input;
             self
         }
-        /// <p>The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.</p>
+        /// <p>The protocol that your object storage server uses to communicate.</p>
         pub fn server_protocol(mut self, input: crate::model::ObjectStorageServerProtocol) -> Self {
             self.server_protocol = Some(input);
             self
         }
-        /// <p>The protocol that the object storage server uses to communicate. Valid values are HTTP or HTTPS.</p>
+        /// <p>The protocol that your object storage server uses to communicate.</p>
         pub fn set_server_protocol(
             mut self,
             input: std::option::Option<crate::model::ObjectStorageServerProtocol>,
@@ -1975,14 +1975,14 @@ pub mod describe_location_object_storage_output {
         ///
         /// To override the contents of this collection use [`set_agent_arns`](Self::set_agent_arns).
         ///
-        /// <p>The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.</p>
+        /// <p>The ARNs of the DataSync agents that can securely connect with your location.</p>
         pub fn agent_arns(mut self, input: impl Into<std::string::String>) -> Self {
             let mut v = self.agent_arns.unwrap_or_default();
             v.push(input.into());
             self.agent_arns = Some(v);
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.</p>
+        /// <p>The ARNs of the DataSync agents that can securely connect with your location.</p>
         pub fn set_agent_arns(
             mut self,
             input: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -1990,12 +1990,12 @@ pub mod describe_location_object_storage_output {
             self.agent_arns = input;
             self
         }
-        /// <p>The time that the self-managed object storage server agent was created.</p>
+        /// <p>The time that the location was created.</p>
         pub fn creation_time(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.creation_time = Some(input);
             self
         }
-        /// <p>The time that the self-managed object storage server agent was created.</p>
+        /// <p>The time that the location was created.</p>
         pub fn set_creation_time(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -2003,7 +2003,7 @@ pub mod describe_location_object_storage_output {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLocationObjectStorageOutput`](crate::output::DescribeLocationObjectStorageOutput)
+        /// Consumes the builder and constructs a [`DescribeLocationObjectStorageOutput`](crate::output::DescribeLocationObjectStorageOutput).
         pub fn build(self) -> crate::output::DescribeLocationObjectStorageOutput {
             crate::output::DescribeLocationObjectStorageOutput {
                 location_arn: self.location_arn,
@@ -2018,7 +2018,7 @@ pub mod describe_location_object_storage_output {
     }
 }
 impl DescribeLocationObjectStorageOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLocationObjectStorageOutput`](crate::output::DescribeLocationObjectStorageOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLocationObjectStorageOutput`](crate::output::DescribeLocationObjectStorageOutput).
     pub fn builder() -> crate::output::describe_location_object_storage_output::Builder {
         crate::output::describe_location_object_storage_output::Builder::default()
     }
@@ -2072,10 +2072,10 @@ impl std::fmt::Debug for DescribeLocationNfsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLocationNfsOutput`](crate::output::DescribeLocationNfsOutput)
+/// See [`DescribeLocationNfsOutput`](crate::output::DescribeLocationNfsOutput).
 pub mod describe_location_nfs_output {
-    /// A builder for [`DescribeLocationNfsOutput`](crate::output::DescribeLocationNfsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeLocationNfsOutput`](crate::output::DescribeLocationNfsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -2144,7 +2144,7 @@ pub mod describe_location_nfs_output {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLocationNfsOutput`](crate::output::DescribeLocationNfsOutput)
+        /// Consumes the builder and constructs a [`DescribeLocationNfsOutput`](crate::output::DescribeLocationNfsOutput).
         pub fn build(self) -> crate::output::DescribeLocationNfsOutput {
             crate::output::DescribeLocationNfsOutput {
                 location_arn: self.location_arn,
@@ -2157,7 +2157,7 @@ pub mod describe_location_nfs_output {
     }
 }
 impl DescribeLocationNfsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLocationNfsOutput`](crate::output::DescribeLocationNfsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLocationNfsOutput`](crate::output::DescribeLocationNfsOutput).
     pub fn builder() -> crate::output::describe_location_nfs_output::Builder {
         crate::output::describe_location_nfs_output::Builder::default()
     }
@@ -2262,10 +2262,10 @@ impl std::fmt::Debug for DescribeLocationHdfsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLocationHdfsOutput`](crate::output::DescribeLocationHdfsOutput)
+/// See [`DescribeLocationHdfsOutput`](crate::output::DescribeLocationHdfsOutput).
 pub mod describe_location_hdfs_output {
-    /// A builder for [`DescribeLocationHdfsOutput`](crate::output::DescribeLocationHdfsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeLocationHdfsOutput`](crate::output::DescribeLocationHdfsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -2435,7 +2435,7 @@ pub mod describe_location_hdfs_output {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLocationHdfsOutput`](crate::output::DescribeLocationHdfsOutput)
+        /// Consumes the builder and constructs a [`DescribeLocationHdfsOutput`](crate::output::DescribeLocationHdfsOutput).
         pub fn build(self) -> crate::output::DescribeLocationHdfsOutput {
             crate::output::DescribeLocationHdfsOutput {
                 location_arn: self.location_arn,
@@ -2455,7 +2455,7 @@ pub mod describe_location_hdfs_output {
     }
 }
 impl DescribeLocationHdfsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLocationHdfsOutput`](crate::output::DescribeLocationHdfsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLocationHdfsOutput`](crate::output::DescribeLocationHdfsOutput).
     pub fn builder() -> crate::output::describe_location_hdfs_output::Builder {
         crate::output::describe_location_hdfs_output::Builder::default()
     }
@@ -2516,10 +2516,10 @@ impl std::fmt::Debug for DescribeLocationFsxWindowsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLocationFsxWindowsOutput`](crate::output::DescribeLocationFsxWindowsOutput)
+/// See [`DescribeLocationFsxWindowsOutput`](crate::output::DescribeLocationFsxWindowsOutput).
 pub mod describe_location_fsx_windows_output {
-    /// A builder for [`DescribeLocationFsxWindowsOutput`](crate::output::DescribeLocationFsxWindowsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeLocationFsxWindowsOutput`](crate::output::DescribeLocationFsxWindowsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -2602,7 +2602,7 @@ pub mod describe_location_fsx_windows_output {
             self.domain = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLocationFsxWindowsOutput`](crate::output::DescribeLocationFsxWindowsOutput)
+        /// Consumes the builder and constructs a [`DescribeLocationFsxWindowsOutput`](crate::output::DescribeLocationFsxWindowsOutput).
         pub fn build(self) -> crate::output::DescribeLocationFsxWindowsOutput {
             crate::output::DescribeLocationFsxWindowsOutput {
                 location_arn: self.location_arn,
@@ -2616,7 +2616,7 @@ pub mod describe_location_fsx_windows_output {
     }
 }
 impl DescribeLocationFsxWindowsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLocationFsxWindowsOutput`](crate::output::DescribeLocationFsxWindowsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLocationFsxWindowsOutput`](crate::output::DescribeLocationFsxWindowsOutput).
     pub fn builder() -> crate::output::describe_location_fsx_windows_output::Builder {
         crate::output::describe_location_fsx_windows_output::Builder::default()
     }
@@ -2672,10 +2672,10 @@ impl std::fmt::Debug for DescribeLocationFsxOpenZfsOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLocationFsxOpenZfsOutput`](crate::output::DescribeLocationFsxOpenZfsOutput)
+/// See [`DescribeLocationFsxOpenZfsOutput`](crate::output::DescribeLocationFsxOpenZfsOutput).
 pub mod describe_location_fsx_open_zfs_output {
-    /// A builder for [`DescribeLocationFsxOpenZfsOutput`](crate::output::DescribeLocationFsxOpenZfsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeLocationFsxOpenZfsOutput`](crate::output::DescribeLocationFsxOpenZfsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -2752,7 +2752,7 @@ pub mod describe_location_fsx_open_zfs_output {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLocationFsxOpenZfsOutput`](crate::output::DescribeLocationFsxOpenZfsOutput)
+        /// Consumes the builder and constructs a [`DescribeLocationFsxOpenZfsOutput`](crate::output::DescribeLocationFsxOpenZfsOutput).
         pub fn build(self) -> crate::output::DescribeLocationFsxOpenZfsOutput {
             crate::output::DescribeLocationFsxOpenZfsOutput {
                 location_arn: self.location_arn,
@@ -2765,9 +2765,204 @@ pub mod describe_location_fsx_open_zfs_output {
     }
 }
 impl DescribeLocationFsxOpenZfsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLocationFsxOpenZfsOutput`](crate::output::DescribeLocationFsxOpenZfsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLocationFsxOpenZfsOutput`](crate::output::DescribeLocationFsxOpenZfsOutput).
     pub fn builder() -> crate::output::describe_location_fsx_open_zfs_output::Builder {
         crate::output::describe_location_fsx_open_zfs_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DescribeLocationFsxOntapOutput {
+    /// <p>The time that the location was created.</p>
+    pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The ARN of the FSx for ONTAP file system location.</p>
+    pub location_arn: std::option::Option<std::string::String>,
+    /// <p>The uniform resource identifier (URI) of the FSx for ONTAP file system location.</p>
+    pub location_uri: std::option::Option<std::string::String>,
+    /// <p>Specifies the data transfer protocol that DataSync uses to access your Amazon FSx file system.</p>
+    pub protocol: std::option::Option<crate::model::FsxProtocol>,
+    /// <p>The security groups that DataSync uses to access your FSx for ONTAP file system.</p>
+    pub security_group_arns: std::option::Option<std::vec::Vec<std::string::String>>,
+    /// <p>The ARN of the storage virtual machine (SVM) on your FSx for ONTAP file system where you're copying data to or from.</p>
+    pub storage_virtual_machine_arn: std::option::Option<std::string::String>,
+    /// <p>The ARN of the FSx for ONTAP file system.</p>
+    pub fsx_filesystem_arn: std::option::Option<std::string::String>,
+}
+impl DescribeLocationFsxOntapOutput {
+    /// <p>The time that the location was created.</p>
+    pub fn creation_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
+        self.creation_time.as_ref()
+    }
+    /// <p>The ARN of the FSx for ONTAP file system location.</p>
+    pub fn location_arn(&self) -> std::option::Option<&str> {
+        self.location_arn.as_deref()
+    }
+    /// <p>The uniform resource identifier (URI) of the FSx for ONTAP file system location.</p>
+    pub fn location_uri(&self) -> std::option::Option<&str> {
+        self.location_uri.as_deref()
+    }
+    /// <p>Specifies the data transfer protocol that DataSync uses to access your Amazon FSx file system.</p>
+    pub fn protocol(&self) -> std::option::Option<&crate::model::FsxProtocol> {
+        self.protocol.as_ref()
+    }
+    /// <p>The security groups that DataSync uses to access your FSx for ONTAP file system.</p>
+    pub fn security_group_arns(&self) -> std::option::Option<&[std::string::String]> {
+        self.security_group_arns.as_deref()
+    }
+    /// <p>The ARN of the storage virtual machine (SVM) on your FSx for ONTAP file system where you're copying data to or from.</p>
+    pub fn storage_virtual_machine_arn(&self) -> std::option::Option<&str> {
+        self.storage_virtual_machine_arn.as_deref()
+    }
+    /// <p>The ARN of the FSx for ONTAP file system.</p>
+    pub fn fsx_filesystem_arn(&self) -> std::option::Option<&str> {
+        self.fsx_filesystem_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for DescribeLocationFsxOntapOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DescribeLocationFsxOntapOutput");
+        formatter.field("creation_time", &self.creation_time);
+        formatter.field("location_arn", &self.location_arn);
+        formatter.field("location_uri", &self.location_uri);
+        formatter.field("protocol", &self.protocol);
+        formatter.field("security_group_arns", &self.security_group_arns);
+        formatter.field(
+            "storage_virtual_machine_arn",
+            &self.storage_virtual_machine_arn,
+        );
+        formatter.field("fsx_filesystem_arn", &self.fsx_filesystem_arn);
+        formatter.finish()
+    }
+}
+/// See [`DescribeLocationFsxOntapOutput`](crate::output::DescribeLocationFsxOntapOutput).
+pub mod describe_location_fsx_ontap_output {
+
+    /// A builder for [`DescribeLocationFsxOntapOutput`](crate::output::DescribeLocationFsxOntapOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) location_arn: std::option::Option<std::string::String>,
+        pub(crate) location_uri: std::option::Option<std::string::String>,
+        pub(crate) protocol: std::option::Option<crate::model::FsxProtocol>,
+        pub(crate) security_group_arns: std::option::Option<std::vec::Vec<std::string::String>>,
+        pub(crate) storage_virtual_machine_arn: std::option::Option<std::string::String>,
+        pub(crate) fsx_filesystem_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>The time that the location was created.</p>
+        pub fn creation_time(mut self, input: aws_smithy_types::DateTime) -> Self {
+            self.creation_time = Some(input);
+            self
+        }
+        /// <p>The time that the location was created.</p>
+        pub fn set_creation_time(
+            mut self,
+            input: std::option::Option<aws_smithy_types::DateTime>,
+        ) -> Self {
+            self.creation_time = input;
+            self
+        }
+        /// <p>The ARN of the FSx for ONTAP file system location.</p>
+        pub fn location_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.location_arn = Some(input.into());
+            self
+        }
+        /// <p>The ARN of the FSx for ONTAP file system location.</p>
+        pub fn set_location_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.location_arn = input;
+            self
+        }
+        /// <p>The uniform resource identifier (URI) of the FSx for ONTAP file system location.</p>
+        pub fn location_uri(mut self, input: impl Into<std::string::String>) -> Self {
+            self.location_uri = Some(input.into());
+            self
+        }
+        /// <p>The uniform resource identifier (URI) of the FSx for ONTAP file system location.</p>
+        pub fn set_location_uri(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.location_uri = input;
+            self
+        }
+        /// <p>Specifies the data transfer protocol that DataSync uses to access your Amazon FSx file system.</p>
+        pub fn protocol(mut self, input: crate::model::FsxProtocol) -> Self {
+            self.protocol = Some(input);
+            self
+        }
+        /// <p>Specifies the data transfer protocol that DataSync uses to access your Amazon FSx file system.</p>
+        pub fn set_protocol(
+            mut self,
+            input: std::option::Option<crate::model::FsxProtocol>,
+        ) -> Self {
+            self.protocol = input;
+            self
+        }
+        /// Appends an item to `security_group_arns`.
+        ///
+        /// To override the contents of this collection use [`set_security_group_arns`](Self::set_security_group_arns).
+        ///
+        /// <p>The security groups that DataSync uses to access your FSx for ONTAP file system.</p>
+        pub fn security_group_arns(mut self, input: impl Into<std::string::String>) -> Self {
+            let mut v = self.security_group_arns.unwrap_or_default();
+            v.push(input.into());
+            self.security_group_arns = Some(v);
+            self
+        }
+        /// <p>The security groups that DataSync uses to access your FSx for ONTAP file system.</p>
+        pub fn set_security_group_arns(
+            mut self,
+            input: std::option::Option<std::vec::Vec<std::string::String>>,
+        ) -> Self {
+            self.security_group_arns = input;
+            self
+        }
+        /// <p>The ARN of the storage virtual machine (SVM) on your FSx for ONTAP file system where you're copying data to or from.</p>
+        pub fn storage_virtual_machine_arn(
+            mut self,
+            input: impl Into<std::string::String>,
+        ) -> Self {
+            self.storage_virtual_machine_arn = Some(input.into());
+            self
+        }
+        /// <p>The ARN of the storage virtual machine (SVM) on your FSx for ONTAP file system where you're copying data to or from.</p>
+        pub fn set_storage_virtual_machine_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.storage_virtual_machine_arn = input;
+            self
+        }
+        /// <p>The ARN of the FSx for ONTAP file system.</p>
+        pub fn fsx_filesystem_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.fsx_filesystem_arn = Some(input.into());
+            self
+        }
+        /// <p>The ARN of the FSx for ONTAP file system.</p>
+        pub fn set_fsx_filesystem_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.fsx_filesystem_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DescribeLocationFsxOntapOutput`](crate::output::DescribeLocationFsxOntapOutput).
+        pub fn build(self) -> crate::output::DescribeLocationFsxOntapOutput {
+            crate::output::DescribeLocationFsxOntapOutput {
+                creation_time: self.creation_time,
+                location_arn: self.location_arn,
+                location_uri: self.location_uri,
+                protocol: self.protocol,
+                security_group_arns: self.security_group_arns,
+                storage_virtual_machine_arn: self.storage_virtual_machine_arn,
+                fsx_filesystem_arn: self.fsx_filesystem_arn,
+            }
+        }
+    }
+}
+impl DescribeLocationFsxOntapOutput {
+    /// Creates a new builder-style object to manufacture [`DescribeLocationFsxOntapOutput`](crate::output::DescribeLocationFsxOntapOutput).
+    pub fn builder() -> crate::output::describe_location_fsx_ontap_output::Builder {
+        crate::output::describe_location_fsx_ontap_output::Builder::default()
     }
 }
 
@@ -2812,10 +3007,10 @@ impl std::fmt::Debug for DescribeLocationFsxLustreOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeLocationFsxLustreOutput`](crate::output::DescribeLocationFsxLustreOutput)
+/// See [`DescribeLocationFsxLustreOutput`](crate::output::DescribeLocationFsxLustreOutput).
 pub mod describe_location_fsx_lustre_output {
-    /// A builder for [`DescribeLocationFsxLustreOutput`](crate::output::DescribeLocationFsxLustreOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeLocationFsxLustreOutput`](crate::output::DescribeLocationFsxLustreOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -2876,7 +3071,7 @@ pub mod describe_location_fsx_lustre_output {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLocationFsxLustreOutput`](crate::output::DescribeLocationFsxLustreOutput)
+        /// Consumes the builder and constructs a [`DescribeLocationFsxLustreOutput`](crate::output::DescribeLocationFsxLustreOutput).
         pub fn build(self) -> crate::output::DescribeLocationFsxLustreOutput {
             crate::output::DescribeLocationFsxLustreOutput {
                 location_arn: self.location_arn,
@@ -2888,7 +3083,7 @@ pub mod describe_location_fsx_lustre_output {
     }
 }
 impl DescribeLocationFsxLustreOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLocationFsxLustreOutput`](crate::output::DescribeLocationFsxLustreOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLocationFsxLustreOutput`](crate::output::DescribeLocationFsxLustreOutput).
     pub fn builder() -> crate::output::describe_location_fsx_lustre_output::Builder {
         crate::output::describe_location_fsx_lustre_output::Builder::default()
     }
@@ -2898,31 +3093,51 @@ impl DescribeLocationFsxLustreOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct DescribeLocationEfsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the EFS location that was described.</p>
+    /// <p>The ARN of the Amazon EFS file system location.</p>
     pub location_arn: std::option::Option<std::string::String>,
-    /// <p>The URL of the EFS location that was described.</p>
+    /// <p>The URL of the Amazon EFS file system location.</p>
     pub location_uri: std::option::Option<std::string::String>,
-    /// <p>The subnet that DataSync uses to access target EFS file system. The subnet must have at least one mount target for that file system. The security group that you provide needs to be able to communicate with the security group on the mount target in the subnet specified. </p>
+    /// <p>The subnet and security groups that DataSync uses to access your Amazon EFS file system.</p>
     pub ec2_config: std::option::Option<crate::model::Ec2Config>,
-    /// <p>The time that the EFS location was created.</p>
+    /// <p>The time that the location was created.</p>
     pub creation_time: std::option::Option<aws_smithy_types::DateTime>,
+    /// <p>The ARN of the access point that DataSync uses to access the Amazon EFS file system.</p>
+    pub access_point_arn: std::option::Option<std::string::String>,
+    /// <p>The Identity and Access Management (IAM) role that DataSync assumes when mounting the Amazon EFS file system.</p>
+    pub file_system_access_role_arn: std::option::Option<std::string::String>,
+    /// <p>Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the Amazon EFS file system.</p>
+    pub in_transit_encryption: std::option::Option<crate::model::EfsInTransitEncryption>,
 }
 impl DescribeLocationEfsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the EFS location that was described.</p>
+    /// <p>The ARN of the Amazon EFS file system location.</p>
     pub fn location_arn(&self) -> std::option::Option<&str> {
         self.location_arn.as_deref()
     }
-    /// <p>The URL of the EFS location that was described.</p>
+    /// <p>The URL of the Amazon EFS file system location.</p>
     pub fn location_uri(&self) -> std::option::Option<&str> {
         self.location_uri.as_deref()
     }
-    /// <p>The subnet that DataSync uses to access target EFS file system. The subnet must have at least one mount target for that file system. The security group that you provide needs to be able to communicate with the security group on the mount target in the subnet specified. </p>
+    /// <p>The subnet and security groups that DataSync uses to access your Amazon EFS file system.</p>
     pub fn ec2_config(&self) -> std::option::Option<&crate::model::Ec2Config> {
         self.ec2_config.as_ref()
     }
-    /// <p>The time that the EFS location was created.</p>
+    /// <p>The time that the location was created.</p>
     pub fn creation_time(&self) -> std::option::Option<&aws_smithy_types::DateTime> {
         self.creation_time.as_ref()
+    }
+    /// <p>The ARN of the access point that DataSync uses to access the Amazon EFS file system.</p>
+    pub fn access_point_arn(&self) -> std::option::Option<&str> {
+        self.access_point_arn.as_deref()
+    }
+    /// <p>The Identity and Access Management (IAM) role that DataSync assumes when mounting the Amazon EFS file system.</p>
+    pub fn file_system_access_role_arn(&self) -> std::option::Option<&str> {
+        self.file_system_access_role_arn.as_deref()
+    }
+    /// <p>Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the Amazon EFS file system.</p>
+    pub fn in_transit_encryption(
+        &self,
+    ) -> std::option::Option<&crate::model::EfsInTransitEncryption> {
+        self.in_transit_encryption.as_ref()
     }
 }
 impl std::fmt::Debug for DescribeLocationEfsOutput {
@@ -2932,47 +3147,56 @@ impl std::fmt::Debug for DescribeLocationEfsOutput {
         formatter.field("location_uri", &self.location_uri);
         formatter.field("ec2_config", &self.ec2_config);
         formatter.field("creation_time", &self.creation_time);
+        formatter.field("access_point_arn", &self.access_point_arn);
+        formatter.field(
+            "file_system_access_role_arn",
+            &self.file_system_access_role_arn,
+        );
+        formatter.field("in_transit_encryption", &self.in_transit_encryption);
         formatter.finish()
     }
 }
-/// See [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput)
+/// See [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput).
 pub mod describe_location_efs_output {
-    /// A builder for [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
         pub(crate) location_uri: std::option::Option<std::string::String>,
         pub(crate) ec2_config: std::option::Option<crate::model::Ec2Config>,
         pub(crate) creation_time: std::option::Option<aws_smithy_types::DateTime>,
+        pub(crate) access_point_arn: std::option::Option<std::string::String>,
+        pub(crate) file_system_access_role_arn: std::option::Option<std::string::String>,
+        pub(crate) in_transit_encryption: std::option::Option<crate::model::EfsInTransitEncryption>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the EFS location that was described.</p>
+        /// <p>The ARN of the Amazon EFS file system location.</p>
         pub fn location_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.location_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the EFS location that was described.</p>
+        /// <p>The ARN of the Amazon EFS file system location.</p>
         pub fn set_location_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location_arn = input;
             self
         }
-        /// <p>The URL of the EFS location that was described.</p>
+        /// <p>The URL of the Amazon EFS file system location.</p>
         pub fn location_uri(mut self, input: impl Into<std::string::String>) -> Self {
             self.location_uri = Some(input.into());
             self
         }
-        /// <p>The URL of the EFS location that was described.</p>
+        /// <p>The URL of the Amazon EFS file system location.</p>
         pub fn set_location_uri(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location_uri = input;
             self
         }
-        /// <p>The subnet that DataSync uses to access target EFS file system. The subnet must have at least one mount target for that file system. The security group that you provide needs to be able to communicate with the security group on the mount target in the subnet specified. </p>
+        /// <p>The subnet and security groups that DataSync uses to access your Amazon EFS file system.</p>
         pub fn ec2_config(mut self, input: crate::model::Ec2Config) -> Self {
             self.ec2_config = Some(input);
             self
         }
-        /// <p>The subnet that DataSync uses to access target EFS file system. The subnet must have at least one mount target for that file system. The security group that you provide needs to be able to communicate with the security group on the mount target in the subnet specified. </p>
+        /// <p>The subnet and security groups that DataSync uses to access your Amazon EFS file system.</p>
         pub fn set_ec2_config(
             mut self,
             input: std::option::Option<crate::model::Ec2Config>,
@@ -2980,12 +3204,12 @@ pub mod describe_location_efs_output {
             self.ec2_config = input;
             self
         }
-        /// <p>The time that the EFS location was created.</p>
+        /// <p>The time that the location was created.</p>
         pub fn creation_time(mut self, input: aws_smithy_types::DateTime) -> Self {
             self.creation_time = Some(input);
             self
         }
-        /// <p>The time that the EFS location was created.</p>
+        /// <p>The time that the location was created.</p>
         pub fn set_creation_time(
             mut self,
             input: std::option::Option<aws_smithy_types::DateTime>,
@@ -2993,19 +3217,67 @@ pub mod describe_location_efs_output {
             self.creation_time = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput)
+        /// <p>The ARN of the access point that DataSync uses to access the Amazon EFS file system.</p>
+        pub fn access_point_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.access_point_arn = Some(input.into());
+            self
+        }
+        /// <p>The ARN of the access point that DataSync uses to access the Amazon EFS file system.</p>
+        pub fn set_access_point_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.access_point_arn = input;
+            self
+        }
+        /// <p>The Identity and Access Management (IAM) role that DataSync assumes when mounting the Amazon EFS file system.</p>
+        pub fn file_system_access_role_arn(
+            mut self,
+            input: impl Into<std::string::String>,
+        ) -> Self {
+            self.file_system_access_role_arn = Some(input.into());
+            self
+        }
+        /// <p>The Identity and Access Management (IAM) role that DataSync assumes when mounting the Amazon EFS file system.</p>
+        pub fn set_file_system_access_role_arn(
+            mut self,
+            input: std::option::Option<std::string::String>,
+        ) -> Self {
+            self.file_system_access_role_arn = input;
+            self
+        }
+        /// <p>Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the Amazon EFS file system.</p>
+        pub fn in_transit_encryption(
+            mut self,
+            input: crate::model::EfsInTransitEncryption,
+        ) -> Self {
+            self.in_transit_encryption = Some(input);
+            self
+        }
+        /// <p>Describes whether DataSync uses Transport Layer Security (TLS) encryption when copying data to or from the Amazon EFS file system.</p>
+        pub fn set_in_transit_encryption(
+            mut self,
+            input: std::option::Option<crate::model::EfsInTransitEncryption>,
+        ) -> Self {
+            self.in_transit_encryption = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput).
         pub fn build(self) -> crate::output::DescribeLocationEfsOutput {
             crate::output::DescribeLocationEfsOutput {
                 location_arn: self.location_arn,
                 location_uri: self.location_uri,
                 ec2_config: self.ec2_config,
                 creation_time: self.creation_time,
+                access_point_arn: self.access_point_arn,
+                file_system_access_role_arn: self.file_system_access_role_arn,
+                in_transit_encryption: self.in_transit_encryption,
             }
         }
     }
 }
 impl DescribeLocationEfsOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeLocationEfsOutput`](crate::output::DescribeLocationEfsOutput).
     pub fn builder() -> crate::output::describe_location_efs_output::Builder {
         crate::output::describe_location_efs_output::Builder::default()
     }
@@ -3073,10 +3345,10 @@ impl std::fmt::Debug for DescribeAgentOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAgentOutput`](crate::output::DescribeAgentOutput)
+/// See [`DescribeAgentOutput`](crate::output::DescribeAgentOutput).
 pub mod describe_agent_output {
-    /// A builder for [`DescribeAgentOutput`](crate::output::DescribeAgentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeAgentOutput`](crate::output::DescribeAgentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) agent_arn: std::option::Option<std::string::String>,
@@ -3170,7 +3442,7 @@ pub mod describe_agent_output {
             self.private_link_config = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAgentOutput`](crate::output::DescribeAgentOutput)
+        /// Consumes the builder and constructs a [`DescribeAgentOutput`](crate::output::DescribeAgentOutput).
         pub fn build(self) -> crate::output::DescribeAgentOutput {
             crate::output::DescribeAgentOutput {
                 agent_arn: self.agent_arn,
@@ -3185,7 +3457,7 @@ pub mod describe_agent_output {
     }
 }
 impl DescribeAgentOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAgentOutput`](crate::output::DescribeAgentOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAgentOutput`](crate::output::DescribeAgentOutput).
     pub fn builder() -> crate::output::describe_agent_output::Builder {
         crate::output::describe_agent_output::Builder::default()
     }
@@ -3201,21 +3473,21 @@ impl std::fmt::Debug for DeleteTaskOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteTaskOutput`](crate::output::DeleteTaskOutput)
+/// See [`DeleteTaskOutput`](crate::output::DeleteTaskOutput).
 pub mod delete_task_output {
-    /// A builder for [`DeleteTaskOutput`](crate::output::DeleteTaskOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteTaskOutput`](crate::output::DeleteTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteTaskOutput`](crate::output::DeleteTaskOutput)
+        /// Consumes the builder and constructs a [`DeleteTaskOutput`](crate::output::DeleteTaskOutput).
         pub fn build(self) -> crate::output::DeleteTaskOutput {
             crate::output::DeleteTaskOutput {}
         }
     }
 }
 impl DeleteTaskOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteTaskOutput`](crate::output::DeleteTaskOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteTaskOutput`](crate::output::DeleteTaskOutput).
     pub fn builder() -> crate::output::delete_task_output::Builder {
         crate::output::delete_task_output::Builder::default()
     }
@@ -3231,21 +3503,21 @@ impl std::fmt::Debug for DeleteLocationOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteLocationOutput`](crate::output::DeleteLocationOutput)
+/// See [`DeleteLocationOutput`](crate::output::DeleteLocationOutput).
 pub mod delete_location_output {
-    /// A builder for [`DeleteLocationOutput`](crate::output::DeleteLocationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteLocationOutput`](crate::output::DeleteLocationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteLocationOutput`](crate::output::DeleteLocationOutput)
+        /// Consumes the builder and constructs a [`DeleteLocationOutput`](crate::output::DeleteLocationOutput).
         pub fn build(self) -> crate::output::DeleteLocationOutput {
             crate::output::DeleteLocationOutput {}
         }
     }
 }
 impl DeleteLocationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteLocationOutput`](crate::output::DeleteLocationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteLocationOutput`](crate::output::DeleteLocationOutput).
     pub fn builder() -> crate::output::delete_location_output::Builder {
         crate::output::delete_location_output::Builder::default()
     }
@@ -3261,21 +3533,21 @@ impl std::fmt::Debug for DeleteAgentOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAgentOutput`](crate::output::DeleteAgentOutput)
+/// See [`DeleteAgentOutput`](crate::output::DeleteAgentOutput).
 pub mod delete_agent_output {
-    /// A builder for [`DeleteAgentOutput`](crate::output::DeleteAgentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteAgentOutput`](crate::output::DeleteAgentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteAgentOutput`](crate::output::DeleteAgentOutput)
+        /// Consumes the builder and constructs a [`DeleteAgentOutput`](crate::output::DeleteAgentOutput).
         pub fn build(self) -> crate::output::DeleteAgentOutput {
             crate::output::DeleteAgentOutput {}
         }
     }
 }
 impl DeleteAgentOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAgentOutput`](crate::output::DeleteAgentOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAgentOutput`](crate::output::DeleteAgentOutput).
     pub fn builder() -> crate::output::delete_agent_output::Builder {
         crate::output::delete_agent_output::Builder::default()
     }
@@ -3301,10 +3573,10 @@ impl std::fmt::Debug for CreateTaskOutput {
         formatter.finish()
     }
 }
-/// See [`CreateTaskOutput`](crate::output::CreateTaskOutput)
+/// See [`CreateTaskOutput`](crate::output::CreateTaskOutput).
 pub mod create_task_output {
-    /// A builder for [`CreateTaskOutput`](crate::output::CreateTaskOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateTaskOutput`](crate::output::CreateTaskOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) task_arn: std::option::Option<std::string::String>,
@@ -3320,7 +3592,7 @@ pub mod create_task_output {
             self.task_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateTaskOutput`](crate::output::CreateTaskOutput)
+        /// Consumes the builder and constructs a [`CreateTaskOutput`](crate::output::CreateTaskOutput).
         pub fn build(self) -> crate::output::CreateTaskOutput {
             crate::output::CreateTaskOutput {
                 task_arn: self.task_arn,
@@ -3329,7 +3601,7 @@ pub mod create_task_output {
     }
 }
 impl CreateTaskOutput {
-    /// Creates a new builder-style object to manufacture [`CreateTaskOutput`](crate::output::CreateTaskOutput)
+    /// Creates a new builder-style object to manufacture [`CreateTaskOutput`](crate::output::CreateTaskOutput).
     pub fn builder() -> crate::output::create_task_output::Builder {
         crate::output::create_task_output::Builder::default()
     }
@@ -3355,10 +3627,10 @@ impl std::fmt::Debug for CreateLocationSmbOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLocationSmbOutput`](crate::output::CreateLocationSmbOutput)
+/// See [`CreateLocationSmbOutput`](crate::output::CreateLocationSmbOutput).
 pub mod create_location_smb_output {
-    /// A builder for [`CreateLocationSmbOutput`](crate::output::CreateLocationSmbOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateLocationSmbOutput`](crate::output::CreateLocationSmbOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -3374,7 +3646,7 @@ pub mod create_location_smb_output {
             self.location_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLocationSmbOutput`](crate::output::CreateLocationSmbOutput)
+        /// Consumes the builder and constructs a [`CreateLocationSmbOutput`](crate::output::CreateLocationSmbOutput).
         pub fn build(self) -> crate::output::CreateLocationSmbOutput {
             crate::output::CreateLocationSmbOutput {
                 location_arn: self.location_arn,
@@ -3383,7 +3655,7 @@ pub mod create_location_smb_output {
     }
 }
 impl CreateLocationSmbOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLocationSmbOutput`](crate::output::CreateLocationSmbOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLocationSmbOutput`](crate::output::CreateLocationSmbOutput).
     pub fn builder() -> crate::output::create_location_smb_output::Builder {
         crate::output::create_location_smb_output::Builder::default()
     }
@@ -3409,10 +3681,10 @@ impl std::fmt::Debug for CreateLocationS3Output {
         formatter.finish()
     }
 }
-/// See [`CreateLocationS3Output`](crate::output::CreateLocationS3Output)
+/// See [`CreateLocationS3Output`](crate::output::CreateLocationS3Output).
 pub mod create_location_s3_output {
-    /// A builder for [`CreateLocationS3Output`](crate::output::CreateLocationS3Output)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateLocationS3Output`](crate::output::CreateLocationS3Output).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -3428,7 +3700,7 @@ pub mod create_location_s3_output {
             self.location_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLocationS3Output`](crate::output::CreateLocationS3Output)
+        /// Consumes the builder and constructs a [`CreateLocationS3Output`](crate::output::CreateLocationS3Output).
         pub fn build(self) -> crate::output::CreateLocationS3Output {
             crate::output::CreateLocationS3Output {
                 location_arn: self.location_arn,
@@ -3437,7 +3709,7 @@ pub mod create_location_s3_output {
     }
 }
 impl CreateLocationS3Output {
-    /// Creates a new builder-style object to manufacture [`CreateLocationS3Output`](crate::output::CreateLocationS3Output)
+    /// Creates a new builder-style object to manufacture [`CreateLocationS3Output`](crate::output::CreateLocationS3Output).
     pub fn builder() -> crate::output::create_location_s3_output::Builder {
         crate::output::create_location_s3_output::Builder::default()
     }
@@ -3447,11 +3719,11 @@ impl CreateLocationS3Output {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateLocationObjectStorageOutput {
-    /// <p>The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.</p>
+    /// <p>Specifies the ARN of the object storage system location that you create.</p>
     pub location_arn: std::option::Option<std::string::String>,
 }
 impl CreateLocationObjectStorageOutput {
-    /// <p>The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.</p>
+    /// <p>Specifies the ARN of the object storage system location that you create.</p>
     pub fn location_arn(&self) -> std::option::Option<&str> {
         self.location_arn.as_deref()
     }
@@ -3463,26 +3735,26 @@ impl std::fmt::Debug for CreateLocationObjectStorageOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLocationObjectStorageOutput`](crate::output::CreateLocationObjectStorageOutput)
+/// See [`CreateLocationObjectStorageOutput`](crate::output::CreateLocationObjectStorageOutput).
 pub mod create_location_object_storage_output {
-    /// A builder for [`CreateLocationObjectStorageOutput`](crate::output::CreateLocationObjectStorageOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateLocationObjectStorageOutput`](crate::output::CreateLocationObjectStorageOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.</p>
+        /// <p>Specifies the ARN of the object storage system location that you create.</p>
         pub fn location_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.location_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.</p>
+        /// <p>Specifies the ARN of the object storage system location that you create.</p>
         pub fn set_location_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLocationObjectStorageOutput`](crate::output::CreateLocationObjectStorageOutput)
+        /// Consumes the builder and constructs a [`CreateLocationObjectStorageOutput`](crate::output::CreateLocationObjectStorageOutput).
         pub fn build(self) -> crate::output::CreateLocationObjectStorageOutput {
             crate::output::CreateLocationObjectStorageOutput {
                 location_arn: self.location_arn,
@@ -3491,7 +3763,7 @@ pub mod create_location_object_storage_output {
     }
 }
 impl CreateLocationObjectStorageOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLocationObjectStorageOutput`](crate::output::CreateLocationObjectStorageOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLocationObjectStorageOutput`](crate::output::CreateLocationObjectStorageOutput).
     pub fn builder() -> crate::output::create_location_object_storage_output::Builder {
         crate::output::create_location_object_storage_output::Builder::default()
     }
@@ -3517,10 +3789,10 @@ impl std::fmt::Debug for CreateLocationNfsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLocationNfsOutput`](crate::output::CreateLocationNfsOutput)
+/// See [`CreateLocationNfsOutput`](crate::output::CreateLocationNfsOutput).
 pub mod create_location_nfs_output {
-    /// A builder for [`CreateLocationNfsOutput`](crate::output::CreateLocationNfsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateLocationNfsOutput`](crate::output::CreateLocationNfsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -3536,7 +3808,7 @@ pub mod create_location_nfs_output {
             self.location_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLocationNfsOutput`](crate::output::CreateLocationNfsOutput)
+        /// Consumes the builder and constructs a [`CreateLocationNfsOutput`](crate::output::CreateLocationNfsOutput).
         pub fn build(self) -> crate::output::CreateLocationNfsOutput {
             crate::output::CreateLocationNfsOutput {
                 location_arn: self.location_arn,
@@ -3545,7 +3817,7 @@ pub mod create_location_nfs_output {
     }
 }
 impl CreateLocationNfsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLocationNfsOutput`](crate::output::CreateLocationNfsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLocationNfsOutput`](crate::output::CreateLocationNfsOutput).
     pub fn builder() -> crate::output::create_location_nfs_output::Builder {
         crate::output::create_location_nfs_output::Builder::default()
     }
@@ -3571,10 +3843,10 @@ impl std::fmt::Debug for CreateLocationHdfsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLocationHdfsOutput`](crate::output::CreateLocationHdfsOutput)
+/// See [`CreateLocationHdfsOutput`](crate::output::CreateLocationHdfsOutput).
 pub mod create_location_hdfs_output {
-    /// A builder for [`CreateLocationHdfsOutput`](crate::output::CreateLocationHdfsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateLocationHdfsOutput`](crate::output::CreateLocationHdfsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -3590,7 +3862,7 @@ pub mod create_location_hdfs_output {
             self.location_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLocationHdfsOutput`](crate::output::CreateLocationHdfsOutput)
+        /// Consumes the builder and constructs a [`CreateLocationHdfsOutput`](crate::output::CreateLocationHdfsOutput).
         pub fn build(self) -> crate::output::CreateLocationHdfsOutput {
             crate::output::CreateLocationHdfsOutput {
                 location_arn: self.location_arn,
@@ -3599,7 +3871,7 @@ pub mod create_location_hdfs_output {
     }
 }
 impl CreateLocationHdfsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLocationHdfsOutput`](crate::output::CreateLocationHdfsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLocationHdfsOutput`](crate::output::CreateLocationHdfsOutput).
     pub fn builder() -> crate::output::create_location_hdfs_output::Builder {
         crate::output::create_location_hdfs_output::Builder::default()
     }
@@ -3609,11 +3881,11 @@ impl CreateLocationHdfsOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateLocationFsxWindowsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the FSx for Windows File Server file system location you created.</p>
+    /// <p>The ARN of the FSx for Windows File Server file system location you created.</p>
     pub location_arn: std::option::Option<std::string::String>,
 }
 impl CreateLocationFsxWindowsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the FSx for Windows File Server file system location you created.</p>
+    /// <p>The ARN of the FSx for Windows File Server file system location you created.</p>
     pub fn location_arn(&self) -> std::option::Option<&str> {
         self.location_arn.as_deref()
     }
@@ -3625,26 +3897,26 @@ impl std::fmt::Debug for CreateLocationFsxWindowsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLocationFsxWindowsOutput`](crate::output::CreateLocationFsxWindowsOutput)
+/// See [`CreateLocationFsxWindowsOutput`](crate::output::CreateLocationFsxWindowsOutput).
 pub mod create_location_fsx_windows_output {
-    /// A builder for [`CreateLocationFsxWindowsOutput`](crate::output::CreateLocationFsxWindowsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateLocationFsxWindowsOutput`](crate::output::CreateLocationFsxWindowsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the FSx for Windows File Server file system location you created.</p>
+        /// <p>The ARN of the FSx for Windows File Server file system location you created.</p>
         pub fn location_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.location_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the FSx for Windows File Server file system location you created.</p>
+        /// <p>The ARN of the FSx for Windows File Server file system location you created.</p>
         pub fn set_location_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLocationFsxWindowsOutput`](crate::output::CreateLocationFsxWindowsOutput)
+        /// Consumes the builder and constructs a [`CreateLocationFsxWindowsOutput`](crate::output::CreateLocationFsxWindowsOutput).
         pub fn build(self) -> crate::output::CreateLocationFsxWindowsOutput {
             crate::output::CreateLocationFsxWindowsOutput {
                 location_arn: self.location_arn,
@@ -3653,7 +3925,7 @@ pub mod create_location_fsx_windows_output {
     }
 }
 impl CreateLocationFsxWindowsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLocationFsxWindowsOutput`](crate::output::CreateLocationFsxWindowsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLocationFsxWindowsOutput`](crate::output::CreateLocationFsxWindowsOutput).
     pub fn builder() -> crate::output::create_location_fsx_windows_output::Builder {
         crate::output::create_location_fsx_windows_output::Builder::default()
     }
@@ -3679,10 +3951,10 @@ impl std::fmt::Debug for CreateLocationFsxOpenZfsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLocationFsxOpenZfsOutput`](crate::output::CreateLocationFsxOpenZfsOutput)
+/// See [`CreateLocationFsxOpenZfsOutput`](crate::output::CreateLocationFsxOpenZfsOutput).
 pub mod create_location_fsx_open_zfs_output {
-    /// A builder for [`CreateLocationFsxOpenZfsOutput`](crate::output::CreateLocationFsxOpenZfsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateLocationFsxOpenZfsOutput`](crate::output::CreateLocationFsxOpenZfsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -3698,7 +3970,7 @@ pub mod create_location_fsx_open_zfs_output {
             self.location_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLocationFsxOpenZfsOutput`](crate::output::CreateLocationFsxOpenZfsOutput)
+        /// Consumes the builder and constructs a [`CreateLocationFsxOpenZfsOutput`](crate::output::CreateLocationFsxOpenZfsOutput).
         pub fn build(self) -> crate::output::CreateLocationFsxOpenZfsOutput {
             crate::output::CreateLocationFsxOpenZfsOutput {
                 location_arn: self.location_arn,
@@ -3707,9 +3979,63 @@ pub mod create_location_fsx_open_zfs_output {
     }
 }
 impl CreateLocationFsxOpenZfsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLocationFsxOpenZfsOutput`](crate::output::CreateLocationFsxOpenZfsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLocationFsxOpenZfsOutput`](crate::output::CreateLocationFsxOpenZfsOutput).
     pub fn builder() -> crate::output::create_location_fsx_open_zfs_output::Builder {
         crate::output::create_location_fsx_open_zfs_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct CreateLocationFsxOntapOutput {
+    /// <p>Specifies the ARN of the FSx for ONTAP file system location that you create.</p>
+    pub location_arn: std::option::Option<std::string::String>,
+}
+impl CreateLocationFsxOntapOutput {
+    /// <p>Specifies the ARN of the FSx for ONTAP file system location that you create.</p>
+    pub fn location_arn(&self) -> std::option::Option<&str> {
+        self.location_arn.as_deref()
+    }
+}
+impl std::fmt::Debug for CreateLocationFsxOntapOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("CreateLocationFsxOntapOutput");
+        formatter.field("location_arn", &self.location_arn);
+        formatter.finish()
+    }
+}
+/// See [`CreateLocationFsxOntapOutput`](crate::output::CreateLocationFsxOntapOutput).
+pub mod create_location_fsx_ontap_output {
+
+    /// A builder for [`CreateLocationFsxOntapOutput`](crate::output::CreateLocationFsxOntapOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) location_arn: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// <p>Specifies the ARN of the FSx for ONTAP file system location that you create.</p>
+        pub fn location_arn(mut self, input: impl Into<std::string::String>) -> Self {
+            self.location_arn = Some(input.into());
+            self
+        }
+        /// <p>Specifies the ARN of the FSx for ONTAP file system location that you create.</p>
+        pub fn set_location_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.location_arn = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`CreateLocationFsxOntapOutput`](crate::output::CreateLocationFsxOntapOutput).
+        pub fn build(self) -> crate::output::CreateLocationFsxOntapOutput {
+            crate::output::CreateLocationFsxOntapOutput {
+                location_arn: self.location_arn,
+            }
+        }
+    }
+}
+impl CreateLocationFsxOntapOutput {
+    /// Creates a new builder-style object to manufacture [`CreateLocationFsxOntapOutput`](crate::output::CreateLocationFsxOntapOutput).
+    pub fn builder() -> crate::output::create_location_fsx_ontap_output::Builder {
+        crate::output::create_location_fsx_ontap_output::Builder::default()
     }
 }
 
@@ -3733,10 +4059,10 @@ impl std::fmt::Debug for CreateLocationFsxLustreOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLocationFsxLustreOutput`](crate::output::CreateLocationFsxLustreOutput)
+/// See [`CreateLocationFsxLustreOutput`](crate::output::CreateLocationFsxLustreOutput).
 pub mod create_location_fsx_lustre_output {
-    /// A builder for [`CreateLocationFsxLustreOutput`](crate::output::CreateLocationFsxLustreOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateLocationFsxLustreOutput`](crate::output::CreateLocationFsxLustreOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
@@ -3752,7 +4078,7 @@ pub mod create_location_fsx_lustre_output {
             self.location_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLocationFsxLustreOutput`](crate::output::CreateLocationFsxLustreOutput)
+        /// Consumes the builder and constructs a [`CreateLocationFsxLustreOutput`](crate::output::CreateLocationFsxLustreOutput).
         pub fn build(self) -> crate::output::CreateLocationFsxLustreOutput {
             crate::output::CreateLocationFsxLustreOutput {
                 location_arn: self.location_arn,
@@ -3761,7 +4087,7 @@ pub mod create_location_fsx_lustre_output {
     }
 }
 impl CreateLocationFsxLustreOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLocationFsxLustreOutput`](crate::output::CreateLocationFsxLustreOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLocationFsxLustreOutput`](crate::output::CreateLocationFsxLustreOutput).
     pub fn builder() -> crate::output::create_location_fsx_lustre_output::Builder {
         crate::output::create_location_fsx_lustre_output::Builder::default()
     }
@@ -3771,11 +4097,11 @@ impl CreateLocationFsxLustreOutput {
 #[non_exhaustive]
 #[derive(std::clone::Clone, std::cmp::PartialEq)]
 pub struct CreateLocationEfsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.</p>
+    /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that you create.</p>
     pub location_arn: std::option::Option<std::string::String>,
 }
 impl CreateLocationEfsOutput {
-    /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.</p>
+    /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that you create.</p>
     pub fn location_arn(&self) -> std::option::Option<&str> {
         self.location_arn.as_deref()
     }
@@ -3787,26 +4113,26 @@ impl std::fmt::Debug for CreateLocationEfsOutput {
         formatter.finish()
     }
 }
-/// See [`CreateLocationEfsOutput`](crate::output::CreateLocationEfsOutput)
+/// See [`CreateLocationEfsOutput`](crate::output::CreateLocationEfsOutput).
 pub mod create_location_efs_output {
-    /// A builder for [`CreateLocationEfsOutput`](crate::output::CreateLocationEfsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateLocationEfsOutput`](crate::output::CreateLocationEfsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) location_arn: std::option::Option<std::string::String>,
     }
     impl Builder {
-        /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.</p>
+        /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that you create.</p>
         pub fn location_arn(mut self, input: impl Into<std::string::String>) -> Self {
             self.location_arn = Some(input.into());
             self
         }
-        /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that is created.</p>
+        /// <p>The Amazon Resource Name (ARN) of the Amazon EFS file system location that you create.</p>
         pub fn set_location_arn(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.location_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateLocationEfsOutput`](crate::output::CreateLocationEfsOutput)
+        /// Consumes the builder and constructs a [`CreateLocationEfsOutput`](crate::output::CreateLocationEfsOutput).
         pub fn build(self) -> crate::output::CreateLocationEfsOutput {
             crate::output::CreateLocationEfsOutput {
                 location_arn: self.location_arn,
@@ -3815,7 +4141,7 @@ pub mod create_location_efs_output {
     }
 }
 impl CreateLocationEfsOutput {
-    /// Creates a new builder-style object to manufacture [`CreateLocationEfsOutput`](crate::output::CreateLocationEfsOutput)
+    /// Creates a new builder-style object to manufacture [`CreateLocationEfsOutput`](crate::output::CreateLocationEfsOutput).
     pub fn builder() -> crate::output::create_location_efs_output::Builder {
         crate::output::create_location_efs_output::Builder::default()
     }
@@ -3841,10 +4167,10 @@ impl std::fmt::Debug for CreateAgentOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAgentOutput`](crate::output::CreateAgentOutput)
+/// See [`CreateAgentOutput`](crate::output::CreateAgentOutput).
 pub mod create_agent_output {
-    /// A builder for [`CreateAgentOutput`](crate::output::CreateAgentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateAgentOutput`](crate::output::CreateAgentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) agent_arn: std::option::Option<std::string::String>,
@@ -3860,7 +4186,7 @@ pub mod create_agent_output {
             self.agent_arn = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAgentOutput`](crate::output::CreateAgentOutput)
+        /// Consumes the builder and constructs a [`CreateAgentOutput`](crate::output::CreateAgentOutput).
         pub fn build(self) -> crate::output::CreateAgentOutput {
             crate::output::CreateAgentOutput {
                 agent_arn: self.agent_arn,
@@ -3869,7 +4195,7 @@ pub mod create_agent_output {
     }
 }
 impl CreateAgentOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAgentOutput`](crate::output::CreateAgentOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAgentOutput`](crate::output::CreateAgentOutput).
     pub fn builder() -> crate::output::create_agent_output::Builder {
         crate::output::create_agent_output::Builder::default()
     }
@@ -3885,21 +4211,21 @@ impl std::fmt::Debug for CancelTaskExecutionOutput {
         formatter.finish()
     }
 }
-/// See [`CancelTaskExecutionOutput`](crate::output::CancelTaskExecutionOutput)
+/// See [`CancelTaskExecutionOutput`](crate::output::CancelTaskExecutionOutput).
 pub mod cancel_task_execution_output {
-    /// A builder for [`CancelTaskExecutionOutput`](crate::output::CancelTaskExecutionOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CancelTaskExecutionOutput`](crate::output::CancelTaskExecutionOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CancelTaskExecutionOutput`](crate::output::CancelTaskExecutionOutput)
+        /// Consumes the builder and constructs a [`CancelTaskExecutionOutput`](crate::output::CancelTaskExecutionOutput).
         pub fn build(self) -> crate::output::CancelTaskExecutionOutput {
             crate::output::CancelTaskExecutionOutput {}
         }
     }
 }
 impl CancelTaskExecutionOutput {
-    /// Creates a new builder-style object to manufacture [`CancelTaskExecutionOutput`](crate::output::CancelTaskExecutionOutput)
+    /// Creates a new builder-style object to manufacture [`CancelTaskExecutionOutput`](crate::output::CancelTaskExecutionOutput).
     pub fn builder() -> crate::output::cancel_task_execution_output::Builder {
         crate::output::cancel_task_execution_output::Builder::default()
     }

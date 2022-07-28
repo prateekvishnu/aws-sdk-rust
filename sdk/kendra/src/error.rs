@@ -914,6 +914,184 @@ impl std::error::Error for ClearQuerySuggestionsError {
     }
 }
 
+/// Error type for the `CreateAccessControlConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct CreateAccessControlConfigurationError {
+    /// Kind of error that occurred.
+    pub kind: CreateAccessControlConfigurationErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `CreateAccessControlConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum CreateAccessControlConfigurationErrorKind {
+    /// <p></p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p></p>
+    ConflictException(crate::error::ConflictException),
+    /// <p></p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p></p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p></p>
+    ServiceQuotaExceededException(crate::error::ServiceQuotaExceededException),
+    /// <p></p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p></p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for CreateAccessControlConfigurationError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            CreateAccessControlConfigurationErrorKind::AccessDeniedException(_inner) => {
+                _inner.fmt(f)
+            }
+            CreateAccessControlConfigurationErrorKind::ConflictException(_inner) => _inner.fmt(f),
+            CreateAccessControlConfigurationErrorKind::InternalServerException(_inner) => {
+                _inner.fmt(f)
+            }
+            CreateAccessControlConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                _inner.fmt(f)
+            }
+            CreateAccessControlConfigurationErrorKind::ServiceQuotaExceededException(_inner) => {
+                _inner.fmt(f)
+            }
+            CreateAccessControlConfigurationErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            CreateAccessControlConfigurationErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            CreateAccessControlConfigurationErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for CreateAccessControlConfigurationError {
+    fn code(&self) -> Option<&str> {
+        CreateAccessControlConfigurationError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl CreateAccessControlConfigurationError {
+    /// Creates a new `CreateAccessControlConfigurationError`.
+    pub fn new(
+        kind: CreateAccessControlConfigurationErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `CreateAccessControlConfigurationError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: CreateAccessControlConfigurationErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `CreateAccessControlConfigurationError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: CreateAccessControlConfigurationErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `CreateAccessControlConfigurationErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateAccessControlConfigurationErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateAccessControlConfigurationErrorKind::ConflictException`.
+    pub fn is_conflict_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateAccessControlConfigurationErrorKind::ConflictException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateAccessControlConfigurationErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateAccessControlConfigurationErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateAccessControlConfigurationErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateAccessControlConfigurationErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateAccessControlConfigurationErrorKind::ServiceQuotaExceededException`.
+    pub fn is_service_quota_exceeded_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateAccessControlConfigurationErrorKind::ServiceQuotaExceededException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateAccessControlConfigurationErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateAccessControlConfigurationErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `CreateAccessControlConfigurationErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            CreateAccessControlConfigurationErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for CreateAccessControlConfigurationError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            CreateAccessControlConfigurationErrorKind::AccessDeniedException(_inner) => {
+                Some(_inner)
+            }
+            CreateAccessControlConfigurationErrorKind::ConflictException(_inner) => Some(_inner),
+            CreateAccessControlConfigurationErrorKind::InternalServerException(_inner) => {
+                Some(_inner)
+            }
+            CreateAccessControlConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                Some(_inner)
+            }
+            CreateAccessControlConfigurationErrorKind::ServiceQuotaExceededException(_inner) => {
+                Some(_inner)
+            }
+            CreateAccessControlConfigurationErrorKind::ThrottlingException(_inner) => Some(_inner),
+            CreateAccessControlConfigurationErrorKind::ValidationException(_inner) => Some(_inner),
+            CreateAccessControlConfigurationErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `CreateDataSource` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -1844,6 +2022,169 @@ impl std::error::Error for CreateThesaurusError {
             CreateThesaurusErrorKind::ThrottlingException(_inner) => Some(_inner),
             CreateThesaurusErrorKind::ValidationException(_inner) => Some(_inner),
             CreateThesaurusErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DeleteAccessControlConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DeleteAccessControlConfigurationError {
+    /// Kind of error that occurred.
+    pub kind: DeleteAccessControlConfigurationErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DeleteAccessControlConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DeleteAccessControlConfigurationErrorKind {
+    /// <p></p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p></p>
+    ConflictException(crate::error::ConflictException),
+    /// <p></p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p></p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p></p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p></p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DeleteAccessControlConfigurationError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DeleteAccessControlConfigurationErrorKind::AccessDeniedException(_inner) => {
+                _inner.fmt(f)
+            }
+            DeleteAccessControlConfigurationErrorKind::ConflictException(_inner) => _inner.fmt(f),
+            DeleteAccessControlConfigurationErrorKind::InternalServerException(_inner) => {
+                _inner.fmt(f)
+            }
+            DeleteAccessControlConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                _inner.fmt(f)
+            }
+            DeleteAccessControlConfigurationErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            DeleteAccessControlConfigurationErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            DeleteAccessControlConfigurationErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DeleteAccessControlConfigurationError {
+    fn code(&self) -> Option<&str> {
+        DeleteAccessControlConfigurationError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DeleteAccessControlConfigurationError {
+    /// Creates a new `DeleteAccessControlConfigurationError`.
+    pub fn new(
+        kind: DeleteAccessControlConfigurationErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DeleteAccessControlConfigurationError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DeleteAccessControlConfigurationErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DeleteAccessControlConfigurationError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DeleteAccessControlConfigurationErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DeleteAccessControlConfigurationErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteAccessControlConfigurationErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteAccessControlConfigurationErrorKind::ConflictException`.
+    pub fn is_conflict_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteAccessControlConfigurationErrorKind::ConflictException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteAccessControlConfigurationErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteAccessControlConfigurationErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteAccessControlConfigurationErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteAccessControlConfigurationErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteAccessControlConfigurationErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteAccessControlConfigurationErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DeleteAccessControlConfigurationErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DeleteAccessControlConfigurationErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for DeleteAccessControlConfigurationError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DeleteAccessControlConfigurationErrorKind::AccessDeniedException(_inner) => {
+                Some(_inner)
+            }
+            DeleteAccessControlConfigurationErrorKind::ConflictException(_inner) => Some(_inner),
+            DeleteAccessControlConfigurationErrorKind::InternalServerException(_inner) => {
+                Some(_inner)
+            }
+            DeleteAccessControlConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                Some(_inner)
+            }
+            DeleteAccessControlConfigurationErrorKind::ThrottlingException(_inner) => Some(_inner),
+            DeleteAccessControlConfigurationErrorKind::ValidationException(_inner) => Some(_inner),
+            DeleteAccessControlConfigurationErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -2845,6 +3186,166 @@ impl std::error::Error for DeleteThesaurusError {
             DeleteThesaurusErrorKind::ThrottlingException(_inner) => Some(_inner),
             DeleteThesaurusErrorKind::ValidationException(_inner) => Some(_inner),
             DeleteThesaurusErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `DescribeAccessControlConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct DescribeAccessControlConfigurationError {
+    /// Kind of error that occurred.
+    pub kind: DescribeAccessControlConfigurationErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `DescribeAccessControlConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum DescribeAccessControlConfigurationErrorKind {
+    /// <p></p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p></p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p></p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p></p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p></p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for DescribeAccessControlConfigurationError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            DescribeAccessControlConfigurationErrorKind::AccessDeniedException(_inner) => {
+                _inner.fmt(f)
+            }
+            DescribeAccessControlConfigurationErrorKind::InternalServerException(_inner) => {
+                _inner.fmt(f)
+            }
+            DescribeAccessControlConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                _inner.fmt(f)
+            }
+            DescribeAccessControlConfigurationErrorKind::ThrottlingException(_inner) => {
+                _inner.fmt(f)
+            }
+            DescribeAccessControlConfigurationErrorKind::ValidationException(_inner) => {
+                _inner.fmt(f)
+            }
+            DescribeAccessControlConfigurationErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for DescribeAccessControlConfigurationError {
+    fn code(&self) -> Option<&str> {
+        DescribeAccessControlConfigurationError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl DescribeAccessControlConfigurationError {
+    /// Creates a new `DescribeAccessControlConfigurationError`.
+    pub fn new(
+        kind: DescribeAccessControlConfigurationErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `DescribeAccessControlConfigurationError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: DescribeAccessControlConfigurationErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `DescribeAccessControlConfigurationError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: DescribeAccessControlConfigurationErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `DescribeAccessControlConfigurationErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeAccessControlConfigurationErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DescribeAccessControlConfigurationErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeAccessControlConfigurationErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DescribeAccessControlConfigurationErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeAccessControlConfigurationErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DescribeAccessControlConfigurationErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeAccessControlConfigurationErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `DescribeAccessControlConfigurationErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            DescribeAccessControlConfigurationErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for DescribeAccessControlConfigurationError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            DescribeAccessControlConfigurationErrorKind::AccessDeniedException(_inner) => {
+                Some(_inner)
+            }
+            DescribeAccessControlConfigurationErrorKind::InternalServerException(_inner) => {
+                Some(_inner)
+            }
+            DescribeAccessControlConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                Some(_inner)
+            }
+            DescribeAccessControlConfigurationErrorKind::ThrottlingException(_inner) => {
+                Some(_inner)
+            }
+            DescribeAccessControlConfigurationErrorKind::ValidationException(_inner) => {
+                Some(_inner)
+            }
+            DescribeAccessControlConfigurationErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -4544,6 +5045,156 @@ impl std::error::Error for GetSnapshotsError {
             GetSnapshotsErrorKind::InvalidRequestException(_inner) => Some(_inner),
             GetSnapshotsErrorKind::ResourceNotFoundException(_inner) => Some(_inner),
             GetSnapshotsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
+/// Error type for the `ListAccessControlConfigurations` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct ListAccessControlConfigurationsError {
+    /// Kind of error that occurred.
+    pub kind: ListAccessControlConfigurationsErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `ListAccessControlConfigurations` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum ListAccessControlConfigurationsErrorKind {
+    /// <p></p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p></p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p></p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p></p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p></p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for ListAccessControlConfigurationsError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            ListAccessControlConfigurationsErrorKind::AccessDeniedException(_inner) => {
+                _inner.fmt(f)
+            }
+            ListAccessControlConfigurationsErrorKind::InternalServerException(_inner) => {
+                _inner.fmt(f)
+            }
+            ListAccessControlConfigurationsErrorKind::ResourceNotFoundException(_inner) => {
+                _inner.fmt(f)
+            }
+            ListAccessControlConfigurationsErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            ListAccessControlConfigurationsErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            ListAccessControlConfigurationsErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for ListAccessControlConfigurationsError {
+    fn code(&self) -> Option<&str> {
+        ListAccessControlConfigurationsError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl ListAccessControlConfigurationsError {
+    /// Creates a new `ListAccessControlConfigurationsError`.
+    pub fn new(
+        kind: ListAccessControlConfigurationsErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `ListAccessControlConfigurationsError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: ListAccessControlConfigurationsErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `ListAccessControlConfigurationsError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: ListAccessControlConfigurationsErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `ListAccessControlConfigurationsErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListAccessControlConfigurationsErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ListAccessControlConfigurationsErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListAccessControlConfigurationsErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ListAccessControlConfigurationsErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListAccessControlConfigurationsErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ListAccessControlConfigurationsErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListAccessControlConfigurationsErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `ListAccessControlConfigurationsErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            ListAccessControlConfigurationsErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for ListAccessControlConfigurationsError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            ListAccessControlConfigurationsErrorKind::AccessDeniedException(_inner) => Some(_inner),
+            ListAccessControlConfigurationsErrorKind::InternalServerException(_inner) => {
+                Some(_inner)
+            }
+            ListAccessControlConfigurationsErrorKind::ResourceNotFoundException(_inner) => {
+                Some(_inner)
+            }
+            ListAccessControlConfigurationsErrorKind::ThrottlingException(_inner) => Some(_inner),
+            ListAccessControlConfigurationsErrorKind::ValidationException(_inner) => Some(_inner),
+            ListAccessControlConfigurationsErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
         }
     }
 }
@@ -7026,6 +7677,184 @@ impl std::error::Error for UntagResourceError {
     }
 }
 
+/// Error type for the `UpdateAccessControlConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub struct UpdateAccessControlConfigurationError {
+    /// Kind of error that occurred.
+    pub kind: UpdateAccessControlConfigurationErrorKind,
+    /// Additional metadata about the error, including error code, message, and request ID.
+    pub(crate) meta: aws_smithy_types::Error,
+}
+/// Types of errors that can occur for the `UpdateAccessControlConfiguration` operation.
+#[non_exhaustive]
+#[derive(std::fmt::Debug)]
+pub enum UpdateAccessControlConfigurationErrorKind {
+    /// <p></p>
+    AccessDeniedException(crate::error::AccessDeniedException),
+    /// <p></p>
+    ConflictException(crate::error::ConflictException),
+    /// <p></p>
+    InternalServerException(crate::error::InternalServerException),
+    /// <p></p>
+    ResourceNotFoundException(crate::error::ResourceNotFoundException),
+    /// <p></p>
+    ServiceQuotaExceededException(crate::error::ServiceQuotaExceededException),
+    /// <p></p>
+    ThrottlingException(crate::error::ThrottlingException),
+    /// <p></p>
+    ValidationException(crate::error::ValidationException),
+    /// An unexpected error, e.g. invalid JSON returned by the service or an unknown error code
+    Unhandled(Box<dyn std::error::Error + Send + Sync + 'static>),
+}
+impl std::fmt::Display for UpdateAccessControlConfigurationError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match &self.kind {
+            UpdateAccessControlConfigurationErrorKind::AccessDeniedException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateAccessControlConfigurationErrorKind::ConflictException(_inner) => _inner.fmt(f),
+            UpdateAccessControlConfigurationErrorKind::InternalServerException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateAccessControlConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateAccessControlConfigurationErrorKind::ServiceQuotaExceededException(_inner) => {
+                _inner.fmt(f)
+            }
+            UpdateAccessControlConfigurationErrorKind::ThrottlingException(_inner) => _inner.fmt(f),
+            UpdateAccessControlConfigurationErrorKind::ValidationException(_inner) => _inner.fmt(f),
+            UpdateAccessControlConfigurationErrorKind::Unhandled(_inner) => _inner.fmt(f),
+        }
+    }
+}
+impl aws_smithy_types::retry::ProvideErrorKind for UpdateAccessControlConfigurationError {
+    fn code(&self) -> Option<&str> {
+        UpdateAccessControlConfigurationError::code(self)
+    }
+    fn retryable_error_kind(&self) -> Option<aws_smithy_types::retry::ErrorKind> {
+        None
+    }
+}
+impl UpdateAccessControlConfigurationError {
+    /// Creates a new `UpdateAccessControlConfigurationError`.
+    pub fn new(
+        kind: UpdateAccessControlConfigurationErrorKind,
+        meta: aws_smithy_types::Error,
+    ) -> Self {
+        Self { kind, meta }
+    }
+
+    /// Creates the `UpdateAccessControlConfigurationError::Unhandled` variant from any error type.
+    pub fn unhandled(err: impl Into<Box<dyn std::error::Error + Send + Sync + 'static>>) -> Self {
+        Self {
+            kind: UpdateAccessControlConfigurationErrorKind::Unhandled(err.into()),
+            meta: Default::default(),
+        }
+    }
+
+    /// Creates the `UpdateAccessControlConfigurationError::Unhandled` variant from a `aws_smithy_types::Error`.
+    pub fn generic(err: aws_smithy_types::Error) -> Self {
+        Self {
+            meta: err.clone(),
+            kind: UpdateAccessControlConfigurationErrorKind::Unhandled(err.into()),
+        }
+    }
+
+    /// Returns the error message if one is available.
+    pub fn message(&self) -> Option<&str> {
+        self.meta.message()
+    }
+
+    /// Returns error metadata, which includes the error code, message,
+    /// request ID, and potentially additional information.
+    pub fn meta(&self) -> &aws_smithy_types::Error {
+        &self.meta
+    }
+
+    /// Returns the request ID if it's available.
+    pub fn request_id(&self) -> Option<&str> {
+        self.meta.request_id()
+    }
+
+    /// Returns the error code if it's available.
+    pub fn code(&self) -> Option<&str> {
+        self.meta.code()
+    }
+    /// Returns `true` if the error kind is `UpdateAccessControlConfigurationErrorKind::AccessDeniedException`.
+    pub fn is_access_denied_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateAccessControlConfigurationErrorKind::AccessDeniedException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateAccessControlConfigurationErrorKind::ConflictException`.
+    pub fn is_conflict_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateAccessControlConfigurationErrorKind::ConflictException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateAccessControlConfigurationErrorKind::InternalServerException`.
+    pub fn is_internal_server_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateAccessControlConfigurationErrorKind::InternalServerException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateAccessControlConfigurationErrorKind::ResourceNotFoundException`.
+    pub fn is_resource_not_found_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateAccessControlConfigurationErrorKind::ResourceNotFoundException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateAccessControlConfigurationErrorKind::ServiceQuotaExceededException`.
+    pub fn is_service_quota_exceeded_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateAccessControlConfigurationErrorKind::ServiceQuotaExceededException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateAccessControlConfigurationErrorKind::ThrottlingException`.
+    pub fn is_throttling_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateAccessControlConfigurationErrorKind::ThrottlingException(_)
+        )
+    }
+    /// Returns `true` if the error kind is `UpdateAccessControlConfigurationErrorKind::ValidationException`.
+    pub fn is_validation_exception(&self) -> bool {
+        matches!(
+            &self.kind,
+            UpdateAccessControlConfigurationErrorKind::ValidationException(_)
+        )
+    }
+}
+impl std::error::Error for UpdateAccessControlConfigurationError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match &self.kind {
+            UpdateAccessControlConfigurationErrorKind::AccessDeniedException(_inner) => {
+                Some(_inner)
+            }
+            UpdateAccessControlConfigurationErrorKind::ConflictException(_inner) => Some(_inner),
+            UpdateAccessControlConfigurationErrorKind::InternalServerException(_inner) => {
+                Some(_inner)
+            }
+            UpdateAccessControlConfigurationErrorKind::ResourceNotFoundException(_inner) => {
+                Some(_inner)
+            }
+            UpdateAccessControlConfigurationErrorKind::ServiceQuotaExceededException(_inner) => {
+                Some(_inner)
+            }
+            UpdateAccessControlConfigurationErrorKind::ThrottlingException(_inner) => Some(_inner),
+            UpdateAccessControlConfigurationErrorKind::ValidationException(_inner) => Some(_inner),
+            UpdateAccessControlConfigurationErrorKind::Unhandled(_inner) => Some(_inner.as_ref()),
+        }
+    }
+}
+
 /// Error type for the `UpdateDataSource` operation.
 #[non_exhaustive]
 #[derive(std::fmt::Debug)]
@@ -7942,10 +8771,10 @@ impl std::fmt::Display for ValidationException {
     }
 }
 impl std::error::Error for ValidationException {}
-/// See [`ValidationException`](crate::error::ValidationException)
+/// See [`ValidationException`](crate::error::ValidationException).
 pub mod validation_exception {
-    /// A builder for [`ValidationException`](crate::error::ValidationException)
-    #[non_exhaustive]
+
+    /// A builder for [`ValidationException`](crate::error::ValidationException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -7961,7 +8790,7 @@ pub mod validation_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException)
+        /// Consumes the builder and constructs a [`ValidationException`](crate::error::ValidationException).
         pub fn build(self) -> crate::error::ValidationException {
             crate::error::ValidationException {
                 message: self.message,
@@ -7970,7 +8799,7 @@ pub mod validation_exception {
     }
 }
 impl ValidationException {
-    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException)
+    /// Creates a new builder-style object to manufacture [`ValidationException`](crate::error::ValidationException).
     pub fn builder() -> crate::error::validation_exception::Builder {
         crate::error::validation_exception::Builder::default()
     }
@@ -8006,10 +8835,10 @@ impl std::fmt::Display for ThrottlingException {
     }
 }
 impl std::error::Error for ThrottlingException {}
-/// See [`ThrottlingException`](crate::error::ThrottlingException)
+/// See [`ThrottlingException`](crate::error::ThrottlingException).
 pub mod throttling_exception {
-    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException)
-    #[non_exhaustive]
+
+    /// A builder for [`ThrottlingException`](crate::error::ThrottlingException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8025,7 +8854,7 @@ pub mod throttling_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException)
+        /// Consumes the builder and constructs a [`ThrottlingException`](crate::error::ThrottlingException).
         pub fn build(self) -> crate::error::ThrottlingException {
             crate::error::ThrottlingException {
                 message: self.message,
@@ -8034,7 +8863,7 @@ pub mod throttling_exception {
     }
 }
 impl ThrottlingException {
-    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException)
+    /// Creates a new builder-style object to manufacture [`ThrottlingException`](crate::error::ThrottlingException).
     pub fn builder() -> crate::error::throttling_exception::Builder {
         crate::error::throttling_exception::Builder::default()
     }
@@ -8070,10 +8899,10 @@ impl std::fmt::Display for ResourceNotFoundException {
     }
 }
 impl std::error::Error for ResourceNotFoundException {}
-/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+/// See [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
 pub mod resource_not_found_exception {
-    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8089,7 +8918,7 @@ pub mod resource_not_found_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+        /// Consumes the builder and constructs a [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
         pub fn build(self) -> crate::error::ResourceNotFoundException {
             crate::error::ResourceNotFoundException {
                 message: self.message,
@@ -8098,7 +8927,7 @@ pub mod resource_not_found_exception {
     }
 }
 impl ResourceNotFoundException {
-    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException)
+    /// Creates a new builder-style object to manufacture [`ResourceNotFoundException`](crate::error::ResourceNotFoundException).
     pub fn builder() -> crate::error::resource_not_found_exception::Builder {
         crate::error::resource_not_found_exception::Builder::default()
     }
@@ -8134,10 +8963,10 @@ impl std::fmt::Display for InternalServerException {
     }
 }
 impl std::error::Error for InternalServerException {}
-/// See [`InternalServerException`](crate::error::InternalServerException)
+/// See [`InternalServerException`](crate::error::InternalServerException).
 pub mod internal_server_exception {
-    /// A builder for [`InternalServerException`](crate::error::InternalServerException)
-    #[non_exhaustive]
+
+    /// A builder for [`InternalServerException`](crate::error::InternalServerException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8153,7 +8982,7 @@ pub mod internal_server_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException)
+        /// Consumes the builder and constructs a [`InternalServerException`](crate::error::InternalServerException).
         pub fn build(self) -> crate::error::InternalServerException {
             crate::error::InternalServerException {
                 message: self.message,
@@ -8162,7 +8991,7 @@ pub mod internal_server_exception {
     }
 }
 impl InternalServerException {
-    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException)
+    /// Creates a new builder-style object to manufacture [`InternalServerException`](crate::error::InternalServerException).
     pub fn builder() -> crate::error::internal_server_exception::Builder {
         crate::error::internal_server_exception::Builder::default()
     }
@@ -8198,10 +9027,10 @@ impl std::fmt::Display for ConflictException {
     }
 }
 impl std::error::Error for ConflictException {}
-/// See [`ConflictException`](crate::error::ConflictException)
+/// See [`ConflictException`](crate::error::ConflictException).
 pub mod conflict_exception {
-    /// A builder for [`ConflictException`](crate::error::ConflictException)
-    #[non_exhaustive]
+
+    /// A builder for [`ConflictException`](crate::error::ConflictException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8217,7 +9046,7 @@ pub mod conflict_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException)
+        /// Consumes the builder and constructs a [`ConflictException`](crate::error::ConflictException).
         pub fn build(self) -> crate::error::ConflictException {
             crate::error::ConflictException {
                 message: self.message,
@@ -8226,7 +9055,7 @@ pub mod conflict_exception {
     }
 }
 impl ConflictException {
-    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException)
+    /// Creates a new builder-style object to manufacture [`ConflictException`](crate::error::ConflictException).
     pub fn builder() -> crate::error::conflict_exception::Builder {
         crate::error::conflict_exception::Builder::default()
     }
@@ -8262,10 +9091,10 @@ impl std::fmt::Display for AccessDeniedException {
     }
 }
 impl std::error::Error for AccessDeniedException {}
-/// See [`AccessDeniedException`](crate::error::AccessDeniedException)
+/// See [`AccessDeniedException`](crate::error::AccessDeniedException).
 pub mod access_denied_exception {
-    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException)
-    #[non_exhaustive]
+
+    /// A builder for [`AccessDeniedException`](crate::error::AccessDeniedException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8281,7 +9110,7 @@ pub mod access_denied_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException)
+        /// Consumes the builder and constructs a [`AccessDeniedException`](crate::error::AccessDeniedException).
         pub fn build(self) -> crate::error::AccessDeniedException {
             crate::error::AccessDeniedException {
                 message: self.message,
@@ -8290,7 +9119,7 @@ pub mod access_denied_exception {
     }
 }
 impl AccessDeniedException {
-    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException)
+    /// Creates a new builder-style object to manufacture [`AccessDeniedException`](crate::error::AccessDeniedException).
     pub fn builder() -> crate::error::access_denied_exception::Builder {
         crate::error::access_denied_exception::Builder::default()
     }
@@ -8326,10 +9155,10 @@ impl std::fmt::Display for ServiceQuotaExceededException {
     }
 }
 impl std::error::Error for ServiceQuotaExceededException {}
-/// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+/// See [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
 pub mod service_quota_exceeded_exception {
-    /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
-    #[non_exhaustive]
+
+    /// A builder for [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8345,7 +9174,7 @@ pub mod service_quota_exceeded_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+        /// Consumes the builder and constructs a [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
         pub fn build(self) -> crate::error::ServiceQuotaExceededException {
             crate::error::ServiceQuotaExceededException {
                 message: self.message,
@@ -8354,7 +9183,7 @@ pub mod service_quota_exceeded_exception {
     }
 }
 impl ServiceQuotaExceededException {
-    /// Creates a new builder-style object to manufacture [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException)
+    /// Creates a new builder-style object to manufacture [`ServiceQuotaExceededException`](crate::error::ServiceQuotaExceededException).
     pub fn builder() -> crate::error::service_quota_exceeded_exception::Builder {
         crate::error::service_quota_exceeded_exception::Builder::default()
     }
@@ -8390,10 +9219,10 @@ impl std::fmt::Display for ResourceUnavailableException {
     }
 }
 impl std::error::Error for ResourceUnavailableException {}
-/// See [`ResourceUnavailableException`](crate::error::ResourceUnavailableException)
+/// See [`ResourceUnavailableException`](crate::error::ResourceUnavailableException).
 pub mod resource_unavailable_exception {
-    /// A builder for [`ResourceUnavailableException`](crate::error::ResourceUnavailableException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceUnavailableException`](crate::error::ResourceUnavailableException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8409,7 +9238,7 @@ pub mod resource_unavailable_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceUnavailableException`](crate::error::ResourceUnavailableException)
+        /// Consumes the builder and constructs a [`ResourceUnavailableException`](crate::error::ResourceUnavailableException).
         pub fn build(self) -> crate::error::ResourceUnavailableException {
             crate::error::ResourceUnavailableException {
                 message: self.message,
@@ -8418,7 +9247,7 @@ pub mod resource_unavailable_exception {
     }
 }
 impl ResourceUnavailableException {
-    /// Creates a new builder-style object to manufacture [`ResourceUnavailableException`](crate::error::ResourceUnavailableException)
+    /// Creates a new builder-style object to manufacture [`ResourceUnavailableException`](crate::error::ResourceUnavailableException).
     pub fn builder() -> crate::error::resource_unavailable_exception::Builder {
         crate::error::resource_unavailable_exception::Builder::default()
     }
@@ -8454,10 +9283,10 @@ impl std::fmt::Display for ResourceInUseException {
     }
 }
 impl std::error::Error for ResourceInUseException {}
-/// See [`ResourceInUseException`](crate::error::ResourceInUseException)
+/// See [`ResourceInUseException`](crate::error::ResourceInUseException).
 pub mod resource_in_use_exception {
-    /// A builder for [`ResourceInUseException`](crate::error::ResourceInUseException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceInUseException`](crate::error::ResourceInUseException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8473,7 +9302,7 @@ pub mod resource_in_use_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceInUseException`](crate::error::ResourceInUseException)
+        /// Consumes the builder and constructs a [`ResourceInUseException`](crate::error::ResourceInUseException).
         pub fn build(self) -> crate::error::ResourceInUseException {
             crate::error::ResourceInUseException {
                 message: self.message,
@@ -8482,7 +9311,7 @@ pub mod resource_in_use_exception {
     }
 }
 impl ResourceInUseException {
-    /// Creates a new builder-style object to manufacture [`ResourceInUseException`](crate::error::ResourceInUseException)
+    /// Creates a new builder-style object to manufacture [`ResourceInUseException`](crate::error::ResourceInUseException).
     pub fn builder() -> crate::error::resource_in_use_exception::Builder {
         crate::error::resource_in_use_exception::Builder::default()
     }
@@ -8518,10 +9347,10 @@ impl std::fmt::Display for InvalidRequestException {
     }
 }
 impl std::error::Error for InvalidRequestException {}
-/// See [`InvalidRequestException`](crate::error::InvalidRequestException)
+/// See [`InvalidRequestException`](crate::error::InvalidRequestException).
 pub mod invalid_request_exception {
-    /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException)
-    #[non_exhaustive]
+
+    /// A builder for [`InvalidRequestException`](crate::error::InvalidRequestException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8537,7 +9366,7 @@ pub mod invalid_request_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException)
+        /// Consumes the builder and constructs a [`InvalidRequestException`](crate::error::InvalidRequestException).
         pub fn build(self) -> crate::error::InvalidRequestException {
             crate::error::InvalidRequestException {
                 message: self.message,
@@ -8546,7 +9375,7 @@ pub mod invalid_request_exception {
     }
 }
 impl InvalidRequestException {
-    /// Creates a new builder-style object to manufacture [`InvalidRequestException`](crate::error::InvalidRequestException)
+    /// Creates a new builder-style object to manufacture [`InvalidRequestException`](crate::error::InvalidRequestException).
     pub fn builder() -> crate::error::invalid_request_exception::Builder {
         crate::error::invalid_request_exception::Builder::default()
     }
@@ -8582,10 +9411,10 @@ impl std::fmt::Display for ResourceAlreadyExistException {
     }
 }
 impl std::error::Error for ResourceAlreadyExistException {}
-/// See [`ResourceAlreadyExistException`](crate::error::ResourceAlreadyExistException)
+/// See [`ResourceAlreadyExistException`](crate::error::ResourceAlreadyExistException).
 pub mod resource_already_exist_exception {
-    /// A builder for [`ResourceAlreadyExistException`](crate::error::ResourceAlreadyExistException)
-    #[non_exhaustive]
+
+    /// A builder for [`ResourceAlreadyExistException`](crate::error::ResourceAlreadyExistException).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) message: std::option::Option<std::string::String>,
@@ -8601,7 +9430,7 @@ pub mod resource_already_exist_exception {
             self.message = input;
             self
         }
-        /// Consumes the builder and constructs a [`ResourceAlreadyExistException`](crate::error::ResourceAlreadyExistException)
+        /// Consumes the builder and constructs a [`ResourceAlreadyExistException`](crate::error::ResourceAlreadyExistException).
         pub fn build(self) -> crate::error::ResourceAlreadyExistException {
             crate::error::ResourceAlreadyExistException {
                 message: self.message,
@@ -8610,7 +9439,7 @@ pub mod resource_already_exist_exception {
     }
 }
 impl ResourceAlreadyExistException {
-    /// Creates a new builder-style object to manufacture [`ResourceAlreadyExistException`](crate::error::ResourceAlreadyExistException)
+    /// Creates a new builder-style object to manufacture [`ResourceAlreadyExistException`](crate::error::ResourceAlreadyExistException).
     pub fn builder() -> crate::error::resource_already_exist_exception::Builder {
         crate::error::resource_already_exist_exception::Builder::default()
     }

@@ -10,7 +10,7 @@ pub struct AssociateLicense {
     _private: (),
 }
 impl AssociateLicense {
-    /// Creates a new builder-style object to manufacture [`AssociateLicenseInput`](crate::input::AssociateLicenseInput)
+    /// Creates a new builder-style object to manufacture [`AssociateLicenseInput`](crate::input::AssociateLicenseInput).
     pub fn builder() -> crate::input::associate_license_input::Builder {
         crate::input::associate_license_input::Builder::default()
     }
@@ -44,7 +44,7 @@ pub struct CreateWorkspace {
     _private: (),
 }
 impl CreateWorkspace {
-    /// Creates a new builder-style object to manufacture [`CreateWorkspaceInput`](crate::input::CreateWorkspaceInput)
+    /// Creates a new builder-style object to manufacture [`CreateWorkspaceInput`](crate::input::CreateWorkspaceInput).
     pub fn builder() -> crate::input::create_workspace_input::Builder {
         crate::input::create_workspace_input::Builder::default()
     }
@@ -67,6 +67,40 @@ impl aws_smithy_http::response::ParseStrictResponse for CreateWorkspace {
     }
 }
 
+/// Operation shape for `CreateWorkspaceApiKey`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`create_workspace_api_key`](crate::client::Client::create_workspace_api_key).
+///
+/// See [`crate::client::fluent_builders::CreateWorkspaceApiKey`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct CreateWorkspaceApiKey {
+    _private: (),
+}
+impl CreateWorkspaceApiKey {
+    /// Creates a new builder-style object to manufacture [`CreateWorkspaceApiKeyInput`](crate::input::CreateWorkspaceApiKeyInput).
+    pub fn builder() -> crate::input::create_workspace_api_key_input::Builder {
+        crate::input::create_workspace_api_key_input::Builder::default()
+    }
+    /// Creates a new `CreateWorkspaceApiKey` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for CreateWorkspaceApiKey {
+    type Output = std::result::Result<
+        crate::output::CreateWorkspaceApiKeyOutput,
+        crate::error::CreateWorkspaceApiKeyError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_create_workspace_api_key_error(response)
+        } else {
+            crate::operation_deser::parse_create_workspace_api_key_response(response)
+        }
+    }
+}
+
 /// Operation shape for `DeleteWorkspace`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -78,7 +112,7 @@ pub struct DeleteWorkspace {
     _private: (),
 }
 impl DeleteWorkspace {
-    /// Creates a new builder-style object to manufacture [`DeleteWorkspaceInput`](crate::input::DeleteWorkspaceInput)
+    /// Creates a new builder-style object to manufacture [`DeleteWorkspaceInput`](crate::input::DeleteWorkspaceInput).
     pub fn builder() -> crate::input::delete_workspace_input::Builder {
         crate::input::delete_workspace_input::Builder::default()
     }
@@ -101,6 +135,40 @@ impl aws_smithy_http::response::ParseStrictResponse for DeleteWorkspace {
     }
 }
 
+/// Operation shape for `DeleteWorkspaceApiKey`.
+///
+/// This is usually constructed for you using the the fluent builder returned by
+/// [`delete_workspace_api_key`](crate::client::Client::delete_workspace_api_key).
+///
+/// See [`crate::client::fluent_builders::DeleteWorkspaceApiKey`] for more details about the operation.
+#[derive(std::default::Default, std::clone::Clone, std::fmt::Debug)]
+pub struct DeleteWorkspaceApiKey {
+    _private: (),
+}
+impl DeleteWorkspaceApiKey {
+    /// Creates a new builder-style object to manufacture [`DeleteWorkspaceApiKeyInput`](crate::input::DeleteWorkspaceApiKeyInput).
+    pub fn builder() -> crate::input::delete_workspace_api_key_input::Builder {
+        crate::input::delete_workspace_api_key_input::Builder::default()
+    }
+    /// Creates a new `DeleteWorkspaceApiKey` operation.
+    pub fn new() -> Self {
+        Self { _private: () }
+    }
+}
+impl aws_smithy_http::response::ParseStrictResponse for DeleteWorkspaceApiKey {
+    type Output = std::result::Result<
+        crate::output::DeleteWorkspaceApiKeyOutput,
+        crate::error::DeleteWorkspaceApiKeyError,
+    >;
+    fn parse(&self, response: &http::Response<bytes::Bytes>) -> Self::Output {
+        if !response.status().is_success() && response.status().as_u16() != 200 {
+            crate::operation_deser::parse_delete_workspace_api_key_error(response)
+        } else {
+            crate::operation_deser::parse_delete_workspace_api_key_response(response)
+        }
+    }
+}
+
 /// Operation shape for `DescribeWorkspace`.
 ///
 /// This is usually constructed for you using the the fluent builder returned by
@@ -112,7 +180,7 @@ pub struct DescribeWorkspace {
     _private: (),
 }
 impl DescribeWorkspace {
-    /// Creates a new builder-style object to manufacture [`DescribeWorkspaceInput`](crate::input::DescribeWorkspaceInput)
+    /// Creates a new builder-style object to manufacture [`DescribeWorkspaceInput`](crate::input::DescribeWorkspaceInput).
     pub fn builder() -> crate::input::describe_workspace_input::Builder {
         crate::input::describe_workspace_input::Builder::default()
     }
@@ -146,7 +214,7 @@ pub struct DescribeWorkspaceAuthentication {
     _private: (),
 }
 impl DescribeWorkspaceAuthentication {
-    /// Creates a new builder-style object to manufacture [`DescribeWorkspaceAuthenticationInput`](crate::input::DescribeWorkspaceAuthenticationInput)
+    /// Creates a new builder-style object to manufacture [`DescribeWorkspaceAuthenticationInput`](crate::input::DescribeWorkspaceAuthenticationInput).
     pub fn builder() -> crate::input::describe_workspace_authentication_input::Builder {
         crate::input::describe_workspace_authentication_input::Builder::default()
     }
@@ -180,7 +248,7 @@ pub struct DisassociateLicense {
     _private: (),
 }
 impl DisassociateLicense {
-    /// Creates a new builder-style object to manufacture [`DisassociateLicenseInput`](crate::input::DisassociateLicenseInput)
+    /// Creates a new builder-style object to manufacture [`DisassociateLicenseInput`](crate::input::DisassociateLicenseInput).
     pub fn builder() -> crate::input::disassociate_license_input::Builder {
         crate::input::disassociate_license_input::Builder::default()
     }
@@ -214,7 +282,7 @@ pub struct ListPermissions {
     _private: (),
 }
 impl ListPermissions {
-    /// Creates a new builder-style object to manufacture [`ListPermissionsInput`](crate::input::ListPermissionsInput)
+    /// Creates a new builder-style object to manufacture [`ListPermissionsInput`](crate::input::ListPermissionsInput).
     pub fn builder() -> crate::input::list_permissions_input::Builder {
         crate::input::list_permissions_input::Builder::default()
     }
@@ -248,7 +316,7 @@ pub struct ListTagsForResource {
     _private: (),
 }
 impl ListTagsForResource {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceInput`](crate::input::ListTagsForResourceInput).
     pub fn builder() -> crate::input::list_tags_for_resource_input::Builder {
         crate::input::list_tags_for_resource_input::Builder::default()
     }
@@ -282,7 +350,7 @@ pub struct ListWorkspaces {
     _private: (),
 }
 impl ListWorkspaces {
-    /// Creates a new builder-style object to manufacture [`ListWorkspacesInput`](crate::input::ListWorkspacesInput)
+    /// Creates a new builder-style object to manufacture [`ListWorkspacesInput`](crate::input::ListWorkspacesInput).
     pub fn builder() -> crate::input::list_workspaces_input::Builder {
         crate::input::list_workspaces_input::Builder::default()
     }
@@ -314,7 +382,7 @@ pub struct TagResource {
     _private: (),
 }
 impl TagResource {
-    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput)
+    /// Creates a new builder-style object to manufacture [`TagResourceInput`](crate::input::TagResourceInput).
     pub fn builder() -> crate::input::tag_resource_input::Builder {
         crate::input::tag_resource_input::Builder::default()
     }
@@ -346,7 +414,7 @@ pub struct UntagResource {
     _private: (),
 }
 impl UntagResource {
-    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceInput`](crate::input::UntagResourceInput).
     pub fn builder() -> crate::input::untag_resource_input::Builder {
         crate::input::untag_resource_input::Builder::default()
     }
@@ -378,7 +446,7 @@ pub struct UpdatePermissions {
     _private: (),
 }
 impl UpdatePermissions {
-    /// Creates a new builder-style object to manufacture [`UpdatePermissionsInput`](crate::input::UpdatePermissionsInput)
+    /// Creates a new builder-style object to manufacture [`UpdatePermissionsInput`](crate::input::UpdatePermissionsInput).
     pub fn builder() -> crate::input::update_permissions_input::Builder {
         crate::input::update_permissions_input::Builder::default()
     }
@@ -412,7 +480,7 @@ pub struct UpdateWorkspace {
     _private: (),
 }
 impl UpdateWorkspace {
-    /// Creates a new builder-style object to manufacture [`UpdateWorkspaceInput`](crate::input::UpdateWorkspaceInput)
+    /// Creates a new builder-style object to manufacture [`UpdateWorkspaceInput`](crate::input::UpdateWorkspaceInput).
     pub fn builder() -> crate::input::update_workspace_input::Builder {
         crate::input::update_workspace_input::Builder::default()
     }
@@ -446,7 +514,7 @@ pub struct UpdateWorkspaceAuthentication {
     _private: (),
 }
 impl UpdateWorkspaceAuthentication {
-    /// Creates a new builder-style object to manufacture [`UpdateWorkspaceAuthenticationInput`](crate::input::UpdateWorkspaceAuthenticationInput)
+    /// Creates a new builder-style object to manufacture [`UpdateWorkspaceAuthenticationInput`](crate::input::UpdateWorkspaceAuthenticationInput).
     pub fn builder() -> crate::input::update_workspace_authentication_input::Builder {
         crate::input::update_workspace_authentication_input::Builder::default()
     }

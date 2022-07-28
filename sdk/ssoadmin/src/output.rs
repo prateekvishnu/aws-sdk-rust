@@ -9,21 +9,21 @@ impl std::fmt::Debug for UpdatePermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`UpdatePermissionSetOutput`](crate::output::UpdatePermissionSetOutput)
+/// See [`UpdatePermissionSetOutput`](crate::output::UpdatePermissionSetOutput).
 pub mod update_permission_set_output {
-    /// A builder for [`UpdatePermissionSetOutput`](crate::output::UpdatePermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdatePermissionSetOutput`](crate::output::UpdatePermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdatePermissionSetOutput`](crate::output::UpdatePermissionSetOutput)
+        /// Consumes the builder and constructs a [`UpdatePermissionSetOutput`](crate::output::UpdatePermissionSetOutput).
         pub fn build(self) -> crate::output::UpdatePermissionSetOutput {
             crate::output::UpdatePermissionSetOutput {}
         }
     }
 }
 impl UpdatePermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`UpdatePermissionSetOutput`](crate::output::UpdatePermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`UpdatePermissionSetOutput`](crate::output::UpdatePermissionSetOutput).
     pub fn builder() -> crate::output::update_permission_set_output::Builder {
         crate::output::update_permission_set_output::Builder::default()
     }
@@ -40,14 +40,14 @@ impl std::fmt::Debug for UpdateInstanceAccessControlAttributeConfigurationOutput
         formatter.finish()
     }
 }
-/// See [`UpdateInstanceAccessControlAttributeConfigurationOutput`](crate::output::UpdateInstanceAccessControlAttributeConfigurationOutput)
+/// See [`UpdateInstanceAccessControlAttributeConfigurationOutput`](crate::output::UpdateInstanceAccessControlAttributeConfigurationOutput).
 pub mod update_instance_access_control_attribute_configuration_output {
-    /// A builder for [`UpdateInstanceAccessControlAttributeConfigurationOutput`](crate::output::UpdateInstanceAccessControlAttributeConfigurationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UpdateInstanceAccessControlAttributeConfigurationOutput`](crate::output::UpdateInstanceAccessControlAttributeConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UpdateInstanceAccessControlAttributeConfigurationOutput`](crate::output::UpdateInstanceAccessControlAttributeConfigurationOutput)
+        /// Consumes the builder and constructs a [`UpdateInstanceAccessControlAttributeConfigurationOutput`](crate::output::UpdateInstanceAccessControlAttributeConfigurationOutput).
         pub fn build(
             self,
         ) -> crate::output::UpdateInstanceAccessControlAttributeConfigurationOutput {
@@ -56,7 +56,7 @@ pub mod update_instance_access_control_attribute_configuration_output {
     }
 }
 impl UpdateInstanceAccessControlAttributeConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`UpdateInstanceAccessControlAttributeConfigurationOutput`](crate::output::UpdateInstanceAccessControlAttributeConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`UpdateInstanceAccessControlAttributeConfigurationOutput`](crate::output::UpdateInstanceAccessControlAttributeConfigurationOutput).
     pub fn builder(
     ) -> crate::output::update_instance_access_control_attribute_configuration_output::Builder {
         crate::output::update_instance_access_control_attribute_configuration_output::Builder::default()
@@ -73,21 +73,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -103,23 +103,53 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct PutPermissionsBoundaryToPermissionSetOutput {}
+impl std::fmt::Debug for PutPermissionsBoundaryToPermissionSetOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("PutPermissionsBoundaryToPermissionSetOutput");
+        formatter.finish()
+    }
+}
+/// See [`PutPermissionsBoundaryToPermissionSetOutput`](crate::output::PutPermissionsBoundaryToPermissionSetOutput).
+pub mod put_permissions_boundary_to_permission_set_output {
+
+    /// A builder for [`PutPermissionsBoundaryToPermissionSetOutput`](crate::output::PutPermissionsBoundaryToPermissionSetOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`PutPermissionsBoundaryToPermissionSetOutput`](crate::output::PutPermissionsBoundaryToPermissionSetOutput).
+        pub fn build(self) -> crate::output::PutPermissionsBoundaryToPermissionSetOutput {
+            crate::output::PutPermissionsBoundaryToPermissionSetOutput {}
+        }
+    }
+}
+impl PutPermissionsBoundaryToPermissionSetOutput {
+    /// Creates a new builder-style object to manufacture [`PutPermissionsBoundaryToPermissionSetOutput`](crate::output::PutPermissionsBoundaryToPermissionSetOutput).
+    pub fn builder() -> crate::output::put_permissions_boundary_to_permission_set_output::Builder {
+        crate::output::put_permissions_boundary_to_permission_set_output::Builder::default()
     }
 }
 
@@ -133,21 +163,21 @@ impl std::fmt::Debug for PutInlinePolicyToPermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`PutInlinePolicyToPermissionSetOutput`](crate::output::PutInlinePolicyToPermissionSetOutput)
+/// See [`PutInlinePolicyToPermissionSetOutput`](crate::output::PutInlinePolicyToPermissionSetOutput).
 pub mod put_inline_policy_to_permission_set_output {
-    /// A builder for [`PutInlinePolicyToPermissionSetOutput`](crate::output::PutInlinePolicyToPermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`PutInlinePolicyToPermissionSetOutput`](crate::output::PutInlinePolicyToPermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutInlinePolicyToPermissionSetOutput`](crate::output::PutInlinePolicyToPermissionSetOutput)
+        /// Consumes the builder and constructs a [`PutInlinePolicyToPermissionSetOutput`](crate::output::PutInlinePolicyToPermissionSetOutput).
         pub fn build(self) -> crate::output::PutInlinePolicyToPermissionSetOutput {
             crate::output::PutInlinePolicyToPermissionSetOutput {}
         }
     }
 }
 impl PutInlinePolicyToPermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`PutInlinePolicyToPermissionSetOutput`](crate::output::PutInlinePolicyToPermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`PutInlinePolicyToPermissionSetOutput`](crate::output::PutInlinePolicyToPermissionSetOutput).
     pub fn builder() -> crate::output::put_inline_policy_to_permission_set_output::Builder {
         crate::output::put_inline_policy_to_permission_set_output::Builder::default()
     }
@@ -179,10 +209,10 @@ impl std::fmt::Debug for ProvisionPermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`ProvisionPermissionSetOutput`](crate::output::ProvisionPermissionSetOutput)
+/// See [`ProvisionPermissionSetOutput`](crate::output::ProvisionPermissionSetOutput).
 pub mod provision_permission_set_output {
-    /// A builder for [`ProvisionPermissionSetOutput`](crate::output::ProvisionPermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ProvisionPermissionSetOutput`](crate::output::ProvisionPermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_set_provisioning_status:
@@ -205,7 +235,7 @@ pub mod provision_permission_set_output {
             self.permission_set_provisioning_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`ProvisionPermissionSetOutput`](crate::output::ProvisionPermissionSetOutput)
+        /// Consumes the builder and constructs a [`ProvisionPermissionSetOutput`](crate::output::ProvisionPermissionSetOutput).
         pub fn build(self) -> crate::output::ProvisionPermissionSetOutput {
             crate::output::ProvisionPermissionSetOutput {
                 permission_set_provisioning_status: self.permission_set_provisioning_status,
@@ -214,7 +244,7 @@ pub mod provision_permission_set_output {
     }
 }
 impl ProvisionPermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`ProvisionPermissionSetOutput`](crate::output::ProvisionPermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`ProvisionPermissionSetOutput`](crate::output::ProvisionPermissionSetOutput).
     pub fn builder() -> crate::output::provision_permission_set_output::Builder {
         crate::output::provision_permission_set_output::Builder::default()
     }
@@ -247,10 +277,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<std::vec::Vec<crate::model::Tag>>,
@@ -286,7 +316,7 @@ pub mod list_tags_for_resource_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput {
                 tags: self.tags,
@@ -296,7 +326,7 @@ pub mod list_tags_for_resource_output {
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -329,10 +359,10 @@ impl std::fmt::Debug for ListPermissionSetsProvisionedToAccountOutput {
         formatter.finish()
     }
 }
-/// See [`ListPermissionSetsProvisionedToAccountOutput`](crate::output::ListPermissionSetsProvisionedToAccountOutput)
+/// See [`ListPermissionSetsProvisionedToAccountOutput`](crate::output::ListPermissionSetsProvisionedToAccountOutput).
 pub mod list_permission_sets_provisioned_to_account_output {
-    /// A builder for [`ListPermissionSetsProvisionedToAccountOutput`](crate::output::ListPermissionSetsProvisionedToAccountOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListPermissionSetsProvisionedToAccountOutput`](crate::output::ListPermissionSetsProvisionedToAccountOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) next_token: std::option::Option<std::string::String>,
@@ -368,7 +398,7 @@ pub mod list_permission_sets_provisioned_to_account_output {
             self.permission_sets = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPermissionSetsProvisionedToAccountOutput`](crate::output::ListPermissionSetsProvisionedToAccountOutput)
+        /// Consumes the builder and constructs a [`ListPermissionSetsProvisionedToAccountOutput`](crate::output::ListPermissionSetsProvisionedToAccountOutput).
         pub fn build(self) -> crate::output::ListPermissionSetsProvisionedToAccountOutput {
             crate::output::ListPermissionSetsProvisionedToAccountOutput {
                 next_token: self.next_token,
@@ -378,7 +408,7 @@ pub mod list_permission_sets_provisioned_to_account_output {
     }
 }
 impl ListPermissionSetsProvisionedToAccountOutput {
-    /// Creates a new builder-style object to manufacture [`ListPermissionSetsProvisionedToAccountOutput`](crate::output::ListPermissionSetsProvisionedToAccountOutput)
+    /// Creates a new builder-style object to manufacture [`ListPermissionSetsProvisionedToAccountOutput`](crate::output::ListPermissionSetsProvisionedToAccountOutput).
     pub fn builder() -> crate::output::list_permission_sets_provisioned_to_account_output::Builder {
         crate::output::list_permission_sets_provisioned_to_account_output::Builder::default()
     }
@@ -411,10 +441,10 @@ impl std::fmt::Debug for ListPermissionSetsOutput {
         formatter.finish()
     }
 }
-/// See [`ListPermissionSetsOutput`](crate::output::ListPermissionSetsOutput)
+/// See [`ListPermissionSetsOutput`](crate::output::ListPermissionSetsOutput).
 pub mod list_permission_sets_output {
-    /// A builder for [`ListPermissionSetsOutput`](crate::output::ListPermissionSetsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListPermissionSetsOutput`](crate::output::ListPermissionSetsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_sets: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -450,7 +480,7 @@ pub mod list_permission_sets_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPermissionSetsOutput`](crate::output::ListPermissionSetsOutput)
+        /// Consumes the builder and constructs a [`ListPermissionSetsOutput`](crate::output::ListPermissionSetsOutput).
         pub fn build(self) -> crate::output::ListPermissionSetsOutput {
             crate::output::ListPermissionSetsOutput {
                 permission_sets: self.permission_sets,
@@ -460,7 +490,7 @@ pub mod list_permission_sets_output {
     }
 }
 impl ListPermissionSetsOutput {
-    /// Creates a new builder-style object to manufacture [`ListPermissionSetsOutput`](crate::output::ListPermissionSetsOutput)
+    /// Creates a new builder-style object to manufacture [`ListPermissionSetsOutput`](crate::output::ListPermissionSetsOutput).
     pub fn builder() -> crate::output::list_permission_sets_output::Builder {
         crate::output::list_permission_sets_output::Builder::default()
     }
@@ -499,10 +529,10 @@ impl std::fmt::Debug for ListPermissionSetProvisioningStatusOutput {
         formatter.finish()
     }
 }
-/// See [`ListPermissionSetProvisioningStatusOutput`](crate::output::ListPermissionSetProvisioningStatusOutput)
+/// See [`ListPermissionSetProvisioningStatusOutput`](crate::output::ListPermissionSetProvisioningStatusOutput).
 pub mod list_permission_set_provisioning_status_output {
-    /// A builder for [`ListPermissionSetProvisioningStatusOutput`](crate::output::ListPermissionSetProvisioningStatusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListPermissionSetProvisioningStatusOutput`](crate::output::ListPermissionSetProvisioningStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_sets_provisioning_status: std::option::Option<
@@ -545,7 +575,7 @@ pub mod list_permission_set_provisioning_status_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListPermissionSetProvisioningStatusOutput`](crate::output::ListPermissionSetProvisioningStatusOutput)
+        /// Consumes the builder and constructs a [`ListPermissionSetProvisioningStatusOutput`](crate::output::ListPermissionSetProvisioningStatusOutput).
         pub fn build(self) -> crate::output::ListPermissionSetProvisioningStatusOutput {
             crate::output::ListPermissionSetProvisioningStatusOutput {
                 permission_sets_provisioning_status: self.permission_sets_provisioning_status,
@@ -555,7 +585,7 @@ pub mod list_permission_set_provisioning_status_output {
     }
 }
 impl ListPermissionSetProvisioningStatusOutput {
-    /// Creates a new builder-style object to manufacture [`ListPermissionSetProvisioningStatusOutput`](crate::output::ListPermissionSetProvisioningStatusOutput)
+    /// Creates a new builder-style object to manufacture [`ListPermissionSetProvisioningStatusOutput`](crate::output::ListPermissionSetProvisioningStatusOutput).
     pub fn builder() -> crate::output::list_permission_set_provisioning_status_output::Builder {
         crate::output::list_permission_set_provisioning_status_output::Builder::default()
     }
@@ -591,10 +621,10 @@ impl std::fmt::Debug for ListManagedPoliciesInPermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`ListManagedPoliciesInPermissionSetOutput`](crate::output::ListManagedPoliciesInPermissionSetOutput)
+/// See [`ListManagedPoliciesInPermissionSetOutput`](crate::output::ListManagedPoliciesInPermissionSetOutput).
 pub mod list_managed_policies_in_permission_set_output {
-    /// A builder for [`ListManagedPoliciesInPermissionSetOutput`](crate::output::ListManagedPoliciesInPermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListManagedPoliciesInPermissionSetOutput`](crate::output::ListManagedPoliciesInPermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) attached_managed_policies:
@@ -634,7 +664,7 @@ pub mod list_managed_policies_in_permission_set_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListManagedPoliciesInPermissionSetOutput`](crate::output::ListManagedPoliciesInPermissionSetOutput)
+        /// Consumes the builder and constructs a [`ListManagedPoliciesInPermissionSetOutput`](crate::output::ListManagedPoliciesInPermissionSetOutput).
         pub fn build(self) -> crate::output::ListManagedPoliciesInPermissionSetOutput {
             crate::output::ListManagedPoliciesInPermissionSetOutput {
                 attached_managed_policies: self.attached_managed_policies,
@@ -644,7 +674,7 @@ pub mod list_managed_policies_in_permission_set_output {
     }
 }
 impl ListManagedPoliciesInPermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`ListManagedPoliciesInPermissionSetOutput`](crate::output::ListManagedPoliciesInPermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`ListManagedPoliciesInPermissionSetOutput`](crate::output::ListManagedPoliciesInPermissionSetOutput).
     pub fn builder() -> crate::output::list_managed_policies_in_permission_set_output::Builder {
         crate::output::list_managed_policies_in_permission_set_output::Builder::default()
     }
@@ -677,10 +707,10 @@ impl std::fmt::Debug for ListInstancesOutput {
         formatter.finish()
     }
 }
-/// See [`ListInstancesOutput`](crate::output::ListInstancesOutput)
+/// See [`ListInstancesOutput`](crate::output::ListInstancesOutput).
 pub mod list_instances_output {
-    /// A builder for [`ListInstancesOutput`](crate::output::ListInstancesOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListInstancesOutput`](crate::output::ListInstancesOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) instances: std::option::Option<std::vec::Vec<crate::model::InstanceMetadata>>,
@@ -716,7 +746,7 @@ pub mod list_instances_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListInstancesOutput`](crate::output::ListInstancesOutput)
+        /// Consumes the builder and constructs a [`ListInstancesOutput`](crate::output::ListInstancesOutput).
         pub fn build(self) -> crate::output::ListInstancesOutput {
             crate::output::ListInstancesOutput {
                 instances: self.instances,
@@ -726,9 +756,106 @@ pub mod list_instances_output {
     }
 }
 impl ListInstancesOutput {
-    /// Creates a new builder-style object to manufacture [`ListInstancesOutput`](crate::output::ListInstancesOutput)
+    /// Creates a new builder-style object to manufacture [`ListInstancesOutput`](crate::output::ListInstancesOutput).
     pub fn builder() -> crate::output::list_instances_output::Builder {
         crate::output::list_instances_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct ListCustomerManagedPolicyReferencesInPermissionSetOutput {
+    /// <p>Specifies the names and paths of the IAM customer managed policies that you have attached to your permission set.</p>
+    pub customer_managed_policy_references:
+        std::option::Option<std::vec::Vec<crate::model::CustomerManagedPolicyReference>>,
+    /// <p>The pagination token for the list API. Initially the value is null. Use the output of previous API calls to make subsequent calls.</p>
+    pub next_token: std::option::Option<std::string::String>,
+}
+impl ListCustomerManagedPolicyReferencesInPermissionSetOutput {
+    /// <p>Specifies the names and paths of the IAM customer managed policies that you have attached to your permission set.</p>
+    pub fn customer_managed_policy_references(
+        &self,
+    ) -> std::option::Option<&[crate::model::CustomerManagedPolicyReference]> {
+        self.customer_managed_policy_references.as_deref()
+    }
+    /// <p>The pagination token for the list API. Initially the value is null. Use the output of previous API calls to make subsequent calls.</p>
+    pub fn next_token(&self) -> std::option::Option<&str> {
+        self.next_token.as_deref()
+    }
+}
+impl std::fmt::Debug for ListCustomerManagedPolicyReferencesInPermissionSetOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter =
+            f.debug_struct("ListCustomerManagedPolicyReferencesInPermissionSetOutput");
+        formatter.field(
+            "customer_managed_policy_references",
+            &self.customer_managed_policy_references,
+        );
+        formatter.field("next_token", &self.next_token);
+        formatter.finish()
+    }
+}
+/// See [`ListCustomerManagedPolicyReferencesInPermissionSetOutput`](crate::output::ListCustomerManagedPolicyReferencesInPermissionSetOutput).
+pub mod list_customer_managed_policy_references_in_permission_set_output {
+
+    /// A builder for [`ListCustomerManagedPolicyReferencesInPermissionSetOutput`](crate::output::ListCustomerManagedPolicyReferencesInPermissionSetOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) customer_managed_policy_references:
+            std::option::Option<std::vec::Vec<crate::model::CustomerManagedPolicyReference>>,
+        pub(crate) next_token: std::option::Option<std::string::String>,
+    }
+    impl Builder {
+        /// Appends an item to `customer_managed_policy_references`.
+        ///
+        /// To override the contents of this collection use [`set_customer_managed_policy_references`](Self::set_customer_managed_policy_references).
+        ///
+        /// <p>Specifies the names and paths of the IAM customer managed policies that you have attached to your permission set.</p>
+        pub fn customer_managed_policy_references(
+            mut self,
+            input: crate::model::CustomerManagedPolicyReference,
+        ) -> Self {
+            let mut v = self.customer_managed_policy_references.unwrap_or_default();
+            v.push(input);
+            self.customer_managed_policy_references = Some(v);
+            self
+        }
+        /// <p>Specifies the names and paths of the IAM customer managed policies that you have attached to your permission set.</p>
+        pub fn set_customer_managed_policy_references(
+            mut self,
+            input: std::option::Option<std::vec::Vec<crate::model::CustomerManagedPolicyReference>>,
+        ) -> Self {
+            self.customer_managed_policy_references = input;
+            self
+        }
+        /// <p>The pagination token for the list API. Initially the value is null. Use the output of previous API calls to make subsequent calls.</p>
+        pub fn next_token(mut self, input: impl Into<std::string::String>) -> Self {
+            self.next_token = Some(input.into());
+            self
+        }
+        /// <p>The pagination token for the list API. Initially the value is null. Use the output of previous API calls to make subsequent calls.</p>
+        pub fn set_next_token(mut self, input: std::option::Option<std::string::String>) -> Self {
+            self.next_token = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`ListCustomerManagedPolicyReferencesInPermissionSetOutput`](crate::output::ListCustomerManagedPolicyReferencesInPermissionSetOutput).
+        pub fn build(
+            self,
+        ) -> crate::output::ListCustomerManagedPolicyReferencesInPermissionSetOutput {
+            crate::output::ListCustomerManagedPolicyReferencesInPermissionSetOutput {
+                customer_managed_policy_references: self.customer_managed_policy_references,
+                next_token: self.next_token,
+            }
+        }
+    }
+}
+impl ListCustomerManagedPolicyReferencesInPermissionSetOutput {
+    /// Creates a new builder-style object to manufacture [`ListCustomerManagedPolicyReferencesInPermissionSetOutput`](crate::output::ListCustomerManagedPolicyReferencesInPermissionSetOutput).
+    pub fn builder(
+    ) -> crate::output::list_customer_managed_policy_references_in_permission_set_output::Builder
+    {
+        crate::output::list_customer_managed_policy_references_in_permission_set_output::Builder::default()
     }
 }
 
@@ -759,10 +886,10 @@ impl std::fmt::Debug for ListAccountsForProvisionedPermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`ListAccountsForProvisionedPermissionSetOutput`](crate::output::ListAccountsForProvisionedPermissionSetOutput)
+/// See [`ListAccountsForProvisionedPermissionSetOutput`](crate::output::ListAccountsForProvisionedPermissionSetOutput).
 pub mod list_accounts_for_provisioned_permission_set_output {
-    /// A builder for [`ListAccountsForProvisionedPermissionSetOutput`](crate::output::ListAccountsForProvisionedPermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListAccountsForProvisionedPermissionSetOutput`](crate::output::ListAccountsForProvisionedPermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_ids: std::option::Option<std::vec::Vec<std::string::String>>,
@@ -798,7 +925,7 @@ pub mod list_accounts_for_provisioned_permission_set_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAccountsForProvisionedPermissionSetOutput`](crate::output::ListAccountsForProvisionedPermissionSetOutput)
+        /// Consumes the builder and constructs a [`ListAccountsForProvisionedPermissionSetOutput`](crate::output::ListAccountsForProvisionedPermissionSetOutput).
         pub fn build(self) -> crate::output::ListAccountsForProvisionedPermissionSetOutput {
             crate::output::ListAccountsForProvisionedPermissionSetOutput {
                 account_ids: self.account_ids,
@@ -808,7 +935,7 @@ pub mod list_accounts_for_provisioned_permission_set_output {
     }
 }
 impl ListAccountsForProvisionedPermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`ListAccountsForProvisionedPermissionSetOutput`](crate::output::ListAccountsForProvisionedPermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`ListAccountsForProvisionedPermissionSetOutput`](crate::output::ListAccountsForProvisionedPermissionSetOutput).
     pub fn builder() -> crate::output::list_accounts_for_provisioned_permission_set_output::Builder
     {
         crate::output::list_accounts_for_provisioned_permission_set_output::Builder::default()
@@ -842,10 +969,10 @@ impl std::fmt::Debug for ListAccountAssignmentsOutput {
         formatter.finish()
     }
 }
-/// See [`ListAccountAssignmentsOutput`](crate::output::ListAccountAssignmentsOutput)
+/// See [`ListAccountAssignmentsOutput`](crate::output::ListAccountAssignmentsOutput).
 pub mod list_account_assignments_output {
-    /// A builder for [`ListAccountAssignmentsOutput`](crate::output::ListAccountAssignmentsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListAccountAssignmentsOutput`](crate::output::ListAccountAssignmentsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_assignments:
@@ -882,7 +1009,7 @@ pub mod list_account_assignments_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAccountAssignmentsOutput`](crate::output::ListAccountAssignmentsOutput)
+        /// Consumes the builder and constructs a [`ListAccountAssignmentsOutput`](crate::output::ListAccountAssignmentsOutput).
         pub fn build(self) -> crate::output::ListAccountAssignmentsOutput {
             crate::output::ListAccountAssignmentsOutput {
                 account_assignments: self.account_assignments,
@@ -892,7 +1019,7 @@ pub mod list_account_assignments_output {
     }
 }
 impl ListAccountAssignmentsOutput {
-    /// Creates a new builder-style object to manufacture [`ListAccountAssignmentsOutput`](crate::output::ListAccountAssignmentsOutput)
+    /// Creates a new builder-style object to manufacture [`ListAccountAssignmentsOutput`](crate::output::ListAccountAssignmentsOutput).
     pub fn builder() -> crate::output::list_account_assignments_output::Builder {
         crate::output::list_account_assignments_output::Builder::default()
     }
@@ -931,10 +1058,10 @@ impl std::fmt::Debug for ListAccountAssignmentDeletionStatusOutput {
         formatter.finish()
     }
 }
-/// See [`ListAccountAssignmentDeletionStatusOutput`](crate::output::ListAccountAssignmentDeletionStatusOutput)
+/// See [`ListAccountAssignmentDeletionStatusOutput`](crate::output::ListAccountAssignmentDeletionStatusOutput).
 pub mod list_account_assignment_deletion_status_output {
-    /// A builder for [`ListAccountAssignmentDeletionStatusOutput`](crate::output::ListAccountAssignmentDeletionStatusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListAccountAssignmentDeletionStatusOutput`](crate::output::ListAccountAssignmentDeletionStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_assignments_deletion_status: std::option::Option<
@@ -977,7 +1104,7 @@ pub mod list_account_assignment_deletion_status_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAccountAssignmentDeletionStatusOutput`](crate::output::ListAccountAssignmentDeletionStatusOutput)
+        /// Consumes the builder and constructs a [`ListAccountAssignmentDeletionStatusOutput`](crate::output::ListAccountAssignmentDeletionStatusOutput).
         pub fn build(self) -> crate::output::ListAccountAssignmentDeletionStatusOutput {
             crate::output::ListAccountAssignmentDeletionStatusOutput {
                 account_assignments_deletion_status: self.account_assignments_deletion_status,
@@ -987,7 +1114,7 @@ pub mod list_account_assignment_deletion_status_output {
     }
 }
 impl ListAccountAssignmentDeletionStatusOutput {
-    /// Creates a new builder-style object to manufacture [`ListAccountAssignmentDeletionStatusOutput`](crate::output::ListAccountAssignmentDeletionStatusOutput)
+    /// Creates a new builder-style object to manufacture [`ListAccountAssignmentDeletionStatusOutput`](crate::output::ListAccountAssignmentDeletionStatusOutput).
     pub fn builder() -> crate::output::list_account_assignment_deletion_status_output::Builder {
         crate::output::list_account_assignment_deletion_status_output::Builder::default()
     }
@@ -1026,10 +1153,10 @@ impl std::fmt::Debug for ListAccountAssignmentCreationStatusOutput {
         formatter.finish()
     }
 }
-/// See [`ListAccountAssignmentCreationStatusOutput`](crate::output::ListAccountAssignmentCreationStatusOutput)
+/// See [`ListAccountAssignmentCreationStatusOutput`](crate::output::ListAccountAssignmentCreationStatusOutput).
 pub mod list_account_assignment_creation_status_output {
-    /// A builder for [`ListAccountAssignmentCreationStatusOutput`](crate::output::ListAccountAssignmentCreationStatusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListAccountAssignmentCreationStatusOutput`](crate::output::ListAccountAssignmentCreationStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_assignments_creation_status: std::option::Option<
@@ -1072,7 +1199,7 @@ pub mod list_account_assignment_creation_status_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListAccountAssignmentCreationStatusOutput`](crate::output::ListAccountAssignmentCreationStatusOutput)
+        /// Consumes the builder and constructs a [`ListAccountAssignmentCreationStatusOutput`](crate::output::ListAccountAssignmentCreationStatusOutput).
         pub fn build(self) -> crate::output::ListAccountAssignmentCreationStatusOutput {
             crate::output::ListAccountAssignmentCreationStatusOutput {
                 account_assignments_creation_status: self.account_assignments_creation_status,
@@ -1082,9 +1209,66 @@ pub mod list_account_assignment_creation_status_output {
     }
 }
 impl ListAccountAssignmentCreationStatusOutput {
-    /// Creates a new builder-style object to manufacture [`ListAccountAssignmentCreationStatusOutput`](crate::output::ListAccountAssignmentCreationStatusOutput)
+    /// Creates a new builder-style object to manufacture [`ListAccountAssignmentCreationStatusOutput`](crate::output::ListAccountAssignmentCreationStatusOutput).
     pub fn builder() -> crate::output::list_account_assignment_creation_status_output::Builder {
         crate::output::list_account_assignment_creation_status_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct GetPermissionsBoundaryForPermissionSetOutput {
+    /// <p>The permissions boundary attached to the specified permission set.</p>
+    pub permissions_boundary: std::option::Option<crate::model::PermissionsBoundary>,
+}
+impl GetPermissionsBoundaryForPermissionSetOutput {
+    /// <p>The permissions boundary attached to the specified permission set.</p>
+    pub fn permissions_boundary(&self) -> std::option::Option<&crate::model::PermissionsBoundary> {
+        self.permissions_boundary.as_ref()
+    }
+}
+impl std::fmt::Debug for GetPermissionsBoundaryForPermissionSetOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("GetPermissionsBoundaryForPermissionSetOutput");
+        formatter.field("permissions_boundary", &self.permissions_boundary);
+        formatter.finish()
+    }
+}
+/// See [`GetPermissionsBoundaryForPermissionSetOutput`](crate::output::GetPermissionsBoundaryForPermissionSetOutput).
+pub mod get_permissions_boundary_for_permission_set_output {
+
+    /// A builder for [`GetPermissionsBoundaryForPermissionSetOutput`](crate::output::GetPermissionsBoundaryForPermissionSetOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {
+        pub(crate) permissions_boundary: std::option::Option<crate::model::PermissionsBoundary>,
+    }
+    impl Builder {
+        /// <p>The permissions boundary attached to the specified permission set.</p>
+        pub fn permissions_boundary(mut self, input: crate::model::PermissionsBoundary) -> Self {
+            self.permissions_boundary = Some(input);
+            self
+        }
+        /// <p>The permissions boundary attached to the specified permission set.</p>
+        pub fn set_permissions_boundary(
+            mut self,
+            input: std::option::Option<crate::model::PermissionsBoundary>,
+        ) -> Self {
+            self.permissions_boundary = input;
+            self
+        }
+        /// Consumes the builder and constructs a [`GetPermissionsBoundaryForPermissionSetOutput`](crate::output::GetPermissionsBoundaryForPermissionSetOutput).
+        pub fn build(self) -> crate::output::GetPermissionsBoundaryForPermissionSetOutput {
+            crate::output::GetPermissionsBoundaryForPermissionSetOutput {
+                permissions_boundary: self.permissions_boundary,
+            }
+        }
+    }
+}
+impl GetPermissionsBoundaryForPermissionSetOutput {
+    /// Creates a new builder-style object to manufacture [`GetPermissionsBoundaryForPermissionSetOutput`](crate::output::GetPermissionsBoundaryForPermissionSetOutput).
+    pub fn builder() -> crate::output::get_permissions_boundary_for_permission_set_output::Builder {
+        crate::output::get_permissions_boundary_for_permission_set_output::Builder::default()
     }
 }
 
@@ -1104,14 +1288,14 @@ impl GetInlinePolicyForPermissionSetOutput {
 impl std::fmt::Debug for GetInlinePolicyForPermissionSetOutput {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let mut formatter = f.debug_struct("GetInlinePolicyForPermissionSetOutput");
-        formatter.field("inline_policy", &"*** Sensitive Data Redacted ***");
+        formatter.field("inline_policy", &self.inline_policy);
         formatter.finish()
     }
 }
-/// See [`GetInlinePolicyForPermissionSetOutput`](crate::output::GetInlinePolicyForPermissionSetOutput)
+/// See [`GetInlinePolicyForPermissionSetOutput`](crate::output::GetInlinePolicyForPermissionSetOutput).
 pub mod get_inline_policy_for_permission_set_output {
-    /// A builder for [`GetInlinePolicyForPermissionSetOutput`](crate::output::GetInlinePolicyForPermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`GetInlinePolicyForPermissionSetOutput`](crate::output::GetInlinePolicyForPermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) inline_policy: std::option::Option<std::string::String>,
@@ -1130,7 +1314,7 @@ pub mod get_inline_policy_for_permission_set_output {
             self.inline_policy = input;
             self
         }
-        /// Consumes the builder and constructs a [`GetInlinePolicyForPermissionSetOutput`](crate::output::GetInlinePolicyForPermissionSetOutput)
+        /// Consumes the builder and constructs a [`GetInlinePolicyForPermissionSetOutput`](crate::output::GetInlinePolicyForPermissionSetOutput).
         pub fn build(self) -> crate::output::GetInlinePolicyForPermissionSetOutput {
             crate::output::GetInlinePolicyForPermissionSetOutput {
                 inline_policy: self.inline_policy,
@@ -1139,7 +1323,7 @@ pub mod get_inline_policy_for_permission_set_output {
     }
 }
 impl GetInlinePolicyForPermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`GetInlinePolicyForPermissionSetOutput`](crate::output::GetInlinePolicyForPermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`GetInlinePolicyForPermissionSetOutput`](crate::output::GetInlinePolicyForPermissionSetOutput).
     pub fn builder() -> crate::output::get_inline_policy_for_permission_set_output::Builder {
         crate::output::get_inline_policy_for_permission_set_output::Builder::default()
     }
@@ -1155,23 +1339,58 @@ impl std::fmt::Debug for DetachManagedPolicyFromPermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`DetachManagedPolicyFromPermissionSetOutput`](crate::output::DetachManagedPolicyFromPermissionSetOutput)
+/// See [`DetachManagedPolicyFromPermissionSetOutput`](crate::output::DetachManagedPolicyFromPermissionSetOutput).
 pub mod detach_managed_policy_from_permission_set_output {
-    /// A builder for [`DetachManagedPolicyFromPermissionSetOutput`](crate::output::DetachManagedPolicyFromPermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DetachManagedPolicyFromPermissionSetOutput`](crate::output::DetachManagedPolicyFromPermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DetachManagedPolicyFromPermissionSetOutput`](crate::output::DetachManagedPolicyFromPermissionSetOutput)
+        /// Consumes the builder and constructs a [`DetachManagedPolicyFromPermissionSetOutput`](crate::output::DetachManagedPolicyFromPermissionSetOutput).
         pub fn build(self) -> crate::output::DetachManagedPolicyFromPermissionSetOutput {
             crate::output::DetachManagedPolicyFromPermissionSetOutput {}
         }
     }
 }
 impl DetachManagedPolicyFromPermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`DetachManagedPolicyFromPermissionSetOutput`](crate::output::DetachManagedPolicyFromPermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`DetachManagedPolicyFromPermissionSetOutput`](crate::output::DetachManagedPolicyFromPermissionSetOutput).
     pub fn builder() -> crate::output::detach_managed_policy_from_permission_set_output::Builder {
         crate::output::detach_managed_policy_from_permission_set_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DetachCustomerManagedPolicyReferenceFromPermissionSetOutput {}
+impl std::fmt::Debug for DetachCustomerManagedPolicyReferenceFromPermissionSetOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter =
+            f.debug_struct("DetachCustomerManagedPolicyReferenceFromPermissionSetOutput");
+        formatter.finish()
+    }
+}
+/// See [`DetachCustomerManagedPolicyReferenceFromPermissionSetOutput`](crate::output::DetachCustomerManagedPolicyReferenceFromPermissionSetOutput).
+pub mod detach_customer_managed_policy_reference_from_permission_set_output {
+
+    /// A builder for [`DetachCustomerManagedPolicyReferenceFromPermissionSetOutput`](crate::output::DetachCustomerManagedPolicyReferenceFromPermissionSetOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`DetachCustomerManagedPolicyReferenceFromPermissionSetOutput`](crate::output::DetachCustomerManagedPolicyReferenceFromPermissionSetOutput).
+        pub fn build(
+            self,
+        ) -> crate::output::DetachCustomerManagedPolicyReferenceFromPermissionSetOutput {
+            crate::output::DetachCustomerManagedPolicyReferenceFromPermissionSetOutput {}
+        }
+    }
+}
+impl DetachCustomerManagedPolicyReferenceFromPermissionSetOutput {
+    /// Creates a new builder-style object to manufacture [`DetachCustomerManagedPolicyReferenceFromPermissionSetOutput`](crate::output::DetachCustomerManagedPolicyReferenceFromPermissionSetOutput).
+    pub fn builder(
+    ) -> crate::output::detach_customer_managed_policy_reference_from_permission_set_output::Builder
+    {
+        crate::output::detach_customer_managed_policy_reference_from_permission_set_output::Builder::default()
     }
 }
 
@@ -1201,10 +1420,10 @@ impl std::fmt::Debug for DescribePermissionSetProvisioningStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribePermissionSetProvisioningStatusOutput`](crate::output::DescribePermissionSetProvisioningStatusOutput)
+/// See [`DescribePermissionSetProvisioningStatusOutput`](crate::output::DescribePermissionSetProvisioningStatusOutput).
 pub mod describe_permission_set_provisioning_status_output {
-    /// A builder for [`DescribePermissionSetProvisioningStatusOutput`](crate::output::DescribePermissionSetProvisioningStatusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribePermissionSetProvisioningStatusOutput`](crate::output::DescribePermissionSetProvisioningStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_set_provisioning_status:
@@ -1227,7 +1446,7 @@ pub mod describe_permission_set_provisioning_status_output {
             self.permission_set_provisioning_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribePermissionSetProvisioningStatusOutput`](crate::output::DescribePermissionSetProvisioningStatusOutput)
+        /// Consumes the builder and constructs a [`DescribePermissionSetProvisioningStatusOutput`](crate::output::DescribePermissionSetProvisioningStatusOutput).
         pub fn build(self) -> crate::output::DescribePermissionSetProvisioningStatusOutput {
             crate::output::DescribePermissionSetProvisioningStatusOutput {
                 permission_set_provisioning_status: self.permission_set_provisioning_status,
@@ -1236,7 +1455,7 @@ pub mod describe_permission_set_provisioning_status_output {
     }
 }
 impl DescribePermissionSetProvisioningStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribePermissionSetProvisioningStatusOutput`](crate::output::DescribePermissionSetProvisioningStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribePermissionSetProvisioningStatusOutput`](crate::output::DescribePermissionSetProvisioningStatusOutput).
     pub fn builder() -> crate::output::describe_permission_set_provisioning_status_output::Builder {
         crate::output::describe_permission_set_provisioning_status_output::Builder::default()
     }
@@ -1262,10 +1481,10 @@ impl std::fmt::Debug for DescribePermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`DescribePermissionSetOutput`](crate::output::DescribePermissionSetOutput)
+/// See [`DescribePermissionSetOutput`](crate::output::DescribePermissionSetOutput).
 pub mod describe_permission_set_output {
-    /// A builder for [`DescribePermissionSetOutput`](crate::output::DescribePermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribePermissionSetOutput`](crate::output::DescribePermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_set: std::option::Option<crate::model::PermissionSet>,
@@ -1284,7 +1503,7 @@ pub mod describe_permission_set_output {
             self.permission_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribePermissionSetOutput`](crate::output::DescribePermissionSetOutput)
+        /// Consumes the builder and constructs a [`DescribePermissionSetOutput`](crate::output::DescribePermissionSetOutput).
         pub fn build(self) -> crate::output::DescribePermissionSetOutput {
             crate::output::DescribePermissionSetOutput {
                 permission_set: self.permission_set,
@@ -1293,7 +1512,7 @@ pub mod describe_permission_set_output {
     }
 }
 impl DescribePermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`DescribePermissionSetOutput`](crate::output::DescribePermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`DescribePermissionSetOutput`](crate::output::DescribePermissionSetOutput).
     pub fn builder() -> crate::output::describe_permission_set_output::Builder {
         crate::output::describe_permission_set_output::Builder::default()
     }
@@ -1344,10 +1563,10 @@ impl std::fmt::Debug for DescribeInstanceAccessControlAttributeConfigurationOutp
         formatter.finish()
     }
 }
-/// See [`DescribeInstanceAccessControlAttributeConfigurationOutput`](crate::output::DescribeInstanceAccessControlAttributeConfigurationOutput)
+/// See [`DescribeInstanceAccessControlAttributeConfigurationOutput`](crate::output::DescribeInstanceAccessControlAttributeConfigurationOutput).
 pub mod describe_instance_access_control_attribute_configuration_output {
-    /// A builder for [`DescribeInstanceAccessControlAttributeConfigurationOutput`](crate::output::DescribeInstanceAccessControlAttributeConfigurationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeInstanceAccessControlAttributeConfigurationOutput`](crate::output::DescribeInstanceAccessControlAttributeConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) status:
@@ -1404,7 +1623,7 @@ pub mod describe_instance_access_control_attribute_configuration_output {
             self.instance_access_control_attribute_configuration = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeInstanceAccessControlAttributeConfigurationOutput`](crate::output::DescribeInstanceAccessControlAttributeConfigurationOutput)
+        /// Consumes the builder and constructs a [`DescribeInstanceAccessControlAttributeConfigurationOutput`](crate::output::DescribeInstanceAccessControlAttributeConfigurationOutput).
         pub fn build(
             self,
         ) -> crate::output::DescribeInstanceAccessControlAttributeConfigurationOutput {
@@ -1418,7 +1637,7 @@ pub mod describe_instance_access_control_attribute_configuration_output {
     }
 }
 impl DescribeInstanceAccessControlAttributeConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeInstanceAccessControlAttributeConfigurationOutput`](crate::output::DescribeInstanceAccessControlAttributeConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeInstanceAccessControlAttributeConfigurationOutput`](crate::output::DescribeInstanceAccessControlAttributeConfigurationOutput).
     pub fn builder(
     ) -> crate::output::describe_instance_access_control_attribute_configuration_output::Builder
     {
@@ -1452,10 +1671,10 @@ impl std::fmt::Debug for DescribeAccountAssignmentDeletionStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAccountAssignmentDeletionStatusOutput`](crate::output::DescribeAccountAssignmentDeletionStatusOutput)
+/// See [`DescribeAccountAssignmentDeletionStatusOutput`](crate::output::DescribeAccountAssignmentDeletionStatusOutput).
 pub mod describe_account_assignment_deletion_status_output {
-    /// A builder for [`DescribeAccountAssignmentDeletionStatusOutput`](crate::output::DescribeAccountAssignmentDeletionStatusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeAccountAssignmentDeletionStatusOutput`](crate::output::DescribeAccountAssignmentDeletionStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_assignment_deletion_status:
@@ -1478,7 +1697,7 @@ pub mod describe_account_assignment_deletion_status_output {
             self.account_assignment_deletion_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAccountAssignmentDeletionStatusOutput`](crate::output::DescribeAccountAssignmentDeletionStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeAccountAssignmentDeletionStatusOutput`](crate::output::DescribeAccountAssignmentDeletionStatusOutput).
         pub fn build(self) -> crate::output::DescribeAccountAssignmentDeletionStatusOutput {
             crate::output::DescribeAccountAssignmentDeletionStatusOutput {
                 account_assignment_deletion_status: self.account_assignment_deletion_status,
@@ -1487,7 +1706,7 @@ pub mod describe_account_assignment_deletion_status_output {
     }
 }
 impl DescribeAccountAssignmentDeletionStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAccountAssignmentDeletionStatusOutput`](crate::output::DescribeAccountAssignmentDeletionStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAccountAssignmentDeletionStatusOutput`](crate::output::DescribeAccountAssignmentDeletionStatusOutput).
     pub fn builder() -> crate::output::describe_account_assignment_deletion_status_output::Builder {
         crate::output::describe_account_assignment_deletion_status_output::Builder::default()
     }
@@ -1519,10 +1738,10 @@ impl std::fmt::Debug for DescribeAccountAssignmentCreationStatusOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeAccountAssignmentCreationStatusOutput`](crate::output::DescribeAccountAssignmentCreationStatusOutput)
+/// See [`DescribeAccountAssignmentCreationStatusOutput`](crate::output::DescribeAccountAssignmentCreationStatusOutput).
 pub mod describe_account_assignment_creation_status_output {
-    /// A builder for [`DescribeAccountAssignmentCreationStatusOutput`](crate::output::DescribeAccountAssignmentCreationStatusOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeAccountAssignmentCreationStatusOutput`](crate::output::DescribeAccountAssignmentCreationStatusOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_assignment_creation_status:
@@ -1545,7 +1764,7 @@ pub mod describe_account_assignment_creation_status_output {
             self.account_assignment_creation_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeAccountAssignmentCreationStatusOutput`](crate::output::DescribeAccountAssignmentCreationStatusOutput)
+        /// Consumes the builder and constructs a [`DescribeAccountAssignmentCreationStatusOutput`](crate::output::DescribeAccountAssignmentCreationStatusOutput).
         pub fn build(self) -> crate::output::DescribeAccountAssignmentCreationStatusOutput {
             crate::output::DescribeAccountAssignmentCreationStatusOutput {
                 account_assignment_creation_status: self.account_assignment_creation_status,
@@ -1554,7 +1773,7 @@ pub mod describe_account_assignment_creation_status_output {
     }
 }
 impl DescribeAccountAssignmentCreationStatusOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeAccountAssignmentCreationStatusOutput`](crate::output::DescribeAccountAssignmentCreationStatusOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeAccountAssignmentCreationStatusOutput`](crate::output::DescribeAccountAssignmentCreationStatusOutput).
     pub fn builder() -> crate::output::describe_account_assignment_creation_status_output::Builder {
         crate::output::describe_account_assignment_creation_status_output::Builder::default()
     }
@@ -1570,23 +1789,54 @@ impl std::fmt::Debug for DeletePermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeletePermissionSetOutput`](crate::output::DeletePermissionSetOutput)
+/// See [`DeletePermissionSetOutput`](crate::output::DeletePermissionSetOutput).
 pub mod delete_permission_set_output {
-    /// A builder for [`DeletePermissionSetOutput`](crate::output::DeletePermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeletePermissionSetOutput`](crate::output::DeletePermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeletePermissionSetOutput`](crate::output::DeletePermissionSetOutput)
+        /// Consumes the builder and constructs a [`DeletePermissionSetOutput`](crate::output::DeletePermissionSetOutput).
         pub fn build(self) -> crate::output::DeletePermissionSetOutput {
             crate::output::DeletePermissionSetOutput {}
         }
     }
 }
 impl DeletePermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeletePermissionSetOutput`](crate::output::DeletePermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeletePermissionSetOutput`](crate::output::DeletePermissionSetOutput).
     pub fn builder() -> crate::output::delete_permission_set_output::Builder {
         crate::output::delete_permission_set_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct DeletePermissionsBoundaryFromPermissionSetOutput {}
+impl std::fmt::Debug for DeletePermissionsBoundaryFromPermissionSetOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter = f.debug_struct("DeletePermissionsBoundaryFromPermissionSetOutput");
+        formatter.finish()
+    }
+}
+/// See [`DeletePermissionsBoundaryFromPermissionSetOutput`](crate::output::DeletePermissionsBoundaryFromPermissionSetOutput).
+pub mod delete_permissions_boundary_from_permission_set_output {
+
+    /// A builder for [`DeletePermissionsBoundaryFromPermissionSetOutput`](crate::output::DeletePermissionsBoundaryFromPermissionSetOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`DeletePermissionsBoundaryFromPermissionSetOutput`](crate::output::DeletePermissionsBoundaryFromPermissionSetOutput).
+        pub fn build(self) -> crate::output::DeletePermissionsBoundaryFromPermissionSetOutput {
+            crate::output::DeletePermissionsBoundaryFromPermissionSetOutput {}
+        }
+    }
+}
+impl DeletePermissionsBoundaryFromPermissionSetOutput {
+    /// Creates a new builder-style object to manufacture [`DeletePermissionsBoundaryFromPermissionSetOutput`](crate::output::DeletePermissionsBoundaryFromPermissionSetOutput).
+    pub fn builder(
+    ) -> crate::output::delete_permissions_boundary_from_permission_set_output::Builder {
+        crate::output::delete_permissions_boundary_from_permission_set_output::Builder::default()
     }
 }
 
@@ -1601,14 +1851,14 @@ impl std::fmt::Debug for DeleteInstanceAccessControlAttributeConfigurationOutput
         formatter.finish()
     }
 }
-/// See [`DeleteInstanceAccessControlAttributeConfigurationOutput`](crate::output::DeleteInstanceAccessControlAttributeConfigurationOutput)
+/// See [`DeleteInstanceAccessControlAttributeConfigurationOutput`](crate::output::DeleteInstanceAccessControlAttributeConfigurationOutput).
 pub mod delete_instance_access_control_attribute_configuration_output {
-    /// A builder for [`DeleteInstanceAccessControlAttributeConfigurationOutput`](crate::output::DeleteInstanceAccessControlAttributeConfigurationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteInstanceAccessControlAttributeConfigurationOutput`](crate::output::DeleteInstanceAccessControlAttributeConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteInstanceAccessControlAttributeConfigurationOutput`](crate::output::DeleteInstanceAccessControlAttributeConfigurationOutput)
+        /// Consumes the builder and constructs a [`DeleteInstanceAccessControlAttributeConfigurationOutput`](crate::output::DeleteInstanceAccessControlAttributeConfigurationOutput).
         pub fn build(
             self,
         ) -> crate::output::DeleteInstanceAccessControlAttributeConfigurationOutput {
@@ -1617,7 +1867,7 @@ pub mod delete_instance_access_control_attribute_configuration_output {
     }
 }
 impl DeleteInstanceAccessControlAttributeConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteInstanceAccessControlAttributeConfigurationOutput`](crate::output::DeleteInstanceAccessControlAttributeConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteInstanceAccessControlAttributeConfigurationOutput`](crate::output::DeleteInstanceAccessControlAttributeConfigurationOutput).
     pub fn builder(
     ) -> crate::output::delete_instance_access_control_attribute_configuration_output::Builder {
         crate::output::delete_instance_access_control_attribute_configuration_output::Builder::default()
@@ -1634,21 +1884,21 @@ impl std::fmt::Debug for DeleteInlinePolicyFromPermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteInlinePolicyFromPermissionSetOutput`](crate::output::DeleteInlinePolicyFromPermissionSetOutput)
+/// See [`DeleteInlinePolicyFromPermissionSetOutput`](crate::output::DeleteInlinePolicyFromPermissionSetOutput).
 pub mod delete_inline_policy_from_permission_set_output {
-    /// A builder for [`DeleteInlinePolicyFromPermissionSetOutput`](crate::output::DeleteInlinePolicyFromPermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteInlinePolicyFromPermissionSetOutput`](crate::output::DeleteInlinePolicyFromPermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`DeleteInlinePolicyFromPermissionSetOutput`](crate::output::DeleteInlinePolicyFromPermissionSetOutput)
+        /// Consumes the builder and constructs a [`DeleteInlinePolicyFromPermissionSetOutput`](crate::output::DeleteInlinePolicyFromPermissionSetOutput).
         pub fn build(self) -> crate::output::DeleteInlinePolicyFromPermissionSetOutput {
             crate::output::DeleteInlinePolicyFromPermissionSetOutput {}
         }
     }
 }
 impl DeleteInlinePolicyFromPermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteInlinePolicyFromPermissionSetOutput`](crate::output::DeleteInlinePolicyFromPermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteInlinePolicyFromPermissionSetOutput`](crate::output::DeleteInlinePolicyFromPermissionSetOutput).
     pub fn builder() -> crate::output::delete_inline_policy_from_permission_set_output::Builder {
         crate::output::delete_inline_policy_from_permission_set_output::Builder::default()
     }
@@ -1680,10 +1930,10 @@ impl std::fmt::Debug for DeleteAccountAssignmentOutput {
         formatter.finish()
     }
 }
-/// See [`DeleteAccountAssignmentOutput`](crate::output::DeleteAccountAssignmentOutput)
+/// See [`DeleteAccountAssignmentOutput`](crate::output::DeleteAccountAssignmentOutput).
 pub mod delete_account_assignment_output {
-    /// A builder for [`DeleteAccountAssignmentOutput`](crate::output::DeleteAccountAssignmentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DeleteAccountAssignmentOutput`](crate::output::DeleteAccountAssignmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_assignment_deletion_status:
@@ -1706,7 +1956,7 @@ pub mod delete_account_assignment_output {
             self.account_assignment_deletion_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`DeleteAccountAssignmentOutput`](crate::output::DeleteAccountAssignmentOutput)
+        /// Consumes the builder and constructs a [`DeleteAccountAssignmentOutput`](crate::output::DeleteAccountAssignmentOutput).
         pub fn build(self) -> crate::output::DeleteAccountAssignmentOutput {
             crate::output::DeleteAccountAssignmentOutput {
                 account_assignment_deletion_status: self.account_assignment_deletion_status,
@@ -1715,7 +1965,7 @@ pub mod delete_account_assignment_output {
     }
 }
 impl DeleteAccountAssignmentOutput {
-    /// Creates a new builder-style object to manufacture [`DeleteAccountAssignmentOutput`](crate::output::DeleteAccountAssignmentOutput)
+    /// Creates a new builder-style object to manufacture [`DeleteAccountAssignmentOutput`](crate::output::DeleteAccountAssignmentOutput).
     pub fn builder() -> crate::output::delete_account_assignment_output::Builder {
         crate::output::delete_account_assignment_output::Builder::default()
     }
@@ -1741,10 +1991,10 @@ impl std::fmt::Debug for CreatePermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`CreatePermissionSetOutput`](crate::output::CreatePermissionSetOutput)
+/// See [`CreatePermissionSetOutput`](crate::output::CreatePermissionSetOutput).
 pub mod create_permission_set_output {
-    /// A builder for [`CreatePermissionSetOutput`](crate::output::CreatePermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreatePermissionSetOutput`](crate::output::CreatePermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) permission_set: std::option::Option<crate::model::PermissionSet>,
@@ -1763,7 +2013,7 @@ pub mod create_permission_set_output {
             self.permission_set = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreatePermissionSetOutput`](crate::output::CreatePermissionSetOutput)
+        /// Consumes the builder and constructs a [`CreatePermissionSetOutput`](crate::output::CreatePermissionSetOutput).
         pub fn build(self) -> crate::output::CreatePermissionSetOutput {
             crate::output::CreatePermissionSetOutput {
                 permission_set: self.permission_set,
@@ -1772,7 +2022,7 @@ pub mod create_permission_set_output {
     }
 }
 impl CreatePermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`CreatePermissionSetOutput`](crate::output::CreatePermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`CreatePermissionSetOutput`](crate::output::CreatePermissionSetOutput).
     pub fn builder() -> crate::output::create_permission_set_output::Builder {
         crate::output::create_permission_set_output::Builder::default()
     }
@@ -1789,14 +2039,14 @@ impl std::fmt::Debug for CreateInstanceAccessControlAttributeConfigurationOutput
         formatter.finish()
     }
 }
-/// See [`CreateInstanceAccessControlAttributeConfigurationOutput`](crate::output::CreateInstanceAccessControlAttributeConfigurationOutput)
+/// See [`CreateInstanceAccessControlAttributeConfigurationOutput`](crate::output::CreateInstanceAccessControlAttributeConfigurationOutput).
 pub mod create_instance_access_control_attribute_configuration_output {
-    /// A builder for [`CreateInstanceAccessControlAttributeConfigurationOutput`](crate::output::CreateInstanceAccessControlAttributeConfigurationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateInstanceAccessControlAttributeConfigurationOutput`](crate::output::CreateInstanceAccessControlAttributeConfigurationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`CreateInstanceAccessControlAttributeConfigurationOutput`](crate::output::CreateInstanceAccessControlAttributeConfigurationOutput)
+        /// Consumes the builder and constructs a [`CreateInstanceAccessControlAttributeConfigurationOutput`](crate::output::CreateInstanceAccessControlAttributeConfigurationOutput).
         pub fn build(
             self,
         ) -> crate::output::CreateInstanceAccessControlAttributeConfigurationOutput {
@@ -1805,7 +2055,7 @@ pub mod create_instance_access_control_attribute_configuration_output {
     }
 }
 impl CreateInstanceAccessControlAttributeConfigurationOutput {
-    /// Creates a new builder-style object to manufacture [`CreateInstanceAccessControlAttributeConfigurationOutput`](crate::output::CreateInstanceAccessControlAttributeConfigurationOutput)
+    /// Creates a new builder-style object to manufacture [`CreateInstanceAccessControlAttributeConfigurationOutput`](crate::output::CreateInstanceAccessControlAttributeConfigurationOutput).
     pub fn builder(
     ) -> crate::output::create_instance_access_control_attribute_configuration_output::Builder {
         crate::output::create_instance_access_control_attribute_configuration_output::Builder::default()
@@ -1838,10 +2088,10 @@ impl std::fmt::Debug for CreateAccountAssignmentOutput {
         formatter.finish()
     }
 }
-/// See [`CreateAccountAssignmentOutput`](crate::output::CreateAccountAssignmentOutput)
+/// See [`CreateAccountAssignmentOutput`](crate::output::CreateAccountAssignmentOutput).
 pub mod create_account_assignment_output {
-    /// A builder for [`CreateAccountAssignmentOutput`](crate::output::CreateAccountAssignmentOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateAccountAssignmentOutput`](crate::output::CreateAccountAssignmentOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) account_assignment_creation_status:
@@ -1864,7 +2114,7 @@ pub mod create_account_assignment_output {
             self.account_assignment_creation_status = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateAccountAssignmentOutput`](crate::output::CreateAccountAssignmentOutput)
+        /// Consumes the builder and constructs a [`CreateAccountAssignmentOutput`](crate::output::CreateAccountAssignmentOutput).
         pub fn build(self) -> crate::output::CreateAccountAssignmentOutput {
             crate::output::CreateAccountAssignmentOutput {
                 account_assignment_creation_status: self.account_assignment_creation_status,
@@ -1873,7 +2123,7 @@ pub mod create_account_assignment_output {
     }
 }
 impl CreateAccountAssignmentOutput {
-    /// Creates a new builder-style object to manufacture [`CreateAccountAssignmentOutput`](crate::output::CreateAccountAssignmentOutput)
+    /// Creates a new builder-style object to manufacture [`CreateAccountAssignmentOutput`](crate::output::CreateAccountAssignmentOutput).
     pub fn builder() -> crate::output::create_account_assignment_output::Builder {
         crate::output::create_account_assignment_output::Builder::default()
     }
@@ -1889,22 +2139,57 @@ impl std::fmt::Debug for AttachManagedPolicyToPermissionSetOutput {
         formatter.finish()
     }
 }
-/// See [`AttachManagedPolicyToPermissionSetOutput`](crate::output::AttachManagedPolicyToPermissionSetOutput)
+/// See [`AttachManagedPolicyToPermissionSetOutput`](crate::output::AttachManagedPolicyToPermissionSetOutput).
 pub mod attach_managed_policy_to_permission_set_output {
-    /// A builder for [`AttachManagedPolicyToPermissionSetOutput`](crate::output::AttachManagedPolicyToPermissionSetOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`AttachManagedPolicyToPermissionSetOutput`](crate::output::AttachManagedPolicyToPermissionSetOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`AttachManagedPolicyToPermissionSetOutput`](crate::output::AttachManagedPolicyToPermissionSetOutput)
+        /// Consumes the builder and constructs a [`AttachManagedPolicyToPermissionSetOutput`](crate::output::AttachManagedPolicyToPermissionSetOutput).
         pub fn build(self) -> crate::output::AttachManagedPolicyToPermissionSetOutput {
             crate::output::AttachManagedPolicyToPermissionSetOutput {}
         }
     }
 }
 impl AttachManagedPolicyToPermissionSetOutput {
-    /// Creates a new builder-style object to manufacture [`AttachManagedPolicyToPermissionSetOutput`](crate::output::AttachManagedPolicyToPermissionSetOutput)
+    /// Creates a new builder-style object to manufacture [`AttachManagedPolicyToPermissionSetOutput`](crate::output::AttachManagedPolicyToPermissionSetOutput).
     pub fn builder() -> crate::output::attach_managed_policy_to_permission_set_output::Builder {
         crate::output::attach_managed_policy_to_permission_set_output::Builder::default()
+    }
+}
+
+#[allow(missing_docs)] // documentation missing in model
+#[non_exhaustive]
+#[derive(std::clone::Clone, std::cmp::PartialEq)]
+pub struct AttachCustomerManagedPolicyReferenceToPermissionSetOutput {}
+impl std::fmt::Debug for AttachCustomerManagedPolicyReferenceToPermissionSetOutput {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        let mut formatter =
+            f.debug_struct("AttachCustomerManagedPolicyReferenceToPermissionSetOutput");
+        formatter.finish()
+    }
+}
+/// See [`AttachCustomerManagedPolicyReferenceToPermissionSetOutput`](crate::output::AttachCustomerManagedPolicyReferenceToPermissionSetOutput).
+pub mod attach_customer_managed_policy_reference_to_permission_set_output {
+
+    /// A builder for [`AttachCustomerManagedPolicyReferenceToPermissionSetOutput`](crate::output::AttachCustomerManagedPolicyReferenceToPermissionSetOutput).
+    #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
+    pub struct Builder {}
+    impl Builder {
+        /// Consumes the builder and constructs a [`AttachCustomerManagedPolicyReferenceToPermissionSetOutput`](crate::output::AttachCustomerManagedPolicyReferenceToPermissionSetOutput).
+        pub fn build(
+            self,
+        ) -> crate::output::AttachCustomerManagedPolicyReferenceToPermissionSetOutput {
+            crate::output::AttachCustomerManagedPolicyReferenceToPermissionSetOutput {}
+        }
+    }
+}
+impl AttachCustomerManagedPolicyReferenceToPermissionSetOutput {
+    /// Creates a new builder-style object to manufacture [`AttachCustomerManagedPolicyReferenceToPermissionSetOutput`](crate::output::AttachCustomerManagedPolicyReferenceToPermissionSetOutput).
+    pub fn builder(
+    ) -> crate::output::attach_customer_managed_policy_reference_to_permission_set_output::Builder
+    {
+        crate::output::attach_customer_managed_policy_reference_to_permission_set_output::Builder::default()
     }
 }

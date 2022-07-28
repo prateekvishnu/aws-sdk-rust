@@ -437,7 +437,7 @@ impl Client {
     ///   - [`document(impl Into<String>)`](crate::client::fluent_builders::CreateJob::document) / [`set_document(Option<String>)`](crate::client::fluent_builders::CreateJob::set_document): <p>The job document. Required if you don't specify a value for <code>documentSource</code>.</p>
     ///   - [`description(impl Into<String>)`](crate::client::fluent_builders::CreateJob::description) / [`set_description(Option<String>)`](crate::client::fluent_builders::CreateJob::set_description): <p>A short text description of the job.</p>
     ///   - [`presigned_url_config(PresignedUrlConfig)`](crate::client::fluent_builders::CreateJob::presigned_url_config) / [`set_presigned_url_config(Option<PresignedUrlConfig>)`](crate::client::fluent_builders::CreateJob::set_presigned_url_config): <p>Configuration information for pre-signed S3 URLs.</p>
-    ///   - [`target_selection(TargetSelection)`](crate::client::fluent_builders::CreateJob::target_selection) / [`set_target_selection(Option<TargetSelection>)`](crate::client::fluent_builders::CreateJob::set_target_selection): <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group.</p>
+    ///   - [`target_selection(TargetSelection)`](crate::client::fluent_builders::CreateJob::target_selection) / [`set_target_selection(Option<TargetSelection>)`](crate::client::fluent_builders::CreateJob::set_target_selection): <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group.</p> <note>   <p>We recommend that you use continuous jobs instead of snapshot jobs for dynamic thing group targets. By using continuous jobs, devices that join the group receive the job execution even after the job has been created.</p>  </note>
     ///   - [`job_executions_rollout_config(JobExecutionsRolloutConfig)`](crate::client::fluent_builders::CreateJob::job_executions_rollout_config) / [`set_job_executions_rollout_config(Option<JobExecutionsRolloutConfig>)`](crate::client::fluent_builders::CreateJob::set_job_executions_rollout_config): <p>Allows you to create a staged rollout of the job.</p>
     ///   - [`abort_config(AbortConfig)`](crate::client::fluent_builders::CreateJob::abort_config) / [`set_abort_config(Option<AbortConfig>)`](crate::client::fluent_builders::CreateJob::set_abort_config): <p>Allows you to create the criteria to abort a job.</p>
     ///   - [`timeout_config(TimeoutConfig)`](crate::client::fluent_builders::CreateJob::timeout_config) / [`set_timeout_config(Option<TimeoutConfig>)`](crate::client::fluent_builders::CreateJob::set_timeout_config): <p>Specifies the amount of time each device has to finish its execution of the job. The timer is started when the job execution status is set to <code>IN_PROGRESS</code>. If the job execution status is not set to another terminal state before the time expires, it will be automatically set to <code>TIMED_OUT</code>.</p>
@@ -445,7 +445,7 @@ impl Client {
     ///   - [`namespace_id(impl Into<String>)`](crate::client::fluent_builders::CreateJob::namespace_id) / [`set_namespace_id(Option<String>)`](crate::client::fluent_builders::CreateJob::set_namespace_id): <p>The namespace used to indicate that a job is a customer-managed job.</p>  <p>When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.</p>  <p> <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code> </p> <note>   <p>The <code>namespaceId</code> feature is in public preview.</p>  </note>
     ///   - [`job_template_arn(impl Into<String>)`](crate::client::fluent_builders::CreateJob::job_template_arn) / [`set_job_template_arn(Option<String>)`](crate::client::fluent_builders::CreateJob::set_job_template_arn): <p>The ARN of the job template used to create the job.</p>
     ///   - [`job_executions_retry_config(JobExecutionsRetryConfig)`](crate::client::fluent_builders::CreateJob::job_executions_retry_config) / [`set_job_executions_retry_config(Option<JobExecutionsRetryConfig>)`](crate::client::fluent_builders::CreateJob::set_job_executions_retry_config): <p>Allows you to create the criteria to retry a job.</p>
-    ///   - [`document_parameters(HashMap<String, String>)`](crate::client::fluent_builders::CreateJob::document_parameters) / [`set_document_parameters(Option<HashMap<String, String>>)`](crate::client::fluent_builders::CreateJob::set_document_parameters): <p>Parameters of a managed template that you can specify to create the job document.</p>
+    ///   - [`document_parameters(HashMap<String, String>)`](crate::client::fluent_builders::CreateJob::document_parameters) / [`set_document_parameters(Option<HashMap<String, String>>)`](crate::client::fluent_builders::CreateJob::set_document_parameters): <p>Parameters of an Amazon Web Services managed template that you can specify to create the job document.</p> <note>   <p> <code>documentParameters</code> can only be used when creating jobs from Amazon Web Services managed templates. This parameter can't be used with custom job templates or to create jobs from them.</p>  </note>
     /// - On success, responds with [`CreateJobOutput`](crate::output::CreateJobOutput) with field(s):
     ///   - [`job_arn(Option<String>)`](crate::output::CreateJobOutput::job_arn): <p>The job ARN.</p>
     ///   - [`job_id(Option<String>)`](crate::output::CreateJobOutput::job_id): <p>The unique identifier you assigned to this job.</p>
@@ -1377,7 +1377,7 @@ impl Client {
     ///   - [`description(Option<String>)`](crate::output::DescribeManagedJobTemplateOutput::description): <p>The unique description of a managed template.</p>
     ///   - [`template_version(Option<String>)`](crate::output::DescribeManagedJobTemplateOutput::template_version): <p>The version for a managed template.</p>
     ///   - [`environments(Option<Vec<String>>)`](crate::output::DescribeManagedJobTemplateOutput::environments): <p>A list of environments that are supported with the managed job template.</p>
-    ///   - [`document_parameters(Option<Vec<DocumentParameter>>)`](crate::output::DescribeManagedJobTemplateOutput::document_parameters): <p>A map of key-value pairs that you can use as guidance to specify the inputs for creating a job from a managed template.</p>
+    ///   - [`document_parameters(Option<Vec<DocumentParameter>>)`](crate::output::DescribeManagedJobTemplateOutput::document_parameters): <p>A map of key-value pairs that you can use as guidance to specify the inputs for creating a job from a managed template.</p> <note>   <p> <code>documentParameters</code> can only be used when creating jobs from Amazon Web Services managed templates. This parameter can't be used with custom job templates or to create jobs from them.</p>  </note>
     ///   - [`document(Option<String>)`](crate::output::DescribeManagedJobTemplateOutput::document): <p>The document schema for a managed job template.</p>
     /// - On failure, responds with [`SdkError<DescribeManagedJobTemplateError>`](crate::error::DescribeManagedJobTemplateError)
     pub fn describe_managed_job_template(&self) -> fluent_builders::DescribeManagedJobTemplate {
@@ -2163,7 +2163,7 @@ impl Client {
     ///
     /// - The fluent builder is configurable:
     ///   - [`status(JobStatus)`](crate::client::fluent_builders::ListJobs::status) / [`set_status(Option<JobStatus>)`](crate::client::fluent_builders::ListJobs::set_status): <p>An optional filter that lets you search for jobs that have the specified status.</p>
-    ///   - [`target_selection(TargetSelection)`](crate::client::fluent_builders::ListJobs::target_selection) / [`set_target_selection(Option<TargetSelection>)`](crate::client::fluent_builders::ListJobs::set_target_selection): <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group. </p>
+    ///   - [`target_selection(TargetSelection)`](crate::client::fluent_builders::ListJobs::target_selection) / [`set_target_selection(Option<TargetSelection>)`](crate::client::fluent_builders::ListJobs::set_target_selection): <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group. </p> <note>   <p>We recommend that you use continuous jobs instead of snapshot jobs for dynamic thing group targets. By using continuous jobs, devices that join the group receive the job execution even after the job has been created.</p>  </note>
     ///   - [`max_results(i32)`](crate::client::fluent_builders::ListJobs::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::ListJobs::set_max_results): <p>The maximum number of results to return per request.</p>
     ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::ListJobs::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::ListJobs::set_next_token): <p>The token to retrieve the next set of results.</p>
     ///   - [`thing_group_name(impl Into<String>)`](crate::client::fluent_builders::ListJobs::thing_group_name) / [`set_thing_group_name(Option<String>)`](crate::client::fluent_builders::ListJobs::set_thing_group_name): <p>A filter that limits the returned jobs to those for the specified group.</p>
@@ -2692,11 +2692,12 @@ impl Client {
     ///
     /// - The fluent builder is configurable:
     ///   - [`ca_certificate(impl Into<String>)`](crate::client::fluent_builders::RegisterCACertificate::ca_certificate) / [`set_ca_certificate(Option<String>)`](crate::client::fluent_builders::RegisterCACertificate::set_ca_certificate): <p>The CA certificate.</p>
-    ///   - [`verification_certificate(impl Into<String>)`](crate::client::fluent_builders::RegisterCACertificate::verification_certificate) / [`set_verification_certificate(Option<String>)`](crate::client::fluent_builders::RegisterCACertificate::set_verification_certificate): <p>The private key verification certificate.</p>
+    ///   - [`verification_certificate(impl Into<String>)`](crate::client::fluent_builders::RegisterCACertificate::verification_certificate) / [`set_verification_certificate(Option<String>)`](crate::client::fluent_builders::RegisterCACertificate::set_verification_certificate): <p>The private key verification certificate. If <code>certificateMode</code> is <code>SNI_ONLY</code>, the <code>verificationCertificate</code> field must be empty. If <code>certificateMode</code> is <code>DEFAULT</code> or not provided, the <code>verificationCertificate</code> field must not be empty. </p>
     ///   - [`set_as_active(bool)`](crate::client::fluent_builders::RegisterCACertificate::set_as_active) / [`set_set_as_active(bool)`](crate::client::fluent_builders::RegisterCACertificate::set_set_as_active): <p>A boolean value that specifies if the CA certificate is set to active.</p>  <p>Valid values: <code>ACTIVE | INACTIVE</code> </p>
     ///   - [`allow_auto_registration(bool)`](crate::client::fluent_builders::RegisterCACertificate::allow_auto_registration) / [`set_allow_auto_registration(bool)`](crate::client::fluent_builders::RegisterCACertificate::set_allow_auto_registration): <p>Allows this CA certificate to be used for auto registration of device certificates.</p>
     ///   - [`registration_config(RegistrationConfig)`](crate::client::fluent_builders::RegisterCACertificate::registration_config) / [`set_registration_config(Option<RegistrationConfig>)`](crate::client::fluent_builders::RegisterCACertificate::set_registration_config): <p>Information about the registration configuration.</p>
     ///   - [`tags(Vec<Tag>)`](crate::client::fluent_builders::RegisterCACertificate::tags) / [`set_tags(Option<Vec<Tag>>)`](crate::client::fluent_builders::RegisterCACertificate::set_tags): <p>Metadata which can be used to manage the CA certificate.</p> <note>   <p>For URI Request parameters use format: ...key1=value1&amp;key2=value2...</p>   <p>For the CLI command-line parameter use format: &amp;&amp;tags "key1=value1&amp;key2=value2..."</p>   <p>For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..."</p>  </note>
+    ///   - [`certificate_mode(CertificateMode)`](crate::client::fluent_builders::RegisterCACertificate::certificate_mode) / [`set_certificate_mode(Option<CertificateMode>)`](crate::client::fluent_builders::RegisterCACertificate::set_certificate_mode): <p>Describes the certificate mode in which the Certificate Authority (CA) will be registered. If the <code>verificationCertificate</code> field is not provided, set <code>certificateMode</code> to be <code>SNI_ONLY</code>. If the <code>verificationCertificate</code> field is provided, set <code>certificateMode</code> to be <code>DEFAULT</code>. When <code>certificateMode</code> is not provided, it defaults to <code>DEFAULT</code>. All the device certificates that are registered using this CA will be registered in the same certificate mode as the CA. For more information about certificate mode for device certificates, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CertificateDescription.html#iot-Type-CertificateDescription-certificateMode"> certificate mode</a>. </p>
     /// - On success, responds with [`RegisterCaCertificateOutput`](crate::output::RegisterCaCertificateOutput) with field(s):
     ///   - [`certificate_arn(Option<String>)`](crate::output::RegisterCaCertificateOutput::certificate_arn): <p>The CA certificate ARN.</p>
     ///   - [`certificate_id(Option<String>)`](crate::output::RegisterCaCertificateOutput::certificate_id): <p>The CA certificate identifier.</p>
@@ -2794,7 +2795,7 @@ impl Client {
     ///
     /// - The fluent builder is configurable:
     ///   - [`index_name(impl Into<String>)`](crate::client::fluent_builders::SearchIndex::index_name) / [`set_index_name(Option<String>)`](crate::client::fluent_builders::SearchIndex::set_index_name): <p>The search index name.</p>
-    ///   - [`query_string(impl Into<String>)`](crate::client::fluent_builders::SearchIndex::query_string) / [`set_query_string(Option<String>)`](crate::client::fluent_builders::SearchIndex::set_query_string): <p>The search query string.</p>
+    ///   - [`query_string(impl Into<String>)`](crate::client::fluent_builders::SearchIndex::query_string) / [`set_query_string(Option<String>)`](crate::client::fluent_builders::SearchIndex::set_query_string): <p>The search query string. For more information about the search query syntax, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/query-syntax.html">Query syntax</a>.</p>
     ///   - [`next_token(impl Into<String>)`](crate::client::fluent_builders::SearchIndex::next_token) / [`set_next_token(Option<String>)`](crate::client::fluent_builders::SearchIndex::set_next_token): <p>The token used to get the next set of results, or <code>null</code> if there are no additional results.</p>
     ///   - [`max_results(i32)`](crate::client::fluent_builders::SearchIndex::max_results) / [`set_max_results(Option<i32>)`](crate::client::fluent_builders::SearchIndex::set_max_results): <p>The maximum number of results to return at one time.</p>
     ///   - [`query_version(impl Into<String>)`](crate::client::fluent_builders::SearchIndex::query_version) / [`set_query_version(Option<String>)`](crate::client::fluent_builders::SearchIndex::set_query_version): <p>The query version.</p>
@@ -3359,13 +3360,12 @@ impl Client {
     }
 }
 pub mod fluent_builders {
-    //!
+
     //! Utilities to ergonomically construct a request to the service.
     //!
     //! Fluent builders are created through the [`Client`](crate::client::Client) by calling
     //! one if its operation methods. After parameters are set using the builder methods,
     //! the `send` method can be called to initiate the request.
-    //!
     /// Fluent builder constructing a request to `AcceptCertificateTransfer`.
     ///
     /// <p>Accepts a pending certificate transfer. The default state of the certificate is INACTIVE.</p>
@@ -5760,12 +5760,16 @@ pub mod fluent_builders {
             self.inner = self.inner.set_presigned_url_config(input);
             self
         }
-        /// <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group.</p>
+        /// <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group.</p> <note>
+        /// <p>We recommend that you use continuous jobs instead of snapshot jobs for dynamic thing group targets. By using continuous jobs, devices that join the group receive the job execution even after the job has been created.</p>
+        /// </note>
         pub fn target_selection(mut self, input: crate::model::TargetSelection) -> Self {
             self.inner = self.inner.target_selection(input);
             self
         }
-        /// <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group.</p>
+        /// <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group.</p> <note>
+        /// <p>We recommend that you use continuous jobs instead of snapshot jobs for dynamic thing group targets. By using continuous jobs, devices that join the group receive the job execution even after the job has been created.</p>
+        /// </note>
         pub fn set_target_selection(
             mut self,
             input: std::option::Option<crate::model::TargetSelection>,
@@ -5883,7 +5887,9 @@ pub mod fluent_builders {
         ///
         /// To override the contents of this collection use [`set_document_parameters`](Self::set_document_parameters).
         ///
-        /// <p>Parameters of a managed template that you can specify to create the job document.</p>
+        /// <p>Parameters of an Amazon Web Services managed template that you can specify to create the job document.</p> <note>
+        /// <p> <code>documentParameters</code> can only be used when creating jobs from Amazon Web Services managed templates. This parameter can't be used with custom job templates or to create jobs from them.</p>
+        /// </note>
         pub fn document_parameters(
             mut self,
             k: impl Into<std::string::String>,
@@ -5892,7 +5898,9 @@ pub mod fluent_builders {
             self.inner = self.inner.document_parameters(k.into(), v.into());
             self
         }
-        /// <p>Parameters of a managed template that you can specify to create the job document.</p>
+        /// <p>Parameters of an Amazon Web Services managed template that you can specify to create the job document.</p> <note>
+        /// <p> <code>documentParameters</code> can only be used when creating jobs from Amazon Web Services managed templates. This parameter can't be used with custom job templates or to create jobs from them.</p>
+        /// </note>
         pub fn set_document_parameters(
             mut self,
             input: std::option::Option<
@@ -15349,12 +15357,16 @@ pub mod fluent_builders {
             self.inner = self.inner.set_status(input);
             self
         }
-        /// <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group. </p>
+        /// <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group. </p> <note>
+        /// <p>We recommend that you use continuous jobs instead of snapshot jobs for dynamic thing group targets. By using continuous jobs, devices that join the group receive the job execution even after the job has been created.</p>
+        /// </note>
         pub fn target_selection(mut self, input: crate::model::TargetSelection) -> Self {
             self.inner = self.inner.target_selection(input);
             self
         }
-        /// <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group. </p>
+        /// <p>Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group. </p> <note>
+        /// <p>We recommend that you use continuous jobs instead of snapshot jobs for dynamic thing group targets. By using continuous jobs, devices that join the group receive the job execution even after the job has been created.</p>
+        /// </note>
         pub fn set_target_selection(
             mut self,
             input: std::option::Option<crate::model::TargetSelection>,
@@ -18471,7 +18483,7 @@ pub mod fluent_builders {
     }
     /// Fluent builder constructing a request to `RegisterCACertificate`.
     ///
-    /// <p>Registers a CA certificate with IoT. This CA certificate can then be used to sign device certificates, which can be then registered with IoT. You can register up to 10 CA certificates per Amazon Web Services account that have the same subject field. This enables you to have up to 10 certificate authorities sign your device certificates. If you have more than one CA certificate registered, make sure you pass the CA certificate when you register your device certificates with the <code>RegisterCertificate</code> action.</p>
+    /// <p>Registers a CA certificate with Amazon Web Services IoT Core. There is no limit to the number of CA certificates you can register in your Amazon Web Services account. You can register up to 10 CA certificates with the same <code>CA subject field</code> per Amazon Web Services account.</p>
     /// <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">RegisterCACertificate</a> action.</p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct RegisterCACertificate {
@@ -18525,12 +18537,12 @@ pub mod fluent_builders {
             self.inner = self.inner.set_ca_certificate(input);
             self
         }
-        /// <p>The private key verification certificate.</p>
+        /// <p>The private key verification certificate. If <code>certificateMode</code> is <code>SNI_ONLY</code>, the <code>verificationCertificate</code> field must be empty. If <code>certificateMode</code> is <code>DEFAULT</code> or not provided, the <code>verificationCertificate</code> field must not be empty. </p>
         pub fn verification_certificate(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.verification_certificate(input.into());
             self
         }
-        /// <p>The private key verification certificate.</p>
+        /// <p>The private key verification certificate. If <code>certificateMode</code> is <code>SNI_ONLY</code>, the <code>verificationCertificate</code> field must be empty. If <code>certificateMode</code> is <code>DEFAULT</code> or not provided, the <code>verificationCertificate</code> field must not be empty. </p>
         pub fn set_verification_certificate(
             mut self,
             input: std::option::Option<std::string::String>,
@@ -18598,10 +18610,23 @@ pub mod fluent_builders {
             self.inner = self.inner.set_tags(input);
             self
         }
+        /// <p>Describes the certificate mode in which the Certificate Authority (CA) will be registered. If the <code>verificationCertificate</code> field is not provided, set <code>certificateMode</code> to be <code>SNI_ONLY</code>. If the <code>verificationCertificate</code> field is provided, set <code>certificateMode</code> to be <code>DEFAULT</code>. When <code>certificateMode</code> is not provided, it defaults to <code>DEFAULT</code>. All the device certificates that are registered using this CA will be registered in the same certificate mode as the CA. For more information about certificate mode for device certificates, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CertificateDescription.html#iot-Type-CertificateDescription-certificateMode"> certificate mode</a>. </p>
+        pub fn certificate_mode(mut self, input: crate::model::CertificateMode) -> Self {
+            self.inner = self.inner.certificate_mode(input);
+            self
+        }
+        /// <p>Describes the certificate mode in which the Certificate Authority (CA) will be registered. If the <code>verificationCertificate</code> field is not provided, set <code>certificateMode</code> to be <code>SNI_ONLY</code>. If the <code>verificationCertificate</code> field is provided, set <code>certificateMode</code> to be <code>DEFAULT</code>. When <code>certificateMode</code> is not provided, it defaults to <code>DEFAULT</code>. All the device certificates that are registered using this CA will be registered in the same certificate mode as the CA. For more information about certificate mode for device certificates, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CertificateDescription.html#iot-Type-CertificateDescription-certificateMode"> certificate mode</a>. </p>
+        pub fn set_certificate_mode(
+            mut self,
+            input: std::option::Option<crate::model::CertificateMode>,
+        ) -> Self {
+            self.inner = self.inner.set_certificate_mode(input);
+            self
+        }
     }
     /// Fluent builder constructing a request to `RegisterCertificate`.
     ///
-    /// <p>Registers a device certificate with IoT. If you have more than one CA certificate that has the same subject field, you must specify the CA certificate that was used to sign the device certificate being registered.</p>
+    /// <p>Registers a device certificate with IoT in the same <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CertificateDescription.html#iot-Type-CertificateDescription-certificateMode">certificate mode</a> as the signing CA. If you have more than one CA certificate that has the same subject field, you must specify the CA certificate that was used to sign the device certificate being registered.</p>
     /// <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">RegisterCertificate</a> action.</p>
     #[derive(std::clone::Clone, std::fmt::Debug)]
     pub struct RegisterCertificate {
@@ -19218,12 +19243,12 @@ pub mod fluent_builders {
             self.inner = self.inner.set_index_name(input);
             self
         }
-        /// <p>The search query string.</p>
+        /// <p>The search query string. For more information about the search query syntax, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/query-syntax.html">Query syntax</a>.</p>
         pub fn query_string(mut self, input: impl Into<std::string::String>) -> Self {
             self.inner = self.inner.query_string(input.into());
             self
         }
-        /// <p>The search query string.</p>
+        /// <p>The search query string. For more information about the search query syntax, see <a href="https://docs.aws.amazon.com/iot/latest/developerguide/query-syntax.html">Query syntax</a>.</p>
         pub fn set_query_string(mut self, input: std::option::Option<std::string::String>) -> Self {
             self.inner = self.inner.set_query_string(input);
             self

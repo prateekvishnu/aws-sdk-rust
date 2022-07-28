@@ -9,21 +9,21 @@ impl std::fmt::Debug for UntagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+/// See [`UntagResourceOutput`](crate::output::UntagResourceOutput).
 pub mod untag_resource_output {
-    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+        /// Consumes the builder and constructs a [`UntagResourceOutput`](crate::output::UntagResourceOutput).
         pub fn build(self) -> crate::output::UntagResourceOutput {
             crate::output::UntagResourceOutput {}
         }
     }
 }
 impl UntagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`UntagResourceOutput`](crate::output::UntagResourceOutput).
     pub fn builder() -> crate::output::untag_resource_output::Builder {
         crate::output::untag_resource_output::Builder::default()
     }
@@ -39,21 +39,21 @@ impl std::fmt::Debug for TagResourceOutput {
         formatter.finish()
     }
 }
-/// See [`TagResourceOutput`](crate::output::TagResourceOutput)
+/// See [`TagResourceOutput`](crate::output::TagResourceOutput).
 pub mod tag_resource_output {
-    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`TagResourceOutput`](crate::output::TagResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput)
+        /// Consumes the builder and constructs a [`TagResourceOutput`](crate::output::TagResourceOutput).
         pub fn build(self) -> crate::output::TagResourceOutput {
             crate::output::TagResourceOutput {}
         }
     }
 }
 impl TagResourceOutput {
-    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput)
+    /// Creates a new builder-style object to manufacture [`TagResourceOutput`](crate::output::TagResourceOutput).
     pub fn builder() -> crate::output::tag_resource_output::Builder {
         crate::output::tag_resource_output::Builder::default()
     }
@@ -69,21 +69,21 @@ impl std::fmt::Debug for PutRecommendationFeedbackOutput {
         formatter.finish()
     }
 }
-/// See [`PutRecommendationFeedbackOutput`](crate::output::PutRecommendationFeedbackOutput)
+/// See [`PutRecommendationFeedbackOutput`](crate::output::PutRecommendationFeedbackOutput).
 pub mod put_recommendation_feedback_output {
-    /// A builder for [`PutRecommendationFeedbackOutput`](crate::output::PutRecommendationFeedbackOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`PutRecommendationFeedbackOutput`](crate::output::PutRecommendationFeedbackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {}
     impl Builder {
-        /// Consumes the builder and constructs a [`PutRecommendationFeedbackOutput`](crate::output::PutRecommendationFeedbackOutput)
+        /// Consumes the builder and constructs a [`PutRecommendationFeedbackOutput`](crate::output::PutRecommendationFeedbackOutput).
         pub fn build(self) -> crate::output::PutRecommendationFeedbackOutput {
             crate::output::PutRecommendationFeedbackOutput {}
         }
     }
 }
 impl PutRecommendationFeedbackOutput {
-    /// Creates a new builder-style object to manufacture [`PutRecommendationFeedbackOutput`](crate::output::PutRecommendationFeedbackOutput)
+    /// Creates a new builder-style object to manufacture [`PutRecommendationFeedbackOutput`](crate::output::PutRecommendationFeedbackOutput).
     pub fn builder() -> crate::output::put_recommendation_feedback_output::Builder {
         crate::output::put_recommendation_feedback_output::Builder::default()
     }
@@ -121,10 +121,10 @@ impl std::fmt::Debug for ListTagsForResourceOutput {
         formatter.finish()
     }
 }
-/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+/// See [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
 pub mod list_tags_for_resource_output {
-    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) tags: std::option::Option<
@@ -165,14 +165,14 @@ pub mod list_tags_for_resource_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+        /// Consumes the builder and constructs a [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
         pub fn build(self) -> crate::output::ListTagsForResourceOutput {
             crate::output::ListTagsForResourceOutput { tags: self.tags }
         }
     }
 }
 impl ListTagsForResourceOutput {
-    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput)
+    /// Creates a new builder-style object to manufacture [`ListTagsForResourceOutput`](crate::output::ListTagsForResourceOutput).
     pub fn builder() -> crate::output::list_tags_for_resource_output::Builder {
         crate::output::list_tags_for_resource_output::Builder::default()
     }
@@ -211,10 +211,10 @@ impl std::fmt::Debug for ListRepositoryAssociationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRepositoryAssociationsOutput`](crate::output::ListRepositoryAssociationsOutput)
+/// See [`ListRepositoryAssociationsOutput`](crate::output::ListRepositoryAssociationsOutput).
 pub mod list_repository_associations_output {
-    /// A builder for [`ListRepositoryAssociationsOutput`](crate::output::ListRepositoryAssociationsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListRepositoryAssociationsOutput`](crate::output::ListRepositoryAssociationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository_association_summaries:
@@ -254,7 +254,7 @@ pub mod list_repository_associations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRepositoryAssociationsOutput`](crate::output::ListRepositoryAssociationsOutput)
+        /// Consumes the builder and constructs a [`ListRepositoryAssociationsOutput`](crate::output::ListRepositoryAssociationsOutput).
         pub fn build(self) -> crate::output::ListRepositoryAssociationsOutput {
             crate::output::ListRepositoryAssociationsOutput {
                 repository_association_summaries: self.repository_association_summaries,
@@ -264,7 +264,7 @@ pub mod list_repository_associations_output {
     }
 }
 impl ListRepositoryAssociationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRepositoryAssociationsOutput`](crate::output::ListRepositoryAssociationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRepositoryAssociationsOutput`](crate::output::ListRepositoryAssociationsOutput).
     pub fn builder() -> crate::output::list_repository_associations_output::Builder {
         crate::output::list_repository_associations_output::Builder::default()
     }
@@ -300,10 +300,10 @@ impl std::fmt::Debug for ListRecommendationsOutput {
         formatter.finish()
     }
 }
-/// See [`ListRecommendationsOutput`](crate::output::ListRecommendationsOutput)
+/// See [`ListRecommendationsOutput`](crate::output::ListRecommendationsOutput).
 pub mod list_recommendations_output {
-    /// A builder for [`ListRecommendationsOutput`](crate::output::ListRecommendationsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListRecommendationsOutput`](crate::output::ListRecommendationsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_summaries:
@@ -343,7 +343,7 @@ pub mod list_recommendations_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRecommendationsOutput`](crate::output::ListRecommendationsOutput)
+        /// Consumes the builder and constructs a [`ListRecommendationsOutput`](crate::output::ListRecommendationsOutput).
         pub fn build(self) -> crate::output::ListRecommendationsOutput {
             crate::output::ListRecommendationsOutput {
                 recommendation_summaries: self.recommendation_summaries,
@@ -353,7 +353,7 @@ pub mod list_recommendations_output {
     }
 }
 impl ListRecommendationsOutput {
-    /// Creates a new builder-style object to manufacture [`ListRecommendationsOutput`](crate::output::ListRecommendationsOutput)
+    /// Creates a new builder-style object to manufacture [`ListRecommendationsOutput`](crate::output::ListRecommendationsOutput).
     pub fn builder() -> crate::output::list_recommendations_output::Builder {
         crate::output::list_recommendations_output::Builder::default()
     }
@@ -392,10 +392,10 @@ impl std::fmt::Debug for ListRecommendationFeedbackOutput {
         formatter.finish()
     }
 }
-/// See [`ListRecommendationFeedbackOutput`](crate::output::ListRecommendationFeedbackOutput)
+/// See [`ListRecommendationFeedbackOutput`](crate::output::ListRecommendationFeedbackOutput).
 pub mod list_recommendation_feedback_output {
-    /// A builder for [`ListRecommendationFeedbackOutput`](crate::output::ListRecommendationFeedbackOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListRecommendationFeedbackOutput`](crate::output::ListRecommendationFeedbackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_feedback_summaries:
@@ -435,7 +435,7 @@ pub mod list_recommendation_feedback_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListRecommendationFeedbackOutput`](crate::output::ListRecommendationFeedbackOutput)
+        /// Consumes the builder and constructs a [`ListRecommendationFeedbackOutput`](crate::output::ListRecommendationFeedbackOutput).
         pub fn build(self) -> crate::output::ListRecommendationFeedbackOutput {
             crate::output::ListRecommendationFeedbackOutput {
                 recommendation_feedback_summaries: self.recommendation_feedback_summaries,
@@ -445,7 +445,7 @@ pub mod list_recommendation_feedback_output {
     }
 }
 impl ListRecommendationFeedbackOutput {
-    /// Creates a new builder-style object to manufacture [`ListRecommendationFeedbackOutput`](crate::output::ListRecommendationFeedbackOutput)
+    /// Creates a new builder-style object to manufacture [`ListRecommendationFeedbackOutput`](crate::output::ListRecommendationFeedbackOutput).
     pub fn builder() -> crate::output::list_recommendation_feedback_output::Builder {
         crate::output::list_recommendation_feedback_output::Builder::default()
     }
@@ -478,10 +478,10 @@ impl std::fmt::Debug for ListCodeReviewsOutput {
         formatter.finish()
     }
 }
-/// See [`ListCodeReviewsOutput`](crate::output::ListCodeReviewsOutput)
+/// See [`ListCodeReviewsOutput`](crate::output::ListCodeReviewsOutput).
 pub mod list_code_reviews_output {
-    /// A builder for [`ListCodeReviewsOutput`](crate::output::ListCodeReviewsOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`ListCodeReviewsOutput`](crate::output::ListCodeReviewsOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code_review_summaries:
@@ -518,7 +518,7 @@ pub mod list_code_reviews_output {
             self.next_token = input;
             self
         }
-        /// Consumes the builder and constructs a [`ListCodeReviewsOutput`](crate::output::ListCodeReviewsOutput)
+        /// Consumes the builder and constructs a [`ListCodeReviewsOutput`](crate::output::ListCodeReviewsOutput).
         pub fn build(self) -> crate::output::ListCodeReviewsOutput {
             crate::output::ListCodeReviewsOutput {
                 code_review_summaries: self.code_review_summaries,
@@ -528,7 +528,7 @@ pub mod list_code_reviews_output {
     }
 }
 impl ListCodeReviewsOutput {
-    /// Creates a new builder-style object to manufacture [`ListCodeReviewsOutput`](crate::output::ListCodeReviewsOutput)
+    /// Creates a new builder-style object to manufacture [`ListCodeReviewsOutput`](crate::output::ListCodeReviewsOutput).
     pub fn builder() -> crate::output::list_code_reviews_output::Builder {
         crate::output::list_code_reviews_output::Builder::default()
     }
@@ -575,10 +575,10 @@ impl std::fmt::Debug for DisassociateRepositoryOutput {
         formatter.finish()
     }
 }
-/// See [`DisassociateRepositoryOutput`](crate::output::DisassociateRepositoryOutput)
+/// See [`DisassociateRepositoryOutput`](crate::output::DisassociateRepositoryOutput).
 pub mod disassociate_repository_output {
-    /// A builder for [`DisassociateRepositoryOutput`](crate::output::DisassociateRepositoryOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DisassociateRepositoryOutput`](crate::output::DisassociateRepositoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository_association: std::option::Option<crate::model::RepositoryAssociation>,
@@ -636,7 +636,7 @@ pub mod disassociate_repository_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DisassociateRepositoryOutput`](crate::output::DisassociateRepositoryOutput)
+        /// Consumes the builder and constructs a [`DisassociateRepositoryOutput`](crate::output::DisassociateRepositoryOutput).
         pub fn build(self) -> crate::output::DisassociateRepositoryOutput {
             crate::output::DisassociateRepositoryOutput {
                 repository_association: self.repository_association,
@@ -646,7 +646,7 @@ pub mod disassociate_repository_output {
     }
 }
 impl DisassociateRepositoryOutput {
-    /// Creates a new builder-style object to manufacture [`DisassociateRepositoryOutput`](crate::output::DisassociateRepositoryOutput)
+    /// Creates a new builder-style object to manufacture [`DisassociateRepositoryOutput`](crate::output::DisassociateRepositoryOutput).
     pub fn builder() -> crate::output::disassociate_repository_output::Builder {
         crate::output::disassociate_repository_output::Builder::default()
     }
@@ -693,10 +693,10 @@ impl std::fmt::Debug for DescribeRepositoryAssociationOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeRepositoryAssociationOutput`](crate::output::DescribeRepositoryAssociationOutput)
+/// See [`DescribeRepositoryAssociationOutput`](crate::output::DescribeRepositoryAssociationOutput).
 pub mod describe_repository_association_output {
-    /// A builder for [`DescribeRepositoryAssociationOutput`](crate::output::DescribeRepositoryAssociationOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeRepositoryAssociationOutput`](crate::output::DescribeRepositoryAssociationOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository_association: std::option::Option<crate::model::RepositoryAssociation>,
@@ -754,7 +754,7 @@ pub mod describe_repository_association_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRepositoryAssociationOutput`](crate::output::DescribeRepositoryAssociationOutput)
+        /// Consumes the builder and constructs a [`DescribeRepositoryAssociationOutput`](crate::output::DescribeRepositoryAssociationOutput).
         pub fn build(self) -> crate::output::DescribeRepositoryAssociationOutput {
             crate::output::DescribeRepositoryAssociationOutput {
                 repository_association: self.repository_association,
@@ -764,7 +764,7 @@ pub mod describe_repository_association_output {
     }
 }
 impl DescribeRepositoryAssociationOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeRepositoryAssociationOutput`](crate::output::DescribeRepositoryAssociationOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeRepositoryAssociationOutput`](crate::output::DescribeRepositoryAssociationOutput).
     pub fn builder() -> crate::output::describe_repository_association_output::Builder {
         crate::output::describe_repository_association_output::Builder::default()
     }
@@ -792,10 +792,10 @@ impl std::fmt::Debug for DescribeRecommendationFeedbackOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeRecommendationFeedbackOutput`](crate::output::DescribeRecommendationFeedbackOutput)
+/// See [`DescribeRecommendationFeedbackOutput`](crate::output::DescribeRecommendationFeedbackOutput).
 pub mod describe_recommendation_feedback_output {
-    /// A builder for [`DescribeRecommendationFeedbackOutput`](crate::output::DescribeRecommendationFeedbackOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeRecommendationFeedbackOutput`](crate::output::DescribeRecommendationFeedbackOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) recommendation_feedback:
@@ -818,7 +818,7 @@ pub mod describe_recommendation_feedback_output {
             self.recommendation_feedback = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeRecommendationFeedbackOutput`](crate::output::DescribeRecommendationFeedbackOutput)
+        /// Consumes the builder and constructs a [`DescribeRecommendationFeedbackOutput`](crate::output::DescribeRecommendationFeedbackOutput).
         pub fn build(self) -> crate::output::DescribeRecommendationFeedbackOutput {
             crate::output::DescribeRecommendationFeedbackOutput {
                 recommendation_feedback: self.recommendation_feedback,
@@ -827,7 +827,7 @@ pub mod describe_recommendation_feedback_output {
     }
 }
 impl DescribeRecommendationFeedbackOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeRecommendationFeedbackOutput`](crate::output::DescribeRecommendationFeedbackOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeRecommendationFeedbackOutput`](crate::output::DescribeRecommendationFeedbackOutput).
     pub fn builder() -> crate::output::describe_recommendation_feedback_output::Builder {
         crate::output::describe_recommendation_feedback_output::Builder::default()
     }
@@ -853,10 +853,10 @@ impl std::fmt::Debug for DescribeCodeReviewOutput {
         formatter.finish()
     }
 }
-/// See [`DescribeCodeReviewOutput`](crate::output::DescribeCodeReviewOutput)
+/// See [`DescribeCodeReviewOutput`](crate::output::DescribeCodeReviewOutput).
 pub mod describe_code_review_output {
-    /// A builder for [`DescribeCodeReviewOutput`](crate::output::DescribeCodeReviewOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`DescribeCodeReviewOutput`](crate::output::DescribeCodeReviewOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code_review: std::option::Option<crate::model::CodeReview>,
@@ -875,7 +875,7 @@ pub mod describe_code_review_output {
             self.code_review = input;
             self
         }
-        /// Consumes the builder and constructs a [`DescribeCodeReviewOutput`](crate::output::DescribeCodeReviewOutput)
+        /// Consumes the builder and constructs a [`DescribeCodeReviewOutput`](crate::output::DescribeCodeReviewOutput).
         pub fn build(self) -> crate::output::DescribeCodeReviewOutput {
             crate::output::DescribeCodeReviewOutput {
                 code_review: self.code_review,
@@ -884,7 +884,7 @@ pub mod describe_code_review_output {
     }
 }
 impl DescribeCodeReviewOutput {
-    /// Creates a new builder-style object to manufacture [`DescribeCodeReviewOutput`](crate::output::DescribeCodeReviewOutput)
+    /// Creates a new builder-style object to manufacture [`DescribeCodeReviewOutput`](crate::output::DescribeCodeReviewOutput).
     pub fn builder() -> crate::output::describe_code_review_output::Builder {
         crate::output::describe_code_review_output::Builder::default()
     }
@@ -910,10 +910,10 @@ impl std::fmt::Debug for CreateCodeReviewOutput {
         formatter.finish()
     }
 }
-/// See [`CreateCodeReviewOutput`](crate::output::CreateCodeReviewOutput)
+/// See [`CreateCodeReviewOutput`](crate::output::CreateCodeReviewOutput).
 pub mod create_code_review_output {
-    /// A builder for [`CreateCodeReviewOutput`](crate::output::CreateCodeReviewOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`CreateCodeReviewOutput`](crate::output::CreateCodeReviewOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) code_review: std::option::Option<crate::model::CodeReview>,
@@ -932,7 +932,7 @@ pub mod create_code_review_output {
             self.code_review = input;
             self
         }
-        /// Consumes the builder and constructs a [`CreateCodeReviewOutput`](crate::output::CreateCodeReviewOutput)
+        /// Consumes the builder and constructs a [`CreateCodeReviewOutput`](crate::output::CreateCodeReviewOutput).
         pub fn build(self) -> crate::output::CreateCodeReviewOutput {
             crate::output::CreateCodeReviewOutput {
                 code_review: self.code_review,
@@ -941,7 +941,7 @@ pub mod create_code_review_output {
     }
 }
 impl CreateCodeReviewOutput {
-    /// Creates a new builder-style object to manufacture [`CreateCodeReviewOutput`](crate::output::CreateCodeReviewOutput)
+    /// Creates a new builder-style object to manufacture [`CreateCodeReviewOutput`](crate::output::CreateCodeReviewOutput).
     pub fn builder() -> crate::output::create_code_review_output::Builder {
         crate::output::create_code_review_output::Builder::default()
     }
@@ -988,10 +988,10 @@ impl std::fmt::Debug for AssociateRepositoryOutput {
         formatter.finish()
     }
 }
-/// See [`AssociateRepositoryOutput`](crate::output::AssociateRepositoryOutput)
+/// See [`AssociateRepositoryOutput`](crate::output::AssociateRepositoryOutput).
 pub mod associate_repository_output {
-    /// A builder for [`AssociateRepositoryOutput`](crate::output::AssociateRepositoryOutput)
-    #[non_exhaustive]
+
+    /// A builder for [`AssociateRepositoryOutput`](crate::output::AssociateRepositoryOutput).
     #[derive(std::default::Default, std::clone::Clone, std::cmp::PartialEq, std::fmt::Debug)]
     pub struct Builder {
         pub(crate) repository_association: std::option::Option<crate::model::RepositoryAssociation>,
@@ -1049,7 +1049,7 @@ pub mod associate_repository_output {
             self.tags = input;
             self
         }
-        /// Consumes the builder and constructs a [`AssociateRepositoryOutput`](crate::output::AssociateRepositoryOutput)
+        /// Consumes the builder and constructs a [`AssociateRepositoryOutput`](crate::output::AssociateRepositoryOutput).
         pub fn build(self) -> crate::output::AssociateRepositoryOutput {
             crate::output::AssociateRepositoryOutput {
                 repository_association: self.repository_association,
@@ -1059,7 +1059,7 @@ pub mod associate_repository_output {
     }
 }
 impl AssociateRepositoryOutput {
-    /// Creates a new builder-style object to manufacture [`AssociateRepositoryOutput`](crate::output::AssociateRepositoryOutput)
+    /// Creates a new builder-style object to manufacture [`AssociateRepositoryOutput`](crate::output::AssociateRepositoryOutput).
     pub fn builder() -> crate::output::associate_repository_output::Builder {
         crate::output::associate_repository_output::Builder::default()
     }
